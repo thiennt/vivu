@@ -1,6 +1,5 @@
 import {
-    Application, Graphics, Assets, Container,
-    AnimatedSprite, BlurFilter
+    Application, Assets
 } from "pixi.js";
 import { initDevtools } from '@pixi/devtools';
 import { CombatScene } from "./CombatScene";
@@ -10,17 +9,31 @@ import { CombatScene } from "./CombatScene";
     const app = new Application();
 
     await app.init({
-        resizeTo: window,
+        //resizeTo: window,
+        width: 400,
+        height: window.innerHeight,
         backgroundAlpha: 0.5
     });
 
+    // Get canvas dimensions
+    const canvasWidth = app.canvas.width;
+    const canvasHeight = app.canvas.height;
+
+    // Get window dimensions
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    // Calculate offsets
+    const offsetX = (windowWidth - canvasWidth) / 2;
+    const offsetY = (windowHeight - canvasHeight) / 2;
+
+    // Apply offsets
+    app.canvas.style.position = 'absolute';
+    app.canvas.style.left = `${offsetX}px`;
+    app.canvas.style.top = `${offsetY}px`;
+
     initDevtools({ app });
     app.canvas.style.position = "absolute";
-
-    const WIDTH = app.canvas.width;
-    const HEIGHT = app.canvas.height;
-
-    var rectY = HEIGHT / 6;
 
     // //await Assets.init({manifest: '/manifest.json'});
     Assets.add([
@@ -34,49 +47,13 @@ import { CombatScene } from "./CombatScene";
     ]);
 
     const combatScene = new CombatScene(app);
+    const warrior = combatScene.warrior;
+    const mew = combatScene.mew;
     app.stage.addChild(combatScene.view);
 
-    // const bullets = [];
-    // function moveReactangle() {
-    //     const bullet = new Graphics()
-    //         .circle(50, 42, 5)
-    //         .fill({
-    //             color: 0xffffff,
-    //             alpha: 1
-    //         });
-    //     bullets.push(bullet);
-    //     combatContainer.addChild(bullet);
-
-    //     warriorSprite.filters = new BlurFilter({
-    //         strength: 1
-    //     });
-    // }
-    // const warriorSheet = await Assets.load('warrior');
-    // const warriorSprite = new AnimatedSprite(warriorSheet.animations.fight);
-    // warriorSprite.play();
-    // warriorSprite.animationSpeed = 0.13;
-    // combatContainer.addChild(warriorSprite);
-
-    // warriorSprite.interactive = true;
-    // warriorSprite.cursor = "pointer";
-    // warriorSprite.on("pointerdown", moveReactangle);
-
-    // const mewSheet = await Assets.load('mew');
-    // const mewSprite = new AnimatedSprite(mewSheet.animations.run);
-    // mewSprite.position.set(combatContainer.width - 50, rectY);
-    // mewSprite.play();
-    // mewSprite.animationSpeed = 0.13;
-    // combatContainer.addChild(mewSprite);
-
-    // app.ticker.add(() => {
-    //     //moveReactangle(combatContainer);
-    //     for (let bullet of bullets) {
-    //         bullet.x += 1; // Move the bullet upwards
-    //         if (bullet.x > WIDTH) {
-    //             combatContainer.removeChild(bullet); // Remove bullet if it goes off screen
-    //         }
-    //     }
-    // });
+    app.ticker.add((ticker) => {
+        combatScene.update(app);
+    });
 
     document.body.appendChild(app.canvas);
 })();

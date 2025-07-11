@@ -1,17 +1,32 @@
-import { Graphics, Container, Assets, AnimatedSprite } from 'pixi.js';
+import { Graphics, Container, Text } from 'pixi.js';
+import { Warrior } from './Warrior';
+import { Mew } from './Mew';
 
 export class CombatScene {
     constructor(app) {
+        this.app = app;
         this.view = new Container();
-        this.addLine(app);
-        this.addWarrior(app);
-        this.addMew(app);
+        
+        this.bulletTotal = 0;
+
+        this.addLine();
+        this.addInventory();
+        this.addWarrior();
+        this.addMew();
     }
 
-    addLine(app) {
+    addChild(child) {
+        this.view.addChild(child);
+    }
+
+    removeChild(child) {
+        this.view.removeChild(child);
+    }
+
+    addLine() {
         const line = new Graphics()
             .moveTo(0, 135)
-            .lineTo(app.canvas.width, 135)
+            .lineTo(this.app.canvas.width, 135)
             .stroke({
                 color: 0x55ffaa
             });
@@ -19,30 +34,79 @@ export class CombatScene {
         this.view.addChild(line);
     }
 
-    async addWarrior(app) {
-        const warriorSheet = await Assets.load('warrior');
-        this.warriorSprite = new AnimatedSprite(warriorSheet.animations.fight);
-        this.warriorSprite.position.set(20, 48);
-        this.warriorSprite.width = 60;
-        this.warriorSprite.height = 120;
-        this.warriorSprite.play();
-        this.warriorSprite.animationSpeed = 0.13;
-        
-        this.view.addChild(this.warriorSprite);
+    addInventory() {
+        const inventory = new Text({
+            text: 'Click to add bullets ' + this.bulletTotal,
+            style: {
+                fontFamily: 'Arial',
+                fontSize: 36,
+                fontStyle: 'italic',
+                fontWeight: 'bold',
+                fill: { color: 0x4a1850, alpha: 1 },
+                stroke: { color: 0x4a1850, width: 5 },
+                dropShadow: {
+                color: 0x000000,
+                angle: Math.PI / 6,
+                blur: 4,
+                distance: 6,
+                },
+                wordWrap: true,
+                wordWrapWidth: 440,
+            }
+        });
+        inventory.x = Math.round((this.view.width - inventory.width) / 2);
+        inventory.y = 150
 
-        this.warriorSprite.interactive = true;
-        this.warriorSprite.cursor = "pointer";
-        //this.warriorSprite.on("pointerdown", moveReactangle);
+        inventory.interactive = true;
+        inventory.cursor = "pointer";
+        inventory.buttonMode = true;
+        inventory.on("click", this.addBullets.bind(this));
+
+        this.view.addChild(inventory);
     }
 
-    async addMew(app) {
-        const mewSheet = await Assets.load('mew');
-        this.mewSprite = new AnimatedSprite(mewSheet.animations.run);
-        //this.mewSprite.width = 120;
-        //this.mewSprite.height = 120;
-        this.mewSprite.position.set(app.canvas.width - 150, 30);
-        this.mewSprite.play();
-        this.mewSprite.animationSpeed = 0.13;
-        this.view.addChild(this.mewSprite);
+    async addWarrior() {
+        this.warrior = new Warrior(this.app, this);
+        await this.warrior.init();
+        this.view.addChild(this.warrior.sprite);
+    }
+
+    async addMew() {
+        this.mew = new Mew(this.app, this);
+        await this.mew.init();
+        this.view.addChild(this.mew.sprite);
+    }
+
+    addBullets() {
+        this.bulletTotal += 1;
+    }
+
+    update() {
+        this.warrior.update();
+        this.mew.update();
+
+        for (let bullet of this.warrior.bullets) {
+            if (this.testForAABB(bullet, this.mew.sprite)) {
+                this.mew.hitBullet();
+                this.warrior.bullets.shift();
+                this.removeChild(bullet);
+            } else {
+                //this.mew.continueRunning();
+            }
+        }
+    }
+
+    testForAABB(object1, object2) {
+        const bounds1 = object1.getBounds();
+        const bounds2 = object2.getBounds();
+
+        return (bounds1.x >= bounds2.x);
+
+        // return (
+        //     bounds1.x < bounds2.x + bounds2.width &&
+        //     bounds1.x + bounds1.width > bounds2.x &&
+        //     bounds1.y < bounds2.y + bounds2.height &&
+        //     bounds1.y + bounds1.height > bounds2.y
+        // );
     }
 }

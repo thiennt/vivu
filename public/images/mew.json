@@ -72,6 +72,7 @@
         }
     },
     "animations": {
+        "idle": ["mew0.png"],
         "run": ["mew0.png", "mew1.png", "mew2.png"]
     }
 }

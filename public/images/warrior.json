@@ -1,11 +1,11 @@
 {
     "frames": {
-        "fight1.png": {
+        "warrior0.png": {
             "frame": {
                 "x": 0,
                 "y": 0,
                 "w": 60,
-                "h": 120
+                "h": 124
             },
             "rotated": false,
             "trimmed": false,
@@ -13,19 +13,19 @@
                 "x": 0,
                 "y": 0,
                 "w": 60,
-                "h": 120
+                "h": 124
             },
             "sourceSize": {
                 "w": 60,
-                "h": 120
+                "h": 124
             }
         },
-        "fight2.png": {
+        "warrior1.png": {
             "frame": {
                 "x": 60,
                 "y": 0,
                 "w": 60,
-                "h": 120
+                "h": 124
             },
             "rotated": false,
             "trimmed": false,
@@ -33,11 +33,31 @@
                 "x": 0,
                 "y": 0,
                 "w": 60,
-                "h": 120
+                "h": 124
             },
             "sourceSize": {
                 "w": 60,
-                "h": 120
+                "h": 124
+            }
+        },
+        "warrior2.png": {
+            "frame": {
+                "x": 120,
+                "y": 0,
+                "w": 60,
+                "h": 124
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 60,
+                "h": 124
+            },
+            "sourceSize": {
+                "w": 60,
+                "h": 124
             }
         }
     },
@@ -47,11 +67,12 @@
         "image": "warrior.png",
         "format": "RGBA8888",
         "size": {
-            "w": 120,
-            "h": 120
+            "w": 180,
+            "h": 124
         }
     },
     "animations": {
-        "fight": ["fight1.png", "fight2.png"]
+        "idle": ["warrior0.png"],
+        "fight": ["warrior0.png", "warrior1.png", "warrior2.png"]
     }
 }
