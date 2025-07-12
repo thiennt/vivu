@@ -12,6 +12,11 @@ export class Warrior {
         };
 
         this.bullets = [];
+        this.stats = {
+            attack: 1,  // Number of attacks
+            power: 1,   // Power of each attack
+            speed: 1    // Speed of the opponent
+        }
     }
 
     async init() {
@@ -31,7 +36,7 @@ export class Warrior {
             this.sprite.textures = this.sheet.animations.fight;
             this.sprite.gotoAndPlay(0);
 
-            const bullet = new Graphics()
+            let bullet = new Graphics()
                 .circle(70, 100, 5)
                 .fill({
                     color: 0xffffff,

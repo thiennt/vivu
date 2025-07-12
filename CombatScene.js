@@ -1,6 +1,7 @@
 import { Graphics, Container, Text } from 'pixi.js';
 import { Warrior } from './Warrior';
 import { Mew } from './Mew';
+import { testForAABB } from './util';
 
 export class CombatScene {
     constructor(app) {
@@ -75,6 +76,7 @@ export class CombatScene {
         this.mew = new Mew(this.app, this);
         await this.mew.init();
         this.view.addChild(this.mew.sprite);
+        this.view.addChild(this.mew.hpBar);
     }
 
     addBullets() {
@@ -86,7 +88,7 @@ export class CombatScene {
         this.mew.update();
 
         for (let bullet of this.warrior.bullets) {
-            if (this.testForAABB(bullet, this.mew.sprite)) {
+            if (testForAABB(bullet, this.mew.sprite)) {
                 this.mew.hitBullet();
                 this.warrior.bullets.shift();
                 this.removeChild(bullet);
@@ -96,17 +98,55 @@ export class CombatScene {
         }
     }
 
-    testForAABB(object1, object2) {
-        const bounds1 = object1.getBounds();
-        const bounds2 = object2.getBounds();
+    warriorLose() {
+        this.mew.sprite.textures = this.mew.sheet.animations.idle;
+        this.mew.sprite.gotoAndPlay(0);
+        this.mew.state.idle = true;
 
-        return (bounds1.x >= bounds2.x);
+        const loseText = new Text({
+            text: 'You Lose!',
+            style: {
+                fontFamily: 'Arial',
+                fontSize: 48,
+                fill: { color: 0xff0000, alpha: 1 },
+                stroke: { color: 0x000000, width: 2 },
+                dropShadow: {
+                    color: 0x000000,
+                    angle: Math.PI / 6,
+                    blur: 4,
+                    distance: 6,
+                },
+            }
+        });
+        loseText.x = Math.round((this.view.width - loseText.width) / 2);
+        loseText.y = Math.round((this.view.height - loseText.height) / 2);
 
-        // return (
-        //     bounds1.x < bounds2.x + bounds2.width &&
-        //     bounds1.x + bounds1.width > bounds2.x &&
-        //     bounds1.y < bounds2.y + bounds2.height &&
-        //     bounds1.y + bounds1.height > bounds2.y
-        // );
+        this.view.addChild(loseText);
+    }
+
+    warriorWin() {
+        this.mew.sprite.textures = this.mew.sheet.animations.idle;
+        this.mew.sprite.gotoAndPlay(0);
+        this.mew.state.idle = true;
+
+        const winText = new Text({
+            text: 'You Win!',
+            style: {
+                fontFamily: 'Arial',
+                fontSize: 48,
+                fill: { color: 0x85EF14, alpha: 1 },
+                stroke: { color: 0x000000, width: 2 },
+                dropShadow: {
+                    color: 0x000000,
+                    angle: Math.PI / 6,
+                    blur: 4,
+                    distance: 6,
+                },
+            }
+        });
+        winText.x = Math.round((this.view.width - winText.width) / 2);
+        winText.y = Math.round((this.view.height - winText.height) / 2);
+
+        this.view.addChild(winText);
     }
 }

@@ -3,6 +3,7 @@ import {
 } from "pixi.js";
 import { initDevtools } from '@pixi/devtools';
 import { CombatScene } from "./CombatScene";
+import { BoxScene } from "./BoxScene";
 
 (async () => {
     // Stuff to do
@@ -43,13 +44,16 @@ import { CombatScene } from "./CombatScene";
         }, {
             alias: 'mew',
             src: 'images/mew.json'
+        }, {
+            alias: 'box',
+            src: 'images/box.json'
         }
     ]);
 
     const combatScene = new CombatScene(app);
-    const warrior = combatScene.warrior;
-    const mew = combatScene.mew;
+    const boxScene = new BoxScene(app); 
     app.stage.addChild(combatScene.view);
+    app.stage.addChild(boxScene.view);
 
     app.ticker.add((ticker) => {
         combatScene.update(app);
