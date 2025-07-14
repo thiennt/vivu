@@ -1,0 +1,142 @@
+{
+    "frames": {
+        "effect0.png": {
+            "frame": {
+                "x": 0,
+                "y": 0,
+                "w": 120,
+                "h": 120
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 120,
+                "h": 120
+            },
+            "sourceSize": {
+                "w": 120,
+                "h": 120
+            }
+        },
+        "effect1.png": {
+            "frame": {
+                "x": 120,
+                "y": 0,
+                "w": 120,
+                "h": 120
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 120,
+                "h": 120
+            },
+            "sourceSize": {
+                "w": 120,
+                "h": 120
+            }
+        },
+        "effect2.png": {
+            "frame": {
+                "x": 240,
+                "y": 0,
+                "w": 120,
+                "h": 120
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 120,
+                "h": 120
+            },
+            "sourceSize": {
+                "w": 120,
+                "h": 120
+            }
+        },
+        "effect3.png": {
+            "frame": {
+                "x": 360,
+                "y": 0,
+                "w": 120,
+                "h": 120
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 120,
+                "h": 120
+            },
+            "sourceSize": {
+                "w": 120,
+                "h": 120
+            }
+        },
+        "effect4.png": {
+            "frame": {
+                "x": 480,
+                "y": 0,
+                "w": 120,
+                "h": 120
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 120,
+                "h": 120
+            },
+            "sourceSize": {
+                "w": 120,
+                "h": 120
+            }
+        },
+        "effect5.png": {
+            "frame": {
+                "x": 600,
+                "y": 0,
+                "w": 120,
+                "h": 120
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 120,
+                "h": 120
+            },
+            "sourceSize": {
+                "w": 120,
+                "h": 120
+            }
+        }
+    },
+    "meta": {
+        "app": "https://github.com/piskelapp/piskel/",
+        "version": "1.0",
+        "image": "effect.png",
+        "format": "RGBA8888",
+        "size": {
+            "w": 720,
+            "h": 120
+        }
+    },
+    "animations": {
+        "str": ["effect0.png"],
+        "crit": ["effect1.png"],
+        "hit": ["effect2.png"],
+        "hp": ["effect3.png"],
+        "def": ["effect4.png"],
+        "agi": ["effect5.png"]
+    }
+}

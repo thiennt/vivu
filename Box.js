@@ -1,15 +1,16 @@
 import { Assets, Container, AnimatedSprite } from 'pixi.js';
 
-export class BoxScene {
-    constructor(app) {
+export class Box {
+    constructor(app, scene) {
         this.app = app;
         this.view = new Container();
+        this.scene = scene;
         
         this.boxes = []
         this.addBoxes();
 
         this.items = {
-            num_of_attacks : [
+            crit : [
                 { value: 1, rate: 0.35 },
                 { value: 2, rate: 0.3 },
                 { value: 3, rate: 0.2 },
@@ -32,14 +33,20 @@ export class BoxScene {
     }
 
     async addBoxes() {
-        let boxSize = 3;
-        this.boxSheet = await Assets.load('box');
-
+        let boxSize = 4;
+        this.boxSheet = await Assets.load('effect');
+        
+        let animations = this.boxSheet.animations;
+        let boxes = [animations.str, animations.crit, animations.def, animations.hp, animations.agi];
+        
         for (let i = 0; i < boxSize; i++) {
-            let sprite = new AnimatedSprite(this.boxSheet.animations.close);
+            let sprite = new AnimatedSprite(boxes[i]);
+            //sprite.anchor = 0.5;
+            sprite.scale = 0.7;
+
             let boxSpace = this.app.canvas.width / boxSize;
             let x = (boxSpace - sprite.width)/2 + (i * boxSpace);
-            sprite.position.set(x, 300);
+            sprite.position.set(x, this.scene.LINE_Y + 100);
             
             sprite.loop = false;
             sprite.interactive = true;
@@ -57,7 +64,7 @@ export class BoxScene {
         box.gotoAndPlay(0);
         box.animationSpeed = 0.1;
 
-        this.scene.combatScene.addBullets();
+        this.scene.addBullets();
     }
 }
 

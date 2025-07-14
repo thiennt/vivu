@@ -1,4 +1,4 @@
-import { AnimatedSprite, Assets, Graphics } from 'pixi.js';
+import { AnimatedSprite, Assets, Graphics, Text } from 'pixi.js';
 import { delay } from './util.js';
 
 export class Warrior {
@@ -13,18 +13,47 @@ export class Warrior {
 
         this.bullets = [];
         this.stats = {
-            attack: 1,  // Number of attacks
-            power: 1,   // Power of each attack
-            speed: 1    // Speed of the opponent
+            str: 10,
+            crt: 1,
+            hit: 1
         }
     }
+    
 
     async init() {
-        this.sheet = await Assets.load('warrior');
+        this.sheet = await Assets.load('stickman');
         this.sprite = new AnimatedSprite(this.sheet.animations.idle);
-        this.sprite.position.set(20, 48);
-        this.sprite.width = 60;
-        this.sprite.height = 120;
+        this.sprite.anchor = 0.5;
+        this.sprite.scale.set(0.6);
+        this.sprite.position.set(30, this.scene.LINE_Y - 80);
+
+        this.addStatsBar();
+    }
+
+    addStatsBar() {
+        this.statBar = new Text({
+            text: this.showStats(),
+            style: {
+                fontFamily: 'Arial',
+                fontSize: 18,
+                fill: { color: 0x16D1E3, alpha: 1 },
+                stroke: { color: 0x4a1850, width: 2 },
+                wordWrap: true,
+                wordWrapWidth: 440,
+            }
+        });
+        this.statBar.x = 20;
+        this.statBar.y = 10
+        
+        this.scene.addChild(this.statBar);
+    }
+
+    showStats() {
+        let statsText = `STR: ${this.stats.str} \n`;
+        statsText += `CRT: ${this.stats.crt} \n`;
+        statsText += `HIT: ${this.stats.hit} \n`;
+
+        return statsText;
     }
 
     async fight() {
@@ -37,7 +66,7 @@ export class Warrior {
             this.sprite.gotoAndPlay(0);
 
             let bullet = new Graphics()
-                .circle(70, 100, 5)
+                .circle(this.sprite.x + 30, this.sprite.y - 10, 5)
                 .fill({
                     color: 0xffffff,
                     alpha: 1

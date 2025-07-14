@@ -1,6 +1,7 @@
-import { Graphics, Container, Text } from 'pixi.js';
+import { Graphics, Container, Text, Sprite, Assets } from 'pixi.js';
 import { Warrior } from './Warrior';
 import { Mew } from './Mew';
+import { Box } from './Box';
 import { testForAABB } from './util';
 
 export class CombatScene {
@@ -9,11 +10,18 @@ export class CombatScene {
         this.view = new Container();
         
         this.bulletTotal = 0;
+        this.LINE_Y = 400;
 
-        this.addLine();
-        this.addInventory();
+        this.init();
+    }
+
+    async init() {
+        this.addBackground();
+        //this.addLine();
+        //this.addInventory();
         this.addWarrior();
         this.addMew();
+        this.addBoxes();
     }
 
     addChild(child) {
@@ -24,10 +32,30 @@ export class CombatScene {
         this.view.removeChild(child);
     }
 
+    async addBackground() {
+        const texture = await Assets.load('images/dungeon_1.png');
+        this.background = new Sprite({
+            texture: texture,
+            anchor: 0.5,
+            //scale: { x: 1, y: 1 },
+            //width: 400,
+            //height: 400
+        });
+
+        // Center background sprite anchor.
+        this.background.position.set(this.app.canvas.width / 2, 200);
+        this.background.zIndex = -1; // Ensure background is behind other elements
+
+        this.LINE_Y = this.background.height;
+
+        this.addChild(this.background);
+    }
+
+
     addLine() {
         const line = new Graphics()
-            .moveTo(0, 135)
-            .lineTo(this.app.canvas.width, 135)
+            .moveTo(0, 200)
+            .lineTo(this.app.canvas.width, this.LINE_Y)
             .stroke({
                 color: 0x55ffaa
             });
@@ -56,7 +84,7 @@ export class CombatScene {
             }
         });
         inventory.x = Math.round((this.view.width - inventory.width) / 2);
-        inventory.y = 150
+        inventory.y = 250
 
         inventory.interactive = true;
         inventory.cursor = "pointer";
@@ -64,6 +92,11 @@ export class CombatScene {
         inventory.on("click", this.addBullets.bind(this));
 
         this.view.addChild(inventory);
+    }
+
+    addBoxes() {
+        const box = new Box(this.app, this);
+        this.view.addChild(box.view);
     }
 
     async addWarrior() {
@@ -76,7 +109,6 @@ export class CombatScene {
         this.mew = new Mew(this.app, this);
         await this.mew.init();
         this.view.addChild(this.mew.sprite);
-        this.view.addChild(this.mew.hpBar);
     }
 
     addBullets() {

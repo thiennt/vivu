@@ -34,26 +34,37 @@ import { BoxScene } from "./BoxScene";
     app.canvas.style.top = `${offsetY}px`;
 
     initDevtools({ app });
-    app.canvas.style.position = "absolute";
 
     // //await Assets.init({manifest: '/manifest.json'});
     Assets.add([
         {
             alias: 'warrior',
             src: 'images/warrior.json'
-        }, {
+        },
+        {
+            alias: 'stickman',
+            src: 'images/stickman.json'
+        },
+        {
             alias: 'mew',
             src: 'images/mew.json'
-        }, {
+        },
+        {
             alias: 'box',
             src: 'images/box.json'
+        },
+        {
+            alias: 'effect',
+            src: 'images/effect.json'
+        },
+        {
+            alias: 'background',
+            src: 'images/background.png'
         }
     ]);
 
     const combatScene = new CombatScene(app);
-    const boxScene = new BoxScene(app); 
     app.stage.addChild(combatScene.view);
-    app.stage.addChild(boxScene.view);
 
     app.ticker.add((ticker) => {
         combatScene.update(app);
