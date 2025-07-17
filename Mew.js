@@ -11,8 +11,8 @@ export class Mew {
         };
 
         this.stats = {
-            hp: 100,
-            currentHP: 100,
+            hp: 20,
+            currentHP: 20,
             def: 5,
             agi: 2
         };
@@ -60,7 +60,7 @@ export class Mew {
         // this.sprite.textures = this.sheet.animations.idle;
         // this.sprite.gotoAndPlay(0);
         //this.state.beaten = true;
-        this.sprite.position.x += 1;
+        //this.sprite.position.x += 1;
         this.stats.currentHP -= this.scene.warrior.stats.str - this.stats.def;
         this.hpBar.text = this.showStats();
         if (this.stats.currentHP <= 0) {
@@ -91,11 +91,15 @@ export class Mew {
         if (this.state.beaten) return;
 
         //if (!this.state.beaten) this.sprite.position.x -= 1 * 0.1;
-        if (this.sprite.position.x < 20) {
+        if (this.sprite.position.x < this.scene.warrior.position()) {
             //this.sprite.position.x = this.app.canvas.width - 150;
             this.scene.warriorLose();
         } else {
-            //this.sprite.position.x -= 1 * this.stats.agi / 10;
+            this.move()
         }
+    }
+
+    move() {
+        this.sprite.position.x -= 1 * this.stats.agi / 10;
     }
 }

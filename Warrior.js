@@ -13,21 +13,28 @@ export class Warrior {
 
         this.bullets = [];
         this.stats = {
-            str: 10,
+            str: 5,
             crt: 1,
-            hit: 1
+            agi: 1
         }
+
+        this.POS_X = 30;
     }
-    
 
     async init() {
-        this.sheet = await Assets.load('stickman');
+        this.sheet = await Assets.load('hero');
         this.sprite = new AnimatedSprite(this.sheet.animations.idle);
         this.sprite.anchor = 0.5;
-        this.sprite.scale.set(0.6);
-        this.sprite.position.set(30, this.scene.LINE_Y - 80);
+        this.sprite.scale.set(0.5);
+        this.sprite.play();
+        this.sprite.animationSpeed = 0.1;
+        this.sprite.position.set(this.POS_X, this.scene.LINE_Y - 80);
 
         this.addStatsBar();
+    }
+
+    position() {
+        return this.POS_X + 20;
     }
 
     addStatsBar() {
@@ -51,7 +58,7 @@ export class Warrior {
     showStats() {
         let statsText = `STR: ${this.stats.str} \n`;
         statsText += `CRT: ${this.stats.crt} \n`;
-        statsText += `HIT: ${this.stats.hit} \n`;
+        statsText += `AGI: ${this.stats.agi} \n`;
 
         return statsText;
     }
@@ -77,9 +84,10 @@ export class Warrior {
 
             this.scene.bulletTotal -= 1;
             this.state.fight = true;
-            await delay(500);
+            await delay(200);
         }
         this.state.fight = false;
+        this.idle();
 
         // this.warriorSprite.filters = new BlurFilter({
         //     strength: 1

@@ -33,11 +33,9 @@ export class Box {
     }
 
     async addBoxes() {
-        let boxSize = 4;
+        let boxSize = 2;
         this.boxSheet = await Assets.load('effect');
-        
-        let animations = this.boxSheet.animations;
-        let boxes = [animations.str, animations.crit, animations.def, animations.hp, animations.agi];
+        let boxes = this.showRandomBoxes();
         
         for (let i = 0; i < boxSize; i++) {
             let sprite = new AnimatedSprite(boxes[i]);
@@ -59,10 +57,16 @@ export class Box {
         }
     }
 
+    showRandomBoxes() {
+        let animations = this.boxSheet.animations;
+        const boxes = [animations.str, animations.crit, animations.def, animations.hp, animations.agi].sort(() => 0.5 - Math.random());
+        return boxes.slice(0, 2);
+    }
+
     openBox(box) {
-        box.textures = this.boxSheet.animations.open;
-        box.gotoAndPlay(0);
-        box.animationSpeed = 0.1;
+        // box.textures = this.boxSheet.animations.open;
+        // box.gotoAndPlay(0);
+        // box.animationSpeed = 0.1;
 
         this.scene.addBullets();
     }

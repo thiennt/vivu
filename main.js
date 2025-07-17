@@ -42,6 +42,10 @@ import { BoxScene } from "./BoxScene";
             src: 'images/warrior.json'
         },
         {
+            alias: 'hero',
+            src: 'images/hero.json'
+        },
+        {
             alias: 'stickman',
             src: 'images/stickman.json'
         },
@@ -66,8 +70,16 @@ import { BoxScene } from "./BoxScene";
     const combatScene = new CombatScene(app);
     app.stage.addChild(combatScene.view);
 
+    let seconds = 0;
+
     app.ticker.add((ticker) => {
         combatScene.update(app);
+
+        seconds += (1 / 60) * ticker.deltaTime;
+        if(seconds >= 3 ){
+            combatScene.addBullets();
+            seconds -= seconds;
+        }
     });
 
     document.body.appendChild(app.canvas);
