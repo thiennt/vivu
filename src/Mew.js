@@ -11,10 +11,10 @@ export class Mew {
         };
 
         this.stats = {
-            hp: 20,
-            currentHP: 20,
+            hp: 15,
+            currentHP: 15,
             def: 5,
-            agi: 2
+            agi: 1
         };
     }
 
@@ -36,13 +36,13 @@ export class Mew {
             style: {
                 fontFamily: 'Arial',
                 fontSize: 18,
-                fill: { color: 0xE312A7, alpha: 1 },
+                fill: { color: 0xFFFFFF, alpha: 1 },
                 stroke: { color: 0x4a1850, width: 2 },
                 wordWrap: true,
                 wordWrapWidth: 440,
             }
         });
-        this.hpBar.x = this.app.canvas.width - 150;
+        this.hpBar.x = this.app.canvas.width - 100;
         this.hpBar.y = 10
         
         this.scene.addChild(this.hpBar);

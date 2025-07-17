@@ -25,7 +25,7 @@ export class Warrior {
         this.sheet = await Assets.load('hero');
         this.sprite = new AnimatedSprite(this.sheet.animations.idle);
         this.sprite.anchor = 0.5;
-        this.sprite.scale.set(0.5);
+        this.sprite.scale.set(0.6);
         this.sprite.play();
         this.sprite.animationSpeed = 0.1;
         this.sprite.position.set(this.POS_X, this.scene.LINE_Y - 80);
@@ -43,7 +43,7 @@ export class Warrior {
             style: {
                 fontFamily: 'Arial',
                 fontSize: 18,
-                fill: { color: 0x16D1E3, alpha: 1 },
+                fill: { color: 0xFFFFFF, alpha: 1 },
                 stroke: { color: 0x4a1850, width: 2 },
                 wordWrap: true,
                 wordWrapWidth: 440,
@@ -73,7 +73,7 @@ export class Warrior {
             this.sprite.gotoAndPlay(0);
 
             let bullet = new Graphics()
-                .circle(this.sprite.x + 30, this.sprite.y - 10, 5)
+                .circle(this.sprite.x + 10, this.sprite.y - 15, 5)
                 .fill({
                     color: 0xffffff,
                     alpha: 1

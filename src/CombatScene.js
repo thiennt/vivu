@@ -95,8 +95,13 @@ export class CombatScene {
     }
 
     addBoxes() {
-        const box = new Box(this.app, this);
-        this.view.addChild(box.view);
+        this.box = new Box(this.app, this);
+        this.view.addChild(this.box.view);
+    }
+
+    resetBoxes() {
+        this.view.removeChild(this.box);
+        this.addBoxes();
     }
 
     async addWarrior() {

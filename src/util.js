@@ -15,7 +15,7 @@ export function testForAABB(object1, object2) {
     //     bounds1.y + bounds1.height > bounds2.y
 }
 
-export function getRandomItem(items) {
+export function getRandomItemByRate(items) {
     const totalRate = Object.values(items).reduce((sum, item) => sum + item.rate, 0);
     let randomValue = Math.random() * totalRate;
 
@@ -27,4 +27,8 @@ export function getRandomItem(items) {
     }
 
     return null; // In case no item is selected, though this should not happen with correct rates.
+}
+
+export function getRandomItems(arr, count) {
+    return arr.sort(() => 0.5 - Math.random()).slice(0, count);
 }

@@ -3,7 +3,6 @@ import {
 } from "pixi.js";
 import { initDevtools } from '@pixi/devtools';
 import { CombatScene } from "./CombatScene";
-import { BoxScene } from "./BoxScene";
 
 (async () => {
     // Stuff to do
@@ -13,7 +12,8 @@ import { BoxScene } from "./BoxScene";
         //resizeTo: window,
         width: 400,
         height: window.innerHeight,
-        backgroundAlpha: 0.5
+        //backgroundAlpha: 0.5,
+        backgroundColor: 0x55271A
     });
 
     // Get canvas dimensions
@@ -76,8 +76,9 @@ import { BoxScene } from "./BoxScene";
         combatScene.update(app);
 
         seconds += (1 / 60) * ticker.deltaTime;
-        if(seconds >= 3 ){
+        if(seconds >= 2){
             combatScene.addBullets();
+            combatScene.resetBoxes();
             seconds -= seconds;
         }
     });
