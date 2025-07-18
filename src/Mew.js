@@ -11,10 +11,10 @@ export class Mew {
         };
 
         this.stats = {
-            hp: 15,
-            currentHP: 15,
-            def: 5,
-            agi: 1
+            "hp": 15,
+            "currentHP": 15,
+            "def": 4,
+            "agi": 2
         };
     }
 
@@ -31,7 +31,7 @@ export class Mew {
     }
 
     addStatsBar() {
-        this.hpBar = new Text({
+        this.statsBar = new Text({
             text: this.showStats(),
             style: {
                 fontFamily: 'Arial',
@@ -42,10 +42,10 @@ export class Mew {
                 wordWrapWidth: 440,
             }
         });
-        this.hpBar.x = this.app.canvas.width - 100;
-        this.hpBar.y = 10
+        this.statsBar.x = this.app.canvas.width - 100;
+        this.statsBar.y = 10
         
-        this.scene.addChild(this.hpBar);
+        this.scene.addChild(this.statsBar);
     }
 
     showStats() {
@@ -56,13 +56,17 @@ export class Mew {
         return statsText;
     }
 
+    updateStats() {
+        this.statsBar.text = this.showStats();
+    }
+
     async hitBullet() {
         // this.sprite.textures = this.sheet.animations.idle;
         // this.sprite.gotoAndPlay(0);
         //this.state.beaten = true;
         //this.sprite.position.x += 1;
         this.stats.currentHP -= this.scene.warrior.stats.str - this.stats.def;
-        this.hpBar.text = this.showStats();
+        this.statsBar.text = this.showStats();
         if (this.stats.currentHP <= 0) {
             this.die();
         }

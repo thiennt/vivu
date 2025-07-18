@@ -2,12 +2,13 @@ import { Graphics, Container, Text, Sprite, Assets } from 'pixi.js';
 import { Warrior } from './Warrior';
 import { Mew } from './Mew';
 import { Box } from './Box';
-import { testForAABB } from './util';
+import { testForAABB, delay } from './util';
 
 export class CombatScene {
     constructor(app) {
         this.app = app;
         this.view = new Container();
+        this.view.isRenderGroup = true;
         
         this.bulletTotal = 0;
         this.LINE_Y = 400;
@@ -96,11 +97,57 @@ export class CombatScene {
 
     addBoxes() {
         this.box = new Box(this.app, this);
+        this.box.init();
         this.view.addChild(this.box.view);
     }
 
+    removeCards() {
+        this.view.removeChild(this.box.view);
+    }
+
+    showSelectedEffect(effect, effectValue, cardType) {
+        this.removeCards();
+
+         // Card text
+        let cardColor = 0xFA1112;
+        let textLabel =  `${effectValue.value} ${effect.toUpperCase()}`;
+
+        if (effectValue.value > 0) {
+            cardColor = 0x6DEF15;
+            textLabel = `+${effectValue.value} ${effect.toUpperCase()}`;
+        }
+
+        let txtCard = new Text({
+            text: cardType == 0 ? "HERO: " + textLabel : "MONSTER: " + textLabel,
+            style: {
+                fontFamily: 'Arial',
+                fontSize: 18,
+                fill: { color: cardColor, alpha: 1 },
+                stroke: { color: 0x4a1850, width: 2 },
+                //wordWrap: true,
+                //wordWrapWidth: 50,
+                align: "center"
+            }
+        });
+        txtCard.anchor.set(0.5, 0.5);
+        txtCard.x = this.app.canvas.width / 2;;
+        txtCard.y = this.LINE_Y + 30;
+
+        this.view.addChild(txtCard);
+
+        this.reloadCardsAfterEffect(txtCard);
+
+    }
+
+    async reloadCardsAfterEffect(selectedCard) {
+        await delay(2000);
+
+        this.view.removeChild(selectedCard);
+        this.addBoxes();
+    }
+
     resetBoxes() {
-        this.view.removeChild(this.box);
+        this.view.removeChild(this.box.view);
         this.addBoxes();
     }
 

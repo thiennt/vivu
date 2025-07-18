@@ -13,9 +13,9 @@ export class Warrior {
 
         this.bullets = [];
         this.stats = {
-            str: 5,
-            crt: 1,
-            agi: 1
+            "str": 5,
+            "crit": 1,
+            "agi": 1
         }
 
         this.POS_X = 30;
@@ -38,7 +38,7 @@ export class Warrior {
     }
 
     addStatsBar() {
-        this.statBar = new Text({
+        this.statsBar = new Text({
             text: this.showStats(),
             style: {
                 fontFamily: 'Arial',
@@ -49,18 +49,22 @@ export class Warrior {
                 wordWrapWidth: 440,
             }
         });
-        this.statBar.x = 20;
-        this.statBar.y = 10
+        this.statsBar.x = 20;
+        this.statsBar.y = 10
         
-        this.scene.addChild(this.statBar);
+        this.scene.addChild(this.statsBar);
     }
 
     showStats() {
         let statsText = `STR: ${this.stats.str} \n`;
-        statsText += `CRT: ${this.stats.crt} \n`;
+        statsText += `CRIT: ${this.stats.crit} \n`;
         statsText += `AGI: ${this.stats.agi} \n`;
 
         return statsText;
+    }
+
+    updateStats() {
+        this.statsBar.text = this.showStats();
     }
 
     async fight() {

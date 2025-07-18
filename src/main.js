@@ -64,6 +64,10 @@ import { CombatScene } from "./CombatScene";
         {
             alias: 'background',
             src: 'images/background.png'
+        },
+         {
+            alias: 'card',
+            src: 'images/card.png'
         }
     ]);
 
@@ -78,7 +82,7 @@ import { CombatScene } from "./CombatScene";
         seconds += (1 / 60) * ticker.deltaTime;
         if(seconds >= 2){
             combatScene.addBullets();
-            combatScene.resetBoxes();
+            //combatScene.resetBoxes();
             seconds -= seconds;
         }
     });
