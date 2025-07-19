@@ -13,11 +13,14 @@ export class CombatScene {
         this.bulletTotal = 0;
         this.LINE_Y = 400;
 
+        this.gameState = 0;
+
         this.init();
     }
 
     async init() {
-        this.addBackground();
+        this.addMenu();
+        //this.addBackground();
         //this.addLine();
         //this.addInventory();
         this.addWarrior();
@@ -34,7 +37,7 @@ export class CombatScene {
     }
 
     async addBackground() {
-        const texture = await Assets.load('images/dungeon_1.png');
+        const texture = await Assets.load('images/dungeon_2.png');
         this.background = new Sprite({
             texture: texture,
             anchor: 0.5,
@@ -44,14 +47,24 @@ export class CombatScene {
         });
 
         // Center background sprite anchor.
-        this.background.position.set(this.app.canvas.width / 2, 200);
+        let y = this.app.canvas.height / 3;
+        this.background.position.set(this.app.canvas.width / 2, y);
         this.background.zIndex = -1; // Ensure background is behind other elements
 
-        this.LINE_Y = this.background.height;
+        this.LINE_Y = y + this.background.height / 2;
 
         this.addChild(this.background);
     }
 
+    addMenu() {
+        this.LINE_Y = this.app.canvas.height /2;
+        this.menuBar = new Graphics()
+            .rect(0, this.app.canvas.height /2, this.app.canvas.width, 100)
+            .fill('000000')
+            .stroke({ width: 1, color: "333333" });
+        
+        this.addChild(this.menuBar);
+    }
 
     addLine() {
         const line = new Graphics()
@@ -109,11 +122,11 @@ export class CombatScene {
         this.removeCards();
 
          // Card text
-        let cardColor = 0xFA1112;
+        let cardColor = "000000";
         let textLabel =  `${effectValue.value} ${effect.toUpperCase()}`;
 
         if (effectValue.value > 0) {
-            cardColor = 0x6DEF15;
+            cardColor = "ffffff";
             textLabel = `+${effectValue.value} ${effect.toUpperCase()}`;
         }
 
@@ -122,8 +135,8 @@ export class CombatScene {
             style: {
                 fontFamily: 'Arial',
                 fontSize: 18,
-                fill: { color: cardColor, alpha: 1 },
-                stroke: { color: 0x4a1850, width: 2 },
+                fill: { color: "000000", alpha: 1 },
+                stroke: { color: "ffffff", width: 2 },
                 //wordWrap: true,
                 //wordWrapWidth: 50,
                 align: "center"
@@ -131,7 +144,7 @@ export class CombatScene {
         });
         txtCard.anchor.set(0.5, 0.5);
         txtCard.x = this.app.canvas.width / 2;;
-        txtCard.y = this.LINE_Y + 30;
+        txtCard.y = this.LINE_Y - 150;
 
         this.view.addChild(txtCard);
 
@@ -170,6 +183,7 @@ export class CombatScene {
     update() {
         this.warrior.update();
         this.mew.update();
+        if (!this.box.isLoaded) this.box.addBoxes();
 
         for (let bullet of this.warrior.bullets) {
             if (testForAABB(bullet, this.mew.sprite)) {
@@ -183,6 +197,8 @@ export class CombatScene {
     }
 
     warriorLose() {
+        this.gameState = 1;
+
         this.mew.sprite.textures = this.mew.sheet.animations.idle;
         this.mew.sprite.gotoAndPlay(0);
         this.mew.state.idle = true;
@@ -204,11 +220,13 @@ export class CombatScene {
         });
         loseText.x = Math.round((this.view.width - loseText.width) / 2);
         loseText.y = Math.round((this.view.height - loseText.height) / 2);
-
+        
         this.view.addChild(loseText);
     }
 
     warriorWin() {
+        this.gameState = 1;
+        
         this.mew.sprite.textures = this.mew.sheet.animations.idle;
         this.mew.sprite.gotoAndPlay(0);
         this.mew.state.idle = true;

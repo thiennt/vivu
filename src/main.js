@@ -13,7 +13,7 @@ import { CombatScene } from "./CombatScene";
         width: 400,
         height: window.innerHeight,
         //backgroundAlpha: 0.5,
-        backgroundColor: 0x55271A
+        backgroundColor: "E6E6E6"
     });
 
     // Get canvas dimensions
@@ -62,6 +62,10 @@ import { CombatScene } from "./CombatScene";
             src: 'images/effect.json'
         },
         {
+            alias: 'skills',
+            src: 'images/skills.json'
+        },
+        {
             alias: 'background',
             src: 'images/background.png'
         },
@@ -77,13 +81,15 @@ import { CombatScene } from "./CombatScene";
     let seconds = 0;
 
     app.ticker.add((ticker) => {
-        combatScene.update(app);
+        if (combatScene.gameState == 0) {
+            combatScene.update(app);
 
-        seconds += (1 / 60) * ticker.deltaTime;
-        if(seconds >= 2){
-            combatScene.addBullets();
-            //combatScene.resetBoxes();
-            seconds -= seconds;
+            seconds += (1 / 60) * ticker.deltaTime + combatScene.warrior.stats.agi / 1000;
+            if(seconds >= 2){
+                combatScene.addBullets();
+                //combatScene.resetBoxes();
+                seconds -= seconds;
+            }
         }
     });
 

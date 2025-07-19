@@ -1,4 +1,4 @@
-import { AnimatedSprite, Assets, Text } from 'pixi.js';
+import { AnimatedSprite, Assets, Text, Graphics } from 'pixi.js';
 
 export class Mew {
     constructor(app, scene) {
@@ -22,7 +22,9 @@ export class Mew {
         this.sheet = await Assets.load('mew');
         this.sprite = new AnimatedSprite(this.sheet.animations.run);
         this.sprite.anchor = 0.5;
-        this.sprite.position.set(this.app.canvas.width - 30, this.scene.LINE_Y - 100);
+        this.sprite.width = 120;
+        this.sprite.height = 140;
+        this.sprite.position.set(this.app.canvas.width - 20, this.scene.LINE_Y - 50);
         this.sprite.play();
         this.sprite.animationSpeed = 0.1;
 
@@ -31,25 +33,37 @@ export class Mew {
     }
 
     addStatsBar() {
+        let padding = 5;
+        let x = this.app.canvas.width - padding - 190;
+        let y = this.scene.LINE_Y - 300;
+
+        let rec = new Graphics()
+            .roundRect(x, y, 190, 100, 10)
+            .fill('ffffff')
+            //.stroke({ width: 1, color: "ffffff" });
+        
+        this.scene.addChild(rec);
+        
         this.statsBar = new Text({
             text: this.showStats(),
             style: {
                 fontFamily: 'Arial',
-                fontSize: 18,
-                fill: { color: 0xFFFFFF, alpha: 1 },
-                stroke: { color: 0x4a1850, width: 2 },
+                fontSize: 16,
+                fill: { color: 0x000000, alpha: 1 },
+                //stroke: { color: 0x000000, width: 1 },
                 wordWrap: true,
                 wordWrapWidth: 440,
             }
         });
-        this.statsBar.x = this.app.canvas.width - 100;
-        this.statsBar.y = 10
+        this.statsBar.x = x + padding;
+        this.statsBar.y = y + padding;
         
         this.scene.addChild(this.statsBar);
     }
 
     showStats() {
-        let statsText = `HP: ${this.stats.currentHP} / ${this.stats.hp} \n`
+        let statsText = `             MONSTER \n\n`;
+        statsText += `HP: ${this.stats.currentHP}/${this.stats.hp} \n`
         statsText += `Def: ${this.stats.def} \n`;
         statsText += `Agi: ${this.stats.agi} \n`;
 
@@ -95,7 +109,7 @@ export class Mew {
         if (this.state.beaten) return;
 
         //if (!this.state.beaten) this.sprite.position.x -= 1 * 0.1;
-        if (this.sprite.position.x < this.scene.warrior.position()) {
+        if (this.sprite.position.x <= this.scene.warrior.position() + 20) {
             //this.sprite.position.x = this.app.canvas.width - 150;
             this.scene.warriorLose();
         } else {
@@ -105,5 +119,9 @@ export class Mew {
 
     move() {
         this.sprite.position.x -= 1 * this.stats.agi / 10;
+        if (this.scene.box.monsterCard) {
+            this.scene.box.monsterCard.position.x = this.sprite.position.x;
+            this.scene.box.monsterTxtCard.position.x = this.sprite.position.x;
+        }
     }
 }

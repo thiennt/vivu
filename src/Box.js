@@ -69,6 +69,8 @@ export class Box {
                 { value: -5, rate: 0.1 }
             ]
         }
+
+        this.isLoaded = false;
     }
 
     init() {
@@ -76,114 +78,54 @@ export class Box {
     }
 
     async addBoxes() {
-        this.boxSheet = await Assets.load('effect');
+        this.boxSheet = await Assets.load('skills');
 
-        this.CARD_Y = this.scene.LINE_Y + 150;
-        this.CARD_Y_1 = this.scene.LINE_Y + 70;
-        this.CARD_Y_2 = this.CARD_Y_1 + 90;
-        this.CARD_TITTLE_Y = this.scene.LINE_Y + 50;
-        this.CARD_TEXT_Y = this.scene.LINE_Y + 200;
-        this.CARD_EFFECT_Y = this.scene.LINE_Y + 70;
-
-        this.addCardTitle();
+        if (!this.scene.warrior.sprite || !this.scene.mew.sprite ) return;
         
         this.addHeroCard();
         this.addMonsterCard();
-    }
-
-    addCardTitle() {
-        let title = new Text({
-            text: "Choose Effect",
-            style: {
-                fontFamily: 'Arial',
-                fontSize: 22,
-                fill: { color: 0xFFFFFF, alpha: 1 },
-                stroke: { color: 0x4a1850, width: 2 },
-                //wordWrap: true,
-                //wordWrapWidth: 50,
-                align: "center"
-            }
-        });
-        title.anchor.set(0.5, 0.5);
-        title.x = this.app.canvas.width / 2;
-        title.y = this.scene.LINE_Y + 25;
-        this.view.addChild(title);
+        this.isLoaded = true;
     }
 
     // cardType: 0: Hero, 1: Monster
     async addCard(randomEffect, randomEffectValue, cardType=0) {
-        let boxSpace = this.app.canvas.width / 2;
-        let cardPosX = (boxSpace)/2;
-        if (cardType == 1) cardPosX += boxSpace;
+        let pos = cardType == 0 ? this.scene.warrior.sprite.position : this.scene.mew.sprite.position;
+        let cardPosX = pos.x;
+        let cardPosY = pos.y - 110;
         
-        // Card
-        const texture = await Assets.load('images/card.png');
-        let card = new Sprite({
-            texture: texture,
-            anchor: 0.5,
-            //scale: { x: 1, y: 1 },
-            width: 150,
-            height: 180
-        });
-        
-        card.position.set(cardPosX, this.CARD_Y);
-
-        card.interactive = true;
-        card.cursor = "pointer";
-
-        card.on('pointerover',function (event) {
-            card.width = 155;
-            card.height = 185;
-        });
-
-        card.on('pointerout',function (event) {
-            card.width = 150;
-            card.height = 180;
-        });
-
-        this.view.addChild(card);
-
-        let titleText = "HERO";
-        let titleColor = "0xFFFFFF"
-        if (cardType == 1) {
-            titleText = "MONSTER";
-            titleColor = "150404";
-        }
-
-        // Card title
-        let title = new Text({
-            text: titleText,
-            style: {
-                fontFamily: 'Arial',
-                fontSize: 14,
-                fill: { color: titleColor, alpha: 1 },
-                stroke: { color: titleColor, width: 1 },
-                //wordWrap: true,
-                //wordWrapWidth: 50,
-                align: "center"
-            }
-        });
-        title.anchor.set(0.5, 0.5);
-        title.x = cardPosX;
-        title.y = this.CARD_Y - 80;
-        this.view.addChild(title);
-
         // Card effect
         let animations = this.boxSheet.animations;
         let sprite = new AnimatedSprite(animations[randomEffect]);
         sprite.anchor = 0.5;
-        sprite.scale = 0.7;
+        //sprite.scale = 0.7;
+        sprite.width = 36;
+        sprite.height = 36;
 
-        sprite.position.set(cardPosX, this.CARD_Y - 30);
+        sprite.position.set(cardPosX, cardPosY);
         sprite.loop = false;
+
+        sprite.interactive = true;
+        sprite.cursor = "pointer";
+
+        // sprite.on('pointerover',function (event) {
+        //     sprite.width = 45;
+        //     sprite.height = 65;
+        // });
+
+        // sprite.on('pointerout',function (event) {
+        //     sprite.width = 40;
+        //     sprite.height = 40;
+        // });
+
+        sprite.on("mousedown", this.chooseCard.bind(this, randomEffect, randomEffectValue, cardType));
         this.view.addChild(sprite);
 
         // Card text
-        let cardColor = 0xFA1112;
+        let cardColor = "000000";
         let textLabel =  `${randomEffectValue.value} ${randomEffect.toUpperCase()}`;
 
         if (randomEffectValue.value > 0) {
-            cardColor = 0x6DEF15;
+            cardColor = "ffffff";
             textLabel = `+${randomEffectValue.value} ${randomEffect.toUpperCase()}`;
         }
 
@@ -191,9 +133,9 @@ export class Box {
             text: textLabel,
             style: {
                 fontFamily: 'Arial',
-                fontSize: 18,
-                fill: { color: cardColor, alpha: 1 },
-                stroke: { color: 0x4a1850, width: 2 },
+                fontSize: 11,
+                fill: { color: "000000", alpha: 1 },
+                //stroke: { color: "000000", width: 1 },
                 //wordWrap: true,
                 //wordWrapWidth: 50,
                 align: "center"
@@ -201,24 +143,24 @@ export class Box {
         });
         txtCard.anchor.set(0.5, 0.5);
         txtCard.x = cardPosX;
-        txtCard.y = this.CARD_TEXT_Y;
+        txtCard.y = cardPosY + 30;
         this.view.addChild(txtCard);
 
-        card.on("mousedown", this.chooseCard.bind(this, randomEffect, randomEffectValue, cardType));
+        return [sprite, txtCard];
     }
 
-     addHeroCard() {
+    async addHeroCard() {
         let randomEffect = getRandomItems(["str", "crit", "agi"], 1)[0];
         let randomEffectValue = this.getRandomEffectValue(randomEffect);
 
-        this.addCard(randomEffect, randomEffectValue, 0);
+        [this.heroCard, this.heroTxtCard] = await this.addCard(randomEffect, randomEffectValue, 0);
     }
 
-    addMonsterCard() {
+    async addMonsterCard() {
         let randomEffect = getRandomItems(["hp", "def", "agi"], 1)[0];
         let randomEffectValue = this.getRandomEffectValue(randomEffect);
 
-        this.addCard(randomEffect, randomEffectValue, 1);
+        [this.monsterCard, this.monsterTxtCard] = await this.addCard(randomEffect, randomEffectValue, 1);
     }
 
     getRandomEffectValue(randomEffect) {

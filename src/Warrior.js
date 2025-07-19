@@ -25,10 +25,12 @@ export class Warrior {
         this.sheet = await Assets.load('hero');
         this.sprite = new AnimatedSprite(this.sheet.animations.idle);
         this.sprite.anchor = 0.5;
-        this.sprite.scale.set(0.6);
+        //this.sprite.scale.set(0.6);
+        this.sprite.width = 80;
+        this.sprite.height = 100;
         this.sprite.play();
         this.sprite.animationSpeed = 0.1;
-        this.sprite.position.set(this.POS_X, this.scene.LINE_Y - 80);
+        this.sprite.position.set(this.POS_X, this.scene.LINE_Y - 50);
 
         this.addStatsBar();
     }
@@ -38,26 +40,37 @@ export class Warrior {
     }
 
     addStatsBar() {
+        let y = this.scene.LINE_Y - 300;
+        let padding = 5;
+
+        let rec = new Graphics()
+            .roundRect(padding, y, 190, 100, 10)
+            .fill('ffffff')
+            //.stroke({ width: 1, color: "ffffff" });
+        
+        this.scene.addChild(rec);
+
         this.statsBar = new Text({
             text: this.showStats(),
             style: {
                 fontFamily: 'Arial',
-                fontSize: 18,
-                fill: { color: 0xFFFFFF, alpha: 1 },
-                stroke: { color: 0x4a1850, width: 2 },
+                fontSize: 16,
+                fill: { color: 0x000000, alpha: 1 },
+                stroke: { color: "ffffff", width: 1 },
                 wordWrap: true,
                 wordWrapWidth: 440,
             }
         });
-        this.statsBar.x = 20;
-        this.statsBar.y = 10
+        this.statsBar.x = 10 + padding;
+        this.statsBar.y = y + padding;
         
         this.scene.addChild(this.statsBar);
     }
 
     showStats() {
-        let statsText = `STR: ${this.stats.str} \n`;
-        statsText += `CRIT: ${this.stats.crit} \n`;
+        let statsText = `             HERO \n\n`;
+        statsText += `STR: ${this.stats.str} \n`;
+        statsText += `CRIT: ${this.stats.crit}% \n`;
         statsText += `AGI: ${this.stats.agi} \n`;
 
         return statsText;
@@ -77,9 +90,9 @@ export class Warrior {
             this.sprite.gotoAndPlay(0);
 
             let bullet = new Graphics()
-                .circle(this.sprite.x + 10, this.sprite.y - 15, 5)
+                .circle(this.sprite.x + 35, this.sprite.y - 20, 5)
                 .fill({
-                    color: 0xffffff,
+                    color: 0x000000,
                     alpha: 1
                 });
 
