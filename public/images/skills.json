@@ -1,121 +1,122 @@
 {
-    "frames": {
-        "skills0.png": {
-            "frame": {
-                "x": 0,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            },
-            "rotated": false,
-            "trimmed": false,
-            "spriteSourceSize": {
-                "x": 0,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            },
-            "sourceSize": {
-                "w": 48,
-                "h": 48
-            }
-        },
-        "skills1.png": {
-            "frame": {
-                "x": 48,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            },
-            "rotated": false,
-            "trimmed": false,
-            "spriteSourceSize": {
-                "x": 0,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            },
-            "sourceSize": {
-                "w": 48,
-                "h": 48
-            }
-        },
-        "skills2.png": {
-            "frame": {
-                "x": 96,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            },
-            "rotated": false,
-            "trimmed": false,
-            "spriteSourceSize": {
-                "x": 0,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            },
-            "sourceSize": {
-                "w": 48,
-                "h": 48
-            }
-        },
-        "skills3.png": {
-            "frame": {
-                "x": 144,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            },
-            "rotated": false,
-            "trimmed": false,
-            "spriteSourceSize": {
-                "x": 0,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            },
-            "sourceSize": {
-                "w": 48,
-                "h": 48
-            }
-        },
-        "skills4.png": {
-            "frame": {
-                "x": 192,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            },
-            "rotated": false,
-            "trimmed": false,
-            "spriteSourceSize": {
-                "x": 0,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            },
-            "sourceSize": {
-                "w": 48,
-                "h": 48
-            }
-        }
-    },
-    "meta": {
-        "app": "https://github.com/piskelapp/piskel/",
-        "version": "1.0",
-        "image": "skills.png",
-        "format": "RGBA8888",
-        "size": {
-            "w": 240,
-            "h": 48
-        }
-    },
+	"frames": {
+		"agi.png": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 48,
+				"h": 48
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 48,
+				"h": 48
+			},
+			"sourceSize": {
+				"w": 48,
+				"h": 48
+			}
+		},
+		"atk.png": {
+			"frame": {
+				"x": 51,
+				"y": 1,
+				"w": 48,
+				"h": 48
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 48,
+				"h": 48
+			},
+			"sourceSize": {
+				"w": 48,
+				"h": 48
+			}
+		},
+		"crit.png": {
+			"frame": {
+				"x": 101,
+				"y": 1,
+				"w": 48,
+				"h": 48
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 48,
+				"h": 48
+			},
+			"sourceSize": {
+				"w": 48,
+				"h": 48
+			}
+		},
+		"def.png": {
+			"frame": {
+				"x": 151,
+				"y": 1,
+				"w": 48,
+				"h": 48
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 48,
+				"h": 48
+			},
+			"sourceSize": {
+				"w": 48,
+				"h": 48
+			}
+		},
+		"hp.png": {
+			"frame": {
+				"x": 201,
+				"y": 1,
+				"w": 48,
+				"h": 48
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 48,
+				"h": 48
+			},
+			"sourceSize": {
+				"w": 48,
+				"h": 48
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "skills.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 250,
+			"h": 50
+		},
+		"scale": "1"
+	},
     "animations": {
-        "str": ["skills0.png"],
-        "def": ["skills1.png"],
-        "hp": ["skills2.png"],
-        "crit": ["skills3.png"],
-        "agi": ["skills4.png"]
+        "atk": ["atk.png"],
+        "def": ["def.png"],
+        "hp": ["hp.png"],
+        "crit": ["crit.png"],
+        "agi": ["agi.png"]
     }
 }

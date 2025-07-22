@@ -8,65 +8,50 @@ export class Box {
         this.scene = scene;
         
         this.effects = {
-            "str": [
-                { value: 1, rate: 0.1 },
-                { value: 2, rate: 0.1 },
-                { value: 3, rate: 0.1 },
-                { value: 4, rate: 0.1 },
-                { value: 5, rate: 0.1 },
-                { value: -1, rate: 0.1 },
-                { value: -2, rate: 0.1 },
-                { value: -3, rate: 0.1 },
-                { value: -4, rate: 0.1 },
-                { value: -5, rate: 0.1 }
+            "atk": [
+                { value: 1, rate: 0.2 },
+                { value: 5, rate: 0.2 },
+                { value: 10, rate: 0.05 },
+                { value: 15, rate: 0.05 },
+                { value: -5, rate: 0.25 },
+                { value: -10, rate: 0.15 },
+                { value: -15, rate: 0.1 }
             ],
             "crit" : [
+                { value: 5, rate: 0.2 },
                 { value: 10, rate: 0.1 },
+                { value: 15, rate: 0.1 },
                 { value: 20, rate: 0.1 },
-                { value: 30, rate: 0.1 },
-                { value: 40, rate: 0.1 },
-                { value: 50, rate: 0.1 },
+                { value: -5, rate: 0.2 },
                 { value: -10, rate: 0.1 },
-                { value: -20, rate: 0.1 },
-                { value: -30, rate: 0.1 },
-                { value: -40, rate: 0.1 },
-                { value: -50, rate: 0.1 }
+                { value: -15, rate: 0.1 },
+                { value: -20, rate: 0.1 }
             ],
             "def": [
-                { value: 1, rate: 0.1 },
-                { value: 2, rate: 0.1 },
-                { value: 3, rate: 0.1 },
-                { value: 4, rate: 0.1 },
-                { value: 5, rate: 0.1 },
-                { value: -1, rate: 0.1 },
-                { value: -2, rate: 0.1 },
-                { value: -3, rate: 0.1 },
-                { value: -4, rate: 0.1 },
-                { value: -5, rate: 0.1 }
+                { value: 1, rate: 0.3 },
+                { value: 5, rate: 0.25 },
+                { value: 10, rate: 0.2 },
+                { value: 15, rate: 0.15 },
+                { value: -1, rate: 0.05 },
+                { value: -5, rate: 0.05 }
             ],
             "hp": [
-                { value: 1, rate: 0.1 },
-                { value: 2, rate: 0.1 },
-                { value: 3, rate: 0.1 },
-                { value: 4, rate: 0.1 },
-                { value: 5, rate: 0.1 },
-                { value: -1, rate: 0.1 },
-                { value: -2, rate: 0.1 },
-                { value: -3, rate: 0.1 },
-                { value: -4, rate: 0.1 },
-                { value: -5, rate: 0.1 }
+                { value: 1, rate: 0.3 },
+                { value: 5, rate: 0.25 },
+                { value: 10, rate: 0.2 },
+                { value: 15, rate: 0.15 },
+                { value: -1, rate: 0.05 },
+                { value: -5, rate: 0.05 }
             ],
             "agi": [
-                { value: 1, rate: 0.1 },
-                { value: 2, rate: 0.1 },
-                { value: 3, rate: 0.1 },
-                { value: 4, rate: 0.1 },
-                { value: 5, rate: 0.1 },
-                { value: -1, rate: 0.1 },
-                { value: -2, rate: 0.1 },
-                { value: -3, rate: 0.1 },
-                { value: -4, rate: 0.1 },
-                { value: -5, rate: 0.1 }
+                { value: 5, rate: 0.2 },
+                { value: 10, rate: 0.1 },
+                { value: 15, rate: 0.1 },
+                { value: 20, rate: 0.1 },
+                { value: -5, rate: 0.2 },
+                { value: -10, rate: 0.1 },
+                { value: -15, rate: 0.1 },
+                { value: -20, rate: 0.1 }
             ]
         }
 
@@ -77,10 +62,10 @@ export class Box {
         this.addBoxes();
     }
 
-    async addBoxes() {
-        this.boxSheet = await Assets.load('skills');
+    addBoxes() {
+        this.boxSheet = this.scene.skillsSheet;
 
-        if (!this.scene.warrior.sprite || !this.scene.mew.sprite ) return;
+        //if (!this.scene.warrior.sprite || !this.scene.mew.sprite ) return;
         
         this.addHeroCard();
         this.addMonsterCard();
@@ -96,6 +81,8 @@ export class Box {
         // Card effect
         let animations = this.boxSheet.animations;
         let sprite = new AnimatedSprite(animations[randomEffect]);
+        
+        //let sprite = this.scene.skillsSprites[randomEffect];
         sprite.anchor = 0.5;
         //sprite.scale = 0.7;
         sprite.width = 36;
@@ -122,18 +109,18 @@ export class Box {
 
         // Card text
         let cardColor = "000000";
-        let textLabel =  `${randomEffectValue.value} ${randomEffect.toUpperCase()}`;
+        let textLabel =  `${randomEffectValue.value}% ${randomEffect.toUpperCase()}`;
 
         if (randomEffectValue.value > 0) {
             cardColor = "ffffff";
-            textLabel = `+${randomEffectValue.value} ${randomEffect.toUpperCase()}`;
+            textLabel = `+${randomEffectValue.value}% ${randomEffect.toUpperCase()}`;
         }
 
         let txtCard = new Text({
             text: textLabel,
             style: {
                 fontFamily: 'Arial',
-                fontSize: 11,
+                fontSize: 12,
                 fill: { color: "000000", alpha: 1 },
                 //stroke: { color: "000000", width: 1 },
                 //wordWrap: true,
@@ -150,7 +137,7 @@ export class Box {
     }
 
     async addHeroCard() {
-        let randomEffect = getRandomItems(["str", "crit", "agi"], 1)[0];
+        let randomEffect = getRandomItems(["atk", "crit", "agi"], 1)[0];
         let randomEffectValue = this.getRandomEffectValue(randomEffect);
 
         [this.heroCard, this.heroTxtCard] = await this.addCard(randomEffect, randomEffectValue, 0);
@@ -169,28 +156,22 @@ export class Box {
 
     chooseCard(effect, effectValue, cardType) {
         if (cardType == 0) {
-            //console.log("hero", this.scene.warrior.stats[effect], effect, effectValue.value);
             let hero = this.scene.warrior;
-            hero.stats[effect] += effectValue.value;
+            let stat = parseFloat(hero.stats[effect]);
+            let num = stat + (stat * effectValue.value / 100);
+            num = effect == "crit" ? stat + effectValue.value : num;
+            num = num < 0 ? 0 : num;
+            hero.stats[effect] = num.toFixed(2);
             hero.updateStats();
         } else {
-            //console.log("monster", this.scene.mew.stats[effect], effect, effectValue.value);
             let monster = this.scene.mew;
-            monster.stats[effect] += effectValue.value;
+            let stat = parseFloat(monster.stats[effect]);
+            let num = stat + (stat * effectValue.value / 100);
+            monster.stats[effect] = num.toFixed(2);
             monster.updateStats();
         }
 
         this.scene.showSelectedEffect(effect, effectValue, cardType);
-    }
-
-    openBox(effect, effectValue) {
-        // box.textures = this.boxSheet.animations.open;
-        // box.gotoAndPlay(0);
-        // box.animationSpeed = 0.1;
-
-        console.log(effect, effectValue);
-
-        this.scene.addBullets();
     }
 }
 

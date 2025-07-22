@@ -76,6 +76,8 @@ import { CombatScene } from "./CombatScene";
     ]);
 
     const combatScene = new CombatScene(app);
+    await combatScene.loadAssets();
+    combatScene.init();
     app.stage.addChild(combatScene.view);
 
     let seconds = 0;

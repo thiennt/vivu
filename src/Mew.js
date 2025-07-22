@@ -1,4 +1,4 @@
-import { AnimatedSprite, Assets, Text, Graphics } from 'pixi.js';
+import { AnimatedSprite, Assets, Text, Graphics, Sprite, Texture } from 'pixi.js';
 
 export class Mew {
     constructor(app, scene) {
@@ -12,15 +12,17 @@ export class Mew {
 
         this.stats = {
             "hp": 15,
-            "currentHP": 15,
+            "maxHp": 15,
             "def": 4,
             "agi": 2
         };
     }
 
     async init() {
-        this.sheet = await Assets.load('mew');
-        this.sprite = new AnimatedSprite(this.sheet.animations.run);
+        //this.sheet = await Assets.load('mew');
+        //this.sprite = new AnimatedSprite(this.sheet.animations.run);
+        this.sheet = this.scene.monsterSheet;
+        this.sprite = this.scene.monsterSprite;
         this.sprite.anchor = 0.5;
         this.sprite.width = 120;
         this.sprite.height = 140;
@@ -29,7 +31,7 @@ export class Mew {
         this.sprite.animationSpeed = 0.1;
 
         this.addStatsBar();
-        
+        this.addHpBar();
     }
 
     addStatsBar() {
@@ -44,26 +46,65 @@ export class Mew {
         
         this.scene.addChild(rec);
         
+        let animations = this.scene.skillsSheet.animations;
+        
+        let iconX = x + 10 + padding;
+        let hpIcon = new AnimatedSprite(animations["hp"]);
+        hpIcon.anchor = 0.5;
+        hpIcon.width = 14;
+        hpIcon.height = 14;
+        hpIcon.position.set(iconX, y + 50);
+        this.scene.addChild(hpIcon);
+
+        let defIcon = new AnimatedSprite(animations["def"]);
+        defIcon.anchor = 0.5;
+        defIcon.width = 14;
+        defIcon.height = 14;
+        defIcon.position.set(iconX, y + 70);
+        this.scene.addChild(defIcon);
+
+        let agiIcon = new AnimatedSprite(animations["agi"]);
+        agiIcon.anchor = 0.5;
+        agiIcon.width = 14;
+        agiIcon.height = 14;
+        agiIcon.position.set(iconX, y + 87);
+        this.scene.addChild(agiIcon);
+
         this.statsBar = new Text({
             text: this.showStats(),
             style: {
                 fontFamily: 'Arial',
                 fontSize: 16,
                 fill: { color: 0x000000, alpha: 1 },
-                //stroke: { color: 0x000000, width: 1 },
+                stroke: { color: 0x000000, width: 1 },
                 wordWrap: true,
                 wordWrapWidth: 440,
             }
         });
-        this.statsBar.x = x + padding;
+        this.statsBar.x = iconX + 15;
         this.statsBar.y = y + padding;
         
         this.scene.addChild(this.statsBar);
     }
 
+    addHpBar() {
+        let x = this.sprite.position.x - 30;
+        let y = this.sprite.position.y - 70;
+        
+        this.maxHpBar = new Graphics()
+            .rect(x, y, 70, 5)
+            .fill({ color: "000000" });
+        this.scene.addChild(this.maxHpBar);
+        
+        this.hpBar = new Graphics()
+            .rect(x, y, 70, 5)
+            .fill({ color: 0x666666 });
+        this.scene.addChild(this.hpBar);
+    }    
+
     showStats() {
-        let statsText = `             MONSTER \n\n`;
-        statsText += `HP: ${this.stats.currentHP}/${this.stats.hp} \n`
+        let statsText = `MONSTER \n\n`;
+        statsText += `HP: ${this.stats.hp}/${this.stats.maxHp} \n`
         statsText += `Def: ${this.stats.def} \n`;
         statsText += `Agi: ${this.stats.agi} \n`;
 
@@ -79,9 +120,12 @@ export class Mew {
         // this.sprite.gotoAndPlay(0);
         //this.state.beaten = true;
         //this.sprite.position.x += 1;
-        this.stats.currentHP -= this.scene.warrior.stats.str - this.stats.def;
+        let currentHp = parseFloat(this.stats.hp);
+        currentHp -= this.scene.warrior.stats.atk - this.stats.def;
+        //this.stats.hp -= (this.scene.warrior.stats.str - this.stats.def).toFixed(2);
+        this.stats.hp = currentHp.toFixed(2);
         this.statsBar.text = this.showStats();
-        if (this.stats.currentHP <= 0) {
+        if (this.stats.hp <= 0) {
             this.die();
         }
         //await delay(100);
@@ -109,7 +153,7 @@ export class Mew {
         if (this.state.beaten) return;
 
         //if (!this.state.beaten) this.sprite.position.x -= 1 * 0.1;
-        if (this.sprite.position.x <= this.scene.warrior.position() + 20) {
+        if (this.sprite.position.x <= this.scene.warrior.sprite.position.x + 20) {
             //this.sprite.position.x = this.app.canvas.width - 150;
             this.scene.warriorLose();
         } else {
@@ -119,9 +163,25 @@ export class Mew {
 
     move() {
         this.sprite.position.x -= 1 * this.stats.agi / 10;
+        let currentX = this.sprite.position.x;
+        let currentY = this.sprite.position.y - 70;
+
+        if (this.hpBar) {
+            let healthPercentage = this.stats.hp / this.stats.maxHp;
+
+            this.hpBar.clear()
+                .rect(currentX - 30, currentY, 70 * healthPercentage, 5)
+                .fill({ color: 0x666666 });
+
+            this.maxHpBar.clear()
+                .rect(currentX - 30, currentY, 70, 5)
+                .fill({ color: 0x000000 });
+        }
+
         if (this.scene.box.monsterCard) {
-            this.scene.box.monsterCard.position.x = this.sprite.position.x;
-            this.scene.box.monsterTxtCard.position.x = this.sprite.position.x;
+            this.scene.box.monsterCard.position.x = currentX;
+            this.scene.box.monsterTxtCard.position.x = currentX;
         }
     }
 }
+

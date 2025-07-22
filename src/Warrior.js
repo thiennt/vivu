@@ -13,30 +13,26 @@ export class Warrior {
 
         this.bullets = [];
         this.stats = {
-            "str": 5,
+            "atk": 5,
             "crit": 1,
             "agi": 1
         }
-
-        this.POS_X = 30;
     }
 
-    async init() {
-        this.sheet = await Assets.load('hero');
-        this.sprite = new AnimatedSprite(this.sheet.animations.idle);
+    init() {
+        // this.sheet = await Assets.load('stickman');
+        // this.sprite = new AnimatedSprite(this.sheet.animations.idle);
+        this.sheet = this.scene.heroSheet;
+        this.sprite = this.scene.heroSprite;
         this.sprite.anchor = 0.5;
         //this.sprite.scale.set(0.6);
-        this.sprite.width = 80;
-        this.sprite.height = 100;
+        this.sprite.width = 40;
+        this.sprite.height = 80;
         this.sprite.play();
         this.sprite.animationSpeed = 0.1;
-        this.sprite.position.set(this.POS_X, this.scene.LINE_Y - 50);
+        this.sprite.position.set(40, this.scene.LINE_Y - 38);
 
         this.addStatsBar();
-    }
-
-    position() {
-        return this.POS_X + 20;
     }
 
     addStatsBar() {
@@ -50,26 +46,49 @@ export class Warrior {
         
         this.scene.addChild(rec);
 
+        let animations = this.scene.skillsSheet.animations;
+        
+        let iconX = 10 + padding;
+        let atkIcon = new AnimatedSprite(animations["atk"]);
+        atkIcon.anchor = 0.5;
+        atkIcon.width = 14;
+        atkIcon.height = 14;
+        atkIcon.position.set(iconX, y + 50);
+        this.scene.addChild(atkIcon);
+
+        let critIcon = new AnimatedSprite(animations["crit"]);
+        critIcon.anchor = 0.5;
+        critIcon.width = 14;
+        critIcon.height = 14;
+        critIcon.position.set(iconX, y + 70);
+        this.scene.addChild(critIcon);
+
+        let agiIcon = new AnimatedSprite(animations["agi"]);
+        agiIcon.anchor = 0.5;
+        agiIcon.width = 14;
+        agiIcon.height = 14;
+        agiIcon.position.set(iconX, y + 87);
+        this.scene.addChild(agiIcon);
+        
         this.statsBar = new Text({
             text: this.showStats(),
             style: {
                 fontFamily: 'Arial',
                 fontSize: 16,
                 fill: { color: 0x000000, alpha: 1 },
-                stroke: { color: "ffffff", width: 1 },
+                stroke: { color: 0x000000, width: 1 },
                 wordWrap: true,
                 wordWrapWidth: 440,
             }
         });
-        this.statsBar.x = 10 + padding;
+        this.statsBar.x = iconX + 15;
         this.statsBar.y = y + padding;
-        
         this.scene.addChild(this.statsBar);
     }
 
     showStats() {
-        let statsText = `             HERO \n\n`;
-        statsText += `STR: ${this.stats.str} \n`;
+        let statsText = `HERO \n\n`;
+        statsText += `ATK: ${this.stats.atk} \n`;
         statsText += `CRIT: ${this.stats.crit}% \n`;
         statsText += `AGI: ${this.stats.agi} \n`;
 

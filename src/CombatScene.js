@@ -1,4 +1,4 @@
-import { Graphics, Container, Text, Sprite, Assets } from 'pixi.js';
+import { Graphics, Container, Text, Sprite, Assets, AnimatedSprite } from 'pixi.js';
 import { Warrior } from './Warrior';
 import { Mew } from './Mew';
 import { Box } from './Box';
@@ -14,15 +14,12 @@ export class CombatScene {
         this.LINE_Y = 400;
 
         this.gameState = 0;
-
-        this.init();
     }
 
-    async init() {
+    init() {
         this.addMenu();
         //this.addBackground();
         //this.addLine();
-        //this.addInventory();
         this.addWarrior();
         this.addMew();
         this.addBoxes();
@@ -34,6 +31,23 @@ export class CombatScene {
 
     removeChild(child) {
         this.view.removeChild(child);
+    }
+
+    async loadAssets() {
+        this.skillsSheet = await Assets.load('skills');
+        //let skillsAnimations = this.skillsSheet.animations;
+        
+        // this.skillsSprites = ["str", "crit", "agi", "hp", "def"].reduce((hash, skill) => {
+        //     hash[skill] = new AnimatedSprite(skillsAnimations[skill]);
+        //     return hash;
+        // }, {});
+        
+        this.heroSheet = await Assets.load('stickman');
+        this.heroSprite = new AnimatedSprite(this.heroSheet.animations.idle);
+        
+        this.monsterSheet = await Assets.load('mew');
+        this.monsterSprite = new AnimatedSprite(this.monsterSheet.animations.run);
+
     }
 
     async addBackground() {
@@ -77,37 +91,6 @@ export class CombatScene {
         this.view.addChild(line);
     }
 
-    addInventory() {
-        const inventory = new Text({
-            text: 'Click to add bullets ' + this.bulletTotal,
-            style: {
-                fontFamily: 'Arial',
-                fontSize: 36,
-                fontStyle: 'italic',
-                fontWeight: 'bold',
-                fill: { color: 0x4a1850, alpha: 1 },
-                stroke: { color: 0x4a1850, width: 5 },
-                dropShadow: {
-                color: 0x000000,
-                angle: Math.PI / 6,
-                blur: 4,
-                distance: 6,
-                },
-                wordWrap: true,
-                wordWrapWidth: 440,
-            }
-        });
-        inventory.x = Math.round((this.view.width - inventory.width) / 2);
-        inventory.y = 250
-
-        inventory.interactive = true;
-        inventory.cursor = "pointer";
-        inventory.buttonMode = true;
-        inventory.on("click", this.addBullets.bind(this));
-
-        this.view.addChild(inventory);
-    }
-
     addBoxes() {
         this.box = new Box(this.app, this);
         this.box.init();
@@ -123,11 +106,11 @@ export class CombatScene {
 
          // Card text
         let cardColor = "000000";
-        let textLabel =  `${effectValue.value} ${effect.toUpperCase()}`;
+        let textLabel =  `${effectValue.value}% ${effect.toUpperCase()}`;
 
         if (effectValue.value > 0) {
             cardColor = "ffffff";
-            textLabel = `+${effectValue.value} ${effect.toUpperCase()}`;
+            textLabel = `+${effectValue.value}% ${effect.toUpperCase()}`;
         }
 
         let txtCard = new Text({
@@ -166,7 +149,7 @@ export class CombatScene {
 
     async addWarrior() {
         this.warrior = new Warrior(this.app, this);
-        await this.warrior.init();
+        this.warrior.init();
         this.view.addChild(this.warrior.sprite);
     }
 
@@ -183,7 +166,10 @@ export class CombatScene {
     update() {
         this.warrior.update();
         this.mew.update();
-        if (!this.box.isLoaded) this.box.addBoxes();
+        // if (!this.box.isLoaded) {
+        //     this.box.addBoxes();
+        //     this.box.isLoaded = true;
+        // }
 
         for (let bullet of this.warrior.bullets) {
             if (testForAABB(bullet, this.mew.sprite)) {
