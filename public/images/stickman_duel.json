@@ -1,0 +1,179 @@
+{
+	"frames": {
+		"stickman.png": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 39,
+				"h": 73
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 39,
+				"h": 73
+			},
+			"sourceSize": {
+				"w": 39,
+				"h": 73
+			}
+		},
+		"stickman1.png": {
+			"frame": {
+				"x": 42,
+				"y": 1,
+				"w": 49,
+				"h": 72
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 49,
+				"h": 72
+			},
+			"sourceSize": {
+				"w": 49,
+				"h": 72
+			}
+		},
+		"stickman_duel.png": {
+			"frame": {
+				"x": 93,
+				"y": 1,
+				"w": 36,
+				"h": 72
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 36,
+				"h": 72
+			},
+			"sourceSize": {
+				"w": 36,
+				"h": 72
+			}
+		},
+		"stickman_duel_1.png": {
+			"frame": {
+				"x": 131,
+				"y": 1,
+				"w": 42,
+				"h": 70
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 42,
+				"h": 70
+			},
+			"sourceSize": {
+				"w": 42,
+				"h": 70
+			}
+		},
+		"stickman_duel_kick.png": {
+			"frame": {
+				"x": 175,
+				"y": 1,
+				"w": 62,
+				"h": 69
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 62,
+				"h": 69
+			},
+			"sourceSize": {
+				"w": 62,
+				"h": 69
+			}
+		},
+		"stickman_duel_punch.png": {
+			"frame": {
+				"x": 239,
+				"y": 1,
+				"w": 49,
+				"h": 72
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 49,
+				"h": 72
+			},
+			"sourceSize": {
+				"w": 49,
+				"h": 72
+			}
+		},
+		"stickman_duel_uppercut.png": {
+			"frame": {
+				"x": 290,
+				"y": 1,
+				"w": 49,
+				"h": 69
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 49,
+				"h": 69
+			},
+			"sourceSize": {
+				"w": 49,
+				"h": 69
+			}
+		},
+		"stickman_duel_uppercut_1.png": {
+			"frame": {
+				"x": 341,
+				"y": 1,
+				"w": 31,
+				"h": 86
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 31,
+				"h": 86
+			},
+			"sourceSize": {
+				"w": 31,
+				"h": 86
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "stickman_duel.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 373,
+			"h": 88
+		},
+		"scale": "1"
+	},
+	"animations": {
+        "idle": ["stickman_duel.png", "stickman_duel_1.png"],
+		"fight": ["stickman_duel.png", "stickman_duel_punch.png", "stickman_duel_kick.png", "stickman_duel_uppercut.png", "stickman_duel_uppercut_1.png"]
+    }
+}

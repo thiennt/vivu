@@ -2,7 +2,7 @@ import {
     Application, Assets
 } from "pixi.js";
 import { initDevtools } from '@pixi/devtools';
-import { CombatScene } from "./CombatScene";
+import { Menu } from "./Menu";
 
 (async () => {
     // Stuff to do
@@ -50,6 +50,10 @@ import { CombatScene } from "./CombatScene";
             src: 'images/stickman.json'
         },
         {
+            alias: 'stickman_duel',
+            src: 'images/stickman_duel.json'
+        },
+        {
             alias: 'mew',
             src: 'images/mew.json'
         },
@@ -69,31 +73,20 @@ import { CombatScene } from "./CombatScene";
             alias: 'background',
             src: 'images/background.png'
         },
-         {
+        {
             alias: 'card',
             src: 'images/card.png'
+        },
+        {
+            alias: 'menu',
+            src: 'images/menu.json'
         }
     ]);
 
-    const combatScene = new CombatScene(app);
-    await combatScene.loadAssets();
-    combatScene.init();
-    app.stage.addChild(combatScene.view);
-
-    let seconds = 0;
-
-    app.ticker.add((ticker) => {
-        if (combatScene.gameState == 0) {
-            combatScene.update(app);
-
-            seconds += (1 / 60) * ticker.deltaTime + combatScene.warrior.stats.agi / 1000;
-            if(seconds >= 2){
-                combatScene.addBullets();
-                //combatScene.resetBoxes();
-                seconds -= seconds;
-            }
-        }
-    });
+    const menu = new Menu(app);
+    await menu.loadAssets();
+    menu.init();
+    app.stage.addChild(menu.view);
 
     document.body.appendChild(app.canvas);
 })();

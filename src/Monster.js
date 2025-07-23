@@ -1,6 +1,6 @@
 import { AnimatedSprite, Assets, Text, Graphics, Sprite, Texture } from 'pixi.js';
 
-export class Mew {
+export class Monster {
     constructor(app, scene) {
         this.app = app;
         this.scene = scene;
@@ -13,7 +13,9 @@ export class Mew {
         this.stats = {
             "hp": 15,
             "maxHp": 15,
+            "atk": 6,
             "def": 4,
+            "crit": 3,
             "agi": 2
         };
     }
@@ -26,7 +28,7 @@ export class Mew {
         this.sprite.anchor = 0.5;
         this.sprite.width = 120;
         this.sprite.height = 140;
-        this.sprite.position.set(this.app.canvas.width - 20, this.scene.LINE_Y - 50);
+        this.sprite.position.set(this.app.canvas.width /2 + 50, this.scene.LINE_Y - 50);
         this.sprite.play();
         this.sprite.animationSpeed = 0.1;
 
@@ -40,7 +42,7 @@ export class Mew {
         let y = this.scene.LINE_Y - 400;
 
         let rec = new Graphics()
-            .roundRect(x, y, 190, 200, 10)
+            .roundRect(x, y, 190, 220, 10)
             .fill('ffffff')
             //.stroke({ width: 1, color: "ffffff" });
         
@@ -51,10 +53,16 @@ export class Mew {
         let hpIcon = this.addIcon("hp", iconX, y + 52);
         this.scene.addChild(hpIcon);
         
-        let defIcon = this.addIcon("def", iconX, y + 87);
+        let atkIcon = this.addIcon("atk", iconX, y + 87);
+        this.scene.addChild(atkIcon);
+
+        let defIcon = this.addIcon("def", iconX, y + 122);
         this.scene.addChild(defIcon);
 
-        let agiIcon = this.addIcon("agi", iconX, y + 122);
+        let critIcon = this.addIcon("crit", iconX, y + 157);
+        this.scene.addChild(critIcon);
+
+        let agiIcon = this.addIcon("agi", iconX, y + 194);
         this.scene.addChild(agiIcon);
 
         this.statsBar = new Text({
@@ -98,13 +106,15 @@ export class Mew {
             .rect(x, y, 70, 5)
             .fill({ color: 0x666666 });
         this.scene.addChild(this.hpBar);
-    }
+    }    
 
-    showStats() {
+     showStats() {
         let statsText = `MONSTER \n\n`;
-        statsText += `HP: ${this.stats.hp}/${this.stats.maxHp} \n\n`
-        statsText += `Def: ${this.stats.def} \n\n`;
-        statsText += `Agi: ${this.stats.agi} \n\n`;
+        statsText += `HP: ${this.stats.hp}/${this.stats.maxHp} \n\n`;
+        statsText += `ATK: ${this.stats.atk} \n\n`;
+        statsText += `DEF: ${this.stats.def} \n\n`;
+        statsText += `CRIT: ${this.stats.crit}% \n\n`;
+        statsText += `AGI: ${this.stats.agi} \n`;
 
         return statsText;
     }

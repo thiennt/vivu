@@ -11,15 +11,11 @@ export class CombatScene {
         this.view.isRenderGroup = true;
         
         this.bulletTotal = 0;
-        this.LINE_Y = 400;
-
         this.gameState = 0;
     }
 
     init() {
-        this.addMenu();
-        //this.addBackground();
-        //this.addLine();
+        this.addBackground();
         this.addWarrior();
         this.addMew();
         this.addBoxes();
@@ -51,33 +47,47 @@ export class CombatScene {
     }
 
     async addBackground() {
-        const texture = await Assets.load('images/dungeon_2.png');
-        this.background = new Sprite({
-            texture: texture,
-            anchor: 0.5,
-            //scale: { x: 1, y: 1 },
-            //width: 400,
-            //height: 400
-        });
+        // const texture = await Assets.load('images/dungeon_2.png');
+        // this.background = new Sprite({
+        //     texture: texture,
+        //     anchor: 0.5,
+        //     //scale: { x: 1, y: 1 },
+        //     //width: 400,
+        //     //height: 400
+        // });
 
-        // Center background sprite anchor.
-        let y = this.app.canvas.height / 3;
-        this.background.position.set(this.app.canvas.width / 2, y);
-        this.background.zIndex = -1; // Ensure background is behind other elements
+        // // Center background sprite anchor.
+        // let y = this.app.canvas.height / 3;
+        // this.background.position.set(this.app.canvas.width / 2, y);
+        // this.background.zIndex = -1; // Ensure background is behind other elements
 
-        this.LINE_Y = y + this.background.height / 2;
+        // this.LINE_Y = y + this.background.height / 2;
 
-        this.addChild(this.background);
+        // this.addChild(this.background);
+
+        this.LINE_Y = this.app.canvas.height /2;
+
+        let y = this.LINE_Y + 100;
+        let x = 50;
+
+        let background = new Graphics()
+            .rect(0, this.app.canvas.height /2, this.app.canvas.width, 50)
+            .fill('000000')
+            .stroke({ width: 1, color: "333333" });        
+        this.addChild(background);
     }
 
-    addMenu() {
-        this.LINE_Y = this.app.canvas.height /2;
-        this.menuBar = new Graphics()
-            .rect(0, this.app.canvas.height /2, this.app.canvas.width, 100)
-            .fill('000000')
-            .stroke({ width: 1, color: "333333" });
-        
-        this.addChild(this.menuBar);
+    addIcon(name, x, y) {
+        let animations = this.menuSheet.animations;
+        let icon = new AnimatedSprite(animations[name]);
+        icon.anchor = 0.5;
+        icon.width = 50;
+        icon.height = 50;
+        icon.position.set(x, y);
+        icon.interactive = true;
+        icon.cursor = "pointer";
+
+        return icon;
     }
 
     addLine() {
@@ -172,10 +182,10 @@ export class CombatScene {
         // }
 
         for (let bullet of this.warrior.bullets) {
-            if (testForAABB(bullet, this.mew.sprite)) {
-                this.mew.hitBullet();
+            if (testForAABB(bullet.sprite, this.mew.sprite)) {
+                this.mew.hitBullet(bullet);
                 this.warrior.bullets.shift();
-                this.removeChild(bullet);
+                this.removeChild(bullet.sprite);
             } else {
                 //this.mew.continueRunning();
             }
@@ -205,7 +215,7 @@ export class CombatScene {
             }
         });
         loseText.x = Math.round((this.view.width - loseText.width) / 2);
-        loseText.y = Math.round((this.view.height - loseText.height) / 2);
+        loseText.y = this.LINE_Y - 200;
         
         this.view.addChild(loseText);
     }
@@ -233,7 +243,7 @@ export class CombatScene {
             }
         });
         winText.x = Math.round((this.view.width - winText.width) / 2);
-        winText.y = Math.round((this.view.height - winText.height) / 2);
+        winText.y = this.LINE_Y - 200;
 
         this.view.addChild(winText);
     }

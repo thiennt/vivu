@@ -2,7 +2,7 @@ import { AnimatedSprite, Assets, Graphics, Text } from 'pixi.js';
 import { delay } from './util.js';
 import { Bullet } from './Bullet.js';
 
-export class Warrior {
+export class Hero {
     constructor(app, scene) {
         this.app = app;
         this.scene = scene;
@@ -14,7 +14,10 @@ export class Warrior {
 
         this.bullets = [];
         this.stats = {
+            "hp": 16,
+            "maxHp": 16,
             "atk": 5,
+            "def": 5,
             "crit": 1,
             "agi": 1
         }
@@ -30,10 +33,11 @@ export class Warrior {
         this.sprite.width = 40;
         this.sprite.height = 80;
         this.sprite.play();
-        this.sprite.animationSpeed = 0.1;
-        this.sprite.position.set(40, this.scene.LINE_Y - 38);
+        this.sprite.animationSpeed = 0.05;
+        this.sprite.position.set(this.app.canvas.width / 2 - 50, this.scene.LINE_Y - 38);
 
         this.addStatsBar();
+        this.addHpBar();
     }
 
     addStatsBar() {
@@ -41,7 +45,7 @@ export class Warrior {
         let padding = 5;
 
         let rec = new Graphics()
-            .roundRect(padding, y, 190, 200, 10)
+            .roundRect(padding, y, 190, 220, 10)
             .fill('ffffff')
             //.stroke({ width: 1, color: "ffffff" });
         
@@ -49,13 +53,19 @@ export class Warrior {
         
         let iconX = 10 + padding;
 
-        let atkIcon = this.addIcon("atk", iconX, y + 50);
+        let hpIcon = this.addIcon("hp", iconX, y + 52);
+        this.scene.addChild(hpIcon);
+        
+        let atkIcon = this.addIcon("atk", iconX, y + 87);
         this.scene.addChild(atkIcon);
 
-        let critIcon = this.addIcon("crit", iconX, y + 87);
+        let defIcon = this.addIcon("def", iconX, y + 122);
+        this.scene.addChild(defIcon);
+
+        let critIcon = this.addIcon("crit", iconX, y + 157);
         this.scene.addChild(critIcon);
 
-        let agiIcon = this.addIcon("agi", iconX, y + 122);
+        let agiIcon = this.addIcon("agi", iconX, y + 194);
         this.scene.addChild(agiIcon);
 
         this.statsBar = new Text({
@@ -78,8 +88,8 @@ export class Warrior {
         let animations = this.scene.skillsSheet.animations;
         let icon = new AnimatedSprite(animations[name]);
         icon.anchor = 0.5;
-        icon.width = 14;
-        icon.height = 14;
+        icon.width = 16;
+        icon.height = 16;
         icon.position.set(x, y);
 
         return icon;
@@ -87,57 +97,27 @@ export class Warrior {
 
     showStats() {
         let statsText = `HERO \n\n`;
+        statsText += `HP: ${this.stats.hp}/${this.stats.maxHp} \n\n`;
         statsText += `ATK: ${this.stats.atk} \n\n`;
+        statsText += `DEF: ${this.stats.def} \n\n`;
         statsText += `CRIT: ${this.stats.crit}% \n\n`;
         statsText += `AGI: ${this.stats.agi} \n`;
 
         return statsText;
     }
 
-    updateStats() {
-        this.statsBar.text = this.showStats();
-    }
-
-    async fight() {
-        if (this.state.fight) return;
-
-        for (let i = 0; i < this.scene.bulletTotal; i++) {
-            this.sprite.loop = false;
-            this.sprite.animationSpeed = 0.3;
-            this.sprite.textures = this.sheet.animations.fight;
-            this.sprite.gotoAndPlay(0);
-
-            let bullet = new Bullet(this.app, this.scene);
-            this.bullets.push(bullet);
-            this.scene.addChild(bullet.sprite);
-
-            this.scene.bulletTotal -= 1;
-            this.state.fight = true;
-            await delay(200);
-        }
-        this.state.fight = false;
-        this.idle();
-
-        // this.warriorSprite.filters = new BlurFilter({
-        //     strength: 1
-        // });
-    }
-
-    idle() {
-        this.sprite.textures = this.sheet.animations.idle;
-        this.sprite.gotoAndPlay(0);
-    }
-
-    update() {
-        if (!this.sprite) return;
-
-        this.fight();
-
-        for (let bullet of this.bullets) {
-            bullet.move(); // Move the bullet upwards
-            if (bullet.sprite.x > this.app.canvas.width - 150) {
-                this.scene.removeChild(bullet.sprite); // Remove bullet if it goes off screen
-            }
-        }
-    }
+    addHpBar() {
+        let x = this.sprite.position.x - 30;
+        let y = this.sprite.position.y - 70;
+        
+        this.maxHpBar = new Graphics()
+            .rect(x, y, 70, 5)
+            .fill({ color: "000000" });
+        this.scene.addChild(this.maxHpBar);
+        
+        this.hpBar = new Graphics()
+            .rect(x, y, 70, 5)
+            .fill({ color: 0x666666 });
+        this.scene.addChild(this.hpBar);
+    } 
 }
