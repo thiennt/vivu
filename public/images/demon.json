@@ -1,0 +1,281 @@
+{
+	"frames": {
+		"demon.png": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 76,
+				"h": 103
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 76,
+				"h": 103
+			},
+			"sourceSize": {
+				"w": 76,
+				"h": 103
+			}
+		},
+		"demon1.png": {
+			"frame": {
+				"x": 79,
+				"y": 1,
+				"w": 71,
+				"h": 103
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 71,
+				"h": 103
+			},
+			"sourceSize": {
+				"w": 71,
+				"h": 103
+			}
+		},
+		"demon10.png": {
+			"frame": {
+				"x": 152,
+				"y": 1,
+				"w": 87,
+				"h": 103
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 87,
+				"h": 103
+			},
+			"sourceSize": {
+				"w": 87,
+				"h": 103
+			}
+		},
+		"demon11.png": {
+			"frame": {
+				"x": 241,
+				"y": 1,
+				"w": 130,
+				"h": 101
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 130,
+				"h": 101
+			},
+			"sourceSize": {
+				"w": 130,
+				"h": 101
+			}
+		},
+		"demon12.png": {
+			"frame": {
+				"x": 373,
+				"y": 1,
+				"w": 121,
+				"h": 104
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 121,
+				"h": 104
+			},
+			"sourceSize": {
+				"w": 121,
+				"h": 104
+			}
+		},
+		"demon2.png": {
+			"frame": {
+				"x": 496,
+				"y": 1,
+				"w": 63,
+				"h": 101
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 63,
+				"h": 101
+			},
+			"sourceSize": {
+				"w": 63,
+				"h": 101
+			}
+		},
+		"demon3.png": {
+			"frame": {
+				"x": 561,
+				"y": 1,
+				"w": 37,
+				"h": 100
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 37,
+				"h": 100
+			},
+			"sourceSize": {
+				"w": 37,
+				"h": 100
+			}
+		},
+		"demon4.png": {
+			"frame": {
+				"x": 600,
+				"y": 1,
+				"w": 67,
+				"h": 100
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 67,
+				"h": 100
+			},
+			"sourceSize": {
+				"w": 67,
+				"h": 100
+			}
+		},
+		"demon5.png": {
+			"frame": {
+				"x": 669,
+				"y": 1,
+				"w": 56,
+				"h": 111
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 56,
+				"h": 111
+			},
+			"sourceSize": {
+				"w": 56,
+				"h": 111
+			}
+		},
+		"demon6.png": {
+			"frame": {
+				"x": 727,
+				"y": 1,
+				"w": 55,
+				"h": 109
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 55,
+				"h": 109
+			},
+			"sourceSize": {
+				"w": 55,
+				"h": 109
+			}
+		},
+		"demon7.png": {
+			"frame": {
+				"x": 784,
+				"y": 1,
+				"w": 77,
+				"h": 100
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 77,
+				"h": 100
+			},
+			"sourceSize": {
+				"w": 77,
+				"h": 100
+			}
+		},
+		"demon8.png": {
+			"frame": {
+				"x": 863,
+				"y": 1,
+				"w": 59,
+				"h": 107
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 59,
+				"h": 107
+			},
+			"sourceSize": {
+				"w": 59,
+				"h": 107
+			}
+		},
+		"demon9.png": {
+			"frame": {
+				"x": 924,
+				"y": 1,
+				"w": 65,
+				"h": 104
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 65,
+				"h": 104
+			},
+			"sourceSize": {
+				"w": 65,
+				"h": 104
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "demon.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 990,
+			"h": 113
+		},
+		"scale": "1"
+	},
+	"animations": {
+        "idle": ["demon.png", "demon1.png"],
+		"run": ["demon2.png", "demon3.png", "demon4.png"],
+		"fight": ["demon5.png", "demon6.png", "demon12.png"],
+		"crit": ["demon5.png", "demon6.png", "demon12.png", "demon8.png", "demon9.png", "demon11.png"]
+    }
+}

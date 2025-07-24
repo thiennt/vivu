@@ -50,12 +50,12 @@ import { Menu } from "./Menu";
             src: 'images/stickman.json'
         },
         {
-            alias: 'stickman_duel',
-            src: 'images/stickman_duel.json'
-        },
-        {
             alias: 'mew',
             src: 'images/mew.json'
+        },
+        {
+            alias: 'demon',
+            src: 'images/demon.json'
         },
         {
             alias: 'box',
@@ -76,6 +76,10 @@ import { Menu } from "./Menu";
         {
             alias: 'card',
             src: 'images/card.png'
+        },
+        {
+            alias: 'boom',
+            src: 'images/boom.png'
         },
         {
             alias: 'menu',

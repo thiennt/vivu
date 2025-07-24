@@ -1,4 +1,5 @@
 import { AnimatedSprite, Assets, Text, Graphics, Sprite, Texture } from 'pixi.js';
+import { delay, getRandomItemByRate } from './util.js';
 
 export class Monster {
     constructor(app, scene) {
@@ -15,7 +16,7 @@ export class Monster {
             "maxHp": 15,
             "atk": 6,
             "def": 4,
-            "crit": 3,
+            "crit": 20,
             "agi": 2
         };
     }
@@ -26,11 +27,11 @@ export class Monster {
         this.sheet = this.scene.monsterSheet;
         this.sprite = this.scene.monsterSprite;
         this.sprite.anchor = 0.5;
-        this.sprite.width = 120;
-        this.sprite.height = 140;
+        // this.sprite.width = 120;
+        // this.sprite.height = 140;
         this.sprite.position.set(this.app.canvas.width /2 + 50, this.scene.LINE_Y - 50);
         this.sprite.play();
-        this.sprite.animationSpeed = 0.1;
+        this.sprite.animationSpeed = 0.05;
 
         this.addStatsBar();
         this.addHpBar();
@@ -108,7 +109,7 @@ export class Monster {
         this.scene.addChild(this.hpBar);
     }    
 
-     showStats() {
+    showStats() {
         let statsText = `MONSTER \n\n`;
         statsText += `HP: ${this.stats.hp}/${this.stats.maxHp} \n\n`;
         statsText += `ATK: ${this.stats.atk} \n\n`;
@@ -121,75 +122,31 @@ export class Monster {
 
     updateStats() {
         this.statsBar.text = this.showStats();
+
+        let x = this.sprite.position.x - 30;
+        let y = this.sprite.position.y - 70;
+
+        let healthPercentage = this.stats.hp / this.stats.maxHp;
+
+        this.maxHpBar.clear()
+            .rect(x, y, 70, 5)
+            .fill({ color: "000000" });
+        
+        this.hpBar.clear()
+            .rect(x, y, 70 * healthPercentage, 5)
+            .fill({ color: 0x666666 });
     }
 
-    hitBullet(bullet) {
-        // this.sprite.textures = this.sheet.animations.idle;
-        // this.sprite.gotoAndPlay(0);
-        //this.state.beaten = true;
-        //this.sprite.position.x += 1;
-        let currentHp = parseFloat(this.stats.hp);
-        currentHp -= bullet.atk - this.stats.def;
-        //this.stats.hp -= (this.scene.warrior.stats.str - this.stats.def).toFixed(2);
-        this.stats.hp = currentHp.toFixed(2);
-        this.statsBar.text = this.showStats();
-        if (this.stats.hp <= 0) {
-            this.die();
-        }
-        //await delay(100);
-        //this.continueRunning();
-    }
+    fight() {
+        let critRate = [
+            { value: false, rate: 100 - this.stats.crit },
+            { value: true, rate: this.stats.crit }
+        ]
+        let isCrit = getRandomItemByRate(critRate).value;
+        let damage = isCrit ? this.stats.atk * 2 : this.stats.atk;
+        let hitRate = this.baseHitRate + this.stats.agi;
 
-    die() {
-        this.sprite.textures = this.sheet.animations.idle;
-        this.sprite.gotoAndPlay(0);
-        this.state.idle = true;
-        this.state.beaten = true;
-        if (this.state.beaten) {
-            this.scene.warriorWin();
-        }
-    }
-
-    continueRunning() {
-        // this.sprite.textures = this.sheet.animations.run;
-        // this.sprite.gotoAndPlay(0);
-        this.state.beaten = false;
-    }
-
-    update() {
-        if (!this.sprite) return;
-        if (this.state.beaten) return;
-
-        //if (!this.state.beaten) this.sprite.position.x -= 1 * 0.1;
-        if (this.sprite.position.x <= this.scene.warrior.sprite.position.x + 20) {
-            //this.sprite.position.x = this.app.canvas.width - 150;
-            this.scene.warriorLose();
-        } else {
-            this.move()
-        }
-    }
-
-    move() {
-        this.sprite.position.x -= 1 * this.stats.agi / 10;
-        let currentX = this.sprite.position.x;
-        let currentY = this.sprite.position.y - 70;
-
-        if (this.hpBar) {
-            let healthPercentage = this.stats.hp / this.stats.maxHp;
-
-            this.hpBar.clear()
-                .rect(currentX - 30, currentY, 70 * healthPercentage, 5)
-                .fill({ color: 0x666666 });
-
-            this.maxHpBar.clear()
-                .rect(currentX - 30, currentY, 70, 5)
-                .fill({ color: 0x000000 });
-        }
-
-        if (this.scene.box.monsterCard) {
-            this.scene.box.monsterCard.position.x = currentX;
-            this.scene.box.monsterTxtCard.position.x = currentX;
-        }
+        return { isCrit: isCrit, damage: damage, hitRate: hitRate }
     }
 }
 

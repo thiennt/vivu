@@ -1,4 +1,5 @@
 import { AnimatedSprite, Assets, Text, Graphics, Sprite, Texture } from 'pixi.js';
+import { delay } from './util.js';
 
 export class Mew {
     constructor(app, scene) {
@@ -24,11 +25,11 @@ export class Mew {
         this.sheet = this.scene.monsterSheet;
         this.sprite = this.scene.monsterSprite;
         this.sprite.anchor = 0.5;
-        this.sprite.width = 120;
-        this.sprite.height = 140;
+        // this.sprite.width = 120;
+        // this.sprite.height = 140;
         this.sprite.position.set(this.app.canvas.width - 20, this.scene.LINE_Y - 50);
         this.sprite.play();
-        this.sprite.animationSpeed = 0.1;
+        this.sprite.animationSpeed = 0.05;
 
         this.addStatsBar();
         this.addHpBar();
@@ -113,7 +114,7 @@ export class Mew {
         this.statsBar.text = this.showStats();
     }
 
-    hitBullet(bullet) {
+    async hitBullet(bullet) {
         // this.sprite.textures = this.sheet.animations.idle;
         // this.sprite.gotoAndPlay(0);
         //this.state.beaten = true;
@@ -122,7 +123,13 @@ export class Mew {
         currentHp -= bullet.atk - this.stats.def;
         //this.stats.hp -= (this.scene.warrior.stats.str - this.stats.def).toFixed(2);
         this.stats.hp = currentHp.toFixed(2);
+        if (this.stats.hp <= 0) this.stats.hp = 0;
         this.statsBar.text = this.showStats();
+        
+        this.scene.showBoomEffect(this.sprite.position.x - 50, this.sprite.position.y - 30);
+        await delay(500);
+        this.scene.hideBoomEffect();
+
         if (this.stats.hp <= 0) {
             this.die();
         }

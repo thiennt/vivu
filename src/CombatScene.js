@@ -37,13 +37,26 @@ export class CombatScene {
         //     hash[skill] = new AnimatedSprite(skillsAnimations[skill]);
         //     return hash;
         // }, {});
+
+        this.boomTexture = await Assets.load('boom');
+        this.boomSprite = new Sprite(this.boomTexture);
         
         this.heroSheet = await Assets.load('stickman');
         this.heroSprite = new AnimatedSprite(this.heroSheet.animations.idle);
         
-        this.monsterSheet = await Assets.load('mew');
+        this.monsterSheet = await Assets.load('demon');
         this.monsterSprite = new AnimatedSprite(this.monsterSheet.animations.run);
 
+    }
+    
+    showBoomEffect(x, y) {
+        this.boomSprite.position.set(x, y);
+        this.boomSprite.visible = true;
+        this.addChild(this.boomSprite);
+    }
+
+    hideBoomEffect() {
+        this.boomSprite.visible = false;
     }
 
     async addBackground() {

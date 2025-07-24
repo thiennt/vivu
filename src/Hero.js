@@ -1,5 +1,5 @@
 import { AnimatedSprite, Assets, Graphics, Text } from 'pixi.js';
-import { delay } from './util.js';
+import { delay, getRandomItemByRate } from './util.js';
 import { Bullet } from './Bullet.js';
 
 export class Hero {
@@ -18,9 +18,11 @@ export class Hero {
             "maxHp": 16,
             "atk": 5,
             "def": 5,
-            "crit": 1,
-            "agi": 1
+            "crit": 20,
+            "agi": 3
         }
+
+        this.baseHitRate = 65;
     }
 
     init() {
@@ -29,12 +31,12 @@ export class Hero {
         this.sheet = this.scene.heroSheet;
         this.sprite = this.scene.heroSprite;
         this.sprite.anchor = 0.5;
-        //this.sprite.scale.set(0.6);
-        this.sprite.width = 40;
-        this.sprite.height = 80;
+        this.sprite.scale.set(1);
+        // this.sprite.width = 40;
+        // this.sprite.height = 80;
         this.sprite.play();
         this.sprite.animationSpeed = 0.05;
-        this.sprite.position.set(this.app.canvas.width / 2 - 50, this.scene.LINE_Y - 38);
+        this.sprite.position.set(this.app.canvas.width / 2 - 50, this.scene.LINE_Y - 42);
 
         this.addStatsBar();
         this.addHpBar();
@@ -119,5 +121,34 @@ export class Hero {
             .rect(x, y, 70, 5)
             .fill({ color: 0x666666 });
         this.scene.addChild(this.hpBar);
-    } 
+    }
+
+    updateStats() {
+        this.statsBar.text = this.showStats();
+
+        let x = this.sprite.position.x - 30;
+        let y = this.sprite.position.y - 70;
+
+        let healthPercentage = this.stats.hp / this.stats.maxHp;
+
+        this.maxHpBar.clear()
+            .rect(x, y, 70, 5)
+            .fill({ color: "000000" });
+        
+        this.hpBar.clear()
+            .rect(x, y, 70 * healthPercentage, 5)
+            .fill({ color: 0x666666 });
+    }
+
+    fight() {
+        let critRate = [
+            { value: false, rate: 100 - this.stats.crit },
+            { value: true, rate: this.stats.crit }
+        ]
+        let isCrit = getRandomItemByRate(critRate).value;
+        let damage = isCrit ? this.stats.atk * 2 : this.stats.atk;
+        let hitRate = this.baseHitRate + this.stats.agi;
+
+        return { isCrit: isCrit, damage: damage, hitRate: hitRate }
+    }
 }

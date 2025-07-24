@@ -15,7 +15,7 @@ export class Warrior {
         this.bullets = [];
         this.stats = {
             "atk": 5,
-            "crit": 1,
+            "crit": 20,
             "agi": 1
         }
     }
@@ -27,11 +27,11 @@ export class Warrior {
         this.sprite = this.scene.heroSprite;
         this.sprite.anchor = 0.5;
         //this.sprite.scale.set(0.6);
-        this.sprite.width = 40;
-        this.sprite.height = 80;
+        // this.sprite.width = 40;
+        // this.sprite.height = 80;
         this.sprite.play();
         this.sprite.animationSpeed = 0.1;
-        this.sprite.position.set(40, this.scene.LINE_Y - 38);
+        this.sprite.position.set(40, this.scene.LINE_Y - 42);
 
         this.addStatsBar();
     }
@@ -103,8 +103,8 @@ export class Warrior {
 
         for (let i = 0; i < this.scene.bulletTotal; i++) {
             this.sprite.loop = false;
-            this.sprite.animationSpeed = 0.3;
-            this.sprite.textures = this.sheet.animations.fight;
+            this.sprite.animationSpeed = 3;
+            this.sprite.textures = this.sheet.animations.palm;
             this.sprite.gotoAndPlay(0);
 
             let bullet = new Bullet(this.app, this.scene);
