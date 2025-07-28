@@ -136,8 +136,8 @@ export class DuelScene {
         let turn = this.hero.stats.agi >= this.monster.stats.agi ? 0 : 1; // 0: hero turn, 1: monster turn
         
         while (this.state == 0) {
-            await delay(2000);
-            
+            await delay(1500);
+
             if (turn == 0) {
                 this.heroFight();
                 turn = 1;

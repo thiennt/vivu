@@ -2,19 +2,35 @@
   "name": "vivu",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "run-s assets",
+    "start": "vite --open",
+    "assets": "assetpack",
+    "prebuild": "run-s clean format:check lint assets types",
+    "build": "vite build",
+    "types": "tsc",
+    "prepreview": "run-s build",
+    "preview": "vite preview --open",
+    "clean": "rimraf public/assets/* dist/* .assetpack/*",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "format": "prettier --write src",
+    "format:check": "prettier --check src"
+  },
   "devDependencies": {
+    "@assetpack/core": "^1.5.0",
     "@pixi/devtools": "^2.0.1",
+    "npm-run-all": "^4.1.5",
     "vite": "^7.0.3"
   },
   "dependencies": {
-    "pixi.js": "^8.11.0"
+    "gsap": "^3.13.0",
+    "pixi.js": "^8.11.0",
+    "rimraf": "^6.0.1"
   }
 }
