@@ -1,48 +1,47 @@
-import { Container, Ticker } from 'pixi.js';
-import gsap from 'gsap';
-import { waitFor } from '../utils/asyncUtils';
-import { navigation } from '../utils/navigation';
+import { Container, Ticker } from "pixi.js";
+import gsap from "gsap";
+import { waitFor } from "../utils/asyncUtils";
+import { navigation } from "../utils/navigation";
 
-import { Menu } from '../ui/Menu';
-import { BattleScene } from '../ui/BattleScene';
-
+import { Menu } from "../ui/Menu";
+import { BattleScene } from "../ui/BattleScene";
 
 export class HomeScreen extends Container {
-    /** Assets bundles required by this screen */
-    public static assetBundles = ['game'];
+  /** Assets bundles required by this screen */
+  public static assetBundles = ["game"];
 
-    private menu: Menu;
-    private battleScene: BattleScene;
-    
-    constructor() {
-        super();
+  private menu: Menu;
+  private battleScene: BattleScene;
 
-        this.menu = new Menu();
-        this.addChild(this.menu);
+  constructor() {
+    super();
 
-        this.battleScene = new BattleScene();
-        this.addChild(this.battleScene);
-    }
+    this.menu = new Menu();
+    this.addChild(this.menu);
 
-    public prepare() {
-        this.battleScene.prepare();
-    }
+    this.battleScene = new BattleScene();
+    this.addChild(this.battleScene);
+  }
 
-    public async show() {
-        this.menu.show();
+  public prepare() {
+    this.battleScene.prepare();
+  }
 
-        this.battleScene.show();
-    }
+  public async show() {
+    this.menu.show();
 
-    public resize(width: number, height: number) {
-        this.menu.resize(width, height);
+    this.battleScene.show();
+  }
 
-        this.battleScene.x = 0;
-        this.battleScene.y = this.menu.y;
-        this.battleScene.resize(width, height);
-    }
+  public resize(width: number, height: number) {
+    this.menu.resize(width, height);
 
-    public update(time: Ticker) {
-        this.battleScene.update(time);
-    }
+    this.battleScene.x = 0;
+    this.battleScene.y = this.menu.y;
+    this.battleScene.resize(width, height);
+  }
+
+  public update(time: Ticker) {
+    this.battleScene.update(time);
+  }
 }
