@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "server/frame.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/server/frame.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/server/frame.js"
+    }
+  ],
+  "functions": {
+    "server/frame.js": {
+      "maxDuration": 10
+    }
+  }
+}

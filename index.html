@@ -3,7 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FarStick</title>
+    <title>FarStick - Battle Game</title>
+
+    <!-- Farcaster Frame metadata -->
+    <meta property="fc:frame" content="vNext" />
+    <meta property="fc:frame:image" content="/api/frame/image" />
+    <meta property="fc:frame:button:1" content="⚔️ Attack" />
+    <meta property="fc:frame:button:2" content="🛡️ Defend" />
+    <meta property="fc:frame:button:3" content="💨 Special" />
+    <meta property="fc:frame:button:4" content="🔄 Reset" />
+    <meta property="fc:frame:post_url" content="/api/frame/action" />
+    
+    <!-- Open Graph metadata for Frame -->
+    <meta property="og:title" content="FarStick - Epic Stick Figure Battle" />
+    <meta property="og:description" content="Battle epic stick figures in this engaging RPG game!" />
+    <meta property="og:image" content="/api/frame/image" />
+    <meta property="og:url" content="/" />
+    <meta property="og:type" content="website" />
 
     <style>
       body {
