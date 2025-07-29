@@ -5,7 +5,7 @@ import { waitFor } from '../utils/asyncUtils';
 import { navigation } from '../utils/navigation';
 import { HomeScreen } from '../screens/HomeScreen';
 import { DungeonScreen } from '../screens/DungeonScreen';
-import { CharacterScreen } from '../screens/CharacterScreen';
+import { CharacterScreen } from '../screens/CharacterScreenSimple';
 
 
 export class Menu extends Container {
@@ -34,6 +34,7 @@ export class Menu extends Container {
     }
 
     private addIcon(name: string) {
+        console.log('Creating icon:', name);
         const icon = new Sprite(Assets.get(name));
         icon.anchor = 0.5;
         icon.width = 50;
@@ -90,6 +91,7 @@ export class Menu extends Container {
     }
 
     public goToCharacterScreen() {
+        console.log('Character screen navigation triggered!');
         navigation.showScreen(CharacterScreen);
     }
 
