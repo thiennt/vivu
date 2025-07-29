@@ -1,11 +1,12 @@
-import { Application, Assets } from 'pixi.js';
+import { Application } from 'pixi.js';
 import { initAssets } from './utils/assets';
 import { navigation } from './utils/navigation';
 import { getUrlParam } from './utils/getUrlParams';
 import { initDevtools } from '@pixi/devtools';
 import { LoadScreen } from './screens/LoadScreen';
-import { HomeScreen } from './screens/HomeScreen';
 import { DungeonScreen } from './screens/DungeonScreen';
+import { farcasterService } from './utils/farcaster';
+import { FrameImageGenerator } from './utils/frameImages';
 
 /** The PixiJS app Application instance, shared across the project */
 export const app = new Application();
@@ -71,13 +72,23 @@ async function init() {
     // Setup assets bundles (see assets.ts) and start up loading everything in background
     await initAssets();
 
+    // Generate frame images for Farcaster integration
+    await FrameImageGenerator.generateAndSaveImages();
+
     // Add a persisting background shared by all screens
     //navigation.setBackground(TiledBackground);
 
     // Show initial loading screen
     await navigation.showScreen(LoadScreen);
 
-    //Go to one of the screens if a shortcut is present in url params, otherwise go to home screen
+    // Check if running in Farcaster Frame context
+    if (farcasterService.isFrameContext()) {
+        console.log('Running in Farcaster Frame context');
+        const frameData = farcasterService.getFrameData();
+        console.log('Frame data:', frameData);
+    }
+
+    //Go to one of the screens if a shortcut is present in url params, otherwise go to game screen
     if (getUrlParam('combat') !== null) {
         //await navigation.showScreen(CombatScreen);
     } else {

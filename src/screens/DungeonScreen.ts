@@ -1,10 +1,8 @@
 import { Container, Ticker } from 'pixi.js';
-import gsap from 'gsap';
-import { waitFor } from '../utils/asyncUtils';
-import { navigation } from '../utils/navigation';
 
 import { Menu } from '../ui/Menu';
 import { CombatScene } from '../ui/CombatScene';
+import { FarcasterUI } from '../ui/FarcasterUI';
 
 export class DungeonScreen extends Container {
     /** Assets bundles required by this screen */
@@ -12,6 +10,7 @@ export class DungeonScreen extends Container {
     
     private menu: Menu;
     private combatScene: CombatScene;
+    private farcasterUI: FarcasterUI;
 
     constructor() {
         super();
@@ -21,6 +20,9 @@ export class DungeonScreen extends Container {
 
         this.combatScene = new CombatScene();
         this.addChild(this.combatScene);
+
+        this.farcasterUI = new FarcasterUI();
+        this.addChild(this.farcasterUI);
     }
 
     public prepare() {
@@ -31,6 +33,9 @@ export class DungeonScreen extends Container {
         this.menu.show();
 
         this.combatScene.show();
+        
+        // Show Farcaster UI if in frame context or user wants social features
+        this.farcasterUI.show();
     }
 
     public resize(width: number, height: number) {
@@ -39,6 +44,8 @@ export class DungeonScreen extends Container {
         this.combatScene.x = 0;
         this.combatScene.y = this.menu.y;
         this.combatScene.resize(width, height);
+        
+        this.farcasterUI.resize(width, height);
     }
 
     public update(time: Ticker) {

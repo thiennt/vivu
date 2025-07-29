@@ -36,8 +36,13 @@
     "vite": "^7.0.3"
   },
   "dependencies": {
+    "@farcaster/auth-kit": "^0.8.1",
+    "@farcaster/core": "^0.18.5",
+    "@wagmi/connectors": "^5.9.0",
+    "@wagmi/core": "^2.18.0",
     "gsap": "^3.13.0",
     "pixi.js": "^8.11.0",
-    "rimraf": "^6.0.1"
+    "rimraf": "^6.0.1",
+    "viem": "^2.33.1"
   }
 }
