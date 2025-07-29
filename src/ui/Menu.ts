@@ -5,12 +5,14 @@ import { waitFor } from '../utils/asyncUtils';
 import { navigation } from '../utils/navigation';
 import { HomeScreen } from '../screens/HomeScreen';
 import { DungeonScreen } from '../screens/DungeonScreen';
+import { CharacterScreen } from '../screens/CharacterScreen';
 
 
 export class Menu extends Container {
     private menuBar: Graphics;
     private homeIcon: Sprite;
     private dungeonIcon: Sprite;
+    private characterIcon: Sprite;
 
     constructor() {
         super();
@@ -21,6 +23,10 @@ export class Menu extends Container {
         this.homeIcon = this.addIcon("home");
         this.homeIcon.on("mousedown", this.goToHomeScreen.bind(this));
         this.addChild(this.homeIcon);
+
+        this.characterIcon = this.addIcon("character");
+        this.characterIcon.on("mousedown", this.goToCharacterScreen.bind(this));
+        this.addChild(this.characterIcon);
 
         this.dungeonIcon = this.addIcon("dungeon");
         this.dungeonIcon.on("mousedown", this.goToDungeonScreen.bind(this));
@@ -44,19 +50,29 @@ export class Menu extends Container {
             .fill(0x000000)
             .stroke({ width: 1, color: "333333" });
 
-        this.homeIcon.x = 100;
+        this.homeIcon.x = 80;
         this.homeIcon.y = 50;
-        this.dungeonIcon.x = 200;
+        this.characterIcon.x = 160;
+        this.characterIcon.y = 50;
+        this.dungeonIcon.x = 240;
         this.dungeonIcon.y = 50;
-        // gsap.to(this.homeIcon, { x: 100, y: 50, duration: 0.1, ease: 'linear' });
-        // gsap.to(this.dungeonIcon, { x: 200, y: 50, duration: 0.1, ease: 'linear' });
 
         let currentScreen = navigation.currentScreen;
         let icon = this.homeIcon;
         if (currentScreen instanceof DungeonScreen) {
             icon = this.dungeonIcon;
+        } else if (currentScreen instanceof CharacterScreen) {
+            icon = this.characterIcon;
         }
+        this.clearHighlights();
         this.highlight(icon);
+    }
+
+    public clearHighlights() {
+        [this.homeIcon, this.characterIcon, this.dungeonIcon].forEach(icon => {
+            icon.tint = 0xffffff;
+            icon.scale.set(1);
+        });
     }
 
     public highlight(icon: Sprite) {
@@ -71,6 +87,10 @@ export class Menu extends Container {
 
     public goToHomeScreen() {
         navigation.showScreen(HomeScreen);
+    }
+
+    public goToCharacterScreen() {
+        navigation.showScreen(CharacterScreen);
     }
 
     public goToDungeonScreen() {

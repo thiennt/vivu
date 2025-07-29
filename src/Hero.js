@@ -17,7 +17,7 @@ export class Hero {
             "hp": 16,
             "maxHp": 16,
             "atk": 5,
-            "def": 5,
+            "str": 5, // renamed from def to str
             "crit": 20,
             "agi": 3
         }
@@ -61,8 +61,8 @@ export class Hero {
         let atkIcon = this.addIcon("atk", iconX, y + 87);
         this.scene.addChild(atkIcon);
 
-        let defIcon = this.addIcon("def", iconX, y + 122);
-        this.scene.addChild(defIcon);
+        let strIcon = this.addIcon("str", iconX, y + 122);
+        this.scene.addChild(strIcon);
 
         let critIcon = this.addIcon("crit", iconX, y + 157);
         this.scene.addChild(critIcon);
@@ -101,7 +101,7 @@ export class Hero {
         let statsText = `HERO \n\n`;
         statsText += `HP: ${this.stats.hp}/${this.stats.maxHp} \n\n`;
         statsText += `ATK: ${this.stats.atk} \n\n`;
-        statsText += `DEF: ${this.stats.def} \n\n`;
+        statsText += `STR: ${this.stats.str} \n\n`;
         statsText += `CRIT: ${this.stats.crit}% \n\n`;
         statsText += `AGI: ${this.stats.agi} \n`;
 
@@ -124,6 +124,13 @@ export class Hero {
     }
 
     updateStats() {
+        // Load character data from localStorage if it exists
+        const savedData = localStorage.getItem('vivu_character_data');
+        if (savedData) {
+            const characterData = JSON.parse(savedData);
+            this.stats = { ...this.stats, ...characterData.stats };
+        }
+
         this.statsBar.text = this.showStats();
 
         let x = this.sprite.position.x - 30;
