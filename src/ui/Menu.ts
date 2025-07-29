@@ -5,7 +5,7 @@ import { waitFor } from '../utils/asyncUtils';
 import { navigation } from '../utils/navigation';
 import { HomeScreen } from '../screens/HomeScreen';
 import { DungeonScreen } from '../screens/DungeonScreen';
-import { CharacterScreen } from '../screens/CharacterScreenSimple';
+import { CharacterScreen } from '../screens/CharacterScreen';
 
 
 export class Menu extends Container {

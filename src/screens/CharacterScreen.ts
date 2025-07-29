@@ -27,6 +27,7 @@ export class CharacterScreen extends Container {
 
     constructor() {
         super();
+        console.log('CharacterScreen constructor called');
         this.createUI();
     }
 
@@ -108,17 +109,22 @@ export class CharacterScreen extends Container {
     }
 
     private createStatIcon(statName: string): AnimatedSprite {
-        const skillsSheet = Assets.get('stats');
-        const animations = skillsSheet?.animations;
-        if (!animations || !animations[statName]) {
-            // Fallback: return empty animated sprite if animation is not found
+        try {
+            const skillsSheet = Assets.get('stats');
+            const animations = skillsSheet?.animations;
+            if (!animations || !animations[statName]) {
+                console.warn(`Animation not found for stat: ${statName}`);
+                return new AnimatedSprite([]);
+            }
+            const icon = new AnimatedSprite(animations[statName]);
+            icon.anchor.set(0.5);
+            icon.width = 32;
+            icon.height = 32;
+            return icon;
+        } catch (error) {
+            console.error(`Error creating stat icon for ${statName}:`, error);
             return new AnimatedSprite([]);
         }
-        const icon = new AnimatedSprite(animations[statName]);
-        icon.anchor.set(0.5);
-        icon.width = 32;
-        icon.height = 32;
-        return icon;
     }
 
     private createUpgradeButton(stat: string): Container {
@@ -255,6 +261,7 @@ export class CharacterScreen extends Container {
     }
 
     public async show() {
+        console.log('CharacterScreen show() called');
         // Fade in animation could be added here
     }
 
