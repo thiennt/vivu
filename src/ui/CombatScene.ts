@@ -1,11 +1,12 @@
-import { Container, Ticker } from 'pixi.js';
+import { Container, Ticker, Graphics, Text } from 'pixi.js';
 import gsap from 'gsap';
 import { waitFor } from '../utils/asyncUtils';
-import { navigation } from '../utils/navigation';
+import { GifExporter, GifExportOptions } from '../utils/GifExporter';
 
 import { Player } from './Player';
 import { Enemy } from './Enemy';
 import { StatsArea } from './StatsArea';
+import { app } from '../app';
 
 
 export class CombatScene extends Container {    
@@ -14,6 +15,10 @@ export class CombatScene extends Container {
     private player: Player;
     private enemy: Enemy;
     private statsArea: StatsArea;
+    private gifExporter: GifExporter;
+    private exportButton!: Graphics;
+    private exportText!: Text;
+    private isExporting: boolean = false;
 
     private gameState = 0; // 0: start, 1: end
     private elapsedSeconds = 0;
@@ -36,6 +41,18 @@ export class CombatScene extends Container {
 
         this.statsArea = new StatsArea();
         this.statsContainer.addChild(this.statsArea);
+
+        // Initialize GIF exporter
+        this.gifExporter = new GifExporter(app, {
+            width: 400,
+            height: 300,
+            duration: 5,
+            framerate: 10,
+            quality: 8
+        });
+
+        // Create export button
+        this.createExportButton();
     }
 
     public async show() {
@@ -59,6 +76,16 @@ export class CombatScene extends Container {
         this.statsContainer.y = -450;
 
         this.statsArea.resize(width, height);
+
+        // Position export button in a visible location
+        // Use absolute positioning from top-left of the container
+        const buttonX = Math.max(10, width - 110); // 10px from right edge, but at least 10px from left
+        const buttonY = Math.max(10, -height + 60); // 10px from top, accounting for container offset
+        
+        this.exportButton.x = buttonX;
+        this.exportButton.y = buttonY;
+        
+        console.log(`Export button positioned at (${buttonX}, ${buttonY}) for canvas size ${width}x${height}`);
     }
 
     public update(time: Ticker) {
@@ -127,5 +154,137 @@ export class CombatScene extends Container {
         await waitFor(delayTime);
         this.enemy.idle();
         gsap.to(this.enemy, { x: this.enemy.x + 60, duration: 0.1, ease: 'back.out' });
+    }
+
+    /**
+     * Create the export button UI
+     */
+    private createExportButton() {
+        console.log('Creating export button...');
+        
+        // Create button background
+        this.exportButton = new Graphics();
+        this.exportButton.roundRect(0, 0, 100, 35, 5);
+        this.exportButton.fill(0x4CAF50);
+        this.exportButton.stroke({ width: 2, color: 0x2E7D32 });
+
+        // Create button text
+        this.exportText = new Text({
+            text: 'Export GIF',
+            style: {
+                fontFamily: 'Arial',
+                fontSize: 12,
+                fill: 0xFFFFFF,
+                align: 'center'
+            }
+        });
+        this.exportText.anchor.set(0.5);
+        this.exportText.x = 50;
+        this.exportText.y = 17.5;
+
+        this.exportButton.addChild(this.exportText);
+        this.exportButton.cursor = 'pointer';
+        this.exportButton.interactive = true;
+
+        // Add click handler
+        this.exportButton.on('pointerdown', () => this.toggleGifExport());
+
+        this.addChild(this.exportButton);
+        console.log('Export button created and added to scene');
+    }
+
+    /**
+     * Toggle GIF export recording
+     */
+    private async toggleGifExport() {
+        if (this.isExporting) {
+            await this.stopGifExport();
+        } else {
+            this.startGifExport();
+        }
+    }
+
+    /**
+     * Start recording GIF
+     */
+    private startGifExport() {
+        if (this.isExporting) return;
+
+        this.isExporting = true;
+        this.updateExportButton();
+
+        try {
+            this.gifExporter.startRecording(this.duelContainer);
+            console.log('Started GIF export recording...');
+        } catch (error) {
+            console.error('Failed to start GIF recording:', error);
+            this.isExporting = false;
+            this.updateExportButton();
+        }
+    }
+
+    /**
+     * Stop recording and export GIF
+     */
+    private async stopGifExport() {
+        if (!this.isExporting) return;
+
+        this.updateExportButton('Processing...');
+
+        try {
+            const gifBlob = await this.gifExporter.stopRecording();
+            GifExporter.downloadBlob(gifBlob, `combat-scene-${Date.now()}.gif`);
+            console.log('GIF export completed successfully!');
+        } catch (error) {
+            console.error('Failed to export GIF:', error);
+        } finally {
+            this.isExporting = false;
+            this.updateExportButton();
+        }
+    }
+
+    /**
+     * Update export button appearance and text
+     */
+    private updateExportButton(customText?: string) {
+        if (customText) {
+            this.exportText.text = customText;
+            this.exportButton.clear();
+            this.exportButton.roundRect(0, 0, 100, 35, 5);
+            this.exportButton.fill(0xFF9800);
+            this.exportButton.stroke({ width: 2, color: 0xE65100 });
+        } else if (this.isExporting) {
+            this.exportText.text = 'Stop Export';
+            this.exportButton.clear();
+            this.exportButton.roundRect(0, 0, 100, 35, 5);
+            this.exportButton.fill(0xF44336);
+            this.exportButton.stroke({ width: 2, color: 0xC62828 });
+        } else {
+            this.exportText.text = 'Export GIF';
+            this.exportButton.clear();
+            this.exportButton.roundRect(0, 0, 100, 35, 5);
+            this.exportButton.fill(0x4CAF50);
+            this.exportButton.stroke({ width: 2, color: 0x2E7D32 });
+        }
+    }
+
+    /**
+     * Export the combat scene to GIF with custom options
+     */
+    public async exportToGif(options?: GifExportOptions): Promise<Blob> {
+        const exporter = new GifExporter(app, options);
+        
+        return new Promise((resolve, reject) => {
+            exporter.startRecording(this.duelContainer);
+            
+            setTimeout(async () => {
+                try {
+                    const blob = await exporter.stopRecording();
+                    resolve(blob);
+                } catch (error) {
+                    reject(error);
+                }
+            }, (options?.duration || 3) * 1000);
+        });
     }
 }
