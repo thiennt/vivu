@@ -1,7 +1,4 @@
-import { Container, Assets, AnimatedSprite, Graphics, Sprite, Spritesheet } from 'pixi.js';
-import gsap from 'gsap';
-import { app } from '../app';
-import { waitFor } from '../utils/asyncUtils';
+import { Container, Assets, Graphics, Sprite } from 'pixi.js';
 import { navigation } from '../utils/navigation';
 import { HomeScreen } from '../screens/HomeScreen';
 import { DungeonScreen } from '../screens/DungeonScreen';
@@ -11,6 +8,7 @@ export class Menu extends Container {
     private menuBar: Graphics;
     private homeIcon: Sprite;
     private dungeonIcon: Sprite;
+    private gamesIcon: Sprite;
 
     constructor() {
         super();
@@ -19,11 +17,15 @@ export class Menu extends Container {
         this.addChild(this.menuBar);
 
         this.homeIcon = this.addIcon("home");
-        this.homeIcon.on("mousedown", this.goToHomeScreen.bind(this));
+        this.homeIcon.on("pointerdown", this.goToHomeScreen.bind(this));
         this.addChild(this.homeIcon);
 
+        this.gamesIcon = this.addIcon("games");
+        this.gamesIcon.on("pointerdown", this.goToDungeonScreen.bind(this));
+        this.addChild(this.gamesIcon);
+
         this.dungeonIcon = this.addIcon("dungeon");
-        this.dungeonIcon.on("mousedown", this.goToDungeonScreen.bind(this));
+        this.dungeonIcon.on("pointerdown", this.goToDungeonScreen.bind(this));
         this.addChild(this.dungeonIcon);
     }
 
@@ -32,24 +34,43 @@ export class Menu extends Container {
         icon.anchor = 0.5;
         icon.width = 50;
         icon.height = 50;
-        //icon.position.set(x, y);
         icon.interactive = true;
         icon.cursor = "pointer";
+
+        // Add hover effects
+        icon.on('pointerover', () => {
+            icon.tint = 0xC9B6B0;
+            icon.scale.set(1.1);
+        });
+        
+        icon.on('pointerout', () => {
+            // Only reset if not highlighted
+            if (icon.tint !== 0xC9B6B0 || icon.scale.x !== 1.2) {
+                icon.tint = 0xFFFFFF;
+                icon.scale.set(1.0);
+            }
+        });
 
         return icon;
     }
 
     public async show() {
         this.menuBar.clear().rect(0, 0, navigation.width, 100)
-            .fill(0x000000)
-            .stroke({ width: 1, color: "333333" });
+            .fill(0x1a1a2e)
+            .stroke({ width: 2, color: 0x16213e });
 
-        this.homeIcon.x = 100;
+        // Position icons with better spacing
+        const iconSpacing = 80;
+        const startX = 80;
+        
+        this.homeIcon.x = startX;
         this.homeIcon.y = 50;
-        this.dungeonIcon.x = 200;
+        
+        this.gamesIcon.x = startX + iconSpacing;
+        this.gamesIcon.y = 50;
+        
+        this.dungeonIcon.x = startX + iconSpacing * 2;
         this.dungeonIcon.y = 50;
-        // gsap.to(this.homeIcon, { x: 100, y: 50, duration: 0.1, ease: 'linear' });
-        // gsap.to(this.dungeonIcon, { x: 200, y: 50, duration: 0.1, ease: 'linear' });
 
         let currentScreen = navigation.currentScreen;
         let icon = this.homeIcon;
@@ -60,6 +81,13 @@ export class Menu extends Container {
     }
 
     public highlight(icon: Sprite) {
+        // Reset all icons first
+        [this.homeIcon, this.gamesIcon, this.dungeonIcon].forEach(i => {
+            i.tint = 0xFFFFFF;
+            i.scale.set(1.0);
+        });
+        
+        // Highlight the selected icon
         icon.tint = 0xC9B6B0;
         icon.scale.set(1.2);
     }
@@ -67,13 +95,20 @@ export class Menu extends Container {
     public resize(width: number, height: number) {
         this.x = 0;
         this.y = height - 100;
+        
+        // Update menu bar width
+        this.menuBar.clear().rect(0, 0, width, 100)
+            .fill(0x1a1a2e)
+            .stroke({ width: 2, color: 0x16213e });
     }
 
     public goToHomeScreen() {
+        this.highlight(this.homeIcon);
         navigation.showScreen(HomeScreen);
     }
 
     public goToDungeonScreen() {
+        this.highlight(this.dungeonIcon);
         navigation.showScreen(DungeonScreen);
     }
 

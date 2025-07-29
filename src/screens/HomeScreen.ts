@@ -1,10 +1,7 @@
 import { Container, Ticker } from 'pixi.js';
-import gsap from 'gsap';
-import { waitFor } from '../utils/asyncUtils';
-import { navigation } from '../utils/navigation';
 
 import { Menu } from '../ui/Menu';
-import { BattleScene } from '../ui/BattleScene';
+import { HomePageLayout } from '../ui/HomePageLayout';
 
 
 export class HomeScreen extends Container {
@@ -12,37 +9,34 @@ export class HomeScreen extends Container {
     public static assetBundles = ['game'];
 
     private menu: Menu;
-    private battleScene: BattleScene;
+    private homePage: HomePageLayout;
     
     constructor() {
         super();
 
+        this.homePage = new HomePageLayout();
+        this.addChild(this.homePage);
+
         this.menu = new Menu();
         this.addChild(this.menu);
-
-        this.battleScene = new BattleScene();
-        this.addChild(this.battleScene);
     }
 
     public prepare() {
-        this.battleScene.prepare();
+        // No preparation needed for homepage
     }
 
     public async show() {
+        this.homePage.show();
         this.menu.show();
-
-        this.battleScene.show();
     }
 
     public resize(width: number, height: number) {
+        this.homePage.resize(width, height - 100); // Leave space for menu
+        
         this.menu.resize(width, height);
-
-        this.battleScene.x = 0;
-        this.battleScene.y = this.menu.y;
-        this.battleScene.resize(width, height);
     }
 
-    public update(time: Ticker) {
-        this.battleScene.update(time);
+    public update(_time: Ticker) {
+        // No updates needed for static homepage
     }
 }

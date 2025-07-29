@@ -1,47 +1,42 @@
 import { Container, Ticker } from 'pixi.js';
-import gsap from 'gsap';
-import { waitFor } from '../utils/asyncUtils';
-import { navigation } from '../utils/navigation';
-
 import { Menu } from '../ui/Menu';
-import { CombatScene } from '../ui/CombatScene';
+import { BattleScene } from '../ui/BattleScene';
 
 export class DungeonScreen extends Container {
     /** Assets bundles required by this screen */
     public static assetBundles = ['game'];
     
     private menu: Menu;
-    private combatScene: CombatScene;
+    private battleScene: BattleScene;
 
     constructor() {
         super();
 
+        this.battleScene = new BattleScene();
+        this.addChild(this.battleScene);
+
         this.menu = new Menu();
         this.addChild(this.menu);
-
-        this.combatScene = new CombatScene();
-        this.addChild(this.combatScene);
     }
 
     public prepare() {
-        this.combatScene.prepare();
+        this.battleScene.prepare();
     }
 
     public async show() {
+        this.battleScene.show();
         this.menu.show();
-
-        this.combatScene.show();
     }
 
     public resize(width: number, height: number) {
+        this.battleScene.x = 0;
+        this.battleScene.y = 0;
+        this.battleScene.resize(width, height - 100); // Leave space for menu
+        
         this.menu.resize(width, height);
-
-        this.combatScene.x = 0;
-        this.combatScene.y = this.menu.y;
-        this.combatScene.resize(width, height);
     }
 
     public update(time: Ticker) {
-        this.combatScene.update(time);
+        this.battleScene.update(time);
     }
 }
