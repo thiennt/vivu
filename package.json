@@ -1,9 +1,9 @@
 {
-  "name": "vivu",
+  "name": "farstick-miniapp",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
-  "author": "",
+  "description": "FarStick - A Farcaster Mini App Game",
+  "keywords": ["farcaster", "mini-app", "game", "pixijs"],
+  "author": "FarStick Team",
   "license": "ISC",
   "type": "module",
   "scripts": {

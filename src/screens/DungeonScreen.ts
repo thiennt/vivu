@@ -2,7 +2,7 @@ import { Container, Ticker } from 'pixi.js';
 
 import { Menu } from '../ui/Menu';
 import { CombatScene } from '../ui/CombatScene';
-import { FarcasterUI } from '../ui/FarcasterUI';
+import { FarcasterMiniAppUI } from '../ui/FarcasterUI';
 
 export class DungeonScreen extends Container {
     /** Assets bundles required by this screen */
@@ -10,7 +10,7 @@ export class DungeonScreen extends Container {
     
     private menu: Menu;
     private combatScene: CombatScene;
-    private farcasterUI: FarcasterUI;
+    private farcasterUI: FarcasterMiniAppUI;
 
     constructor() {
         super();
@@ -21,7 +21,7 @@ export class DungeonScreen extends Container {
         this.combatScene = new CombatScene();
         this.addChild(this.combatScene);
 
-        this.farcasterUI = new FarcasterUI();
+        this.farcasterUI = new FarcasterMiniAppUI();
         this.addChild(this.farcasterUI);
     }
 

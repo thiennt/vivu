@@ -5,7 +5,7 @@ import { getUrlParam } from './utils/getUrlParams';
 import { initDevtools } from '@pixi/devtools';
 import { LoadScreen } from './screens/LoadScreen';
 import { DungeonScreen } from './screens/DungeonScreen';
-import { farcasterService } from './utils/farcaster';
+import { farcasterMiniApp } from './utils/farcaster';
 import { FrameImageGenerator } from './utils/frameImages';
 
 /** The PixiJS app Application instance, shared across the project */
@@ -54,7 +54,7 @@ async function init() {
     // Initialize app
     await app.init({
         resolution: Math.max(window.devicePixelRatio, 2),
-        backgroundColor: 0xE6E6E6,
+        backgroundColor: 0x2D1B69, // Purple background for mini app
     });
 
     // Add pixi canvas element (app.canvas) to the document's body
@@ -75,17 +75,29 @@ async function init() {
     // Generate frame images for Farcaster integration
     await FrameImageGenerator.generateAndSaveImages();
 
+    // Track mini app initialization
+    farcasterMiniApp.trackMiniAppEvent('app_initialized', {
+        context: farcasterMiniApp.getMiniAppContext(),
+        timestamp: Date.now()
+    });
+
     // Add a persisting background shared by all screens
     //navigation.setBackground(TiledBackground);
 
     // Show initial loading screen
     await navigation.showScreen(LoadScreen);
 
-    // Check if running in Farcaster Frame context
-    if (farcasterService.isFrameContext()) {
-        console.log('Running in Farcaster Frame context');
-        const frameData = farcasterService.getFrameData();
+    // Log mini app context and handle Farcaster Frame integration
+    const context = farcasterMiniApp.getMiniAppContext();
+    console.log('FarStick Mini App Context:', context);
+
+    if (farcasterMiniApp.isFrameContext()) {
+        console.log('Running as Farcaster mini app');
+        const frameData = farcasterMiniApp.getFrameData();
         console.log('Frame data:', frameData);
+        
+        // Track frame opening
+        farcasterMiniApp.trackMiniAppEvent('frame_opened', frameData);
     }
 
     //Go to one of the screens if a shortcut is present in url params, otherwise go to game screen
@@ -94,6 +106,12 @@ async function init() {
     } else {
         await navigation.showScreen(DungeonScreen);
     }
+
+    // Track game start
+    farcasterMiniApp.trackMiniAppEvent('game_started', {
+        source: context.isEmbedded ? 'embedded' : 'standalone',
+        client: context.client
+    });
 }
 
 // Init everything

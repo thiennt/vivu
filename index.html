@@ -2,34 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FarStick</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>FarStick - Farcaster Mini App</title>
 
+    <!-- Farcaster Mini App Manifest -->
+    <link rel="manifest" href="/farcaster.json">
+    
     <!-- Farcaster Frame meta tags -->
     <meta property="fc:frame" content="vNext" />
-    <meta property="fc:frame:image" content="https://vivu-game.vercel.app/frame-image.png" />
-    <meta property="fc:frame:button:1" content="Play Game" />
+    <meta property="fc:frame:image" content="https://vivu-game.vercel.app/frame-welcome.png" />
+    <meta property="fc:frame:image:aspect_ratio" content="1.91:1" />
+    <meta property="fc:frame:button:1" content="🎮 Play Game" />
     <meta property="fc:frame:button:1:action" content="link" />
     <meta property="fc:frame:button:1:target" content="https://vivu-game.vercel.app" />
-    <meta property="fc:frame:button:2" content="Share Score" />
-    <meta property="fc:frame:button:2:action" content="post" />
+    <meta property="fc:frame:button:2" content="📊 View Leaderboard" />
+    <meta property="fc:frame:button:2:action" content="link" />
+    <meta property="fc:frame:button:2:target" content="https://vivu-game.vercel.app/leaderboard" />
     <meta property="fc:frame:post_url" content="https://vivu-game.vercel.app/api/frame" />
-    <meta property="og:title" content="FarStick - Play the Game!" />
-    <meta property="og:description" content="An epic dungeon adventure game on Farcaster" />
-    <meta property="og:image" content="https://vivu-game.vercel.app/frame-image.png" />
+    
+    <!-- Open Graph for better sharing -->
+    <meta property="og:title" content="FarStick - Farcaster Mini App Game" />
+    <meta property="og:description" content="An epic dungeon adventure game built for the Farcaster ecosystem" />
+    <meta property="og:image" content="https://vivu-game.vercel.app/frame-welcome.png" />
+    <meta property="og:url" content="https://vivu-game.vercel.app" />
+    <meta property="og:type" content="website" />
+    
+    <!-- PWA Support -->
+    <meta name="theme-color" content="#8B5CF6" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="FarStick">
 
     <style>
       body {
         margin: 0;
+        padding: 0;
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        background-color: #f0f0f0;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        overflow: hidden;
+      }
+      
+      /* Farcaster mini app optimizations */
+      @media (max-width: 430px) {
+        body {
+          padding: 0;
+        }
+      }
+      
+      /* Loading indicator for mini app */
+      .miniapp-loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 18px;
+        z-index: 10000;
+      }
+      
+      .miniapp-loading.hidden {
+        display: none;
       }
     </style> 
 </head>
 <body>
+    <div id="miniapp-loading" class="miniapp-loading">
+        🎮 Loading FarStick...
+    </div>
     <script type="module" src="/src/app.ts"></script>
 </body>
 </html>

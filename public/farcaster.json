@@ -1,0 +1,48 @@
+{
+  "name": "FarStick",
+  "description": "An epic dungeon adventure game built as a Farcaster mini app",
+  "version": "1.0.0",
+  "icon": "/icon-192.png",
+  "screenshots": ["/screenshot.png"],
+  "frames": {
+    "home": {
+      "url": "/",
+      "title": "FarStick Game",
+      "image": "/frame-welcome.png",
+      "buttons": [
+        {
+          "label": "Play Game",
+          "action": "link",
+          "target": "/"
+        }
+      ]
+    },
+    "game": {
+      "url": "/game",
+      "title": "Playing FarStick",
+      "image": "/frame-game.png",
+      "buttons": [
+        {
+          "label": "Share Score",
+          "action": "post",
+          "target": "/api/share"
+        },
+        {
+          "label": "Play Again",
+          "action": "link",
+          "target": "/"
+        }
+      ]
+    }
+  },
+  "permissions": [
+    "cast",
+    "profile",
+    "social_graph"
+  ],
+  "category": "game",
+  "developer": {
+    "name": "FarStick Team",
+    "url": "https://farstick.app"
+  }
+}
