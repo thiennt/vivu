@@ -1,0 +1,22 @@
+{
+  "version": "vNext",
+  "name": "FarStick Battle Game",
+  "description": "Epic dungeon battle game built with PixiJS",
+  "image": "https://vivu-game.vercel.app/frame-image.svg",
+  "imageAspectRatio": "1.91:1",
+  "buttons": [
+    {
+      "label": "🎮 Play Game",
+      "action": "link",
+      "target": "https://vivu-game.vercel.app"
+    },
+    {
+      "label": "⚔️ Battle",
+      "action": "post"
+    }
+  ],
+  "postUrl": "https://vivu-game.vercel.app/api/frame",
+  "homeUrl": "https://vivu-game.vercel.app",
+  "splashImageUrl": "https://vivu-game.vercel.app/frame-image.svg",
+  "webhookUrl": "https://vivu-game.vercel.app/api/webhook"
+}

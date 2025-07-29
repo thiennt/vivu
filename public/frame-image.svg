@@ -1,0 +1,33 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d1b69;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#11082f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- Title -->
+  <text x="600" y="180" font-family="Arial, sans-serif" font-size="72" font-weight="bold" text-anchor="middle" fill="#ffffff" stroke="#ffdd44" stroke-width="2">
+    FarStick
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="250" font-family="Arial, sans-serif" font-size="32" text-anchor="middle" fill="#cccccc">
+    Epic Battle Adventure
+  </text>
+  
+  <!-- Game elements -->
+  <circle cx="300" cy="400" r="80" fill="#ff6b6b" stroke="#ffffff" stroke-width="4"/>
+  <text x="300" y="415" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#ffffff">⚔️</text>
+  
+  <circle cx="900" cy="400" r="80" fill="#4ecdc4" stroke="#ffffff" stroke-width="4"/>
+  <text x="900" y="415" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#ffffff">🛡️</text>
+  
+  <!-- Call to action -->
+  <text x="600" y="530" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#ffdd44">
+    Enter the Dungeon and Battle!
+  </text>
+</svg>
