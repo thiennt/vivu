@@ -1,191 +1,270 @@
-import { Container, Assets, Sprite, Text, Graphics } from 'pixi.js';
-import gsap from 'gsap';
+import { Container, Assets, Sprite, Text, Graphics } from "pixi.js";
+import gsap from "gsap";
 
 export class HomePageLayout extends Container {
-    private background!: Sprite;
-    private titleText!: Text;
-    private gameCategories!: Container;
-    private categoryIcons: Sprite[] = [];
+  private background!: Sprite;
+  private topBar!: Container;
+  private locationMarkers!: Container;
+  private characterAvatar!: Sprite;
+  private locationIcons: Sprite[] = [];
 
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.createBackground();
-        this.createTitle();
-        this.createGameCategories();
-    }
+    this.createBackground();
+    this.createTopBar();
+    this.createLocationMarkers();
+    this.createCharacterAvatar();
+  }
 
-    private createBackground() {
-        this.background = new Sprite(Assets.get('homepage_background'));
-        this.addChild(this.background);
-    }
+  private createBackground() {
+    this.background = new Sprite(Assets.get("medieval_map_background"));
+    this.addChild(this.background);
+  }
 
-    private createTitle() {
-        this.titleText = new Text('VIVU GAMES', {
-            fontFamily: 'Arial',
-            fontSize: 48,
-            fontWeight: 'bold',
-            fill: '#FFFFFF',
-            stroke: { color: '#000000', width: 3 },
-            dropShadow: {
-                color: '#000000',
-                blur: 4,
-                distance: 2,
-            }
-        });
-        this.titleText.anchor.set(0.5);
-        this.addChild(this.titleText);
-    }
+  private createTopBar() {
+    this.topBar = new Container();
+    this.addChild(this.topBar);
 
-    private createGameCategories() {
-        this.gameCategories = new Container();
-        this.addChild(this.gameCategories);
+    // Top bar background
+    const topBg = new Graphics();
+    topBg.roundRect(0, 0, 800, 60, 8);
+    topBg.fill(0x8b4513); // Saddle brown
+    topBg.stroke({ width: 2, color: 0xffd700 }); // Gold border
+    this.topBar.addChild(topBg);
 
-        const categories = [
-            { name: 'Adventure', icon: 'adventure_icon', description: 'Epic quests await!' },
-            { name: 'Puzzle', icon: 'puzzle_icon', description: 'Challenge your mind' },
-            { name: 'Racing', icon: 'racing_icon', description: 'Speed and thrills' },
-            { name: 'Strategy', icon: 'strategy_icon', description: 'Think and conquer' },
-            { name: 'Arcade', icon: 'arcade_icon', description: 'Classic fun' },
-            { name: 'Action', icon: 'play_icon', description: 'Fast-paced battles' }
-        ];
+    // Level text
+    const levelText = new Text("LEVEL 3", {
+      fontFamily: "Arial",
+      fontSize: 18,
+      fontWeight: "bold",
+      fill: "#FFD700",
+    });
+    levelText.x = 20;
+    levelText.y = 20;
+    this.topBar.addChild(levelText);
 
-        categories.forEach((category) => {
-            this.createGameCategory(category);
-        });
-    }
+    // Coin icon and count
+    const coinIcon = new Sprite(Assets.get("coin_icon"));
+    coinIcon.width = 24;
+    coinIcon.height = 24;
+    coinIcon.x = 150;
+    coinIcon.y = 18;
+    this.topBar.addChild(coinIcon);
 
-    private createGameCategory(category: { name: string, icon: string, description: string }) {
-        const categoryContainer = new Container();
-        
-        // Background card
-        const cardBg = new Graphics();
-        cardBg.roundRect(0, 0, 160, 200, 15);
-        cardBg.fill(0x000000);
-        cardBg.alpha = 0.7;
-        cardBg.stroke({ width: 2, color: 0x444444 });
-        categoryContainer.addChild(cardBg);
+    const coinText = new Text("5", {
+      fontFamily: "Arial",
+      fontSize: 16,
+      fontWeight: "bold",
+      fill: "#FFD700",
+    });
+    coinText.x = 180;
+    coinText.y = 22;
+    this.topBar.addChild(coinText);
 
-        // Icon
-        const icon = new Sprite(Assets.get(category.icon));
-        icon.anchor.set(0.5);
-        icon.x = 80;
-        icon.y = 60;
-        icon.width = 64;
-        icon.height = 64;
-        categoryContainer.addChild(icon);
-        this.categoryIcons.push(icon);
+    // XP Progress bar
+    const xpBg = new Graphics();
+    xpBg.roundRect(250, 25, 200, 10, 5);
+    xpBg.fill(0x444444);
+    this.topBar.addChild(xpBg);
 
-        // Title
-        const titleText = new Text(category.name, {
-            fontFamily: 'Arial',
-            fontSize: 18,
-            fontWeight: 'bold',
-            fill: '#FFFFFF',
-            align: 'center'
-        });
-        titleText.anchor.set(0.5);
-        titleText.x = 80;
-        titleText.y = 120;
-        categoryContainer.addChild(titleText);
+    const xpFill = new Graphics();
+    xpFill.roundRect(250, 25, 10, 10, 5); // Very small progress (0/17)
+    xpFill.fill(0x00ff00);
+    this.topBar.addChild(xpFill);
 
-        // Description
-        const descText = new Text(category.description, {
-            fontFamily: 'Arial',
-            fontSize: 12,
-            fill: '#CCCCCC',
-            align: 'center',
-            wordWrap: true,
-            wordWrapWidth: 140
-        });
-        descText.anchor.set(0.5);
-        descText.x = 80;
-        descText.y = 150;
-        categoryContainer.addChild(descText);
+    const xpText = new Text("XP: 0 / 17", {
+      fontFamily: "Arial",
+      fontSize: 12,
+      fill: "#FFFFFF",
+    });
+    xpText.x = 470;
+    xpText.y = 22;
+    this.topBar.addChild(xpText);
 
-        // Make interactive
-        categoryContainer.interactive = true;
-        categoryContainer.cursor = 'pointer';
-        
-        // Hover effects
-        categoryContainer.on('pointerover', () => {
-            gsap.to(categoryContainer.scale, { x: 1.05, y: 1.05, duration: 0.2 });
-            gsap.to(cardBg, { alpha: 0.9, duration: 0.2 });
-        });
-        
-        categoryContainer.on('pointerout', () => {
-            gsap.to(categoryContainer.scale, { x: 1, y: 1, duration: 0.2 });
-            gsap.to(cardBg, { alpha: 0.7, duration: 0.2 });
-        });
+    // Home icon (right side)
+    const homeIcon = new Sprite(Assets.get("home"));
+    homeIcon.width = 32;
+    homeIcon.height = 32;
+    homeIcon.x = 750;
+    homeIcon.y = 14;
+    this.topBar.addChild(homeIcon);
+  }
 
-        categoryContainer.on('pointerdown', () => {
-            // Handle category selection - for now just log
-            console.log(`Selected category: ${category.name}`);
-            
-            // Add some visual feedback
-            gsap.to(categoryContainer.scale, { x: 0.95, y: 0.95, duration: 0.1, yoyo: true, repeat: 1 });
-        });
+  private createLocationMarkers() {
+    this.locationMarkers = new Container();
+    this.addChild(this.locationMarkers);
 
-        this.gameCategories.addChild(categoryContainer);
-    }
+    const locations = [
+      { name: "Market", icon: "market_icon", x: 0.25, y: 0.3 },
+      { name: "Dungeons", icon: "dungeons_icon", x: 0.5, y: 0.25 },
+      { name: "Equipment", icon: "equipment_icon", x: 0.2, y: 0.7 },
+      { name: "Skills", icon: "skills_icon", x: 0.75, y: 0.6 },
+      { name: "???", icon: "mystery_icon", x: 0.5, y: 0.55 },
+    ];
 
-    public show() {
-        // Animate categories entrance
-        this.gameCategories.children.forEach((category, index) => {
-            category.alpha = 0;
-            category.y += 50;
-            
-            gsap.to(category, {
-                alpha: 1,
-                y: category.y - 50,
-                duration: 0.5,
-                delay: index * 0.1,
-                ease: 'back.out(1.7)'
-            });
-        });
+    locations.forEach((location) => {
+      this.createLocationMarker(location);
+    });
+  }
 
-        // Animate title
-        this.titleText.alpha = 0;
-        this.titleText.scale.set(0.5);
-        gsap.to(this.titleText, {
-            alpha: 1,
-            duration: 0.8,
-            ease: 'back.out(1.7)'
-        });
-        gsap.to(this.titleText.scale, {
-            x: 1,
-            y: 1,
-            duration: 0.8,
-            ease: 'back.out(1.7)'
-        });
-    }
+  private createLocationMarker(location: {
+    name: string;
+    icon: string;
+    x: number;
+    y: number;
+  }) {
+    const locationContainer = new Container();
 
-    public resize(width: number, height: number) {
-        // Background
-        this.background.width = width;
-        this.background.height = height;
+    // Location icon
+    const icon = new Sprite(Assets.get(location.icon));
+    icon.anchor.set(0.5);
+    icon.width = 80;
+    icon.height = 80;
+    locationContainer.addChild(icon);
+    this.locationIcons.push(icon);
 
-        // Title position
-        this.titleText.x = width / 2;
-        this.titleText.y = 80;
+    // Label background
+    const labelBg = new Graphics();
+    labelBg.roundRect(-40, 50, 80, 25, 12);
+    labelBg.fill(0x000000);
+    labelBg.alpha = 0.8;
+    labelBg.stroke({ width: 1, color: 0xffd700 });
+    locationContainer.addChild(labelBg);
 
-        // Game categories grid layout
-        const categoriesPerRow = Math.min(3, Math.floor(width / 180));
-        const totalCategories = this.gameCategories.children.length;
-        
-        const startX = (width - (categoriesPerRow * 180 - 20)) / 2;
-        const startY = 150;
+    // Label text
+    const labelText = new Text(location.name, {
+      fontFamily: "Arial",
+      fontSize: 14,
+      fontWeight: "bold",
+      fill: "#FFFFFF",
+      align: "center",
+    });
+    labelText.anchor.set(0.5);
+    labelText.x = 0;
+    labelText.y = 62;
+    locationContainer.addChild(labelText);
 
-        this.gameCategories.children.forEach((category, index) => {
-            const row = Math.floor(index / categoriesPerRow);
-            const col = index % categoriesPerRow;
-            
-            category.x = startX + col * 180;
-            category.y = startY + row * 220;
-        });
+    // Store relative position for layout
+    (locationContainer as any).userData = {
+      relativeX: location.x,
+      relativeY: location.y,
+    };
 
-        // Center the categories container
-        this.gameCategories.x = 0;
-        this.gameCategories.y = 0;
-    }
+    // Make interactive
+    locationContainer.interactive = true;
+    locationContainer.cursor = "pointer";
+
+    // Hover effects
+    locationContainer.on("pointerover", () => {
+      gsap.to(locationContainer.scale, { x: 1.1, y: 1.1, duration: 0.2 });
+      gsap.to(icon, { rotation: icon.rotation + 0.1, duration: 0.2 });
+    });
+
+    locationContainer.on("pointerout", () => {
+      gsap.to(locationContainer.scale, { x: 1, y: 1, duration: 0.2 });
+      gsap.to(icon, { rotation: 0, duration: 0.2 });
+    });
+
+    locationContainer.on("pointerdown", () => {
+      console.log(`Selected location: ${location.name}`);
+
+      // Add visual feedback
+      gsap.to(locationContainer.scale, {
+        x: 0.9,
+        y: 0.9,
+        duration: 0.1,
+        yoyo: true,
+        repeat: 1,
+      });
+
+      // Handle navigation based on location
+      if (location.name === "Dungeons") {
+        // This would navigate to dungeon screen
+        console.log("Navigate to dungeons");
+      }
+    });
+
+    this.locationMarkers.addChild(locationContainer);
+  }
+
+  private createCharacterAvatar() {
+    this.characterAvatar = new Sprite(Assets.get("character_avatar"));
+    this.characterAvatar.anchor.set(0.5, 1); // Bottom center anchor
+    this.characterAvatar.width = 120;
+    this.characterAvatar.height = 120;
+    this.addChild(this.characterAvatar);
+  }
+
+  public show() {
+    // Animate location markers entrance
+    this.locationMarkers.children.forEach((location, index) => {
+      location.alpha = 0;
+      location.scale.set(0.5);
+
+      gsap.to(location, {
+        alpha: 1,
+        duration: 0.6,
+        delay: index * 0.15,
+        ease: "back.out(1.7)",
+      });
+
+      gsap.to(location.scale, {
+        x: 1,
+        y: 1,
+        duration: 0.6,
+        delay: index * 0.15,
+        ease: "back.out(1.7)",
+      });
+    });
+
+    // Animate character avatar
+    this.characterAvatar.alpha = 0;
+    this.characterAvatar.y += 50;
+    gsap.to(this.characterAvatar, {
+      alpha: 1,
+      y: this.characterAvatar.y - 50,
+      duration: 0.8,
+      delay: 0.5,
+      ease: "back.out(1.7)",
+    });
+
+    // Animate top bar
+    this.topBar.alpha = 0;
+    this.topBar.y = -60;
+    gsap.to(this.topBar, {
+      alpha: 1,
+      y: 0,
+      duration: 0.6,
+      ease: "back.out(1.7)",
+    });
+  }
+
+  public resize(width: number, height: number) {
+    // Background - fill entire screen
+    this.background.width = width;
+    this.background.height = height;
+
+    // Top bar - stretch across top
+    const topBg = this.topBar.getChildAt(0) as Graphics;
+    topBg.clear();
+    topBg.roundRect(0, 0, width, 60, 8);
+    topBg.fill(0x8b4513);
+    topBg.stroke({ width: 2, color: 0xffd700 });
+
+    // Position home icon at right edge
+    const homeIcon = this.topBar.getChildAt(this.topBar.children.length - 1) as Sprite;
+    homeIcon.x = width - 50;
+
+    // Position location markers based on relative coordinates
+    this.locationMarkers.children.forEach((location) => {
+      const relativePos = (location as any).userData;
+      location.x = width * relativePos.relativeX;
+      location.y = height * relativePos.relativeY;
+    });
+
+    // Position character avatar at bottom center
+    this.characterAvatar.x = width / 2;
+    this.characterAvatar.y = height - 20;
+  }
 }

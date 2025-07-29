@@ -1,42 +1,41 @@
-import { Container, Ticker } from 'pixi.js';
+import { Container, Ticker } from "pixi.js";
 
-import { Menu } from '../ui/Menu';
-import { HomePageLayout } from '../ui/HomePageLayout';
-
+import { Menu } from "../ui/Menu";
+import { HomePageLayout } from "../ui/HomePageLayout";
 
 export class HomeScreen extends Container {
-    /** Assets bundles required by this screen */
-    public static assetBundles = ['game'];
+  /** Assets bundles required by this screen */
+  public static assetBundles = ["game"];
 
-    private menu: Menu;
-    private homePage: HomePageLayout;
-    
-    constructor() {
-        super();
+  private menu: Menu;
+  private homePage: HomePageLayout;
 
-        this.homePage = new HomePageLayout();
-        this.addChild(this.homePage);
+  constructor() {
+    super();
 
-        this.menu = new Menu();
-        this.addChild(this.menu);
-    }
+    this.homePage = new HomePageLayout();
+    this.addChild(this.homePage);
 
-    public prepare() {
-        // No preparation needed for homepage
-    }
+    this.menu = new Menu();
+    this.addChild(this.menu);
+  }
 
-    public async show() {
-        this.homePage.show();
-        this.menu.show();
-    }
+  public prepare() {
+    // No preparation needed for homepage
+  }
 
-    public resize(width: number, height: number) {
-        this.homePage.resize(width, height - 100); // Leave space for menu
-        
-        this.menu.resize(width, height);
-    }
+  public async show() {
+    this.homePage.show();
+    this.menu.show();
+  }
 
-    public update(_time: Ticker) {
-        // No updates needed for static homepage
-    }
+  public resize(width: number, height: number) {
+    this.homePage.resize(width, height - 100); // Leave space for menu
+
+    this.menu.resize(width, height);
+  }
+
+  public update(_time: Ticker) {
+    // No updates needed for static homepage
+  }
 }
