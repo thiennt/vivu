@@ -78,7 +78,7 @@ export class BattleScene extends Container {
                 this.gameState = 2; // end the game
             }
 
-            if (this.statsElapsedSeconds >= 0.5) {
+            if (this.statsElapsedSeconds >= 1) {
                 this.gameState = 1; // Stop the game to choose stats
                 
                 this.statsSelection.showSelection(this.player, this.enemy);
