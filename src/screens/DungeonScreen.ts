@@ -1,47 +1,42 @@
-import { Container, Ticker } from 'pixi.js';
-import gsap from 'gsap';
-import { waitFor } from '../utils/asyncUtils';
-import { navigation } from '../utils/navigation';
-
-import { Menu } from '../ui/Menu';
-import { CombatScene } from '../ui/CombatScene';
+import { Container, Ticker } from "pixi.js";
+import { Menu } from "../ui/Menu";
+import { BattleScene } from "../ui/BattleScene";
 
 export class DungeonScreen extends Container {
-    /** Assets bundles required by this screen */
-    public static assetBundles = ['game'];
-    
-    private menu: Menu;
-    private combatScene: CombatScene;
+  /** Assets bundles required by this screen */
+  public static assetBundles = ["game"];
 
-    constructor() {
-        super();
+  private menu: Menu;
+  private battleScene: BattleScene;
 
-        this.menu = new Menu();
-        this.addChild(this.menu);
+  constructor() {
+    super();
 
-        this.combatScene = new CombatScene();
-        this.addChild(this.combatScene);
-    }
+    this.battleScene = new BattleScene();
+    this.addChild(this.battleScene);
 
-    public prepare() {
-        this.combatScene.prepare();
-    }
+    this.menu = new Menu();
+    this.addChild(this.menu);
+  }
 
-    public async show() {
-        this.menu.show();
+  public prepare() {
+    this.battleScene.prepare();
+  }
 
-        this.combatScene.show();
-    }
+  public async show() {
+    this.battleScene.show();
+    this.menu.show();
+  }
 
-    public resize(width: number, height: number) {
-        this.menu.resize(width, height);
+  public resize(width: number, height: number) {
+    this.battleScene.x = 0;
+    this.battleScene.y = 0;
+    this.battleScene.resize(width, height - 100); // Leave space for menu
 
-        this.combatScene.x = 0;
-        this.combatScene.y = this.menu.y;
-        this.combatScene.resize(width, height);
-    }
+    this.menu.resize(width, height);
+  }
 
-    public update(time: Ticker) {
-        this.combatScene.update(time);
-    }
+  public update(time: Ticker) {
+    this.battleScene.update(time);
+  }
 }
