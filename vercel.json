@@ -1,28 +1,21 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "dist/**/*",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "server/frame.js",
-      "use": "@vercel/node"
+  "functions": {
+    "api/frame.js": {
+      "runtime": "nodejs18.x"
     }
-  ],
+  },
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/server/frame.js"
+      "dest": "/api/frame.js"
     },
     {
       "src": "/(.*)",
-      "dest": "/server/frame.js"
+      "dest": "/index.html"
     }
   ],
-  "functions": {
-    "server/frame.js": {
-      "maxDuration": 10
-    }
-  }
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install"
 }
