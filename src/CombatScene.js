@@ -4,6 +4,12 @@ import { Mew } from './Mew';
 import { Box } from './Box';
 import { testForAABB, delay } from './util';
 
+// Dynamic import for GIF functionality since this is a JS file
+async function loadGifExporter() {
+    const module = await import('./utils/GifExporter.js');
+    return module.GifExporter;
+}
+
 export class CombatScene {
     constructor(app) {
         this.app = app;
@@ -12,6 +18,11 @@ export class CombatScene {
         
         this.bulletTotal = 0;
         this.gameState = 0;
+        this.isExporting = false;
+        this.gifExporter = null;
+        
+        // Initialize GIF export functionality
+        this.initGifExport();
     }
 
     init() {
@@ -19,6 +30,7 @@ export class CombatScene {
         this.addWarrior();
         this.addMew();
         this.addBoxes();
+        this.createExportButton();
     }
 
     addChild(child) {
@@ -259,5 +271,154 @@ export class CombatScene {
         winText.y = this.LINE_Y - 200;
 
         this.view.addChild(winText);
+    }
+
+    // GIF Export functionality
+    async initGifExport() {
+        try {
+            const GifExporter = await loadGifExporter();
+            this.gifExporter = new GifExporter(this.app, {
+                width: 400,
+                height: 300,
+                duration: 5,
+                framerate: 10,
+                quality: 8
+            });
+            console.log('GIF exporter initialized');
+        } catch (error) {
+            console.error('Failed to initialize GIF exporter:', error);
+        }
+    }
+
+    createExportButton() {
+        console.log('Creating export button in JS CombatScene...');
+        
+        // Create button background
+        this.exportButton = new Graphics();
+        this.exportButton.roundRect(0, 0, 100, 35, 5);
+        this.exportButton.fill(0x4CAF50);
+        this.exportButton.stroke({ width: 2, color: 0x2E7D32 });
+
+        // Create button text
+        this.exportText = new Text({
+            text: 'Export GIF',
+            style: {
+                fontFamily: 'Arial',
+                fontSize: 12,
+                fill: 0xFFFFFF,
+                align: 'center'
+            }
+        });
+        this.exportText.anchor.set(0.5);
+        this.exportText.x = 50;
+        this.exportText.y = 17.5;
+
+        this.exportButton.addChild(this.exportText);
+        this.exportButton.cursor = 'pointer';
+        this.exportButton.interactive = true;
+
+        // Position button in top-right area, accounting for narrow screens
+        this.exportButton.x = Math.max(10, this.app.canvas.width - 110);
+        this.exportButton.y = 10;
+
+        // Add click handler
+        this.exportButton.on('pointerdown', () => this.toggleGifExport());
+
+        this.addChild(this.exportButton);
+        console.log('Export button created and added to JS CombatScene');
+    }
+
+    async toggleGifExport() {
+        if (!this.gifExporter) {
+            console.error('GIF exporter not initialized');
+            return;
+        }
+
+        if (this.isExporting) {
+            await this.stopGifExport();
+        } else {
+            this.startGifExport();
+        }
+    }
+
+    startGifExport() {
+        if (this.isExporting || !this.gifExporter) return;
+
+        this.isExporting = true;
+        this.updateExportButton();
+
+        try {
+            this.gifExporter.startRecording(this.view);
+            console.log('Started GIF export recording...');
+        } catch (error) {
+            console.error('Failed to start GIF recording:', error);
+            this.isExporting = false;
+            this.updateExportButton();
+        }
+    }
+
+    async stopGifExport() {
+        if (!this.isExporting || !this.gifExporter) return;
+
+        this.updateExportButton('Processing...');
+
+        try {
+            const GifExporter = await loadGifExporter();
+            const gifBlob = await this.gifExporter.stopRecording();
+            GifExporter.downloadBlob(gifBlob, `combat-scene-${Date.now()}.gif`);
+            console.log('GIF export completed successfully!');
+        } catch (error) {
+            console.error('Failed to export GIF:', error);
+        } finally {
+            this.isExporting = false;
+            this.updateExportButton();
+        }
+    }
+
+    updateExportButton(customText) {
+        if (!this.exportButton || !this.exportText) return;
+
+        if (customText) {
+            this.exportText.text = customText;
+            this.exportButton.clear();
+            this.exportButton.roundRect(0, 0, 100, 35, 5);
+            this.exportButton.fill(0xFF9800);
+            this.exportButton.stroke({ width: 2, color: 0xE65100 });
+        } else if (this.isExporting) {
+            this.exportText.text = 'Stop Export';
+            this.exportButton.clear();
+            this.exportButton.roundRect(0, 0, 100, 35, 5);
+            this.exportButton.fill(0xF44336);
+            this.exportButton.stroke({ width: 2, color: 0xC62828 });
+        } else {
+            this.exportText.text = 'Export GIF';
+            this.exportButton.clear();
+            this.exportButton.roundRect(0, 0, 100, 35, 5);
+            this.exportButton.fill(0x4CAF50);
+            this.exportButton.stroke({ width: 2, color: 0x2E7D32 });
+        }
+    }
+
+    // Public method to export GIF programmatically
+    async exportToGif(options) {
+        if (!this.gifExporter) {
+            const GifExporter = await loadGifExporter();
+            const exporter = new GifExporter(this.app, options);
+            
+            return new Promise((resolve, reject) => {
+                exporter.startRecording(this.view);
+                
+                setTimeout(async () => {
+                    try {
+                        const blob = await exporter.stopRecording();
+                        resolve(blob);
+                    } catch (error) {
+                        reject(error);
+                    }
+                }, (options?.duration || 3) * 1000);
+            });
+        }
+        
+        return this.exportToGif(options);
     }
 }

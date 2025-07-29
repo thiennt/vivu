@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIF Export Test</title>
+</head>
+<body>
+    <h1>Combat Scene GIF Export Test</h1>
+    <p>Open the browser console to see debug output.</p>
+    <div id="test-info">
+        <p>Test Instructions:</p>
+        <ol>
+            <li>Navigate to the Combat Scene</li>
+            <li>Look for the "Export GIF" button in the top-right corner</li>
+            <li>Click the button to start recording</li>
+            <li>Click "Stop Export" to finish and download the GIF</li>
+        </ol>
+    </div>
+
+    <script>
+        // Test that gif.js library is available
+        console.log('Testing GIF export dependencies...');
+        
+        // Check if the worker file exists
+        fetch('/js/gif.worker.js')
+            .then(response => {
+                if (response.ok) {
+                    console.log('✓ GIF worker file is accessible');
+                } else {
+                    console.error('✗ GIF worker file not found');
+                }
+            })
+            .catch(error => {
+                console.error('✗ Error checking GIF worker:', error);
+            });
+    </script>
+</body>
+</html>
