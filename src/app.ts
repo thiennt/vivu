@@ -5,6 +5,7 @@ import { getUrlParam } from './utils/getUrlParams';
 import { initDevtools } from '@pixi/devtools';
 import { LoadScreen } from './screens/LoadScreen';
 import { HomeScreen } from './screens/HomeScreen';
+import { DungeonScreen } from './screens/DungeonScreen';
 
 /** The PixiJS app Application instance, shared across the project */
 export const app = new Application();
@@ -80,7 +81,7 @@ async function init() {
     if (getUrlParam('combat') !== null) {
         //await navigation.showScreen(CombatScreen);
     } else {
-        await navigation.showScreen(HomeScreen);
+        await navigation.showScreen(DungeonScreen);
     }
 }
 
