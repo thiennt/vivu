@@ -4,7 +4,7 @@ import { waitFor } from '../utils/asyncUtils';
 import { navigation } from '../utils/navigation';
 
 import { Menu } from '../ui/Menu';
-import { CombatScene } from '../ui/CombatScene';
+import { DuelScene } from '../ui/DuelScene';
 
 export class DungeonScreen extends Container {
     /** Assets bundles required by this screen */
@@ -19,7 +19,7 @@ export class DungeonScreen extends Container {
         this.menu = new Menu();
         this.addChild(this.menu);
 
-        this.combatScene = new CombatScene();
+        this.combatScene = new DuelScene();
         this.addChild(this.combatScene);
     }
 
@@ -42,6 +42,6 @@ export class DungeonScreen extends Container {
     }
 
     public update(time: Ticker) {
-        this.combatScene.update(time);
+        //this.combatScene.update(time);
     }
 }
