@@ -8,7 +8,7 @@ import { Enemy } from './Enemy';
 import { StatsArea } from './StatsArea';
 
 
-export class CombatScene extends Container {    
+export class CombatScene extends Container {
     private duelContainer: Container;
     private statsContainer: Container;
     private player: Player;
@@ -41,6 +41,10 @@ export class CombatScene extends Container {
     public async show() {
     }
 
+    public async hide() {
+        this.gameState = 1; // End the game state
+    }
+
     public prepare() {
         this.statsArea.prepare(this.player, this.enemy);
 
@@ -54,7 +58,7 @@ export class CombatScene extends Container {
         this.player.y = -42;
         this.enemy.x = centerX + 60;
         this.enemy.y = -50;
-        
+
         this.statsContainer.x = 0;
         this.statsContainer.y = -450;
 
@@ -98,7 +102,7 @@ export class CombatScene extends Container {
         gsap.to(this.player, { x: this.player.x + 70, duration: 0.1, ease: 'back.out' });
         this.player.character.animationSpeed = 0.1;
         this.player.character.gotoAndPlay(0);
-        
+
         this.enemy.takeDamage(attack.damage, attack.hitRate);
 
         await waitFor(delayTime);

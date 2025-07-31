@@ -53,11 +53,13 @@ export class Player extends Container {
         this.fightAnimation = new AnimatedSprite(this.animations.fight ?? []);
         this.fightAnimation.anchor = 0.5;
         this.fightAnimation.scale.set(1);
+        this.fightAnimation.animationSpeed = 0.1;
         this.fightAnimation.loop = false;
 
         this.critAnimation = new AnimatedSprite(this.animations.crit ?? []);
         this.critAnimation.anchor = 0.5;
         this.critAnimation.scale.set(1);
+        this.critAnimation.animationSpeed = 0.1;
         this.critAnimation.loop = false;
 
     }
@@ -110,7 +112,6 @@ export class Player extends Container {
     public doFight(onComplete: () => void) {
         this.removeChild(this.character, this.critAnimation);
         this.addChild(this.fightAnimation);
-        this.fightAnimation.animationSpeed = 0.1;
         this.fightAnimation.gotoAndPlay(0);
         this.fightAnimation.onComplete = () => {
             onComplete();
@@ -120,7 +121,6 @@ export class Player extends Container {
     public doCrit(onComplete: () => void) {
         this.removeChild(this.character, this.fightAnimation);
         this.addChild(this.critAnimation);
-        this.critAnimation.animationSpeed = 0.1;
         this.critAnimation.gotoAndPlay(0);
         this.critAnimation.onComplete = () => {
             onComplete();
