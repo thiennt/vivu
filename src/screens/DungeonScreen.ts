@@ -11,7 +11,7 @@ export class DungeonScreen extends Container {
     public static assetBundles = ['game'];
     
     private menu: Menu;
-    private combatScene: CombatScene;
+    private combatScene: DuelScene;
 
     constructor() {
         super();
@@ -31,6 +31,11 @@ export class DungeonScreen extends Container {
         this.menu.show();
 
         this.combatScene.show();
+    }
+
+    public async hide() {
+        this.removeChild(this.combatScene);
+        this.combatScene.hide();
     }
 
     public resize(width: number, height: number) {
