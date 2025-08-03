@@ -1,6 +1,7 @@
-import { Container, Assets, AnimatedSprite, Graphics, Sprite, Spritesheet } from 'pixi.js';
+import { FancyButton } from '@pixi/ui';
+import { Container, Assets, Text, Graphics, Sprite, Texture } from 'pixi.js';
 import gsap from 'gsap';
-import { app } from '../app';
+import { COLORS } from '../app';
 import { waitFor } from '../utils/asyncUtils';
 import { navigation } from '../utils/navigation';
 import { HomeScreen } from '../screens/HomeScreen';
@@ -9,68 +10,101 @@ import { CharacterScreen } from '../screens/CharacterScreen';
 
 
 export class Menu extends Container {
-    private menuBar: Graphics;
-    private homeIcon: Sprite;
-    private dungeonIcon: Sprite;
-
+    private heroButton: FancyButton;
+    private dungeonButton: FancyButton;
+    private inventoryButton: FancyButton;
+    
     constructor() {
         super();
 
-        this.menuBar = new Graphics()
-        this.addChild(this.menuBar);
+        this.heroButton = this.createMenuButton("Hero", Assets.get('hero'));
+        this.heroButton.on('click', () => {
+            this.goToHeroScreen();
+        });
+        this.addChild(this.heroButton);
 
-        this.homeIcon = this.addIcon("home");
-        this.homeIcon.on("mousedown", this.goToHomeScreen.bind(this));
-        this.addChild(this.homeIcon);
+        this.inventoryButton = this.createMenuButton("Inventory", Assets.get('inventory'));
+        this.inventoryButton.on('click', () => {
+            //this.goToInventoryScreen();
+        });
+        this.addChild(this.inventoryButton);
 
-        this.dungeonIcon = this.addIcon("dungeon");
-        this.dungeonIcon.on("mousedown", this.goToDungeonScreen.bind(this));
-        this.addChild(this.dungeonIcon);
+        this.dungeonButton = this.createMenuButton("Dungeon", Assets.get('dungeon'));
+        this.dungeonButton.on('click', () => {
+            this.goToDungeonScreen();
+        });
+        this.addChild(this.dungeonButton);
     }
 
-    private addIcon(name: string) {
-        const icon = new Sprite(Assets.get(name));
-        icon.anchor = 0.5;
-        icon.width = 50;
-        icon.height = 50;
-        //icon.position.set(x, y);
-        icon.interactive = true;
-        icon.cursor = "pointer";
 
-        return icon;
+    public createMenuButton(text: string, iconTexture: Texture) {
+        const button = new FancyButton();
+
+        const graphic = new Graphics();
+        graphic.rect(0, 0, 200, 50);
+        graphic.fill(COLORS.FRAME_LABEL);
+        
+        button.defaultView = graphic;
+
+        button.iconView = iconTexture;
+        button.defaultIconScale = 1;
+        button.defaultIconAnchor = {
+            x: 0.5,
+            y: 0.5,
+        };
+        button.iconOffset = { x: -60, y: 0 };
+
+        button.textView = new Text({
+            text,
+            style: {
+                fill: '#FFFFFF',
+                fontFamily: 'Arial',
+                fontSize: 24,
+                fontWeight: 'bold',
+            },
+        });
+        button.defaultTextScale = 1;
+        button.defaultTextAnchor = {
+            x: 0.5,
+            y: 0.5,
+        };
+        button.textOffset = { x: 20, y: 0 };
+
+        button.padding = 10;
+
+        button.anchor.set(0.5, 0.5);
+
+        return button
     }
 
-    public async show() {
-        this.menuBar.clear().rect(0, 0, navigation.width, 100)
-            .fill(0x000000)
-            .stroke({ width: 1, color: "333333" });
-
-        this.homeIcon.x = 100;
-        this.homeIcon.y = 50;
-        this.dungeonIcon.x = 200;
-        this.dungeonIcon.y = 50;
-        // gsap.to(this.homeIcon, { x: 100, y: 50, duration: 0.1, ease: 'linear' });
-        // gsap.to(this.dungeonIcon, { x: 200, y: 50, duration: 0.1, ease: 'linear' });
-
-        let currentScreen = navigation.currentScreen;
-        let icon = this.homeIcon;
-        if (currentScreen instanceof DungeonScreen) {
-            icon = this.dungeonIcon;
-        }
-        this.highlight(icon);
-    }
-
-    public highlight(icon: Sprite) {
-        icon.tint = 0xC9B6B0;
-        icon.scale.set(1.2);
-    }
+    public show() {}
 
     public resize(width: number, height: number) {
         this.x = 0;
-        this.y = height - 100;
+
+        const buttonWidth = 200;
+        const buttonHeight = 50;
+        const spacing = 20;
+        
+        this.heroButton.width = buttonWidth;
+        this.heroButton.height = buttonHeight;
+        this.inventoryButton.width = buttonWidth;
+        this.inventoryButton.height = buttonHeight;
+        this.dungeonButton.width = buttonWidth;
+        this.dungeonButton.height = buttonHeight;
+
+        this.heroButton.x = width / 2;
+        this.heroButton.y = 0;
+        this.inventoryButton.x = width / 2;
+        this.inventoryButton.y = 100;
+        
+        this.dungeonButton.x = width / 2;
+        this.dungeonButton.y = 200;
+
+        this.y = (height - (this.heroButton.height * 3 + spacing * 2)) / 2;
     }
 
-    public goToHomeScreen() {
+    public goToHeroScreen() {
         navigation.showScreen(CharacterScreen);
     }
 

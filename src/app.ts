@@ -1,4 +1,4 @@
-import { Application, Assets } from 'pixi.js';
+import { Application, Assets, Sprite } from 'pixi.js';
 import { initAssets } from './utils/assets';
 import { navigation } from './utils/navigation';
 import { getUrlParam } from './utils/getUrlParams';
@@ -10,6 +10,33 @@ import { CharacterScreen } from './screens/CharacterScreen';
 
 /** The PixiJS app Application instance, shared across the project */
 export const app = new Application();
+
+export const COLORS = {
+    FRAME_BORDER: 0x46483f,
+    FRAME_BACKGROUND: 0xeaf2d5,
+    FRAME_LABEL: 0x414d27,
+    FRAME_TEXT: 0x000000,
+    FRAME_LABEL_HIGHLIGHTED: 0x143f03,
+    TAB_PANEL_HIGHLIGHTED: 0x99b35b,
+    TAB_PANEL_BORDER_SELECTED: 0x2e351b,
+    TAB_PANEL_BORDER_UNSELECTED: 0x474840,
+    TAB_PANEL_NOT_HIGHLIGHTED: 0xeff8d9,
+    PANEL_BOLD: 0xC4D5B2,
+    RARITY: {
+        NOVICE: 0xbbbeba,
+        APPRENTICE: 0x51ec22,
+        ADEPT: 0x291aee,
+        EXPERT: 0xf014cb,
+        MASTER: 0xeba40d,
+        GRANDMASTER: 0x940808,
+    },
+    BUTTON: 0x3868ec
+};
+
+// battle screne
+// border: 000000
+// background: c7e0b7
+
 
 initDevtools({ app });
 
@@ -54,7 +81,7 @@ async function init() {
     // Initialize app
     await app.init({
         resolution: Math.max(window.devicePixelRatio, 2),
-        backgroundColor: 0xE6E6E6,
+        background: 'C4D5B2',
     });
 
     // Add pixi canvas element (app.canvas) to the document's body
@@ -82,7 +109,7 @@ async function init() {
     if (getUrlParam('combat') !== null) {
         //await navigation.showScreen(CombatScreen);
     } else {
-        await navigation.showScreen(CharacterScreen);
+        await navigation.showScreen(HomeScreen);
     }
 }
 
