@@ -1,4 +1,4 @@
-import { Container, Ticker } from 'pixi.js';
+import { Container, Ticker, Sprite, Assets } from 'pixi.js';
 import gsap from 'gsap';
 import { waitFor } from '../utils/asyncUtils';
 import { navigation } from '../utils/navigation';
@@ -11,38 +11,37 @@ export class HomeScreen extends Container {
     /** Assets bundles required by this screen */
     public static assetBundles = ['game'];
 
+    private background: Sprite;
+    
     private menu: Menu;
-    private battleScene: BattleScene;
     
     constructor() {
         super();
 
+        this.background = new Sprite(Assets.get('background'));
+        this.addChild(this.background);
+
         this.menu = new Menu();
         this.addChild(this.menu);
-
-        this.battleScene = new BattleScene();
-        this.addChild(this.battleScene);
     }
 
     public prepare() {
-        this.battleScene.prepare();
+        
     }
 
     public async show() {
         this.menu.show();
 
-        this.battleScene.show();
     }
 
     public resize(width: number, height: number) {
-        this.menu.resize(width, height);
+        this.background.width = width;
+        this.background.height = height;
 
-        this.battleScene.x = 0;
-        this.battleScene.y = this.menu.y;
-        this.battleScene.resize(width, height);
+        this.menu.resize(width, height);
     }
 
     public update(time: Ticker) {
-        this.battleScene.update(time);
+        
     }
 }
