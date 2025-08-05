@@ -23,14 +23,16 @@ export const COLORS = {
     TAB_PANEL_NOT_HIGHLIGHTED: 0xeff8d9,
     PANEL_BOLD: 0xC4D5B2,
     RARITY: {
-        NOVICE: 0xbbbeba,
+        NOVICE: 0xffffff,
         APPRENTICE: 0x51ec22,
         ADEPT: 0x291aee,
         EXPERT: 0xf014cb,
         MASTER: 0xeba40d,
         GRANDMASTER: 0x940808,
     },
-    BUTTON: 0x3868ec
+    BUTTON: 0x3868ec,
+    BUTTON_OK: 0x73a370,
+    BUTTON_CANCEL: 0xba4b45,
 };
 
 // battle screne
@@ -109,7 +111,7 @@ async function init() {
     if (getUrlParam('combat') !== null) {
         //await navigation.showScreen(CombatScreen);
     } else {
-        await navigation.showScreen(HomeScreen);
+        await navigation.showScreen(DungeonScreen);
     }
 }
 
