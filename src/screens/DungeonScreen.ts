@@ -3,23 +3,19 @@ import gsap from 'gsap';
 import { waitFor } from '../utils/asyncUtils';
 import { navigation } from '../utils/navigation';
 
-import { Menu } from '../ui/Menu';
 import { DuelScene } from '../ui/DuelScene';
+import { CombatScene } from '../ui/CombatScene';
 
 export class DungeonScreen extends Container {
     /** Assets bundles required by this screen */
     public static assetBundles = ['game'];
     
-    private menu: Menu;
-    private combatScene: DuelScene;
+    private combatScene: CombatScene;
 
     constructor() {
         super();
 
-        this.menu = new Menu();
-        this.addChild(this.menu);
-
-        this.combatScene = new DuelScene();
+        this.combatScene = new CombatScene();
         this.addChild(this.combatScene);
     }
 
@@ -28,7 +24,6 @@ export class DungeonScreen extends Container {
     }
 
     public async show() {
-        this.menu.show();
 
         this.combatScene.show();
     }
@@ -39,10 +34,9 @@ export class DungeonScreen extends Container {
     }
 
     public resize(width: number, height: number) {
-        this.menu.resize(width, height);
 
         this.combatScene.x = 0;
-        this.combatScene.y = this.menu.y;
+        this.combatScene.y = 0;
         this.combatScene.resize(width, height);
     }
 

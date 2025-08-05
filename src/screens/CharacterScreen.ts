@@ -47,6 +47,7 @@ export class CharacterScreen extends Container {
     private agiText: Text = new Text();
     private agiMinusBtn: Sprite = new Sprite(Texture.WHITE);
     private agiPlusBtn: Sprite = new Sprite(Texture.WHITE);
+    private pointApplyBtn: FancyButton = new FancyButton();
 
     private statsArea: Container;
     private statsPanel: Graphics;
@@ -136,6 +137,9 @@ export class CharacterScreen extends Container {
         this.createPointRow(this.conLabel, 'CON', this.conText, '12', this.conMinusBtn, this.conPlusBtn);
         this.createPointRow(this.agiLabel, 'AGI', this.agiText, '11', this.agiMinusBtn, this.agiPlusBtn);
 
+        this.createApplyButton();
+        this.characterArea.addChild(this.pointApplyBtn);
+
         this.statsArea = new Container();
         this.addChild(this.statsArea);
 
@@ -165,6 +169,32 @@ export class CharacterScreen extends Container {
         this.equipLabel.eventMode = 'static';
         this.equipLabel.cursor = 'pointer';
         this.equipArea.addChild(this.equipLabel);
+    }
+
+    public createApplyButton() {
+        const graphic = new Graphics();
+        graphic.rect(0, 0, 100, 40);
+        graphic.fill(COLORS.BUTTON_OK);
+
+        this.pointApplyBtn.defaultView = graphic;
+
+        this.pointApplyBtn.textView = new Text({
+            text: 'Apply',
+            style: {
+                fill: '#FFFFFF',
+                fontFamily: 'Arial',
+                fontSize: 18,
+                fontWeight: 'bold',
+            },
+        });
+        this.pointApplyBtn.defaultTextScale = 1;
+        this.pointApplyBtn.defaultTextAnchor = {
+            x: 0.5,
+            y: 0.5,
+        };
+        this.pointApplyBtn.textOffset = { x: 0, y: 0 };
+        this.pointApplyBtn.padding = 10;
+        this.pointApplyBtn.anchor.set(0.5, 0.5);
     }
 
     public createAvatarFrame(frame: FancyButton) {
@@ -332,6 +362,9 @@ export class CharacterScreen extends Container {
         this.agiMinusBtn.y = pointLine + 135;
         this.agiPlusBtn.x = pointX + 200;
         this.agiPlusBtn.y = pointLine + 135;
+
+        this.pointApplyBtn.x = pointX + 120;
+        this.pointApplyBtn.y = pointLine + 180;
 
         let statsLineX = 40;
         let statsLineY = pointLine;
