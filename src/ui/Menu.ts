@@ -42,7 +42,7 @@ export class Menu extends Container {
 
         const graphic = new Graphics();
         graphic.rect(0, 0, 200, 50);
-        graphic.fill(COLORS.FRAME_LABEL);
+        graphic.fill(COLORS.blue);
         
         button.defaultView = graphic;
 
@@ -57,8 +57,7 @@ export class Menu extends Container {
         button.textView = new Text({
             text,
             style: {
-                fill: '#FFFFFF',
-                fontFamily: 'Arial',
+                fill: COLORS.white,
                 fontSize: 24,
                 fontWeight: 'bold',
             },

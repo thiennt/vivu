@@ -1,12 +1,13 @@
 import { Assets, Sprite, Graphics, Text } from 'pixi.js';
 import { Character } from './Character';
+import { COLORS } from '../app';
 
 export class Hero extends Character {
 
-    constructor() {
+    constructor(options?: { rarity?: string }) {
         super();
 
-        this.initFrame();
+        this.initFrame(options?.rarity || 'novice');
         this.initAvatar();
         this.initName();
         this.initHpBar();
@@ -22,7 +23,7 @@ export class Hero extends Character {
     public initName() {
         this.username = new Text({
             text: 'Hero',
-            style: { fontSize: 16, fill: 0xffffff }
+            style: { fontSize: 16, fill: COLORS.white, fontWeight: 'bold' }
         });
         this.username.anchor.set(0.5);
         this.username.position.set(0, 70);
