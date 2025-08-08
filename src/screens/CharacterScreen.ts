@@ -1,16 +1,15 @@
-import { Container, Text, Graphics, Sprite, Assets, Texture, Mask } from "pixi.js";
+import { Container, Text, Graphics, Sprite, Assets, Texture, Mask, FillGradient } from "pixi.js";
 import { COLORS } from "../app";
 import { FancyButton, MaskedFrame } from "@pixi/ui";
 import { navigation } from "../utils/navigation";
 import { HomeScreen } from "./HomeScreen";
-import { miniAppEmbedNextSchema } from "@farcaster/miniapp-sdk";
+import { DropShadowFilter } from 'pixi-filters/drop-shadow';
+
 
 
 // Main Character Screen Class
 export class CharacterScreen extends Container {
     public static assetBundles = ['game'];
-
-    private background: Sprite;
 
     private backIcon: Sprite;
 
@@ -49,8 +48,8 @@ export class CharacterScreen extends Container {
     private agiPlusBtn: Sprite = new Sprite(Texture.WHITE);
     private pointApplyBtn: FancyButton = new FancyButton();
 
-    private statsArea: Container;
-    private statsPanel: Graphics;
+    private statArea: Container;
+    private statPanel: Graphics;
     private hpLabel: Text = new Text();
     private hpText: Text = new Text();
     private atkLabel: Text = new Text();
@@ -76,8 +75,10 @@ export class CharacterScreen extends Container {
     constructor() {
         super();
 
-        this.background = new Sprite(Assets.get('background'));
-        this.addChild(this.background);
+        const background = new Sprite(Assets.get('background_1.png'));
+        background.width = navigation.width;
+        background.height = navigation.height;
+        this.addChild(background);
 
         this.backIcon = Sprite.from(Assets.get('back'));
         this.backIcon.anchor.set(0.5, 0.5);
@@ -119,15 +120,15 @@ export class CharacterScreen extends Container {
 
         // Points to Spend
         this.pointsLabel = new Text({
-            text: 'Stats Points',
-            style: { fontSize: 16, fill: COLORS.FRAME_LABEL_HIGHLIGHTED, fontWeight: 'bold', align: 'right' }
+            text: 'Points',
+            style: { fontSize: 16, fill: COLORS.blueLight, fontWeight: 'bold', align: 'right' }
         });
         this.pointsLabel.anchor.set(1, 0.5);
         this.characterArea.addChild(this.pointsLabel);
 
         this.pointsText = new Text({
             text: '4',
-            style: { fontSize: 18, fill: COLORS.FRAME_TEXT, fontWeight: 'bold', align: 'left' }
+            style: { fontSize: 18, fill: COLORS.white, fontWeight: 'bold', align: 'left' }
         });
         this.pointsText.anchor.set(0, 0.5);
         this.characterArea.addChild(this.pointsText);
@@ -140,19 +141,19 @@ export class CharacterScreen extends Container {
         this.createApplyButton();
         this.characterArea.addChild(this.pointApplyBtn);
 
-        this.statsArea = new Container();
-        this.addChild(this.statsArea);
+        this.statArea = new Container();
+        this.addChild(this.statArea);
 
-        this.statsPanel = new Graphics();
-        this.statsArea.addChild(this.statsPanel);
+        this.statPanel = new Graphics();
+        this.statArea.addChild(this.statPanel);
 
-        this.createStatRow(this.hpLabel, 'HP', this.hpText, '250', this.statsArea);
-        this.createStatRow(this.atkLabel, 'ATK', this.atkText, '60', this.statsArea);
-        this.createStatRow(this.magLabel, 'MAG', this.magText, '60', this.statsArea);
-        this.createStatRow(this.defLabel, 'DEF', this.defText, '32', this.statsArea);
-        this.createStatRow(this.lukLabel, 'LUCK', this.lukText, '5%', this.statsArea);
-        this.createStatRow(this.hitRateLabel, 'HIT', this.hitRateText, '98%', this.statsArea);
-        this.createStatRow(this.dodgeRateLabel, 'EVADE', this.dodgeRateText, '7%', this.statsArea);
+        this.createStatRow(this.hpLabel, 'HP', this.hpText, '250', this.statArea);
+        this.createStatRow(this.atkLabel, 'ATK', this.atkText, '60', this.statArea);
+        this.createStatRow(this.magLabel, 'MAG', this.magText, '60', this.statArea);
+        this.createStatRow(this.defLabel, 'DEF', this.defText, '32', this.statArea);
+        this.createStatRow(this.lukLabel, 'LUCK', this.lukText, '5%', this.statArea);
+        this.createStatRow(this.hitRateLabel, 'HIT', this.hitRateText, '98%', this.statArea);
+        this.createStatRow(this.dodgeRateLabel, 'EVADE', this.dodgeRateText, '7%', this.statArea);
 
         this.equipArea = new Container();
         this.addChild(this.equipArea);
@@ -164,25 +165,53 @@ export class CharacterScreen extends Container {
         this.equipArea.addChild(this.equipTabPanel);
 
         this.equipLabel.text = 'EQUIPMENT';
-        this.equipLabel.style = { fontSize: 18, fill: 0xffffff, fontWeight: 'bold', stroke: 'black' };
+        this.equipLabel.style = { 
+            fontSize: 18,
+            fontFamily: `'Cinzel', serif`,
+            fontWeight: 'bold',
+            fill: COLORS.blueLight, 
+            dropShadow: {
+                color: COLORS.blueDark,
+                blur: 4,
+                alpha: 0.5,
+                distance: 2
+            }
+        };
         this.equipLabel.interactive = true;
         this.equipLabel.eventMode = 'static';
         this.equipLabel.cursor = 'pointer';
         this.equipArea.addChild(this.equipLabel);
     }
 
+    public addBackground() {
+        // const gradient = new FillGradient({
+        //     start: { x: 0, y: 0 },
+        //     end: { x: 1, y: 1 },
+        //     type: 'linear',
+        //     colorStops: [
+        //         { offset: 0, color: COLORS.panelBg },
+        //         { offset: 0.7, color: COLORS.panelBg },
+        //         { offset: 1, color: COLORS.panelBgDark }
+        //     ],
+        // });
+    
+        // // Create a background graphics object and fill it with the gradient
+        // this.background.rect(0, 0, navigation.width, navigation.height);
+        // this.background.fill(gradient);
+    }
+
     public createApplyButton() {
         const graphic = new Graphics();
-        graphic.rect(0, 0, 100, 40);
-        graphic.fill(COLORS.BUTTON_OK);
+        graphic.roundRect(0, 0, 100, 40, 5);
+        graphic.stroke({ width: 2, color: COLORS.blueDark });
+        graphic.fill(COLORS.blueLight);
 
         this.pointApplyBtn.defaultView = graphic;
 
         this.pointApplyBtn.textView = new Text({
             text: 'Apply',
             style: {
-                fill: '#FFFFFF',
-                fontFamily: 'Arial',
+                fill: COLORS.white,
                 fontSize: 18,
                 fontWeight: 'bold',
             },
@@ -199,8 +228,8 @@ export class CharacterScreen extends Container {
 
     public createAvatarFrame(frame: FancyButton) {
         const target = Sprite.from('avatar');
-        target.width = 160;
-        target.height = 160;
+        target.width = 120;
+        target.height = 120;
 
         const icon = new MaskedFrame({
             target,
@@ -227,16 +256,16 @@ export class CharacterScreen extends Container {
         frame.anchor.set(0.5, 0.5);
     }
 
-    public createPointRow(statsLabel: Text, statsName: string, statsValueText: Text, statsValue: string, minusBtn: Sprite, plusBtn: Sprite) {
-        statsLabel.text = statsName;
-        statsLabel.style = { fontSize: 16, fill: COLORS.FRAME_LABEL, fontWeight: 'bold', align: 'left' };
-        statsLabel.anchor.set(0, 0.5);
-        this.characterArea.addChild(statsLabel);
+    public createPointRow(statLabel: Text, statName: string, statValueText: Text, statValue: string, minusBtn: Sprite, plusBtn: Sprite) {
+        statLabel.text = statName;
+        statLabel.style = { fontSize: 14, fill: COLORS.blueLight, fontWeight: 'bold', align: 'left' };
+        statLabel.anchor.set(0, 0.5);
+        this.characterArea.addChild(statLabel);
 
-        statsValueText.text = statsValue;
-        statsValueText.style = { fontSize: 16, fill: COLORS.FRAME_TEXT, fontWeight: 'bold', align: 'right' };
-        statsValueText.anchor.set(0, 0.5);
-        this.characterArea.addChild(statsValueText);
+        statValueText.text = statValue;
+        statValueText.style = { fontSize: 16, fill: COLORS.white, fontWeight: 'bold', align: 'right' };
+        statValueText.anchor.set(0, 0.5);
+        this.characterArea.addChild(statValueText);
 
         minusBtn.texture = Assets.get('minus');
         minusBtn.anchor.set(0.5, 0.5);
@@ -255,40 +284,46 @@ export class CharacterScreen extends Container {
         this.characterArea.addChild(plusBtn);
     }
 
-    public createStatRow(statsLabel: Text, statsName: string, statsValueText: Text, statsValue: string, parent: Container) {
-        statsLabel.text = statsName;
-        statsLabel.style = { fontSize: 16, fill: COLORS.FRAME_LABEL, fontWeight: 'bold', align: 'left' };
-        statsLabel.anchor.set(0, 0.5);
-        parent.addChild(statsLabel);
+    public createStatRow(statLabel: Text, statName: string, statValueText: Text, statValue: string, parent: Container) {
+        statLabel.text = statName;
+        statLabel.style = { fontSize: 14, fill: COLORS.blueLight, fontWeight: 'bold', align: 'left' };
+        statLabel.anchor.set(0, 0.5);
+        parent.addChild(statLabel);
 
-        statsValueText.text = statsValue;
-        statsValueText.style = { fontSize: 16, fill: COLORS.FRAME_TEXT, fontWeight: 'bold', align: 'right' };
-        statsValueText.anchor.set(1, 0.5);
-        parent.addChild(statsValueText);
+        statValueText.text = statValue;
+        statValueText.style = { fontSize: 16, fill: COLORS.white, fontWeight: 'bold', align: 'right' };
+        statValueText.anchor.set(1, 0.5);
+        parent.addChild(statValueText);
     }
 
     public async show() {
     }
 
     public drawPanel(graphic: Graphics, x: number, y: number, width: number, height: number) {
-        graphic.roundRect(x, y, width, height, 10)
-            .fill(COLORS.FRAME_BORDER)
-            .roundRect(x + 3, y + 3, width - 5, height - 5, 10)
-            .fill(COLORS.FRAME_BACKGROUND);
+        const dropShadowFilter = new DropShadowFilter({
+            color: COLORS.blue,
+            alpha: 0.5,
+            blur: 5,
+            quality: 3,
+        });
+        graphic.roundRect(x + 4, y, width - 4, height, 5)
+            .stroke({ width: 4, color: COLORS.blueLight })
+            .fill({ color: COLORS.blueDark, alpha: 0.8 });
+        graphic.filters = [dropShadowFilter];
+    }
+
+    public drawLine(graphic: Graphics, x: number, y: number, width: number, height: number) {
+        graphic.roundRect(x, y, width, height, 1)
+            .fill(COLORS.white);
     }
 
     public resize(width: number, height: number) {
-        this.background.width = width;
-        this.background.height = height;
-
         this.backIcon.x = width - 50;
         this.backIcon.y = 50;
 
-        let menuLine = height;
+        let characterLine = height - 800;
 
-        let characterLine = menuLine - 800;
-
-        this.drawPanel(this.levelArea, 10, characterLine, width - 20, this.characterFrame.height + 20);
+        this.drawPanel(this.levelArea, 10, characterLine, width - 20, height - 110);
 
         this.characterFrame.x = 110;
         this.characterFrame.y = characterLine + 90;
@@ -309,10 +344,10 @@ export class CharacterScreen extends Container {
         this.classText.y = characterLine + 80;
 
         this.skillIcon1.roundRect(220, characterLine + 110, 50, 50, 10)
-            .fill(COLORS.FRAME_LABEL);
+            .fill(COLORS.gray);
 
         this.skillIcon2.roundRect(280, characterLine + 110, 50, 50, 10)
-            .fill(COLORS.FRAME_LABEL);
+            .fill(COLORS.gray);
         
         this.skillButton.x = 370;
         this.skillButton.y = characterLine + 135;
@@ -320,7 +355,7 @@ export class CharacterScreen extends Container {
         let pointLine = characterLine + 200;
         const pointX = width / 2;
 
-        this.drawPanel(this.pointPanel, pointX, pointLine, 240, 220);
+        this.drawLine(this.pointPanel, 40, pointLine, width - 80, 1);
         
         this.pointsLabel.x = pointX + 150;
         this.pointsLabel.y = pointLine + 15;
@@ -366,52 +401,51 @@ export class CharacterScreen extends Container {
         this.pointApplyBtn.x = pointX + 120;
         this.pointApplyBtn.y = pointLine + 180;
 
-        let statsLineX = 40;
-        let statsLineY = pointLine;
+        let statLineX = 40;
+        let statLineY = pointLine;
 
-        this.drawPanel(this.statsPanel, 10, statsLineY, 230, 220);
+        //this.drawPanel(this.statPanel, 10, statLineY, 230, 220);
 
-        this.hpLabel.x = statsLineX;
-        this.hpLabel.y = statsLineY + 20;
-        this.hpText.x = statsLineX + 170;
-        this.hpText.y = statsLineY + 20;
+        this.hpLabel.x = statLineX;
+        this.hpLabel.y = statLineY + 20;
+        this.hpText.x = statLineX + 170;
+        this.hpText.y = statLineY + 20;
 
-        this.atkLabel.x = statsLineX;
-        this.atkLabel.y = statsLineY + 50;
-        this.atkText.x = statsLineX + 170;
-        this.atkText.y = statsLineY + 50;
+        this.atkLabel.x = statLineX;
+        this.atkLabel.y = statLineY + 50;
+        this.atkText.x = statLineX + 170;
+        this.atkText.y = statLineY + 50;
 
-        this.defLabel.x = statsLineX;
-        this.defLabel.y = statsLineY + 80;
-        this.defText.x = statsLineX + 170;
-        this.defText.y = statsLineY + 80;
+        this.defLabel.x = statLineX;
+        this.defLabel.y = statLineY + 80;
+        this.defText.x = statLineX + 170;
+        this.defText.y = statLineY + 80;
 
-        this.magLabel.x = statsLineX;
-        this.magLabel.y = statsLineY + 110;
-        this.magText.x = statsLineX + 170;
-        this.magText.y = statsLineY + 110;
+        this.magLabel.x = statLineX;
+        this.magLabel.y = statLineY + 110;
+        this.magText.x = statLineX + 170;
+        this.magText.y = statLineY + 110;
 
-        this.lukLabel.x = statsLineX;
-        this.lukLabel.y = statsLineY + 140;
-        this.lukText.x = statsLineX + 170;
-        this.lukText.y = statsLineY + 140;
+        this.lukLabel.x = statLineX;
+        this.lukLabel.y = statLineY + 140;
+        this.lukText.x = statLineX + 170;
+        this.lukText.y = statLineY + 140;
 
-        this.hitRateLabel.x = statsLineX;
-        this.hitRateLabel.y = statsLineY + 170;
-        this.hitRateText.x = statsLineX + 170;
-        this.hitRateText.y = statsLineY + 170;
+        this.hitRateLabel.x = statLineX;
+        this.hitRateLabel.y = statLineY + 170;
+        this.hitRateText.x = statLineX + 170;
+        this.hitRateText.y = statLineY + 170;
 
-        this.dodgeRateLabel.x = statsLineX;
-        this.dodgeRateLabel.y = statsLineY + 200;
-        this.dodgeRateText.x = statsLineX + 170;
-        this.dodgeRateText.y = statsLineY + 200;
+        this.dodgeRateLabel.x = statLineX;
+        this.dodgeRateLabel.y = statLineY + 200;
+        this.dodgeRateText.x = statLineX + 170;
+        this.dodgeRateText.y = statLineY + 200;
 
-        let equipLineY = menuLine - 360;
+        let equipLineY = height - 360;
 
-        this.drawPanel(this.equipPanel, 10, equipLineY, width - 20, 350);
+        //this.drawPanel(this.equipPanel, 10, equipLineY, width - 20, 350);
 
-        this.equipTabPanel.roundRect(10, equipLineY, width - 20, 50, 10)
-            .fill(COLORS.FRAME_LABEL)
+        this.drawLine(this.equipTabPanel, 30, equipLineY + 40, width - 70, 1);
 
         this.equipLabel.x = (width - this.equipLabel.width) / 2;
         this.equipLabel.y = equipLineY + 10;

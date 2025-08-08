@@ -18,7 +18,7 @@ export class HomeScreen extends Container {
     constructor() {
         super();
 
-        this.background = new Sprite(Assets.get('background'));
+        this.background = new Sprite(Assets.get('background_1.png'));
         this.addChild(this.background);
 
         this.menu = new Menu();
