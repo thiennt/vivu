@@ -1,46 +1,43 @@
-import { Assets, Container, Graphics, Sprite, Ticker } from 'pixi.js';
-import gsap from 'gsap';
-import { waitFor } from '../utils/asyncUtils';
-import { navigation } from '../utils/navigation';
+import { Assets, Container, Graphics, Sprite, Ticker } from "pixi.js";
+import gsap from "gsap";
+import { waitFor } from "../utils/asyncUtils";
+import { navigation } from "../utils/navigation";
 
-import { CombatScene } from '../ui/CombatScene';
+import { CombatScene } from "../ui/CombatScene";
 
 export class CombatScreen extends Container {
-    /** Assets bundles required by this screen */
-    public static assetBundles = ['game'];
-    
-    private combatScene: CombatScene;
+  /** Assets bundles required by this screen */
+  public static assetBundles = ["game"];
 
-    constructor() {
-        super();
+  private combatScene: CombatScene;
 
-        this.combatScene = new CombatScene();
-        this.addChild(this.combatScene);
-    }
+  constructor() {
+    super();
 
+    this.combatScene = new CombatScene();
+    this.addChild(this.combatScene);
+  }
 
-    public prepare() {
-        this.combatScene.prepare();
-    }
+  public prepare() {
+    this.combatScene.prepare();
+  }
 
-    public async show() {
+  public async show() {
+    this.combatScene.show();
+  }
 
-        this.combatScene.show();
-    }
+  public async hide() {
+    this.removeChild(this.combatScene);
+    this.combatScene.hide();
+  }
 
-    public async hide() {
-        this.removeChild(this.combatScene);
-        this.combatScene.hide();
-    }
+  public resize(width: number, height: number) {
+    this.combatScene.x = 0;
+    this.combatScene.y = 0;
+    this.combatScene.resize(width, height);
+  }
 
-    public resize(width: number, height: number) {
-
-        this.combatScene.x = 0;
-        this.combatScene.y = 0;
-        this.combatScene.resize(width, height);
-    }
-
-    public update(time: Ticker) {
-        //this.combatScene.update(time);
-    }
+  public update(time: Ticker) {
+    //this.combatScene.update(time);
+  }
 }

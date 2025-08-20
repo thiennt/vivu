@@ -1,0 +1,127 @@
+{
+  "skills": {
+    "slash": {
+      "id": "slash",
+      "name": "Slash",
+      "description": "A powerful melee attack",
+      "animationAsset": "slash_4",
+      "actionType": "melee",
+      "targetType": "multiple",
+      "effects": {
+        "damage": {
+          "formula": "base_damage",
+          "modifier": 1.0
+        }
+      },
+      "sequence": [
+        {
+          "type": "move_to_target",
+          "duration": 0.2,
+          "ease": "power1.out"
+        },
+        {
+          "type": "execute_animation",
+          "duration": 0.2
+        },
+        {
+          "type": "return_to_position",
+          "duration": 0.2,
+          "ease": "power1.out"
+        }
+      ]
+    },
+    "fire": {
+      "id": "fire",
+      "name": "Fire",
+      "description": "A ranged fire attack",
+      "animationAsset": "fire",
+      "actionType": "ranged",
+      "targetType": "multiple",
+      "effects": {
+        "damage": {
+          "formula": "base_damage",
+          "modifier": 1.2
+        }
+      },
+      "sequence": [
+        {
+          "type": "position_for_ranged",
+          "offset": -20,
+          "duration": 0.2,
+          "ease": "power1.out"
+        },
+        {
+          "type": "execute_ranged_animation",
+          "duration": 0.4
+        },
+        {
+          "type": "return_to_position",
+          "duration": 0.2,
+          "ease": "power1.out"
+        }
+      ]
+    },
+    "wind": {
+      "id": "wind",
+      "name": "Wind",
+      "description": "A whirlwind ranged attack",
+      "animationAsset": "wind",
+      "actionType": "ranged",
+      "targetType": "multiple",
+      "effects": {
+        "damage": {
+          "formula": "base_damage",
+          "modifier": 1.1
+        }
+      },
+      "sequence": [
+        {
+          "type": "position_for_ranged",
+          "offset": -20,
+          "duration": 0.2,
+          "ease": "power1.out"
+        },
+        {
+          "type": "execute_ranged_animation",
+          "duration": 0.4
+        },
+        {
+          "type": "return_to_position",
+          "duration": 0.2,
+          "ease": "power1.out"
+        }
+      ]
+    },
+    "thunder": {
+      "id": "thunder",
+      "name": "Thunder",
+      "description": "An electrical ranged attack",
+      "animationAsset": "thunder",
+      "actionType": "ranged",
+      "targetType": "multiple",
+      "effects": {
+        "damage": {
+          "formula": "base_damage",
+          "modifier": 1.3
+        }
+      },
+      "sequence": [
+        {
+          "type": "position_for_ranged",
+          "offset": -20,
+          "duration": 0.2,
+          "ease": "power1.out"
+        },
+        {
+          "type": "execute_ranged_animation",
+          "duration": 0.4
+        },
+        {
+          "type": "return_to_position",
+          "duration": 0.2,
+          "ease": "power1.out"
+        }
+      ]
+    }
+  }
+}
