@@ -122,6 +122,61 @@
           "ease": "power1.out"
         }
       ]
+    },
+    "earthquake": {
+      "id": "earthquake",
+      "name": "Earthquake",
+      "description": "A devastating ground-shaking attack that hits all enemies",
+      "animationAsset": "thunder",
+      "actionType": "ranged",
+      "targetType": "multiple",
+      "effects": {
+        "damage": {
+          "formula": "base_damage",
+          "modifier": 1.5
+        }
+      },
+      "sequence": [
+        {
+          "type": "position_for_ranged",
+          "offset": -30,
+          "duration": 0.3,
+          "ease": "power2.out"
+        },
+        {
+          "type": "execute_ranged_animation",
+          "duration": 0.6
+        },
+        {
+          "type": "execute_ranged_animation",
+          "duration": 0.4
+        },
+        {
+          "type": "return_to_position",
+          "duration": 0.3,
+          "ease": "back.out"
+        }
+      ]
+    },
+    "heal": {
+      "id": "heal",
+      "name": "Heal",
+      "description": "Restores health to the caster",
+      "animationAsset": "wind",
+      "actionType": "ranged",
+      "targetType": "single",
+      "effects": {
+        "damage": {
+          "formula": "healing",
+          "modifier": -1.0
+        }
+      },
+      "sequence": [
+        {
+          "type": "execute_ranged_animation",
+          "duration": 0.5
+        }
+      ]
     }
   }
 }

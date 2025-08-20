@@ -145,11 +145,12 @@ export class CombatScene extends Container {
         turn: 5,
         attacker: this.player1,
         targets: [
-          { target: this.monster1, is_hit: false, damage: 6 },
-          { target: this.monster3, is_hit: false, damage: 6 },
+          { target: this.monster1, is_hit: false, damage: 8 },
+          { target: this.monster2, is_hit: false, damage: 8 },
+          { target: this.monster3, is_hit: false, damage: 8 },
         ],
-        action_name: "unleashSlash",
-        skill_id: "slash",
+        action_name: "executeSkill",
+        skill_id: "earthquake",
         direction: "up",
       },
       {
@@ -165,12 +166,9 @@ export class CombatScene extends Container {
         round: 2,
         turn: 7,
         attacker: this.player2,
-        targets: [
-          { target: this.monster2, is_hit: false, damage: 4 },
-          { target: this.monster3, is_hit: false, damage: 7 },
-        ],
-        action_name: "unleashWind",
-        skill_id: "wind",
+        targets: [{ target: this.player2, is_hit: false, damage: -5 }],
+        action_name: "executeSkill",
+        skill_id: "heal",
         direction: "up",
       },
       {
