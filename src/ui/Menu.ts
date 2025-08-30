@@ -7,12 +7,14 @@ import { navigation } from '../utils/navigation';
 import { HomeScreen } from '../screens/HomeScreen';
 import { DungeonScreen } from '../screens/DungeonScreen';
 import { CharacterScreen } from '../screens/CharacterScreen';
+import { BlocklastScreen } from '../screens/BlocklastScreen';
 
 
 export class Menu extends Container {
     private heroButton: FancyButton;
     private dungeonButton: FancyButton;
     private inventoryButton: FancyButton;
+    private blocklastButton: FancyButton;
     
     constructor() {
         super();
@@ -34,6 +36,12 @@ export class Menu extends Container {
             this.goToDungeonScreen();
         });
         this.addChild(this.dungeonButton);
+
+        this.blocklastButton = this.createMenuButton("Blocklast", Assets.get('hero')); // Using hero icon for now
+        this.blocklastButton.on('click', () => {
+            this.goToBlocklastScreen();
+        });
+        this.addChild(this.blocklastButton);
     }
 
 
@@ -91,6 +99,8 @@ export class Menu extends Container {
         this.inventoryButton.height = buttonHeight;
         this.dungeonButton.width = buttonWidth;
         this.dungeonButton.height = buttonHeight;
+        this.blocklastButton.width = buttonWidth;
+        this.blocklastButton.height = buttonHeight;
 
         this.heroButton.x = width / 2;
         this.heroButton.y = 0;
@@ -100,7 +110,10 @@ export class Menu extends Container {
         this.dungeonButton.x = width / 2;
         this.dungeonButton.y = 200;
 
-        this.y = (height - (this.heroButton.height * 3 + spacing * 2)) / 2;
+        this.blocklastButton.x = width / 2;
+        this.blocklastButton.y = 300;
+
+        this.y = (height - (this.heroButton.height * 4 + spacing * 3)) / 2;
     }
 
     public goToHeroScreen() {
@@ -109,6 +122,10 @@ export class Menu extends Container {
 
     public goToDungeonScreen() {
         navigation.showScreen(DungeonScreen);
+    }
+
+    public goToBlocklastScreen() {
+        navigation.showScreen(BlocklastScreen);
     }
 
 }
