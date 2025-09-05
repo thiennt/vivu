@@ -27,8 +27,8 @@ export class CharacterScreen extends Container {
     private levelText: Text = new Text();
     private expLabel: Text = new Text();
     private expText: Text = new Text();
-    private classLabel: Text = new Text();
-    private classText: Text = new Text();
+    private awakingLabel: Text = new Text();
+    private awakingText: Text = new Text();
 
     private skillIcon1!: Graphics;
     private skillIcon2!: Graphics;
@@ -41,14 +41,10 @@ export class CharacterScreen extends Container {
     private strText: Text = new Text();
     private strMinusBtn: Sprite = new Sprite(Texture.WHITE);
     private strPlusBtn: Sprite = new Sprite(Texture.WHITE);
-    private intLabel: Text = new Text();
-    private intText: Text = new Text();
-    private intMinusBtn: Sprite = new Sprite(Texture.WHITE);
-    private intPlusBtn: Sprite = new Sprite(Texture.WHITE);
-    private conLabel: Text = new Text();
-    private conText: Text = new Text();
-    private conMinusBtn: Sprite = new Sprite(Texture.WHITE);
-    private conPlusBtn: Sprite = new Sprite(Texture.WHITE);
+    private staLabel: Text = new Text();
+    private staText: Text = new Text();
+    private staMinusBtn: Sprite = new Sprite(Texture.WHITE);
+    private staPlusBtn: Sprite = new Sprite(Texture.WHITE);
     private agiLabel: Text = new Text();
     private agiText: Text = new Text();
     private agiMinusBtn: Sprite = new Sprite(Texture.WHITE);
@@ -61,8 +57,6 @@ export class CharacterScreen extends Container {
     private hpText: Text = new Text();
     private atkLabel: Text = new Text();
     private atkText: Text = new Text();
-    private magLabel: Text = new Text();
-    private magText: Text = new Text();
     private defLabel: Text = new Text();
     private defText: Text = new Text();
     private lukLabel: Text = new Text();
@@ -132,7 +126,7 @@ export class CharacterScreen extends Container {
         // Create stat rows with placeholder values - will be updated when data loads
         this.createStatRow(this.levelLabel, 'LEVEL', this.levelText, '...', this.characterArea);
         this.createStatRow(this.expLabel, 'EXP', this.expText, '.../...', this.characterArea);
-        this.createStatRow(this.classLabel, 'RANK', this.classText, '...', this.characterArea);
+        this.createStatRow(this.awakingLabel, 'RANK', this.awakingText, '...', this.characterArea);
 
         this.skillIcon1 = new Graphics();
         this.characterArea.addChild(this.skillIcon1);
@@ -166,8 +160,7 @@ export class CharacterScreen extends Container {
 
         // Create point allocation rows with placeholder values
         this.createPointRow(this.strLabel, 'STR', this.strText, '...', this.strMinusBtn, this.strPlusBtn);
-        this.createPointRow(this.intLabel, 'INT', this.intText, '...', this.intMinusBtn, this.intPlusBtn);
-        this.createPointRow(this.conLabel, 'CON', this.conText, '...', this.conMinusBtn, this.conPlusBtn);
+        this.createPointRow(this.staLabel, 'STA', this.staText, '...', this.staMinusBtn, this.staPlusBtn);
         this.createPointRow(this.agiLabel, 'AGI', this.agiText, '...', this.agiMinusBtn, this.agiPlusBtn);
 
         this.createApplyButton();
@@ -182,7 +175,6 @@ export class CharacterScreen extends Container {
         // Create stat display rows with placeholder values
         this.createStatRow(this.hpLabel, 'HP', this.hpText, '...', this.statArea);
         this.createStatRow(this.atkLabel, 'ATK', this.atkText, '...', this.statArea);
-        this.createStatRow(this.magLabel, 'MAG', this.magText, '...', this.statArea);
         this.createStatRow(this.defLabel, 'DEF', this.defText, '...', this.statArea);
         this.createStatRow(this.lukLabel, 'LUCK', this.lukText, '...%', this.statArea);
         this.createStatRow(this.hitRateLabel, 'HIT', this.hitRateText, '...%', this.statArea);
@@ -253,25 +245,22 @@ export class CharacterScreen extends Container {
         // TODO: Update avatar frame to use data.avatar when dynamic avatars are implemented
         
         // Update character info
-        this.levelText.text = data.level.toString();
-        this.expText.text = `${data.exp}/${data.maxExp}`;
-        this.classText.text = data.class;
-        
+        this.levelText.text = data.player.level.toString();
+        this.expText.text = `${data.player.exp}`;
+
         // Update point allocation
-        this.pointsText.text = data.pointsToSpend.toString();
-        this.strText.text = data.stats.str.toString();
-        this.intText.text = data.stats.int.toString();
-        this.conText.text = data.stats.con.toString();
-        this.agiText.text = data.stats.agi.toString();
-        
+        this.pointsText.text = data.player.points.toString();
+        this.strText.text = data.player.str.toString();
+        this.staText.text = data.player.sta.toString();
+        this.agiText.text = data.player.agi.toString();
+
         // Update stat displays
-        this.hpText.text = data.stats.hp.toString();
-        this.atkText.text = data.stats.atk.toString();
-        this.magText.text = data.stats.mag.toString();
-        this.defText.text = data.stats.def.toString();
-        this.lukText.text = `${data.stats.luck}%`;
-        this.hitRateText.text = `${data.stats.hitRate}%`;
-        this.dodgeRateText.text = `${data.stats.dodgeRate}%`;
+        this.hpText.text = data.player.character.hp.toString();
+        this.atkText.text = data.player.character.atk.toString();
+        this.defText.text = data.player.character.def.toString();
+        this.lukText.text = `${data.player.luck}%`;
+        this.hitRateText.text = `${data.player.character.hit_rate}%`;
+        this.dodgeRateText.text = `${data.player.character.dodge}%`;
     }
 
     /**
@@ -458,10 +447,10 @@ export class CharacterScreen extends Container {
         this.expText.x = width - 40;
         this.expText.y = characterLine + 50;
 
-        this.classLabel.x = 220;
-        this.classLabel.y = characterLine + 80;
-        this.classText.x = width - 40;
-        this.classText.y = characterLine + 80;
+        this.awakingLabel.x = 220;
+        this.awakingLabel.y = characterLine + 80;
+        this.awakingText.x = width - 40;
+        this.awakingText.y = characterLine + 80;
 
         // === SKILL/EQUIPMENT PREVIEW ===
         this.skillIcon1.clear().roundRect(220, characterLine + 110, 50, 50, 10)
@@ -495,23 +484,14 @@ export class CharacterScreen extends Container {
         this.strPlusBtn.x = pointX + 200;
         this.strPlusBtn.y = pointLine + 45;
 
-        this.intLabel.x = pointX + 20;
-        this.intLabel.y = pointLine + 75;
-        this.intText.x = pointX + 100;
-        this.intText.y = pointLine + 75;
-        this.intMinusBtn.x = pointX + 160;
-        this.intMinusBtn.y = pointLine + 75;
-        this.intPlusBtn.x = pointX + 200;
-        this.intPlusBtn.y = pointLine + 75;
-
-        this.conLabel.x = pointX + 20;
-        this.conLabel.y = pointLine + 105;
-        this.conText.x = pointX + 100;
-        this.conText.y = pointLine + 105;
-        this.conMinusBtn.x = pointX + 160;
-        this.conMinusBtn.y = pointLine + 105;
-        this.conPlusBtn.x = pointX + 200;
-        this.conPlusBtn.y = pointLine + 105;
+        this.staLabel.x = pointX + 20;
+        this.staLabel.y = pointLine + 75;
+        this.staText.x = pointX + 100;
+        this.staText.y = pointLine + 75;
+        this.staMinusBtn.x = pointX + 160;
+        this.staMinusBtn.y = pointLine + 75;
+        this.staPlusBtn.x = pointX + 200;
+        this.staPlusBtn.y = pointLine + 75;
 
         this.agiLabel.x = pointX + 20;
         this.agiLabel.y = pointLine + 135;
@@ -545,11 +525,6 @@ export class CharacterScreen extends Container {
         this.defLabel.y = statLineY + 80;
         this.defText.x = statLineX + 170;
         this.defText.y = statLineY + 80;
-
-        this.magLabel.x = statLineX;
-        this.magLabel.y = statLineY + 110;
-        this.magText.x = statLineX + 170;
-        this.magText.y = statLineY + 110;
 
         this.lukLabel.x = statLineX;
         this.lukLabel.y = statLineY + 140;

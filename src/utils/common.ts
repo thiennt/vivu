@@ -8,40 +8,47 @@ export type AnimationSet = {
     run?: Texture[];
 };
 
-export type Stats = {
-    'hp': number;
-    'maxHp': number;
-    'atk': number;
-    'def': number;
-    'crit': number;
-    'agi': number;
+export type Player = {
+    character_id: string;
+    farcaster_id: string;
+    username: string;
+    sta: number;
+    str: number;
+    agi: number;
+    luck: number;
+    level: number;
+    exp: number;
+    awaking: number;
+    star: number;
+    points: number;
+    character: Character;
+}
+
+export type Character = {
+    id: string;
+    name: string;
+    avatar_url: string;
+    description?: string;
+    c_type: string;
+    hp: number;
+    atk: number;
+    def: number;
+    agi: number;
+    crit_rate: number;
+    crit_dmg: number;
+    res: number;
+    damage: number;
+    mitigation: number;
+    hit_rate: number;
+    dodge: number;
+    level: number | null;
+    exp: number | null;
 };
 
 // Player data structure for API response
 export interface PlayerData {
-    id: number;
-    name: string;
-    level: number;
-    exp: number;
-    maxExp: number;
-    class: string;
-    avatar: string;
-    stats: {
-        str: number;
-        int: number;
-        con: number;
-        agi: number;
-        hp: number;
-        atk: number;
-        mag: number;
-        def: number;
-        luck: number;
-        hitRate: number;
-        dodgeRate: number;
-    };
-    pointsToSpend: number;
+    player: Player;
 }
-
 
 export function testForAABB(object1: any, object2: any): boolean {
     const bounds1 = object1.getBounds();
