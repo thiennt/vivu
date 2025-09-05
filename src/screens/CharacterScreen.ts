@@ -439,13 +439,15 @@ export class CharacterScreen extends Container {
         this.backIcon.x = width - 50;
         this.backIcon.y = 50;
 
-        let characterLine = height - 800;
+        const characterLine = height - 800;
 
+        // === AVATAR PANEL SECTION ===
         this.drawPanel(this.levelArea, 10, characterLine, width - 20, height - 110);
 
         this.characterFrame.x = 110;
         this.characterFrame.y = characterLine + 90;
 
+        // === NAME/CLASS/LEVEL SECTION ===
         this.levelLabel.x = 220;
         this.levelLabel.y = characterLine + 20;
         this.levelText.x = width - 40;
@@ -461,18 +463,21 @@ export class CharacterScreen extends Container {
         this.classText.x = width - 40;
         this.classText.y = characterLine + 80;
 
-        this.skillIcon1.roundRect(220, characterLine + 110, 50, 50, 10)
+        // === SKILL/EQUIPMENT PREVIEW ===
+        this.skillIcon1.clear().roundRect(220, characterLine + 110, 50, 50, 10)
             .fill(COLORS.gray);
 
-        this.skillIcon2.roundRect(280, characterLine + 110, 50, 50, 10)
+        this.skillIcon2.clear().roundRect(280, characterLine + 110, 50, 50, 10)
             .fill(COLORS.gray);
         
         this.skillButton.x = 370;
         this.skillButton.y = characterLine + 135;
 
-        let pointLine = characterLine + 200;
+        // === POINT ALLOCATION SECTION ===
+        const pointLine = characterLine + 200;
         const pointX = width / 2;
 
+        // Visual separator line for point allocation section
         this.drawLine(this.pointPanel, 40, pointLine, width - 80, 1);
         
         this.pointsLabel.x = pointX + 150;
@@ -480,6 +485,7 @@ export class CharacterScreen extends Container {
         this.pointsText.x = pointX + 180;
         this.pointsText.y = pointLine + 15;
 
+        // Point allocation rows with better spacing
         this.strLabel.x = pointX + 20;
         this.strLabel.y = pointLine + 45;
         this.strText.x = pointX + 100;
@@ -516,14 +522,15 @@ export class CharacterScreen extends Container {
         this.agiPlusBtn.x = pointX + 200;
         this.agiPlusBtn.y = pointLine + 135;
 
+        // === ACTIONS SECTION ===
         this.pointApplyBtn.x = pointX + 120;
         this.pointApplyBtn.y = pointLine + 180;
 
-        let statLineX = 40;
-        let statLineY = pointLine;
+        // === STAT DISPLAY SECTION ===
+        const statLineX = 40;
+        const statLineY = pointLine;
 
-        //this.drawPanel(this.statPanel, 10, statLineY, 230, 220);
-
+        // Left column stats with better visual grouping
         this.hpLabel.x = statLineX;
         this.hpLabel.y = statLineY + 20;
         this.hpText.x = statLineX + 170;
@@ -559,17 +566,17 @@ export class CharacterScreen extends Container {
         this.dodgeRateText.x = statLineX + 170;
         this.dodgeRateText.y = statLineY + 200;
 
-        let equipLineY = height - 360;
+        // === EQUIPMENT SECTION ===
+        const equipLineY = height - 360;
 
-        //this.drawPanel(this.equipPanel, 10, equipLineY, width - 20, 350);
-
+        // Visual separator for equipment section
         this.drawLine(this.equipTabPanel, 30, equipLineY + 40, width - 70, 1);
 
         this.equipLabel.x = (width - this.equipLabel.width) / 2;
         this.equipLabel.y = equipLineY + 10;
     }
 
-    public update(time: Ticker) {
+    public update(_time: Ticker) {
         // Update method for any animations or dynamic content
     }
 }
