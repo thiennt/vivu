@@ -54,9 +54,9 @@ initDevtools({ app });
 /** Set up a resize function for the app */
 function resize() {
     const maxWidth = 500;
-    const windowWidth = Math.min(window.innerWidth - 10, maxWidth);
-    const windowHeight = window.innerHeight - 10;
-    const minWidth = 375;
+    const windowWidth = Math.min(window.innerWidth, maxWidth);
+    const windowHeight = window.innerHeight;
+    const minWidth = 400;
     const minHeight = 700;
 
     // Calculate renderer and canvas sizes based on current dimensions

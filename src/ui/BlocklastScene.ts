@@ -190,7 +190,7 @@ export class BlocklastScene extends Container {
     private updateBrickPreview(): void {
         // Clear previous preview
         this.brickContainer.children.forEach(child => {
-            if (child.name === 'preview') {
+            if (child.label === 'preview') {
                 child.visible = false;
             }
         });
@@ -198,7 +198,7 @@ export class BlocklastScene extends Container {
         if (this.selectedBrickIndex >= 0 && this.hoveredPosition) {
             const gameState = this.gameManager.getGameState();
             const brick = gameState.playerBricks[this.selectedBrickIndex];
-            
+
             if (brick && this.gameManager.canPlayerPlaceBrick(this.selectedBrickIndex, this.hoveredPosition.row, this.hoveredPosition.col)) {
                 this.showBrickPreview(brick, this.hoveredPosition.row, this.hoveredPosition.col);
             }
@@ -216,7 +216,7 @@ export class BlocklastScene extends Container {
                 preview.fill({ color: 0x00ff00, alpha: 0.5 });
                 preview.x = this.boardOffsetX + boardCol * this.cellSize;
                 preview.y = this.boardOffsetY + boardRow * this.cellSize;
-                preview.name = 'preview';
+                preview.label = 'preview';
                 this.brickContainer.addChild(preview);
             }
         });
@@ -261,7 +261,7 @@ export class BlocklastScene extends Container {
         // Display player bricks
         gameState.playerBricks.forEach((brick: Brick, index: number) => {
             const brickContainer = this.createBrickDisplay(brick, index);
-            brickContainer.x = 50 + index * 120;
+            brickContainer.x = 80 + index * 120;
             brickContainer.y = 450;
             
             brickContainer.interactive = true;
@@ -297,7 +297,7 @@ export class BlocklastScene extends Container {
             cellGraphics.fill(brick.owner === Player.HUMAN ? 0x0066cc : 0xcc0066);
             cellGraphics.stroke({ width: 1, color: 0x666666 });
             
-            cellGraphics.x = 20 + (cell.localCol - minCol) * cellDisplaySize;
+            cellGraphics.x = 30 + (cell.localCol - minCol) * cellDisplaySize;
             cellGraphics.y = 20 + (cell.localRow - minRow) * cellDisplaySize;
             
             container.addChild(cellGraphics);
