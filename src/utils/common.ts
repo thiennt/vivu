@@ -17,6 +17,31 @@ export type Stats = {
     'agi': number;
 };
 
+// Player data structure for API response
+export interface PlayerData {
+    id: number;
+    name: string;
+    level: number;
+    exp: number;
+    maxExp: number;
+    class: string;
+    avatar: string;
+    stats: {
+        str: number;
+        int: number;
+        con: number;
+        agi: number;
+        hp: number;
+        atk: number;
+        mag: number;
+        def: number;
+        luck: number;
+        hitRate: number;
+        dodgeRate: number;
+    };
+    pointsToSpend: number;
+}
+
 
 export function testForAABB(object1: any, object2: any): boolean {
     const bounds1 = object1.getBounds();

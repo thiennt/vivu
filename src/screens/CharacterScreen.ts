@@ -1,9 +1,11 @@
-import { Container, Text, Graphics, Sprite, Assets, Texture, Mask, FillGradient } from "pixi.js";
+import { Container, Text, Graphics, Sprite, Assets, Texture, Ticker } from "pixi.js";
 import { COLORS } from "../app";
 import { FancyButton, MaskedFrame } from "@pixi/ui";
 import { navigation } from "../utils/navigation";
 import { HomeScreen } from "./HomeScreen";
-import { DropShadowFilter } from 'pixi-filters/drop-shadow';
+import { DropShadowFilter } from 'pixi-filters';
+import { PlayerData } from "../utils/common";
+import { fetchPlayerData, getCurrentPlayerId } from "../utils/playerApi";
 
 
 
@@ -13,9 +15,14 @@ export class CharacterScreen extends Container {
 
     private backIcon: Sprite;
 
-    private characterArea: Container;
-    private characterFrame: FancyButton;
-    private levelArea: Graphics;
+    // Loading state
+    private isLoading: boolean = false;
+    private loadingText!: Text;
+    private playerData: PlayerData | null = null;
+
+    private characterArea!: Container;
+    private characterFrame!: FancyButton;
+    private levelArea!: Graphics;
     private levelLabel: Text = new Text();
     private levelText: Text = new Text();
     private expLabel: Text = new Text();
@@ -23,13 +30,13 @@ export class CharacterScreen extends Container {
     private classLabel: Text = new Text();
     private classText: Text = new Text();
 
-    private skillIcon1: Graphics;
-    private skillIcon2: Graphics;
-    private skillButton: Sprite;
+    private skillIcon1!: Graphics;
+    private skillIcon2!: Graphics;
+    private skillButton!: Sprite;
 
-    private pointPanel: Graphics;
-    private pointsLabel: Text;
-    private pointsText: Text;
+    private pointPanel!: Graphics;
+    private pointsLabel!: Text;
+    private pointsText!: Text;
     private strLabel: Text = new Text();
     private strText: Text = new Text();
     private strMinusBtn: Sprite = new Sprite(Texture.WHITE);
@@ -48,8 +55,8 @@ export class CharacterScreen extends Container {
     private agiPlusBtn: Sprite = new Sprite(Texture.WHITE);
     private pointApplyBtn: FancyButton = new FancyButton();
 
-    private statArea: Container;
-    private statPanel: Graphics;
+    private statArea!: Container;
+    private statPanel!: Graphics;
     private hpLabel: Text = new Text();
     private hpText: Text = new Text();
     private atkLabel: Text = new Text();
@@ -65,10 +72,10 @@ export class CharacterScreen extends Container {
     private dodgeRateLabel: Text = new Text();
     private dodgeRateText: Text = new Text();
 
-    private equipArea: Container;
-    private equipPanel: Graphics;
+    private equipArea!: Container;
+    private equipPanel!: Graphics;
 
-    private equipTabPanel: Graphics
+    private equipTabPanel!: Graphics;
     private equipLabel: Text = new Text();
 
 
@@ -89,6 +96,29 @@ export class CharacterScreen extends Container {
         });
         this.addChild(this.backIcon);
 
+        // Initialize loading text
+        this.loadingText = new Text({
+            text: 'Loading player data...',
+            style: {
+                fontSize: 24,
+                fill: COLORS.white,
+                fontWeight: 'bold',
+                align: 'center'
+            }
+        });
+        this.loadingText.anchor.set(0.5);
+        this.addChild(this.loadingText);
+
+        this.initializeUI();
+        
+        // Fetch and populate player data
+        this.fetchAndPopulatePlayer();
+    }
+
+    /**
+     * Initialize all UI components with default/placeholder values
+     */
+    private initializeUI() {
         this.characterArea = new Container();
         this.addChild(this.characterArea);
 
@@ -99,9 +129,10 @@ export class CharacterScreen extends Container {
         this.createAvatarFrame(this.characterFrame);
         this.characterArea.addChild(this.characterFrame);
 
-        this.createStatRow(this.levelLabel, 'LEVEL', this.levelText, '1', this.characterArea);
-        this.createStatRow(this.expLabel, 'EXP', this.expText, '0/100', this.characterArea);
-        this.createStatRow(this.classLabel, 'RANK', this.classText, 'NOVICE', this.characterArea);
+        // Create stat rows with placeholder values - will be updated when data loads
+        this.createStatRow(this.levelLabel, 'LEVEL', this.levelText, '...', this.characterArea);
+        this.createStatRow(this.expLabel, 'EXP', this.expText, '.../...', this.characterArea);
+        this.createStatRow(this.classLabel, 'RANK', this.classText, '...', this.characterArea);
 
         this.skillIcon1 = new Graphics();
         this.characterArea.addChild(this.skillIcon1);
@@ -127,16 +158,17 @@ export class CharacterScreen extends Container {
         this.characterArea.addChild(this.pointsLabel);
 
         this.pointsText = new Text({
-            text: '4',
+            text: '...',
             style: { fontSize: 18, fill: COLORS.white, fontWeight: 'bold', align: 'left' }
         });
         this.pointsText.anchor.set(0, 0.5);
         this.characterArea.addChild(this.pointsText);
 
-        this.createPointRow(this.strLabel, 'STR', this.strText, '15', this.strMinusBtn, this.strPlusBtn);
-        this.createPointRow(this.intLabel, 'INT', this.intText, '10', this.intMinusBtn, this.intPlusBtn);
-        this.createPointRow(this.conLabel, 'CON', this.conText, '12', this.conMinusBtn, this.conPlusBtn);
-        this.createPointRow(this.agiLabel, 'AGI', this.agiText, '11', this.agiMinusBtn, this.agiPlusBtn);
+        // Create point allocation rows with placeholder values
+        this.createPointRow(this.strLabel, 'STR', this.strText, '...', this.strMinusBtn, this.strPlusBtn);
+        this.createPointRow(this.intLabel, 'INT', this.intText, '...', this.intMinusBtn, this.intPlusBtn);
+        this.createPointRow(this.conLabel, 'CON', this.conText, '...', this.conMinusBtn, this.conPlusBtn);
+        this.createPointRow(this.agiLabel, 'AGI', this.agiText, '...', this.agiMinusBtn, this.agiPlusBtn);
 
         this.createApplyButton();
         this.characterArea.addChild(this.pointApplyBtn);
@@ -147,13 +179,14 @@ export class CharacterScreen extends Container {
         this.statPanel = new Graphics();
         this.statArea.addChild(this.statPanel);
 
-        this.createStatRow(this.hpLabel, 'HP', this.hpText, '250', this.statArea);
-        this.createStatRow(this.atkLabel, 'ATK', this.atkText, '60', this.statArea);
-        this.createStatRow(this.magLabel, 'MAG', this.magText, '60', this.statArea);
-        this.createStatRow(this.defLabel, 'DEF', this.defText, '32', this.statArea);
-        this.createStatRow(this.lukLabel, 'LUCK', this.lukText, '5%', this.statArea);
-        this.createStatRow(this.hitRateLabel, 'HIT', this.hitRateText, '98%', this.statArea);
-        this.createStatRow(this.dodgeRateLabel, 'EVADE', this.dodgeRateText, '7%', this.statArea);
+        // Create stat display rows with placeholder values
+        this.createStatRow(this.hpLabel, 'HP', this.hpText, '...', this.statArea);
+        this.createStatRow(this.atkLabel, 'ATK', this.atkText, '...', this.statArea);
+        this.createStatRow(this.magLabel, 'MAG', this.magText, '...', this.statArea);
+        this.createStatRow(this.defLabel, 'DEF', this.defText, '...', this.statArea);
+        this.createStatRow(this.lukLabel, 'LUCK', this.lukText, '...%', this.statArea);
+        this.createStatRow(this.hitRateLabel, 'HIT', this.hitRateText, '...%', this.statArea);
+        this.createStatRow(this.dodgeRateLabel, 'EVADE', this.dodgeRateText, '...%', this.statArea);
 
         this.equipArea = new Container();
         this.addChild(this.equipArea);
@@ -181,6 +214,88 @@ export class CharacterScreen extends Container {
         this.equipLabel.eventMode = 'static';
         this.equipLabel.cursor = 'pointer';
         this.equipArea.addChild(this.equipLabel);
+        
+        // Initially hide UI until data loads
+        this.setLoadingState(true);
+    }
+
+    /**
+     * Async method to fetch and populate player data from API
+     * TODO: Make player ID configurable from authentication/session
+     */
+    private async fetchAndPopulatePlayer(): Promise<void> {
+        try {
+            this.setLoadingState(true);
+            
+            // Get player ID (currently using default ID - future: from config/auth)
+            const playerId = getCurrentPlayerId();
+            
+            // Fetch player data from API
+            this.playerData = await fetchPlayerData(playerId);
+            
+            // Populate UI with fetched data
+            this.populatePlayerData(this.playerData);
+            
+            this.setLoadingState(false);
+        } catch (error) {
+            console.error('Failed to load player data:', error);
+            this.setLoadingState(false);
+            // TODO: Show error message to user
+            this.showErrorState();
+        }
+    }
+
+    /**
+     * Populate UI elements with player data
+     */
+    private populatePlayerData(data: PlayerData): void {
+        // Update avatar (using current system)
+        // TODO: Update avatar frame to use data.avatar when dynamic avatars are implemented
+        
+        // Update character info
+        this.levelText.text = data.level.toString();
+        this.expText.text = `${data.exp}/${data.maxExp}`;
+        this.classText.text = data.class;
+        
+        // Update point allocation
+        this.pointsText.text = data.pointsToSpend.toString();
+        this.strText.text = data.stats.str.toString();
+        this.intText.text = data.stats.int.toString();
+        this.conText.text = data.stats.con.toString();
+        this.agiText.text = data.stats.agi.toString();
+        
+        // Update stat displays
+        this.hpText.text = data.stats.hp.toString();
+        this.atkText.text = data.stats.atk.toString();
+        this.magText.text = data.stats.mag.toString();
+        this.defText.text = data.stats.def.toString();
+        this.lukText.text = `${data.stats.luck}%`;
+        this.hitRateText.text = `${data.stats.hitRate}%`;
+        this.dodgeRateText.text = `${data.stats.dodgeRate}%`;
+    }
+
+    /**
+     * Set loading state and show/hide loading indicator
+     */
+    private setLoadingState(loading: boolean): void {
+        this.isLoading = loading;
+        this.loadingText.visible = loading;
+        
+        // Hide/show main UI elements during loading
+        this.characterArea.visible = !loading;
+        this.statArea.visible = !loading;
+        this.equipArea.visible = !loading;
+    }
+
+    /**
+     * Show error state when API fails
+     */
+    private showErrorState(): void {
+        this.loadingText.text = 'Failed to load player data';
+        this.loadingText.style.fill = COLORS.red || '#ff0000';
+        this.loadingText.visible = true;
+        
+        // TODO: Add retry button or fallback to default values
     }
 
     public addBackground() {
@@ -297,6 +412,9 @@ export class CharacterScreen extends Container {
     }
 
     public async show() {
+        // Center loading text when screen shows
+        this.loadingText.x = navigation.width / 2;
+        this.loadingText.y = navigation.height / 2;
     }
 
     public drawPanel(graphic: Graphics, x: number, y: number, width: number, height: number) {
@@ -321,13 +439,15 @@ export class CharacterScreen extends Container {
         this.backIcon.x = width - 50;
         this.backIcon.y = 50;
 
-        let characterLine = height - 800;
+        const characterLine = height - 800;
 
+        // === AVATAR PANEL SECTION ===
         this.drawPanel(this.levelArea, 10, characterLine, width - 20, height - 110);
 
         this.characterFrame.x = 110;
         this.characterFrame.y = characterLine + 90;
 
+        // === NAME/CLASS/LEVEL SECTION ===
         this.levelLabel.x = 220;
         this.levelLabel.y = characterLine + 20;
         this.levelText.x = width - 40;
@@ -343,18 +463,21 @@ export class CharacterScreen extends Container {
         this.classText.x = width - 40;
         this.classText.y = characterLine + 80;
 
-        this.skillIcon1.roundRect(220, characterLine + 110, 50, 50, 10)
+        // === SKILL/EQUIPMENT PREVIEW ===
+        this.skillIcon1.clear().roundRect(220, characterLine + 110, 50, 50, 10)
             .fill(COLORS.gray);
 
-        this.skillIcon2.roundRect(280, characterLine + 110, 50, 50, 10)
+        this.skillIcon2.clear().roundRect(280, characterLine + 110, 50, 50, 10)
             .fill(COLORS.gray);
         
         this.skillButton.x = 370;
         this.skillButton.y = characterLine + 135;
 
-        let pointLine = characterLine + 200;
+        // === POINT ALLOCATION SECTION ===
+        const pointLine = characterLine + 200;
         const pointX = width / 2;
 
+        // Visual separator line for point allocation section
         this.drawLine(this.pointPanel, 40, pointLine, width - 80, 1);
         
         this.pointsLabel.x = pointX + 150;
@@ -362,6 +485,7 @@ export class CharacterScreen extends Container {
         this.pointsText.x = pointX + 180;
         this.pointsText.y = pointLine + 15;
 
+        // Point allocation rows with better spacing
         this.strLabel.x = pointX + 20;
         this.strLabel.y = pointLine + 45;
         this.strText.x = pointX + 100;
@@ -398,14 +522,15 @@ export class CharacterScreen extends Container {
         this.agiPlusBtn.x = pointX + 200;
         this.agiPlusBtn.y = pointLine + 135;
 
+        // === ACTIONS SECTION ===
         this.pointApplyBtn.x = pointX + 120;
         this.pointApplyBtn.y = pointLine + 180;
 
-        let statLineX = 40;
-        let statLineY = pointLine;
+        // === STAT DISPLAY SECTION ===
+        const statLineX = 40;
+        const statLineY = pointLine;
 
-        //this.drawPanel(this.statPanel, 10, statLineY, 230, 220);
-
+        // Left column stats with better visual grouping
         this.hpLabel.x = statLineX;
         this.hpLabel.y = statLineY + 20;
         this.hpText.x = statLineX + 170;
@@ -441,16 +566,17 @@ export class CharacterScreen extends Container {
         this.dodgeRateText.x = statLineX + 170;
         this.dodgeRateText.y = statLineY + 200;
 
-        let equipLineY = height - 360;
+        // === EQUIPMENT SECTION ===
+        const equipLineY = height - 360;
 
-        //this.drawPanel(this.equipPanel, 10, equipLineY, width - 20, 350);
-
+        // Visual separator for equipment section
         this.drawLine(this.equipTabPanel, 30, equipLineY + 40, width - 70, 1);
 
         this.equipLabel.x = (width - this.equipLabel.width) / 2;
         this.equipLabel.y = equipLineY + 10;
     }
 
-    public update(time: Ticker) {
+    public update(_time: Ticker) {
+        // Update method for any animations or dynamic content
     }
 }
