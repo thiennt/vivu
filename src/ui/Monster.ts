@@ -22,7 +22,12 @@ export class Monster extends Character {
   public initName() {
     this.username = new Text({
       text: "Monster",
-      style: { fontSize: 16, fill: COLORS.white, fontWeight: "bold" },
+      style: { 
+        fontSize: 16, 
+        fill: COLORS.white, 
+        fontWeight: "bold",
+        fontFamily: "'Fredoka', 'Baloo 2', sans-serif"
+      },
     });
     this.username.anchor.set(0.5);
     this.username.position.set(0, 70);

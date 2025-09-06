@@ -62,6 +62,7 @@ export class HeroCard extends Container {
         fontSize: 14,
         fill: COLORS.grayDark,
         fontWeight: "bold",
+        fontFamily: "'Fredoka', 'Baloo 2', sans-serif",
         align: "center",
       },
     });
@@ -75,6 +76,7 @@ export class HeroCard extends Container {
       style: {
         fontSize: 12,
         fill: COLORS.gray,
+        fontFamily: "'Nunito', 'Baloo 2', sans-serif",
         align: "center",
       },
     });
@@ -100,6 +102,7 @@ export class HeroCard extends Container {
         fontSize: 8,
         fill: COLORS.white,
         fontWeight: "bold",
+        fontFamily: "'Fredoka', 'Baloo 2', sans-serif",
       },
     });
     this.rarityText.anchor.set(0.5);

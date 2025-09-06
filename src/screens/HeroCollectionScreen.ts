@@ -49,6 +49,7 @@ export class HeroCollectionScreen extends Container {
         fontSize: 32,
         fill: COLORS.white,
         fontWeight: "bold",
+        fontFamily: "'Luckiest Guy', 'Fredoka', sans-serif",
         align: "center",
         stroke: { color: COLORS.blueDark, width: 2 },
       },
@@ -63,6 +64,7 @@ export class HeroCollectionScreen extends Container {
       style: {
         fontSize: 16,
         fill: COLORS.ivory,
+        fontFamily: "'Nunito', 'Baloo 2', sans-serif",
         align: "center",
       },
     });
@@ -185,6 +187,7 @@ export class HeroCollectionScreen extends Container {
         fontSize: 20,
         fill: COLORS.white,
         fontWeight: "bold",
+        fontFamily: "'Fredoka', 'Baloo 2', sans-serif",
         stroke: { color: COLORS.blueDark, width: 2 },
       },
     });
