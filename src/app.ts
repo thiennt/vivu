@@ -25,7 +25,7 @@ export const COLORS = {
     NOVICE: 0x4b3f36, // Shadow Gray
     APPRENTICE: 0x8aa174, // Moss Green
     ADEPT: 0x638599, // Dusty Blue
-    EXPERT: 0x8b6f99, // Berry Purple
+    EXPERT: 0xa38a6d, // Soft Brown (updated to use primary palette)
     MASTER: 0xe3c787, // Pale Gold
     GRANDMASTER: 0xc05c4a, // Clay Red
   },
@@ -38,6 +38,29 @@ export const COLORS = {
   mossGreen: "#8AA174", // coins, gems, health bars
   paleGold: "#E3C787", // coins, icons, level up
   shadowGray: "#4B3F36", // outlines, text
+
+  // Legacy color mappings to primary palette
+  white: "#F5ECD6", // → warmCream (lightest)
+  gray: "#4B3F36", // → shadowGray
+  grayDark: "#4B3F36", // → shadowGray
+  blue: "#638599", // → dustyBlue
+  blueLight: "#638599", // → dustyBlue
+  blueShadow: "#4B3F36", // → shadowGray
+  gold: "#E3C787", // → paleGold
+  red: "#C05C4A", // → clayRed
+  redLight: "#C05C4A", // → clayRed
+  green: "#8AA174", // → mossGreen
+  
+  // Pastel colors mapped to primary palette
+  pastelBlue: "#638599", // → dustyBlue
+  pastelGreen: "#8AA174", // → mossGreen
+  pastelOrange: "#E3C787", // → paleGold
+  pastelPurple: "#638599", // → dustyBlue
+  
+  // Card-specific colors mapped to primary palette
+  cardBg: "#F5ECD6", // → warmCream
+  cardBorder: "#4B3F36", // → shadowGray
+  cardShadow: "#4B3F36", // → shadowGray
 };
 
 initDevtools({ app });
