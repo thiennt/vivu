@@ -47,11 +47,11 @@ export class HeroCollectionScreen extends Container {
       text: "Hero Collection",
       style: {
         fontSize: 32,
-        fill: COLORS.white,
+        fill: COLORS.warmCream,
         fontWeight: "bold",
         fontFamily: "'Luckiest Guy', 'Fredoka', sans-serif",
         align: "center",
-        stroke: { color: COLORS.blueDark, width: 2 },
+        stroke: { color: COLORS.shadowGray, width: 2 },
       },
     });
     this.titleText.anchor.set(0.5);
@@ -63,7 +63,7 @@ export class HeroCollectionScreen extends Container {
       text: "Crypto Legends Collection",
       style: {
         fontSize: 16,
-        fill: COLORS.ivory,
+        fill: COLORS.warmCream,
         fontFamily: "'Nunito', 'Baloo 2', sans-serif",
         align: "center",
       },
@@ -185,10 +185,10 @@ export class HeroCollectionScreen extends Container {
       text: `Selected: ${heroData.name}!`,
       style: {
         fontSize: 20,
-        fill: COLORS.white,
+        fill: COLORS.warmCream,
         fontWeight: "bold",
         fontFamily: "'Fredoka', 'Baloo 2', sans-serif",
-        stroke: { color: COLORS.blueDark, width: 2 },
+        stroke: { color: COLORS.shadowGray, width: 2 },
       },
     });
     feedbackText.anchor.set(0.5);

@@ -38,14 +38,14 @@ export class HeroCard extends Container {
     this.cardBg = new Graphics();
     this.cardBg
       .roundRect(0, 0, this.cardWidth, this.cardHeight, 12)
-      .fill(COLORS.cardBg)
-      .stroke({ width: 2, color: COLORS.cardBorder });
+      .fill(COLORS.warmCream)
+      .stroke({ width: 2, color: COLORS.shadowGray });
 
     // Add subtle shadow effect
     const shadow = new Graphics();
     shadow
       .roundRect(2, 2, this.cardWidth, this.cardHeight, 12)
-      .fill(COLORS.cardShadow);
+      .fill(COLORS.shadowGray);
     this.addChild(shadow);
     this.addChild(this.cardBg);
 
@@ -60,7 +60,7 @@ export class HeroCard extends Container {
       text: this.heroData.name,
       style: {
         fontSize: 14,
-        fill: COLORS.grayDark,
+        fill: COLORS.shadowGray,
         fontWeight: "bold",
         fontFamily: "'Fredoka', 'Baloo 2', sans-serif",
         align: "center",
@@ -75,7 +75,7 @@ export class HeroCard extends Container {
       text: this.heroData.symbol,
       style: {
         fontSize: 12,
-        fill: COLORS.gray,
+        fill: COLORS.shadowGray,
         fontFamily: "'Nunito', 'Baloo 2', sans-serif",
         align: "center",
       },
@@ -93,14 +93,14 @@ export class HeroCard extends Container {
     this.rarityBadge
       .roundRect(8, 8, 35, 16, 8)
       .fill(rarityColor)
-      .stroke({ width: 1, color: COLORS.white });
+      .stroke({ width: 1, color: COLORS.warmCream });
     this.addChild(this.rarityBadge);
 
     this.rarityText = new Text({
       text: this.heroData.rarity.toUpperCase(),
       style: {
         fontSize: 8,
-        fill: COLORS.white,
+        fill: COLORS.warmCream,
         fontWeight: "bold",
         fontFamily: "'Fredoka', 'Baloo 2', sans-serif",
       },
@@ -149,22 +149,22 @@ export class HeroCard extends Container {
     avatarBg
       .circle(this.cardWidth / 2, 60, 35)
       .fill(this.getAvatarBgColor())
-      .stroke({ width: 2, color: COLORS.white });
+      .stroke({ width: 2, color: COLORS.warmCream });
     this.addChildAt(avatarBg, this.getChildIndex(this.avatar));
   }
 
   private getRarityColor(): string {
     switch (this.heroData.rarity.toLowerCase()) {
       case "legendary":
-        return COLORS.gold;
+        return COLORS.paleGold;
       case "epic":
-        return COLORS.redLight;
+        return COLORS.clayRed;
       case "rare":
-        return COLORS.blueLight;
+        return COLORS.dustyBlue;
       case "common":
-        return COLORS.gray;
+        return COLORS.shadowGray;
       default:
-        return COLORS.pastelBlue;
+        return COLORS.dustyBlue;
     }
   }
 
@@ -172,13 +172,13 @@ export class HeroCard extends Container {
     // Use crypto-specific colors or pastel colors based on hero type
     switch (this.heroData.symbol) {
       case "BTC":
-        return COLORS.pastelOrange;
+        return COLORS.paleGold;
       case "ETH":
-        return COLORS.pastelBlue;
+        return COLORS.dustyBlue;
       case "SOL":
-        return COLORS.pastelPurple;
+        return COLORS.dustyBlue;
       default:
-        return COLORS.pastelGreen;
+        return COLORS.mossGreen;
     }
   }
 
