@@ -11,7 +11,7 @@
     "prestart": "run-s assets",
     "start": "vite --open",
     "assets": "assetpack",
-    "prebuild": "run-s clean format:check lint assets types",
+    "prebuild": "run-s clean lint assets types",
     "build": "vite build",
     "types": "tsc",
     "prepreview": "run-s build",
