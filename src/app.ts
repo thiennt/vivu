@@ -38,56 +38,6 @@ export const COLORS = {
   mossGreen: "#8AA174", // coins, gems, health bars
   paleGold: "#E3C787", // coins, icons, level up
   shadowGray: "#4B3F36", // outlines, text
-
-  // Accent Palette (Playful Elements)
-  gentlePink: "#F4B9B2", // hearts, status icons
-  mutedTeal: "#7AB8B6", // mana, special effect icons
-  pumpkinOrange: "#E29A54", // attack numbers, highlights
-  berryPurple: "#8B6F99", // magical effects, rare items
-
-  // Legacy color mappings (updated to new palette)
-  gold: "#E3C787", // Pale Gold
-  goldDark: "#A38A6D", // Soft Brown
-  yellow: "#E29A54", // Pumpkin Orange
-
-  red: "#C05C4A", // Clay Red
-  redLight: "#F4B9B2", // Gentle Pink
-
-  white: "#ffffff",
-  ivory: "#F5ECD6", // Warm Cream
-
-  gray: "#A38A6D", // Soft Brown
-  grayDark: "#4B3F36", // Shadow Gray
-  black: "#000000",
-
-  brown: "#A38A6D", // Soft Brown
-  brownLight: "#F5ECD6", // Warm Cream
-
-  silver: "#638599", // Dusty Blue
-  silverDark: "#4B3F36", // Shadow Gray
-
-  blue: "#638599", // Dusty Blue
-  blueLight: "#7AB8B6", // Muted Teal
-  blueDark: "#4B3F36", // Shadow Gray
-  blueShadow: "#4B3F36", // Shadow Gray
-
-  // Updated pastel colors using accent palette
-  pastelPink: "#F4B9B2", // Gentle Pink
-  pastelBlue: "#7AB8B6", // Muted Teal
-  pastelGreen: "#8AA174", // Moss Green
-  pastelYellow: "#E3C787", // Pale Gold
-  pastelPurple: "#8B6F99", // Berry Purple
-  pastelOrange: "#E29A54", // Pumpkin Orange
-
-  // Crypto-themed colors (updated to fit palette)
-  bitcoinOrange: "#E29A54", // Pumpkin Orange
-  ethereumBlue: "#7AB8B6", // Muted Teal
-  solanaGreen: "#8AA174", // Moss Green
-
-  // Soft card backgrounds
-  cardBg: "#F5ECD6", // Warm Cream
-  cardBorder: "#A38A6D", // Soft Brown
-  cardShadow: "#4B3F3620", // Shadow Gray with transparency
 };
 
 initDevtools({ app });
