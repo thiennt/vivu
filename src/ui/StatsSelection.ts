@@ -117,7 +117,7 @@ export class StatsSelection extends Container {
     const text = new Text();
     text.text = textLabel;
     text.style = {
-      fontFamily: "Arial",
+      fontFamily: "'Baloo 2', 'Nunito', sans-serif",
       fontSize: 12,
       fill: { color: "000000", alpha: 1 },
       //stroke: { color: "000000", width: 1 },

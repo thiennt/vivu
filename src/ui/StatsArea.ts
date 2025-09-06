@@ -87,7 +87,7 @@ export class StatsArea extends Container {
     stats.forEach((stat: Text) => {
       stat.style = {
         fill: 0x5c5c5c,
-        fontFamily: "Verdana",
+        fontFamily: "'Nunito', 'Baloo 2', sans-serif",
         align: "center",
         fontSize: 28,
       };

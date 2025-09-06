@@ -276,7 +276,7 @@ export class CharacterScreen extends Container {
     this.equipLabel.text = "EQUIPMENT";
     this.equipLabel.style = {
       fontSize: 18,
-      fontFamily: `'Cinzel', serif`,
+      fontFamily: "'Fredoka', 'Baloo 2', sans-serif",
       fontWeight: "bold",
       fill: COLORS.blueLight,
       dropShadow: {

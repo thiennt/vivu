@@ -111,7 +111,7 @@ export class BattleScene extends Container {
 
     const message = new Text();
     message.style = {
-      fontFamily: "Arial",
+      fontFamily: "'Fredoka', 'Baloo 2', sans-serif",
       fontSize: 24,
       fill: 0x000000,
       align: "center",

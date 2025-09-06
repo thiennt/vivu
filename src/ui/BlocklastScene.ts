@@ -61,7 +61,7 @@ export class BlocklastScene extends Container {
     this.playerHpText.style = {
       fontSize: 18,
       fill: 0x00ff00,
-      fontFamily: "Arial",
+      fontFamily: "'Baloo 2', 'Nunito', sans-serif",
     };
     this.playerHpText.x = 20;
     this.playerHpText.y = 20;
@@ -71,7 +71,7 @@ export class BlocklastScene extends Container {
     this.aiHpText.style = {
       fontSize: 18,
       fill: 0xff0000,
-      fontFamily: "Arial",
+      fontFamily: "'Baloo 2', 'Nunito', sans-serif",
     };
     this.aiHpText.x = 20;
     this.aiHpText.y = 50;
@@ -82,7 +82,7 @@ export class BlocklastScene extends Container {
     this.turnText.style = {
       fontSize: 20,
       fill: 0xffffff,
-      fontFamily: "Arial",
+      fontFamily: "'Baloo 2', 'Nunito', sans-serif",
     };
     this.turnText.x = 200;
     this.turnText.y = 30;
@@ -93,7 +93,7 @@ export class BlocklastScene extends Container {
     this.gameOverText.style = {
       fontSize: 24,
       fill: 0xffff00,
-      fontFamily: "Arial",
+      fontFamily: "'Fredoka', 'Baloo 2', sans-serif",
     };
     this.gameOverText.x = 150;
     this.gameOverText.y = 250;
@@ -135,7 +135,7 @@ export class BlocklastScene extends Container {
         powerText.style = {
           fontSize: 14,
           fill: 0xffffff,
-          fontFamily: "Arial",
+          fontFamily: "'Nunito', 'Baloo 2', sans-serif",
         };
         powerText.anchor.set(0.5);
         powerText.x = cellBg.x + this.cellSize / 2;
@@ -163,7 +163,7 @@ export class BlocklastScene extends Container {
     restartText.style = {
       fontSize: 14,
       fill: 0xffffff,
-      fontFamily: "Arial",
+      fontFamily: "'Fredoka', 'Baloo 2', sans-serif",
     };
     restartText.anchor.set(0.5);
     restartText.x = restartBtn.x + 50;
@@ -331,7 +331,7 @@ export class BlocklastScene extends Container {
       powerText.style = {
         fontSize: 10,
         fill: 0xffffff,
-        fontFamily: "Arial",
+        fontFamily: "'Nunito', 'Baloo 2', sans-serif",
       };
       powerText.anchor.set(0.5);
       powerText.x = cellGraphics.x + cellDisplaySize / 2;
