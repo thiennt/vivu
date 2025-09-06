@@ -1,47 +1,41 @@
-import { Container, Ticker, Sprite, Assets } from 'pixi.js';
-import gsap from 'gsap';
-import { waitFor } from '../utils/asyncUtils';
-import { navigation } from '../utils/navigation';
+import { Container, Ticker, Sprite, Assets } from "pixi.js";
+import gsap from "gsap";
+import { waitFor } from "../utils/asyncUtils";
+import { navigation } from "../utils/navigation";
 
-import { Menu } from '../ui/Menu';
-import { BattleScene } from '../ui/BattleScene';
-
+import { Menu } from "../ui/Menu";
+import { BattleScene } from "../ui/BattleScene";
 
 export class HomeScreen extends Container {
-    /** Assets bundles required by this screen */
-    public static assetBundles = ['game'];
+  /** Assets bundles required by this screen */
+  public static assetBundles = ["game"];
 
-    private background: Sprite;
-    
-    private menu: Menu;
-    
-    constructor() {
-        super();
+  private background: Sprite;
 
-        this.background = new Sprite(Assets.get('background_1.png'));
-        this.addChild(this.background);
+  private menu: Menu;
 
-        this.menu = new Menu();
-        this.addChild(this.menu);
-    }
+  constructor() {
+    super();
 
-    public prepare() {
-        
-    }
+    this.background = new Sprite(Assets.get("background_1.png"));
+    this.addChild(this.background);
 
-    public async show() {
-        this.menu.show();
+    this.menu = new Menu();
+    this.addChild(this.menu);
+  }
 
-    }
+  public prepare() {}
 
-    public resize(width: number, height: number) {
-        this.background.width = width;
-        this.background.height = height;
+  public async show() {
+    this.menu.show();
+  }
 
-        this.menu.resize(width, height);
-    }
+  public resize(width: number, height: number) {
+    this.background.width = width;
+    this.background.height = height;
 
-    public update(time: Ticker) {
-        
-    }
+    this.menu.resize(width, height);
+  }
+
+  public update(time: Ticker) {}
 }
