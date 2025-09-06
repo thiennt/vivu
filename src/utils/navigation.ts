@@ -29,7 +29,7 @@ interface AppScreen extends Container {
 
 /** Interface for app screens constructors */
 interface AppScreenConstructor {
-    new (): AppScreen;
+    new (params?: any): AppScreen;
     /** List of assets bundles required by the screen */
     assetBundles?: string[];
 }
@@ -123,7 +123,7 @@ class Navigation {
      * Hide current screen (if there is one) and present a new screen.
      * Any class that matches AppScreen interface can be used here.
      */
-    public async showScreen(ctor: AppScreenConstructor) {
+    public async showScreen(ctor: AppScreenConstructor, params?: any) {
         // Block interactivity in current screen
         if (this.currentScreen) {
             this.currentScreen.interactiveChildren = false;
@@ -141,7 +141,7 @@ class Navigation {
         }
 
         // Create the new screen and add that to the stage
-        this.currentScreen = pool.get(ctor);
+        this.currentScreen = pool.get(ctor, params);
         await this.addAndShowScreen(this.currentScreen);
     }
 

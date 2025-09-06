@@ -50,6 +50,20 @@ export interface PlayerData {
     player: Player;
 }
 
+export interface Stage {
+    id: string;
+    name: string;
+    description: string;
+    thumbnail_url: string;
+    background_url: string;
+    music_url?: string;
+}
+
+export interface StageData {
+    stages: Stage[];
+    completedStageIds: string[];
+}
+
 export function testForAABB(object1: any, object2: any): boolean {
     const bounds1 = object1.getBounds();
     const bounds2 = object2.getBounds();

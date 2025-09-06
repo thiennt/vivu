@@ -1,7 +1,7 @@
 /**
  * Pool instances of a certain class for reusing.
  */
-class Pool<T extends new () => InstanceType<T> = new () => any> {
+class Pool<T extends new (params?: any) => InstanceType<T> = new (params?: any) => any> {
     /** The constructor for new instances */
     public readonly ctor: T;
     /** List of idle instances ready to be reused */
@@ -11,8 +11,16 @@ class Pool<T extends new () => InstanceType<T> = new () => any> {
         this.ctor = ctor;
     }
 
-    /** Get an idle instance from the pool, or create a new one if there is none available */
-    public get() {
+    /**
+     * Get an idle instance from the pool, or create a new one if there is none available.
+     * If you pass params, always create a new instance with params (not pooled).
+     */
+    public get(params?: any) {
+        if (params) {
+            // Always create a new instance with params
+            return new this.ctor(params);
+        }
+        // No params: reuse from pool if available
         return this.list.pop() ?? new this.ctor();
     }
 
@@ -23,25 +31,22 @@ class Pool<T extends new () => InstanceType<T> = new () => any> {
     }
 }
 
-/**
- * Pool instances of any class, organising internal pools by constructor.
- */
 class MultiPool {
     /** Map of pools per class */
-    public readonly map: Map<new () => any, Pool> = new Map();
+    public readonly map: Map<new (...args: any[]) => any, Pool<any>> = new Map();
 
     /** Get an idle instance of given class, or create a new one if there is none available */
-    public get<T extends new () => InstanceType<T>>(ctor: T): InstanceType<T> {
+    public get<T>(ctor: new (params?: any) => T, params?: any): T {
         let pool = this.map.get(ctor);
         if (!pool) {
             pool = new Pool(ctor);
             this.map.set(ctor, pool);
         }
-        return pool.get();
+        return pool.get(params);
     }
 
     /** Return an instance to its pool, making it available to be reused */
-    public giveBack(item: InstanceType<any>) {
+    public giveBack(item: any) {
         const pool = this.map.get(item.constructor);
         if (pool) pool.giveBack(item);
     }

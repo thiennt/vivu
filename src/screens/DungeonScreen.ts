@@ -3,18 +3,21 @@ import gsap from 'gsap';
 import { waitFor } from '../utils/asyncUtils';
 import { navigation } from '../utils/navigation';
 
-import { DuelScene } from '../ui/DuelScene';
-import { CombatScene } from '../ui/CombatScene';
-import { CombatScreen, StagesScreen } from './CombatScreen';
+import { CombatScreen } from './CombatScreen';
 import { HomeScreen } from './HomeScreen';
 import { COLORS } from '../app';
 import { FancyButton } from '@pixi/ui';
+import { fetchStagesByPlayer } from '../utils/api';
+import { getCurrentPlayerId } from '../utils/playerApi';
+import { StageData } from '../utils/common';
+import { StageScreen } from './StageScreen';
 
 export class DungeonScreen extends Container {
     /** Assets bundles required by this screen */
     public static assetBundles = ['game'];
     
     private backIcon: Sprite;
+    private stageData: StageData | null = null;
 
     constructor() {
         super();
@@ -38,21 +41,39 @@ export class DungeonScreen extends Container {
         this.addStages();
     }
 
-    public addStages() {
-        const stage = new Sprite(Assets.get(`stage_1_thumbnail.jpg`));
-        stage.anchor.set(0.5);
-        stage.width = navigation.width - 40;
-        stage.height = 200;
-        stage.x = navigation.width / 2;
-        stage.y = 200;
-        stage.interactive = true;
-        stage.cursor = 'pointer';
-        stage.on('click', () => {
-            navigation.showScreen(CombatScreen);
-        });
-        this.addChild(stage);
-        this.createStageText(stage.x + 50, stage.y, 'Stage 1');
-        
+    public async addStages() {
+        try {
+            // Fetch player data from API
+            this.stageData = await fetchStagesByPlayer(getCurrentPlayerId());
+            
+            // Populate UI with fetched data
+            this.populateStageData(this.stageData);
+        } catch (error) {
+            console.error('Failed to load player data:', error);
+        }
+    }
+
+    public populateStageData(stageData: StageData) {
+        if (!stageData || !stageData.stages) {
+            console.error('No stage data available');
+            return;
+        }
+
+        for (let index = 0; index < stageData.stages.length; index++) {
+            const stageSprite = new Sprite(Assets.get(`stage_1_thumbnail.jpg`));
+            stageSprite.anchor.set(0.5);
+            stageSprite.width = navigation.width - 40;
+            stageSprite.height = 200;
+            stageSprite.x = navigation.width / 2;
+            stageSprite.y = 200 + index * 220;
+            stageSprite.interactive = true;
+            stageSprite.cursor = 'pointer';
+            stageSprite.on('click', () => {
+                navigation.showScreen(StageScreen, { stage_id: stageData.stages[index].id });
+            });
+            this.addChild(stageSprite);
+            this.createStageText(stageSprite.x + 50, stageSprite.y, 'Stage 1');
+        }
     }
 
     public createStageText(x: number, y: number, stageName: string) {

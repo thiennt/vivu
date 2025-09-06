@@ -7,9 +7,6 @@ import { PlayerData } from './common';
  * @returns Promise<PlayerData>
  */
 export async function fetchPlayerData(playerId: string = "mystic_fc_003"): Promise<PlayerData> {
-    // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 500));
-    
     try {
         // TODO: Replace with actual API call to http://localhost:3000/players/${playerId}
         const response = await fetch(`http://localhost:3000/players/${playerId}`);
