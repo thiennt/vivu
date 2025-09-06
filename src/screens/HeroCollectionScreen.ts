@@ -22,7 +22,7 @@ export class HeroCollectionScreen extends Container {
         this.initBackground();
         this.initBackButton();
         this.initTitle();
-        // this.initHeroCards(); // Temporarily commented out for testing
+        this.initHeroCards();
     }
 
     private initBackground() {
@@ -69,19 +69,6 @@ export class HeroCollectionScreen extends Container {
         this.subtitleText.anchor.set(0.5);
         this.subtitleText.position.set(400, 80); // Will be adjusted in resize
         this.addChild(this.subtitleText);
-
-        // Debug text to show the screen loaded
-        const debugText = new Text({
-            text: 'Collection Screen Loaded Successfully!',
-            style: {
-                fontSize: 20,
-                fill: COLORS.gold,
-                align: 'center'
-            }
-        });
-        debugText.anchor.set(0.5);
-        debugText.position.set(400, 200);
-        this.addChild(debugText);
     }
 
     private initHeroCards() {
@@ -98,7 +85,7 @@ export class HeroCollectionScreen extends Container {
                 symbol: 'BTC',
                 rarity: 'legendary',
                 avatar: 'stickman_1.png',
-                color: COLORS.bitcoinOrange,
+                color: '#F7931A', // Use string format for consistency
                 description: 'The original cryptocurrency hero'
             },
             {
@@ -107,7 +94,7 @@ export class HeroCollectionScreen extends Container {
                 symbol: 'ETH',
                 rarity: 'epic',
                 avatar: 'stickman_2.png',
-                color: COLORS.ethereumBlue,
+                color: '#627EEA',
                 description: 'Smart contract champion'
             },
             {
@@ -116,7 +103,7 @@ export class HeroCollectionScreen extends Container {
                 symbol: 'SOL',
                 rarity: 'rare',
                 avatar: 'stickman_3.png',
-                color: COLORS.solanaGreen,
+                color: '#9945FF',
                 description: 'High-speed blockchain warrior'
             },
             {
@@ -125,7 +112,7 @@ export class HeroCollectionScreen extends Container {
                 symbol: 'ADA',
                 rarity: 'rare',
                 avatar: 'stickman_4.png',
-                color: COLORS.pastelBlue,
+                color: '#D1ECF1',
                 description: 'Scientific blockchain scholar'
             },
             {
@@ -134,7 +121,7 @@ export class HeroCollectionScreen extends Container {
                 symbol: 'DOT',
                 rarity: 'rare',
                 avatar: 'stickman_5.png',
-                color: COLORS.pastelPink,
+                color: '#F8D7DA',
                 description: 'Multi-chain connector'
             },
             {
@@ -143,7 +130,7 @@ export class HeroCollectionScreen extends Container {
                 symbol: 'MATIC',
                 rarity: 'common',
                 avatar: 'stickman_6.png',
-                color: COLORS.pastelPurple,
+                color: '#E2E3F1',
                 description: 'Layer 2 scaling hero'
             }
         ];
@@ -157,7 +144,7 @@ export class HeroCollectionScreen extends Container {
         let currentRow = 0;
         let currentCol = 0;
 
-        heroDataArray.forEach((heroData, index) => {
+        heroDataArray.forEach((heroData) => {
             const heroCard = new HeroCard(heroData);
             
             // Calculate position
@@ -253,7 +240,7 @@ export class HeroCollectionScreen extends Container {
         this.scrollContainer.position.set((width - cardAreaWidth) / 2, 0);
     }
 
-    public update(time: Ticker) {
+    public update(_time: Ticker) {
         // Update animations or dynamic content if needed
     }
 

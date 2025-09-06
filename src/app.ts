@@ -7,6 +7,7 @@ import { LoadScreen } from './screens/LoadScreen';
 import { HomeScreen } from './screens/HomeScreen';
 import { DungeonScreen } from './screens/DungeonScreen';
 import { CharacterScreen } from './screens/CharacterScreen';
+import { HeroCollectionScreen } from './screens/HeroCollectionScreen';
 
 /** The PixiJS app Application instance, shared across the project */
 export const app = new Application();

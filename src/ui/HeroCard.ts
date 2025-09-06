@@ -106,13 +106,15 @@ export class HeroCard extends Container {
 
     private createAvatar() {
         // Try to load the specified avatar, fallback to default
+        let avatarTexture;
         try {
-            this.avatar = new Sprite(Assets.get(this.heroData.avatar));
+            avatarTexture = Assets.get(this.heroData.avatar);
         } catch {
             // Fallback to a placeholder or default avatar
-            this.avatar = new Sprite(Assets.get('plus'));
+            avatarTexture = Assets.get('plus');
         }
         
+        this.avatar = new Sprite(avatarTexture);
         this.avatar.anchor.set(0.5);
         this.avatar.position.set(this.cardWidth / 2, 60);
         
@@ -123,8 +125,16 @@ export class HeroCard extends Container {
             this.avatar.scale.set(scale);
         }
 
-        // Add a colored tint based on the hero's color
-        this.avatar.tint = this.heroData.color;
+        // Add a colored tint based on the hero's color - convert hex to number
+        if (typeof this.heroData.color === 'string') {
+            // Convert hex string to number if needed
+            const colorValue = this.heroData.color.startsWith('#') 
+                ? parseInt(this.heroData.color.slice(1), 16) 
+                : parseInt(this.heroData.color, 16);
+            this.avatar.tint = colorValue;
+        } else {
+            this.avatar.tint = this.heroData.color;
+        }
         
         this.addChild(this.avatar);
 
