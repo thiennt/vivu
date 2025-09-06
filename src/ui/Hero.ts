@@ -24,7 +24,7 @@ export class Hero extends Character {
       text: "Hero",
       style: { 
         fontSize: 16, 
-        fill: COLORS.white, 
+        fill: COLORS.warmCream, 
         fontWeight: "bold", 
         fontFamily: "'Fredoka', 'Baloo 2', sans-serif" 
       },

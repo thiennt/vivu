@@ -25,7 +25,7 @@ export const COLORS = {
     NOVICE: 0x4b3f36, // Shadow Gray
     APPRENTICE: 0x8aa174, // Moss Green
     ADEPT: 0x638599, // Dusty Blue
-    EXPERT: 0x8b6f99, // Berry Purple
+    EXPERT: 0xa38a6d, // Soft Brown (updated to use primary palette)
     MASTER: 0xe3c787, // Pale Gold
     GRANDMASTER: 0xc05c4a, // Clay Red
   },

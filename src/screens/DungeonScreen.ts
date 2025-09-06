@@ -81,8 +81,8 @@ export class DungeonScreen extends Container {
   public createStageText(x: number, y: number, stageName: string) {
     const graphic = new Graphics();
     graphic.roundRect(0, 0, 100, 40, 5);
-    graphic.stroke({ width: 2, color: COLORS.blueDark });
-    graphic.fill(COLORS.blueLight);
+    graphic.stroke({ width: 2, color: COLORS.shadowGray });
+    graphic.fill(COLORS.dustyBlue);
 
     const textBtn = new FancyButton();
     //textBtn.defaultView = graphic;
@@ -90,7 +90,7 @@ export class DungeonScreen extends Container {
     textBtn.textView = new Text({
       text: stageName,
       style: {
-        fill: COLORS.white,
+        fill: COLORS.warmCream,
         fontSize: 24,
         fontWeight: "bold",
       },

@@ -100,7 +100,7 @@ export class CharacterScreen extends Container {
       text: "Loading player data...",
       style: {
         fontSize: 24,
-        fill: COLORS.white,
+        fill: COLORS.warmCream,
         fontWeight: "bold",
         align: "center",
       },
@@ -171,7 +171,7 @@ export class CharacterScreen extends Container {
       text: "Points",
       style: {
         fontSize: 16,
-        fill: COLORS.blueLight,
+        fill: COLORS.dustyBlue,
         fontWeight: "bold",
         align: "right",
       },
@@ -183,7 +183,7 @@ export class CharacterScreen extends Container {
       text: "...",
       style: {
         fontSize: 18,
-        fill: COLORS.white,
+        fill: COLORS.warmCream,
         fontWeight: "bold",
         align: "left",
       },
@@ -278,9 +278,9 @@ export class CharacterScreen extends Container {
       fontSize: 18,
       fontFamily: "'Fredoka', 'Baloo 2', sans-serif",
       fontWeight: "bold",
-      fill: COLORS.blueLight,
+      fill: COLORS.dustyBlue,
       dropShadow: {
-        color: COLORS.blueDark,
+        color: COLORS.shadowGray,
         blur: 4,
         alpha: 0.5,
         distance: 2,
@@ -365,7 +365,7 @@ export class CharacterScreen extends Container {
    */
   private showErrorState(): void {
     this.loadingText.text = "Failed to load player data";
-    this.loadingText.style.fill = COLORS.red || "#ff0000";
+    this.loadingText.style.fill = COLORS.clayRed || "#ff0000";
     this.loadingText.visible = true;
 
     // TODO: Add retry button or fallback to default values
@@ -390,15 +390,15 @@ export class CharacterScreen extends Container {
   public createApplyButton() {
     const graphic = new Graphics();
     graphic.roundRect(0, 0, 100, 40, 5);
-    graphic.stroke({ width: 2, color: COLORS.blueDark });
-    graphic.fill(COLORS.blueLight);
+    graphic.stroke({ width: 2, color: COLORS.shadowGray });
+    graphic.fill(COLORS.dustyBlue);
 
     this.pointApplyBtn.defaultView = graphic;
 
     this.pointApplyBtn.textView = new Text({
       text: "Apply",
       style: {
-        fill: COLORS.white,
+        fill: COLORS.warmCream,
         fontSize: 18,
         fontWeight: "bold",
       },
@@ -454,7 +454,7 @@ export class CharacterScreen extends Container {
     statLabel.text = statName;
     statLabel.style = {
       fontSize: 14,
-      fill: COLORS.blueLight,
+      fill: COLORS.dustyBlue,
       fontWeight: "bold",
       align: "left",
     };
@@ -464,7 +464,7 @@ export class CharacterScreen extends Container {
     statValueText.text = statValue;
     statValueText.style = {
       fontSize: 16,
-      fill: COLORS.white,
+      fill: COLORS.warmCream,
       fontWeight: "bold",
       align: "right",
     };
@@ -498,7 +498,7 @@ export class CharacterScreen extends Container {
     statLabel.text = statName;
     statLabel.style = {
       fontSize: 14,
-      fill: COLORS.blueLight,
+      fill: COLORS.dustyBlue,
       fontWeight: "bold",
       align: "left",
     };
@@ -508,7 +508,7 @@ export class CharacterScreen extends Container {
     statValueText.text = statValue;
     statValueText.style = {
       fontSize: 16,
-      fill: COLORS.white,
+      fill: COLORS.warmCream,
       fontWeight: "bold",
       align: "right",
     };
@@ -530,15 +530,15 @@ export class CharacterScreen extends Container {
     height: number,
   ) {
     const dropShadowFilter = new DropShadowFilter({
-      color: COLORS.blue,
+      color: COLORS.dustyBlue,
       alpha: 0.5,
       blur: 5,
       quality: 3,
     });
     graphic
       .roundRect(x + 4, y, width - 4, height, 5)
-      .stroke({ width: 4, color: COLORS.blueLight })
-      .fill({ color: COLORS.blueDark, alpha: 0.8 });
+      .stroke({ width: 4, color: COLORS.dustyBlue })
+      .fill({ color: COLORS.shadowGray, alpha: 0.8 });
     graphic.filters = [dropShadowFilter];
   }
 
@@ -549,7 +549,7 @@ export class CharacterScreen extends Container {
     width: number,
     height: number,
   ) {
-    graphic.roundRect(x, y, width, height, 1).fill(COLORS.white);
+    graphic.roundRect(x, y, width, height, 1).fill(COLORS.warmCream);
   }
 
   public resize(width: number, height: number) {
@@ -584,12 +584,12 @@ export class CharacterScreen extends Container {
     this.skillIcon1
       .clear()
       .roundRect(220, characterLine + 110, 50, 50, 10)
-      .fill(COLORS.gray);
+      .fill(COLORS.shadowGray);
 
     this.skillIcon2
       .clear()
       .roundRect(280, characterLine + 110, 50, 50, 10)
-      .fill(COLORS.gray);
+      .fill(COLORS.shadowGray);
 
     this.skillButton.x = 370;
     this.skillButton.y = characterLine + 135;

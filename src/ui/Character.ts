@@ -64,7 +64,7 @@ export class Character extends Container {
     this.frame = new Graphics();
     this.frame
       .roundRect(-55, -60, 110, 140, 2)
-      .stroke({ width: 1, color: COLORS.blueShadow })
+      .stroke({ width: 1, color: COLORS.shadowGray })
       .fill(COLORS.RARITY[rarity.toUpperCase() as keyof typeof COLORS.RARITY]);
     this.addChild(this.frame);
   }
@@ -82,8 +82,8 @@ export class Character extends Container {
     this.maxHpBar = new Graphics();
     this.maxHpBar
       .roundRect(-50, 50, 100, 10, 1)
-      .stroke({ width: 1, color: COLORS.blueShadow })
-      .fill(COLORS.blueShadow);
+      .stroke({ width: 1, color: COLORS.shadowGray })
+      .fill(COLORS.shadowGray);
     this.addChild(this.maxHpBar);
 
     const gradient = new FillGradient({
