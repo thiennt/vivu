@@ -45,6 +45,7 @@ export const COLORS = {
   grayDark: "#4B3F36", // → shadowGray
   blue: "#638599", // → dustyBlue
   blueLight: "#638599", // → dustyBlue
+  blueDark: "#4B3F36", // → shadowGray (darker blue)
   blueShadow: "#4B3F36", // → shadowGray
   gold: "#E3C787", // → paleGold
   red: "#C05C4A", // → clayRed
