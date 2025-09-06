@@ -1,6 +1,8 @@
 import { Container, Assets, Text, Graphics } from "pixi.js";
 import { FancyButton } from "@pixi/ui";
 import { COLORS } from "../app";
+import { navigation } from "../utils/navigation";
+import { CharacterScreen } from "../screens/CharacterScreen";
 
 export class Menu extends Container {
   private heroButton!: FancyButton;
@@ -19,8 +21,12 @@ export class Menu extends Container {
     // Character/Player Detail Button
     this.heroButton = this.createMenuButton("Character", Assets.get("home"));
     this.heroButton.onPress.connect(() => {
-      // navigation.showScreen(CharacterScreen);
-      console.log("Character screen coming soon!");
+      console.log("Character button clicked!");
+      try {
+        navigation.showScreen(CharacterScreen);
+      } catch (error) {
+        console.error("Error navigating to CharacterScreen:", error);
+      }
     });
     this.addChild(this.heroButton);
 
