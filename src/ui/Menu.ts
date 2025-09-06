@@ -8,12 +8,14 @@ import { HomeScreen } from '../screens/HomeScreen';
 import { DungeonScreen } from '../screens/DungeonScreen';
 import { CharacterScreen } from '../screens/CharacterScreen';
 import { BlocklastScreen } from '../screens/BlocklastScreen';
+import { HeroCollectionScreen } from '../screens/HeroCollectionScreen';
 
 
 export class Menu extends Container {
     private heroButton: FancyButton;
     private dungeonButton: FancyButton;
     private inventoryButton: FancyButton;
+    private collectionButton: FancyButton;
     private blocklastButton: FancyButton;
     
     constructor() {
@@ -30,6 +32,12 @@ export class Menu extends Container {
             //this.goToInventoryScreen();
         });
         this.addChild(this.inventoryButton);
+
+        this.collectionButton = this.createMenuButton("Collection", Assets.get('spellbook'));
+        this.collectionButton.on('click', () => {
+            this.goToCollectionScreen();
+        });
+        this.addChild(this.collectionButton);
 
         this.dungeonButton = this.createMenuButton("Dungeon", Assets.get('dungeon'));
         this.dungeonButton.on('click', () => {
@@ -97,6 +105,8 @@ export class Menu extends Container {
         this.heroButton.height = buttonHeight;
         this.inventoryButton.width = buttonWidth;
         this.inventoryButton.height = buttonHeight;
+        this.collectionButton.width = buttonWidth;
+        this.collectionButton.height = buttonHeight;
         this.dungeonButton.width = buttonWidth;
         this.dungeonButton.height = buttonHeight;
         this.blocklastButton.width = buttonWidth;
@@ -110,10 +120,13 @@ export class Menu extends Container {
         this.dungeonButton.x = width / 2;
         this.dungeonButton.y = 200;
 
-        this.blocklastButton.x = width / 2;
-        this.blocklastButton.y = 300;
+        this.collectionButton.x = width / 2;
+        this.collectionButton.y = 300;
 
-        this.y = (height - (this.heroButton.height * 4 + spacing * 3)) / 2;
+        this.blocklastButton.x = width / 2;
+        this.blocklastButton.y = 400;
+
+        this.y = (height - (this.heroButton.height * 5 + spacing * 4)) / 2;
     }
 
     public goToHeroScreen() {
@@ -126,6 +139,10 @@ export class Menu extends Container {
 
     public goToBlocklastScreen() {
         navigation.showScreen(BlocklastScreen);
+    }
+
+    public goToCollectionScreen() {
+        navigation.showScreen(HeroCollectionScreen);
     }
 
 }

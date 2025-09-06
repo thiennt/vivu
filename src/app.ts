@@ -45,6 +45,24 @@ export const COLORS = {
     blueLight: '#70B5F8',
     blueDark: '#1F2E4F',
     blueShadow: '#162546',
+
+    // Muted pastel colors for hero cards
+    pastelPink: '#F8D7DA',
+    pastelBlue: '#D1ECF1',
+    pastelGreen: '#D4EDDA',
+    pastelYellow: '#FFF3CD',
+    pastelPurple: '#E2E3F1',
+    pastelOrange: '#FADBD8',
+    
+    // Crypto-themed colors
+    bitcoinOrange: '#F7931A',
+    ethereumBlue: '#627EEA',
+    solanaGreen: '#9945FF',
+    
+    // Soft card backgrounds
+    cardBg: '#F8F9FC',
+    cardBorder: '#E3E7F0',
+    cardShadow: '#00000010',
 };
 
 
