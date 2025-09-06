@@ -16,7 +16,6 @@ import {
 } from "./SkillsAnimation";
 
 import { Stats } from "../utils/common";
-import { COLORS } from "../app";
 import gsap from "gsap";
 import { Monster } from "./Monster";
 import { Hero } from "./Hero";
@@ -64,8 +63,8 @@ export class Character extends Container {
     this.frame = new Graphics();
     this.frame
       .roundRect(-55, -60, 110, 140, 2)
-      .stroke({ width: 1, color: COLORS.shadowGray })
-      .fill(COLORS.RARITY[rarity.toUpperCase() as keyof typeof COLORS.RARITY]);
+      .stroke({ width: 1, color: 0x000000 })
+      .fill(0x000000);
     this.addChild(this.frame);
   }
 
@@ -82,8 +81,8 @@ export class Character extends Container {
     this.maxHpBar = new Graphics();
     this.maxHpBar
       .roundRect(-50, 50, 100, 10, 1)
-      .stroke({ width: 1, color: COLORS.shadowGray })
-      .fill(COLORS.shadowGray);
+      .stroke({ width: 1, color: 0x000000 })
+      .fill(0x000000);
     this.addChild(this.maxHpBar);
 
     const gradient = new FillGradient({

@@ -1,6 +1,5 @@
 import { Assets, Sprite, Text } from "pixi.js";
 import { Character } from "./Character";
-import { COLORS } from "../app";
 
 export class Monster extends Character {
   constructor(options: { rarity?: string; name: string }) {
@@ -24,7 +23,7 @@ export class Monster extends Character {
       text: "Monster",
       style: { 
         fontSize: 16, 
-        fill: COLORS.warmCream, 
+        fill: 0xffffff, 
         fontWeight: "bold",
         fontFamily: "'Fredoka', 'Baloo 2', sans-serif"
       },

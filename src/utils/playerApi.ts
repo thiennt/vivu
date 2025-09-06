@@ -7,7 +7,7 @@ import { PlayerData } from "./common";
  * @returns Promise<PlayerData>
  */
 export async function fetchPlayerData(
-  playerId: string = "mystic_fc_003",
+  playerId: string = "player_fc_001",
 ): Promise<PlayerData> {
   try {
     // TODO: Replace with actual API call to http://localhost:3000/players/${playerId}
@@ -32,5 +32,5 @@ export async function fetchPlayerData(
 export function getCurrentPlayerId(): string {
   // TODO: Get from config, session, or authentication
   // For now, use the first seeded player ID
-  return "mystic_fc_003";
+  return "player_fc_001";
 }

@@ -8,6 +8,15 @@ export type AnimationSet = {
   run?: Texture[];
 };
 
+export type Stats = {
+  hp: number;
+  maxHp: number;
+  atk: number;
+  def: number;
+  crit: number;
+  agi: number;
+};
+
 export type Player = {
   character_id: string;
   farcaster_id: string;
@@ -48,6 +57,7 @@ export type Character = {
 // Player data structure for API response
 export interface PlayerData {
   player: Player;
+  characters: Character[];
 }
 
 export interface Stage {

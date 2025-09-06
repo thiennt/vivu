@@ -1,10 +1,5 @@
 import {
   Application,
-  Assets,
-  Color,
-  FillGradient,
-  Graphics,
-  Sprite,
 } from "pixi.js";
 import { initAssets } from "./utils/assets";
 import { navigation } from "./utils/navigation";
@@ -12,59 +7,15 @@ import { getUrlParam } from "./utils/getUrlParams";
 import { initDevtools } from "@pixi/devtools";
 import { LoadScreen } from "./screens/LoadScreen";
 import { HomeScreen } from "./screens/HomeScreen";
-import { DungeonScreen } from "./screens/DungeonScreen";
-import { CharacterScreen } from "./screens/CharacterScreen";
-import { HeroCollectionScreen } from "./screens/HeroCollectionScreen";
 
 /** The PixiJS app Application instance, shared across the project */
 export const app = new Application();
-
-export const COLORS = {
-  // Rarity colors using the new palette
-  RARITY: {
-    NOVICE: 0x4b3f36, // Shadow Gray
-    APPRENTICE: 0x8aa174, // Moss Green
-    ADEPT: 0x638599, // Dusty Blue
-    EXPERT: 0xa38a6d, // Soft Brown (updated to use primary palette)
-    MASTER: 0xe3c787, // Pale Gold
-    GRANDMASTER: 0xc05c4a, // Clay Red
-  },
-
-  // Primary Palette (Earthy & Muted)
-  softBrown: "#A38A6D", // main background, borders
-  warmCream: "#F5ECD6", // card backgrounds, highlights
-  clayRed: "#C05C4A", // character outfits, accent
-  dustyBlue: "#638599", // character details, UI highlights
-  mossGreen: "#8AA174", // coins, gems, health bars
-  paleGold: "#E3C787", // coins, icons, level up
-  shadowGray: "#4B3F36", // outlines, text
-};
 
 initDevtools({ app });
 
 /** Set up a resize function for the app */
 function resize() {
-  const maxWidth = 500;
-  const windowWidth = Math.min(window.innerWidth, maxWidth);
-  const windowHeight = window.innerHeight;
-  const minWidth = 400;
-  const minHeight = 700;
-
-  // Calculate renderer and canvas sizes based on current dimensions
-  const scaleX = windowWidth < minWidth ? minWidth / windowWidth : 1;
-  const scaleY = windowHeight < minHeight ? minHeight / windowHeight : 1;
-  const scale = scaleX > scaleY ? scaleX : scaleY;
-  const width = windowWidth * scale;
-  const height = windowHeight * scale;
-
-  // Update canvas style dimensions and scroll window up to avoid issues on mobile resize
-  app.renderer.canvas.style.width = `${windowWidth}px`;
-  app.renderer.canvas.style.height = `${windowHeight}px`;
-  window.scrollTo(0, 0);
-
-  // Update renderer  and navigation screens dimensions
-  app.renderer.resize(width, height);
-  navigation.resize(width, height);
+  
 }
 
 /** Fire when document visibility changes - lose or regain focus */
@@ -83,14 +34,13 @@ async function init() {
   // Initialize app
   await app.init({
     resolution: Math.max(window.devicePixelRatio, 2),
-    background: COLORS.shadowGray,
   });
 
   // Add pixi canvas element (app.canvas) to the document's body
   document.body.appendChild(app.canvas);
 
   // Whenever the window resizes, call the 'resize' function
-  window.addEventListener("resize", resize);
+  //window.addEventListener("resize", resize);
 
   // Trigger the first resize
   resize();
