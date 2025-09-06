@@ -3,6 +3,9 @@ import { FancyButton } from "@pixi/ui";
 import { COLORS } from "../app";
 import { navigation } from "../utils/navigation";
 import { CharacterScreen } from "../screens/CharacterScreen";
+import { HeroCollectionScreen } from "../screens/HeroCollectionScreen";
+import { DungeonScreen } from "../screens/DungeonScreen";
+import { FormationScreen } from "../screens/FormationScreen";
 
 export class Menu extends Container {
   private heroButton!: FancyButton;
@@ -33,24 +36,36 @@ export class Menu extends Container {
     // Characters Collection Button  
     this.collectionButton = this.createMenuButton("Collection", Assets.get("inventory"));
     this.collectionButton.onPress.connect(() => {
-      // navigation.showScreen(HeroCollectionScreen);
-      console.log("Collection screen coming soon!");
+      console.log("Collection button clicked!");
+      try {
+        navigation.showScreen(HeroCollectionScreen);
+      } catch (error) {
+        console.error("Error navigating to HeroCollectionScreen:", error);
+      }
     });
     this.addChild(this.collectionButton);
 
     // Dungeon Button
     this.dungeonButton = this.createMenuButton("Dungeon", Assets.get("dungeon"));
     this.dungeonButton.onPress.connect(() => {
-      // navigation.showScreen(DungeonScreen);
-      console.log("Dungeon screen coming soon!");
+      console.log("Dungeon button clicked!");
+      try {
+        navigation.showScreen(DungeonScreen);
+      } catch (error) {
+        console.error("Error navigating to DungeonScreen:", error);
+      }
     });
     this.addChild(this.dungeonButton);
 
     // Formation Button
     this.formationButton = this.createMenuButton("Formation", Assets.get("plus"));
     this.formationButton.onPress.connect(() => {
-      // navigation.showScreen(FormationScreen);
-      console.log("Formation screen coming soon!");
+      console.log("Formation button clicked!");
+      try {
+        navigation.showScreen(FormationScreen);
+      } catch (error) {
+        console.error("Error navigating to FormationScreen:", error);
+      }
     });
     this.addChild(this.formationButton);
 
