@@ -553,53 +553,53 @@ export class CharacterScreen extends Container {
   }
 
   public resize(width: number, height: number) {
-    this.backIcon.x = width - 50;
-    this.backIcon.y = 50;
+    this.backIcon.x = width - 60; // Changed from width - 50 to add 10px padding
+    this.backIcon.y = 60; // Changed from 50 to add 10px padding
 
     const characterLine = height - 800;
 
-    // === AVATAR PANEL SECTION ===
-    this.drawPanel(this.levelArea, 10, characterLine, width - 20, height - 110);
+    // === AVATAR PANEL SECTION === (Added 10px padding)
+    this.drawPanel(this.levelArea, 20, characterLine + 10, width - 40, height - 130); // Adjusted for 10px padding
 
-    this.characterFrame.x = 110;
-    this.characterFrame.y = characterLine + 90;
+    this.characterFrame.x = 120; // Added 10px padding
+    this.characterFrame.y = characterLine + 100; // Added 10px padding
 
-    // === NAME/CLASS/LEVEL SECTION ===
-    this.levelLabel.x = 220;
-    this.levelLabel.y = characterLine + 20;
-    this.levelText.x = width - 40;
-    this.levelText.y = characterLine + 20;
+    // === NAME/CLASS/LEVEL SECTION === (Added 10px padding)
+    this.levelLabel.x = 230; // Added 10px padding
+    this.levelLabel.y = characterLine + 30; // Added 10px padding
+    this.levelText.x = width - 50; // Added 10px padding
+    this.levelText.y = characterLine + 30; // Added 10px padding
 
-    this.expLabel.x = 220;
-    this.expLabel.y = characterLine + 50;
-    this.expText.x = width - 40;
-    this.expText.y = characterLine + 50;
+    this.expLabel.x = 230; // Added 10px padding
+    this.expLabel.y = characterLine + 60; // Added 10px padding
+    this.expText.x = width - 50; // Added 10px padding
+    this.expText.y = characterLine + 60; // Added 10px padding
 
-    this.awakingLabel.x = 220;
-    this.awakingLabel.y = characterLine + 80;
-    this.awakingText.x = width - 40;
-    this.awakingText.y = characterLine + 80;
+    this.awakingLabel.x = 230; // Added 10px padding
+    this.awakingLabel.y = characterLine + 90; // Added 10px padding
+    this.awakingText.x = width - 50; // Added 10px padding
+    this.awakingText.y = characterLine + 90; // Added 10px padding
 
-    // === SKILL/EQUIPMENT PREVIEW ===
+    // === SKILL/EQUIPMENT PREVIEW === (Added 10px padding)
     this.skillIcon1
       .clear()
-      .roundRect(220, characterLine + 110, 50, 50, 10)
+      .roundRect(230, characterLine + 120, 50, 50, 10) // Added 10px padding
       .fill(COLORS.shadowGray);
 
     this.skillIcon2
       .clear()
-      .roundRect(280, characterLine + 110, 50, 50, 10)
+      .roundRect(290, characterLine + 120, 50, 50, 10) // Added 10px padding
       .fill(COLORS.shadowGray);
 
-    this.skillButton.x = 370;
-    this.skillButton.y = characterLine + 135;
+    this.skillButton.x = 380; // Added 10px padding
+    this.skillButton.y = characterLine + 145; // Added 10px padding
 
-    // === POINT ALLOCATION SECTION ===
+    // === POINT ALLOCATION SECTION === (Added 10px padding)
     const pointLine = characterLine + 200;
     const pointX = width / 2;
 
-    // Visual separator line for point allocation section
-    this.drawLine(this.pointPanel, 40, pointLine, width - 80, 1);
+    // Visual separator line for point allocation section (Added 10px padding)
+    this.drawLine(this.pointPanel, 50, pointLine, width - 100, 1); // Adjusted for 10px padding
 
     this.pointsLabel.x = pointX + 150;
     this.pointsLabel.y = pointLine + 15;
@@ -638,8 +638,8 @@ export class CharacterScreen extends Container {
     this.pointApplyBtn.x = pointX + 120;
     this.pointApplyBtn.y = pointLine + 180;
 
-    // === STAT DISPLAY SECTION ===
-    const statLineX = 40;
+    // === STAT DISPLAY SECTION === (Added 10px padding)
+    const statLineX = 50; // Changed from 40 to 50 for 10px padding
     const statLineY = pointLine;
 
     // Left column stats with better visual grouping
@@ -673,11 +673,11 @@ export class CharacterScreen extends Container {
     this.dodgeRateText.x = statLineX + 170;
     this.dodgeRateText.y = statLineY + 200;
 
-    // === EQUIPMENT SECTION ===
+    // === EQUIPMENT SECTION === (Added 10px padding)
     const equipLineY = height - 360;
 
-    // Visual separator for equipment section
-    this.drawLine(this.equipTabPanel, 30, equipLineY + 40, width - 70, 1);
+    // Visual separator for equipment section (Added 10px padding)
+    this.drawLine(this.equipTabPanel, 40, equipLineY + 40, width - 90, 1); // Adjusted for 10px padding
 
     this.equipLabel.x = (width - this.equipLabel.width) / 2;
     this.equipLabel.y = equipLineY + 10;

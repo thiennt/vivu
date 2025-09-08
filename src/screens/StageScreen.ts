@@ -32,8 +32,8 @@ export class StageScreen extends Container {
     this.backIcon.anchor.set(0.5, 0.5);
     this.backIcon.interactive = true;
     this.backIcon.cursor = "pointer";
-    this.backIcon.x = navigation.width - 50;
-    this.backIcon.y = 50;
+    this.backIcon.x = navigation.width - 60; // Changed from 50 to add 10px padding
+    this.backIcon.y = 60; // Changed from 50 to add 10px padding
     this.backIcon.on("click", () => {
       navigation.showScreen(HomeScreen);
     });
@@ -63,10 +63,10 @@ export class StageScreen extends Container {
     for (let index = 0; index < stageData.stages.length; index++) {
       const stageSprite = new Sprite(Assets.get(`stage_1_thumbnail.jpg`));
       stageSprite.anchor.set(0.5);
-      stageSprite.width = navigation.width - 40;
+      stageSprite.width = navigation.width - 60; // Changed from 40 to 60 for 10px padding on each side
       stageSprite.height = 200;
       stageSprite.x = navigation.width / 2;
-      stageSprite.y = 200 + index * 220;
+      stageSprite.y = 210 + index * 220; // Changed from 200 to 210 to add 10px padding
       stageSprite.interactive = true;
       stageSprite.cursor = "pointer";
       stageSprite.on("click", () => {

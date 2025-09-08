@@ -33,7 +33,7 @@ export class HeroCollectionScreen extends Container {
   private initBackButton() {
     this.backIcon = Sprite.from(Assets.get("back"));
     this.backIcon.anchor.set(0.5, 0.5);
-    this.backIcon.position.set(40, 40);
+    this.backIcon.position.set(50, 50); // Changed from 40,40 to add 10px padding
     this.backIcon.interactive = true;
     this.backIcon.cursor = "pointer";
     this.backIcon.on("click", () => {
@@ -55,7 +55,7 @@ export class HeroCollectionScreen extends Container {
       },
     });
     this.titleText.anchor.set(0.5);
-    this.titleText.position.set(400, 50); // Will be adjusted in resize
+    this.titleText.position.set(400, 60); // Changed from 50 to 60 to add 10px padding
     this.addChild(this.titleText);
 
     // Subtitle
@@ -69,7 +69,7 @@ export class HeroCollectionScreen extends Container {
       },
     });
     this.subtitleText.anchor.set(0.5);
-    this.subtitleText.position.set(400, 80); // Will be adjusted in resize
+    this.subtitleText.position.set(400, 90); // Changed from 80 to 90 to add 10px padding
     this.addChild(this.subtitleText);
   }
 
@@ -149,9 +149,9 @@ export class HeroCollectionScreen extends Container {
     heroDataArray.forEach((heroData) => {
       const heroCard = new HeroCard(heroData);
 
-      // Calculate position
-      const x = currentCol * cardSpacing + 60;
-      const y = currentRow * 180 + 120;
+      // Calculate position with 10px padding
+      const x = currentCol * cardSpacing + 70; // Changed from 60 to 70 to add 10px padding
+      const y = currentRow * 180 + 130; // Changed from 120 to 130 to add 10px padding
 
       heroCard.position.set(x, y);
 
@@ -234,13 +234,14 @@ export class HeroCollectionScreen extends Container {
     this.background.width = width;
     this.background.height = height;
 
-    // Adjust title position
-    this.titleText.position.set(width / 2, 50);
-    this.subtitleText.position.set(width / 2, 80);
+    // Adjust title position with 10px padding
+    this.titleText.position.set(width / 2, 60);
+    this.subtitleText.position.set(width / 2, 90);
 
-    // Center the cards container
+    // Center the cards container with 10px padding
     const cardAreaWidth = 4 * 140; // 4 cards per row * 140 spacing
-    this.scrollContainer.position.set((width - cardAreaWidth) / 2, 0);
+    const paddedX = Math.max(10, (width - cardAreaWidth) / 2); // Ensure minimum 10px padding
+    this.scrollContainer.position.set(paddedX, 0);
   }
 
   public update(_time: Ticker) {

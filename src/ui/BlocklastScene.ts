@@ -416,12 +416,12 @@ export class BlocklastScene extends Container {
   }
 
   public resize(width: number, height: number): void {
-    // Adjust positioning based on screen size if needed
-    const centerX = width / 2;
+    // Adjust positioning based on screen size with 10px padding
+    const centerX = (width - 20) / 2; // Account for 10px padding on each side
 
-    // Center the board
+    // Center the board with padding
     this.boardContainer.x =
-      centerX - (BOARD_SIZE * this.cellSize) / 2 - this.boardOffsetX;
+      centerX - (BOARD_SIZE * this.cellSize) / 2 - this.boardOffsetX + 10; // Add 10px left padding
   }
 
   public update(time: Ticker): void {

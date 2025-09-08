@@ -105,7 +105,7 @@ export class Menu extends Container {
   public show() {}
 
   public resize(width: number, height: number) {
-    this.x = 0;
+    this.x = 10; // Add 10px left padding
 
     const buttonWidth = 200;
     const buttonHeight = 50;
@@ -122,21 +122,24 @@ export class Menu extends Container {
     this.blocklastButton.width = buttonWidth;
     this.blocklastButton.height = buttonHeight;
 
-    this.heroButton.x = width / 2;
+    // Center buttons horizontally with padding consideration
+    const centerX = (width - 20) / 2; // Account for 10px padding on each side
+    this.heroButton.x = centerX;
     this.heroButton.y = 0;
-    this.inventoryButton.x = width / 2;
+    this.inventoryButton.x = centerX;
     this.inventoryButton.y = 100;
 
-    this.dungeonButton.x = width / 2;
+    this.dungeonButton.x = centerX;
     this.dungeonButton.y = 200;
 
-    this.collectionButton.x = width / 2;
+    this.collectionButton.x = centerX;
     this.collectionButton.y = 300;
 
-    this.blocklastButton.x = width / 2;
+    this.blocklastButton.x = centerX;
     this.blocklastButton.y = 400;
 
-    this.y = (height - (this.heroButton.height * 5 + spacing * 4)) / 2;
+    // Center vertically with 10px top and bottom padding
+    this.y = Math.max(10, (height - (this.heroButton.height * 5 + spacing * 4)) / 2);
   }
 
   public goToHeroScreen() {

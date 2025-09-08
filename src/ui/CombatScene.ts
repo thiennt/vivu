@@ -55,8 +55,8 @@ export class CombatScene extends Container {
     this.backIcon.anchor.set(0.5, 0.5);
     this.backIcon.interactive = true;
     this.backIcon.cursor = "pointer";
-    this.backIcon.x = navigation.width - 50;
-    this.backIcon.y = 50;
+    this.backIcon.x = navigation.width - 60; // Changed from 50 to add 10px padding
+    this.backIcon.y = 60; // Changed from 50 to add 10px padding
     this.backIcon.on("click", () => {
       navigation.showScreen(HomeScreen);
     });
@@ -329,8 +329,9 @@ export class CombatScene extends Container {
 
   public resize(width: number, height: number) {
     const centerY = height / 2;
-    this.roundNote.position.set(width / 2, 50);
+    this.roundNote.position.set(width / 2, 60); // Changed from 50 to 60 for 10px padding
 
+    // Adjust character positions to respect 10px padding
     this.player1.position.set(width / 2 - 100, centerY + 150);
     this.player2.position.set(width / 2 + 100, centerY + 150);
     this.player3.position.set(width / 2 - 100, centerY + 300);
