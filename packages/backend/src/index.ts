@@ -13,10 +13,17 @@ app.use('/*', cors({
     if (!origin) return true;
     
     const clientUrl = process.env.CLIENT_URL || 'http://localhost:5173';
-    const allowedOrigins = [
-      clientUrl,
-      clientUrl.replace('localhost', '127.0.0.1')
-    ];
+    const allowedOrigins = [clientUrl];
+    
+    // If CLIENT_URL uses localhost, also allow the 127.0.0.1 variant
+    if (clientUrl.includes('localhost')) {
+      allowedOrigins.push(clientUrl.replace('localhost', '127.0.0.1'));
+    }
+    // If CLIENT_URL uses 127.0.0.1, also allow the localhost variant
+    if (clientUrl.includes('127.0.0.1')) {
+      allowedOrigins.push(clientUrl.replace('127.0.0.1', 'localhost'));
+    }
+    
     return allowedOrigins.includes(origin) ? origin : false;
   },
   credentials: false,
