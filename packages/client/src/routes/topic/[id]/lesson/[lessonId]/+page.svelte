@@ -60,8 +60,7 @@
 	async function generateLessonAudio() {
 		isLoadingAudio = true;
 		try {
-			const text = lesson.content;
-			const audioUrl = await generateSpeech(text);
+			const audioUrl = await generateSpeech(topic.id, lesson.id);
 
 			console.log('Generated audio URL:', audioUrl);
 
@@ -130,7 +129,7 @@
 		playingWordIndex = index;
 
 		try {
-			const audioUrl = await generateSpeech(vocab.word);
+			const audioUrl = await generateSpeech(topic.id, lesson.id, index);
 
 			if (!audioUrl) {
 				throw new Error('Failed to generate word audio');
