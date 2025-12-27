@@ -1,6 +1,6 @@
 <script>
 	let { data } = $props();
-	const { topic } = data;
+	let topic = $derived(data.topic);
 </script>
 
 <div class="container">
@@ -19,7 +19,7 @@
 	<div class="lessons-list">
 		<h2>Lessons</h2>
 		{#each topic.lessons as lesson, index}
-			<div class="lesson-card">
+			<a href="/topic/{topic.id}/lesson/{lesson.id}" class="lesson-card">
 				<div class="lesson-number">Lesson {index + 1}</div>
 				<div class="lesson-content">
 					<h3>{lesson.title}</h3>
@@ -27,13 +27,13 @@
 					<div class="vocabulary-section">
 						<h4>Vocabulary ({lesson.vocabulary.length} words)</h4>
 						<div class="vocabulary-list">
-							{#each lesson.vocabulary as word}
-								<span class="vocabulary-item">{word}</span>
+							{#each lesson.vocabulary as vocab}
+								<span class="vocabulary-item">{vocab.word}</span>
 							{/each}
 						</div>
 					</div>
 				</div>
-			</div>
+			</a>
 		{/each}
 	</div>
 </div>
@@ -111,6 +111,15 @@
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 		display: flex;
 		gap: 1.5rem;
+		text-decoration: none;
+		color: inherit;
+		transition: all 0.2s;
+	}
+
+	.lesson-card:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+		cursor: pointer;
 	}
 
 	.lesson-number {
