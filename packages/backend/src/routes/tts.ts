@@ -145,14 +145,26 @@ router.post('/generate', async (c) => {
       return c.json({ error: 'topicId and lessonId are required' }, 400);
     }
 
+    // Validate that topicId and lessonId are valid numbers
+    const numericTopicId = Number(topicId);
+    const numericLessonId = Number(lessonId);
+    
+    if (!Number.isInteger(numericTopicId) || numericTopicId < 1) {
+      return c.json({ error: 'topicId must be a positive integer' }, 400);
+    }
+    
+    if (!Number.isInteger(numericLessonId) || numericLessonId < 1) {
+      return c.json({ error: 'lessonId must be a positive integer' }, 400);
+    }
+
     // Find topic
-    const topic = topicsData.topics.find((t) => t.id === Number(topicId));
+    const topic = topicsData.topics.find((t) => t.id === numericTopicId);
     if (!topic) {
       return c.json({ error: 'Topic not found' }, 404);
     }
 
     // Find lesson
-    const lesson = topic.lessons.find((l) => l.id === Number(lessonId));
+    const lesson = topic.lessons.find((l) => l.id === numericLessonId);
     if (!lesson) {
       return c.json({ error: 'Lesson not found' }, 404);
     }
@@ -162,13 +174,22 @@ router.post('/generate', async (c) => {
     let lessonTitle: string;
 
     if (wordIndex !== undefined && wordIndex !== null) {
-      // Generate audio for a specific vocabulary word
-      const vocab = lesson.vocabulary[Number(wordIndex)];
-      if (!vocab) {
+      // Validate wordIndex
+      const numericWordIndex = Number(wordIndex);
+      
+      if (!Number.isInteger(numericWordIndex) || numericWordIndex < 0) {
+        return c.json({ error: 'wordIndex must be a non-negative integer' }, 400);
+      }
+      
+      // Check bounds
+      if (numericWordIndex >= lesson.vocabulary.length) {
         return c.json({ error: 'Vocabulary word not found' }, 404);
       }
+      
+      // Generate audio for a specific vocabulary word
+      const vocab = lesson.vocabulary[numericWordIndex];
       text = vocab.word;
-      lessonTitle = `${sanitizeFilename(lesson.title)}_word_${wordIndex}_${sanitizeFilename(vocab.word)}`;
+      lessonTitle = `${sanitizeFilename(lesson.title)}_word_${numericWordIndex}_${sanitizeFilename(vocab.word)}`;
     } else {
       // Generate audio for the entire lesson content
       text = lesson.content;
