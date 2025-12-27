@@ -13,10 +13,19 @@
 	let audio = $state(null);
 	let isLoadingAudio = $state(false);
 	let playingWordIndex = $state(null);
-	let wordAudios = $state({});
 	
 	// Cache key for lesson audio
 	const lessonAudioKey = `lesson_audio_${lesson.id}`;
+	
+	// State for error messages
+	let errorMessage = $state(null);
+	
+	// Helper function to cancel speech synthesis
+	function cancelSpeechSynthesis() {
+		if (window.speechSynthesis && window.speechSynthesis.speaking) {
+			window.speechSynthesis.cancel();
+		}
+	}
 	
 	// Initialize audio element
 	onMount(() => {
@@ -50,9 +59,7 @@
 		
 		if (isPlaying) {
 			// If using browser TTS, cancel it
-			if (window.speechSynthesis && window.speechSynthesis.speaking) {
-				window.speechSynthesis.cancel();
-			}
+			cancelSpeechSynthesis();
 			audio.pause();
 			isPlaying = false;
 		} else {
@@ -103,7 +110,8 @@
 			}
 		} catch (error) {
 			console.error('Error generating audio:', error);
-			alert('Failed to generate audio. Please try again.');
+			errorMessage = 'Failed to generate audio. Please try again.';
+			setTimeout(() => errorMessage = null, 3000);
 		} finally {
 			isLoadingAudio = false;
 		}
@@ -151,6 +159,32 @@
 		
 		audio.currentTime = newTime;
 		currentTime = newTime;
+	}
+	
+	// Handle keyboard navigation for progress bar
+	function handleProgressKeydown(event) {
+		if (!audio || !duration) return;
+		
+		const step = duration * 0.05; // 5% of duration
+		
+		switch(event.key) {
+			case 'ArrowLeft':
+				event.preventDefault();
+				audio.currentTime = Math.max(0, currentTime - step);
+				break;
+			case 'ArrowRight':
+				event.preventDefault();
+				audio.currentTime = Math.min(duration, currentTime + step);
+				break;
+			case 'Home':
+				event.preventDefault();
+				audio.currentTime = 0;
+				break;
+			case 'End':
+				event.preventDefault();
+				audio.currentTime = duration;
+				break;
+		}
 	}
 	
 	// Play individual word pronunciation
@@ -233,6 +267,13 @@
 		<a href="/topic/{topic.id}">← {topic.title}</a>
 	</nav>
 
+	<!-- Error message display -->
+	{#if errorMessage}
+		<div class="error-message">
+			{errorMessage}
+		</div>
+	{/if}
+
 	<div class="lesson-header">
 		<div class="header-content">
 			<h1>{lesson.title}</h1>
@@ -275,6 +316,7 @@
 			<button 
 				class="progress-bar" 
 				onclick={seekAudio}
+				onkeydown={handleProgressKeydown}
 				aria-label="Seek audio"
 				role="slider"
 				aria-valuemin="0"
@@ -358,6 +400,28 @@
 	.separator {
 		color: white;
 		opacity: 0.7;
+	}
+
+	.error-message {
+		background: #ff4444;
+		color: white;
+		padding: 1rem;
+		border-radius: 8px;
+		margin-bottom: 1rem;
+		text-align: center;
+		font-weight: 500;
+		animation: slideDown 0.3s ease-out;
+	}
+
+	@keyframes slideDown {
+		from {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 
 	.lesson-header {

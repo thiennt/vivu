@@ -14,15 +14,10 @@ export async function POST({ request }) {
 		
 		// For now, we'll use the Web Speech API on the client side
 		// This is a placeholder response that signals the client to use browser TTS
-		// In production, you would integrate with Gemini's text-to-speech API here
+		// In production, you would integrate with Google Cloud Text-to-Speech API
 		
-		// Example Gemini API integration (commented out - requires API key):
+		// Example Google Cloud Text-to-Speech API integration (requires API key):
 		/*
-		const { GoogleGenerativeAI } = await import('@google/generative-ai');
-		const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-		
-		// Note: Gemini doesn't have direct TTS API yet
-		// You would need to use Google Cloud Text-to-Speech API instead
 		const response = await fetch('https://texttospeech.googleapis.com/v1/text:synthesize', {
 			method: 'POST',
 			headers: {
@@ -43,6 +38,8 @@ export async function POST({ request }) {
 		
 		const data = await response.json();
 		const audioData = `data:audio/mp3;base64,${data.audioContent}`;
+		
+		return json({ audioData });
 		*/
 		
 		// Placeholder response - client will use browser TTS
