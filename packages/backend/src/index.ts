@@ -8,7 +8,17 @@ const app = new Hono();
 
 // Enable CORS for client
 app.use('/*', cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173',
+  origin: (origin) => {
+    // Allow same-origin requests (origin is undefined)
+    if (!origin) return true;
+    
+    // Read allowed origins from environment variable (comma-separated list)
+    // Falls back to localhost:5173 and 127.0.0.1:5173 for development
+    const allowedOriginsEnv = process.env.ALLOWED_ORIGINS || 'http://localhost:5173,http://127.0.0.1:5173';
+    const allowedOrigins = allowedOriginsEnv.split(',').map(o => o.trim()).filter(o => o);
+    
+    return allowedOrigins.includes(origin) ? origin : false;
+  },
   credentials: false,
 }));
 
