@@ -1,13 +1,15 @@
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000';
 
 /**
- * Generate audio from text using backend API
- * @param {string} text - Text to convert to speech
+ * Generate audio from topicId, lessonId, and optional wordIndex using backend API
+ * @param {number} topicId - ID of the topic
+ * @param {number} lessonId - ID of the lesson
+ * @param {number} [wordIndex] - Optional index of the vocabulary word
  * @returns {Promise<string>} - URL to the audio file
  */
-export async function generateSpeech(text) {
-	if (!text) {
-		console.error('No text provided for speech generation');
+export async function generateSpeech(topicId, lessonId, wordIndex = undefined) {
+	if (topicId === undefined || lessonId === undefined) {
+		console.error('topicId and lessonId are required for speech generation');
 		return '';
 	}
 
@@ -17,7 +19,7 @@ export async function generateSpeech(text) {
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify({ text }),
+			body: JSON.stringify({ topicId, lessonId, wordIndex }),
 		});
 
 		if (!response.ok) {

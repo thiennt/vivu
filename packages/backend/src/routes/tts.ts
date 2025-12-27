@@ -9,6 +9,7 @@ import { dirname } from 'path';
 import 'dotenv/config';
 
 import wav from 'wav';
+import topicsData from '../data/topics.json' with { type: 'json' };
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -132,19 +133,71 @@ async function generateAndSaveAudio(text: string, lessonTitle?: string): Promise
 
 /**
  * POST /api/tts/generate
- * Generate TTS audio from text
+ * Generate TTS audio from topicId, lessonId, and optional wordIndex
  */
 router.post('/generate', async (c) => {
   try {
     const body = await c.req.json();
-    const { text, lessonTitle } = body;
+    const { topicId, lessonId, wordIndex } = body;
 
-    if (!text) {
-      return c.json({ error: 'Text is required' }, 400);
+    // Validate required parameters
+    if (topicId === undefined || lessonId === undefined) {
+      return c.json({ error: 'topicId and lessonId are required' }, 400);
     }
 
-    // Use sanitized lesson title for filename if provided
-    let baseName = lessonTitle ? sanitizeFilename(lessonTitle) : hashText(text);
+    // Validate that topicId and lessonId are valid numbers
+    const numericTopicId = Number(topicId);
+    const numericLessonId = Number(lessonId);
+    
+    if (!Number.isInteger(numericTopicId) || numericTopicId < 1) {
+      return c.json({ error: 'topicId must be a positive integer' }, 400);
+    }
+    
+    if (!Number.isInteger(numericLessonId) || numericLessonId < 1) {
+      return c.json({ error: 'lessonId must be a positive integer' }, 400);
+    }
+
+    // Find topic
+    const topic = topicsData.topics.find((t) => t.id === numericTopicId);
+    if (!topic) {
+      return c.json({ error: 'Topic not found' }, 404);
+    }
+
+    // Find lesson
+    const lesson = topic.lessons.find((l) => l.id === numericLessonId);
+    if (!lesson) {
+      return c.json({ error: 'Lesson not found' }, 404);
+    }
+
+    // Determine text and filename based on wordIndex
+    let text: string;
+    let lessonTitle: string;
+
+    if (wordIndex !== undefined && wordIndex !== null) {
+      // Validate wordIndex
+      const numericWordIndex = Number(wordIndex);
+      
+      if (!Number.isInteger(numericWordIndex) || numericWordIndex < 0) {
+        return c.json({ error: 'wordIndex must be a non-negative integer' }, 400);
+      }
+      
+      // Check bounds
+      if (numericWordIndex >= lesson.vocabulary.length) {
+        return c.json({ error: 'Vocabulary word not found' }, 404);
+      }
+      
+      // Generate audio for a specific vocabulary word
+      const vocab = lesson.vocabulary[numericWordIndex];
+      text = vocab.word;
+      lessonTitle = `${sanitizeFilename(lesson.title)}_word_${numericWordIndex}_${sanitizeFilename(vocab.word)}`;
+    } else {
+      // Generate audio for the entire lesson content
+      text = lesson.content;
+      lessonTitle = sanitizeFilename(lesson.title);
+    }
+
+    // Use sanitized lesson title for filename
+    let baseName = lessonTitle;
     if (!baseName) baseName = hashText(text);
     const mp3Filename = `${baseName}.mp3`;
     const wavFilename = `${baseName}.wav`;
