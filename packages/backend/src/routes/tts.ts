@@ -37,10 +37,19 @@ function hashText(text: string): string {
 }
 
 /**
+ * Validate if API key is properly configured
+ */
+function isValidApiKey(key: string | undefined): boolean {
+  if (!key) return false;
+  const invalidKeys = ['your_api_key_here', 'test_key_here', 'YOUR_API_KEY', ''];
+  return !invalidKeys.includes(key) && key.length > 10;
+}
+
+/**
  * Generate audio using Gemini API and save to file
  */
 async function generateAndSaveAudio(text: string): Promise<string> {
-  if (!GEMINI_API_KEY || GEMINI_API_KEY === 'your_api_key_here') {
+  if (!isValidApiKey(GEMINI_API_KEY)) {
     throw new Error('Gemini API key not configured');
   }
 
