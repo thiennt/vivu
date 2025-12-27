@@ -23,7 +23,7 @@ export async function POST({ request }) {
 		
 		try {
 			// Initialize the Gemini API
-			const ai = new GoogleGenAI({});
+			const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 			
 			// Generate audio using the Gemini API
 			const response = await ai.models.generateContent({
