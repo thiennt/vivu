@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit';
-import { GoogleGenerativeAI } from '@google/generative-ai';
+import { GoogleGenAI } from '@google/genai';
 
 // Get API key from environment variable (if available)
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
@@ -23,7 +23,7 @@ export async function POST({ request }) {
 		
 		try {
 			// Initialize the Gemini API
-			const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
+			const genAI = new GoogleGenAI(GEMINI_API_KEY);
 			
 			// Use the Gemini model with audio generation capabilities
 			const model = genAI.getGenerativeModel({
