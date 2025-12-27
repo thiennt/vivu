@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import { getSpeechAndCache } from '$lib/tts.js';
+	import { generateSpeech } from '$lib/tts-client.js';
 	
 	let { data } = $props();
 	let topic = $derived(data.topic);
@@ -18,13 +18,7 @@
 	// State for error messages
 	let errorMessage = $state(null);
 	
-	// Store API key fetched from server
-	let apiKey = $state(null);
-	
-	// Store object URLs for cleanup
-	let audioObjectUrls = $state([]);
-	
-	// Initialize audio element and fetch API key
+	// Initialize audio element
 	onMount(async () => {
 		audio = new Audio();
 		audio.addEventListener('loadedmetadata', () => {
@@ -37,24 +31,7 @@
 			isPlaying = false;
 		});
 		
-		// Fetch API key from server
-		try {
-			const response = await fetch('/api/tts-config');
-			
-			if (response.ok) {
-				const data = await response.json();
-				apiKey = data.apiKey;
-			} else {
-				console.error('Failed to fetch API key');
-			}
-		} catch (error) {
-			console.error('Error fetching API key:', error);
-		}
-		
 		return () => {
-			// Cleanup object URLs to prevent memory leaks
-			audioObjectUrls.forEach(url => URL.revokeObjectURL(url));
-			
 			if (audio) {
 				audio.pause();
 				audio.src = '';
@@ -79,25 +56,16 @@
 		}
 	}
 	
-	// Generate lesson audio using Gemini API with caching
+	// Generate lesson audio using backend API
 	async function generateLessonAudio() {
-		if (!apiKey) {
-			errorMessage = 'API key not available. Please check server configuration.';
-			setTimeout(() => errorMessage = null, 3000);
-			return;
-		}
-
 		isLoadingAudio = true;
 		try {
 			const text = lesson.content;
-			const audioUrl = await getSpeechAndCache(text, apiKey);
+			const audioUrl = await generateSpeech(text);
 			
 			if (!audioUrl) {
 				throw new Error('Failed to generate audio');
 			}
-			
-			// Store URL for cleanup
-			audioObjectUrls = [...audioObjectUrls, audioUrl];
 			
 			// Play the audio
 			audio.src = audioUrl;
@@ -153,23 +121,14 @@
 	
 	// Play individual word pronunciation
 	async function playWord(vocab, index) {
-		if (!apiKey) {
-			errorMessage = 'API key not available. Please check server configuration.';
-			setTimeout(() => errorMessage = null, 3000);
-			return;
-		}
-
 		playingWordIndex = index;
 		
 		try {
-			const audioUrl = await getSpeechAndCache(vocab.word, apiKey);
+			const audioUrl = await generateSpeech(vocab.word);
 			
 			if (!audioUrl) {
 				throw new Error('Failed to generate word audio');
 			}
-			
-			// Store URL for cleanup
-			audioObjectUrls = [...audioObjectUrls, audioUrl];
 			
 			// Play word audio
 			const wordAudio = new Audio(audioUrl);

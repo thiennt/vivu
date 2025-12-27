@@ -31,3 +31,6 @@ dist-ssr
 # SvelteKit
 .svelte-kit
 build
+
+# Backend audio files
+packages/backend/audio

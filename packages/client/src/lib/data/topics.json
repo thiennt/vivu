@@ -1,0 +1,279 @@
+{
+  "topics": [
+    {
+      "id": 1,
+      "title": "Basic Greetings",
+      "description": "Learn how to greet people in English",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Hello and Goodbye",
+          "content": "Every morning, Tom walks to the park and says hello to his friends. They sit on the bench and talk about their day. When it is time to go home, Tom says goodbye to everyone. He waves his hand and smiles at them. See you later, Tom tells his friends before he leaves.",
+          "translation": "Mỗi sáng, Tom đi bộ đến công viên và chào hỏi bạn bè. Họ ngồi trên ghế và nói chuyện về ngày của mình. Khi đến giờ về nhà, Tom nói tạm biệt với mọi người. Anh ấy vẫy tay và mỉm cười với họ. Hẹn gặp lại, Tom nói với bạn bè trước khi rời đi.",
+          "vocabulary": [
+            {"word": "Hello", "ipa": "/həˈloʊ/", "meaning": "Xin chào"},
+            {"word": "Hi", "ipa": "/haɪ/", "meaning": "Chào (thân mật)"},
+            {"word": "Good morning", "ipa": "/ɡʊd ˈmɔːrnɪŋ/", "meaning": "Chào buổi sáng"},
+            {"word": "Good afternoon", "ipa": "/ɡʊd ˌæftərˈnuːn/", "meaning": "Chào buổi chiều"},
+            {"word": "Good evening", "ipa": "/ɡʊd ˈiːvnɪŋ/", "meaning": "Chào buổi tối"},
+            {"word": "Goodbye", "ipa": "/ɡʊdˈbaɪ/", "meaning": "Tạm biệt"},
+            {"word": "See you later", "ipa": "/siː juː ˈleɪtər/", "meaning": "Hẹn gặp lại"},
+            {"word": "Bye", "ipa": "/baɪ/", "meaning": "Tạm biệt (thân mật)"}
+          ]
+        },
+        {
+          "id": 2,
+          "title": "How are you?",
+          "content": "Sarah meets her friend Anna at the shop and asks how she is doing. Anna says she is fine and thanks Sarah for asking. They talk about their week and share their news. Sarah tells Anna about her new job and Anna feels happy for her. Before they leave, they promise to meet again next week.",
+          "translation": "Sarah gặp bạn Anna tại cửa hàng và hỏi cô ấy có khỏe không. Anna nói cô ấy khỏe và cảm ơn Sarah đã hỏi. Họ nói chuyện về tuần của mình và chia sẻ tin tức. Sarah kể cho Anna về công việc mới và Anna cảm thấy vui cho cô ấy. Trước khi rời đi, họ hứa sẽ gặp lại vào tuần sau.",
+          "vocabulary": [
+            {"word": "How are you?", "ipa": "/haʊ ɑːr juː/", "meaning": "Bạn khỏe không?"},
+            {"word": "I'm fine", "ipa": "/aɪm faɪn/", "meaning": "Tôi khỏe"},
+            {"word": "I'm good", "ipa": "/aɪm ɡʊd/", "meaning": "Tôi tốt"},
+            {"word": "Not bad", "ipa": "/nɑːt bæd/", "meaning": "Không tệ"},
+            {"word": "How's it going?", "ipa": "/haʊz ɪt ˈɡoʊɪŋ/", "meaning": "Mọi chuyện thế nào?"},
+            {"word": "What's up?", "ipa": "/wʌts ʌp/", "meaning": "Có chuyện gì không? (thân mật)"}
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Nice to meet you",
+          "content": "At the party, John sees a new person and walks over to introduce himself. He says his name is John and asks what the other person's name is. The new person says her name is Mary and that it is nice to meet John. They shake hands and smile at each other. John and Mary start to talk and become good friends.",
+          "translation": "Tại bữa tiệc, John nhìn thấy một người mới và đi tới tự giới thiệu. Anh ấy nói tên mình là John và hỏi tên người kia là gì. Người mới nói tên cô ấy là Mary và rất vui được gặp John. Họ bắt tay và mỉm cười với nhau. John và Mary bắt đầu nói chuyện và trở thành bạn tốt.",
+          "vocabulary": [
+            {"word": "Nice to meet you", "ipa": "/naɪs tə miːt juː/", "meaning": "Rất vui được gặp bạn"},
+            {"word": "Pleased to meet you", "ipa": "/pliːzd tə miːt juː/", "meaning": "Hân hạnh được gặp bạn"},
+            {"word": "My name is", "ipa": "/maɪ neɪm ɪz/", "meaning": "Tên tôi là"},
+            {"word": "What's your name?", "ipa": "/wʌts jɔːr neɪm/", "meaning": "Tên bạn là gì?"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Numbers and Counting",
+      "description": "Master numbers in English from 0 to 100",
+      "lessons": [
+        {
+          "id": 4,
+          "title": "Numbers 1-10",
+          "content": "Learn to count from one to ten",
+          "translation": "Học đếm từ một đến mười",
+          "vocabulary": [
+            {"word": "one", "ipa": "/wʌn/", "meaning": "một"},
+            {"word": "two", "ipa": "/tuː/", "meaning": "hai"},
+            {"word": "three", "ipa": "/θriː/", "meaning": "ba"},
+            {"word": "four", "ipa": "/fɔːr/", "meaning": "bốn"},
+            {"word": "five", "ipa": "/faɪv/", "meaning": "năm"},
+            {"word": "six", "ipa": "/sɪks/", "meaning": "sáu"},
+            {"word": "seven", "ipa": "/ˈsevn/", "meaning": "bảy"},
+            {"word": "eight", "ipa": "/eɪt/", "meaning": "tám"},
+            {"word": "nine", "ipa": "/naɪn/", "meaning": "chín"},
+            {"word": "ten", "ipa": "/ten/", "meaning": "mười"}
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Numbers 11-20",
+          "content": "Continue counting from eleven to twenty",
+          "translation": "Tiếp tục đếm từ mười một đến hai mươi",
+          "vocabulary": [
+            {"word": "eleven", "ipa": "/ɪˈlevn/", "meaning": "mười một"},
+            {"word": "twelve", "ipa": "/twelv/", "meaning": "mười hai"},
+            {"word": "thirteen", "ipa": "/ˌθɜːrˈtiːn/", "meaning": "mười ba"},
+            {"word": "fourteen", "ipa": "/ˌfɔːrˈtiːn/", "meaning": "mười bốn"},
+            {"word": "fifteen", "ipa": "/ˌfɪfˈtiːn/", "meaning": "mười lăm"},
+            {"word": "sixteen", "ipa": "/ˌsɪksˈtiːn/", "meaning": "mười sáu"},
+            {"word": "seventeen", "ipa": "/ˌsevnˈtiːn/", "meaning": "mười bảy"},
+            {"word": "eighteen", "ipa": "/ˌeɪˈtiːn/", "meaning": "mười tám"},
+            {"word": "nineteen", "ipa": "/ˌnaɪnˈtiːn/", "meaning": "mười chín"},
+            {"word": "twenty", "ipa": "/ˈtwenti/", "meaning": "hai mươi"}
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Tens and Hundreds",
+          "content": "Learn tens (30, 40, 50...) and hundreds",
+          "translation": "Học các số chục (30, 40, 50...) và hàng trăm",
+          "vocabulary": [
+            {"word": "thirty", "ipa": "/ˈθɜːrti/", "meaning": "ba mươi"},
+            {"word": "forty", "ipa": "/ˈfɔːrti/", "meaning": "bốn mươi"},
+            {"word": "fifty", "ipa": "/ˈfɪfti/", "meaning": "năm mươi"},
+            {"word": "sixty", "ipa": "/ˈsɪksti/", "meaning": "sáu mươi"},
+            {"word": "seventy", "ipa": "/ˈsevnti/", "meaning": "bảy mươi"},
+            {"word": "eighty", "ipa": "/ˈeɪti/", "meaning": "tám mươi"},
+            {"word": "ninety", "ipa": "/ˈnaɪnti/", "meaning": "chín mươi"},
+            {"word": "hundred", "ipa": "/ˈhʌndrəd/", "meaning": "trăm"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Colors",
+      "description": "Learn basic and advanced color names",
+      "lessons": [
+        {
+          "id": 7,
+          "title": "Basic Colors",
+          "content": "Learn the most common colors",
+          "translation": "Học các màu sắc phổ biến nhất",
+          "vocabulary": [
+            {"word": "red", "ipa": "/red/", "meaning": "màu đỏ"},
+            {"word": "blue", "ipa": "/bluː/", "meaning": "màu xanh dương"},
+            {"word": "green", "ipa": "/ɡriːn/", "meaning": "màu xanh lá"},
+            {"word": "yellow", "ipa": "/ˈjeloʊ/", "meaning": "màu vàng"},
+            {"word": "orange", "ipa": "/ˈɔːrɪndʒ/", "meaning": "màu cam"},
+            {"word": "purple", "ipa": "/ˈpɜːrpl/", "meaning": "màu tím"},
+            {"word": "pink", "ipa": "/pɪŋk/", "meaning": "màu hồng"},
+            {"word": "brown", "ipa": "/braʊn/", "meaning": "màu nâu"},
+            {"word": "black", "ipa": "/blæk/", "meaning": "màu đen"},
+            {"word": "white", "ipa": "/waɪt/", "meaning": "màu trắng"}
+          ]
+        },
+        {
+          "id": 8,
+          "title": "Color Shades",
+          "content": "Learn to describe different shades of colors",
+          "translation": "Học cách mô tả các sắc độ khác nhau của màu sắc",
+          "vocabulary": [
+            {"word": "light", "ipa": "/laɪt/", "meaning": "nhạt"},
+            {"word": "dark", "ipa": "/dɑːrk/", "meaning": "tối"},
+            {"word": "bright", "ipa": "/braɪt/", "meaning": "sáng"},
+            {"word": "pale", "ipa": "/peɪl/", "meaning": "nhợt nhạt"},
+            {"word": "deep", "ipa": "/diːp/", "meaning": "đậm"},
+            {"word": "vivid", "ipa": "/ˈvɪvɪd/", "meaning": "rực rỡ"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Family Members",
+      "description": "Learn vocabulary for talking about family",
+      "lessons": [
+        {
+          "id": 9,
+          "title": "Immediate Family",
+          "content": "Learn words for close family members",
+          "translation": "Học từ vựng về các thành viên gia đình gần",
+          "vocabulary": [
+            {"word": "mother", "ipa": "/ˈmʌðər/", "meaning": "mẹ"},
+            {"word": "father", "ipa": "/ˈfɑːðər/", "meaning": "cha"},
+            {"word": "sister", "ipa": "/ˈsɪstər/", "meaning": "chị/em gái"},
+            {"word": "brother", "ipa": "/ˈbrʌðər/", "meaning": "anh/em trai"},
+            {"word": "son", "ipa": "/sʌn/", "meaning": "con trai"},
+            {"word": "daughter", "ipa": "/ˈdɔːtər/", "meaning": "con gái"},
+            {"word": "parent", "ipa": "/ˈperənt/", "meaning": "cha mẹ"},
+            {"word": "child", "ipa": "/tʃaɪld/", "meaning": "con"}
+          ]
+        },
+        {
+          "id": 10,
+          "title": "Extended Family",
+          "content": "Learn words for extended family",
+          "translation": "Học từ vựng về họ hàng xa",
+          "vocabulary": [
+            {"word": "grandmother", "ipa": "/ˈɡrænmʌðər/", "meaning": "bà"},
+            {"word": "grandfather", "ipa": "/ˈɡrænfɑːðər/", "meaning": "ông"},
+            {"word": "aunt", "ipa": "/ænt/", "meaning": "cô/dì/bác gái"},
+            {"word": "uncle", "ipa": "/ˈʌŋkl/", "meaning": "chú/bác/cậu"},
+            {"word": "cousin", "ipa": "/ˈkʌzn/", "meaning": "anh/chị/em họ"},
+            {"word": "nephew", "ipa": "/ˈnefjuː/", "meaning": "cháu trai"},
+            {"word": "niece", "ipa": "/niːs/", "meaning": "cháu gái"},
+            {"word": "grandparents", "ipa": "/ˈɡrænperənts/", "meaning": "ông bà"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Daily Activities",
+      "description": "Learn to describe your daily routine",
+      "lessons": [
+        {
+          "id": 11,
+          "title": "Morning Routine",
+          "content": "Learn vocabulary for morning activities",
+          "translation": "Học từ vựng về hoạt động buổi sáng",
+          "vocabulary": [
+            {"word": "wake up", "ipa": "/weɪk ʌp/", "meaning": "thức dậy"},
+            {"word": "get up", "ipa": "/ɡet ʌp/", "meaning": "dậy (khỏi giường)"},
+            {"word": "brush teeth", "ipa": "/brʌʃ tiːθ/", "meaning": "đánh răng"},
+            {"word": "take a shower", "ipa": "/teɪk ə ˈʃaʊər/", "meaning": "tắm"},
+            {"word": "get dressed", "ipa": "/ɡet drest/", "meaning": "mặc quần áo"},
+            {"word": "eat breakfast", "ipa": "/iːt ˈbrekfəst/", "meaning": "ăn sáng"}
+          ]
+        },
+        {
+          "id": 12,
+          "title": "Evening Routine",
+          "content": "Learn vocabulary for evening activities",
+          "translation": "Học từ vựng về hoạt động buổi tối",
+          "vocabulary": [
+            {"word": "eat dinner", "ipa": "/iːt ˈdɪnər/", "meaning": "ăn tối"},
+            {"word": "watch TV", "ipa": "/wɑːtʃ tiː viː/", "meaning": "xem TV"},
+            {"word": "do homework", "ipa": "/duː ˈhoʊmwɜːrk/", "meaning": "làm bài tập"},
+            {"word": "take a bath", "ipa": "/teɪk ə bæθ/", "meaning": "tắm bồn"},
+            {"word": "go to bed", "ipa": "/ɡoʊ tə bed/", "meaning": "đi ngủ"},
+            {"word": "sleep", "ipa": "/sliːp/", "meaning": "ngủ"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Food and Drinks",
+      "description": "Learn vocabulary for common foods and beverages",
+      "lessons": [
+        {
+          "id": 13,
+          "title": "Fruits and Vegetables",
+          "content": "Learn names of common fruits and vegetables",
+          "translation": "Học tên các loại trái cây và rau củ phổ biến",
+          "vocabulary": [
+            {"word": "apple", "ipa": "/ˈæpl/", "meaning": "táo"},
+            {"word": "banana", "ipa": "/bəˈnænə/", "meaning": "chuối"},
+            {"word": "orange", "ipa": "/ˈɔːrɪndʒ/", "meaning": "cam"},
+            {"word": "tomato", "ipa": "/təˈmeɪtoʊ/", "meaning": "cà chua"},
+            {"word": "carrot", "ipa": "/ˈkærət/", "meaning": "cà rốt"},
+            {"word": "potato", "ipa": "/pəˈteɪtoʊ/", "meaning": "khoai tây"},
+            {"word": "lettuce", "ipa": "/ˈletɪs/", "meaning": "xà lách"},
+            {"word": "cucumber", "ipa": "/ˈkjuːkʌmbər/", "meaning": "dưa chuột"}
+          ]
+        },
+        {
+          "id": 14,
+          "title": "Meals and Dishes",
+          "content": "Learn vocabulary for different meals",
+          "translation": "Học từ vựng về các bữa ăn khác nhau",
+          "vocabulary": [
+            {"word": "breakfast", "ipa": "/ˈbrekfəst/", "meaning": "bữa sáng"},
+            {"word": "lunch", "ipa": "/lʌntʃ/", "meaning": "bữa trưa"},
+            {"word": "dinner", "ipa": "/ˈdɪnər/", "meaning": "bữa tối"},
+            {"word": "snack", "ipa": "/snæk/", "meaning": "bữa phụ"},
+            {"word": "sandwich", "ipa": "/ˈsænwɪtʃ/", "meaning": "bánh mì kẹp"},
+            {"word": "salad", "ipa": "/ˈsæləd/", "meaning": "sa lát"},
+            {"word": "soup", "ipa": "/suːp/", "meaning": "súp"},
+            {"word": "pasta", "ipa": "/ˈpɑːstə/", "meaning": "mì ý"}
+          ]
+        },
+        {
+          "id": 15,
+          "title": "Beverages",
+          "content": "Learn names of common drinks",
+          "translation": "Học tên các đồ uống phổ biến",
+          "vocabulary": [
+            {"word": "water", "ipa": "/ˈwɔːtər/", "meaning": "nước"},
+            {"word": "milk", "ipa": "/mɪlk/", "meaning": "sữa"},
+            {"word": "juice", "ipa": "/dʒuːs/", "meaning": "nước ép"},
+            {"word": "tea", "ipa": "/tiː/", "meaning": "trà"},
+            {"word": "coffee", "ipa": "/ˈkɔːfi/", "meaning": "cà phê"},
+            {"word": "soda", "ipa": "/ˈsoʊdə/", "meaning": "nước ngọt có ga"},
+            {"word": "lemonade", "ipa": "/ˌleməˈneɪd/", "meaning": "nước chanh"}
+          ]
+        }
+      ]
+    }
+  ]
+}
