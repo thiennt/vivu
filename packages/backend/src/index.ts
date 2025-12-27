@@ -18,15 +18,22 @@ app.use('/*', cors({
     // If CLIENT_URL uses localhost or 127.0.0.1, also allow the alternative
     try {
       const url = new URL(clientUrl);
+      let alternativeUrl: string | null = null;
+      
       if (url.hostname === 'localhost') {
         url.hostname = '127.0.0.1';
-        allowedOrigins.push(url.toString().replace(/\/$/, ''));
+        alternativeUrl = url.toString().replace(/\/$/, '');
       } else if (url.hostname === '127.0.0.1') {
         url.hostname = 'localhost';
-        allowedOrigins.push(url.toString().replace(/\/$/, ''));
+        alternativeUrl = url.toString().replace(/\/$/, '');
+      }
+      
+      if (alternativeUrl) {
+        allowedOrigins.push(alternativeUrl);
       }
     } catch (e) {
       // If URL parsing fails, just use the original clientUrl
+      console.warn('Failed to parse CLIENT_URL for CORS configuration:', e);
     }
     
     return allowedOrigins.includes(origin) ? origin : false;
