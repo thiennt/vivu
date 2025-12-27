@@ -35,7 +35,7 @@ export async function POST({ request }) {
 				contents: [{
 					role: 'user',
 					parts: [{
-						text: `Please read this text aloud: "${text}"`
+						text: text
 					}]
 				}],
 				generationConfig: {
