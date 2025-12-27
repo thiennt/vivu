@@ -81,7 +81,8 @@
 	async function generateLessonAudio() {
 		isLoadingAudio = true;
 		try {
-			const text = lesson.vocabulary.map(v => v.word).join(', ');
+			// Use the lesson story content for audio generation
+			const text = lesson.content;
 			const response = await fetch('/api/generate-audio', {
 				method: 'POST',
 				headers: {
@@ -275,12 +276,9 @@
 	{/if}
 
 	<div class="lesson-header">
-		<div class="header-content">
-			<h1>{lesson.title}</h1>
-			<p class="description">{lesson.content}</p>
-		</div>
+		<h1>{lesson.title}</h1>
 		
-		<!-- Voice icon - always visible -->
+		<!-- Voice icon - next to title -->
 		<button class="voice-icon" onclick={toggleAudio} disabled={isLoadingAudio}>
 			{#if isLoadingAudio}
 				<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -339,6 +337,12 @@
 	<!-- Lesson content (collapsible) -->
 	{#if showLesson}
 		<div class="lesson-content">
+			<!-- Lesson story content -->
+			<div class="story-section">
+				<h3>Story</h3>
+				<p class="story-text">{lesson.content}</p>
+			</div>
+
 			<!-- Vietnamese translation -->
 			<div class="translation-section">
 				<h3>Bản dịch (Translation)</h3>
@@ -433,32 +437,22 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: 2rem;
-	}
-
-	.header-content {
-		flex: 1;
+		gap: 1.5rem;
 	}
 
 	.lesson-header h1 {
-		margin: 0 0 1rem 0;
+		margin: 0;
 		color: #667eea;
 		font-size: 2rem;
-	}
-
-	.description {
-		color: #555;
-		font-size: 1.1rem;
-		line-height: 1.6;
-		margin: 0;
+		flex: 1;
 	}
 
 	.voice-icon {
 		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 		border: none;
 		border-radius: 50%;
-		width: 80px;
-		height: 80px;
+		width: 60px;
+		height: 60px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -544,6 +538,26 @@
 		border-radius: 12px;
 		padding: 2rem;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+
+	.story-section {
+		margin-bottom: 2rem;
+		padding-bottom: 2rem;
+		border-bottom: 2px solid #f0f0f0;
+	}
+
+	.story-section h3 {
+		color: #667eea;
+		margin: 0 0 1rem 0;
+		font-size: 1.3rem;
+	}
+
+	.story-text {
+		color: #333;
+		font-size: 1.1rem;
+		line-height: 1.8;
+		margin: 0;
+		text-align: justify;
 	}
 
 	.translation-section {
