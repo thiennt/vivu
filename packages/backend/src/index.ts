@@ -9,6 +9,9 @@ const app = new Hono();
 // Enable CORS for client
 app.use('/*', cors({
   origin: (origin) => {
+    // Allow same-origin requests (origin is undefined)
+    if (!origin) return true;
+    
     const clientUrl = process.env.CLIENT_URL || 'http://localhost:5173';
     const allowedOrigins = [
       clientUrl,
