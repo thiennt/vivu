@@ -5,7 +5,10 @@ import { writeFile, mkdir, access, readFile } from 'fs/promises';
 import { join } from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+
 import 'dotenv/config';
+
+import wav from 'wav';
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -47,50 +50,83 @@ function isValidApiKey(key: string | undefined): boolean {
   return !invalidKeys.includes(key) && key.length > 10;
 }
 
+
 /**
- * Generate audio using Gemini API and save to file
+ * Save PCM data as a .wav file using the wav package
  */
-async function generateAndSaveAudio(text: string): Promise<string> {
+async function saveWaveFile(
+  filename: string,
+  pcmData: Buffer,
+  channels = 1,
+  rate = 24000,
+  sampleWidth = 2,
+): Promise<void> {
+  return new Promise((resolve, reject) => {
+    const writer = new (wav as any).FileWriter(filename, {
+      channels,
+      sampleRate: rate,
+      bitDepth: sampleWidth * 8,
+    });
+
+    writer.on('finish', resolve);
+    writer.on('error', reject);
+
+    writer.write(pcmData);
+    writer.end();
+  });
+}
+
+/**
+ * Sanitize a string for use as a filename
+ */
+function sanitizeFilename(str: string): string {
+  return str
+    .toLowerCase()
+    .replace(/[^a-z0-9\-_ ]+/g, '')
+    .replace(/\s+/g, '_')
+    .replace(/_+/g, '_')
+    .replace(/^_+|_+$/g, '')
+    .slice(0, 64); // limit length
+}
+
+/**
+ * Generate audio using Gemini API and save to .wav file
+ * Accepts lessonTitle for filename, falls back to hash if not provided
+ */
+async function generateAndSaveAudio(text: string, lessonTitle?: string): Promise<string> {
   if (!isValidApiKey(GEMINI_API_KEY)) {
     throw new Error('Gemini API key not configured');
   }
 
   const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
-  
+
   const response = await ai.models.generateContent({
     model: 'gemini-2.5-flash-preview-tts',
-    contents: [{ role: 'user', parts: [{ text }] }],
+    contents: [{ parts: [{ text }] }],
     config: {
       responseModalities: ['AUDIO'],
       speechConfig: {
-        voiceConfig: { 
-          prebuiltVoiceConfig: { voiceName: 'Puck' } 
-        }
-      }
-    }
+        voiceConfig: {
+          prebuiltVoiceConfig: { voiceName: 'Puck' },
+        },
+      },
+    },
   });
 
   // Extract audio data from response
-  const audioPart = response.candidates?.[0]?.content?.parts?.find(p => p.inlineData);
-  if (!audioPart || !audioPart.inlineData) {
+  const data = response.candidates?.[0]?.content?.parts?.[0]?.inlineData?.data;
+  if (!data) {
     throw new Error('No audio data in response');
   }
 
-  const base64Data = audioPart.inlineData.data;
-  const mimeType = audioPart.inlineData.mimeType; // Usually audio/mp3 or audio/wav
-  
-  // Convert Base64 to Buffer
-  const audioBuffer = Buffer.from(base64Data, 'base64');
-  
-  // Determine file extension from mime type
-  const extension = mimeType.includes('mp3') ? 'mp3' : 'wav';
-  const textHash = hashText(text);
-  const filename = `${textHash}.${extension}`;
+  const audioBuffer = Buffer.from(data, 'base64');
+
+  // Use sanitized lesson title for filename if provided, else fallback to hash
+  let baseName = lessonTitle ? sanitizeFilename(lessonTitle) : hashText(text);
+  if (!baseName) baseName = hashText(text);
+  const filename = `${baseName}.wav`;
   const filepath = join(AUDIO_DIR, filename);
-  
-  // Save audio file
-  await writeFile(filepath, audioBuffer);
-  
+  await saveWaveFile(filepath, audioBuffer);
   return filename;
 }
 
@@ -101,19 +137,20 @@ async function generateAndSaveAudio(text: string): Promise<string> {
 router.post('/generate', async (c) => {
   try {
     const body = await c.req.json();
-    const { text } = body;
-    
+    const { text, lessonTitle } = body;
+
     if (!text) {
       return c.json({ error: 'Text is required' }, 400);
     }
-    
-    // Check if audio already exists
-    const textHash = hashText(text);
-    const mp3Filename = `${textHash}.mp3`;
-    const wavFilename = `${textHash}.wav`;
+
+    // Use sanitized lesson title for filename if provided
+    let baseName = lessonTitle ? sanitizeFilename(lessonTitle) : hashText(text);
+    if (!baseName) baseName = hashText(text);
+    const mp3Filename = `${baseName}.mp3`;
+    const wavFilename = `${baseName}.wav`;
     const mp3Path = join(AUDIO_DIR, mp3Filename);
     const wavPath = join(AUDIO_DIR, wavFilename);
-    
+
     // Check if file exists (try both extensions)
     let existingFilename: string | null = null;
     try {
@@ -127,27 +164,27 @@ router.post('/generate', async (c) => {
         // File doesn't exist, continue to generate
       }
     }
-    
+
     if (existingFilename) {
       // Return existing audio URL
-      return c.json({ 
+      return c.json({
         audioUrl: `/api/tts/audio/${existingFilename}`,
         cached: true
       });
     }
-    
+
     // Generate new audio
-    const filename = await generateAndSaveAudio(text);
-    
-    return c.json({ 
+    const filename = await generateAndSaveAudio(text, lessonTitle);
+
+    return c.json({
       audioUrl: `/api/tts/audio/${filename}`,
       cached: false
     });
-    
+
   } catch (error) {
     console.error('TTS generation error:', error);
-    return c.json({ 
-      error: error instanceof Error ? error.message : 'Failed to generate audio' 
+    return c.json({
+      error: error instanceof Error ? error.message : 'Failed to generate audio'
     }, 500);
   }
 });
@@ -160,10 +197,14 @@ router.get('/audio/:filename', async (c) => {
   const filename = c.req.param('filename');
   const filepath = join(AUDIO_DIR, filename);
   
+  console.log(`Requesting audio file: ${filename} at path: ${filepath}`);
+
   try {
     await access(filepath);
     const audioBuffer = await readFile(filepath);
     
+    console.log(`Serving audio file: ${filename}`, audioBuffer);
+
     // Serve the audio file
     return c.body(audioBuffer, 200, {
       'Content-Type': filename.endsWith('.mp3') ? 'audio/mpeg' : 'audio/wav',

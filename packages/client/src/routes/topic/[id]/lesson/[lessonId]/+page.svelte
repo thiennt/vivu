@@ -62,13 +62,19 @@
 		try {
 			const text = lesson.content;
 			const audioUrl = await generateSpeech(text);
-			
+
+			console.log('Generated audio URL:', audioUrl);
+
 			if (!audioUrl) {
 				throw new Error('Failed to generate audio');
 			}
-			
-			// Play the audio
+
+			// Set audio type for .wav
+			audio.src = '';
+			audio.load();
 			audio.src = audioUrl;
+			audio.type = 'audio/wav';
+			audio.load();
 			await audio.play();
 			isPlaying = true;
 		} catch (error) {
@@ -122,16 +128,21 @@
 	// Play individual word pronunciation
 	async function playWord(vocab, index) {
 		playingWordIndex = index;
-		
+
 		try {
 			const audioUrl = await generateSpeech(vocab.word);
-			
+
 			if (!audioUrl) {
 				throw new Error('Failed to generate word audio');
 			}
-			
-			// Play word audio
-			const wordAudio = new Audio(audioUrl);
+
+			// Play word audio with type set
+			const wordAudio = new Audio();
+			wordAudio.src = '';
+			wordAudio.load();
+			wordAudio.src = audioUrl;
+			wordAudio.type = 'audio/wav';
+			wordAudio.load();
 			wordAudio.addEventListener('ended', () => {
 				playingWordIndex = null;
 			});
