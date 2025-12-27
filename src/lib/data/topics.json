@@ -1,0 +1,136 @@
+{
+  "topics": [
+    {
+      "id": 1,
+      "title": "Basic Greetings",
+      "description": "Learn how to greet people in English",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Hello and Goodbye",
+          "content": "Learn basic greetings like Hello, Hi, Good morning, Goodbye, See you later",
+          "vocabulary": ["Hello", "Hi", "Good morning", "Good afternoon", "Good evening", "Goodbye", "See you later", "Bye"]
+        },
+        {
+          "id": 2,
+          "title": "How are you?",
+          "content": "Learn to ask and answer about well-being",
+          "vocabulary": ["How are you?", "I'm fine", "I'm good", "Not bad", "How's it going?", "What's up?"]
+        },
+        {
+          "id": 3,
+          "title": "Nice to meet you",
+          "content": "Introductions and meeting new people",
+          "vocabulary": ["Nice to meet you", "Pleased to meet you", "My name is", "What's your name?"]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Numbers and Counting",
+      "description": "Master numbers in English from 0 to 100",
+      "lessons": [
+        {
+          "id": 4,
+          "title": "Numbers 1-10",
+          "content": "Learn to count from one to ten",
+          "vocabulary": ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
+        },
+        {
+          "id": 5,
+          "title": "Numbers 11-20",
+          "content": "Continue counting from eleven to twenty",
+          "vocabulary": ["eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"]
+        },
+        {
+          "id": 6,
+          "title": "Tens and Hundreds",
+          "content": "Learn tens (30, 40, 50...) and hundreds",
+          "vocabulary": ["thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety", "hundred"]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Colors",
+      "description": "Learn basic and advanced color names",
+      "lessons": [
+        {
+          "id": 7,
+          "title": "Basic Colors",
+          "content": "Learn the most common colors",
+          "vocabulary": ["red", "blue", "green", "yellow", "orange", "purple", "pink", "brown", "black", "white"]
+        },
+        {
+          "id": 8,
+          "title": "Color Shades",
+          "content": "Learn to describe different shades of colors",
+          "vocabulary": ["light", "dark", "bright", "pale", "deep", "vivid"]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Family Members",
+      "description": "Learn vocabulary for talking about family",
+      "lessons": [
+        {
+          "id": 9,
+          "title": "Immediate Family",
+          "content": "Learn words for close family members",
+          "vocabulary": ["mother", "father", "sister", "brother", "son", "daughter", "parent", "child"]
+        },
+        {
+          "id": 10,
+          "title": "Extended Family",
+          "content": "Learn words for extended family",
+          "vocabulary": ["grandmother", "grandfather", "aunt", "uncle", "cousin", "nephew", "niece", "grandparents"]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Daily Activities",
+      "description": "Learn to describe your daily routine",
+      "lessons": [
+        {
+          "id": 11,
+          "title": "Morning Routine",
+          "content": "Learn vocabulary for morning activities",
+          "vocabulary": ["wake up", "get up", "brush teeth", "take a shower", "get dressed", "eat breakfast"]
+        },
+        {
+          "id": 12,
+          "title": "Evening Routine",
+          "content": "Learn vocabulary for evening activities",
+          "vocabulary": ["eat dinner", "watch TV", "do homework", "take a bath", "go to bed", "sleep"]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Food and Drinks",
+      "description": "Learn vocabulary for common foods and beverages",
+      "lessons": [
+        {
+          "id": 13,
+          "title": "Fruits and Vegetables",
+          "content": "Learn names of common fruits and vegetables",
+          "vocabulary": ["apple", "banana", "orange", "tomato", "carrot", "potato", "lettuce", "cucumber"]
+        },
+        {
+          "id": 14,
+          "title": "Meals and Dishes",
+          "content": "Learn vocabulary for different meals",
+          "vocabulary": ["breakfast", "lunch", "dinner", "snack", "sandwich", "salad", "soup", "pasta"]
+        },
+        {
+          "id": 15,
+          "title": "Beverages",
+          "content": "Learn names of common drinks",
+          "vocabulary": ["water", "milk", "juice", "tea", "coffee", "soda", "lemonade"]
+        }
+      ]
+    }
+  ]
+}
