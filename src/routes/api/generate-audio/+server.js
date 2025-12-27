@@ -23,23 +23,18 @@ export async function POST({ request }) {
 		
 		try {
 			// Initialize the Gemini API
-			const genAI = new GoogleGenAI(GEMINI_API_KEY);
-			
-			// Use the Gemini model with audio generation capabilities
-			const model = genAI.getGenerativeModel({
-				model: 'gemini-2.5-flash-preview-tts',
-			});
+			const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 			
 			// Generate audio using the Gemini API
-			const result = await model.generateContent({
+			const response = await ai.models.generateContent({
+				model: 'gemini-2.5-flash-preview-tts',
 				contents: [{
-					role: 'user',
 					parts: [{
 						text: text
 					}]
 				}],
-				generationConfig: {
-					responseModalities: ['audio'],
+				config: {
+					responseModalities: ['AUDIO'],
 					speechConfig: {
 						voiceConfig: {
 							prebuiltVoiceConfig: {
@@ -49,9 +44,6 @@ export async function POST({ request }) {
 					}
 				}
 			});
-			
-			// Extract the audio data from the response
-			const response = await result.response;
 			
 			// Check if audio data is available
 			if (response.candidates && response.candidates[0]?.content?.parts) {
