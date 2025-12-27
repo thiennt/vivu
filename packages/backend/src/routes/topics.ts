@@ -1,5 +1,5 @@
 import { Hono } from 'hono';
-import topicsData from '../data/topics.json' assert { type: 'json' };
+import topicsData from '../data/topics.json' with { type: 'json' };
 
 const router = new Hono();
 
