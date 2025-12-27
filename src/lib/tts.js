@@ -53,7 +53,7 @@ export async function getSpeechAndCache(text, apiKey) {
 		
 		const response = await ai.models.generateContent({
 			model: 'gemini-2.5-flash-preview-tts',
-			contents: [{ role: 'user', parts: [{ text: `Read this: ${text}` }] }],
+			contents: [{ role: 'user', parts: [{ text }] }],
 			config: {
 				responseModalities: ['AUDIO'],
 				speechConfig: {

@@ -5,6 +5,15 @@ const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 /**
  * GET endpoint to retrieve TTS configuration (API key)
+ * 
+ * SECURITY NOTE: This endpoint exposes the Gemini API key to the client.
+ * This design follows the requirement to use client-side TTS generation with
+ * Cache Storage API as specified in the problem statement.
+ * 
+ * For production use, consider:
+ * - Implementing rate limiting
+ * - Using a separate API key with restricted permissions
+ * - Implementing a server-side proxy for TTS generation instead
  */
 export async function GET() {
 	try {

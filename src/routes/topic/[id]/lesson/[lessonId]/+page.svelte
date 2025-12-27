@@ -21,6 +21,9 @@
 	// Store API key fetched from server
 	let apiKey = $state(null);
 	
+	// Store object URLs for cleanup
+	let audioObjectUrls = $state([]);
+	
 	// Initialize audio element and fetch API key
 	onMount(async () => {
 		audio = new Audio();
@@ -49,6 +52,9 @@
 		}
 		
 		return () => {
+			// Cleanup object URLs to prevent memory leaks
+			audioObjectUrls.forEach(url => URL.revokeObjectURL(url));
+			
 			if (audio) {
 				audio.pause();
 				audio.src = '';
@@ -89,6 +95,9 @@
 			if (!audioUrl) {
 				throw new Error('Failed to generate audio');
 			}
+			
+			// Store URL for cleanup
+			audioObjectUrls = [...audioObjectUrls, audioUrl];
 			
 			// Play the audio
 			audio.src = audioUrl;
@@ -158,6 +167,9 @@
 			if (!audioUrl) {
 				throw new Error('Failed to generate word audio');
 			}
+			
+			// Store URL for cleanup
+			audioObjectUrls = [...audioObjectUrls, audioUrl];
 			
 			// Play word audio
 			const wordAudio = new Audio(audioUrl);
