@@ -8,8 +8,8 @@
         {
           "id": 1,
           "title": "Hello and Goodbye",
-          "content": "Learn basic greetings like Hello, Hi, Good morning, Goodbye, See you later",
-          "translation": "Học cách chào hỏi cơ bản như Xin chào, Chào buổi sáng, Tạm biệt, Hẹn gặp lại",
+          "content": "Every morning, Tom walks to the park and says hello to his friends. They sit on the bench and talk about their day. When it is time to go home, Tom says goodbye to everyone. He waves his hand and smiles at them. See you later, Tom tells his friends before he leaves.",
+          "translation": "Mỗi sáng, Tom đi bộ đến công viên và chào hỏi bạn bè. Họ ngồi trên ghế và nói chuyện về ngày của mình. Khi đến giờ về nhà, Tom nói tạm biệt với mọi người. Anh ấy vẫy tay và mỉm cười với họ. Hẹn gặp lại, Tom nói với bạn bè trước khi rời đi.",
           "vocabulary": [
             {"word": "Hello", "ipa": "/həˈloʊ/", "meaning": "Xin chào"},
             {"word": "Hi", "ipa": "/haɪ/", "meaning": "Chào (thân mật)"},
@@ -24,8 +24,8 @@
         {
           "id": 2,
           "title": "How are you?",
-          "content": "Learn to ask and answer about well-being",
-          "translation": "Học cách hỏi và trả lời về sức khỏe",
+          "content": "Sarah meets her friend Anna at the shop and asks how she is doing. Anna says she is fine and thanks Sarah for asking. They talk about their week and share their news. Sarah tells Anna about her new job and Anna feels happy for her. Before they leave, they promise to meet again next week.",
+          "translation": "Sarah gặp bạn Anna tại cửa hàng và hỏi cô ấy có khỏe không. Anna nói cô ấy khỏe và cảm ơn Sarah đã hỏi. Họ nói chuyện về tuần của mình và chia sẻ tin tức. Sarah kể cho Anna về công việc mới và Anna cảm thấy vui cho cô ấy. Trước khi rời đi, họ hứa sẽ gặp lại vào tuần sau.",
           "vocabulary": [
             {"word": "How are you?", "ipa": "/haʊ ɑːr juː/", "meaning": "Bạn khỏe không?"},
             {"word": "I'm fine", "ipa": "/aɪm faɪn/", "meaning": "Tôi khỏe"},
@@ -38,8 +38,8 @@
         {
           "id": 3,
           "title": "Nice to meet you",
-          "content": "Introductions and meeting new people",
-          "translation": "Giới thiệu và gặp gỡ người mới",
+          "content": "At the party, John sees a new person and walks over to introduce himself. He says his name is John and asks what the other person's name is. The new person says her name is Mary and that it is nice to meet John. They shake hands and smile at each other. John and Mary start to talk and become good friends.",
+          "translation": "Tại bữa tiệc, John nhìn thấy một người mới và đi tới tự giới thiệu. Anh ấy nói tên mình là John và hỏi tên người kia là gì. Người mới nói tên cô ấy là Mary và rất vui được gặp John. Họ bắt tay và mỉm cười với nhau. John và Mary bắt đầu nói chuyện và trở thành bạn tốt.",
           "vocabulary": [
             {"word": "Nice to meet you", "ipa": "/naɪs tə miːt juː/", "meaning": "Rất vui được gặp bạn"},
             {"word": "Pleased to meet you", "ipa": "/pliːzd tə miːt juː/", "meaning": "Hân hạnh được gặp bạn"},
