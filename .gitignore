@@ -23,6 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-# Project specific
-public/assets
-.assetpack
+# SvelteKit
+.svelte-kit
+build
