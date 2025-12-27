@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { getSpeechAndCache } from '$lib/tts.js';
 	
 	let { data } = $props();
 	let topic = $derived(data.topic);
@@ -14,21 +15,17 @@
 	let isLoadingAudio = $state(false);
 	let playingWordIndex = $state(null);
 	
-	// Cache key for lesson audio
-	const lessonAudioKey = `lesson_audio_${lesson.id}`;
-	
 	// State for error messages
 	let errorMessage = $state(null);
 	
-	// Helper function to cancel speech synthesis
-	function cancelSpeechSynthesis() {
-		if (window.speechSynthesis && window.speechSynthesis.speaking) {
-			window.speechSynthesis.cancel();
-		}
-	}
+	// Store API key fetched from server
+	let apiKey = $state(null);
 	
-	// Initialize audio element
-	onMount(() => {
+	// Store object URLs for cleanup
+	let audioObjectUrls = $state([]);
+	
+	// Initialize audio element and fetch API key
+	onMount(async () => {
 		audio = new Audio();
 		audio.addEventListener('loadedmetadata', () => {
 			duration = audio.duration;
@@ -40,7 +37,24 @@
 			isPlaying = false;
 		});
 		
+		// Fetch API key from server
+		try {
+			const response = await fetch('/api/tts-config');
+			
+			if (response.ok) {
+				const data = await response.json();
+				apiKey = data.apiKey;
+			} else {
+				console.error('Failed to fetch API key');
+			}
+		} catch (error) {
+			console.error('Error fetching API key:', error);
+		}
+		
 		return () => {
+			// Cleanup object URLs to prevent memory leaks
+			audioObjectUrls.forEach(url => URL.revokeObjectURL(url));
+			
 			if (audio) {
 				audio.pause();
 				audio.src = '';
@@ -58,57 +72,37 @@
 		if (!audio) return;
 		
 		if (isPlaying) {
-			// If using browser TTS, cancel it
-			cancelSpeechSynthesis();
 			audio.pause();
 			isPlaying = false;
 		} else {
-			// Check cache first
-			const cachedAudio = localStorage.getItem(lessonAudioKey);
-			
-			if (cachedAudio && cachedAudio !== 'BROWSER_TTS_PLAYED') {
-				audio.src = cachedAudio;
-				await audio.play();
-				isPlaying = true;
-			} else {
-				// Generate audio from API (will use browser TTS or Gemini)
-				await generateLessonAudio();
-			}
+			await generateLessonAudio();
 		}
 	}
 	
-	// Generate lesson audio using Gemini API
+	// Generate lesson audio using Gemini API with caching
 	async function generateLessonAudio() {
+		if (!apiKey) {
+			errorMessage = 'API key not available. Please check server configuration.';
+			setTimeout(() => errorMessage = null, 3000);
+			return;
+		}
+
 		isLoadingAudio = true;
 		try {
-			// Use the lesson story content for audio generation
 			const text = lesson.content;
-			const response = await fetch('/api/generate-audio', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({ text, lessonId: lesson.id })
-			});
+			const audioUrl = await getSpeechAndCache(text, apiKey);
 			
-			if (!response.ok) {
+			if (!audioUrl) {
 				throw new Error('Failed to generate audio');
 			}
 			
-			const { audioData, text: responseText } = await response.json();
+			// Store URL for cleanup
+			audioObjectUrls = [...audioObjectUrls, audioUrl];
 			
-			// Check if we need to use browser TTS
-			if (audioData === 'USE_BROWSER_TTS') {
-				await generateBrowserTTS(responseText || text);
-			} else {
-				// Cache the audio
-				localStorage.setItem(lessonAudioKey, audioData);
-				
-				// Play the audio
-				audio.src = audioData;
-				await audio.play();
-				isPlaying = true;
-			}
+			// Play the audio
+			audio.src = audioUrl;
+			await audio.play();
+			isPlaying = true;
 		} catch (error) {
 			console.error('Error generating audio:', error);
 			errorMessage = 'Failed to generate audio. Please try again.';
@@ -116,37 +110,6 @@
 		} finally {
 			isLoadingAudio = false;
 		}
-	}
-	
-	// Generate audio using browser's speech synthesis
-	async function generateBrowserTTS(text) {
-		return new Promise((resolve, reject) => {
-			if (!('speechSynthesis' in window)) {
-				reject(new Error('Browser does not support text-to-speech'));
-				return;
-			}
-			
-			const utterance = new SpeechSynthesisUtterance(text);
-			utterance.lang = 'en-US';
-			utterance.rate = 0.9;
-			
-			utterance.onend = () => {
-				isPlaying = false;
-				resolve();
-			};
-			
-			utterance.onerror = (error) => {
-				isPlaying = false;
-				reject(error);
-			};
-			
-			window.speechSynthesis.speak(utterance);
-			isPlaying = true;
-			
-			// Note: Browser TTS doesn't provide audio data for caching
-			// We'll just mark it as played
-			localStorage.setItem(lessonAudioKey, 'BROWSER_TTS_PLAYED');
-		});
 	}
 	
 	// Seek to a specific time in the audio
@@ -190,65 +153,36 @@
 	
 	// Play individual word pronunciation
 	async function playWord(vocab, index) {
+		if (!apiKey) {
+			errorMessage = 'API key not available. Please check server configuration.';
+			setTimeout(() => errorMessage = null, 3000);
+			return;
+		}
+
 		playingWordIndex = index;
 		
-		// Use browser's speech synthesis for word pronunciation
-		if ('speechSynthesis' in window) {
-			const utterance = new SpeechSynthesisUtterance(vocab.word);
-			utterance.lang = 'en-US';
-			utterance.rate = 0.8;
+		try {
+			const audioUrl = await getSpeechAndCache(vocab.word, apiKey);
 			
-			utterance.onend = () => {
-				playingWordIndex = null;
-			};
-			
-			utterance.onerror = () => {
-				playingWordIndex = null;
-			};
-			
-			window.speechSynthesis.speak(utterance);
-		} else {
-			// Fallback to API if browser doesn't support speech synthesis
-			const wordAudioKey = `word_audio_${vocab.word.toLowerCase().replace(/\s+/g, '_')}`;
-			let cachedWordAudio = localStorage.getItem(wordAudioKey);
-			
-			if (!cachedWordAudio) {
-				// Generate word audio
-				try {
-					const response = await fetch('/api/generate-audio', {
-						method: 'POST',
-						headers: {
-							'Content-Type': 'application/json',
-						},
-						body: JSON.stringify({ text: vocab.word, lessonId: lesson.id, isWord: true })
-					});
-					
-					if (!response.ok) {
-						throw new Error('Failed to generate word audio');
-					}
-					
-					const { audioData } = await response.json();
-					if (audioData !== 'USE_BROWSER_TTS') {
-						cachedWordAudio = audioData;
-						localStorage.setItem(wordAudioKey, audioData);
-					}
-				} catch (error) {
-					console.error('Error generating word audio:', error);
-					playingWordIndex = null;
-					return;
-				}
+			if (!audioUrl) {
+				throw new Error('Failed to generate word audio');
 			}
 			
-			if (cachedWordAudio && cachedWordAudio !== 'USE_BROWSER_TTS') {
-				// Play word audio
-				const wordAudio = new Audio(cachedWordAudio);
-				wordAudio.addEventListener('ended', () => {
-					playingWordIndex = null;
-				});
-				await wordAudio.play();
-			} else {
+			// Store URL for cleanup
+			audioObjectUrls = [...audioObjectUrls, audioUrl];
+			
+			// Play word audio
+			const wordAudio = new Audio(audioUrl);
+			wordAudio.addEventListener('ended', () => {
 				playingWordIndex = null;
-			}
+			});
+			wordAudio.addEventListener('error', () => {
+				playingWordIndex = null;
+			});
+			await wordAudio.play();
+		} catch (error) {
+			console.error('Error generating word audio:', error);
+			playingWordIndex = null;
 		}
 	}
 	
