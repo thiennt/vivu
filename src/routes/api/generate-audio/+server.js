@@ -1,8 +1,8 @@
 import { json } from '@sveltejs/kit';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 
-// Note: In a real application, you would use the Gemini API here
-// For this implementation, we'll create a placeholder that returns a data URL
-// The actual Gemini TTS API integration would require an API key
+// Get API key from environment variable (if available)
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 export async function POST({ request }) {
 	try {
@@ -12,41 +12,75 @@ export async function POST({ request }) {
 			return json({ error: 'Text is required' }, { status: 400 });
 		}
 		
-		// For now, we'll use the Web Speech API on the client side
-		// This is a placeholder response that signals the client to use browser TTS
-		// In production, you would integrate with Google Cloud Text-to-Speech API
+		// Check if API key is configured
+		if (!GEMINI_API_KEY || GEMINI_API_KEY === 'your_api_key_here') {
+			console.warn('Gemini API key not configured, falling back to browser TTS');
+			return json({ 
+				audioData: 'USE_BROWSER_TTS',
+				text 
+			});
+		}
 		
-		// Example Google Cloud Text-to-Speech API integration (requires API key):
-		/*
-		const response = await fetch('https://texttospeech.googleapis.com/v1/text:synthesize', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-				'X-Goog-Api-Key': process.env.GOOGLE_CLOUD_API_KEY,
-			},
-			body: JSON.stringify({
-				input: { text },
-				voice: {
-					languageCode: 'en-US',
-					name: 'en-US-Neural2-C',
-				},
-				audioConfig: {
-					audioEncoding: 'MP3',
-				},
-			}),
-		});
-		
-		const data = await response.json();
-		const audioData = `data:audio/mp3;base64,${data.audioContent}`;
-		
-		return json({ audioData });
-		*/
-		
-		// Placeholder response - client will use browser TTS
-		return json({ 
-			audioData: 'USE_BROWSER_TTS',
-			text 
-		});
+		try {
+			// Initialize the Gemini API
+			const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
+			
+			// Use the Gemini model with audio generation capabilities
+			const model = genAI.getGenerativeModel({
+				model: 'gemini-2.0-flash-exp',
+			});
+			
+			// Generate audio using the Gemini API
+			const result = await model.generateContent({
+				contents: [{
+					role: 'user',
+					parts: [{
+						text: `Please read this text aloud: "${text}"`
+					}]
+				}],
+				generationConfig: {
+					responseModalities: ['audio'],
+					speechConfig: {
+						voiceConfig: {
+							prebuiltVoiceConfig: {
+								voiceName: 'Puck'
+							}
+						}
+					}
+				}
+			});
+			
+			// Extract the audio data from the response
+			const response = await result.response;
+			
+			// Check if audio data is available
+			if (response.candidates && response.candidates[0]?.content?.parts) {
+				const audioPart = response.candidates[0].content.parts.find(
+					part => part.inlineData && part.inlineData.mimeType?.startsWith('audio/')
+				);
+				
+				if (audioPart && audioPart.inlineData) {
+					// Convert the base64 audio data to a data URL
+					const audioData = `data:${audioPart.inlineData.mimeType};base64,${audioPart.inlineData.data}`;
+					return json({ audioData });
+				}
+			}
+			
+			// If no audio data in response, fall back to browser TTS
+			console.warn('No audio data in Gemini response, falling back to browser TTS');
+			return json({ 
+				audioData: 'USE_BROWSER_TTS',
+				text 
+			});
+			
+		} catch (apiError) {
+			console.error('Gemini API error:', apiError);
+			// Fall back to browser TTS if Gemini API fails
+			return json({ 
+				audioData: 'USE_BROWSER_TTS',
+				text 
+			});
+		}
 		
 	} catch (error) {
 		console.error('Error in generate-audio API:', error);
