@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit';
-import { GoogleGenerativeAI } from '@google/generative-ai';
+import { GoogleGenAI } from '@google/genai';
 
 // Get API key from environment variable (if available)
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
@@ -23,23 +23,18 @@ export async function POST({ request }) {
 		
 		try {
 			// Initialize the Gemini API
-			const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-			
-			// Use the Gemini model with audio generation capabilities
-			const model = genAI.getGenerativeModel({
-				model: 'gemini-2.0-flash-exp',
-			});
+			const ai = new GoogleGenAI({});
 			
 			// Generate audio using the Gemini API
-			const result = await model.generateContent({
+			const response = await ai.models.generateContent({
+				model: 'gemini-2.5-flash-preview-tts',
 				contents: [{
-					role: 'user',
 					parts: [{
 						text: text
 					}]
 				}],
-				generationConfig: {
-					responseModalities: ['audio'],
+				config: {
+					responseModalities: ['AUDIO'],
 					speechConfig: {
 						voiceConfig: {
 							prebuiltVoiceConfig: {
@@ -49,9 +44,6 @@ export async function POST({ request }) {
 					}
 				}
 			});
-			
-			// Extract the audio data from the response
-			const response = await result.response;
 			
 			// Check if audio data is available
 			if (response.candidates && response.candidates[0]?.content?.parts) {
