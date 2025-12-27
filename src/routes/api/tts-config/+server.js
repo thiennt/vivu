@@ -4,17 +4,10 @@ import { json } from '@sveltejs/kit';
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 /**
- * API endpoint to provide Gemini API key to client
- * The actual TTS generation is now handled client-side using Cache Storage API
+ * GET endpoint to retrieve TTS configuration (API key)
  */
-export async function POST({ request }) {
+export async function GET() {
 	try {
-		const { text } = await request.json();
-		
-		if (!text) {
-			return json({ error: 'Text is required' }, { status: 400 });
-		}
-		
 		// Check if API key is configured
 		if (!GEMINI_API_KEY || GEMINI_API_KEY === 'your_api_key_here') {
 			console.error('Gemini API key not configured');
@@ -24,11 +17,10 @@ export async function POST({ request }) {
 		}
 		
 		// Return the API key to the client for TTS generation
-		// The client will handle caching and generation using the TTS utility
 		return json({ apiKey: GEMINI_API_KEY });
 		
 	} catch (error) {
-		console.error('Error in generate-audio API:', error);
-		return json({ error: 'Failed to process audio request' }, { status: 500 });
+		console.error('Error in tts-config API:', error);
+		return json({ error: 'Failed to retrieve TTS configuration' }, { status: 500 });
 	}
 }

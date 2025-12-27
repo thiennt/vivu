@@ -36,13 +36,7 @@
 		
 		// Fetch API key from server
 		try {
-			const response = await fetch('/api/generate-audio', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({ text: 'init' })
-			});
+			const response = await fetch('/api/tts-config');
 			
 			if (response.ok) {
 				const data = await response.json();

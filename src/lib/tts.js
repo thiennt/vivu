@@ -1,12 +1,24 @@
 import { GoogleGenAI } from '@google/genai';
 
-// Get API key from environment - we'll pass it from the server
 const CACHE_NAME = 'vivulingo-speech-cache';
+
+/**
+ * Simple hash function for cache key generation
+ * @param {string} str - String to hash
+ * @returns {Promise<string>} - Hash string
+ */
+async function hashText(str) {
+	const encoder = new TextEncoder();
+	const data = encoder.encode(str);
+	const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+	const hashArray = Array.from(new Uint8Array(hashBuffer));
+	return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
 
 /**
  * Get speech audio from cache or generate using Gemini API
  * @param {string} text - Text to convert to speech
- * @param {string} apiKey - Gemini API key
+ * @param {string} apiKey - Gemini API key (passed from server)
  * @returns {Promise<string>} - Object URL for the audio blob, or empty string on error
  */
 export async function getSpeechAndCache(text, apiKey) {
@@ -23,8 +35,9 @@ export async function getSpeechAndCache(text, apiKey) {
 	try {
 		const cache = await caches.open(CACHE_NAME);
 		
-		// Create a cache key based on the text (using first 50 chars for uniqueness)
-		const cacheKey = new Request(`/tts/${encodeURIComponent(text.substring(0, 50))}`);
+		// Create a cache key based on hash of the full text to avoid collisions
+		const textHash = await hashText(text);
+		const cacheKey = new Request(`/tts/${textHash}`);
 
 		// 1. Check cache first
 		const cachedResponse = await cache.match(cacheKey);
@@ -60,14 +73,10 @@ export async function getSpeechAndCache(text, apiKey) {
 		const base64Data = audioPart.inlineData.data;
 		const mimeType = audioPart.inlineData.mimeType; // Usually audio/mp3 or audio/wav
 
-		// 3. Convert Base64 to Blob
-		const byteCharacters = atob(base64Data);
-		const byteNumbers = new Array(byteCharacters.length);
-		for (let i = 0; i < byteCharacters.length; i++) {
-			byteNumbers[i] = byteCharacters.charCodeAt(i);
-		}
-		const byteArray = new Uint8Array(byteNumbers);
-		const audioBlob = new Blob([byteArray], { type: mimeType });
+		// 3. Convert Base64 to Blob using efficient method
+		const binaryString = atob(base64Data);
+		const bytes = Uint8Array.from(binaryString, c => c.charCodeAt(0));
+		const audioBlob = new Blob([bytes], { type: mimeType });
 
 		// 4. Save Blob to Cache Storage
 		const responseToCache = new Response(audioBlob, {
