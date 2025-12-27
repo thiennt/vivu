@@ -15,13 +15,18 @@ app.use('/*', cors({
     const clientUrl = process.env.CLIENT_URL || 'http://localhost:5173';
     const allowedOrigins = [clientUrl];
     
-    // If CLIENT_URL uses localhost, also allow the 127.0.0.1 variant
-    if (clientUrl.includes('localhost')) {
-      allowedOrigins.push(clientUrl.replace('localhost', '127.0.0.1'));
-    }
-    // If CLIENT_URL uses 127.0.0.1, also allow the localhost variant
-    if (clientUrl.includes('127.0.0.1')) {
-      allowedOrigins.push(clientUrl.replace('127.0.0.1', 'localhost'));
+    // If CLIENT_URL uses localhost or 127.0.0.1, also allow the alternative
+    try {
+      const url = new URL(clientUrl);
+      if (url.hostname === 'localhost') {
+        url.hostname = '127.0.0.1';
+        allowedOrigins.push(url.toString().replace(/\/$/, ''));
+      } else if (url.hostname === '127.0.0.1') {
+        url.hostname = 'localhost';
+        allowedOrigins.push(url.toString().replace(/\/$/, ''));
+      }
+    } catch (e) {
+      // If URL parsing fails, just use the original clientUrl
     }
     
     return allowedOrigins.includes(origin) ? origin : false;
