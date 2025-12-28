@@ -278,7 +278,6 @@ router.post('/generate', async (c) => {
       // For single words, use just the word as the filename
       lessonTitle = sanitizeFilename(vocab.word);
       isSingleWord = true;
-      isSingleWord = true;
     } else {
       // Generate audio for the entire lesson content
       text = lesson.content;
