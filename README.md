@@ -4,52 +4,85 @@ A monorepo-based English learning platform with a Hono backend API and SvelteKit
 
 ## Architecture
 
-This project is structured as a monorepo with two main packages:
+This project is structured as a monorepo with two main packages and supports two TTS (Text-to-Speech) providers:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                     ViVu Application                        │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  ┌─────────────────┐              ┌──────────────────┐     │
-│  │                 │              │                  │     │
-│  │  Client (5173)  │◄────────────►│  Backend (3000)  │     │
-│  │   SvelteKit     │    HTTP      │      Hono        │     │
-│  │                 │              │                  │     │
-│  └─────────────────┘              └──────────────────┘     │
-│         │                                  │                │
-│         │                                  │                │
-│         │                                  ▼                │
-│         │                         ┌───────────────┐         │
-│         │                         │  Gemini API   │         │
-│         │                         │     (TTS)     │         │
-│         │                         └───────────────┘         │
-│         │                                  │                │
-│         │                                  ▼                │
-│         │                         ┌───────────────┐         │
-│         └────────────────────────►│ Audio Files   │         │
-│                 Plays              │   (cached)    │         │
-│                                    └───────────────┘         │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────┐
+│                          ViVu Application                           │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│  ┌─────────────────┐              ┌──────────────────┐             │
+│  │                 │              │                  │             │
+│  │  Client (5173)  │◄────────────►│  Backend (3000)  │             │
+│  │   SvelteKit     │    HTTP      │      Hono        │             │
+│  │   + Puter.js    │              │                  │             │
+│  └─────────────────┘              └──────────────────┘             │
+│         │                                  │                        │
+│         │  (Puter.js Flow)                 │ (Gemini Flow)          │
+│         │  Client-Side TTS                 │ Server-Side TTS        │
+│         │                                  │                        │
+│         │                                  ▼                        │
+│         │                         ┌───────────────┐                 │
+│         │                         │  Gemini API   │                 │
+│         │                         │     (TTS)     │                 │
+│         │                         └───────────────┘                 │
+│         ▼                                  │                        │
+│  ┌─────────────┐                           │                        │
+│  │  Puter.js   │                           │                        │
+│  │  TTS API    │                           │                        │
+│  └─────────────┘                           │                        │
+│         │                                  │                        │
+│         │    Upload for caching            │                        │
+│         └──────────────┬───────────────────┘                        │
+│                        ▼                                            │
+│                ┌───────────────┐                                    │
+│                │ Audio Files   │                                    │
+│                │   (cached)    │                                    │
+│                └───────────────┘                                    │
+│                        │                                            │
+│                        ▼                                            │
+│                 Plays in Browser                                    │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Components:
 
 - **Backend** (`packages/backend`): Hono-based API server that handles:
   - Topic and lesson data management
-  - Text-to-speech (TTS) generation using Google Gemini API
-  - Audio file storage and serving
+  - Text-to-speech (TTS) generation using Google Gemini API (server-side)
+  - Audio file storage, caching, and serving
+  - Audio file upload endpoint for client-side generated audio
   
 - **Client** (`packages/client`): SvelteKit-based frontend application
   - Fetches data from backend API
-  - Plays audio files generated by backend
+  - Supports two TTS providers:
+    - **Gemini (Server-Side)**: Traditional backend TTS generation
+    - **Puter.js (Client-Side)**: Browser-based TTS generation with backend caching
+  - Provider selection via dropdown UI
   - Responsive UI for learning experience
+
+## TTS Providers
+
+### Gemini (Server-Side)
+Traditional flow where backend generates audio:
+1. Client requests audio from backend
+2. Backend generates audio using Gemini API
+3. Backend caches and returns audio URL
+4. Client plays audio
+
+### Puter.js (Client-Side)
+Client-side generation with smart caching:
+1. Client checks if audio exists on backend
+2. If not, generates audio in browser using Puter.js
+3. Uploads generated audio to backend for caching
+4. Plays audio from backend URL
 
 ## Prerequisites
 
 - Node.js 18+ and npm
-- Google Gemini API key ([Get one here](https://ai.google.dev/))
+- **For Gemini TTS**: Google Gemini API key ([Get one here](https://ai.google.dev/))
+- **For Puter.js TTS** (optional): Puter API token ([Get one here](https://puter.com/))
 
 ## Setup
 
@@ -71,10 +104,19 @@ This project is structured as a monorepo with two main packages:
    cp .env.example .env
    ```
    
-   Then edit `.env` and add your Gemini API key:
+   Then edit `.env` and configure your TTS provider(s):
    ```
-   GEMINI_API_KEY=your_actual_api_key_here
+   # Required for Gemini TTS provider
+   GEMINI_API_KEY=your_actual_gemini_api_key_here
+   
+   # Optional for Puter.js TTS provider
+   PUTER_API_TOKEN=your_actual_puter_token_here
+   
+   # Optional: Set default TTS provider (gemini or puter)
+   VITE_DEFAULT_TTS_PROVIDER=gemini
    ```
+   
+   **Note**: You can use either or both providers. If you only configure one, that provider will be available in the UI.
 
 4. **Start development servers**
    
@@ -110,7 +152,8 @@ vivu/
 │   └── client/                # SvelteKit frontend
 │       ├── src/
 │       │   ├── lib/           # Shared utilities
-│       │   │   └── tts-client.js  # TTS client API
+│       │   │   ├── tts-client.js      # TTS client API
+│       │   │   └── tts-providers.js   # TTS provider implementations
 │       │   └── routes/        # SvelteKit routes
 │       ├── package.json
 │       ├── svelte.config.js
@@ -122,9 +165,10 @@ vivu/
 ## Features
 
 - 📚 Topic-based English learning with lessons
-- 🎧 Text-to-speech for lessons and vocabulary using Google Gemini API
-- 🔊 Individual word pronunciation
-- 💾 Server-side audio caching for performance
+- 🎧 **Dual TTS providers**: Choose between Gemini (server-side) or Puter.js (client-side)
+- 🔊 Individual word pronunciation with smart filename generation
+- 💾 Intelligent audio caching for both providers
+- 🎛️ Provider selection via dropdown UI
 - 🎨 Clean, responsive UI with SvelteKit
 - 🏗️ Monorepo architecture with clear separation of concerns
 
@@ -135,9 +179,14 @@ vivu/
 - **GET /api/topics** - Get all topics
 - **GET /api/topics/:id** - Get a specific topic
 - **GET /api/topics/:id/lesson/:lessonId** - Get a specific lesson
-- **POST /api/tts/generate** - Generate audio from text
-  - Body: `{ "text": "text to convert" }`
-  - Returns: `{ "audioUrl": "/api/tts/audio/filename.mp3", "cached": boolean }`
+- **POST /api/tts/generate** - Generate audio using Gemini (server-side)
+  - Body: `{ "topicId": 1, "lessonId": 1, "wordIndex": 0 }`
+  - Returns: `{ "audioUrl": "/api/tts/audio/filename.wav", "cached": boolean }`
+- **GET /api/tts/check/:filename** - Check if audio file exists
+  - Returns: `{ "exists": boolean, "audioUrl": string, "format": string }`
+- **POST /api/tts/upload** - Upload client-generated audio for caching
+  - Body: `{ "filename": "word", "audioData": "base64...", "format": "mp3" }`
+  - Returns: `{ "success": true, "audioUrl": "/api/tts/audio/filename.mp3" }`
 - **GET /api/tts/audio/:filename** - Serve audio file
 
 ## Development
@@ -174,24 +223,48 @@ cd packages/client && npm run build
 ## Environment Variables
 
 ### Backend
-- `GEMINI_API_KEY` - Your Google Gemini API key (required)
+- `GEMINI_API_KEY` - Your Google Gemini API key (required for Gemini provider)
+- `PUTER_API_TOKEN` - Your Puter API token (optional, for Puter.js provider)
 - `PORT` - Backend server port (default: 3000)
-- `CLIENT_URL` - Client URL for CORS (default: http://localhost:5173)
+- `ALLOWED_ORIGINS` - Allowed CORS origins (default: http://localhost:5173,http://127.0.0.1:5173)
 
 ### Client
 - `VITE_BACKEND_URL` - Backend API URL (default: http://localhost:3000)
 - `BACKEND_URL` - Backend URL for server-side requests (default: http://localhost:3000)
+- `VITE_DEFAULT_TTS_PROVIDER` - Default TTS provider: `gemini` or `puter` (default: gemini)
+- `VITE_PUTER_API_TOKEN` - Puter API token for client-side authentication (optional)
 
-## Gemini API Integration
+## TTS Provider Integration
 
-This application uses Google's Gemini API for speech generation as documented at:
+### Gemini API (Server-Side)
+
+This application uses Google's Gemini API for server-side speech generation as documented at:
 https://ai.google.dev/gemini-api/docs/speech-generation
 
-The implementation:
+The Gemini implementation:
 - Uses the `gemini-2.5-flash-preview-tts` model with audio generation capabilities
 - Configures the `Puck` voice for natural-sounding English pronunciation
-- Stores generated audio files on the backend for efficient caching
+- Generates audio on the backend server
+- Stores generated audio files for efficient caching
 - Serves audio files directly from the backend
+
+### Puter.js API (Client-Side)
+
+Puter.js provides client-side text-to-speech generation:
+https://puter.com/
+
+The Puter.js implementation:
+- Generates audio directly in the browser using `@heyputer/puter.js`
+- Checks backend cache before generating
+- Uploads generated audio to backend for future caching
+- Enables TTS without requiring server-side API keys
+- Falls back gracefully if Puter API is unavailable
+
+### Audio Filename Strategy
+
+- **Single words**: Uses the word itself as filename (e.g., `hello.wav`)
+- **Lesson content**: Uses sanitized lesson title (e.g., `hello_and_goodbye.wav`)
+- **Benefits**: Human-readable filenames, better caching, easier debugging
 
 ## License
 
