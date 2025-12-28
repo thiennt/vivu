@@ -30,7 +30,6 @@
 	// Initialize audio element
 	onMount(async () => {
 		audio = new Audio();
-		audio.playbackRate = playbackSpeed;
 		audio.addEventListener('loadedmetadata', () => {
 			duration = audio.duration;
 		});
@@ -99,6 +98,7 @@
 			audio.load();
 			audio.src = audioUrl;
 			audio.type = 'audio/wav';
+			audio.playbackRate = playbackSpeed;
 			audio.load();
 			await audio.play();
 			isPlaying = true;
@@ -163,11 +163,11 @@
 
 			// Play word audio with type set and playback speed
 			const wordAudio = new Audio();
-			wordAudio.playbackRate = playbackSpeed;
 			wordAudio.src = '';
 			wordAudio.load();
 			wordAudio.src = audioUrl;
 			wordAudio.type = 'audio/wav';
+			wordAudio.playbackRate = playbackSpeed;
 			wordAudio.load();
 			wordAudio.addEventListener('ended', () => {
 				playingWordIndex = null;
