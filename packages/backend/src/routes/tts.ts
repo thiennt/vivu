@@ -140,29 +140,22 @@ async function generateGeminiAudio(text: string, lessonTitle?: string): Promise<
 }
 
 /**
- * Generate audio using the specified provider (or default)
+ * Generate audio using Gemini (backend-only TTS generation)
  * Accepts lessonTitle for filename, falls back to hash if not provided
- * Note: Puter generation is now handled client-side
  */
-async function generateAndSaveAudio(text: string, lessonTitle?: string, provider?: string): Promise<string> {
-  const ttsProvider = provider || DEFAULT_TTS_PROVIDER;
-  
-  // Only Gemini is generated on backend, Puter is client-side
-  if (ttsProvider === 'gemini') {
-    return generateGeminiAudio(text, lessonTitle);
-  } else {
-    throw new Error(`Backend generation only supports 'gemini'. Puter TTS is handled client-side.`);
-  }
+async function generateAndSaveAudio(text: string, lessonTitle?: string): Promise<string> {
+  return generateGeminiAudio(text, lessonTitle);
 }
 
 /**
  * POST /api/tts/generate
- * Generate TTS audio from topicId, lessonId, and optional wordIndex
+ * Generate TTS audio from topicId, lessonId, and optional wordIndex using Gemini
+ * Note: This endpoint only supports Gemini. Puter TTS is handled client-side.
  */
 router.post('/generate', async (c) => {
   try {
     const body = await c.req.json();
-    const { topicId, lessonId, wordIndex, provider } = body;
+    const { topicId, lessonId, wordIndex } = body;
 
     // Validate required parameters
     if (topicId === undefined || lessonId === undefined) {
@@ -196,7 +189,6 @@ router.post('/generate', async (c) => {
     // Determine text and filename based on wordIndex
     let text: string;
     let lessonTitle: string;
-    let isSingleWord = false;
 
     if (wordIndex !== undefined && wordIndex !== null) {
       // Validate wordIndex
@@ -216,62 +208,36 @@ router.post('/generate', async (c) => {
       text = vocab.word;
       // For single words, use just the word as the filename
       lessonTitle = sanitizeFilename(vocab.word);
-      isSingleWord = true;
     } else {
       // Generate audio for the entire lesson content
       text = lesson.content;
       lessonTitle = sanitizeFilename(lesson.title);
-      isSingleWord = false;
     }
 
-    // Determine TTS provider to use
-    const ttsProvider = provider || DEFAULT_TTS_PROVIDER;
-    
-    // Determine file extension based on provider
-    const fileExtension = ttsProvider === 'puter' ? '.mp3' : '.wav';
-    
-    // Use sanitized lesson title for filename
+    // Use sanitized lesson title for filename (Gemini always uses .wav)
     let baseName = lessonTitle;
     if (!baseName) baseName = hashText(text);
-    const filename = `${baseName}${fileExtension}`;
+    const filename = `${baseName}.wav`;
     const filepath = join(AUDIO_DIR, filename);
 
-    // For provider-specific caching, check both extensions
-    const mp3Filename = `${baseName}.mp3`;
-    const wavFilename = `${baseName}.wav`;
-    const mp3Path = join(AUDIO_DIR, mp3Filename);
-    const wavPath = join(AUDIO_DIR, wavFilename);
-
-    // Check if file exists (try both extensions)
-    let existingFilename: string | null = null;
+    // Check if file exists
     try {
-      await access(mp3Path);
-      existingFilename = mp3Filename;
-    } catch {
-      try {
-        await access(wavPath);
-        existingFilename = wavFilename;
-      } catch {
-        // File doesn't exist, continue to generate
-      }
-    }
-
-    if (existingFilename) {
+      await access(filepath);
       // Return existing audio URL
       return c.json({
-        audioUrl: `/api/tts/audio/${existingFilename}`,
-        cached: true,
-        provider: existingFilename.endsWith('.mp3') ? 'puter' : 'gemini'
+        audioUrl: `/api/tts/audio/${filename}`,
+        cached: true
       });
+    } catch {
+      // File doesn't exist, continue to generate
     }
 
-    // Generate new audio with the specified provider
-    const generatedFilename = await generateAndSaveAudio(text, lessonTitle, ttsProvider);
+    // Generate new audio with Gemini
+    const generatedFilename = await generateAndSaveAudio(text, lessonTitle);
 
     return c.json({
       audioUrl: `/api/tts/audio/${generatedFilename}`,
-      cached: false,
-      provider: ttsProvider
+      cached: false
     });
 
   } catch (error) {
