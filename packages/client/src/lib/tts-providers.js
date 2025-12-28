@@ -120,7 +120,7 @@ export const puterProvider = {
 
 			// Generate audio using Puter's AI text-to-speech
 			const response = await puter.ai.txt2speech(text);
-			
+
 			// Convert response to base64
 			let audioBase64;
 			if (response instanceof Blob) {
@@ -132,12 +132,19 @@ export const puterProvider = {
 			} else if (response && typeof response === 'object') {
 				// Handle object response (e.g., { data: Blob/ArrayBuffer/string })
 				const audioData = response.data ?? response.audio;
-				
+
 				if (audioData === undefined) {
-					throw new Error(`Unsupported audio format from Puter.js: object with properties: ${Object.keys(response).join(', ')}`);
-				}
-				
-				if (audioData instanceof Blob) {
+					// Log prototype for debugging
+					const proto = Object.getPrototypeOf(response);
+					console.error('Unknown object format from Puter.js:', response, 'Prototype:', proto);
+					// Fallback: try toString if available and not default Object
+					if (typeof response.toString === 'function' && response.toString !== Object.prototype.toString) {
+						audioBase64 = response.toString();
+						console.warn('Falling back to response.toString() for audio data.');
+					} else {
+						throw new Error(`Unsupported audio format from Puter.js: object with properties: ${Object.keys(response).join(', ')}`);
+					}
+				} else if (audioData instanceof Blob) {
 					audioBase64 = await blobToBase64(audioData);
 				} else if (audioData instanceof ArrayBuffer) {
 					audioBase64 = arrayBufferToBase64(audioData);
@@ -150,7 +157,7 @@ export const puterProvider = {
 			} else {
 				throw new Error(`Unsupported audio format from Puter.js: ${typeof response}`);
 			}
-			
+
 			return audioBase64;
 		} catch (error) {
 			console.error('Puter.js generation error:', error);
