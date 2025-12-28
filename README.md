@@ -122,11 +122,12 @@ vivu/
 ## Features
 
 - 📚 Topic-based English learning with lessons
-- 🎧 Text-to-speech for lessons and vocabulary using Google Gemini API
+- 🎧 Text-to-speech for lessons and vocabulary using Google Gemini API or Puter.js
 - 🔊 Individual word pronunciation
 - 💾 Server-side audio caching for performance
 - 🎨 Clean, responsive UI with SvelteKit
 - 🏗️ Monorepo architecture with clear separation of concerns
+- 🔄 Multiple TTS provider options (Gemini & Puter.js)
 
 ## API Endpoints
 
@@ -136,8 +137,9 @@ vivu/
 - **GET /api/topics/:id** - Get a specific topic
 - **GET /api/topics/:id/lesson/:lessonId** - Get a specific lesson
 - **POST /api/tts/generate** - Generate audio from text
-  - Body: `{ "text": "text to convert" }`
-  - Returns: `{ "audioUrl": "/api/tts/audio/filename.mp3", "cached": boolean }`
+  - Body: `{ "topicId": 1, "lessonId": 1, "wordIndex": 0, "provider": "gemini" }`
+  - Provider can be "gemini" or "puter" (optional, defaults to TTS_PROVIDER env var)
+  - Returns: `{ "audioUrl": "/api/tts/audio/filename.wav", "cached": boolean, "provider": "gemini" }`
 - **GET /api/tts/audio/:filename** - Serve audio file
 
 ## Development
@@ -174,7 +176,9 @@ cd packages/client && npm run build
 ## Environment Variables
 
 ### Backend
-- `GEMINI_API_KEY` - Your Google Gemini API key (required)
+- `GEMINI_API_KEY` - Your Google Gemini API key (optional if using Puter.js only)
+- `PUTER_API_TOKEN` - Your Puter API token (optional if using Gemini only)
+- `TTS_PROVIDER` - Default TTS provider: "gemini" or "puter" (default: gemini)
 - `PORT` - Backend server port (default: 3000)
 - `CLIENT_URL` - Client URL for CORS (default: http://localhost:5173)
 
@@ -182,16 +186,37 @@ cd packages/client && npm run build
 - `VITE_BACKEND_URL` - Backend API URL (default: http://localhost:3000)
 - `BACKEND_URL` - Backend URL for server-side requests (default: http://localhost:3000)
 
-## Gemini API Integration
+## TTS Provider Integration
 
-This application uses Google's Gemini API for speech generation as documented at:
+This application supports two TTS providers that you can choose from:
+
+### Gemini API
+Google's Gemini API for speech generation as documented at:
 https://ai.google.dev/gemini-api/docs/speech-generation
 
 The implementation:
 - Uses the `gemini-2.5-flash-preview-tts` model with audio generation capabilities
 - Configures the `Puck` voice for natural-sounding English pronunciation
+- Generates `.wav` audio files
 - Stores generated audio files on the backend for efficient caching
-- Serves audio files directly from the backend
+
+### Puter.js
+Puter's AI text-to-speech API as documented at:
+https://docs.puter.com/
+
+The implementation:
+- Uses Puter's `ai.txt2speech()` API
+- Generates `.mp3` audio files
+- No API key required for basic usage (optional token for authenticated access)
+- Stores generated audio files on the backend for efficient caching
+
+### Choosing a TTS Provider
+
+Users can select their preferred TTS provider directly in the UI using the dropdown selector on the lesson page. The selection affects:
+- Full lesson audio generation
+- Individual word pronunciation
+
+**Note:** For single-word TTS, audio files are saved using the word itself as the filename (e.g., `hello.wav` or `hello.mp3`) for easy identification and reuse.
 
 ## License
 
