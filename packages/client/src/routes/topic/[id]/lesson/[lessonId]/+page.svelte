@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
-	import { generateSpeech } from '$lib/tts-client.js';
+	import { generateSpeech, getCurrentProvider, setProvider } from '$lib/tts-client.js';
+	import { getProviders } from '$lib/tts-providers.js';
 	
 	let { data } = $props();
 	let topic = $derived(data.topic);
@@ -14,6 +15,10 @@
 	let audio = $state(null);
 	let isLoadingAudio = $state(false);
 	let playingWordIndex = $state(null);
+	
+	// TTS Provider state
+	let selectedProvider = $state(getCurrentProvider());
+	let providers = getProviders();
 	
 	// State for error messages
 	let errorMessage = $state(null);
@@ -44,6 +49,13 @@
 		showLesson = !showLesson;
 	}
 	
+	// Handle provider change
+	function handleProviderChange(event) {
+		const newProvider = event.target.value;
+		setProvider(newProvider);
+		selectedProvider = newProvider;
+	}
+	
 	// Play or pause lesson audio
 	async function toggleAudio() {
 		if (!audio) return;
@@ -60,7 +72,7 @@
 	async function generateLessonAudio() {
 		isLoadingAudio = true;
 		try {
-			const audioUrl = await generateSpeech(topic.id, lesson.id);
+			const audioUrl = await generateSpeech(topic.id, lesson.id, undefined, lesson.content);
 
 			console.log('Generated audio URL:', audioUrl);
 
@@ -129,7 +141,7 @@
 		playingWordIndex = index;
 
 		try {
-			const audioUrl = await generateSpeech(topic.id, lesson.id, index);
+			const audioUrl = await generateSpeech(topic.id, lesson.id, index, vocab.word);
 
 			if (!audioUrl) {
 				throw new Error('Failed to generate word audio');
@@ -177,6 +189,16 @@
 			{errorMessage}
 		</div>
 	{/if}
+
+	<!-- TTS Provider Selector -->
+	<div class="provider-selector">
+		<label for="tts-provider">TTS Provider:</label>
+		<select id="tts-provider" value={selectedProvider} onchange={handleProviderChange}>
+			{#each providers as provider}
+				<option value={provider.name}>{provider.displayName}</option>
+			{/each}
+		</select>
+	</div>
 
 	<div class="lesson-header">
 		<h1>{lesson.title}</h1>
@@ -329,6 +351,45 @@
 			opacity: 1;
 			transform: translateY(0);
 		}
+	}
+
+	.provider-selector {
+		background: white;
+		border-radius: 12px;
+		padding: 1rem 1.5rem;
+		margin-bottom: 1.5rem;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.provider-selector label {
+		color: #667eea;
+		font-weight: 600;
+		font-size: 1rem;
+	}
+
+	.provider-selector select {
+		flex: 1;
+		padding: 0.5rem 1rem;
+		border: 2px solid #e0e0e0;
+		border-radius: 8px;
+		font-size: 1rem;
+		color: #333;
+		background: white;
+		cursor: pointer;
+		transition: border-color 0.2s;
+	}
+
+	.provider-selector select:hover {
+		border-color: #667eea;
+	}
+
+	.provider-selector select:focus {
+		outline: none;
+		border-color: #667eea;
+		box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 	}
 
 	.lesson-header {
