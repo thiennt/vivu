@@ -257,7 +257,8 @@ router.post('/upload', async (c) => {
 
     return c.json({
       success: true,
-      audioUrl: `/api/tts/audio/${filenameWithExt}`
+      audioUrl: `/api/tts/audio/${filenameWithExt}`,
+      format: audioFormat
     });
 
   } catch (error) {

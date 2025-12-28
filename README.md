@@ -186,7 +186,7 @@ vivu/
   - Returns: `{ "exists": boolean, "audioUrl": string, "format": string }`
 - **POST /api/tts/upload** - Upload client-generated audio for caching
   - Body: `{ "filename": "word", "audioData": "base64...", "format": "mp3" }`
-  - Returns: `{ "success": true, "audioUrl": "/api/tts/audio/filename.mp3" }`
+  - Returns: `{ "success": true, "audioUrl": "/api/tts/audio/filename.mp3", "format": "mp3" }`
 - **GET /api/tts/audio/:filename** - Serve audio file
 
 ## Development
