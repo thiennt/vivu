@@ -11,6 +11,13 @@ import 'dotenv/config';
 import wav from 'wav';
 import topicsData from '../data/topics.json' with { type: 'json' };
 
+// Polyfill XMLHttpRequest for Puter.js SDK (browser-only SDK)
+// @ts-ignore
+import * as xmlhttprequest from 'xmlhttprequest-ssl';
+(global as any).XMLHttpRequest = xmlhttprequest.XMLHttpRequest;
+
+import puter from '@heyputer/puter.js';
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -19,7 +26,6 @@ const router = new Hono();
 
 // Get API key from environment
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-const PUTER_API_TOKEN = process.env.PUTER_API_TOKEN;
 const DEFAULT_TTS_PROVIDER = process.env.TTS_PROVIDER || 'gemini';
 
 // Audio storage directory
@@ -144,40 +150,20 @@ async function generateGeminiAudio(text: string, lessonTitle?: string): Promise<
  * Generate audio using Puter.js AI TTS and save to .mp3 file
  * Accepts lessonTitle for filename, falls back to hash if not provided
  * 
- * Note: This requires network access to api.puter.com
+ * Note: Puter.js SDK works without API key
  */
 async function generatePuterAudio(text: string, lessonTitle?: string): Promise<string> {
   try {
-    // Make direct HTTP request to Puter's TTS API
-    // Puter.js SDK is browser-only, so we use direct fetch to their API
-    const apiUrl = 'https://api.puter.com/drivers/call';
-    
-    const headers: Record<string, string> = {
-      'Content-Type': 'application/json',
-    };
-    
-    // Add auth token if provided
-    if (PUTER_API_TOKEN && isValidApiKey(PUTER_API_TOKEN)) {
-      headers['Authorization'] = `Bearer ${PUTER_API_TOKEN}`;
-    }
-    
-    const response = await fetch(apiUrl, {
-      method: 'POST',
-      headers,
-      body: JSON.stringify({
-        interface: 'puter-tts',
-        method: 'synthesize',
-        args: { text }
-      })
+    // Use Puter's AI text-to-speech SDK
+    // No API key required - SDK works directly
+    const audio = await puter.ai.txt2speech(text, {
+      voice: 'alloy', // Options: alloy, echo, fable, onyx, nova, shimmer
+      language: 'en-US'
     });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`Puter API error: ${response.status} ${response.statusText} - ${errorText}`);
-    }
-
-    // Get audio data as buffer
-    const audioBuffer = Buffer.from(await response.arrayBuffer());
+    
+    // Convert Blob to Buffer
+    const arrayBuffer = await audio.arrayBuffer();
+    const audioBuffer = Buffer.from(arrayBuffer);
 
     // Use sanitized lesson title for filename if provided, else fallback to hash
     let baseName = lessonTitle ? sanitizeFilename(lessonTitle) : hashText(text);
@@ -185,17 +171,11 @@ async function generatePuterAudio(text: string, lessonTitle?: string): Promise<s
     const filename = `${baseName}.mp3`;
     const filepath = join(AUDIO_DIR, filename);
     
-    // Save as MP3 file (Puter typically returns MP3)
+    // Save as MP3 file
     await writeFile(filepath, audioBuffer);
     return filename;
   } catch (error) {
     console.error('Puter TTS error details:', error);
-    
-    // Provide a more helpful error message
-    if (error instanceof Error && error.message.includes('ENOTFOUND')) {
-      throw new Error('Puter TTS error: Cannot reach Puter API. Please check your internet connection or network restrictions.');
-    }
-    
     throw new Error(`Puter TTS error: ${error instanceof Error ? error.message : JSON.stringify(error)}`);
   }
 }

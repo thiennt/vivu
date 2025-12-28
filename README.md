@@ -177,7 +177,6 @@ cd packages/client && npm run build
 
 ### Backend
 - `GEMINI_API_KEY` - Your Google Gemini API key (optional if using Puter.js only)
-- `PUTER_API_TOKEN` - Your Puter API token (optional if using Gemini only)
 - `TTS_PROVIDER` - Default TTS provider: "gemini" or "puter" (default: gemini)
 - `PORT` - Backend server port (default: 3000)
 - `CLIENT_URL` - Client URL for CORS (default: http://localhost:5173)
@@ -205,9 +204,10 @@ Puter's AI text-to-speech API as documented at:
 https://docs.puter.com/
 
 The implementation:
-- Uses Puter's `ai.txt2speech()` API
+- Uses Puter's `ai.txt2speech()` SDK method
+- Supports multiple voices: alloy, echo, fable, onyx, nova, shimmer
 - Generates `.mp3` audio files
-- No API key required for basic usage (optional token for authenticated access)
+- **No API key required** - works out of the box
 - Stores generated audio files on the backend for efficient caching
 
 ### Choosing a TTS Provider
