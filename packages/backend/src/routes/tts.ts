@@ -10,6 +10,7 @@ import 'dotenv/config';
 
 import wav from 'wav';
 import topicsData from '../data/topics.json' with { type: 'json' };
+import puter from '@heyputer/puter.js';
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -19,6 +20,8 @@ const router = new Hono();
 
 // Get API key from environment
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+const PUTER_API_TOKEN = process.env.PUTER_API_TOKEN;
+const DEFAULT_TTS_PROVIDER = process.env.TTS_PROVIDER || 'gemini';
 
 // Audio storage directory
 const AUDIO_DIR = join(__dirname, '../../audio');
@@ -94,7 +97,7 @@ function sanitizeFilename(str: string): string {
  * Generate audio using Gemini API and save to .wav file
  * Accepts lessonTitle for filename, falls back to hash if not provided
  */
-async function generateAndSaveAudio(text: string, lessonTitle?: string): Promise<string> {
+async function generateGeminiAudio(text: string, lessonTitle?: string): Promise<string> {
   if (!isValidApiKey(GEMINI_API_KEY)) {
     throw new Error('Gemini API key not configured');
   }
@@ -139,13 +142,61 @@ async function generateAndSaveAudio(text: string, lessonTitle?: string): Promise
 }
 
 /**
+ * Generate audio using Puter.js AI TTS and save to .wav file
+ * Accepts lessonTitle for filename, falls back to hash if not provided
+ */
+async function generatePuterAudio(text: string, lessonTitle?: string): Promise<string> {
+  // Authenticate with Puter if token is provided
+  if (PUTER_API_TOKEN && isValidApiKey(PUTER_API_TOKEN)) {
+    puter.setAuthToken(PUTER_API_TOKEN);
+  }
+
+  try {
+    // Use Puter's AI text-to-speech
+    const response = await puter.ai.txt2speech(text);
+    
+    // The response is already a Blob, convert to Buffer
+    const arrayBuffer = await response.arrayBuffer();
+    const audioBuffer = Buffer.from(arrayBuffer);
+
+    // Use sanitized lesson title for filename if provided, else fallback to hash
+    let baseName = lessonTitle ? sanitizeFilename(lessonTitle) : hashText(text);
+    if (!baseName) baseName = hashText(text);
+    const filename = `${baseName}.mp3`;
+    const filepath = join(AUDIO_DIR, filename);
+    
+    // Save as MP3 file (Puter typically returns MP3)
+    await writeFile(filepath, audioBuffer);
+    return filename;
+  } catch (error) {
+    throw new Error(`Puter TTS error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+  }
+}
+
+/**
+ * Generate audio using the specified provider (or default)
+ * Accepts lessonTitle for filename, falls back to hash if not provided
+ */
+async function generateAndSaveAudio(text: string, lessonTitle?: string, provider?: string): Promise<string> {
+  const ttsProvider = provider || DEFAULT_TTS_PROVIDER;
+  
+  if (ttsProvider === 'puter') {
+    return generatePuterAudio(text, lessonTitle);
+  } else if (ttsProvider === 'gemini') {
+    return generateGeminiAudio(text, lessonTitle);
+  } else {
+    throw new Error(`Invalid TTS provider: ${ttsProvider}. Use 'gemini' or 'puter'.`);
+  }
+}
+
+/**
  * POST /api/tts/generate
  * Generate TTS audio from topicId, lessonId, and optional wordIndex
  */
 router.post('/generate', async (c) => {
   try {
     const body = await c.req.json();
-    const { topicId, lessonId, wordIndex } = body;
+    const { topicId, lessonId, wordIndex, provider } = body;
 
     // Validate required parameters
     if (topicId === undefined || lessonId === undefined) {
@@ -179,6 +230,7 @@ router.post('/generate', async (c) => {
     // Determine text and filename based on wordIndex
     let text: string;
     let lessonTitle: string;
+    let isSingleWord = false;
 
     if (wordIndex !== undefined && wordIndex !== null) {
       // Validate wordIndex
@@ -196,16 +248,30 @@ router.post('/generate', async (c) => {
       // Generate audio for a specific vocabulary word
       const vocab = lesson.vocabulary[numericWordIndex];
       text = vocab.word;
-      lessonTitle = `${sanitizeFilename(lesson.title)}_word_${numericWordIndex}_${sanitizeFilename(vocab.word)}`;
+      // For single words, use just the word as the filename
+      lessonTitle = sanitizeFilename(vocab.word);
+      isSingleWord = true;
+      isSingleWord = true;
     } else {
       // Generate audio for the entire lesson content
       text = lesson.content;
       lessonTitle = sanitizeFilename(lesson.title);
+      isSingleWord = false;
     }
 
+    // Determine TTS provider to use
+    const ttsProvider = provider || DEFAULT_TTS_PROVIDER;
+    
+    // Determine file extension based on provider
+    const fileExtension = ttsProvider === 'puter' ? '.mp3' : '.wav';
+    
     // Use sanitized lesson title for filename
     let baseName = lessonTitle;
     if (!baseName) baseName = hashText(text);
+    const filename = `${baseName}${fileExtension}`;
+    const filepath = join(AUDIO_DIR, filename);
+
+    // For provider-specific caching, check both extensions
     const mp3Filename = `${baseName}.mp3`;
     const wavFilename = `${baseName}.wav`;
     const mp3Path = join(AUDIO_DIR, mp3Filename);
@@ -229,16 +295,18 @@ router.post('/generate', async (c) => {
       // Return existing audio URL
       return c.json({
         audioUrl: `/api/tts/audio/${existingFilename}`,
-        cached: true
+        cached: true,
+        provider: existingFilename.endsWith('.mp3') ? 'puter' : 'gemini'
       });
     }
 
-    // Generate new audio
-    const filename = await generateAndSaveAudio(text, lessonTitle);
+    // Generate new audio with the specified provider
+    const generatedFilename = await generateAndSaveAudio(text, lessonTitle, ttsProvider);
 
     return c.json({
-      audioUrl: `/api/tts/audio/${filename}`,
-      cached: false
+      audioUrl: `/api/tts/audio/${generatedFilename}`,
+      cached: false,
+      provider: ttsProvider
     });
 
   } catch (error) {

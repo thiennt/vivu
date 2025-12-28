@@ -15,6 +15,9 @@
 	let isLoadingAudio = $state(false);
 	let playingWordIndex = $state(null);
 	
+	// TTS Provider selection
+	let ttsProvider = $state('gemini');
+	
 	// State for error messages
 	let errorMessage = $state(null);
 	
@@ -60,7 +63,7 @@
 	async function generateLessonAudio() {
 		isLoadingAudio = true;
 		try {
-			const audioUrl = await generateSpeech(topic.id, lesson.id);
+			const audioUrl = await generateSpeech(topic.id, lesson.id, undefined, ttsProvider);
 
 			console.log('Generated audio URL:', audioUrl);
 
@@ -68,11 +71,12 @@
 				throw new Error('Failed to generate audio');
 			}
 
-			// Set audio type for .wav
+			// Set audio type based on provider
+			const audioType = ttsProvider === 'puter' ? 'audio/mpeg' : 'audio/wav';
 			audio.src = '';
 			audio.load();
 			audio.src = audioUrl;
-			audio.type = 'audio/wav';
+			audio.type = audioType;
 			audio.load();
 			await audio.play();
 			isPlaying = true;
@@ -129,18 +133,19 @@
 		playingWordIndex = index;
 
 		try {
-			const audioUrl = await generateSpeech(topic.id, lesson.id, index);
+			const audioUrl = await generateSpeech(topic.id, lesson.id, index, ttsProvider);
 
 			if (!audioUrl) {
 				throw new Error('Failed to generate word audio');
 			}
 
-			// Play word audio with type set
+			// Play word audio with type set based on provider
+			const audioType = ttsProvider === 'puter' ? 'audio/mpeg' : 'audio/wav';
 			const wordAudio = new Audio();
 			wordAudio.src = '';
 			wordAudio.load();
 			wordAudio.src = audioUrl;
-			wordAudio.type = 'audio/wav';
+			wordAudio.type = audioType;
 			wordAudio.load();
 			wordAudio.addEventListener('ended', () => {
 				playingWordIndex = null;
@@ -229,6 +234,15 @@
 			<div class="time-display">{formatTime(duration)}</div>
 		</div>
 	{/if}
+
+	<!-- TTS Provider Selection -->
+	<div class="tts-provider-selector">
+		<label for="tts-provider">TTS Provider:</label>
+		<select id="tts-provider" bind:value={ttsProvider}>
+			<option value="gemini">Gemini</option>
+			<option value="puter">Puter.js</option>
+		</select>
+	</div>
 
 	<!-- Show/Hide lesson button -->
 	<div class="lesson-controls">
@@ -411,6 +425,45 @@
 		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 		border-radius: 4px;
 		transition: width 0.1s linear;
+	}
+
+	.tts-provider-selector {
+		background: white;
+		border-radius: 12px;
+		padding: 1rem 1.5rem;
+		margin-bottom: 1.5rem;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		justify-content: center;
+	}
+
+	.tts-provider-selector label {
+		color: #667eea;
+		font-weight: 600;
+		font-size: 1rem;
+	}
+
+	.tts-provider-selector select {
+		background: white;
+		color: #333;
+		border: 2px solid #667eea;
+		padding: 0.5rem 1rem;
+		border-radius: 8px;
+		font-size: 1rem;
+		cursor: pointer;
+		transition: all 0.2s;
+	}
+
+	.tts-provider-selector select:hover {
+		background: #f8f9ff;
+	}
+
+	.tts-provider-selector select:focus {
+		outline: none;
+		border-color: #764ba2;
+		box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 	}
 
 	.lesson-controls {

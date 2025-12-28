@@ -5,9 +5,10 @@ const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000';
  * @param {number} topicId - ID of the topic
  * @param {number} lessonId - ID of the lesson
  * @param {number} [wordIndex] - Optional index of the vocabulary word
+ * @param {string} [provider] - TTS provider: 'gemini' or 'puter' (optional)
  * @returns {Promise<string>} - URL to the audio file
  */
-export async function generateSpeech(topicId, lessonId, wordIndex = undefined) {
+export async function generateSpeech(topicId, lessonId, wordIndex = undefined, provider = undefined) {
 	if (topicId === undefined || lessonId === undefined) {
 		console.error('topicId and lessonId are required for speech generation');
 		return '';
@@ -19,7 +20,7 @@ export async function generateSpeech(topicId, lessonId, wordIndex = undefined) {
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify({ topicId, lessonId, wordIndex }),
+			body: JSON.stringify({ topicId, lessonId, wordIndex, provider }),
 		});
 
 		if (!response.ok) {
