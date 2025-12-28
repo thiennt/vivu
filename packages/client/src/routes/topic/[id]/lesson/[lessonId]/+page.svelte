@@ -69,6 +69,15 @@
 		}
 	}
 	
+	// Helper function to set playback rate when audio metadata loads
+	function applyPlaybackRate(audioElement) {
+		const setPlaybackRate = () => {
+			audioElement.playbackRate = playbackSpeed;
+			audioElement.removeEventListener('loadedmetadata', setPlaybackRate);
+		};
+		audioElement.addEventListener('loadedmetadata', setPlaybackRate);
+	}
+	
 	// Play or pause lesson audio
 	async function toggleAudio() {
 		if (!audio) return;
@@ -98,11 +107,7 @@
 			audio.type = 'audio/wav';
 			
 			// Set playback rate after metadata is loaded
-			const setPlaybackRate = () => {
-				audio.playbackRate = playbackSpeed;
-				audio.removeEventListener('loadedmetadata', setPlaybackRate);
-			};
-			audio.addEventListener('loadedmetadata', setPlaybackRate);
+			applyPlaybackRate(audio);
 			
 			audio.load();
 			await audio.play();
@@ -172,11 +177,7 @@
 			wordAudio.type = 'audio/wav';
 			
 			// Set playback rate after metadata is loaded
-			const setPlaybackRate = () => {
-				wordAudio.playbackRate = playbackSpeed;
-				wordAudio.removeEventListener('loadedmetadata', setPlaybackRate);
-			};
-			wordAudio.addEventListener('loadedmetadata', setPlaybackRate);
+			applyPlaybackRate(wordAudio);
 			
 			wordAudio.load();
 			wordAudio.addEventListener('ended', () => {
