@@ -204,13 +204,14 @@ Puter's AI text-to-speech API as documented at:
 https://docs.puter.com/
 
 The implementation:
-- Uses Puter's SDK with Node.js-specific initialization (`init.cjs`)
+- **Client-side generation**: Puter.js runs in the browser (not on backend)
+- Uses Puter's SDK with browser `import('@heyputer/puter.js')`
 - Uses `puter.ai.txt2speech()` method
 - Supports multiple voices: alloy, echo, fable, onyx, nova, shimmer
 - Generates `.mp3` audio files
 - **No API key required** - works out of the box
-- Stores generated audio files on the backend for efficient caching
-- Requires `xmlhttprequest` package for Node.js environment
+- Flow: Check backend → Generate in browser if needed → Upload to backend → Play audio
+- Stores uploaded audio files on backend for caching and reuse
 
 ### Choosing a TTS Provider
 

@@ -5,22 +5,11 @@ import { writeFile, mkdir, access, readFile } from 'fs/promises';
 import { join } from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import { createRequire } from 'module';
 
 import 'dotenv/config';
 
 import wav from 'wav';
 import topicsData from '../data/topics.json' with { type: 'json' };
-
-// Initialize Puter.js for Node.js environment
-const require = createRequire(import.meta.url);
-
-// Provide XMLHttpRequest for Puter.js
-const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
-(global as any).XMLHttpRequest = XMLHttpRequest;
-
-const { init } = require('@heyputer/puter.js/src/init.cjs');
-const puter = init(); // No auth token needed for TTS
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -151,52 +140,18 @@ async function generateGeminiAudio(text: string, lessonTitle?: string): Promise<
 }
 
 /**
- * Generate audio using Puter.js AI TTS and save to .mp3 file
- * Accepts lessonTitle for filename, falls back to hash if not provided
- * 
- * Note: Puter.js SDK works without API key
- */
-async function generatePuterAudio(text: string, lessonTitle?: string): Promise<string> {
-  try {
-    // Use Puter's AI text-to-speech SDK
-    // No API key required - SDK works directly
-    const audio = await puter.ai.txt2speech(text, {
-      voice: 'alloy', // Options: alloy, echo, fable, onyx, nova, shimmer
-      language: 'en-US'
-    });
-    
-    // Convert Blob to Buffer
-    const arrayBuffer = await audio.arrayBuffer();
-    const audioBuffer = Buffer.from(arrayBuffer);
-
-    // Use sanitized lesson title for filename if provided, else fallback to hash
-    let baseName = lessonTitle ? sanitizeFilename(lessonTitle) : hashText(text);
-    if (!baseName) baseName = hashText(text);
-    const filename = `${baseName}.mp3`;
-    const filepath = join(AUDIO_DIR, filename);
-    
-    // Save as MP3 file
-    await writeFile(filepath, audioBuffer);
-    return filename;
-  } catch (error) {
-    console.error('Puter TTS error details:', error);
-    throw new Error(`Puter TTS error: ${error instanceof Error ? error.message : JSON.stringify(error)}`);
-  }
-}
-
-/**
  * Generate audio using the specified provider (or default)
  * Accepts lessonTitle for filename, falls back to hash if not provided
+ * Note: Puter generation is now handled client-side
  */
 async function generateAndSaveAudio(text: string, lessonTitle?: string, provider?: string): Promise<string> {
   const ttsProvider = provider || DEFAULT_TTS_PROVIDER;
   
-  if (ttsProvider === 'puter') {
-    return generatePuterAudio(text, lessonTitle);
-  } else if (ttsProvider === 'gemini') {
+  // Only Gemini is generated on backend, Puter is client-side
+  if (ttsProvider === 'gemini') {
     return generateGeminiAudio(text, lessonTitle);
   } else {
-    throw new Error(`Invalid TTS provider: ${ttsProvider}. Use 'gemini' or 'puter'.`);
+    throw new Error(`Backend generation only supports 'gemini'. Puter TTS is handled client-side.`);
   }
 }
 
@@ -350,6 +305,148 @@ router.get('/audio/:filename', async (c) => {
     });
   } catch {
     return c.json({ error: 'Audio file not found' }, 404);
+  }
+});
+
+/**
+ * POST /api/tts/check
+ * Check if audio file exists for given parameters
+ */
+router.post('/check', async (c) => {
+  try {
+    const body = await c.req.json();
+    const { topicId, lessonId, wordIndex, provider } = body;
+
+    // Validate required parameters
+    if (topicId === undefined || lessonId === undefined) {
+      return c.json({ exists: false }, 200);
+    }
+
+    const numericTopicId = Number(topicId);
+    const numericLessonId = Number(lessonId);
+
+    // Find topic and lesson
+    const topic = topicsData.topics.find((t) => t.id === numericTopicId);
+    if (!topic) {
+      return c.json({ exists: false }, 200);
+    }
+
+    const lesson = topic.lessons.find((l) => l.id === numericLessonId);
+    if (!lesson) {
+      return c.json({ exists: false }, 200);
+    }
+
+    // Determine filename based on wordIndex
+    let lessonTitle: string;
+    if (wordIndex !== undefined && wordIndex !== null) {
+      const numericWordIndex = Number(wordIndex);
+      if (numericWordIndex >= 0 && numericWordIndex < lesson.vocabulary.length) {
+        const vocab = lesson.vocabulary[numericWordIndex];
+        lessonTitle = sanitizeFilename(vocab.word);
+      } else {
+        return c.json({ exists: false }, 200);
+      }
+    } else {
+      lessonTitle = sanitizeFilename(lesson.title);
+    }
+
+    // Check for both .mp3 and .wav files
+    const mp3Filename = `${lessonTitle}.mp3`;
+    const wavFilename = `${lessonTitle}.wav`;
+    const mp3Path = join(AUDIO_DIR, mp3Filename);
+    const wavPath = join(AUDIO_DIR, wavFilename);
+
+    let existingFilename: string | null = null;
+    try {
+      await access(mp3Path);
+      existingFilename = mp3Filename;
+    } catch {
+      try {
+        await access(wavPath);
+        existingFilename = wavFilename;
+      } catch {
+        // File doesn't exist
+      }
+    }
+
+    if (existingFilename) {
+      return c.json({
+        exists: true,
+        audioUrl: `/api/tts/audio/${existingFilename}`
+      });
+    }
+
+    return c.json({ exists: false });
+  } catch (error) {
+    console.error('Check audio error:', error);
+    return c.json({ exists: false }, 200);
+  }
+});
+
+/**
+ * POST /api/tts/upload
+ * Upload and save audio file from client
+ */
+router.post('/upload', async (c) => {
+  try {
+    const formData = await c.req.formData();
+    const audioFile = formData.get('audio') as File;
+    const topicId = formData.get('topicId') as string;
+    const lessonId = formData.get('lessonId') as string;
+    const wordIndex = formData.get('wordIndex') as string | null;
+    const provider = formData.get('provider') as string;
+
+    if (!audioFile || !topicId || !lessonId) {
+      return c.json({ error: 'Missing required fields' }, 400);
+    }
+
+    const numericTopicId = Number(topicId);
+    const numericLessonId = Number(lessonId);
+
+    // Find topic and lesson
+    const topic = topicsData.topics.find((t) => t.id === numericTopicId);
+    if (!topic) {
+      return c.json({ error: 'Topic not found' }, 404);
+    }
+
+    const lesson = topic.lessons.find((l) => l.id === numericLessonId);
+    if (!lesson) {
+      return c.json({ error: 'Lesson not found' }, 404);
+    }
+
+    // Determine filename
+    let lessonTitle: string;
+    if (wordIndex !== null && wordIndex !== undefined) {
+      const numericWordIndex = Number(wordIndex);
+      if (numericWordIndex >= 0 && numericWordIndex < lesson.vocabulary.length) {
+        const vocab = lesson.vocabulary[numericWordIndex];
+        lessonTitle = sanitizeFilename(vocab.word);
+      } else {
+        return c.json({ error: 'Invalid wordIndex' }, 400);
+      }
+    } else {
+      lessonTitle = sanitizeFilename(lesson.title);
+    }
+
+    // Save the audio file
+    const extension = provider === 'puter' ? '.mp3' : '.wav';
+    const filename = `${lessonTitle}${extension}`;
+    const filepath = join(AUDIO_DIR, filename);
+
+    // Convert File to Buffer and save
+    const arrayBuffer = await audioFile.arrayBuffer();
+    const buffer = Buffer.from(arrayBuffer);
+    await writeFile(filepath, buffer);
+
+    return c.json({
+      audioUrl: `/api/tts/audio/${filename}`,
+      cached: false
+    });
+  } catch (error) {
+    console.error('Upload audio error:', error);
+    return c.json({
+      error: error instanceof Error ? error.message : 'Failed to upload audio'
+    }, 500);
   }
 });
 

@@ -17,5 +17,8 @@
   "overrides": {
     "cookie": "^0.7.0"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@heyputer/puter.js": "^2.2.2"
+  }
 }

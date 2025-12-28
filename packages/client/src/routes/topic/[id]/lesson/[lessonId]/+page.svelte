@@ -63,7 +63,9 @@
 	async function generateLessonAudio() {
 		isLoadingAudio = true;
 		try {
-			const audioUrl = await generateSpeech(topic.id, lesson.id, undefined, ttsProvider);
+			// Pass the lesson content as text for Puter client-side generation
+			const text = lesson.content;
+			const audioUrl = await generateSpeech(topic.id, lesson.id, undefined, ttsProvider, text);
 
 			console.log('Generated audio URL:', audioUrl);
 
@@ -133,7 +135,9 @@
 		playingWordIndex = index;
 
 		try {
-			const audioUrl = await generateSpeech(topic.id, lesson.id, index, ttsProvider);
+			// Pass the word text for Puter client-side generation
+			const text = vocab.word;
+			const audioUrl = await generateSpeech(topic.id, lesson.id, index, ttsProvider, text);
 
 			if (!audioUrl) {
 				throw new Error('Failed to generate word audio');
