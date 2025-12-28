@@ -32,6 +32,7 @@
 		audio = new Audio();
 		audio.addEventListener('loadedmetadata', () => {
 			duration = audio.duration;
+			audio.playbackRate = playbackSpeed;
 		});
 		audio.addEventListener('timeupdate', () => {
 			currentTime = audio.currentTime;
@@ -102,13 +103,9 @@
 				throw new Error('Failed to generate audio');
 			}
 
-			// Set audio source and configure playback
+			// Set audio source and load
 			audio.src = audioUrl;
 			audio.type = 'audio/wav';
-			
-			// Set playback rate after metadata is loaded
-			applyPlaybackRate(audio);
-			
 			audio.load();
 			await audio.play();
 			isPlaying = true;
