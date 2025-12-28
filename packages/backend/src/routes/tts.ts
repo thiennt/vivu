@@ -5,18 +5,22 @@ import { writeFile, mkdir, access, readFile } from 'fs/promises';
 import { join } from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import { createRequire } from 'module';
 
 import 'dotenv/config';
 
 import wav from 'wav';
 import topicsData from '../data/topics.json' with { type: 'json' };
 
-// Polyfill XMLHttpRequest for Puter.js SDK (browser-only SDK)
-// @ts-ignore
-import * as xmlhttprequest from 'xmlhttprequest-ssl';
-(global as any).XMLHttpRequest = xmlhttprequest.XMLHttpRequest;
+// Initialize Puter.js for Node.js environment
+const require = createRequire(import.meta.url);
 
-import puter from '@heyputer/puter.js';
+// Provide XMLHttpRequest for Puter.js
+const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+(global as any).XMLHttpRequest = XMLHttpRequest;
+
+const { init } = require('@heyputer/puter.js/src/init.cjs');
+const puter = init(); // No auth token needed for TTS
 
 
 const __filename = fileURLToPath(import.meta.url);
