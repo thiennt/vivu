@@ -99,11 +99,18 @@ async function generateAndSaveAudio(text: string, lessonTitle?: string): Promise
     throw new Error('Gemini API key not configured');
   }
 
+
   const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
+
+  // If the text is a single word, add a clear instruction to only generate audio
+  let promptText = text;
+  if (/^\w+$/.test(text)) {
+    promptText = `Only generate audio for pronouncing this word, do not generate any text: ${text}`;
+  }
 
   const response = await ai.models.generateContent({
     model: 'gemini-2.5-flash-preview-tts',
-    contents: [{ parts: [{ text }] }],
+    contents: [{ parts: [{ text: promptText }] }],
     config: {
       responseModalities: ['AUDIO'],
       speechConfig: {
