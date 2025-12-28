@@ -93,10 +93,17 @@
 				throw new Error('Failed to generate audio');
 			}
 
-			// Set audio source and playback rate
+			// Set audio source and configure playback
 			audio.src = audioUrl;
 			audio.type = 'audio/wav';
-			audio.playbackRate = playbackSpeed;
+			
+			// Set playback rate after metadata is loaded
+			const setPlaybackRate = () => {
+				audio.playbackRate = playbackSpeed;
+				audio.removeEventListener('loadedmetadata', setPlaybackRate);
+			};
+			audio.addEventListener('loadedmetadata', setPlaybackRate);
+			
 			audio.load();
 			await audio.play();
 			isPlaying = true;
@@ -163,7 +170,14 @@
 			const wordAudio = new Audio();
 			wordAudio.src = audioUrl;
 			wordAudio.type = 'audio/wav';
-			wordAudio.playbackRate = playbackSpeed;
+			
+			// Set playback rate after metadata is loaded
+			const setPlaybackRate = () => {
+				wordAudio.playbackRate = playbackSpeed;
+				wordAudio.removeEventListener('loadedmetadata', setPlaybackRate);
+			};
+			wordAudio.addEventListener('loadedmetadata', setPlaybackRate);
+			
 			wordAudio.load();
 			wordAudio.addEventListener('ended', () => {
 				playingWordIndex = null;
