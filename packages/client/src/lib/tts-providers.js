@@ -52,8 +52,15 @@ export const puterProvider = {
 			// For single words, use the word itself
 			return text.toLowerCase().replace(/[^a-z0-9\-_]+/g, '_');
 		}
-		// For lesson content, generate a hash-based filename
-		return `lesson_${Date.now()}`;
+		// For lesson content, generate a hash-based filename for consistent caching
+		// Using a simple hash to ensure same content gets same filename
+		let hash = 0;
+		for (let i = 0; i < text.length; i++) {
+			const char = text.charCodeAt(i);
+			hash = ((hash << 5) - hash) + char;
+			hash = hash & hash; // Convert to 32bit integer
+		}
+		return `lesson_${Math.abs(hash).toString(36)}`;
 	},
 	
 	/**

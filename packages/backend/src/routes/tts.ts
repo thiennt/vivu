@@ -166,6 +166,11 @@ router.get('/check/:filename', async (c) => {
     return c.json({ error: 'Invalid filename' }, 400);
   }
 
+  // Validate filename length and characters
+  if (filename.length > 128 || !/^[a-z0-9\-_]+$/i.test(filename)) {
+    return c.json({ error: 'Invalid filename format' }, 400);
+  }
+
   const mp3Path = join(AUDIO_DIR, `${filename}.mp3`);
   const wavPath = join(AUDIO_DIR, `${filename}.wav`);
 
@@ -211,6 +216,11 @@ router.post('/upload', async (c) => {
       return c.json({ error: 'Invalid filename' }, 400);
     }
 
+    // Validate filename length and characters
+    if (filename.length > 128 || !/^[a-z0-9\-_]+$/i.test(filename)) {
+      return c.json({ error: 'Filename must be alphanumeric with hyphens/underscores and max 128 chars' }, 400);
+    }
+
     // Validate format
     const validFormats = ['mp3', 'wav'];
     const audioFormat = format || 'mp3';
@@ -218,13 +228,32 @@ router.post('/upload', async (c) => {
       return c.json({ error: 'Invalid audio format' }, 400);
     }
 
-    // Decode base64 audio data
-    const audioBuffer = Buffer.from(audioData, 'base64');
+    // Validate audioData is valid base64 and size limit (10MB)
+    const maxSizeBytes = 10 * 1024 * 1024; // 10MB
+    if (audioData.length > maxSizeBytes * 1.5) { // base64 is ~1.33x larger
+      return c.json({ error: 'Audio file too large (max 10MB)' }, 400);
+    }
+
+    // Decode base64 audio data with error handling
+    let audioBuffer: Buffer;
+    try {
+      audioBuffer = Buffer.from(audioData, 'base64');
+    } catch (error) {
+      return c.json({ error: 'Invalid base64 audio data' }, 400);
+    }
+
+    // Validate decoded size
+    if (audioBuffer.length > maxSizeBytes) {
+      return c.json({ error: 'Audio file too large (max 10MB)' }, 400);
+    }
     
-    // Save file
+    // Save file atomically (write to temp, then rename)
     const filenameWithExt = `${filename}.${audioFormat}`;
     const filepath = join(AUDIO_DIR, filenameWithExt);
-    await writeFile(filepath, audioBuffer);
+    const tempFilepath = join(AUDIO_DIR, `${filenameWithExt}.tmp`);
+    
+    await writeFile(tempFilepath, audioBuffer);
+    await import('fs/promises').then(fs => fs.rename(tempFilepath, filepath));
 
     return c.json({
       success: true,
