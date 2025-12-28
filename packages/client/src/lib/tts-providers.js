@@ -131,7 +131,11 @@ export const puterProvider = {
 				audioBase64 = response;
 			} else if (response && typeof response === 'object') {
 				// Handle object response (e.g., { data: Blob/ArrayBuffer/string })
-				let audioData = response.data || response.audio || response;
+				let audioData = response.data || response.audio;
+				
+				if (!audioData) {
+					throw new Error(`Unsupported audio format from Puter.js: object with properties: ${Object.keys(response).join(', ')}`);
+				}
 				
 				if (audioData instanceof Blob) {
 					audioBase64 = await blobToBase64(audioData);
@@ -140,7 +144,7 @@ export const puterProvider = {
 				} else if (typeof audioData === 'string') {
 					audioBase64 = audioData;
 				} else {
-					throw new Error(`Unsupported audio format from Puter.js: ${typeof response} with properties: ${Object.keys(response).join(', ')}`);
+					throw new Error(`Unsupported audio format from Puter.js: ${typeof audioData} in property`);
 				}
 			} else {
 				throw new Error(`Unsupported audio format from Puter.js: ${typeof response}`);
