@@ -93,9 +93,7 @@
 				throw new Error('Failed to generate audio');
 			}
 
-			// Set audio type for .wav
-			audio.src = '';
-			audio.load();
+			// Set audio source and playback rate
 			audio.src = audioUrl;
 			audio.type = 'audio/wav';
 			audio.playbackRate = playbackSpeed;
@@ -161,10 +159,8 @@
 				throw new Error('Failed to generate word audio');
 			}
 
-			// Play word audio with type set and playback speed
+			// Play word audio with playback speed applied
 			const wordAudio = new Audio();
-			wordAudio.src = '';
-			wordAudio.load();
 			wordAudio.src = audioUrl;
 			wordAudio.type = 'audio/wav';
 			wordAudio.playbackRate = playbackSpeed;
