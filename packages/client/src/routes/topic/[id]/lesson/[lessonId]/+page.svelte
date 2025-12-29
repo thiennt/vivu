@@ -20,6 +20,10 @@
 	let selectedProvider = $state(getCurrentProvider());
 	let providers = getProviders();
 	
+	// Playback speed state
+	let playbackSpeed = $state(1.0);
+	let speedOptions = [0.5, 0.75, 1.0, 1.25, 1.5, 2.0];
+	
 	// State for error messages
 	let errorMessage = $state(null);
 	
@@ -28,6 +32,7 @@
 		audio = new Audio();
 		audio.addEventListener('loadedmetadata', () => {
 			duration = audio.duration;
+			audio.playbackRate = playbackSpeed;
 		});
 		audio.addEventListener('timeupdate', () => {
 			currentTime = audio.currentTime;
@@ -56,6 +61,24 @@
 		selectedProvider = newProvider;
 	}
 	
+	// Handle playback speed change
+	function handleSpeedChange(event) {
+		const newSpeed = parseFloat(event.target.value);
+		playbackSpeed = newSpeed;
+		if (audio) {
+			audio.playbackRate = newSpeed;
+		}
+	}
+	
+	// Helper function to set playback rate when audio metadata loads
+	function applyPlaybackRate(audioElement) {
+		const setPlaybackRate = () => {
+			audioElement.playbackRate = playbackSpeed;
+			audioElement.removeEventListener('loadedmetadata', setPlaybackRate);
+		};
+		audioElement.addEventListener('loadedmetadata', setPlaybackRate);
+	}
+	
 	// Play or pause lesson audio
 	async function toggleAudio() {
 		if (!audio) return;
@@ -80,9 +103,7 @@
 				throw new Error('Failed to generate audio');
 			}
 
-			// Set audio type for .wav
-			audio.src = '';
-			audio.load();
+			// Set audio source and load
 			audio.src = audioUrl;
 			audio.type = 'audio/wav';
 			audio.load();
@@ -147,12 +168,14 @@
 				throw new Error('Failed to generate word audio');
 			}
 
-			// Play word audio with type set
+			// Play word audio with playback speed applied
 			const wordAudio = new Audio();
-			wordAudio.src = '';
-			wordAudio.load();
 			wordAudio.src = audioUrl;
 			wordAudio.type = 'audio/wav';
+			
+			// Set playback rate after metadata is loaded
+			applyPlaybackRate(wordAudio);
+			
 			wordAudio.load();
 			wordAudio.addEventListener('ended', () => {
 				playingWordIndex = null;
@@ -196,6 +219,16 @@
 		<select id="tts-provider" value={selectedProvider} onchange={handleProviderChange}>
 			{#each providers as provider}
 				<option value={provider.name}>{provider.displayName}</option>
+			{/each}
+		</select>
+	</div>
+
+	<!-- Playback Speed Control -->
+	<div class="speed-control">
+		<label for="playback-speed">Playback Speed:</label>
+		<select id="playback-speed" value={playbackSpeed} onchange={handleSpeedChange}>
+			{#each speedOptions as speed}
+				<option value={speed}>{speed}x</option>
 			{/each}
 		</select>
 	</div>
@@ -387,6 +420,45 @@
 	}
 
 	.provider-selector select:focus {
+		outline: none;
+		border-color: #667eea;
+		box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+	}
+
+	.speed-control {
+		background: white;
+		border-radius: 12px;
+		padding: 1rem 1.5rem;
+		margin-bottom: 1.5rem;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.speed-control label {
+		color: #667eea;
+		font-weight: 600;
+		font-size: 1rem;
+	}
+
+	.speed-control select {
+		flex: 1;
+		padding: 0.5rem 1rem;
+		border: 2px solid #e0e0e0;
+		border-radius: 8px;
+		font-size: 1rem;
+		color: #333;
+		background: white;
+		cursor: pointer;
+		transition: border-color 0.2s;
+	}
+
+	.speed-control select:hover {
+		border-color: #667eea;
+	}
+
+	.speed-control select:focus {
 		outline: none;
 		border-color: #667eea;
 		box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
