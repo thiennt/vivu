@@ -10,6 +10,16 @@ router.get('/:word', async (c) => {
     return c.json({ error: 'Word parameter is required' }, 400);
   }
   
+  // Validate word length and format
+  if (word.length > 100) {
+    return c.json({ error: 'Word is too long' }, 400);
+  }
+  
+  // Only allow letters, hyphens, and apostrophes (common in English words)
+  if (!/^[a-zA-Z'-]+$/.test(word)) {
+    return c.json({ error: 'Invalid word format' }, 400);
+  }
+  
   try {
     const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`);
     

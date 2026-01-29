@@ -6,9 +6,16 @@ import grade9Data from '../data/grade_9.json' with { type: 'json' };
 
 const router = new Hono();
 
-// Combine all grade data
+// Combine all grade data and assign unique topic IDs
 const allGrades = [grade6Data, grade7Data, grade8Data, grade9Data];
-const allTopics = allGrades.flatMap((gradeData) => gradeData.topics);
+let topicIdCounter = 1;
+const allTopics = allGrades.flatMap((gradeData) => 
+  gradeData.topics.map((topic) => ({
+    ...topic,
+    id: topicIdCounter++,
+    grade: gradeData.grade
+  }))
+);
 
 // Get all topics
 router.get('/', (c) => {

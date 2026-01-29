@@ -201,8 +201,8 @@
 	
 	// Handle word click in story text
 	async function handleWordClick(word) {
-		// Clean the word (remove punctuation)
-		const cleanWord = word.replace(/[.,!?;:'"()]/g, '').toLowerCase().trim();
+		// Clean the word - remove surrounding punctuation but keep hyphens and apostrophes
+		const cleanWord = word.replace(/^[.,!?;:'"()]+|[.,!?;:'"()]+$/g, '').toLowerCase().trim();
 		if (!cleanWord) return;
 		
 		selectedWord = cleanWord;
@@ -375,7 +375,14 @@
 				<p class="story-text">
 					{#each makeWordsClickable(lesson.content) as part (part.key)}
 						{#if part.type === 'word'}
-							<span class="clickable-word" onclick={() => handleWordClick(part.content)}>{part.content}</span>
+							<span 
+								class="clickable-word" 
+								role="button"
+								tabindex="0"
+								aria-label="Look up word {part.content}"
+								onclick={() => handleWordClick(part.content)}
+								onkeydown={(e) => (e.key === 'Enter' || e.key === ' ') && handleWordClick(part.content)}
+							>{part.content}</span>
 						{:else}
 							{part.content}
 						{/if}
@@ -393,9 +400,9 @@
 	
 	<!-- Dictionary Popup -->
 	{#if showDictionary}
-		<div class="dictionary-overlay" onclick={closeDictionary}>
+		<div class="dictionary-overlay" onclick={closeDictionary} onkeydown={(e) => e.key === 'Escape' && closeDictionary()}>
 			<div class="dictionary-popup" onclick={(e) => e.stopPropagation()}>
-				<button class="close-btn" onclick={closeDictionary}>×</button>
+				<button class="close-btn" onclick={closeDictionary} aria-label="Close dictionary popup">×</button>
 				
 				<h3 class="dict-word">{selectedWord}</h3>
 				
@@ -420,7 +427,7 @@
 									<div class="phonetic-item">
 										<span class="ipa">{phonetic.text}</span>
 										{#if phonetic.audio}
-											<button class="audio-btn" onclick={() => playDictionaryAudio(phonetic.audio)}>
+											<button class="audio-btn" onclick={() => playDictionaryAudio(phonetic.audio)} aria-label="Play pronunciation">
 												<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
 													<path d="M8 5v14l11-7z"/>
 												</svg>
@@ -725,9 +732,11 @@
 		color: #667eea;
 		transition: all 0.2s;
 		border-bottom: 1px dotted transparent;
+		outline: none;
 	}
 
-	.clickable-word:hover {
+	.clickable-word:hover,
+	.clickable-word:focus {
 		border-bottom-color: #667eea;
 		background: rgba(102, 126, 234, 0.1);
 		border-radius: 2px;
