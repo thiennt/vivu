@@ -13,14 +13,14 @@ export const geminiProvider = {
 	/**
 	 * Generate audio using Gemini via backend API
 	 */
-	async generateSpeech(topicId, lessonId, wordIndex = undefined) {
+	async generateSpeech(topicId, lessonId) {
 		try {
 			const response = await fetch(`${BACKEND_URL}/api/tts/generate`, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
 				},
-				body: JSON.stringify({ topicId, lessonId, wordIndex }),
+				body: JSON.stringify({ topicId, lessonId }),
 			});
 
 			if (!response.ok) {
@@ -45,13 +45,9 @@ export const puterProvider = {
 	displayName: 'Puter.js (Client-Side)',
 	
 	/**
-	 * Generate filename based on word or lesson
+	 * Generate filename based on lesson
 	 */
-	generateFilename(text, isWord) {
-		if (isWord && /^\w+$/.test(text)) {
-			// For single words, use the word itself
-			return text.toLowerCase().replace(/[^a-z0-9\-_]+/g, '_');
-		}
+	generateFilename(text) {
 		// For lesson content, generate a hash-based filename for consistent caching
 		// Using a simple hash to ensure same content gets same filename
 		let hash = 0;
@@ -169,13 +165,10 @@ export const puterProvider = {
 	 * Generate speech using client-side Puter.js
 	 * Flow: Check → Generate → Upload → Play
 	 */
-	async generateSpeech(topicId, lessonId, wordIndex = undefined, text = '') {
+	async generateSpeech(topicId, lessonId, text = '') {
 		try {
-			// Determine if this is a word or lesson
-			const isWord = wordIndex !== undefined;
-			
 			// Generate filename
-			const filename = this.generateFilename(text, isWord);
+			const filename = this.generateFilename(text);
 			
 			// Step 1: Check if audio already exists on backend
 			const checkResult = await this.checkAudioExists(filename);

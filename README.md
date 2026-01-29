@@ -180,12 +180,12 @@ vivu/
 - **GET /api/topics/:id** - Get a specific topic
 - **GET /api/topics/:id/lesson/:lessonId** - Get a specific lesson
 - **POST /api/tts/generate** - Generate audio using Gemini (server-side)
-  - Body: `{ "topicId": 1, "lessonId": 1, "wordIndex": 0 }`
+  - Body: `{ "topicId": 1, "lessonId": 1 }`
   - Returns: `{ "audioUrl": "/api/tts/audio/filename.wav", "cached": boolean }`
 - **GET /api/tts/check/:filename** - Check if audio file exists
   - Returns: `{ "exists": boolean, "audioUrl": string, "format": string }`
 - **POST /api/tts/upload** - Upload client-generated audio for caching
-  - Body: `{ "filename": "word", "audioData": "base64...", "format": "mp3" }`
+  - Body: `{ "filename": "lesson_title", "audioData": "base64...", "format": "mp3" }`
   - Returns: `{ "success": true, "audioUrl": "/api/tts/audio/filename.mp3", "format": "mp3" }`
 - **GET /api/tts/audio/:filename** - Serve audio file
 

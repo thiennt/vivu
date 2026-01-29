@@ -15,11 +15,10 @@ export function getCurrentProvider() {
  * Generate audio using the currently selected provider
  * @param {number} topicId - ID of the topic
  * @param {number} lessonId - ID of the lesson
- * @param {number} [wordIndex] - Optional index of the vocabulary word
  * @param {string} [text] - Text to convert (needed for Puter.js provider)
  * @returns {Promise<string>} - URL to the audio file
  */
-export async function generateSpeech(topicId, lessonId, wordIndex = undefined, text = '') {
+export async function generateSpeech(topicId, lessonId, text = '') {
 	if (topicId === undefined || lessonId === undefined) {
 		console.error('topicId and lessonId are required for speech generation');
 		return '';
@@ -29,7 +28,7 @@ export async function generateSpeech(topicId, lessonId, wordIndex = undefined, t
 	
 	console.log(`Generating speech with ${provider.displayName}...`);
 	
-	return provider.generateSpeech(topicId, lessonId, wordIndex, text);
+	return provider.generateSpeech(topicId, lessonId, text);
 }
 
 /**

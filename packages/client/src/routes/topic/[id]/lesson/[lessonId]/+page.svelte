@@ -14,7 +14,6 @@
 	let duration = $state(0);
 	let audio = $state(null);
 	let isLoadingAudio = $state(false);
-	let playingWordIndex = $state(null);
 	
 	// TTS Provider state
 	let selectedProvider = $state(getCurrentProvider());
@@ -104,7 +103,7 @@
 	async function generateLessonAudio() {
 		isLoadingAudio = true;
 		try {
-			const audioUrl = await generateSpeech(topic.id, lesson.id, undefined, lesson.content);
+			const audioUrl = await generateSpeech(topic.id, lesson.id, lesson.content);
 
 			console.log('Generated audio URL:', audioUrl);
 
@@ -163,39 +162,6 @@
 				event.preventDefault();
 				audio.currentTime = duration;
 				break;
-		}
-	}
-	
-	// Play individual word pronunciation
-	async function playWord(vocab, index) {
-		playingWordIndex = index;
-
-		try {
-			const audioUrl = await generateSpeech(topic.id, lesson.id, index, vocab.word);
-
-			if (!audioUrl) {
-				throw new Error('Failed to generate word audio');
-			}
-
-			// Play word audio with playback speed applied
-			const wordAudio = new Audio();
-			wordAudio.src = audioUrl;
-			wordAudio.type = 'audio/wav';
-			
-			// Set playback rate after metadata is loaded
-			applyPlaybackRate(wordAudio);
-			
-			wordAudio.load();
-			wordAudio.addEventListener('ended', () => {
-				playingWordIndex = null;
-			});
-			wordAudio.addEventListener('error', () => {
-				playingWordIndex = null;
-			});
-			await wordAudio.play();
-		} catch (error) {
-			console.error('Error generating word audio:', error);
-			playingWordIndex = null;
 		}
 	}
 	

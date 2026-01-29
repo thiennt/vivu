@@ -91,42 +91,26 @@ function sanitizeFilename(str: string): string {
 }
 
 /**
- * Generate filename for audio based on whether it's a single word or lesson content
+ * Generate filename for audio using lesson title
  */
-function generateAudioFilename(text: string, lessonTitle?: string, isWord?: boolean): string {
-  if (isWord && /^\w+$/.test(text)) {
-    // For single words, use the word itself as filename
-    return sanitizeFilename(text);
-  } else if (lessonTitle) {
-    // For lesson content, use the lesson title
-    return sanitizeFilename(lessonTitle);
-  } else {
-    // Fallback to hash
-    return hashText(text);
-  }
+function generateAudioFilename(lessonTitle: string): string {
+  // Use the lesson title for filename
+  return sanitizeFilename(lessonTitle);
 }
 
 /**
  * Generate audio using Gemini API and save to .wav file
- * Accepts lessonTitle for filename, falls back to hash if not provided
  */
-async function generateAndSaveAudio(text: string, lessonTitle?: string): Promise<string> {
+async function generateAndSaveAudio(text: string, lessonTitle: string): Promise<string> {
   if (!isValidApiKey(GEMINI_API_KEY)) {
     throw new Error('Gemini API key not configured');
   }
 
-
   const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
-
-  // If the text is a single word, add a clear instruction to only generate audio
-  let promptText = text;
-  if (/^\w+$/.test(text)) {
-    promptText = `Only generate audio for pronouncing this word, do not generate any text: ${text}`;
-  }
 
   const response = await ai.models.generateContent({
     model: 'gemini-2.5-flash-preview-tts',
-    contents: [{ parts: [{ text: promptText }] }],
+    contents: [{ parts: [{ text }] }],
     config: {
       responseModalities: ['AUDIO'],
       speechConfig: {
@@ -145,9 +129,8 @@ async function generateAndSaveAudio(text: string, lessonTitle?: string): Promise
 
   const audioBuffer = Buffer.from(data, 'base64');
 
-  // Use sanitized lesson title for filename if provided, else fallback to hash
-  let baseName = lessonTitle ? sanitizeFilename(lessonTitle) : hashText(text);
-  if (!baseName) baseName = hashText(text);
+  // Use lesson title for filename
+  const baseName = sanitizeFilename(lessonTitle);
   const filename = `${baseName}.wav`;
   const filepath = join(AUDIO_DIR, filename);
   await saveWaveFile(filepath, audioBuffer);
@@ -271,12 +254,12 @@ router.post('/upload', async (c) => {
 
 /**
  * POST /api/tts/generate
- * Generate TTS audio from topicId, lessonId, and optional wordIndex
+ * Generate TTS audio from topicId and lessonId
  */
 router.post('/generate', async (c) => {
   try {
     const body = await c.req.json();
-    const { topicId, lessonId, wordIndex } = body;
+    const { topicId, lessonId } = body;
 
     // Validate required parameters
     if (topicId === undefined || lessonId === undefined) {
@@ -307,35 +290,9 @@ router.post('/generate', async (c) => {
       return c.json({ error: 'Lesson not found' }, 404);
     }
 
-    // Determine text and filename based on wordIndex
-    let text: string;
-    let baseName: string;
-    let isWord = false;
-
-    if (wordIndex !== undefined && wordIndex !== null) {
-      // Validate wordIndex
-      const numericWordIndex = Number(wordIndex);
-      
-      if (!Number.isInteger(numericWordIndex) || numericWordIndex < 0) {
-        return c.json({ error: 'wordIndex must be a non-negative integer' }, 400);
-      }
-      
-      // Check bounds
-      if (numericWordIndex >= lesson.vocabulary.length) {
-        return c.json({ error: 'Vocabulary word not found' }, 404);
-      }
-      
-      // Generate audio for a specific vocabulary word
-      const vocab = lesson.vocabulary[numericWordIndex];
-      text = vocab.word;
-      // Use the word itself as filename for single words
-      baseName = generateAudioFilename(vocab.word, undefined, true);
-      isWord = true;
-    } else {
-      // Generate audio for the entire lesson content
-      text = lesson.content;
-      baseName = generateAudioFilename(text, lesson.title, false);
-    }
+    // Generate audio for the entire lesson content
+    const text = lesson.content;
+    const baseName = generateAudioFilename(lesson.title);
 
     const mp3Filename = `${baseName}.mp3`;
     const wavFilename = `${baseName}.wav`;
@@ -365,7 +322,7 @@ router.post('/generate', async (c) => {
     }
 
     // Generate new audio
-    const filename = await generateAndSaveAudio(text, baseName);
+    const filename = await generateAndSaveAudio(text, lesson.title);
 
     return c.json({
       audioUrl: `/api/tts/audio/${filename}`,
