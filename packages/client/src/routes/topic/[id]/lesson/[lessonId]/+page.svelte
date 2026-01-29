@@ -74,6 +74,14 @@
 		const newProvider = event.target.value;
 		setProvider(newProvider);
 		selectedProvider = newProvider;
+		// Clear audio source to force regeneration with new provider
+		if (audio) {
+			audio.pause();
+			audio.src = '';
+			isPlaying = false;
+			currentTime = 0;
+			duration = 0;
+		}
 	}
 	
 	// Handle playback speed change
@@ -88,6 +96,14 @@
 	// Handle voice change
 	function handleVoiceChange(event) {
 		selectedVoice = event.target.value;
+		// Clear audio source to force regeneration with new voice
+		if (audio) {
+			audio.pause();
+			audio.src = '';
+			isPlaying = false;
+			currentTime = 0;
+			duration = 0;
+		}
 	}
 	
 	// Helper function to set playback rate when audio metadata loads
@@ -107,7 +123,20 @@
 			audio.pause();
 			isPlaying = false;
 		} else {
-			await generateLessonAudio();
+			// If audio is already loaded, just resume playback
+			if (audio.src) {
+				try {
+					await audio.play();
+					isPlaying = true;
+				} catch (error) {
+					console.error('Error playing audio:', error);
+					errorMessage = 'Failed to play audio. Please try again.';
+					setTimeout(() => errorMessage = null, 3000);
+				}
+			} else {
+				// If no audio loaded yet, generate it
+				await generateLessonAudio();
+			}
 		}
 	}
 	
