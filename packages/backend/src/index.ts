@@ -1,4 +1,5 @@
 import { serve } from '@hono/node-server';
+import { serveStatic } from '@hono/node-server/serve-static';
 import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import topicsRouter from './routes/topics.js';
@@ -22,6 +23,9 @@ app.use('/*', cors({
   },
   credentials: false,
 }));
+
+// Serve static audio files
+app.use('/audio/words/*', serveStatic({ root: './' }));
 
 // Routes
 app.route('/api/topics', topicsRouter);
