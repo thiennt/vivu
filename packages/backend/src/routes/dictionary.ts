@@ -27,7 +27,7 @@ router.get('/:word', async (c) => {
       if (response.status === 404) {
         return c.json({ error: 'Word not found' }, 404);
       }
-      return c.json({ error: 'Failed to fetch word data' }, response.status);
+      return c.json({ error: 'Failed to fetch word data' }, 500);
     }
     
     const data = await response.json();

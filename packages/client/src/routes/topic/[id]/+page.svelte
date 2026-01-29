@@ -141,12 +141,6 @@
 		margin: 0 0 1.5rem 0;
 	}
 
-	.vocabulary-section h4 {
-		color: #667eea;
-		margin: 0 0 1rem 0;
-		font-size: 1.1rem;
-	}
-
 	@media (max-width: 768px) {
 		.topic-header h1 {
 			font-size: 2rem;
