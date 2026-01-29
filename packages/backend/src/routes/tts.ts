@@ -381,6 +381,44 @@ router.post('/generate', async (c) => {
 });
 
 /**
+ * GET /api/tts/audio/word/:filename
+ * Serve word audio file from audio/words directory
+ */
+router.get('/audio/word/:filename', async (c) => {
+  const filename = c.req.param('filename');
+  
+  // Security: validate filename to prevent path traversal
+  if (filename.includes('..') || filename.includes('/') || filename.includes('\\')) {
+    return c.json({ error: 'Invalid filename' }, 400);
+  }
+
+  // Validate filename format
+  if (filename.length > 128 || !/^[a-z0-9\-_]+\.(mp3|wav)$/i.test(filename)) {
+    return c.json({ error: 'Invalid filename format' }, 400);
+  }
+
+  const wordsDir = join(__dirname, '../../audio/words');
+  const filepath = join(wordsDir, filename);
+  
+  console.log(`Requesting word audio file: ${filename} at path: ${filepath}`);
+
+  try {
+    await access(filepath);
+    const audioBuffer = await readFile(filepath);
+    
+    console.log(`Serving word audio file: ${filename}`);
+
+    // Serve the audio file
+    return c.body(audioBuffer, 200, {
+      'Content-Type': filename.endsWith('.mp3') ? 'audio/mpeg' : 'audio/wav',
+      'Cache-Control': 'public, max-age=31536000', // Cache for 1 year
+    });
+  } catch {
+    return c.json({ error: 'Word audio file not found' }, 404);
+  }
+});
+
+/**
  * GET /api/tts/audio/:filename
  * Serve audio file
  */

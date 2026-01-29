@@ -112,8 +112,8 @@ router.get('/:word', async (c) => {
           await downloadAudioFile(audioUrl, filename);
           audioFiles.push(filename);
           
-          // Update the audio URL to point to local file
-          phonetic.audio = `/audio/words/${filename}`;
+          // Update the audio URL to point to API endpoint
+          phonetic.audio = `/api/tts/audio/word/${filename}`;
         }
       }
     }
