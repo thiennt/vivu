@@ -27,6 +27,15 @@
 	// State for error messages
 	let errorMessage = $state(null);
 	
+	// Dictionary popup state
+	let showDictionary = $state(false);
+	let selectedWord = $state('');
+	let dictionaryData = $state(null);
+	let isLoadingDictionary = $state(false);
+	let dictionaryError = $state(null);
+	
+	const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000';
+	
 	// Initialize audio element
 	onMount(async () => {
 		audio = new Audio();
@@ -190,6 +199,71 @@
 		}
 	}
 	
+	// Handle word click in story text
+	async function handleWordClick(word) {
+		// Clean the word - remove surrounding punctuation but keep hyphens and apostrophes
+		const cleanWord = word.replace(/^[.,!?;:'"()]+|[.,!?;:'"()]+$/g, '').toLowerCase().trim();
+		if (!cleanWord) return;
+		
+		selectedWord = cleanWord;
+		showDictionary = true;
+		isLoadingDictionary = true;
+		dictionaryError = null;
+		dictionaryData = null;
+		
+		try {
+			const response = await fetch(`${BACKEND_URL}/api/dictionary/${encodeURIComponent(cleanWord)}`);
+			
+			if (!response.ok) {
+				if (response.status === 404) {
+					dictionaryError = 'Word not found in dictionary';
+				} else {
+					dictionaryError = 'Failed to fetch word data';
+				}
+				return;
+			}
+			
+			const data = await response.json();
+			dictionaryData = data;
+		} catch (error) {
+			console.error('Error fetching dictionary data:', error);
+			dictionaryError = 'Failed to fetch word data';
+		} finally {
+			isLoadingDictionary = false;
+		}
+	}
+	
+	// Close dictionary popup
+	function closeDictionary() {
+		showDictionary = false;
+		selectedWord = '';
+		dictionaryData = null;
+		dictionaryError = null;
+	}
+	
+	// Play pronunciation from dictionary API
+	async function playDictionaryAudio(audioUrl) {
+		try {
+			const dictAudio = new Audio(audioUrl);
+			await dictAudio.play();
+		} catch (error) {
+			console.error('Error playing dictionary audio:', error);
+		}
+	}
+	
+	// Make words in content clickable
+	function makeWordsClickable(text) {
+		// Split text into words and punctuation
+		const parts = text.split(/(\s+)/);
+		return parts.map((part, i) => {
+			// Check if it's a word (not whitespace)
+			if (part.trim() && /[a-zA-Z]/.test(part)) {
+				return { type: 'word', content: part, key: i };
+			}
+			return { type: 'space', content: part, key: i };
+		});
+	}
+	
 	// Format time for display
 	function formatTime(seconds) {
 		if (!seconds || isNaN(seconds)) return '0:00';
@@ -298,7 +372,22 @@
 			<!-- Lesson story content -->
 			<div class="story-section">
 				<h3>Story</h3>
-				<p class="story-text">{lesson.content}</p>
+				<p class="story-text">
+					{#each makeWordsClickable(lesson.content) as part (part.key)}
+						{#if part.type === 'word'}
+							<span 
+								class="clickable-word" 
+								role="button"
+								tabindex="0"
+								aria-label="Look up word {part.content}"
+								onclick={() => handleWordClick(part.content)}
+								onkeydown={(e) => (e.key === 'Enter' || e.key === ' ') && handleWordClick(part.content)}
+							>{part.content}</span>
+						{:else}
+							{part.content}
+						{/if}
+					{/each}
+				</p>
 			</div>
 
 			<!-- Vietnamese translation -->
@@ -306,28 +395,52 @@
 				<h3>Bản dịch (Translation)</h3>
 				<p class="translation">{lesson.translation}</p>
 			</div>
-
-			<!-- Vocabulary with IPA -->
-			<div class="vocabulary-section">
-				<h3>Vocabulary</h3>
-				<div class="vocabulary-grid">
-					{#each lesson.vocabulary as vocab, index}
-						<button 
-							class="vocab-card" 
-							class:playing={playingWordIndex === index}
-							onclick={() => playWord(vocab, index)}
-						>
-							<div class="vocab-word">{vocab.word}</div>
-							<div class="vocab-ipa">{vocab.ipa}</div>
-							<div class="vocab-meaning">{vocab.meaning}</div>
-							<div class="play-indicator">
-								<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-									<path d="M8 5v14l11-7z"/>
-								</svg>
-							</div>
-						</button>
+		</div>
+	{/if}
+	
+	<!-- Dictionary Popup -->
+	{#if showDictionary}
+		<!-- svelte-ignore a11y-no-static-element-interactions -->
+		<div class="dictionary-overlay" onclick={closeDictionary} onkeydown={(e) => e.key === 'Escape' && closeDictionary()} role="dialog" aria-modal="true">
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
+			<div class="dictionary-popup" onclick={(e) => e.stopPropagation()}>
+				<button class="close-btn" onclick={closeDictionary} aria-label="Close dictionary popup">×</button>
+				
+				<h3 class="dict-word">{selectedWord}</h3>
+				
+				{#if isLoadingDictionary}
+					<div class="loading">Loading...</div>
+				{:else if dictionaryError}
+					<div class="error">{dictionaryError}</div>
+				{:else if dictionaryData && dictionaryData.length > 0}
+					{#each dictionaryData[0].meanings.slice(0, 2) as meaning}
+						<div class="meaning-section">
+							<h4>{meaning.partOfSpeech}</h4>
+							{#if meaning.definitions && meaning.definitions[0]}
+								<p class="definition">{meaning.definitions[0].definition}</p>
+							{/if}
+						</div>
 					{/each}
-				</div>
+					
+					{#if dictionaryData[0].phonetics && dictionaryData[0].phonetics.length > 0}
+						<div class="phonetics-section">
+							{#each dictionaryData[0].phonetics as phonetic}
+								{#if phonetic.text}
+									<div class="phonetic-item">
+										<span class="ipa">{phonetic.text}</span>
+										{#if phonetic.audio}
+											<button class="audio-btn" onclick={() => playDictionaryAudio(phonetic.audio)} aria-label="Play pronunciation">
+												<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+													<path d="M8 5v14l11-7z"/>
+												</svg>
+											</button>
+										{/if}
+									</div>
+								{/if}
+							{/each}
+						</div>
+					{/if}
+				{/if}
 			</div>
 		</div>
 	{/if}
@@ -616,72 +729,175 @@
 		font-style: italic;
 	}
 
-	.vocabulary-section h3 {
-		color: #667eea;
-		margin: 0 0 1.5rem 0;
-		font-size: 1.3rem;
-	}
-
-	.vocabulary-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-		gap: 1rem;
-	}
-
-	.vocab-card {
-		background: #f8f9ff;
-		border: 2px solid #e0e0e0;
-		border-radius: 12px;
-		padding: 1.5rem;
+	.clickable-word {
 		cursor: pointer;
-		transition: all 0.2s;
-		text-align: left;
-		position: relative;
-		overflow: hidden;
-	}
-
-	.vocab-card:hover {
-		border-color: #667eea;
-		transform: translateY(-2px);
-		box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
-	}
-
-	.vocab-card.playing {
-		border-color: #764ba2;
-		background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-	}
-
-	.vocab-word {
-		font-size: 1.2rem;
-		font-weight: 600;
-		color: #333;
-		margin-bottom: 0.5rem;
-	}
-
-	.vocab-ipa {
-		font-size: 0.95rem;
 		color: #667eea;
-		font-family: 'Courier New', monospace;
-		margin-bottom: 0.5rem;
+		transition: all 0.2s;
+		border-bottom: 1px dotted transparent;
+		outline: none;
 	}
 
-	.vocab-meaning {
-		font-size: 0.9rem;
-		color: #666;
+	.clickable-word:hover,
+	.clickable-word:focus {
+		border-bottom-color: #667eea;
+		background: rgba(102, 126, 234, 0.1);
+		border-radius: 2px;
 	}
 
-	.play-indicator {
+	/* Dictionary Popup Styles */
+	.dictionary-overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.5);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 1000;
+		animation: fadeIn 0.2s ease-out;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	.dictionary-popup {
+		background: white;
+		border-radius: 16px;
+		padding: 2rem;
+		max-width: 500px;
+		width: 90%;
+		max-height: 80vh;
+		overflow-y: auto;
+		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+		position: relative;
+		animation: slideUp 0.3s ease-out;
+	}
+
+	@keyframes slideUp {
+		from {
+			transform: translateY(20px);
+			opacity: 0;
+		}
+		to {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	.close-btn {
 		position: absolute;
 		top: 1rem;
 		right: 1rem;
-		color: #667eea;
-		opacity: 0;
-		transition: opacity 0.2s;
+		background: none;
+		border: none;
+		font-size: 2rem;
+		color: #999;
+		cursor: pointer;
+		line-height: 1;
+		padding: 0;
+		width: 32px;
+		height: 32px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: color 0.2s;
 	}
 
-	.vocab-card:hover .play-indicator,
-	.vocab-card.playing .play-indicator {
-		opacity: 1;
+	.close-btn:hover {
+		color: #667eea;
+	}
+
+	.dict-word {
+		color: #667eea;
+		margin: 0 0 1.5rem 0;
+		font-size: 1.8rem;
+		text-transform: capitalize;
+		padding-right: 2rem;
+	}
+
+	.loading {
+		text-align: center;
+		color: #999;
+		padding: 2rem 0;
+	}
+
+	.error {
+		text-align: center;
+		color: #ff4444;
+		padding: 1rem;
+		background: #fff0f0;
+		border-radius: 8px;
+	}
+
+	.meaning-section {
+		margin-bottom: 1.5rem;
+		padding-bottom: 1.5rem;
+		border-bottom: 1px solid #f0f0f0;
+	}
+
+	.meaning-section:last-of-type {
+		border-bottom: none;
+	}
+
+	.meaning-section h4 {
+		color: #764ba2;
+		font-size: 1rem;
+		font-style: italic;
+		margin: 0 0 0.5rem 0;
+	}
+
+	.definition {
+		color: #333;
+		font-size: 1rem;
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	.phonetics-section {
+		margin-top: 1.5rem;
+		padding-top: 1.5rem;
+		border-top: 1px solid #f0f0f0;
+	}
+
+	.phonetic-item {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.ipa {
+		font-family: 'Courier New', monospace;
+		color: #667eea;
+		font-size: 1.1rem;
+	}
+
+	.audio-btn {
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		border: none;
+		border-radius: 50%;
+		width: 36px;
+		height: 36px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		color: white;
+		transition: all 0.2s;
+		box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
+	}
+
+	.audio-btn:hover {
+		transform: scale(1.1);
+		box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
 	}
 
 	@media (max-width: 768px) {
@@ -698,10 +914,6 @@
 		.voice-icon {
 			width: 70px;
 			height: 70px;
-		}
-
-		.vocabulary-grid {
-			grid-template-columns: 1fr;
 		}
 
 		.audio-player {

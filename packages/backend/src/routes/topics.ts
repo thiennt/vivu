@@ -1,17 +1,31 @@
 import { Hono } from 'hono';
-import topicsData from '../data/topics.json' with { type: 'json' };
+import grade6Data from '../data/grade_6.json' with { type: 'json' };
+import grade7Data from '../data/grade_7.json' with { type: 'json' };
+import grade8Data from '../data/grade_8.json' with { type: 'json' };
+import grade9Data from '../data/grade_9.json' with { type: 'json' };
 
 const router = new Hono();
 
+// Combine all grade data and assign unique topic IDs
+const allGrades = [grade6Data, grade7Data, grade8Data, grade9Data];
+let topicIdCounter = 1;
+const allTopics = allGrades.flatMap((gradeData) => 
+  gradeData.topics.map((topic) => ({
+    ...topic,
+    id: topicIdCounter++,
+    grade: gradeData.grade
+  }))
+);
+
 // Get all topics
 router.get('/', (c) => {
-  return c.json({ topics: topicsData.topics });
+  return c.json({ topics: allTopics });
 });
 
 // Get a specific topic by ID
 router.get('/:id', (c) => {
   const topicId = Number(c.req.param('id'));
-  const topic = topicsData.topics.find((t) => t.id === topicId);
+  const topic = allTopics.find((t) => t.id === topicId);
   
   if (!topic) {
     return c.json({ error: 'Topic not found' }, 404);
@@ -25,7 +39,7 @@ router.get('/:id/lesson/:lessonId', (c) => {
   const topicId = Number(c.req.param('id'));
   const lessonId = Number(c.req.param('lessonId'));
   
-  const topic = topicsData.topics.find((t) => t.id === topicId);
+  const topic = allTopics.find((t) => t.id === topicId);
   
   if (!topic) {
     return c.json({ error: 'Topic not found' }, 404);

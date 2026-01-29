@@ -24,14 +24,6 @@
 				<div class="lesson-content">
 					<h3>{lesson.title}</h3>
 					<p class="lesson-description">{lesson.content}</p>
-					<div class="vocabulary-section">
-						<h4>Vocabulary ({lesson.vocabulary.length} words)</h4>
-						<div class="vocabulary-list">
-							{#each lesson.vocabulary as vocab}
-								<span class="vocabulary-item">{vocab.word}</span>
-							{/each}
-						</div>
-					</div>
 				</div>
 			</a>
 		{/each}
@@ -147,36 +139,6 @@
 		color: #666;
 		line-height: 1.6;
 		margin: 0 0 1.5rem 0;
-	}
-
-	.vocabulary-section h4 {
-		color: #667eea;
-		margin: 0 0 1rem 0;
-		font-size: 1.1rem;
-	}
-
-	.vocabulary-list {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
-	}
-
-	.vocabulary-item {
-		background: #f0f0f0;
-		padding: 0.5rem 1rem;
-		border-radius: 20px;
-		font-size: 0.95rem;
-		color: #333;
-		border: 2px solid #e0e0e0;
-		transition: all 0.2s;
-	}
-
-	.vocabulary-item:hover {
-		background: #667eea;
-		color: white;
-		border-color: #667eea;
-		transform: translateY(-2px);
-		cursor: default;
 	}
 
 	@media (max-width: 768px) {
