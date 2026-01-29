@@ -112,8 +112,8 @@ router.get('/:word', async (c) => {
           await downloadAudioFile(audioUrl, filename);
           audioFiles.push(filename);
           
-          // Update the audio URL to point to API endpoint
-          phonetic.audio = `/api/tts/audio/word/${filename}`;
+          // Keep the original audio URL from dictionary API for client to use directly
+          // phonetic.audio remains unchanged (points to external API)
         }
       }
     }
