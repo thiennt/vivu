@@ -381,12 +381,72 @@ router.post('/generate', async (c) => {
 });
 
 /**
+ * GET /api/tts/audio/word/:filename
+ * Serve word audio file from audio/words directory
+ */
+router.get('/audio/word/:filename', async (c) => {
+  const filename = c.req.param('filename');
+  
+  // Security: validate filename to prevent path traversal
+  if (filename.includes('..') || filename.includes('/') || filename.includes('\\')) {
+    return c.json({ error: 'Invalid filename' }, 400);
+  }
+
+  // Validate filename format
+  if (filename.length > 128 || !/^[a-z0-9\-_]+\.(mp3|wav)$/i.test(filename)) {
+    return c.json({ error: 'Invalid filename format' }, 400);
+  }
+
+  const wordsDir = join(__dirname, '../../audio/words');
+  const filepath = join(wordsDir, filename);
+  
+  // Defense-in-depth: verify resolved path is within words directory
+  if (!filepath.startsWith(wordsDir)) {
+    return c.json({ error: 'Invalid file path' }, 400);
+  }
+  
+  console.log(`Requesting word audio file: ${filename} at path: ${filepath}`);
+
+  try {
+    await access(filepath);
+    const audioBuffer = await readFile(filepath);
+    
+    console.log(`Serving word audio file: ${filename}`);
+
+    // Serve the audio file with case-insensitive Content-Type detection
+    return c.body(audioBuffer, 200, {
+      'Content-Type': filename.toLowerCase().endsWith('.mp3') ? 'audio/mpeg' : 'audio/wav',
+      'Cache-Control': 'public, max-age=31536000', // Cache for 1 year
+    });
+  } catch (error) {
+    console.error(`Error serving word audio file ${filename}:`, error);
+    return c.json({ error: 'Word audio file not found' }, 404);
+  }
+});
+
+/**
  * GET /api/tts/audio/:filename
  * Serve audio file
  */
 router.get('/audio/:filename', async (c) => {
   const filename = c.req.param('filename');
+  
+  // Security: validate filename to prevent path traversal
+  if (filename.includes('..') || filename.includes('/') || filename.includes('\\')) {
+    return c.json({ error: 'Invalid filename' }, 400);
+  }
+
+  // Validate filename format
+  if (filename.length > 128 || !/^[a-z0-9\-_]+\.(mp3|wav)$/i.test(filename)) {
+    return c.json({ error: 'Invalid filename format' }, 400);
+  }
+
   const filepath = join(AUDIO_DIR, filename);
+  
+  // Defense-in-depth: verify resolved path is within audio directory
+  if (!filepath.startsWith(AUDIO_DIR)) {
+    return c.json({ error: 'Invalid file path' }, 400);
+  }
   
   console.log(`Requesting audio file: ${filename} at path: ${filepath}`);
 
@@ -396,12 +456,13 @@ router.get('/audio/:filename', async (c) => {
     
     console.log(`Serving audio file: ${filename}`, audioBuffer);
 
-    // Serve the audio file
+    // Serve the audio file with case-insensitive Content-Type detection
     return c.body(audioBuffer, 200, {
-      'Content-Type': filename.endsWith('.mp3') ? 'audio/mpeg' : 'audio/wav',
+      'Content-Type': filename.toLowerCase().endsWith('.mp3') ? 'audio/mpeg' : 'audio/wav',
       'Cache-Control': 'public, max-age=31536000', // Cache for 1 year
     });
-  } catch {
+  } catch (error) {
+    console.error(`Error serving audio file ${filename}:`, error);
     return c.json({ error: 'Audio file not found' }, 404);
   }
 });

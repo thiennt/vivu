@@ -212,7 +212,8 @@
 		dictionaryData = null;
 		
 		try {
-			const response = await fetch(`${BACKEND_URL}/api/dictionary/${encodeURIComponent(cleanWord)}`);
+			// Call dictionary API directly from client
+			const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(cleanWord)}`);
 			
 			if (!response.ok) {
 				if (response.status === 404) {
