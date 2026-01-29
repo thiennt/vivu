@@ -3,6 +3,7 @@ import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import topicsRouter from './routes/topics.js';
 import ttsRouter from './routes/tts.js';
+import dictionaryRouter from './routes/dictionary.js';
 
 const app = new Hono();
 
@@ -25,6 +26,7 @@ app.use('/*', cors({
 // Routes
 app.route('/api/topics', topicsRouter);
 app.route('/api/tts', ttsRouter);
+app.route('/api/dictionary', dictionaryRouter);
 
 // Health check
 app.get('/health', (c) => c.json({ status: 'ok' }));
