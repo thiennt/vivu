@@ -1,7 +1,7 @@
 import { getProvider } from './tts-providers.js';
 
 // Current TTS provider (module-level variable)
-const DEFAULT_PROVIDER = import.meta.env.VITE_DEFAULT_TTS_PROVIDER || 'gemini';
+const DEFAULT_PROVIDER = import.meta.env.VITE_DEFAULT_TTS_PROVIDER || 'puter';
 let currentProviderName = DEFAULT_PROVIDER;
 
 /**
@@ -15,11 +15,11 @@ export function getCurrentProvider() {
  * Generate audio using the currently selected provider
  * @param {number} topicId - ID of the topic
  * @param {number} lessonId - ID of the lesson
- * @param {number} [wordIndex] - Optional index of the vocabulary word
  * @param {string} [text] - Text to convert (needed for Puter.js provider)
+ * @param {string} [voice] - Voice option: 'male' or 'female'
  * @returns {Promise<string>} - URL to the audio file
  */
-export async function generateSpeech(topicId, lessonId, wordIndex = undefined, text = '') {
+export async function generateSpeech(topicId, lessonId, text = '', voice = 'male') {
 	if (topicId === undefined || lessonId === undefined) {
 		console.error('topicId and lessonId are required for speech generation');
 		return '';
@@ -29,7 +29,7 @@ export async function generateSpeech(topicId, lessonId, wordIndex = undefined, t
 	
 	console.log(`Generating speech with ${provider.displayName}...`);
 	
-	return provider.generateSpeech(topicId, lessonId, wordIndex, text);
+	return provider.generateSpeech(topicId, lessonId, text, voice);
 }
 
 /**

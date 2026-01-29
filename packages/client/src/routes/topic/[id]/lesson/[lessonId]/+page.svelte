@@ -14,7 +14,6 @@
 	let duration = $state(0);
 	let audio = $state(null);
 	let isLoadingAudio = $state(false);
-	let playingWordIndex = $state(null);
 	
 	// TTS Provider state
 	let selectedProvider = $state(getCurrentProvider());
@@ -23,6 +22,13 @@
 	// Playback speed state
 	let playbackSpeed = $state(1.0);
 	let speedOptions = [0.5, 0.75, 1.0, 1.25, 1.5, 2.0];
+	
+	// Voice selection state
+	let selectedVoice = $state('male');
+	let voiceOptions = [
+		{ value: 'male', label: 'American Male Young (Guy)' },
+		{ value: 'female', label: 'American Female Young (Ava)' }
+	];
 	
 	// State for error messages
 	let errorMessage = $state(null);
@@ -79,6 +85,11 @@
 		}
 	}
 	
+	// Handle voice change
+	function handleVoiceChange(event) {
+		selectedVoice = event.target.value;
+	}
+	
 	// Helper function to set playback rate when audio metadata loads
 	function applyPlaybackRate(audioElement) {
 		const setPlaybackRate = () => {
@@ -104,7 +115,7 @@
 	async function generateLessonAudio() {
 		isLoadingAudio = true;
 		try {
-			const audioUrl = await generateSpeech(topic.id, lesson.id, undefined, lesson.content);
+			const audioUrl = await generateSpeech(topic.id, lesson.id, lesson.content, selectedVoice);
 
 			console.log('Generated audio URL:', audioUrl);
 
@@ -163,39 +174,6 @@
 				event.preventDefault();
 				audio.currentTime = duration;
 				break;
-		}
-	}
-	
-	// Play individual word pronunciation
-	async function playWord(vocab, index) {
-		playingWordIndex = index;
-
-		try {
-			const audioUrl = await generateSpeech(topic.id, lesson.id, index, vocab.word);
-
-			if (!audioUrl) {
-				throw new Error('Failed to generate word audio');
-			}
-
-			// Play word audio with playback speed applied
-			const wordAudio = new Audio();
-			wordAudio.src = audioUrl;
-			wordAudio.type = 'audio/wav';
-			
-			// Set playback rate after metadata is loaded
-			applyPlaybackRate(wordAudio);
-			
-			wordAudio.load();
-			wordAudio.addEventListener('ended', () => {
-				playingWordIndex = null;
-			});
-			wordAudio.addEventListener('error', () => {
-				playingWordIndex = null;
-			});
-			await wordAudio.play();
-		} catch (error) {
-			console.error('Error generating word audio:', error);
-			playingWordIndex = null;
 		}
 	}
 	
@@ -304,6 +282,16 @@
 		<select id="playback-speed" value={playbackSpeed} onchange={handleSpeedChange}>
 			{#each speedOptions as speed}
 				<option value={speed}>{speed}x</option>
+			{/each}
+		</select>
+	</div>
+
+	<!-- Voice Selection Control -->
+	<div class="voice-control">
+		<label for="voice-select">Voice:</label>
+		<select id="voice-select" value={selectedVoice} onchange={handleVoiceChange}>
+			{#each voiceOptions as voiceOption}
+				<option value={voiceOption.value}>{voiceOption.label}</option>
 			{/each}
 		</select>
 	</div>
@@ -573,6 +561,45 @@
 	}
 
 	.speed-control select:focus {
+		outline: none;
+		border-color: #667eea;
+		box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+	}
+
+	.voice-control {
+		background: white;
+		border-radius: 12px;
+		padding: 1rem 1.5rem;
+		margin-bottom: 1.5rem;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.voice-control label {
+		color: #667eea;
+		font-weight: 600;
+		font-size: 1rem;
+	}
+
+	.voice-control select {
+		flex: 1;
+		padding: 0.5rem 1rem;
+		border: 2px solid #e0e0e0;
+		border-radius: 8px;
+		font-size: 1rem;
+		color: #333;
+		background: white;
+		cursor: pointer;
+		transition: border-color 0.2s;
+	}
+
+	.voice-control select:hover {
+		border-color: #667eea;
+	}
+
+	.voice-control select:focus {
 		outline: none;
 		border-color: #667eea;
 		box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);

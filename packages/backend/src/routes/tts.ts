@@ -9,13 +9,27 @@ import { dirname } from 'path';
 import 'dotenv/config';
 
 import wav from 'wav';
-import topicsData from '../data/topics.json' with { type: 'json' };
+import grade6Data from '../data/grade_6.json' with { type: 'json' };
+import grade7Data from '../data/grade_7.json' with { type: 'json' };
+import grade8Data from '../data/grade_8.json' with { type: 'json' };
+import grade9Data from '../data/grade_9.json' with { type: 'json' };
 
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const router = new Hono();
+
+// Combine all grade data and assign unique topic IDs
+const allGrades = [grade6Data, grade7Data, grade8Data, grade9Data];
+let topicIdCounter = 1;
+const allTopics = allGrades.flatMap((gradeData) => 
+  gradeData.topics.map((topic) => ({
+    ...topic,
+    id: topicIdCounter++,
+    grade: gradeData.grade
+  }))
+);
 
 // Get API key from environment
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
@@ -91,47 +105,38 @@ function sanitizeFilename(str: string): string {
 }
 
 /**
- * Generate filename for audio based on whether it's a single word or lesson content
+ * Generate filename for audio using lesson title and voice
  */
-function generateAudioFilename(text: string, lessonTitle?: string, isWord?: boolean): string {
-  if (isWord && /^\w+$/.test(text)) {
-    // For single words, use the word itself as filename
-    return sanitizeFilename(text);
-  } else if (lessonTitle) {
-    // For lesson content, use the lesson title
-    return sanitizeFilename(lessonTitle);
-  } else {
-    // Fallback to hash
-    return hashText(text);
-  }
+function generateAudioFilename(lessonTitle: string, voice: string = 'male'): string {
+  // Include voice in filename to prevent cache conflicts between different voices
+  const baseName = sanitizeFilename(lessonTitle);
+  return `${baseName}_${voice}`;
 }
 
 /**
  * Generate audio using Gemini API and save to .wav file
- * Accepts lessonTitle for filename, falls back to hash if not provided
+ * @param voice - Voice option: 'male' (Neural2-J/Guy) or 'female' (Neural2-C/Ava)
  */
-async function generateAndSaveAudio(text: string, lessonTitle?: string): Promise<string> {
+async function generateAndSaveAudio(text: string, lessonTitle: string, voice: string = 'male'): Promise<string> {
   if (!isValidApiKey(GEMINI_API_KEY)) {
     throw new Error('Gemini API key not configured');
   }
 
-
   const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 
-  // If the text is a single word, add a clear instruction to only generate audio
-  let promptText = text;
-  if (/^\w+$/.test(text)) {
-    promptText = `Only generate audio for pronouncing this word, do not generate any text: ${text}`;
-  }
+  // Map voice option to Gemini voice name
+  // Option 1: American Male Young (Guy)
+  // Option 2: American Female Young (Ava)
+  const voiceName = voice === 'female' ? 'Ava' : 'Guy';
 
   const response = await ai.models.generateContent({
     model: 'gemini-2.5-flash-preview-tts',
-    contents: [{ parts: [{ text: promptText }] }],
+    contents: [{ parts: [{ text }] }],
     config: {
       responseModalities: ['AUDIO'],
       speechConfig: {
         voiceConfig: {
-          prebuiltVoiceConfig: { voiceName: 'Puck' },
+          prebuiltVoiceConfig: { voiceName },
         },
       },
     },
@@ -145,9 +150,8 @@ async function generateAndSaveAudio(text: string, lessonTitle?: string): Promise
 
   const audioBuffer = Buffer.from(data, 'base64');
 
-  // Use sanitized lesson title for filename if provided, else fallback to hash
-  let baseName = lessonTitle ? sanitizeFilename(lessonTitle) : hashText(text);
-  if (!baseName) baseName = hashText(text);
+  // Use lesson title for filename
+  const baseName = sanitizeFilename(lessonTitle);
   const filename = `${baseName}.wav`;
   const filepath = join(AUDIO_DIR, filename);
   await saveWaveFile(filepath, audioBuffer);
@@ -271,12 +275,12 @@ router.post('/upload', async (c) => {
 
 /**
  * POST /api/tts/generate
- * Generate TTS audio from topicId, lessonId, and optional wordIndex
+ * Generate TTS audio from topicId and lessonId
  */
 router.post('/generate', async (c) => {
   try {
     const body = await c.req.json();
-    const { topicId, lessonId, wordIndex } = body;
+    const { topicId, lessonId, voice } = body;
 
     // Validate required parameters
     if (topicId === undefined || lessonId === undefined) {
@@ -296,7 +300,7 @@ router.post('/generate', async (c) => {
     }
 
     // Find topic
-    const topic = topicsData.topics.find((t) => t.id === numericTopicId);
+    const topic = allTopics.find((t) => t.id === numericTopicId);
     if (!topic) {
       return c.json({ error: 'Topic not found' }, 404);
     }
@@ -307,35 +311,9 @@ router.post('/generate', async (c) => {
       return c.json({ error: 'Lesson not found' }, 404);
     }
 
-    // Determine text and filename based on wordIndex
-    let text: string;
-    let baseName: string;
-    let isWord = false;
-
-    if (wordIndex !== undefined && wordIndex !== null) {
-      // Validate wordIndex
-      const numericWordIndex = Number(wordIndex);
-      
-      if (!Number.isInteger(numericWordIndex) || numericWordIndex < 0) {
-        return c.json({ error: 'wordIndex must be a non-negative integer' }, 400);
-      }
-      
-      // Check bounds
-      if (numericWordIndex >= lesson.vocabulary.length) {
-        return c.json({ error: 'Vocabulary word not found' }, 404);
-      }
-      
-      // Generate audio for a specific vocabulary word
-      const vocab = lesson.vocabulary[numericWordIndex];
-      text = vocab.word;
-      // Use the word itself as filename for single words
-      baseName = generateAudioFilename(vocab.word, undefined, true);
-      isWord = true;
-    } else {
-      // Generate audio for the entire lesson content
-      text = lesson.content;
-      baseName = generateAudioFilename(text, lesson.title, false);
-    }
+    // Generate audio for the entire lesson content
+    const text = lesson.content;
+    const baseName = generateAudioFilename(lesson.title, voice || 'male');
 
     const mp3Filename = `${baseName}.mp3`;
     const wavFilename = `${baseName}.wav`;
@@ -365,7 +343,7 @@ router.post('/generate', async (c) => {
     }
 
     // Generate new audio
-    const filename = await generateAndSaveAudio(text, baseName);
+    const filename = await generateAndSaveAudio(text, lesson.title, voice || 'male');
 
     return c.json({
       audioUrl: `/api/tts/audio/${filename}`,
@@ -377,50 +355,6 @@ router.post('/generate', async (c) => {
     return c.json({
       error: error instanceof Error ? error.message : 'Failed to generate audio'
     }, 500);
-  }
-});
-
-/**
- * GET /api/tts/audio/word/:filename
- * Serve word audio file from audio/words directory
- */
-router.get('/audio/word/:filename', async (c) => {
-  const filename = c.req.param('filename');
-  
-  // Security: validate filename to prevent path traversal
-  if (filename.includes('..') || filename.includes('/') || filename.includes('\\')) {
-    return c.json({ error: 'Invalid filename' }, 400);
-  }
-
-  // Validate filename format
-  if (filename.length > 128 || !/^[a-z0-9\-_]+\.(mp3|wav)$/i.test(filename)) {
-    return c.json({ error: 'Invalid filename format' }, 400);
-  }
-
-  const wordsDir = join(__dirname, '../../audio/words');
-  const filepath = join(wordsDir, filename);
-  
-  // Defense-in-depth: verify resolved path is within words directory
-  if (!filepath.startsWith(wordsDir)) {
-    return c.json({ error: 'Invalid file path' }, 400);
-  }
-  
-  console.log(`Requesting word audio file: ${filename} at path: ${filepath}`);
-
-  try {
-    await access(filepath);
-    const audioBuffer = await readFile(filepath);
-    
-    console.log(`Serving word audio file: ${filename}`);
-
-    // Serve the audio file with case-insensitive Content-Type detection
-    return c.body(audioBuffer, 200, {
-      'Content-Type': filename.toLowerCase().endsWith('.mp3') ? 'audio/mpeg' : 'audio/wav',
-      'Cache-Control': 'public, max-age=31536000', // Cache for 1 year
-    });
-  } catch (error) {
-    console.error(`Error serving word audio file ${filename}:`, error);
-    return c.json({ error: 'Word audio file not found' }, 404);
   }
 });
 
