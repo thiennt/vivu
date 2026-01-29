@@ -69,12 +69,8 @@
 		showLesson = !showLesson;
 	}
 	
-	// Handle provider change
-	function handleProviderChange(event) {
-		const newProvider = event.target.value;
-		setProvider(newProvider);
-		selectedProvider = newProvider;
-		// Clear audio source to force regeneration with new provider
+	// Clear audio source to force regeneration
+	function clearAudioSource() {
 		if (audio) {
 			audio.pause();
 			audio.src = '';
@@ -82,6 +78,14 @@
 			currentTime = 0;
 			duration = 0;
 		}
+	}
+	
+	// Handle provider change
+	function handleProviderChange(event) {
+		const newProvider = event.target.value;
+		setProvider(newProvider);
+		selectedProvider = newProvider;
+		clearAudioSource();
 	}
 	
 	// Handle playback speed change
@@ -96,14 +100,7 @@
 	// Handle voice change
 	function handleVoiceChange(event) {
 		selectedVoice = event.target.value;
-		// Clear audio source to force regeneration with new voice
-		if (audio) {
-			audio.pause();
-			audio.src = '';
-			isPlaying = false;
-			currentTime = 0;
-			duration = 0;
-		}
+		clearAudioSource();
 	}
 	
 	// Helper function to set playback rate when audio metadata loads
