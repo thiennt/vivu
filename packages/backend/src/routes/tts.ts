@@ -9,13 +9,27 @@ import { dirname } from 'path';
 import 'dotenv/config';
 
 import wav from 'wav';
-import topicsData from '../data/topics.json' with { type: 'json' };
+import grade6Data from '../data/grade_6.json' with { type: 'json' };
+import grade7Data from '../data/grade_7.json' with { type: 'json' };
+import grade8Data from '../data/grade_8.json' with { type: 'json' };
+import grade9Data from '../data/grade_9.json' with { type: 'json' };
 
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const router = new Hono();
+
+// Combine all grade data and assign unique topic IDs
+const allGrades = [grade6Data, grade7Data, grade8Data, grade9Data];
+let topicIdCounter = 1;
+const allTopics = allGrades.flatMap((gradeData) => 
+  gradeData.topics.map((topic) => ({
+    ...topic,
+    id: topicIdCounter++,
+    grade: gradeData.grade
+  }))
+);
 
 // Get API key from environment
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
@@ -100,13 +114,19 @@ function generateAudioFilename(lessonTitle: string): string {
 
 /**
  * Generate audio using Gemini API and save to .wav file
+ * @param voice - Voice option: 'male' (Neural2-J/Guy) or 'female' (Neural2-C/Ava)
  */
-async function generateAndSaveAudio(text: string, lessonTitle: string): Promise<string> {
+async function generateAndSaveAudio(text: string, lessonTitle: string, voice: string = 'male'): Promise<string> {
   if (!isValidApiKey(GEMINI_API_KEY)) {
     throw new Error('Gemini API key not configured');
   }
 
   const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
+
+  // Map voice option to Gemini voice name
+  // Option 1: American Male Young (Neural2-J / Guy)
+  // Option 2: American Female Young (Neural2-C / Ava)
+  const voiceName = voice === 'female' ? 'Ava' : 'Guy';
 
   const response = await ai.models.generateContent({
     model: 'gemini-2.5-flash-preview-tts',
@@ -115,7 +135,7 @@ async function generateAndSaveAudio(text: string, lessonTitle: string): Promise<
       responseModalities: ['AUDIO'],
       speechConfig: {
         voiceConfig: {
-          prebuiltVoiceConfig: { voiceName: 'Puck' },
+          prebuiltVoiceConfig: { voiceName },
         },
       },
     },
@@ -259,7 +279,7 @@ router.post('/upload', async (c) => {
 router.post('/generate', async (c) => {
   try {
     const body = await c.req.json();
-    const { topicId, lessonId } = body;
+    const { topicId, lessonId, voice } = body;
 
     // Validate required parameters
     if (topicId === undefined || lessonId === undefined) {
@@ -279,7 +299,7 @@ router.post('/generate', async (c) => {
     }
 
     // Find topic
-    const topic = topicsData.topics.find((t) => t.id === numericTopicId);
+    const topic = allTopics.find((t) => t.id === numericTopicId);
     if (!topic) {
       return c.json({ error: 'Topic not found' }, 404);
     }
@@ -322,7 +342,7 @@ router.post('/generate', async (c) => {
     }
 
     // Generate new audio
-    const filename = await generateAndSaveAudio(text, lesson.title);
+    const filename = await generateAndSaveAudio(text, lesson.title, voice || 'male');
 
     return c.json({
       audioUrl: `/api/tts/audio/${filename}`,

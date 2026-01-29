@@ -13,14 +13,14 @@ export const geminiProvider = {
 	/**
 	 * Generate audio using Gemini via backend API
 	 */
-	async generateSpeech(topicId, lessonId) {
+	async generateSpeech(topicId, lessonId, text, voice = 'male') {
 		try {
 			const response = await fetch(`${BACKEND_URL}/api/tts/generate`, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
 				},
-				body: JSON.stringify({ topicId, lessonId }),
+				body: JSON.stringify({ topicId, lessonId, voice }),
 			});
 
 			if (!response.ok) {
@@ -165,7 +165,7 @@ export const puterProvider = {
 	 * Generate speech using client-side Puter.js
 	 * Flow: Check → Generate → Upload → Play
 	 */
-	async generateSpeech(topicId, lessonId, text = '') {
+	async generateSpeech(topicId, lessonId, text = '', voice = 'male') {
 		try {
 			// Generate filename
 			const filename = this.generateFilename(text);
