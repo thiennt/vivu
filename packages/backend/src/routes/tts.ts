@@ -105,11 +105,12 @@ function sanitizeFilename(str: string): string {
 }
 
 /**
- * Generate filename for audio using lesson title
+ * Generate filename for audio using lesson title and voice
  */
-function generateAudioFilename(lessonTitle: string): string {
-  // Use the lesson title for filename
-  return sanitizeFilename(lessonTitle);
+function generateAudioFilename(lessonTitle: string, voice: string = 'male'): string {
+  // Include voice in filename to prevent cache conflicts between different voices
+  const baseName = sanitizeFilename(lessonTitle);
+  return `${baseName}_${voice}`;
 }
 
 /**
@@ -124,8 +125,8 @@ async function generateAndSaveAudio(text: string, lessonTitle: string, voice: st
   const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 
   // Map voice option to Gemini voice name
-  // Option 1: American Male Young (Neural2-J / Guy)
-  // Option 2: American Female Young (Neural2-C / Ava)
+  // Option 1: American Male Young (Guy)
+  // Option 2: American Female Young (Ava)
   const voiceName = voice === 'female' ? 'Ava' : 'Guy';
 
   const response = await ai.models.generateContent({
@@ -312,7 +313,7 @@ router.post('/generate', async (c) => {
 
     // Generate audio for the entire lesson content
     const text = lesson.content;
-    const baseName = generateAudioFilename(lesson.title);
+    const baseName = generateAudioFilename(lesson.title, voice || 'male');
 
     const mp3Filename = `${baseName}.mp3`;
     const wavFilename = `${baseName}.wav`;

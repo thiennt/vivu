@@ -164,9 +164,11 @@ export const puterProvider = {
 	/**
 	 * Generate speech using client-side Puter.js
 	 * Flow: Check → Generate → Upload → Play
+	 * Note: Voice selection is not supported by Puter.js - it uses its default voice
 	 */
 	async generateSpeech(topicId, lessonId, text = '', voice = 'male') {
 		try {
+			// Note: voice parameter is not used as Puter.js doesn't support voice selection
 			// Generate filename
 			const filename = this.generateFilename(text);
 			
