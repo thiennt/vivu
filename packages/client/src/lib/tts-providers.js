@@ -46,6 +46,7 @@ export const puterProvider = {
 	
 	/**
 	 * Generate audio using Puter.js AI with voice selection
+	 * @returns {Promise<Blob|Object|string>} Audio response (typically Blob, but may be object with src or string URL)
 	 */
 	async generateAudioWithPuter(text, voice = 'male') {
 		try {
@@ -59,6 +60,8 @@ export const puterProvider = {
 
 			// Map our voice selection to Puter.js voices
 			// Using neural voices for better quality
+			// Matthew: Male neural voice, Joanna: Female neural voice
+			// Note: These are standard AWS Polly voice names supported by Puter.js
 			const voiceName = voice === 'female' ? 'Joanna' : 'Matthew';
 
 			// Generate audio using Puter's AI text-to-speech with voice options

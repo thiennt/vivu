@@ -26,8 +26,8 @@
 	// Voice selection state
 	let selectedVoice = $state('male');
 	let voiceOptions = [
-		{ value: 'male', label: 'American Male Young (Guy)' },
-		{ value: 'female', label: 'American Female Young (Ava)' }
+		{ value: 'male', label: 'Matthew (Neural)' },
+		{ value: 'female', label: 'Joanna (Neural)' }
 	];
 	
 	// State for error messages
@@ -183,14 +183,14 @@
 				throw new Error('Failed to generate audio');
 			}
 
-			// Revoke previous object URL if it exists (for Puter.js)
+			// Revoke previous blob URL if it exists (for Puter.js)
 			if (currentObjectUrl && currentObjectUrl.startsWith('blob:')) {
 				URL.revokeObjectURL(currentObjectUrl);
 			}
 
 			// Set audio source and load
-			currentObjectUrl = audioUrl;
 			audio.src = audioUrl;
+			currentObjectUrl = audioUrl; // Track for cleanup
 			audio.type = 'audio/wav';
 			audio.load();
 			await audio.play();
