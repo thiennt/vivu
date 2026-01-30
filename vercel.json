@@ -1,8 +1,4 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "turbo run build",
-  "installCommand": "npm install",
-  "framework": null,
-  "outputDirectory": "packages/client/.svelte-kit/output",
   "ignoreCommand": "git diff HEAD^ HEAD --quiet . ':(exclude)packages/backend/**'"
 }

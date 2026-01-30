@@ -255,10 +255,11 @@ This project is optimized for deployment on [Vercel](https://vercel.com) using T
 
 3. **Deploy**
    
-   The project will automatically build and deploy using the `vercel.json` configuration.
-   - Build Command: `turbo run build`
-   - Install Command: `npm install`
-   - Output Directory: `packages/client/.svelte-kit/output`
+   The project will automatically build and deploy. The SvelteKit Vercel adapter (`@sveltejs/adapter-vercel`) handles the build configuration automatically.
+   
+   - The adapter detects and configures the build process for Vercel
+   - Turborepo manages the monorepo build orchestration
+   - No manual build/output directory configuration is needed
 
 ### Note on Backend Deployment
 
