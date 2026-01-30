@@ -40,6 +40,9 @@
 	let isLoadingDictionary = $state(false);
 	let dictionaryError = $state(null);
 	
+	// Progress bar drag state
+	let isDragging = $state(false);
+	
 	const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000';
 	
 	// Initialize audio element
@@ -56,11 +59,29 @@
 			isPlaying = false;
 		});
 		
+		// Add global mouse event listeners for dragging
+		const handleGlobalMouseMove = (event) => {
+			if (isDragging) {
+				handleProgressMouseMove(event);
+			}
+		};
+		
+		const handleGlobalMouseUp = () => {
+			if (isDragging) {
+				handleProgressMouseUp();
+			}
+		};
+		
+		window.addEventListener('mousemove', handleGlobalMouseMove);
+		window.addEventListener('mouseup', handleGlobalMouseUp);
+		
 		return () => {
 			if (audio) {
 				audio.pause();
 				audio.src = '';
 			}
+			window.removeEventListener('mousemove', handleGlobalMouseMove);
+			window.removeEventListener('mouseup', handleGlobalMouseUp);
 		};
 	});
 	
@@ -170,11 +191,42 @@
 		
 		const rect = event.currentTarget.getBoundingClientRect();
 		const x = event.clientX - rect.left;
-		const percentage = x / rect.width;
+		const percentage = Math.max(0, Math.min(1, x / rect.width));
 		const newTime = percentage * duration;
 		
 		audio.currentTime = newTime;
 		currentTime = newTime;
+	}
+	
+	// Start dragging on progress bar
+	function handleProgressMouseDown(event) {
+		if (!audio || !duration) return;
+		isDragging = true;
+		// Store reference to the progress bar element
+		event.currentTarget.dataset.dragging = 'true';
+		seekAudio(event);
+	}
+	
+	// Handle mouse move while dragging
+	function handleProgressMouseMove(event) {
+		if (!isDragging || !audio || !duration) return;
+		
+		// Find the progress bar element
+		const progressBar = document.querySelector('.progress-bar');
+		if (!progressBar) return;
+		
+		const rect = progressBar.getBoundingClientRect();
+		const x = event.clientX - rect.left;
+		const percentage = Math.max(0, Math.min(1, x / rect.width));
+		const newTime = percentage * duration;
+		
+		audio.currentTime = newTime;
+		currentTime = newTime;
+	}
+	
+	// Stop dragging
+	function handleProgressMouseUp() {
+		isDragging = false;
 	}
 	
 	// Handle keyboard navigation for progress bar
@@ -361,6 +413,7 @@
 			<button 
 				class="progress-bar" 
 				onclick={seekAudio}
+				onmousedown={handleProgressMouseDown}
 				onkeydown={handleProgressKeydown}
 				aria-label="Seek audio"
 				role="slider"
@@ -704,6 +757,13 @@
 		overflow: hidden;
 		border: none;
 		padding: 0;
+		transition: height 0.2s;
+		user-select: none;
+	}
+	
+	.progress-bar:hover,
+	.progress-bar:active {
+		height: 12px;
 	}
 
 	.progress-fill {

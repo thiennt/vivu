@@ -45,9 +45,9 @@ export const puterProvider = {
 	displayName: 'Puter.js (Client-Side)',
 	
 	/**
-	 * Generate filename based on lesson
+	 * Generate filename based on lesson and voice
 	 */
-	generateFilename(text) {
+	generateFilename(text, voice = 'male') {
 		// For lesson content, generate a hash-based filename for consistent caching
 		// Using a simple hash to ensure same content gets same filename
 		let hash = 0;
@@ -56,7 +56,8 @@ export const puterProvider = {
 			hash = ((hash << 5) - hash) + char;
 			hash = hash & hash; // Convert to 32bit integer
 		}
-		return `lesson_${Math.abs(hash).toString(36)}`;
+		// Include voice in filename to prevent cache conflicts between different voices
+		return `lesson_${Math.abs(hash).toString(36)}_${voice}`;
 	},
 	
 	/**
@@ -169,8 +170,9 @@ export const puterProvider = {
 	async generateSpeech(topicId, lessonId, text = '', voice = 'male') {
 		try {
 			// Note: voice parameter is not used as Puter.js doesn't support voice selection
+			// However, we include it in filename for consistency with backend provider
 			// Generate filename
-			const filename = this.generateFilename(text);
+			const filename = this.generateFilename(text, voice);
 			
 			// Step 1: Check if audio already exists on backend
 			const checkResult = await this.checkAudioExists(filename);
