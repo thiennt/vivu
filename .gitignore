@@ -36,3 +36,9 @@ build
 
 # Backend audio files
 packages/backend/audio
+
+# Turborepo
+.turbo
+
+# Vercel
+.vercel
