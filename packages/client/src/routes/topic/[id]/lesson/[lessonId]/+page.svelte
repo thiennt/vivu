@@ -132,9 +132,17 @@
 	}
 	
 	// Handle voice change
-	function handleVoiceChange(event) {
+	async function handleVoiceChange(event) {
+		const hadAudio = !!audio.src;
+		
 		selectedVoice = event.target.value;
 		clearAudioSource();
+		
+		// If audio was loaded, regenerate with new voice
+		if (hadAudio) {
+			await generateLessonAudio();
+			// generateLessonAudio() automatically plays the audio after generation
+		}
 	}
 	
 	// Helper function to set playback rate when audio metadata loads
@@ -191,7 +199,6 @@
 			// Set audio source and load
 			audio.src = audioUrl;
 			currentObjectUrl = audioUrl; // Track for cleanup
-			audio.type = 'audio/wav';
 			audio.load();
 			await audio.play();
 			isPlaying = true;
