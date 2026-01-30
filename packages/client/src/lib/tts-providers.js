@@ -58,12 +58,16 @@ export const puterProvider = {
 				}
 			}
 
-			// Puter.js txt2speech expects language code as second parameter, not voice name
+			// Puter.js txt2speech signature: txt2speech(text, language, voice, engine)
 			// Use US English as the language code
 			const languageCode = 'en-US';
+			// Map our voice selection to Puter.js voice names (AWS Polly voices)
+			const voiceName = voice === 'female' ? 'Joanna' : 'Matthew';
+			// Use neural engine for better quality
+			const engine = 'neural';
 
-			// Generate audio using Puter's AI text-to-speech with language code
-			const response = await puter.ai.txt2speech(text, languageCode);
+			// Generate audio using Puter's AI text-to-speech with language code and voice
+			const response = await puter.ai.txt2speech(text, languageCode, voiceName, engine);
 			return response;
 		} catch (error) {
 			console.error('Puter.js generation error:', error);
