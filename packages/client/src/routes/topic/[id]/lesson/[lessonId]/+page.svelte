@@ -26,8 +26,8 @@
 	// Voice selection state
 	let selectedVoice = $state('male');
 	let voiceOptions = [
-		{ value: 'male', label: 'American Male Young (Guy)' },
-		{ value: 'female', label: 'American Female Young (Ava)' }
+		{ value: 'male', label: 'Matthew (Neural)' },
+		{ value: 'female', label: 'Joanna (Neural)' }
 	];
 	
 	// State for error messages
@@ -39,6 +39,13 @@
 	let dictionaryData = $state(null);
 	let isLoadingDictionary = $state(false);
 	let dictionaryError = $state(null);
+	
+	// Progress bar drag state
+	let isDragging = $state(false);
+	let progressBarRect = null; // Non-reactive reference to avoid memory leaks
+	
+	// Track object URLs for cleanup
+	let currentObjectUrl = null;
 	
 	const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000';
 	
@@ -56,11 +63,33 @@
 			isPlaying = false;
 		});
 		
+		// Add global mouse event listeners for dragging
+		const handleGlobalMouseMove = (event) => {
+			if (isDragging) {
+				handleProgressMouseMove(event);
+			}
+		};
+		
+		const handleGlobalMouseUp = () => {
+			if (isDragging) {
+				handleProgressMouseUp();
+			}
+		};
+		
+		window.addEventListener('mousemove', handleGlobalMouseMove);
+		window.addEventListener('mouseup', handleGlobalMouseUp);
+		
 		return () => {
 			if (audio) {
 				audio.pause();
+				// Revoke object URL if it exists
+				if (currentObjectUrl && currentObjectUrl.startsWith('blob:')) {
+					URL.revokeObjectURL(currentObjectUrl);
+				}
 				audio.src = '';
 			}
+			window.removeEventListener('mousemove', handleGlobalMouseMove);
+			window.removeEventListener('mouseup', handleGlobalMouseUp);
 		};
 	});
 	
@@ -73,7 +102,12 @@
 	function clearAudioSource() {
 		if (audio) {
 			audio.pause();
+			// Revoke object URL if it exists (for Puter.js generated blobs)
+			if (currentObjectUrl && currentObjectUrl.startsWith('blob:')) {
+				URL.revokeObjectURL(currentObjectUrl);
+			}
 			audio.src = '';
+			currentObjectUrl = null;
 			isPlaying = false;
 			currentTime = 0;
 			duration = 0;
@@ -149,8 +183,14 @@
 				throw new Error('Failed to generate audio');
 			}
 
+			// Revoke previous blob URL if it exists (for Puter.js)
+			if (currentObjectUrl && currentObjectUrl.startsWith('blob:')) {
+				URL.revokeObjectURL(currentObjectUrl);
+			}
+
 			// Set audio source and load
 			audio.src = audioUrl;
+			currentObjectUrl = audioUrl; // Track for cleanup
 			audio.type = 'audio/wav';
 			audio.load();
 			await audio.play();
@@ -170,11 +210,38 @@
 		
 		const rect = event.currentTarget.getBoundingClientRect();
 		const x = event.clientX - rect.left;
-		const percentage = x / rect.width;
+		const percentage = Math.max(0, Math.min(1, x / rect.width));
 		const newTime = percentage * duration;
 		
 		audio.currentTime = newTime;
 		currentTime = newTime;
+	}
+	
+	// Start dragging on progress bar
+	function handleProgressMouseDown(event) {
+		if (!audio || !duration) return;
+		event.preventDefault(); // Prevent default drag behavior
+		isDragging = true;
+		progressBarRect = event.currentTarget.getBoundingClientRect();
+		seekAudio(event);
+	}
+	
+	// Handle mouse move while dragging
+	function handleProgressMouseMove(event) {
+		if (!isDragging || !audio || !duration || !progressBarRect) return;
+		
+		const x = event.clientX - progressBarRect.left;
+		const percentage = Math.max(0, Math.min(1, x / progressBarRect.width));
+		const newTime = percentage * duration;
+		
+		audio.currentTime = newTime;
+		currentTime = newTime;
+	}
+	
+	// Stop dragging
+	function handleProgressMouseUp() {
+		isDragging = false;
+		progressBarRect = null;
 	}
 	
 	// Handle keyboard navigation for progress bar
@@ -361,6 +428,7 @@
 			<button 
 				class="progress-bar" 
 				onclick={seekAudio}
+				onmousedown={handleProgressMouseDown}
 				onkeydown={handleProgressKeydown}
 				aria-label="Seek audio"
 				role="slider"
@@ -704,6 +772,13 @@
 		overflow: hidden;
 		border: none;
 		padding: 0;
+		transition: height 0.2s;
+		user-select: none;
+	}
+	
+	.progress-bar:hover,
+	.progress-bar:active {
+		height: 12px;
 	}
 
 	.progress-fill {
