@@ -167,7 +167,9 @@ export const puterProvider = {
 	 * Flow: Check → Generate → Upload → Play
 	 * Note: Voice selection is not supported by Puter.js - it uses its default voice.
 	 * However, we include voice in the filename for cache key generation to maintain
-	 * consistency with the backend provider's behavior and prevent cache conflicts.
+	 * consistency with the backend provider's behavior. This allows the UI to keep
+	 * voice selection enabled across provider switches, even though Puter.js will
+	 * generate the same audio regardless of the selected voice.
 	 */
 	async generateSpeech(topicId, lessonId, text = '', voice = 'male') {
 		try {

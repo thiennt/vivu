@@ -42,7 +42,7 @@
 	
 	// Progress bar drag state
 	let isDragging = $state(false);
-	let progressBarElement = $state(null);
+	let progressBarRect = null; // Non-reactive reference to avoid memory leaks
 	
 	const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000';
 	
@@ -202,18 +202,18 @@
 	// Start dragging on progress bar
 	function handleProgressMouseDown(event) {
 		if (!audio || !duration) return;
+		event.preventDefault(); // Prevent default drag behavior
 		isDragging = true;
-		progressBarElement = event.currentTarget;
+		progressBarRect = event.currentTarget.getBoundingClientRect();
 		seekAudio(event);
 	}
 	
 	// Handle mouse move while dragging
 	function handleProgressMouseMove(event) {
-		if (!isDragging || !audio || !duration || !progressBarElement) return;
+		if (!isDragging || !audio || !duration || !progressBarRect) return;
 		
-		const rect = progressBarElement.getBoundingClientRect();
-		const x = event.clientX - rect.left;
-		const percentage = Math.max(0, Math.min(1, x / rect.width));
+		const x = event.clientX - progressBarRect.left;
+		const percentage = Math.max(0, Math.min(1, x / progressBarRect.width));
 		const newTime = percentage * duration;
 		
 		audio.currentTime = newTime;
@@ -223,7 +223,7 @@
 	// Stop dragging
 	function handleProgressMouseUp() {
 		isDragging = false;
-		progressBarElement = null;
+		progressBarRect = null;
 	}
 	
 	// Handle keyboard navigation for progress bar
