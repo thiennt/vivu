@@ -191,7 +191,6 @@
 			// Set audio source and load
 			audio.src = audioUrl;
 			currentObjectUrl = audioUrl; // Track for cleanup
-			audio.type = 'audio/wav';
 			audio.load();
 			await audio.play();
 			isPlaying = true;
