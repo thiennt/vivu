@@ -64,12 +64,17 @@ export const puterProvider = {
 			// Note: These are standard AWS Polly voice names supported by Puter.js
 			const voiceName = voice === 'female' ? 'Joanna' : 'Matthew';
 
-			// Generate audio using Puter's AI text-to-speech with voice options
-			const response = await puter.ai.txt2speech(text, {
-				voice: voiceName,
-				engine: 'neural',
-				language: 'en-US'
-			});
+			// Generate audio using Puter's AI text-to-speech
+			// Try with voice parameter first, fall back to basic call if unsupported
+			let response;
+			try {
+				// Attempt to use voice as a simple string parameter
+				response = await puter.ai.txt2speech(text, voiceName);
+			} catch (voiceError) {
+				console.warn('Puter.js voice parameter not supported, trying basic call:', voiceError);
+				// Fall back to basic call without voice parameter
+				response = await puter.ai.txt2speech(text);
+			}
 
 			// Return the audio response directly (Blob or Audio object)
 			return response;
