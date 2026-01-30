@@ -150,8 +150,8 @@ async function generateAndSaveAudio(text: string, lessonTitle: string, voice: st
 
   const audioBuffer = Buffer.from(data, 'base64');
 
-  // Use lesson title for filename
-  const baseName = sanitizeFilename(lessonTitle);
+  // Use lesson title and voice for filename to prevent cache conflicts
+  const baseName = generateAudioFilename(lessonTitle, voice);
   const filename = `${baseName}.wav`;
   const filepath = join(AUDIO_DIR, filename);
   await saveWaveFile(filepath, audioBuffer);
