@@ -490,9 +490,10 @@
 	
 	<!-- Dictionary Popup -->
 	{#if showDictionary}
-		<!-- svelte-ignore a11y-no-static-element-interactions -->
-		<div class="dictionary-overlay" onclick={closeDictionary} onkeydown={(e) => e.key === 'Escape' && closeDictionary()} role="dialog" aria-modal="true">
-			<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<!-- svelte-ignore a11y_no_static_element_interactions -->
+		<div class="dictionary-overlay" onclick={closeDictionary} onkeydown={(e) => e.key === 'Escape' && closeDictionary()} role="dialog" aria-modal="true" tabindex="-1">
+			<!-- svelte-ignore a11y_click_events_have_key_events -->
+			<!-- svelte-ignore a11y_no_static_element_interactions -->
 			<div class="dictionary-popup" onclick={(e) => e.stopPropagation()}>
 				<button class="close-btn" onclick={closeDictionary} aria-label="Close dictionary popup">×</button>
 				
