@@ -44,6 +44,9 @@
 	let isDragging = $state(false);
 	let progressBarRect = null; // Non-reactive reference to avoid memory leaks
 	
+	// Track object URLs for cleanup
+	let currentObjectUrl = null;
+	
 	const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000';
 	
 	// Initialize audio element
@@ -79,6 +82,10 @@
 		return () => {
 			if (audio) {
 				audio.pause();
+				// Revoke object URL if it exists
+				if (currentObjectUrl && currentObjectUrl.startsWith('blob:')) {
+					URL.revokeObjectURL(currentObjectUrl);
+				}
 				audio.src = '';
 			}
 			window.removeEventListener('mousemove', handleGlobalMouseMove);
@@ -95,7 +102,12 @@
 	function clearAudioSource() {
 		if (audio) {
 			audio.pause();
+			// Revoke object URL if it exists (for Puter.js generated blobs)
+			if (currentObjectUrl && currentObjectUrl.startsWith('blob:')) {
+				URL.revokeObjectURL(currentObjectUrl);
+			}
 			audio.src = '';
+			currentObjectUrl = null;
 			isPlaying = false;
 			currentTime = 0;
 			duration = 0;
@@ -171,7 +183,13 @@
 				throw new Error('Failed to generate audio');
 			}
 
+			// Revoke previous object URL if it exists (for Puter.js)
+			if (currentObjectUrl && currentObjectUrl.startsWith('blob:')) {
+				URL.revokeObjectURL(currentObjectUrl);
+			}
+
 			// Set audio source and load
+			currentObjectUrl = audioUrl;
 			audio.src = audioUrl;
 			audio.type = 'audio/wav';
 			audio.load();
