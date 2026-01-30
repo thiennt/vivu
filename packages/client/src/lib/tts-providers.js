@@ -58,37 +58,13 @@ export const puterProvider = {
 				}
 			}
 
-			// Map our voice selection to Puter.js voices
-			// Using neural voices for better quality
-			// Matthew: Male neural voice, Joanna: Female neural voice
-			// Note: These are standard AWS Polly voice names supported by Puter.js
-			const voiceName = voice === 'female' ? 'Joanna' : 'Matthew';
+			// Puter.js txt2speech expects language code as second parameter, not voice name
+			// Use US English as the language code
+			const languageCode = 'en-US';
 
-			// Generate audio using Puter's AI text-to-speech
-			// Try with voice parameter first
-			try {
-				// Attempt to use voice as a simple string parameter
-				const response = await puter.ai.txt2speech(text, voiceName);
-				return response;
-			} catch (voiceError) {
-				// Only fallback if the error is related to invalid parameters or unsupported features
-				// Re-throw if it's a network, auth, or other critical error
-				const errorMsg = voiceError?.message?.toLowerCase() || '';
-				const isParameterError = errorMsg.includes('parameter') || 
-				                        errorMsg.includes('invalid') || 
-				                        errorMsg.includes('unsupported') ||
-				                        errorMsg.includes('argument');
-				
-				if (!isParameterError) {
-					// Critical error - re-throw
-					throw voiceError;
-				}
-				
-				console.warn('Puter.js voice parameter not supported, using default voice:', voiceError.message);
-				// Fall back to basic call without voice parameter
-				const response = await puter.ai.txt2speech(text);
-				return response;
-			}
+			// Generate audio using Puter's AI text-to-speech with language code
+			const response = await puter.ai.txt2speech(text, languageCode);
+			return response;
 		} catch (error) {
 			console.error('Puter.js generation error:', error);
 			throw error;
