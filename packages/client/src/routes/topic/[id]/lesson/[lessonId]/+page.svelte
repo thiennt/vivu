@@ -42,6 +42,7 @@
 	
 	// Progress bar drag state
 	let isDragging = $state(false);
+	let progressBarElement = $state(null);
 	
 	const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000';
 	
@@ -202,20 +203,15 @@
 	function handleProgressMouseDown(event) {
 		if (!audio || !duration) return;
 		isDragging = true;
-		// Store reference to the progress bar element
-		event.currentTarget.dataset.dragging = 'true';
+		progressBarElement = event.currentTarget;
 		seekAudio(event);
 	}
 	
 	// Handle mouse move while dragging
 	function handleProgressMouseMove(event) {
-		if (!isDragging || !audio || !duration) return;
+		if (!isDragging || !audio || !duration || !progressBarElement) return;
 		
-		// Find the progress bar element
-		const progressBar = document.querySelector('.progress-bar');
-		if (!progressBar) return;
-		
-		const rect = progressBar.getBoundingClientRect();
+		const rect = progressBarElement.getBoundingClientRect();
 		const x = event.clientX - rect.left;
 		const percentage = Math.max(0, Math.min(1, x / rect.width));
 		const newTime = percentage * duration;
@@ -227,6 +223,7 @@
 	// Stop dragging
 	function handleProgressMouseUp() {
 		isDragging = false;
+		progressBarElement = null;
 	}
 	
 	// Handle keyboard navigation for progress bar

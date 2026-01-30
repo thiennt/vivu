@@ -165,13 +165,13 @@ export const puterProvider = {
 	/**
 	 * Generate speech using client-side Puter.js
 	 * Flow: Check → Generate → Upload → Play
-	 * Note: Voice selection is not supported by Puter.js - it uses its default voice
+	 * Note: Voice selection is not supported by Puter.js - it uses its default voice.
+	 * However, we include voice in the filename for cache key generation to maintain
+	 * consistency with the backend provider's behavior and prevent cache conflicts.
 	 */
 	async generateSpeech(topicId, lessonId, text = '', voice = 'male') {
 		try {
-			// Note: voice parameter is not used as Puter.js doesn't support voice selection
-			// However, we include it in filename for consistency with backend provider
-			// Generate filename
+			// Generate filename with voice parameter for proper cache differentiation
 			const filename = this.generateFilename(text, voice);
 			
 			// Step 1: Check if audio already exists on backend
