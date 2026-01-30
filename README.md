@@ -211,14 +211,62 @@ The client uses Vite for fast HMR (Hot Module Replacement).
 
 ## Building for Production
 
+This project uses [Turborepo](https://turbo.build/) for efficient builds and caching.
+
 ```bash
-# Build both packages
+# Build both packages using Turborepo
 npm run build
 
 # Or build individually
 cd packages/backend && npm run build
 cd packages/client && npm run build
 ```
+
+## Deploying to Vercel
+
+This project is optimized for deployment on [Vercel](https://vercel.com) using Turborepo.
+
+### Prerequisites
+
+1. A [Vercel account](https://vercel.com/signup)
+2. The [Vercel CLI](https://vercel.com/docs/cli) installed (optional, for local testing)
+
+### Deployment Steps
+
+1. **Connect your repository to Vercel**
+   - Go to [Vercel](https://vercel.com)
+   - Click "Add New Project"
+   - Import your GitHub repository
+   
+2. **Configure Environment Variables**
+   
+   In your Vercel project settings, add the following environment variables:
+   
+   **Required for Gemini TTS:**
+   - `GEMINI_API_KEY` - Your Google Gemini API key
+   
+   **Optional for Puter.js TTS:**
+   - `PUTER_API_TOKEN` - Your Puter API token
+   - `VITE_PUTER_API_TOKEN` - Your Puter API token for client-side authentication
+   
+   **Other settings:**
+   - `VITE_DEFAULT_TTS_PROVIDER` - Set to `gemini` or `puter` (default: `gemini`)
+   - `VITE_BACKEND_URL` - Your backend API URL (if deploying backend separately)
+
+3. **Deploy**
+   
+   The project will automatically build and deploy using the `vercel.json` configuration.
+   - Build Command: `turbo run build`
+   - Install Command: `npm install`
+   - Output Directory: `packages/client/.svelte-kit/output`
+
+### Note on Backend Deployment
+
+The current Vercel configuration is set up to deploy the SvelteKit frontend. If you need to deploy the backend API separately, consider:
+
+- Using Vercel Serverless Functions
+- Deploying the backend to a separate service (e.g., Railway, Render, or another Vercel project)
+- Updating the `VITE_BACKEND_URL` environment variable to point to your backend deployment
 
 ## Environment Variables
 
