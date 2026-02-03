@@ -277,7 +277,9 @@
 		}
 	}
 	
-	// Handle word click in story text
+	// TEMPORARILY DISABLED: Handle word click in story text
+	// This feature is disabled temporarily as it will be replaced by a Chrome extension
+	/*
 	async function handleWordClick(word) {
 		// Clean the word - remove surrounding punctuation but keep hyphens and apostrophes
 		const cleanWord = word.replace(/^[.,!?;:'"()]+|[.,!?;:'"()]+$/g, '').toLowerCase().trim();
@@ -311,8 +313,11 @@
 			isLoadingDictionary = false;
 		}
 	}
+	*/
 	
-	// Close dictionary popup
+	// TEMPORARILY DISABLED: Close dictionary popup
+	// This feature is disabled temporarily as it will be replaced by a Chrome extension
+	/*
 	function closeDictionary() {
 		showDictionary = false;
 		selectedWord = '';
@@ -342,6 +347,7 @@
 			return { type: 'space', content: part, key: i };
 		});
 	}
+	*/
 	
 	// Format time for display
 	function formatTime(seconds) {
@@ -463,20 +469,7 @@
 			<div class="story-section">
 				<h3>Story</h3>
 				<p class="story-text">
-					{#each makeWordsClickable(lesson.content) as part (part.key)}
-						{#if part.type === 'word'}
-							<span 
-								class="clickable-word" 
-								role="button"
-								tabindex="0"
-								aria-label="Look up word {part.content}"
-								onclick={() => handleWordClick(part.content)}
-								onkeydown={(e) => (e.key === 'Enter' || e.key === ' ') && handleWordClick(part.content)}
-							>{part.content}</span>
-						{:else}
-							{part.content}
-						{/if}
-					{/each}
+					{lesson.content}
 				</p>
 			</div>
 
@@ -488,12 +481,11 @@
 		</div>
 	{/if}
 	
-	<!-- Dictionary Popup -->
+	<!-- TEMPORARILY DISABLED: Dictionary Popup -->
+	<!-- This feature is disabled temporarily as it will be replaced by a Chrome extension -->
+	<!--
 	{#if showDictionary}
-		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div class="dictionary-overlay" onclick={closeDictionary} onkeydown={(e) => e.key === 'Escape' && closeDictionary()} role="dialog" aria-modal="true" tabindex="-1">
-			<!-- svelte-ignore a11y_click_events_have_key_events -->
-			<!-- svelte-ignore a11y_no_static_element_interactions -->
 			<div class="dictionary-popup" onclick={(e) => e.stopPropagation()}>
 				<button class="close-btn" onclick={closeDictionary} aria-label="Close dictionary popup">×</button>
 				
@@ -535,6 +527,7 @@
 			</div>
 		</div>
 	{/if}
+	-->
 </div>
 
 <style>
@@ -866,6 +859,9 @@
 		font-style: italic;
 	}
 
+	/* TEMPORARILY DISABLED: Clickable word styles */
+	/* This feature is disabled temporarily as it will be replaced by a Chrome extension */
+	/*
 	.clickable-word {
 		cursor: pointer;
 		color: #667eea;
@@ -880,8 +876,11 @@
 		background: rgba(102, 126, 234, 0.1);
 		border-radius: 2px;
 	}
+	*/
 
-	/* Dictionary Popup Styles */
+	/* TEMPORARILY DISABLED: Dictionary Popup Styles */
+	/* This feature is disabled temporarily as it will be replaced by a Chrome extension */
+	/*
 	.dictionary-overlay {
 		position: fixed;
 		top: 0;
@@ -1036,6 +1035,7 @@
 		transform: scale(1.1);
 		box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
 	}
+	*/
 
 	@media (max-width: 768px) {
 		.lesson-header {
