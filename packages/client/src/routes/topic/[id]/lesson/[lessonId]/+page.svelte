@@ -23,6 +23,9 @@
 	let playbackSpeed = $state(1.0);
 	let speedOptions = [0.5, 0.75, 1.0, 1.25, 1.5, 2.0];
 	
+	// Volume state
+	let volume = $state(1.0);
+	
 	// Voice selection state
 	let selectedVoice = $state('male');
 	let voiceOptions = [
@@ -128,6 +131,15 @@
 		playbackSpeed = newSpeed;
 		if (audio) {
 			audio.playbackRate = newSpeed;
+		}
+	}
+	
+	// Handle volume change
+	function handleVolumeChange(event) {
+		const newVolume = parseFloat(event.target.value);
+		volume = newVolume;
+		if (audio) {
+			audio.volume = newVolume;
 		}
 	}
 	
@@ -356,6 +368,13 @@
 		const secs = Math.floor(seconds % 60);
 		return `${mins}:${secs.toString().padStart(2, '0')}`;
 	}
+	
+	// Keep audio volume in sync with volume state
+	$effect(() => {
+		if (audio) {
+			audio.volume = volume;
+		}
+	});
 </script>
 
 <div class="container">
@@ -452,6 +471,27 @@
 				<div class="progress-fill" style="width: {(currentTime / duration) * 100}%"></div>
 			</button>
 			<div class="time-display">{formatTime(duration)}</div>
+			<div class="volume-control">
+				<svg class="volume-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+					{#if volume === 0}
+						<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+					{:else if volume < 0.5}
+						<path d="M18.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM5 9v6h4l5 5V4L9 9H5z"/>
+					{:else}
+						<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+					{/if}
+				</svg>
+				<input
+					type="range"
+					class="volume-slider"
+					min="0"
+					max="1"
+					step="0.01"
+					value={volume}
+					oninput={handleVolumeChange}
+					aria-label="Volume"
+				/>
+			</div>
 		</div>
 	{/if}
 
@@ -787,6 +827,77 @@
 		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 		border-radius: 4px;
 		transition: width 0.1s linear;
+	}
+
+	.volume-control {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		flex-shrink: 0;
+	}
+
+	.volume-icon {
+		color: #667eea;
+		flex-shrink: 0;
+	}
+
+	.volume-slider {
+		width: 90px;
+		height: 4px;
+		-webkit-appearance: none;
+		appearance: none;
+		background: #e0e0e0;
+		border-radius: 2px;
+		cursor: pointer;
+		outline: none;
+	}
+
+	.volume-slider::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 14px;
+		height: 14px;
+		border-radius: 50%;
+		background: #667eea;
+		cursor: pointer;
+		transition: transform 0.15s;
+	}
+
+	.volume-slider::-moz-range-thumb {
+		width: 14px;
+		height: 14px;
+		border: none;
+		border-radius: 50%;
+		background: #667eea;
+		cursor: pointer;
+		transition: transform 0.15s;
+	}
+
+	.volume-slider:hover::-webkit-slider-thumb,
+	.volume-slider:focus::-webkit-slider-thumb {
+		transform: scale(1.3);
+	}
+
+	.volume-slider:hover::-moz-range-thumb,
+	.volume-slider:focus::-moz-range-thumb {
+		transform: scale(1.3);
+	}
+
+	.volume-slider::-webkit-slider-runnable-track {
+		height: 4px;
+		border-radius: 2px;
+	}
+
+	.volume-slider::-moz-range-track {
+		height: 4px;
+		border-radius: 2px;
+		background: #e0e0e0;
+	}
+
+	.volume-slider::-moz-range-progress {
+		height: 4px;
+		border-radius: 2px;
+		background: #667eea;
 	}
 
 	.lesson-controls {
