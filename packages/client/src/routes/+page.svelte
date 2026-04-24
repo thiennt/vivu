@@ -8,6 +8,22 @@
 		<p>Choose a topic below to start learning. Each topic contains multiple lessons to help you master English step by step.</p>
 	</div>
 
+	<div class="tools-section">
+		<h3 class="section-title">Tools</h3>
+		<div class="topics-grid tools-grid">
+			<a href="/mmo" class="topic-card mmo-card">
+				<div class="topic-header">
+					<h3>🎬 MMO Hub</h3>
+				</div>
+				<p class="topic-description">Discover viral YouTube Shorts &amp; TikTok trends in the last 48 hours.</p>
+				<div class="topic-footer">
+					<span class="start-learning">Explore Trends →</span>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<h3 class="section-title">English Topics</h3>
 	<div class="topics-grid">
 		{#each data.topics as topic}
 			<a href="/topic/{topic.id}" class="topic-card">
@@ -47,6 +63,25 @@
 		opacity: 0.95;
 		max-width: 700px;
 		margin: 0 auto;
+	}
+
+	.section-title {
+		color: white;
+		font-size: 1.4rem;
+		margin: 0 0 1rem;
+	}
+
+	.tools-section {
+		margin-bottom: 2rem;
+	}
+
+	.tools-grid {
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		max-width: 380px;
+	}
+
+	.mmo-card {
+		border-left: 4px solid #667eea;
 	}
 
 	.topics-grid {
