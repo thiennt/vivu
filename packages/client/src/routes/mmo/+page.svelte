@@ -64,6 +64,13 @@
 		return days === 1 ? 'yesterday' : `${days} days ago`;
 	}
 
+	/** Track which thumbnail images failed to load */
+	let failedThumbnails = $state(/** @type {Set<string>} */ (new Set()));
+
+	function onThumbnailError(videoId) {
+		failedThumbnails = new Set([...failedThumbnails, videoId]);
+	}
+
 	// --- YouTube actions ---
 	async function fetchYouTube(categoryId) {
 		ytLoading = true;
@@ -100,6 +107,7 @@
 	);
 
 	// Placeholder cards when no real data is available for a category
+	// Use deterministic values based on index to avoid inconsistency on re-renders
 	let ttDisplayVideos = $derived(
 		filteredTt.length > 0
 			? filteredTt
@@ -107,9 +115,9 @@
 					id: `placeholder-${ttCategory}-${i}`,
 					title: `Trending ${ttCategory} video #${i + 1} — check it out! 🔥`,
 					author: `@trending_${ttCategory.toLowerCase()}`,
-					likes: Math.floor(Math.random() * 5_000_000) + 500_000,
-					comments: Math.floor(Math.random() * 50_000) + 5_000,
-					shares: Math.floor(Math.random() * 100_000) + 10_000,
+					likes: (i + 1) * 450_000 + 500_000,
+					comments: (i + 1) * 4_500 + 5_000,
+					shares: (i + 1) * 9_000 + 10_000,
 					cover: '',
 					category: ttCategory,
 					url: 'https://www.tiktok.com/trending'
@@ -186,14 +194,14 @@
 					{#each ytVideos as video (video.id)}
 						<div class="video-card yt-card">
 							<div class="thumbnail-wrap">
-								<img
-									src={video.thumbnail}
-									alt={video.title}
-									class="thumbnail"
-									onerror={(e) => {
-										e.currentTarget.style.display = 'none';
-									}}
-								/>
+								{#if !failedThumbnails.has(video.id)}
+									<img
+										src={video.thumbnail}
+										alt={video.title}
+										class="thumbnail"
+										onerror={() => onThumbnailError(video.id)}
+									/>
+								{/if}
 								<span class="badge yt-badge">Shorts</span>
 							</div>
 							<div class="card-body">

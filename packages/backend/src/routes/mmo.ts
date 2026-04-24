@@ -77,6 +77,8 @@ const mockTikTokVideos = [
   { id: 'tt044', title: 'Why you forget 90% of what you learn (and how to fix it)', author: '@studyhacks', likes: 8400000, comments: 79000, shares: 200000, cover: '', category: 'Education', url: 'https://www.tiktok.com/trending' },
 ];
 
+const HOURS_48_IN_MS = 48 * 60 * 60 * 1000;
+
 // GET /api/mmo/youtube-shorts
 router.get('/youtube-shorts', async (c) => {
   const apiKey = process.env.YOUTUBE_API_KEY;
@@ -91,9 +93,9 @@ router.get('/youtube-shorts', async (c) => {
   }
 
   try {
-    const publishedAfter = new Date(Date.now() - 48 * 60 * 60 * 1000).toISOString();
+    const publishedAfter = new Date(Date.now() - HOURS_48_IN_MS).toISOString();
     const params = new URLSearchParams({
-      part: 'snippet,statistics,contentDetails',
+      part: 'snippet,statistics',
       chart: 'mostPopular',
       videoDuration: 'short',
       maxResults: '20',
