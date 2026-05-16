@@ -34,12 +34,13 @@
 	let answers = $derived.by(() => extractTagValues(lesson.content, 'a'));
 	let lessonStoryContent = $derived.by(() => removeQaTags(lesson.content));
 	let qaPairs = $derived.by(() => {
-		const maxLength = Math.max(questions.length, answers.length);
-		return Array.from({ length: maxLength }, (_, index) => ({
-			question: questions[index] || null,
-			answer: answers[index] || null
+		const pairCount = Math.min(questions.length, answers.length);
+		return Array.from({ length: pairCount }, (_, index) => ({
+			question: questions[index],
+			answer: answers[index]
 		}));
 	});
+	let hasQaMismatch = $derived.by(() => questions.length !== answers.length);
 	
 	// State variables
 	let showLesson = $state(false);
@@ -553,15 +554,16 @@
 					<div class="qa-list">
 						{#each qaPairs as qa, index}
 							<div class="qa-item">
-								{#if qa.question}
-									<p class="qa-question"><strong>Q{index + 1}:</strong> {qa.question}</p>
-								{/if}
-								{#if qa.answer}
-									<p class="qa-answer"><strong>A{index + 1}:</strong> {qa.answer}</p>
-								{/if}
+								<p class="qa-question"><strong>Q{index + 1}:</strong> {qa.question}</p>
+								<p class="qa-answer"><strong>A{index + 1}:</strong> {qa.answer}</p>
 							</div>
 						{/each}
 					</div>
+					{#if hasQaMismatch}
+						<p class="qa-warning">
+							Some q/a tags are unmatched in this lesson, so only complete question-answer pairs are shown.
+						</p>
+					{/if}
 				</div>
 			{/if}
 
@@ -1036,6 +1038,12 @@
 
 	.qa-question + .qa-answer {
 		margin-top: 0.5rem;
+	}
+
+	.qa-warning {
+		margin: 1rem 0 0;
+		color: #b26a00;
+		font-size: 0.95rem;
 	}
 
 	.qa-question strong {
