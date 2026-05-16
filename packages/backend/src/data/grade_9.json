@@ -11,19 +11,49 @@
           "id": 1,
           "title": "My Local Park",
           "content": "There is a nice park near my house. People go there to exercise in the morning. There are trees and a small lake with fish. Kids play on the swings after school. Sometimes we see trash on the ground. My friends and I pick it up. The park is clean when everyone helps. I like going there to relax.",
-          "translation": "Có một công viên đẹp gần nhà tôi. Mọi người đến đó tập thể dục sáng. Có cây và hồ nhỏ có cá. Trẻ em chơi xích đu sau giờ học. Đôi khi thấy rác trên mặt đất. Bạn tôi và tôi nhặt lên. Công viên sạch khi mọi người giúp. Tôi thích đến đó thư giãn."
+          "translation": "Có một công viên đẹp gần nhà tôi. Mọi người đến đó tập thể dục sáng. Có cây và hồ nhỏ có cá. Trẻ em chơi xích đu sau giờ học. Đôi khi thấy rác trên mặt đất. Bạn tôi và tôi nhặt lên. Công viên sạch khi mọi người giúp. Tôi thích đến đó thư giãn.",
+          "questions": [
+            {
+              "q": "Where is the park near the speaker's house?",
+              "a": "There is a nice park near the speaker's house."
+            },
+            {
+              "q": "What do the speaker and friends do when they see trash?",
+              "a": "They pick up the trash to keep the park clean."
+            }
+          ]
         },
         {
           "id": 2,
           "title": "Cleaning Our Street",
           "content": "Last month my class cleaned our street. We wore gloves and picked up plastic bags and bottles. Some neighbours joined us. After that the street looked much better. We talked about why we should not throw trash. Everyone promised to keep it clean. It felt good to help our area.",
-          "translation": "Tháng trước lớp tôi dọn đường phố. Chúng tôi đeo găng và nhặt túi nhựa, chai lọ. Một số hàng xóm tham gia. Sau đó đường phố đẹp hơn nhiều. Chúng tôi nói về việc không vứt rác. Mọi người hứa giữ sạch. Cảm giác tốt khi giúp khu vực mình."
+          "translation": "Tháng trước lớp tôi dọn đường phố. Chúng tôi đeo găng và nhặt túi nhựa, chai lọ. Một số hàng xóm tham gia. Sau đó đường phố đẹp hơn nhiều. Chúng tôi nói về việc không vứt rác. Mọi người hứa giữ sạch. Cảm giác tốt khi giúp khu vực mình.",
+          "questions": [
+            {
+              "q": "What did the class do last month?",
+              "a": "The class cleaned their street last month."
+            },
+            {
+              "q": "What did they wear while cleaning?",
+              "a": "They wore gloves while picking up rubbish."
+            }
+          ]
         },
         {
           "id": 3,
           "title": "Protecting Our Environment",
           "content": "We can protect our environment in small ways. I use a cloth bag for shopping. At home we turn off lights when not needed. My family plants flowers in pots. I tell friends not to litter. If we all do a little, our local area stays nice and green.",
-          "translation": "Chúng ta bảo vệ môi trường bằng cách nhỏ. Tôi dùng túi vải đi mua sắm. Ở nhà tắt đèn khi không cần. Gia đình tôi trồng hoa trong chậu. Tôi bảo bạn không vứt rác. Nếu ai cũng làm chút ít, khu vực địa phương sẽ đẹp và xanh."
+          "translation": "Chúng ta bảo vệ môi trường bằng cách nhỏ. Tôi dùng túi vải đi mua sắm. Ở nhà tắt đèn khi không cần. Gia đình tôi trồng hoa trong chậu. Tôi bảo bạn không vứt rác. Nếu ai cũng làm chút ít, khu vực địa phương sẽ đẹp và xanh.",
+          "questions": [
+            {
+              "q": "What bag does the speaker use for shopping?",
+              "a": "The speaker uses a cloth bag for shopping."
+            },
+            {
+              "q": "What does the speaker's family do at home to help the environment?",
+              "a": "They turn off lights when not needed and plant flowers in pots."
+            }
+          ]
         }
       ]
     },
@@ -36,19 +66,49 @@
           "id": 1,
           "title": "Living in the City",
           "content": "I live in a big city with tall buildings and busy streets. There are many shops and restaurants. I can go to the cinema or mall easily. Buses and motorbikes are everywhere. City life is exciting with lots of things to do. But sometimes it's noisy and crowded.",
-          "translation": "Tôi sống ở thành phố lớn với tòa nhà cao và phố đông. Có nhiều cửa hàng và nhà hàng. Tôi dễ đi rạp phim hoặc trung tâm. Xe buýt và xe máy khắp nơi. Cuộc sống thành phố thú vị với nhiều việc làm. Nhưng đôi khi ồn ào và đông đúc."
+          "translation": "Tôi sống ở thành phố lớn với tòa nhà cao và phố đông. Có nhiều cửa hàng và nhà hàng. Tôi dễ đi rạp phim hoặc trung tâm. Xe buýt và xe máy khắp nơi. Cuộc sống thành phố thú vị với nhiều việc làm. Nhưng đôi khi ồn ào và đông đúc.",
+          "questions": [
+            {
+              "q": "What is city life like according to the speaker?",
+              "a": "City life is exciting with tall buildings, many shops, and lots to do."
+            },
+            {
+              "q": "What downside of city life does the speaker mention?",
+              "a": "City life is sometimes noisy and crowded."
+            }
+          ]
         },
         {
           "id": 2,
           "title": "A Busy Day in the City",
           "content": "Yesterday I went shopping in the city center. The streets were full of people and cars. I bought new shoes and ate street food. Later I met my friend at a cafe. We talked for hours. City days are fast but fun. I like the energy here.",
-          "translation": "Hôm qua tôi đi mua sắm ở trung tâm thành phố. Phố đầy người và xe. Tôi mua giày mới và ăn đồ đường phố. Sau đó gặp bạn ở quán cà phê. Chúng tôi nói chuyện hàng giờ. Ngày ở thành phố nhanh nhưng vui. Tôi thích năng lượng ở đây."
+          "translation": "Hôm qua tôi đi mua sắm ở trung tâm thành phố. Phố đầy người và xe. Tôi mua giày mới và ăn đồ đường phố. Sau đó gặp bạn ở quán cà phê. Chúng tôi nói chuyện hàng giờ. Ngày ở thành phố nhanh nhưng vui. Tôi thích năng lượng ở đây.",
+          "questions": [
+            {
+              "q": "What did the speaker do yesterday in the city?",
+              "a": "The speaker went shopping and ate street food."
+            },
+            {
+              "q": "Who did the speaker meet later?",
+              "a": "The speaker met a friend at a cafe."
+            }
+          ]
         },
         {
           "id": 3,
           "title": "City vs Countryside",
           "content": "City life has more opportunities and fun places. But countryside is quieter with fresh air and nature. In the city I have friends and activities. In the countryside I can relax more. Both have good things. Maybe one day I will try living in both.",
-          "translation": "Cuộc sống thành phố có nhiều cơ hội và chỗ vui. Nhưng nông thôn yên tĩnh hơn với không khí trong lành và thiên nhiên. Ở thành phố tôi có bạn và hoạt động. Ở nông thôn tôi thư giãn hơn. Cả hai đều có điều tốt. Có lẽ một ngày tôi thử sống cả hai nơi."
+          "translation": "Cuộc sống thành phố có nhiều cơ hội và chỗ vui. Nhưng nông thôn yên tĩnh hơn với không khí trong lành và thiên nhiên. Ở thành phố tôi có bạn và hoạt động. Ở nông thôn tôi thư giãn hơn. Cả hai đều có điều tốt. Có lẽ một ngày tôi thử sống cả hai nơi.",
+          "questions": [
+            {
+              "q": "What is one advantage of the countryside over the city?",
+              "a": "The countryside has fresh air and nature."
+            },
+            {
+              "q": "What is one advantage of city life?",
+              "a": "City life offers more opportunities and fun places."
+            }
+          ]
         }
       ]
     },
@@ -61,19 +121,49 @@
           "id": 1,
           "title": "Feeling Stressed About Exams",
           "content": "Sometimes I feel stressed about exams. There is too much homework and tests. I talk to my mom when I feel worried. She says to study step by step. I take breaks and listen to music. Talking helps me feel better. Exams are hard but I can do it.",
-          "translation": "Đôi khi tôi stress vì thi cử. Bài tập và kiểm tra nhiều quá. Tôi nói với mẹ khi lo. Bà bảo học từng bước. Tôi nghỉ giữa giờ và nghe nhạc. Nói chuyện giúp tôi thấy tốt hơn. Thi khó nhưng tôi làm được."
+          "translation": "Đôi khi tôi stress vì thi cử. Bài tập và kiểm tra nhiều quá. Tôi nói với mẹ khi lo. Bà bảo học từng bước. Tôi nghỉ giữa giờ và nghe nhạc. Nói chuyện giúp tôi thấy tốt hơn. Thi khó nhưng tôi làm được.",
+          "questions": [
+            {
+              "q": "What makes the speaker feel stressed?",
+              "a": "Too much homework and tests make the speaker feel stressed."
+            },
+            {
+              "q": "What does the speaker do to feel better?",
+              "a": "The speaker talks to their mom, takes breaks, and listens to music."
+            }
+          ]
         },
         {
           "id": 2,
           "title": "Arguing with Parents",
           "content": "I argued with my dad about phone time yesterday. He said I use it too much. I felt angry at first. Later we talked calmly. He explained why it's not good for eyes. I understood and promised to use less. Talking solves problems better than arguing.",
-          "translation": "Hôm qua tôi cãi bố về thời gian dùng điện thoại. Ông nói tôi dùng nhiều quá. Ban đầu tôi giận. Sau đó chúng tôi nói bình tĩnh. Ông giải thích hại mắt. Tôi hiểu và hứa dùng ít hơn. Nói chuyện giải quyết tốt hơn cãi nhau."
+          "translation": "Hôm qua tôi cãi bố về thời gian dùng điện thoại. Ông nói tôi dùng nhiều quá. Ban đầu tôi giận. Sau đó chúng tôi nói bình tĩnh. Ông giải thích hại mắt. Tôi hiểu và hứa dùng ít hơn. Nói chuyện giải quyết tốt hơn cãi nhau.",
+          "questions": [
+            {
+              "q": "What did the speaker and dad argue about?",
+              "a": "They argued about phone usage time."
+            },
+            {
+              "q": "How did the argument get resolved?",
+              "a": "They talked calmly and the speaker promised to use the phone less."
+            }
+          ]
         },
         {
           "id": 3,
           "title": "Making New Friends",
           "content": "When I changed class I felt shy to make new friends. I smiled and said hi to a girl next to me. We started talking about lessons. Now we eat lunch together. Making friends takes time but it's worth it. Friends make school life better.",
-          "translation": "Khi đổi lớp tôi ngại làm bạn mới. Tôi mỉm cười và chào bạn gái ngồi cạnh. Chúng tôi bắt đầu nói về bài học. Giờ chúng tôi ăn trưa cùng. Làm bạn cần thời gian nhưng đáng giá. Bạn bè làm cuộc sống trường học tốt hơn."
+          "translation": "Khi đổi lớp tôi ngại làm bạn mới. Tôi mỉm cười và chào bạn gái ngồi cạnh. Chúng tôi bắt đầu nói về bài học. Giờ chúng tôi ăn trưa cùng. Làm bạn cần thời gian nhưng đáng giá. Bạn bè làm cuộc sống trường học tốt hơn.",
+          "questions": [
+            {
+              "q": "How did the speaker make a new friend after changing class?",
+              "a": "The speaker smiled and said hi to the girl sitting next to them."
+            },
+            {
+              "q": "What do the new friends do together now?",
+              "a": "They eat lunch together every day."
+            }
+          ]
         }
       ]
     },
@@ -86,19 +176,49 @@
           "id": 1,
           "title": "Ha Long Bay Beauty",
           "content": "Ha Long Bay is one of the wonders of Vietnam. There are thousands of islands in the water. We took a boat and saw caves. The water is green and clear. I took photos of the sunset. It was peaceful and beautiful. I want to go back with friends.",
-          "translation": "Vịnh Hạ Long là một kỳ quan của Việt Nam. Có hàng ngàn đảo trên mặt nước. Chúng tôi đi thuyền và thấy hang động. Nước xanh và trong. Tôi chụp ảnh hoàng hôn. Yên bình và đẹp. Tôi muốn quay lại với bạn bè."
+          "translation": "Vịnh Hạ Long là một kỳ quan của Việt Nam. Có hàng ngàn đảo trên mặt nước. Chúng tôi đi thuyền và thấy hang động. Nước xanh và trong. Tôi chụp ảnh hoàng hôn. Yên bình và đẹp. Tôi muốn quay lại với bạn bè.",
+          "questions": [
+            {
+              "q": "What does the speaker say about Ha Long Bay?",
+              "a": "Ha Long Bay is one of the wonders of Vietnam with thousands of islands."
+            },
+            {
+              "q": "What did the speaker see while on the boat?",
+              "a": "The speaker saw caves and a beautiful green-and-clear sea."
+            }
+          ]
         },
         {
           "id": 2,
           "title": "Phong Nha Caves",
           "content": "Phong Nha Caves are very big and amazing. We went inside by boat. There were strange rocks and a river. Lights made it look magical. My dad said it's one of the oldest caves. I felt excited walking there. It's a special place in Vietnam.",
-          "translation": "Hang Phong Nha rất lớn và tuyệt vời. Chúng tôi đi thuyền vào trong. Có đá lạ và sông. Đèn làm nó trông kỳ diệu. Bố tôi nói đây là một trong những hang cổ nhất. Tôi hào hứng khi đi bộ ở đó. Đó là nơi đặc biệt ở Việt Nam."
+          "translation": "Hang Phong Nha rất lớn và tuyệt vời. Chúng tôi đi thuyền vào trong. Có đá lạ và sông. Đèn làm nó trông kỳ diệu. Bố tôi nói đây là một trong những hang cổ nhất. Tôi hào hứng khi đi bộ ở đó. Đó là nơi đặc biệt ở Việt Nam.",
+          "questions": [
+            {
+              "q": "How did the visitors enter Phong Nha Caves?",
+              "a": "They went inside by boat."
+            },
+            {
+              "q": "Why does the speaker say Phong Nha is special?",
+              "a": "It is one of the oldest caves and looks magical inside."
+            }
+          ]
         },
         {
           "id": 3,
           "title": "Why We Protect Wonders",
           "content": "We must protect wonders like Ha Long Bay. Tourists come and leave trash sometimes. We should not throw garbage. My school teaches us to keep places clean. If we take care, future people can enjoy them too. Wonders are part of our country.",
-          "translation": "Chúng ta phải bảo vệ kỳ quan như Vịnh Hạ Long. Du khách đến và vứt rác đôi khi. Không nên vứt rác bừa. Trường tôi dạy giữ nơi sạch. Nếu chăm sóc, người sau cũng thưởng thức được. Kỳ quan là phần của đất nước chúng ta."
+          "translation": "Chúng ta phải bảo vệ kỳ quan như Vịnh Hạ Long. Du khách đến và vứt rác đôi khi. Không nên vứt rác bừa. Trường tôi dạy giữ nơi sạch. Nếu chăm sóc, người sau cũng thưởng thức được. Kỳ quan là phần của đất nước chúng ta.",
+          "questions": [
+            {
+              "q": "Why must we protect places like Ha Long Bay?",
+              "a": "We must protect them so future generations can enjoy them too."
+            },
+            {
+              "q": "What does the speaker's school teach about natural places?",
+              "a": "The school teaches students to keep places clean."
+            }
+          ]
         }
       ]
     },
@@ -111,19 +231,49 @@
           "id": 1,
           "title": "Ao Dai on Special Days",
           "content": "Girls wear ao dai on special days like Tet or school events. It looks elegant and beautiful. My sister has a white ao dai for school. We wear it with pride. Ao dai shows Vietnamese culture. I like seeing people in ao dai on holidays.",
-          "translation": "Con gái mặc áo dài vào ngày đặc biệt như Tết hoặc sự kiện trường. Nó trông thanh lịch và đẹp. Em gái tôi có áo dài trắng cho trường. Chúng tôi mặc với niềm tự hào. Áo dài thể hiện văn hóa Việt. Tôi thích thấy mọi người mặc áo dài dịp lễ."
+          "translation": "Con gái mặc áo dài vào ngày đặc biệt như Tết hoặc sự kiện trường. Nó trông thanh lịch và đẹp. Em gái tôi có áo dài trắng cho trường. Chúng tôi mặc với niềm tự hào. Áo dài thể hiện văn hóa Việt. Tôi thích thấy mọi người mặc áo dài dịp lễ.",
+          "questions": [
+            {
+              "q": "When do girls wear ao dai?",
+              "a": "Girls wear ao dai on special days like Tet or school events."
+            },
+            {
+              "q": "What does ao dai represent?",
+              "a": "Ao dai shows Vietnamese culture and is a source of pride."
+            }
+          ]
         },
         {
           "id": 2,
           "title": "Respecting Elders",
           "content": "In Vietnam we respect elders a lot. We greet grandparents first and offer tea. Children listen to advice from parents. On Tet we wish them good health. Respect makes families strong. My mom teaches me to be polite to older people.",
-          "translation": "Ở Việt Nam chúng tôi tôn trọng người lớn tuổi nhiều. Chào ông bà trước và mời trà. Trẻ em nghe lời khuyên từ bố mẹ. Tết chúc họ khỏe mạnh. Tôn trọng làm gia đình vững mạnh. Mẹ tôi dạy tôi lịch sự với người lớn."
+          "translation": "Ở Việt Nam chúng tôi tôn trọng người lớn tuổi nhiều. Chào ông bà trước và mời trà. Trẻ em nghe lời khuyên từ bố mẹ. Tết chúc họ khỏe mạnh. Tôn trọng làm gia đình vững mạnh. Mẹ tôi dạy tôi lịch sự với người lớn.",
+          "questions": [
+            {
+              "q": "How do Vietnamese children show respect to elders?",
+              "a": "They greet grandparents first, offer tea, and listen to their advice."
+            },
+            {
+              "q": "What do people do on Tet to show respect?",
+              "a": "They wish elders good health on Tet."
+            }
+          ]
         },
         {
           "id": 3,
           "title": "Family Traditions",
           "content": "Our family has small traditions like eating together every evening. We talk about our day. On weekends we visit grandparents. Mom cooks special food for holidays. These traditions make us close. I like keeping them in our family.",
-          "translation": "Gia đình tôi có truyền thống nhỏ như ăn tối cùng nhau mỗi ngày. Chúng tôi nói về ngày hôm nay. Cuối tuần thăm ông bà. Mẹ nấu món đặc biệt dịp lễ. Những truyền thống làm chúng tôi gần gũi. Tôi thích giữ chúng trong gia đình."
+          "translation": "Gia đình tôi có truyền thống nhỏ như ăn tối cùng nhau mỗi ngày. Chúng tôi nói về ngày hôm nay. Cuối tuần thăm ông bà. Mẹ nấu món đặc biệt dịp lễ. Những truyền thống làm chúng tôi gần gũi. Tôi thích giữ chúng trong gia đình.",
+          "questions": [
+            {
+              "q": "What family tradition does the speaker describe?",
+              "a": "The family eats together every evening and visits grandparents on weekends."
+            },
+            {
+              "q": "Why does the speaker like keeping family traditions?",
+              "a": "Traditions make the family close and connected."
+            }
+          ]
         }
       ]
     },
@@ -136,19 +286,49 @@
           "id": 1,
           "title": "Hotter Summers",
           "content": "Summers are getting hotter every year. The sun is stronger and it's hard to go outside. I use fan more and drink lots of water. My mom says it's because of global warming. Factories and cars make the air hot. We need to help stop it.",
-          "translation": "Mùa hè nóng hơn mỗi năm. Nắng mạnh và khó ra ngoài. Tôi dùng quạt nhiều và uống nhiều nước. Mẹ nói do nóng lên toàn cầu. Nhà máy và xe làm không khí nóng. Chúng ta cần giúp dừng lại."
+          "translation": "Mùa hè nóng hơn mỗi năm. Nắng mạnh và khó ra ngoài. Tôi dùng quạt nhiều và uống nhiều nước. Mẹ nói do nóng lên toàn cầu. Nhà máy và xe làm không khí nóng. Chúng ta cần giúp dừng lại.",
+          "questions": [
+            {
+              "q": "What change in weather does the speaker notice?",
+              "a": "Summers are getting hotter every year."
+            },
+            {
+              "q": "What does the speaker's mom say is causing the hot weather?",
+              "a": "Mom says global warming caused by factories and cars is making it hotter."
+            }
+          ]
         },
         {
           "id": 2,
           "title": "Talking About Trees",
           "content": "Trees help fight global warming. They take in bad air and give oxygen. My school planted trees last month. We watered them every week. More trees mean cooler weather. I tell friends to plant at home too. Small actions help the planet.",
-          "translation": "Cây giúp chống nóng lên toàn cầu. Chúng hấp thụ khí xấu và cho oxy. Trường tôi trồng cây tháng trước. Chúng tôi tưới mỗi tuần. Cây nhiều hơn nghĩa là thời tiết mát hơn. Tôi bảo bạn trồng ở nhà nữa. Hành động nhỏ giúp hành tinh."
+          "translation": "Cây giúp chống nóng lên toàn cầu. Chúng hấp thụ khí xấu và cho oxy. Trường tôi trồng cây tháng trước. Chúng tôi tưới mỗi tuần. Cây nhiều hơn nghĩa là thời tiết mát hơn. Tôi bảo bạn trồng ở nhà nữa. Hành động nhỏ giúp hành tinh.",
+          "questions": [
+            {
+              "q": "How do trees help fight global warming?",
+              "a": "Trees take in bad air and give oxygen, cooling the environment."
+            },
+            {
+              "q": "What did the speaker's school do last month?",
+              "a": "The school planted trees and students watered them every week."
+            }
+          ]
         },
         {
           "id": 3,
           "title": "What We Can Do",
           "content": "To stop global warming we use less electricity. Turn off lights and fans when not needed. Walk or ride bike instead of car. Eat less meat sometimes. My family recycles paper and plastic. If everyone does a little, Earth will be better.",
-          "translation": "Để dừng nóng lên toàn cầu chúng tôi dùng ít điện hơn. Tắt đèn và quạt khi không cần. Đi bộ hoặc đạp xe thay xe hơi. Ăn ít thịt đôi khi. Gia đình tôi tái chế giấy và nhựa. Nếu mọi người làm chút ít, Trái Đất sẽ tốt hơn."
+          "translation": "Để dừng nóng lên toàn cầu chúng tôi dùng ít điện hơn. Tắt đèn và quạt khi không cần. Đi bộ hoặc đạp xe thay xe hơi. Ăn ít thịt đôi khi. Gia đình tôi tái chế giấy và nhựa. Nếu mọi người làm chút ít, Trái Đất sẽ tốt hơn.",
+          "questions": [
+            {
+              "q": "What does the speaker's family do to save electricity?",
+              "a": "They turn off lights and fans when not needed."
+            },
+            {
+              "q": "What transportation alternatives does the speaker mention?",
+              "a": "Walking or riding a bike instead of using a car."
+            }
+          ]
         }
       ]
     },
@@ -161,19 +341,49 @@
           "id": 1,
           "title": "My Dream Job",
           "content": "I want to be a teacher in the future. I like helping friends with homework. Teachers explain things clearly. I will teach English or Science. I think it's a good job because I can help kids learn. My mom says it's noble work.",
-          "translation": "Tôi muốn làm giáo viên tương lai. Tôi thích giúp bạn làm bài. Giáo viên giải thích rõ ràng. Tôi sẽ dạy Tiếng Anh hoặc Khoa học. Tôi nghĩ đó là công việc tốt vì giúp trẻ học. Mẹ tôi nói đó là công việc cao quý."
+          "translation": "Tôi muốn làm giáo viên tương lai. Tôi thích giúp bạn làm bài. Giáo viên giải thích rõ ràng. Tôi sẽ dạy Tiếng Anh hoặc Khoa học. Tôi nghĩ đó là công việc tốt vì giúp trẻ học. Mẹ tôi nói đó là công việc cao quý.",
+          "questions": [
+            {
+              "q": "What job does the speaker want to do in the future?",
+              "a": "The speaker wants to become a teacher."
+            },
+            {
+              "q": "What subject does the speaker plan to teach?",
+              "a": "The speaker plans to teach English or Science."
+            }
+          ]
         },
         {
           "id": 2,
           "title": "Talking About Jobs with Friends",
           "content": "My friends and I talked about future jobs yesterday. One wants to be a doctor to help sick people. Another likes computers and wants to code. I told them my dream to teach. We encouraged each other. It's fun to think about the future.",
-          "translation": "Hôm qua bạn tôi và tôi nói về công việc tương lai. Một bạn muốn làm bác sĩ để giúp người ốm. Bạn khác thích máy tính và muốn lập trình. Tôi kể ước mơ dạy học. Chúng tôi động viên nhau. Vui khi nghĩ về tương lai."
+          "translation": "Hôm qua bạn tôi và tôi nói về công việc tương lai. Một bạn muốn làm bác sĩ để giúp người ốm. Bạn khác thích máy tính và muốn lập trình. Tôi kể ước mơ dạy học. Chúng tôi động viên nhau. Vui khi nghĩ về tương lai.",
+          "questions": [
+            {
+              "q": "What job does one of the speaker's friends want?",
+              "a": "One friend wants to be a doctor to help sick people."
+            },
+            {
+              "q": "What does another friend want to do?",
+              "a": "Another friend likes computers and wants to be a programmer."
+            }
+          ]
         },
         {
           "id": 3,
           "title": "Skills for Future Jobs",
           "content": "To get good jobs we need skills like English and computers. I practice speaking every day. Reading books helps too. Hard work and learning new things are important. My teacher says attitude matters a lot. I want to be ready for the future.",
-          "translation": "Để có công việc tốt cần kỹ năng như tiếng Anh và máy tính. Tôi luyện nói mỗi ngày. Đọc sách cũng giúp. Làm việc chăm chỉ và học điều mới quan trọng. Cô giáo nói thái độ rất quan trọng. Tôi muốn sẵn sàng cho tương lai."
+          "translation": "Để có công việc tốt cần kỹ năng như tiếng Anh và máy tính. Tôi luyện nói mỗi ngày. Đọc sách cũng giúp. Làm việc chăm chỉ và học điều mới quan trọng. Cô giáo nói thái độ rất quan trọng. Tôi muốn sẵn sàng cho tương lai.",
+          "questions": [
+            {
+              "q": "What skills does the speaker practice every day?",
+              "a": "The speaker practices speaking English every day."
+            },
+            {
+              "q": "What does the speaker's teacher say about future jobs?",
+              "a": "The teacher says attitude matters a lot for getting a good job."
+            }
+          ]
         }
       ]
     },
@@ -186,19 +396,49 @@
           "id": 1,
           "title": "My Progress This Year",
           "content": "This year I got better at speaking English. I can talk about environment and future jobs. I speak more with friends now. Projects helped me practice a lot. My teacher says my pronunciation improved. I feel happy and want to keep learning.",
-          "translation": "Năm nay tôi nói tiếng Anh tốt hơn. Tôi nói được về môi trường và công việc tương lai. Tôi nói nhiều với bạn hơn. Dự án giúp tôi luyện nhiều. Cô giáo nói phát âm tôi cải thiện. Tôi vui và muốn tiếp tục học."
+          "translation": "Năm nay tôi nói tiếng Anh tốt hơn. Tôi nói được về môi trường và công việc tương lai. Tôi nói nhiều với bạn hơn. Dự án giúp tôi luyện nhiều. Cô giáo nói phát âm tôi cải thiện. Tôi vui và muốn tiếp tục học.",
+          "questions": [
+            {
+              "q": "What has the speaker improved at this year?",
+              "a": "The speaker has improved at speaking English this year."
+            },
+            {
+              "q": "What did the teacher say about the speaker's English?",
+              "a": "The teacher said the speaker's pronunciation has improved."
+            }
+          ]
         },
         {
           "id": 2,
           "title": "My Favorite Topic",
           "content": "My favorite topic this year is future jobs. We talked about dreams and skills. I shared my idea to be a teacher. Friends had interesting dreams too. It made me think about what I want. Talking about future is exciting.",
-          "translation": "Chủ đề yêu thích năm nay là công việc tương lai. Chúng tôi nói về ước mơ và kỹ năng. Tôi chia sẻ ý muốn làm giáo viên. Bạn có ước mơ thú vị nữa. Nó làm tôi nghĩ về điều mình muốn. Nói về tương lai hào hứng."
+          "translation": "Chủ đề yêu thích năm nay là công việc tương lai. Chúng tôi nói về ước mơ và kỹ năng. Tôi chia sẻ ý muốn làm giáo viên. Bạn có ước mơ thú vị nữa. Nó làm tôi nghĩ về điều mình muốn. Nói về tương lai hào hứng.",
+          "questions": [
+            {
+              "q": "What was the speaker's favorite topic this year?",
+              "a": "The speaker's favorite topic was future jobs."
+            },
+            {
+              "q": "What dream did the speaker share in class?",
+              "a": "The speaker shared their dream of becoming a teacher."
+            }
+          ]
         },
         {
           "id": 3,
           "title": "My Next Goal",
           "content": "Next year I want to speak English more fluently. I will talk to more people and watch videos. I want to read news in English too. My goal is to tell stories longer without stopping. I think practice will help me reach it.",
-          "translation": "Năm sau tôi muốn nói tiếng Anh lưu loát hơn. Tôi sẽ nói với nhiều người và xem video. Tôi muốn đọc tin tức tiếng Anh nữa. Mục tiêu là kể chuyện dài hơn không dừng. Tôi nghĩ luyện tập sẽ giúp tôi đạt được."
+          "translation": "Năm sau tôi muốn nói tiếng Anh lưu loát hơn. Tôi sẽ nói với nhiều người và xem video. Tôi muốn đọc tin tức tiếng Anh nữa. Mục tiêu là kể chuyện dài hơn không dừng. Tôi nghĩ luyện tập sẽ giúp tôi đạt được.",
+          "questions": [
+            {
+              "q": "What is the speaker's English goal for next year?",
+              "a": "The speaker wants to speak English more fluently."
+            },
+            {
+              "q": "How does the speaker plan to improve?",
+              "a": "The speaker will talk to more people and watch English videos."
+            }
+          ]
         }
       ]
     }

@@ -11,19 +11,49 @@
           "id": 1,
           "title": "My Favorite Hobby",
           "content": "My favorite hobby is playing guitar. I practice every evening after homework. I learned some easy songs from YouTube. When I play, my family listens and sings along. It makes me relax after a busy day. Sometimes I play with my cousin. We have fun together. I want to learn more songs this year.",
-          "translation": "Sở thích yêu thích của tôi là chơi guitar. Tôi luyện mỗi tối sau khi làm bài. Tôi học vài bài hát dễ từ YouTube. Khi chơi, gia đình nghe và hát theo. Nó giúp tôi thư giãn sau ngày bận rộn. Đôi khi chơi cùng anh em họ. Chúng tôi vui lắm. Tôi muốn học thêm bài hát năm nay."
+          "translation": "Sở thích yêu thích của tôi là chơi guitar. Tôi luyện mỗi tối sau khi làm bài. Tôi học vài bài hát dễ từ YouTube. Khi chơi, gia đình nghe và hát theo. Nó giúp tôi thư giãn sau ngày bận rộn. Đôi khi chơi cùng anh em họ. Chúng tôi vui lắm. Tôi muốn học thêm bài hát năm nay.",
+          "questions": [
+            {
+              "q": "What is the speaker's favorite hobby?",
+              "a": "The speaker's favorite hobby is playing guitar."
+            },
+            {
+              "q": "When does the speaker practice guitar?",
+              "a": "The speaker practices every evening after homework."
+            }
+          ]
         },
         {
           "id": 2,
           "title": "Sharing Hobbies with Friends",
           "content": "Last weekend I showed my friends how to draw. We sat in the park and used colored pencils. They liked my pictures of animals. One friend taught me to play chess. We talked and laughed a lot. Sharing hobbies makes friends closer. I enjoy time with them like this.",
-          "translation": "Cuối tuần trước tôi chỉ bạn cách vẽ. Chúng tôi ngồi ở công viên dùng bút chì màu. Họ thích tranh động vật của tôi. Một bạn dạy tôi chơi cờ vua. Chúng tôi nói chuyện và cười nhiều. Chia sẻ sở thích làm bạn thân hơn. Tôi thích thời gian như vậy với họ."
+          "translation": "Cuối tuần trước tôi chỉ bạn cách vẽ. Chúng tôi ngồi ở công viên dùng bút chì màu. Họ thích tranh động vật của tôi. Một bạn dạy tôi chơi cờ vua. Chúng tôi nói chuyện và cười nhiều. Chia sẻ sở thích làm bạn thân hơn. Tôi thích thời gian như vậy với họ.",
+          "questions": [
+            {
+              "q": "What did the speaker show friends last weekend?",
+              "a": "The speaker showed friends how to draw."
+            },
+            {
+              "q": "What hobby did a friend teach the speaker?",
+              "a": "A friend taught the speaker to play chess."
+            }
+          ]
         },
         {
           "id": 3,
           "title": "Why Hobbies Are Important",
           "content": "Hobbies help me feel happy and less stressed. When I play guitar or draw, I forget about homework for a while. They make my days more interesting. I also learn new skills from them. My friends have hobbies too, so we share and try together. I think everyone should have at least one hobby.",
-          "translation": "Sở thích giúp tôi vui và bớt stress. Khi chơi guitar hay vẽ, tôi quên bài vở một lúc. Chúng làm ngày của tôi thú vị hơn. Tôi cũng học kỹ năng mới từ đó. Bạn tôi cũng có sở thích, nên chúng tôi chia sẻ và thử cùng. Tôi nghĩ mọi người nên có ít nhất một sở thích."
+          "translation": "Sở thích giúp tôi vui và bớt stress. Khi chơi guitar hay vẽ, tôi quên bài vở một lúc. Chúng làm ngày của tôi thú vị hơn. Tôi cũng học kỹ năng mới từ đó. Bạn tôi cũng có sở thích, nên chúng tôi chia sẻ và thử cùng. Tôi nghĩ mọi người nên có ít nhất một sở thích.",
+          "questions": [
+            {
+              "q": "How do hobbies help the speaker?",
+              "a": "Hobbies help the speaker feel happy and less stressed."
+            },
+            {
+              "q": "What do the speaker's friends have hobbies for?",
+              "a": "They share and try hobbies together to become closer friends."
+            }
+          ]
         }
       ]
     },
@@ -36,19 +66,49 @@
           "id": 1,
           "title": "My Daily Healthy Routine",
           "content": "I start my day with a glass of water. Then I do some stretching exercises. For breakfast I eat fruits and bread. At school I drink water instead of soda. After classes I walk or ride my bike home. In the evening I eat vegetables and rice. I sleep early to feel good the next day.",
-          "translation": "Tôi bắt đầu ngày bằng một ly nước. Sau đó tập duỗi người. Bữa sáng ăn trái cây và bánh mì. Ở trường tôi uống nước thay soda. Sau giờ học đi bộ hoặc đạp xe về. Buổi tối ăn rau và cơm. Tôi ngủ sớm để ngày mai khỏe mạnh."
+          "translation": "Tôi bắt đầu ngày bằng một ly nước. Sau đó tập duỗi người. Bữa sáng ăn trái cây và bánh mì. Ở trường tôi uống nước thay soda. Sau giờ học đi bộ hoặc đạp xe về. Buổi tối ăn rau và cơm. Tôi ngủ sớm để ngày mai khỏe mạnh.",
+          "questions": [
+            {
+              "q": "How does the speaker start each day?",
+              "a": "The speaker starts the day with a glass of water."
+            },
+            {
+              "q": "What does the speaker eat for breakfast?",
+              "a": "The speaker eats fruits and bread for breakfast."
+            }
+          ]
         },
         {
           "id": 2,
           "title": "Talking About Food with Friends",
           "content": "Yesterday my friend asked what I ate for lunch. I said I had rice with chicken and salad. She likes fast food but I told her it's not good every day. We talked about healthy snacks like apples and yogurt. She wants to try my way. It's nice to share healthy ideas.",
-          "translation": "Hôm qua bạn hỏi tôi ăn gì trưa. Tôi nói cơm với gà và salad. Cô ấy thích đồ ăn nhanh nhưng tôi bảo không tốt mỗi ngày. Chúng tôi nói về đồ ăn vặt lành mạnh như táo và sữa chua. Cô ấy muốn thử cách của tôi. Hay khi chia sẻ ý tưởng khỏe mạnh."
+          "translation": "Hôm qua bạn hỏi tôi ăn gì trưa. Tôi nói cơm với gà và salad. Cô ấy thích đồ ăn nhanh nhưng tôi bảo không tốt mỗi ngày. Chúng tôi nói về đồ ăn vặt lành mạnh như táo và sữa chua. Cô ấy muốn thử cách của tôi. Hay khi chia sẻ ý tưởng khỏe mạnh.",
+          "questions": [
+            {
+              "q": "What did the speaker eat for lunch?",
+              "a": "The speaker had rice with chicken and salad."
+            },
+            {
+              "q": "What healthy snacks did they discuss?",
+              "a": "They talked about apples and yogurt as healthy snacks."
+            }
+          ]
         },
         {
           "id": 3,
           "title": "Why I Exercise Every Day",
           "content": "I exercise because it makes me feel strong and happy. Running or jumping rope helps me stay fit. When I feel tired after school, exercise gives me energy. My mom says it's good for my health. I invite my sister to join me sometimes. We laugh and have fun together.",
-          "translation": "Tôi tập thể dục vì nó làm tôi khỏe và vui. Chạy hoặc nhảy dây giúp tôi giữ dáng. Khi mệt sau giờ học, tập luyện cho tôi năng lượng. Mẹ nói tốt cho sức khỏe. Tôi rủ em gái tham gia đôi khi. Chúng tôi cười và vui cùng nhau."
+          "translation": "Tôi tập thể dục vì nó làm tôi khỏe và vui. Chạy hoặc nhảy dây giúp tôi giữ dáng. Khi mệt sau giờ học, tập luyện cho tôi năng lượng. Mẹ nói tốt cho sức khỏe. Tôi rủ em gái tham gia đôi khi. Chúng tôi cười và vui cùng nhau.",
+          "questions": [
+            {
+              "q": "Why does the speaker exercise every day?",
+              "a": "Exercise makes the speaker feel strong and happy."
+            },
+            {
+              "q": "What exercises does the speaker do?",
+              "a": "The speaker runs or jumps rope to stay fit."
+            }
+          ]
         }
       ]
     },
@@ -61,19 +121,49 @@
           "id": 1,
           "title": "Cleaning the Park",
           "content": "Last Saturday my class cleaned the park near school. We picked up trash and swept the paths. Some people joined us to help. After that the park looked much cleaner. Kids could play safely again. I felt good because we helped the community. We want to do it more often.",
-          "translation": "Thứ Bảy trước lớp tôi dọn công viên gần trường. Chúng tôi nhặt rác và quét lối đi. Một số người tham gia giúp. Sau đó công viên sạch hơn nhiều. Trẻ em chơi an toàn lại. Tôi thấy tốt vì giúp cộng đồng. Chúng tôi muốn làm thường xuyên hơn."
+          "translation": "Thứ Bảy trước lớp tôi dọn công viên gần trường. Chúng tôi nhặt rác và quét lối đi. Một số người tham gia giúp. Sau đó công viên sạch hơn nhiều. Trẻ em chơi an toàn lại. Tôi thấy tốt vì giúp cộng đồng. Chúng tôi muốn làm thường xuyên hơn.",
+          "questions": [
+            {
+              "q": "When did the class clean the park?",
+              "a": "The class cleaned the park last Saturday."
+            },
+            {
+              "q": "How did cleaning the park make the speaker feel?",
+              "a": "The speaker felt good because they helped the community."
+            }
+          ]
         },
         {
           "id": 2,
           "title": "Helping at the Old People's Home",
           "content": "Our group visited the old people's home last month. We talked to the grandparents and listened to their stories. I sang a song for them. They smiled and clapped hands. We gave them fruits and books. It was nice to see them happy. Helping older people feels warm.",
-          "translation": "Nhóm chúng tôi thăm viện dưỡng lão tháng trước. Chúng tôi nói chuyện với ông bà và nghe chuyện xưa. Tôi hát một bài cho họ. Họ cười và vỗ tay. Chúng tôi tặng trái cây và sách. Thấy họ vui rất tốt. Giúp người lớn tuổi cảm thấy ấm áp."
+          "translation": "Nhóm chúng tôi thăm viện dưỡng lão tháng trước. Chúng tôi nói chuyện với ông bà và nghe chuyện xưa. Tôi hát một bài cho họ. Họ cười và vỗ tay. Chúng tôi tặng trái cây và sách. Thấy họ vui rất tốt. Giúp người lớn tuổi cảm thấy ấm áp.",
+          "questions": [
+            {
+              "q": "Where did the group visit last month?",
+              "a": "The group visited the old people's home."
+            },
+            {
+              "q": "What did the speaker do for the grandparents?",
+              "a": "The speaker sang a song for them."
+            }
+          ]
         },
         {
           "id": 3,
           "title": "Why We Do Community Service",
           "content": "We do community service because it helps people around us. When we clean streets or help others, the place becomes better. It also makes us feel useful and happy. My friends and I learn teamwork too. I think everyone should try it sometimes.",
-          "translation": "Chúng tôi làm tình nguyện vì giúp người xung quanh. Khi dọn phố hay giúp ai, nơi đó tốt hơn. Nó cũng làm chúng tôi thấy hữu ích và vui. Bạn tôi và tôi học làm việc nhóm nữa. Tôi nghĩ mọi người nên thử đôi khi."
+          "translation": "Chúng tôi làm tình nguyện vì giúp người xung quanh. Khi dọn phố hay giúp ai, nơi đó tốt hơn. Nó cũng làm chúng tôi thấy hữu ích và vui. Bạn tôi và tôi học làm việc nhóm nữa. Tôi nghĩ mọi người nên thử đôi khi.",
+          "questions": [
+            {
+              "q": "Why do they do community service?",
+              "a": "Community service helps people around them and makes the place better."
+            },
+            {
+              "q": "What do the speaker and friends learn from it?",
+              "a": "They learn teamwork from doing community service."
+            }
+          ]
         }
       ]
     },
@@ -86,19 +176,49 @@
           "id": 1,
           "title": "Listening to Music",
           "content": "I listen to music every day after school. My favorite songs are pop and some Vietnamese folk. Music makes me feel relaxed or happy. Sometimes I dance to the rhythm in my room. My sister sings along with me. We share our favorite songs. Music is part of my daily life.",
-          "translation": "Tôi nghe nhạc mỗi ngày sau giờ học. Bài hát yêu thích là pop và dân ca Việt. Nhạc làm tôi thư giãn hoặc vui. Đôi khi tôi nhảy theo nhịp trong phòng. Em gái hát theo tôi. Chúng tôi chia sẻ bài hát yêu thích. Nhạc là phần trong cuộc sống hàng ngày của tôi."
+          "translation": "Tôi nghe nhạc mỗi ngày sau giờ học. Bài hát yêu thích là pop và dân ca Việt. Nhạc làm tôi thư giãn hoặc vui. Đôi khi tôi nhảy theo nhịp trong phòng. Em gái hát theo tôi. Chúng tôi chia sẻ bài hát yêu thích. Nhạc là phần trong cuộc sống hàng ngày của tôi.",
+          "questions": [
+            {
+              "q": "What kind of music does the speaker like?",
+              "a": "The speaker likes pop music and some Vietnamese folk songs."
+            },
+            {
+              "q": "Who sings along with the speaker?",
+              "a": "The speaker's sister sings along with them."
+            }
+          ]
         },
         {
           "id": 2,
           "title": "Drawing with Friends",
           "content": "Last week I drew pictures with my friends. We used colored pencils and made animals. My friend drew a cute cat. I drew a dog running. We showed each other and laughed. Drawing is fun when we do it together. I want to draw more often.",
-          "translation": "Tuần trước tôi vẽ tranh với bạn. Chúng tôi dùng bút chì màu vẽ động vật. Bạn tôi vẽ con mèo dễ thương. Tôi vẽ con chó chạy. Chúng tôi khoe nhau và cười. Vẽ vui khi làm cùng. Tôi muốn vẽ thường hơn."
+          "translation": "Tuần trước tôi vẽ tranh với bạn. Chúng tôi dùng bút chì màu vẽ động vật. Bạn tôi vẽ con mèo dễ thương. Tôi vẽ con chó chạy. Chúng tôi khoe nhau và cười. Vẽ vui khi làm cùng. Tôi muốn vẽ thường hơn.",
+          "questions": [
+            {
+              "q": "What did the speaker and friends draw last week?",
+              "a": "They drew pictures of animals."
+            },
+            {
+              "q": "What did the friend draw?",
+              "a": "The friend drew a cute cat."
+            }
+          ]
         },
         {
           "id": 3,
           "title": "Why I Like Arts",
           "content": "I like arts because they help me express my feelings. When I draw or listen to music, I feel calm. Arts make boring days interesting. My family supports me too. They say my pictures are nice. I want to learn more about painting and music.",
-          "translation": "Tôi thích nghệ thuật vì nó giúp bày tỏ cảm xúc. Khi vẽ hoặc nghe nhạc, tôi thấy bình tĩnh. Nghệ thuật làm ngày buồn trở nên thú vị. Gia đình ủng hộ tôi. Họ nói tranh tôi đẹp. Tôi muốn học thêm về hội họa và âm nhạc."
+          "translation": "Tôi thích nghệ thuật vì nó giúp bày tỏ cảm xúc. Khi vẽ hoặc nghe nhạc, tôi thấy bình tĩnh. Nghệ thuật làm ngày buồn trở nên thú vị. Gia đình ủng hộ tôi. Họ nói tranh tôi đẹp. Tôi muốn học thêm về hội họa và âm nhạc.",
+          "questions": [
+            {
+              "q": "Why does the speaker like arts?",
+              "a": "Arts help the speaker express feelings and feel calm."
+            },
+            {
+              "q": "What does the speaker want to learn more about?",
+              "a": "The speaker wants to learn more about painting and music."
+            }
+          ]
         }
       ]
     },
@@ -111,19 +231,49 @@
           "id": 1,
           "title": "My Favorite Dish - Pho",
           "content": "Pho is my favorite Vietnamese food. I eat it for breakfast on weekends. The soup is hot and smells good with herbs. I add lime and chili to make it tasty. My mom makes pho at home sometimes. We eat together and talk. Pho makes me feel warm inside.",
-          "translation": "Phở là món Việt yêu thích của tôi. Tôi ăn sáng cuối tuần. Nước dùng nóng và thơm với rau thơm. Tôi thêm chanh và ớt cho ngon. Mẹ tôi nấu phở ở nhà đôi khi. Chúng tôi ăn cùng và nói chuyện. Phở làm tôi thấy ấm bụng."
+          "translation": "Phở là món Việt yêu thích của tôi. Tôi ăn sáng cuối tuần. Nước dùng nóng và thơm với rau thơm. Tôi thêm chanh và ớt cho ngon. Mẹ tôi nấu phở ở nhà đôi khi. Chúng tôi ăn cùng và nói chuyện. Phở làm tôi thấy ấm bụng.",
+          "questions": [
+            {
+              "q": "What is the speaker's favorite Vietnamese dish?",
+              "a": "The speaker's favorite dish is pho."
+            },
+            {
+              "q": "When does the speaker usually eat pho?",
+              "a": "The speaker eats pho for breakfast on weekends."
+            }
+          ]
         },
         {
           "id": 2,
           "title": "Street Food with Friends",
           "content": "After school my friends and I buy street food. We like banh mi with egg and pate. Sometimes we eat bun cha or com tam. We sit on small chairs and chat. Street food is cheap and delicious. We share one portion to try more kinds.",
-          "translation": "Sau giờ học bạn tôi và tôi mua đồ ăn đường phố. Chúng tôi thích bánh mì trứng và pate. Đôi khi ăn bún chả hoặc cơm tấm. Ngồi ghế nhỏ và trò chuyện. Đồ đường phố rẻ và ngon. Chúng tôi chia một phần để thử nhiều loại."
+          "translation": "Sau giờ học bạn tôi và tôi mua đồ ăn đường phố. Chúng tôi thích bánh mì trứng và pate. Đôi khi ăn bún chả hoặc cơm tấm. Ngồi ghế nhỏ và trò chuyện. Đồ đường phố rẻ và ngon. Chúng tôi chia một phần để thử nhiều loại.",
+          "questions": [
+            {
+              "q": "What street food do the speaker and friends buy after school?",
+              "a": "They buy banh mi with egg and pate."
+            },
+            {
+              "q": "Why do they share one portion of food?",
+              "a": "They share to try more kinds of street food."
+            }
+          ]
         },
         {
           "id": 3,
           "title": "Family Cooking Time",
           "content": "On Sundays my family cooks together. Mom teaches me how to make spring rolls. We wrap rice paper with vegetables and meat. Dad fries them until golden. We eat with fish sauce. Cooking together is fun. The food tastes better when we make it ourselves.",
-          "translation": "Chủ Nhật gia đình tôi nấu ăn cùng. Mẹ dạy tôi làm nem cuốn. Chúng tôi cuốn bánh tráng với rau và thịt. Bố chiên đến vàng. Ăn với nước mắm. Nấu cùng vui lắm. Đồ ăn ngon hơn khi tự làm."
+          "translation": "Chủ Nhật gia đình tôi nấu ăn cùng. Mẹ dạy tôi làm nem cuốn. Chúng tôi cuốn bánh tráng với rau và thịt. Bố chiên đến vàng. Ăn với nước mắm. Nấu cùng vui lắm. Đồ ăn ngon hơn khi tự làm.",
+          "questions": [
+            {
+              "q": "What does the family cook together on Sundays?",
+              "a": "The family makes spring rolls together."
+            },
+            {
+              "q": "What does the dad do with the spring rolls?",
+              "a": "The dad fries them until golden."
+            }
+          ]
         }
       ]
     },
@@ -136,19 +286,49 @@
           "id": 1,
           "title": "Visiting Temple of Literature",
           "content": "I visited the Temple of Literature with my family. It is the first university in Vietnam. There are old trees and stone steles. We walked around and learned about history. Many students come here to pray for good exams. The place is quiet and beautiful. I felt proud of our history.",
-          "translation": "Tôi thăm Văn Miếu cùng gia đình. Đó là đại học đầu tiên ở Việt Nam. Có cây cổ thụ và bia đá. Chúng tôi đi dạo và học lịch sử. Nhiều học sinh đến cầu thi tốt. Nơi đây yên tĩnh và đẹp. Tôi tự hào về lịch sử của chúng ta."
+          "translation": "Tôi thăm Văn Miếu cùng gia đình. Đó là đại học đầu tiên ở Việt Nam. Có cây cổ thụ và bia đá. Chúng tôi đi dạo và học lịch sử. Nhiều học sinh đến cầu thi tốt. Nơi đây yên tĩnh và đẹp. Tôi tự hào về lịch sử của chúng ta.",
+          "questions": [
+            {
+              "q": "What is the Temple of Literature?",
+              "a": "It is the first university in Vietnam."
+            },
+            {
+              "q": "Why do many students visit the Temple of Literature?",
+              "a": "Students come to pray for good exam results."
+            }
+          ]
         },
         {
           "id": 2,
           "title": "Talking About Old Schools",
           "content": "My grandpa told me about old schools in Vietnam. Students studied Chinese characters long ago. They wrote on paper with brushes. The Temple of Literature was the main place to learn. Now schools are different with English and computers. I think old ways were hard but interesting.",
-          "translation": "Ông tôi kể về trường xưa ở Việt Nam. Học sinh học chữ Hán ngày xưa. Họ viết bằng bút lông trên giấy. Văn Miếu là nơi học chính. Giờ trường khác với tiếng Anh và máy tính. Tôi nghĩ cách cũ khó nhưng thú vị."
+          "translation": "Ông tôi kể về trường xưa ở Việt Nam. Học sinh học chữ Hán ngày xưa. Họ viết bằng bút lông trên giấy. Văn Miếu là nơi học chính. Giờ trường khác với tiếng Anh và máy tính. Tôi nghĩ cách cũ khó nhưng thú vị.",
+          "questions": [
+            {
+              "q": "What did students study long ago at old schools?",
+              "a": "Students studied Chinese characters long ago."
+            },
+            {
+              "q": "What did they use to write?",
+              "a": "They wrote on paper with brushes."
+            }
+          ]
         },
         {
           "id": 3,
           "title": "Why Education Is Important",
           "content": "Education helps us learn new things and have better lives. In the past, only few people went to university. Now everyone can study. I want to learn well to help my family later. Good education opens many doors. I am happy to go to school every day.",
-          "translation": "Giáo dục giúp học điều mới và sống tốt hơn. Xưa chỉ ít người vào đại học. Giờ ai cũng học được. Tôi muốn học giỏi để giúp gia đình sau này. Giáo dục tốt mở nhiều cơ hội. Tôi vui khi đi học mỗi ngày."
+          "translation": "Giáo dục giúp học điều mới và sống tốt hơn. Xưa chỉ ít người vào đại học. Giờ ai cũng học được. Tôi muốn học giỏi để giúp gia đình sau này. Giáo dục tốt mở nhiều cơ hội. Tôi vui khi đi học mỗi ngày.",
+          "questions": [
+            {
+              "q": "What does the speaker want to do after learning about the Temple of Literature?",
+              "a": "The speaker wants to study hard like the old scholars did."
+            },
+            {
+              "q": "Why does the speaker feel proud?",
+              "a": "The speaker feels proud of Vietnam's long history of learning."
+            }
+          ]
         }
       ]
     },
@@ -161,19 +341,49 @@
           "id": 1,
           "title": "Going to School by Bike",
           "content": "I go to school by bike every day. The road is not too busy in the morning. I wear a helmet and ride carefully. I follow traffic lights and stop at red. My mom tells me to watch for cars. It's faster than walking and good exercise too.",
-          "translation": "Tôi đi học bằng xe đạp mỗi ngày. Đường không quá đông buổi sáng. Tôi đội mũ bảo hiểm và đi cẩn thận. Tôi theo đèn tín hiệu và dừng đèn đỏ. Mẹ bảo chú ý xe. Nhanh hơn đi bộ và tốt cho sức khỏe."
+          "translation": "Tôi đi học bằng xe đạp mỗi ngày. Đường không quá đông buổi sáng. Tôi đội mũ bảo hiểm và đi cẩn thận. Tôi theo đèn tín hiệu và dừng đèn đỏ. Mẹ bảo chú ý xe. Nhanh hơn đi bộ và tốt cho sức khỏe.",
+          "questions": [
+            {
+              "q": "What transport does the speaker use to go to school?",
+              "a": "The speaker rides a bicycle to school."
+            },
+            {
+              "q": "What traffic rule does the speaker mention?",
+              "a": "The speaker always stops at red lights."
+            }
+          ]
         },
         {
           "id": 2,
           "title": "Talking About Traffic Rules",
           "content": "Yesterday my friend asked about traffic rules. I said we must wear helmets on motorbikes. We cross at zebra crossings only. No using phones when riding. My dad says rules keep us safe. We should always follow them. Do you know the rules too?",
-          "translation": "Hôm qua bạn hỏi về luật giao thông. Tôi bảo phải đội mũ bảo hiểm khi đi xe máy. Qua đường ở vạch kẻ thôi. Không dùng điện thoại khi lái. Bố nói luật giữ an toàn. Chúng ta nên luôn tuân thủ. Bạn biết luật không?"
+          "translation": "Hôm qua bạn hỏi về luật giao thông. Tôi bảo phải đội mũ bảo hiểm khi đi xe máy. Qua đường ở vạch kẻ thôi. Không dùng điện thoại khi lái. Bố nói luật giữ an toàn. Chúng ta nên luôn tuân thủ. Bạn biết luật không?",
+          "questions": [
+            {
+              "q": "What traffic problem does the speaker notice in the city?",
+              "a": "The city streets are crowded and noisy."
+            },
+            {
+              "q": "How does the speaker feel about traffic jams?",
+              "a": "The speaker dislikes traffic jams because they make everyone late."
+            }
+          ]
         },
         {
           "id": 3,
           "title": "A Busy Street Near School",
           "content": "The street near my school is very busy after classes. Many students ride bikes and motorbikes. Cars honk sometimes. I wait for the green light before crossing. My friends and I walk together to be safe. Busy streets can be dangerous but careful people stay okay.",
-          "translation": "Phố gần trường tôi rất đông sau giờ tan học. Nhiều học sinh đi xe đạp và xe máy. Xe hơi bấm còi đôi khi. Tôi đợi đèn xanh mới qua. Bạn tôi và tôi đi cùng để an toàn. Phố đông có thể nguy hiểm nhưng người cẩn thận thì ổn."
+          "translation": "Phố gần trường tôi rất đông sau giờ tan học. Nhiều học sinh đi xe đạp và xe máy. Xe hơi bấm còi đôi khi. Tôi đợi đèn xanh mới qua. Bạn tôi và tôi đi cùng để an toàn. Phố đông có thể nguy hiểm nhưng người cẩn thận thì ổn.",
+          "questions": [
+            {
+              "q": "Why should people follow traffic rules?",
+              "a": "Traffic rules keep everyone safe on the roads."
+            },
+            {
+              "q": "What does the speaker want people to do?",
+              "a": "The speaker wants people to obey traffic signs and be careful."
+            }
+          ]
         }
       ]
     },
@@ -186,19 +396,49 @@
           "id": 1,
           "title": "My Favorite Movie",
           "content": "My favorite movie is an animation about animals. They go on a big adventure to find home. The story is funny and touching. I watched it with my family last weekend. We laughed and cried together. Good movies make me feel happy. I want to watch it again.",
-          "translation": "Phim yêu thích của tôi là phim hoạt hình về động vật. Chúng phiêu lưu lớn để tìm nhà. Câu chuyện hài và cảm động. Tôi xem với gia đình cuối tuần trước. Chúng tôi cười và khóc cùng. Phim hay làm tôi vui. Tôi muốn xem lại."
+          "translation": "Phim yêu thích của tôi là phim hoạt hình về động vật. Chúng phiêu lưu lớn để tìm nhà. Câu chuyện hài và cảm động. Tôi xem với gia đình cuối tuần trước. Chúng tôi cười và khóc cùng. Phim hay làm tôi vui. Tôi muốn xem lại.",
+          "questions": [
+            {
+              "q": "What kind of films does the speaker like?",
+              "a": "The speaker likes adventure and cartoon films."
+            },
+            {
+              "q": "Where does the speaker usually watch films?",
+              "a": "The speaker usually watches films at home or at the cinema."
+            }
+          ]
         },
         {
           "id": 2,
           "title": "Watching Movies with Friends",
           "content": "Last Friday my friends came over to watch a comedy. We ate popcorn and laughed a lot. The movie was about silly friends on a trip. One scene was so funny we paused to laugh more. Watching together is more fun than alone. We talked about it after.",
-          "translation": "Thứ Sáu trước bạn tôi đến xem phim hài. Chúng tôi ăn bắp rang và cười nhiều. Phim về nhóm bạn ngốc trên chuyến đi. Một cảnh buồn cười đến mức chúng tôi dừng để cười thêm. Xem cùng vui hơn xem một mình. Sau đó chúng tôi nói về phim."
+          "translation": "Thứ Sáu trước bạn tôi đến xem phim hài. Chúng tôi ăn bắp rang và cười nhiều. Phim về nhóm bạn ngốc trên chuyến đi. Một cảnh buồn cười đến mức chúng tôi dừng để cười thêm. Xem cùng vui hơn xem một mình. Sau đó chúng tôi nói về phim.",
+          "questions": [
+            {
+              "q": "What film did the speaker watch last weekend?",
+              "a": "The speaker watched an adventure film last weekend."
+            },
+            {
+              "q": "What did the speaker's friend think of the film?",
+              "a": "The friend said the film was exciting."
+            }
+          ]
         },
         {
           "id": 3,
           "title": "Why I Like Watching Films",
           "content": "I like watching films because they take me to new worlds. Comedy makes me laugh when I'm sad. Adventure films excite me. I learn new words from English movies too. Watching with family or friends is the best. Good films stay in my mind for a long time.",
-          "translation": "Tôi thích xem phim vì chúng đưa tôi đến thế giới mới. Phim hài làm tôi cười khi buồn. Phim phiêu lưu làm tôi hào hứng. Tôi học từ mới từ phim tiếng Anh nữa. Xem với gia đình hoặc bạn là tốt nhất. Phim hay ở trong đầu tôi lâu."
+          "translation": "Tôi thích xem phim vì chúng đưa tôi đến thế giới mới. Phim hài làm tôi cười khi buồn. Phim phiêu lưu làm tôi hào hứng. Tôi học từ mới từ phim tiếng Anh nữa. Xem với gia đình hoặc bạn là tốt nhất. Phim hay ở trong đầu tôi lâu.",
+          "questions": [
+            {
+              "q": "Why does the speaker enjoy watching films?",
+              "a": "Films take the speaker to new worlds and teach life lessons."
+            },
+            {
+              "q": "What kind of film does the speaker want to make someday?",
+              "a": "The speaker wants to make a comedy film someday."
+            }
+          ]
         }
       ]
     },
@@ -211,19 +451,49 @@
           "id": 1,
           "title": "Halloween Fun",
           "content": "Halloween is a fun festival in October. People wear costumes like ghosts or witches. Children go trick-or-treating for candies. Houses have pumpkins with faces. We watched videos about it in class. It looks exciting. In Vietnam we have Tet instead. Both festivals are happy times.",
-          "translation": "Halloween là lễ hội vui vào tháng Mười. Mọi người mặc trang phục như ma hoặc phù thủy. Trẻ em đi xin kẹo. Nhà có bí ngô mặt cười. Chúng tôi xem video về nó ở lớp. Trông thú vị. Ở Việt Nam có Tết. Cả hai lễ hội đều vui vẻ."
+          "translation": "Halloween là lễ hội vui vào tháng Mười. Mọi người mặc trang phục như ma hoặc phù thủy. Trẻ em đi xin kẹo. Nhà có bí ngô mặt cười. Chúng tôi xem video về nó ở lớp. Trông thú vị. Ở Việt Nam có Tết. Cả hai lễ hội đều vui vẻ.",
+          "questions": [
+            {
+              "q": "What festival does the speaker describe first?",
+              "a": "The speaker first describes the Tet festival in Vietnam."
+            },
+            {
+              "q": "How do Vietnamese families celebrate Tet?",
+              "a": "Families clean the house, cook special food, and give lucky money."
+            }
+          ]
         },
         {
           "id": 2,
           "title": "Christmas in Other Countries",
           "content": "Christmas is big in many countries. People put up trees with lights and gifts. Families have big dinners on Christmas Eve. Children wait for Santa Claus. I saw pictures of snow and decorations. It looks magical. In Vietnam we celebrate Tet more, but Christmas is nice too.",
-          "translation": "Giáng sinh lớn ở nhiều nước. Mọi người dựng cây với đèn và quà. Gia đình ăn tối lớn đêm Giáng sinh. Trẻ em chờ ông già Noel. Tôi thấy ảnh tuyết và trang trí. Trông kỳ diệu. Ở Việt Nam Tết quan trọng hơn, nhưng Giáng sinh cũng hay."
+          "translation": "Giáng sinh lớn ở nhiều nước. Mọi người dựng cây với đèn và quà. Gia đình ăn tối lớn đêm Giáng sinh. Trẻ em chờ ông già Noel. Tôi thấy ảnh tuyết và trang trí. Trông kỳ diệu. Ở Việt Nam Tết quan trọng hơn, nhưng Giáng sinh cũng hay.",
+          "questions": [
+            {
+              "q": "What foreign festival does the speaker learn about?",
+              "a": "The speaker learns about Christmas celebrations in other countries."
+            },
+            {
+              "q": "How is Christmas different from Tet?",
+              "a": "Christmas uses Christmas trees and gift-giving instead of lucky money."
+            }
+          ]
         },
         {
           "id": 3,
           "title": "My Favorite Festival",
           "content": "My favorite festival is Tet in Vietnam. We clean the house and decorate with flowers. Families come together to eat and talk. I get lucky money and play with cousins. Tet makes me feel warm and happy. Festivals bring joy to everyone. I love our traditions.",
-          "translation": "Lễ hội yêu thích của tôi là Tết ở Việt Nam. Chúng tôi dọn nhà và trang trí hoa. Gia đình quây quần ăn và nói chuyện. Tôi nhận tiền mừng tuổi và chơi với anh em họ. Tết làm tôi ấm áp và vui. Lễ hội mang niềm vui cho mọi người. Tôi yêu truyền thống của chúng ta."
+          "translation": "Lễ hội yêu thích của tôi là Tết ở Việt Nam. Chúng tôi dọn nhà và trang trí hoa. Gia đình quây quần ăn và nói chuyện. Tôi nhận tiền mừng tuổi và chơi với anh em họ. Tết làm tôi ấm áp và vui. Lễ hội mang niềm vui cho mọi người. Tôi yêu truyền thống của chúng ta.",
+          "questions": [
+            {
+              "q": "What does the speaker enjoy most about festivals?",
+              "a": "The speaker enjoys being with family and eating special food."
+            },
+            {
+              "q": "What do all festivals have in common?",
+              "a": "All festivals celebrate happiness and bring people together."
+            }
+          ]
         }
       ]
     },
@@ -236,19 +506,49 @@
           "id": 1,
           "title": "Solar Energy at Home",
           "content": "My uncle has solar panels on his roof. They make electricity from the sun. It helps save money on bills. The house uses less power from the city. Solar energy is clean and good for the environment. I think more houses should use it. It's simple and useful.",
-          "translation": "Chú tôi có pin mặt trời trên mái. Chúng tạo điện từ nắng. Giúp tiết kiệm tiền điện. Nhà dùng ít điện lưới hơn. Năng lượng mặt trời sạch và tốt cho môi trường. Tôi nghĩ nhiều nhà nên dùng. Nó đơn giản và hữu ích."
+          "translation": "Chú tôi có pin mặt trời trên mái. Chúng tạo điện từ nắng. Giúp tiết kiệm tiền điện. Nhà dùng ít điện lưới hơn. Năng lượng mặt trời sạch và tốt cho môi trường. Tôi nghĩ nhiều nhà nên dùng. Nó đơn giản và hữu ích.",
+          "questions": [
+            {
+              "q": "What is the first thing described in this lesson?",
+              "a": "My uncle has solar panels on his roof."
+            },
+            {
+              "q": "What does the speaker say later in the lesson?",
+              "a": "It helps save money on bills."
+            }
+          ]
         },
         {
           "id": 2,
           "title": "Talking About Wind Power",
           "content": "In class we learned about wind power. Big windmills turn with the wind to make electricity. It's clean like solar energy. Some places in Vietnam have wind farms. My friend said it's good because no smoke. I like the idea of clean energy for the future.",
-          "translation": "Ở lớp chúng tôi học về năng lượng gió. Cối xay gió lớn quay theo gió tạo điện. Sạch như năng lượng mặt trời. Một số nơi ở Việt Nam có trang trại gió. Bạn tôi nói tốt vì không khói. Tôi thích ý tưởng năng lượng sạch cho tương lai."
+          "translation": "Ở lớp chúng tôi học về năng lượng gió. Cối xay gió lớn quay theo gió tạo điện. Sạch như năng lượng mặt trời. Một số nơi ở Việt Nam có trang trại gió. Bạn tôi nói tốt vì không khói. Tôi thích ý tưởng năng lượng sạch cho tương lai.",
+          "questions": [
+            {
+              "q": "What is the first thing described in this lesson?",
+              "a": "In class we learned about wind power."
+            },
+            {
+              "q": "What does the speaker say later in the lesson?",
+              "a": "It's clean like solar energy."
+            }
+          ]
         },
         {
           "id": 3,
           "title": "Why We Need Clean Energy",
           "content": "We need clean energy because old ways make air dirty. Solar and wind power don't pollute. They help stop global warming. Everyone can use less electricity at home. My family turns off lights when not needed. Small changes make a big difference for the planet.",
-          "translation": "Chúng ta cần năng lượng sạch vì cách cũ làm không khí bẩn. Năng lượng mặt trời và gió không ô nhiễm. Chúng giúp ngừng nóng lên toàn cầu. Mọi người có thể dùng ít điện ở nhà. Gia đình tôi tắt đèn khi không cần. Thay đổi nhỏ tạo khác biệt lớn cho hành tinh."
+          "translation": "Chúng ta cần năng lượng sạch vì cách cũ làm không khí bẩn. Năng lượng mặt trời và gió không ô nhiễm. Chúng giúp ngừng nóng lên toàn cầu. Mọi người có thể dùng ít điện ở nhà. Gia đình tôi tắt đèn khi không cần. Thay đổi nhỏ tạo khác biệt lớn cho hành tinh.",
+          "questions": [
+            {
+              "q": "What is the first thing described in this lesson?",
+              "a": "We need clean energy because old ways make air dirty."
+            },
+            {
+              "q": "What does the speaker say later in the lesson?",
+              "a": "They help stop global warming."
+            }
+          ]
         }
       ]
     },
@@ -261,19 +561,49 @@
           "id": 1,
           "title": "Fast Travel by Train",
           "content": "In the future trains will be very fast. I can go to my grandparents in one hour. The seats are soft and comfortable. We can watch movies on the way. No traffic jams or waiting. Travelling will be easy for everyone. I can't wait to try it.",
-          "translation": "Tương lai tàu sẽ rất nhanh. Tôi đến nhà ông bà chỉ một giờ. Ghế mềm và thoải mái. Chúng tôi xem phim trên đường. Không kẹt xe hay chờ đợi. Du lịch sẽ dễ cho mọi người. Tôi mong thử sớm."
+          "translation": "Tương lai tàu sẽ rất nhanh. Tôi đến nhà ông bà chỉ một giờ. Ghế mềm và thoải mái. Chúng tôi xem phim trên đường. Không kẹt xe hay chờ đợi. Du lịch sẽ dễ cho mọi người. Tôi mong thử sớm.",
+          "questions": [
+            {
+              "q": "What is the first thing described in this lesson?",
+              "a": "In the future trains will be very fast."
+            },
+            {
+              "q": "What does the speaker say later in the lesson?",
+              "a": "The seats are soft and comfortable."
+            }
+          ]
         },
         {
           "id": 2,
           "title": "Flying Cars for Short Trips",
           "content": "Flying cars will be common soon. I can fly to the beach with my family. No roads, just sky. The car is quiet and safe. We see nice views from above. Short trips will be quick and fun. I think flying cars will change everything.",
-          "translation": "Xe bay sẽ phổ biến sớm. Tôi bay đến bãi biển với gia đình. Không đường, chỉ trời. Xe yên tĩnh và an toàn. Chúng tôi thấy view đẹp từ trên. Chuyến ngắn sẽ nhanh và vui. Tôi nghĩ xe bay thay đổi mọi thứ."
+          "translation": "Xe bay sẽ phổ biến sớm. Tôi bay đến bãi biển với gia đình. Không đường, chỉ trời. Xe yên tĩnh và an toàn. Chúng tôi thấy view đẹp từ trên. Chuyến ngắn sẽ nhanh và vui. Tôi nghĩ xe bay thay đổi mọi thứ.",
+          "questions": [
+            {
+              "q": "What is the first thing described in this lesson?",
+              "a": "Flying cars will be common soon."
+            },
+            {
+              "q": "What does the speaker say later in the lesson?",
+              "a": "No roads, just sky."
+            }
+          ]
         },
         {
           "id": 3,
           "title": "Travel with Technology",
           "content": "Future travel will use more technology. Phones show the best routes. Virtual reality lets us see places before going. Hotels book themselves. We can travel to far countries easily. Technology makes travel safe and exciting. I want to see the world like that.",
-          "translation": "Du lịch tương lai dùng công nghệ nhiều hơn. Điện thoại chỉ đường tốt nhất. Thực tế ảo cho xem nơi trước khi đi. Khách sạn tự đặt. Chúng tôi dễ đi nước xa. Công nghệ làm du lịch an toàn và thú vị. Tôi muốn khám phá thế giới như vậy."
+          "translation": "Du lịch tương lai dùng công nghệ nhiều hơn. Điện thoại chỉ đường tốt nhất. Thực tế ảo cho xem nơi trước khi đi. Khách sạn tự đặt. Chúng tôi dễ đi nước xa. Công nghệ làm du lịch an toàn và thú vị. Tôi muốn khám phá thế giới như vậy.",
+          "questions": [
+            {
+              "q": "What is the first thing described in this lesson?",
+              "a": "Future travel will use more technology."
+            },
+            {
+              "q": "What does the speaker say later in the lesson?",
+              "a": "Virtual reality lets us see places before going."
+            }
+          ]
         }
       ]
     },
@@ -286,19 +616,49 @@
           "id": 1,
           "title": "Talking About This Year",
           "content": "This year I learned a lot in English. I can talk about hobbies and healthy living. I know how to describe festivals and food. My speaking is better now. I did projects with friends and shared ideas. I feel happy with my progress.",
-          "translation": "Năm nay tôi học nhiều tiếng Anh. Tôi nói được về sở thích và sống khỏe. Tôi biết mô tả lễ hội và đồ ăn. Nói tốt hơn bây giờ. Tôi làm dự án với bạn và chia sẻ ý. Tôi vui với tiến bộ của mình."
+          "translation": "Năm nay tôi học nhiều tiếng Anh. Tôi nói được về sở thích và sống khỏe. Tôi biết mô tả lễ hội và đồ ăn. Nói tốt hơn bây giờ. Tôi làm dự án với bạn và chia sẻ ý. Tôi vui với tiến bộ của mình.",
+          "questions": [
+            {
+              "q": "What is the first thing described in this lesson?",
+              "a": "This year I learned a lot in English."
+            },
+            {
+              "q": "What does the speaker say later in the lesson?",
+              "a": "I know how to describe festivals and food."
+            }
+          ]
         },
         {
           "id": 2,
           "title": "My Best Memory",
           "content": "My best memory this year is the school trip to the park. We played games and ate together. Everyone laughed a lot. The weather was nice and sunny. We took photos and talked all day. It was simple but very fun. I will remember it forever.",
-          "translation": "Kỷ niệm tốt nhất năm nay là chuyến đi công viên trường. Chúng tôi chơi trò và ăn cùng. Mọi người cười nhiều. Thời tiết đẹp và nắng. Chúng tôi chụp ảnh và nói cả ngày. Đơn giản nhưng rất vui. Tôi sẽ nhớ mãi."
+          "translation": "Kỷ niệm tốt nhất năm nay là chuyến đi công viên trường. Chúng tôi chơi trò và ăn cùng. Mọi người cười nhiều. Thời tiết đẹp và nắng. Chúng tôi chụp ảnh và nói cả ngày. Đơn giản nhưng rất vui. Tôi sẽ nhớ mãi.",
+          "questions": [
+            {
+              "q": "What is the first thing described in this lesson?",
+              "a": "My best memory this year is the school trip to the park."
+            },
+            {
+              "q": "What does the speaker say later in the lesson?",
+              "a": "Everyone laughed a lot."
+            }
+          ]
         },
         {
           "id": 3,
           "title": "My Plan for Next Year",
           "content": "Next year I want to speak English more every day. I will talk to friends and watch more videos. I want to read simple books too. My goal is to tell long stories without stopping. I think practice will help me. English will be useful in the future.",
-          "translation": "Năm sau tôi muốn nói tiếng Anh nhiều mỗi ngày. Tôi sẽ nói với bạn và xem video nhiều hơn. Tôi muốn đọc sách đơn giản nữa. Mục tiêu là kể chuyện dài không dừng. Tôi nghĩ luyện tập sẽ giúp. Tiếng Anh sẽ hữu ích tương lai."
+          "translation": "Năm sau tôi muốn nói tiếng Anh nhiều mỗi ngày. Tôi sẽ nói với bạn và xem video nhiều hơn. Tôi muốn đọc sách đơn giản nữa. Mục tiêu là kể chuyện dài không dừng. Tôi nghĩ luyện tập sẽ giúp. Tiếng Anh sẽ hữu ích tương lai.",
+          "questions": [
+            {
+              "q": "What is the first thing described in this lesson?",
+              "a": "Next year I want to speak English more every day."
+            },
+            {
+              "q": "What does the speaker say later in the lesson?",
+              "a": "I want to read simple books too."
+            }
+          ]
         }
       ]
     }

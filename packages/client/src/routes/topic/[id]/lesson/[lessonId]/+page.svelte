@@ -7,77 +7,7 @@
 	let topic = $derived(data.topic);
 	let lesson = $derived(data.lesson);
 
-	function parseQaContent(text) {
-		if (!text) {
-			return { story: '', questions: [], answers: [], malformedTags: false };
-		}
-
-		const questions = [];
-		const answers = [];
-		const storyParts = [];
-		let malformedTags = false;
-		let cursor = 0;
-
-		while (cursor < text.length) {
-			const qStart = text.indexOf('<q>', cursor);
-			const aStart = text.indexOf('<a>', cursor);
-			const qValid = qStart !== -1;
-			const aValid = aStart !== -1;
-
-			if (!qValid && !aValid) {
-				storyParts.push(text.slice(cursor));
-				break;
-			}
-
-			let tag = 'q';
-			let startIndex = qStart;
-
-			if (!qValid || (aValid && aStart < qStart)) {
-				tag = 'a';
-				startIndex = aStart;
-			}
-
-			storyParts.push(text.slice(cursor, startIndex));
-
-			const closeTag = tag === 'q' ? '</q>' : '</a>';
-			const contentStart = startIndex + 3;
-			const endIndex = text.indexOf(closeTag, contentStart);
-
-			if (endIndex === -1) {
-				malformedTags = true;
-				storyParts.push(text.slice(startIndex));
-				break;
-			}
-
-			const value = text.slice(contentStart, endIndex).trim();
-			if (value) {
-				if (tag === 'q') questions.push(value);
-				else answers.push(value);
-			}
-
-			cursor = endIndex + closeTag.length;
-		}
-
-		return {
-			story: storyParts.join('').replace(/\n{3,}/g, '\n\n').trim(),
-			questions,
-			answers,
-			malformedTags
-		};
-	}
-
-	let qaData = $derived.by(() => parseQaContent(lesson.content));
-	let qaPairs = $derived.by(() => {
-		const pairCount = Math.min(qaData.questions.length, qaData.answers.length);
-		return Array.from({ length: pairCount }, (_, index) => ({
-			question: qaData.questions[index],
-			answer: qaData.answers[index]
-		}));
-	});
-	let hasQaCountMismatch = $derived.by(() => qaData.questions.length !== qaData.answers.length);
-	let hasQaMismatch = $derived.by(
-		() => hasQaCountMismatch || qaData.malformedTags
-	);
+	let qaPairs = $derived((lesson.questions ?? []).filter((qa) => qa.q && qa.a));
 	
 	// State variables
 	let showLesson = $state(false);
@@ -581,7 +511,7 @@
 			<div class="story-section">
 				<h3>Story</h3>
 				<p class="story-text">
-					{qaData.story}
+					{lesson.content}
 				</p>
 			</div>
 
@@ -591,20 +521,11 @@
 					<div class="qa-list">
 						{#each qaPairs as qa, index}
 							<div class="qa-item">
-								<p class="qa-question"><strong>Q{index + 1}:</strong> {qa.question}</p>
-								<p class="qa-answer"><strong>A{index + 1}:</strong> {qa.answer}</p>
+								<p class="qa-question"><strong>Q{index + 1}:</strong> {qa.q}</p>
+								<p class="qa-answer"><strong>A{index + 1}:</strong> {qa.a}</p>
 							</div>
 						{/each}
 					</div>
-					{#if hasQaMismatch}
-						<p class="qa-warning">
-							{#if qaData.malformedTags}
-								Some Q&A tags are malformed in this lesson, so only valid question-answer pairs are shown.
-							{:else if hasQaCountMismatch}
-								This lesson has different numbers of question and answer tags, so only complete pairs are shown.
-							{/if}
-						</p>
-					{/if}
 				</div>
 			{/if}
 
@@ -1079,12 +1000,6 @@
 
 	.qa-question + .qa-answer {
 		margin-top: 0.5rem;
-	}
-
-	.qa-warning {
-		margin: 1rem 0 0;
-		color: #b26a00;
-		font-size: 0.95rem;
 	}
 
 	.qa-question strong {
