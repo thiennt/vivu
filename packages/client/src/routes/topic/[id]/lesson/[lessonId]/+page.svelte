@@ -521,7 +521,7 @@
 
 			{#if lesson.questions?.length}
 				<div class="questions-section">
-					<h3>Questions</h3>
+					<h3>Questions (Câu hỏi)</h3>
 					<ol class="questions-list">
 						{#each lesson.questions as question}
 							<li>{question}</li>
