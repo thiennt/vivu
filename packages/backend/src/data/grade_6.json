@@ -11,19 +11,40 @@
           "id": 1,
           "title": "A Typical School Day",
           "content": "Every morning I wake up at six thirty. I brush my teeth and eat breakfast with my mom. Then I ride my bike to school. Classes start at seven fifteen. We have English and Math first. During break time, I play with friends in the yard. After lunch, we have Science and Art. School finishes at four o'clock. I go home and tell my mom about my day. I like my new school a lot.",
-          "translation": "Mỗi sáng tôi dậy lúc sáu rưỡi. Tôi đánh răng và ăn sáng với mẹ. Sau đó tôi đạp xe đến trường. Tiết học bắt đầu lúc bảy giờ mười lăm. Chúng tôi học Tiếng Anh và Toán trước. Giờ ra chơi, tôi chơi với bạn ở sân. Sau bữa trưa, chúng tôi học Khoa học và Mỹ thuật. Tan học lúc bốn giờ. Tôi về nhà kể mẹ về ngày hôm nay. Tôi thích trường mới lắm."
+          "translation": "Mỗi sáng tôi dậy lúc sáu rưỡi. Tôi đánh răng và ăn sáng với mẹ. Sau đó tôi đạp xe đến trường. Tiết học bắt đầu lúc bảy giờ mười lăm. Chúng tôi học Tiếng Anh và Toán trước. Giờ ra chơi, tôi chơi với bạn ở sân. Sau bữa trưa, chúng tôi học Khoa học và Mỹ thuật. Tan học lúc bốn giờ. Tôi về nhà kể mẹ về ngày hôm nay. Tôi thích trường mới lắm.",
+          "questions": [
+            "What is the main idea of the lesson 'A Typical School Day'?",
+            "According to the lesson, what happens in this detail: \"Every morning I wake up at six thirty.\"?",
+            "Which activities or actions are described in 'A Typical School Day'?",
+            "What can we learn from the story in 'A Typical School Day'?",
+            "What does the lesson suggest about school?"
+          ]
         },
         {
           "id": 2,
           "title": "Meeting New Classmates",
           "content": "On my first day, I felt a bit nervous. A girl named Lan smiled and said hi. We talked during break time. She likes drawing and music too. We sit together in class now. After school, we walk home together sometimes. Lan is friendly and funny. I'm happy to have a new friend. School feels better with friends around.",
-          "translation": "Ngày đầu tiên, tôi hơi lo lắng. Một bạn gái tên Lan mỉm cười và chào. Chúng tôi nói chuyện giờ ra chơi. Cô ấy cũng thích vẽ và âm nhạc. Bây giờ chúng tôi ngồi cùng nhau trong lớp. Sau giờ học, đôi khi đi bộ về nhà cùng. Lan thân thiện và hài hước. Tôi vui vì có bạn mới. Trường học vui hơn khi có bạn."
+          "translation": "Ngày đầu tiên, tôi hơi lo lắng. Một bạn gái tên Lan mỉm cười và chào. Chúng tôi nói chuyện giờ ra chơi. Cô ấy cũng thích vẽ và âm nhạc. Bây giờ chúng tôi ngồi cùng nhau trong lớp. Sau giờ học, đôi khi đi bộ về nhà cùng. Lan thân thiện và hài hước. Tôi vui vì có bạn mới. Trường học vui hơn khi có bạn.",
+          "questions": [
+            "What is the main idea of the lesson 'Meeting New Classmates'?",
+            "According to the lesson, what happens in this detail: \"On my first day, I felt a bit nervous.\"?",
+            "Which activities or actions are described in 'Meeting New Classmates'?",
+            "What can we learn from the story in 'Meeting New Classmates'?",
+            "What does the lesson suggest about school?"
+          ]
         },
         {
           "id": 3,
           "title": "My Favorite Part of School",
           "content": "My favorite part of school is break time. I play badminton with my friends every day. We laugh a lot and run around. Sometimes we share snacks like biscuits. Last week we won a small game. It was fun! School is not only studying but also playing. I feel happy when I'm with my classmates.",
-          "translation": "Phần yêu thích nhất của tôi ở trường là giờ ra chơi. Tôi chơi cầu lông với bạn mỗi ngày. Chúng tôi cười nhiều và chạy nhảy. Đôi khi chia đồ ăn vặt như bánh quy. Tuần trước chúng tôi thắng một ván nhỏ. Vui lắm! Trường không chỉ học mà còn chơi. Tôi thấy vui khi ở cùng bạn lớp."
+          "translation": "Phần yêu thích nhất của tôi ở trường là giờ ra chơi. Tôi chơi cầu lông với bạn mỗi ngày. Chúng tôi cười nhiều và chạy nhảy. Đôi khi chia đồ ăn vặt như bánh quy. Tuần trước chúng tôi thắng một ván nhỏ. Vui lắm! Trường không chỉ học mà còn chơi. Tôi thấy vui khi ở cùng bạn lớp.",
+          "questions": [
+            "What is the main idea of the lesson 'My Favorite Part of School'?",
+            "According to the lesson, what happens in this detail: \"My favorite part of school is break time.\"?",
+            "Which activities or actions are described in 'My Favorite Part of School'?",
+            "What can we learn from the story in 'My Favorite Part of School'?",
+            "What does the lesson suggest about school?"
+          ]
         }
       ]
     },
@@ -36,19 +57,40 @@
           "id": 1,
           "title": "My Home Sweet Home",
           "content": "I live in a small house with my family. We have two bedrooms and a living room. The kitchen is next to the dining area. My bedroom has a bed, a desk and a window. I like to read books there in the evening. Outside, we have a little garden with flowers. My mom grows vegetables too. Our house is cozy and quiet. I feel safe and happy at home.",
-          "translation": "Tôi sống trong ngôi nhà nhỏ cùng gia đình. Chúng tôi có hai phòng ngủ và phòng khách. Bếp nằm cạnh khu ăn uống. Phòng ngủ tôi có giường, bàn học và cửa sổ. Tôi thích đọc sách ở đó buổi tối. Bên ngoài có vườn nhỏ với hoa. Mẹ tôi trồng rau nữa. Nhà chúng tôi ấm cúng và yên tĩnh. Tôi cảm thấy an toàn và vui ở nhà."
+          "translation": "Tôi sống trong ngôi nhà nhỏ cùng gia đình. Chúng tôi có hai phòng ngủ và phòng khách. Bếp nằm cạnh khu ăn uống. Phòng ngủ tôi có giường, bàn học và cửa sổ. Tôi thích đọc sách ở đó buổi tối. Bên ngoài có vườn nhỏ với hoa. Mẹ tôi trồng rau nữa. Nhà chúng tôi ấm cúng và yên tĩnh. Tôi cảm thấy an toàn và vui ở nhà.",
+          "questions": [
+            "What is the main idea of the lesson 'My Home Sweet Home'?",
+            "According to the lesson, what happens in this detail: \"I live in a small house with my family.\"?",
+            "Which activities or actions are described in 'My Home Sweet Home'?",
+            "What can we learn from the story in 'My Home Sweet Home'?",
+            "What does the lesson suggest about house?"
+          ]
         },
         {
           "id": 2,
           "title": "Family Dinner at Home",
           "content": "We always have dinner together at seven o'clock. Mom cooks rice, fish and vegetables. Dad tells funny stories from work. My little brother likes to talk about school. We laugh and eat slowly. After dinner, I help wash the dishes. Family time is the best part of the day. It makes us feel close and happy.",
-          "translation": "Chúng tôi luôn ăn tối cùng nhau lúc bảy giờ. Mẹ nấu cơm, cá và rau. Bố kể chuyện vui từ chỗ làm. Em trai tôi thích kể về trường. Chúng tôi cười và ăn chậm rãi. Sau bữa ăn, tôi giúp rửa chén. Thời gian gia đình là phần tốt nhất trong ngày. Nó làm chúng tôi gần gũi và vui."
+          "translation": "Chúng tôi luôn ăn tối cùng nhau lúc bảy giờ. Mẹ nấu cơm, cá và rau. Bố kể chuyện vui từ chỗ làm. Em trai tôi thích kể về trường. Chúng tôi cười và ăn chậm rãi. Sau bữa ăn, tôi giúp rửa chén. Thời gian gia đình là phần tốt nhất trong ngày. Nó làm chúng tôi gần gũi và vui.",
+          "questions": [
+            "What is the main idea of the lesson 'Family Dinner at Home'?",
+            "According to the lesson, what happens in this detail: \"We always have dinner together at seven o'clock.\"?",
+            "Which activities or actions are described in 'Family Dinner at Home'?",
+            "What can we learn from the story in 'Family Dinner at Home'?",
+            "What does the lesson suggest about dinner?"
+          ]
         },
         {
           "id": 3,
           "title": "My Favorite Room",
           "content": "My favorite room is the living room. We have a big sofa and a TV there. In the evening, we sit together and watch cartoons. Sometimes I play games on the floor with my brother. The room has nice pictures on the wall. It's comfortable and bright. I love relaxing there after a long day at school.",
-          "translation": "Phòng yêu thích của tôi là phòng khách. Chúng tôi có ghế sofa lớn và TV. Buổi tối, chúng tôi ngồi cùng xem phim hoạt hình. Đôi khi tôi chơi trò trên sàn với em trai. Phòng có tranh đẹp trên tường. Nó thoải mái và sáng sủa. Tôi thích thư giãn ở đó sau ngày dài ở trường."
+          "translation": "Phòng yêu thích của tôi là phòng khách. Chúng tôi có ghế sofa lớn và TV. Buổi tối, chúng tôi ngồi cùng xem phim hoạt hình. Đôi khi tôi chơi trò trên sàn với em trai. Phòng có tranh đẹp trên tường. Nó thoải mái và sáng sủa. Tôi thích thư giãn ở đó sau ngày dài ở trường.",
+          "questions": [
+            "What is the main idea of the lesson 'My Favorite Room'?",
+            "According to the lesson, what happens in this detail: \"My favorite room is the living room.\"?",
+            "Which activities or actions are described in 'My Favorite Room'?",
+            "What can we learn from the story in 'My Favorite Room'?",
+            "What does the lesson suggest about room?"
+          ]
         }
       ]
     },
@@ -61,19 +103,40 @@
           "id": 1,
           "title": "My Best Friend",
           "content": "My best friend is called Minh. He is twelve years old and very funny. We go to the same class and sit next to each other. Minh likes soccer and video games. After school, we often play in the park. He always makes me laugh. I like spending time with him because he's kind too.",
-          "translation": "Bạn thân của tôi tên Minh. Cậu ấy mười hai tuổi và rất hài hước. Chúng tôi học cùng lớp và ngồi cạnh nhau. Minh thích bóng đá và game. Sau giờ học, chúng tôi thường chơi ở công viên. Cậu ấy luôn làm tôi cười. Tôi thích ở bên cậu ấy vì cậu ấy cũng tốt bụng."
+          "translation": "Bạn thân của tôi tên Minh. Cậu ấy mười hai tuổi và rất hài hước. Chúng tôi học cùng lớp và ngồi cạnh nhau. Minh thích bóng đá và game. Sau giờ học, chúng tôi thường chơi ở công viên. Cậu ấy luôn làm tôi cười. Tôi thích ở bên cậu ấy vì cậu ấy cũng tốt bụng.",
+          "questions": [
+            "What is the main idea of the lesson 'My Best Friend'?",
+            "According to the lesson, what happens in this detail: \"My best friend is called Minh.\"?",
+            "Which activities or actions are described in 'My Best Friend'?",
+            "What can we learn from the story in 'My Best Friend'?",
+            "What does the lesson suggest about minh?"
+          ]
         },
         {
           "id": 2,
           "title": "Playing with Friends",
           "content": "Yesterday after school, Minh and I played soccer. We kicked the ball and ran a lot. It was sunny so we enjoyed it. Later we sat under a tree and ate ice cream. Minh told a funny story about his dog. We laughed until our stomachs hurt. Playing with friends makes any day better.",
-          "translation": "Hôm qua sau giờ học, Minh và tôi chơi bóng đá. Chúng tôi sút bóng và chạy nhiều. Trời nắng nên vui lắm. Sau đó ngồi dưới cây ăn kem. Minh kể chuyện hài về con chó nhà cậu ấy. Chúng tôi cười đến đau bụng. Chơi với bạn làm ngày nào cũng tốt hơn."
+          "translation": "Hôm qua sau giờ học, Minh và tôi chơi bóng đá. Chúng tôi sút bóng và chạy nhiều. Trời nắng nên vui lắm. Sau đó ngồi dưới cây ăn kem. Minh kể chuyện hài về con chó nhà cậu ấy. Chúng tôi cười đến đau bụng. Chơi với bạn làm ngày nào cũng tốt hơn.",
+          "questions": [
+            "What is the main idea of the lesson 'Playing with Friends'?",
+            "According to the lesson, what happens in this detail: \"Yesterday after school, Minh and I played soccer.\"?",
+            "Which activities or actions are described in 'Playing with Friends'?",
+            "What can we learn from the story in 'Playing with Friends'?",
+            "What does the lesson suggest about minh?"
+          ]
         },
         {
           "id": 3,
           "title": "A Fun Day with Friends",
           "content": "Last weekend, my friends came to my house. We played board games and ate snacks. Then we watched a cartoon movie together. Everyone was happy and noisy. At the end, we took photos to remember the day. Friends make simple things special. I love days like this very much.",
-          "translation": "Cuối tuần trước, bạn tôi đến nhà. Chúng tôi chơi board game và ăn đồ vặt. Sau đó xem phim hoạt hình cùng nhau. Mọi người vui và ồn ào. Cuối cùng chụp ảnh để nhớ ngày hôm đó. Bạn bè làm những điều đơn giản trở nên đặc biệt. Tôi rất thích những ngày như vậy."
+          "translation": "Cuối tuần trước, bạn tôi đến nhà. Chúng tôi chơi board game và ăn đồ vặt. Sau đó xem phim hoạt hình cùng nhau. Mọi người vui và ồn ào. Cuối cùng chụp ảnh để nhớ ngày hôm đó. Bạn bè làm những điều đơn giản trở nên đặc biệt. Tôi rất thích những ngày như vậy.",
+          "questions": [
+            "What is the main idea of the lesson 'A Fun Day with Friends'?",
+            "According to the lesson, what happens in this detail: \"Last weekend, my friends came to my house.\"?",
+            "Which activities or actions are described in 'A Fun Day with Friends'?",
+            "What can we learn from the story in 'A Fun Day with Friends'?",
+            "What does the lesson suggest about friends?"
+          ]
         }
       ]
     },
@@ -86,19 +149,40 @@
           "id": 1,
           "title": "Around My House",
           "content": "I live in a nice neighbourhood near a park. There is a small market just five minutes away. People sell fresh fruits and bread every morning. My neighbours are friendly. Mr. Nam always says hello when I pass by. In the evening, kids play outside. I like walking in the street with my dog. It's safe and quiet here.",
-          "translation": "Tôi sống ở khu phố đẹp gần công viên. Có chợ nhỏ chỉ cách năm phút. Mọi người bán trái cây tươi và bánh mì mỗi sáng. Hàng xóm thân thiện. Ông Nam luôn chào khi tôi đi qua. Buổi tối, trẻ con chơi ngoài đường. Tôi thích dắt chó đi dạo phố. Nơi đây an toàn và yên tĩnh."
+          "translation": "Tôi sống ở khu phố đẹp gần công viên. Có chợ nhỏ chỉ cách năm phút. Mọi người bán trái cây tươi và bánh mì mỗi sáng. Hàng xóm thân thiện. Ông Nam luôn chào khi tôi đi qua. Buổi tối, trẻ con chơi ngoài đường. Tôi thích dắt chó đi dạo phố. Nơi đây an toàn và yên tĩnh.",
+          "questions": [
+            "What is the main idea of the lesson 'Around My House'?",
+            "According to the lesson, what happens in this detail: \"I live in a nice neighbourhood near a park.\"?",
+            "Which activities or actions are described in 'Around My House'?",
+            "What can we learn from the story in 'Around My House'?",
+            "What does the lesson suggest about away?"
+          ]
         },
         {
           "id": 2,
           "title": "Morning Walk in the Neighbourhood",
           "content": "Every morning I walk around my neighbourhood. The air is fresh and birds sing. I see old ladies doing exercise in the park. A coffee shop opens early and smells good. Sometimes I buy milk tea on the way to school. Neighbours smile and wave at me. I feel happy starting my day like this.",
-          "translation": "Mỗi sáng tôi đi dạo quanh khu phố. Không khí trong lành và chim hót. Tôi thấy các bà cụ tập thể dục ở công viên. Quán cà phê mở sớm và thơm. Đôi khi tôi mua trà sữa trên đường đi học. Hàng xóm mỉm cười và vẫy tay. Tôi thấy vui khi bắt đầu ngày như vậy."
+          "translation": "Mỗi sáng tôi đi dạo quanh khu phố. Không khí trong lành và chim hót. Tôi thấy các bà cụ tập thể dục ở công viên. Quán cà phê mở sớm và thơm. Đôi khi tôi mua trà sữa trên đường đi học. Hàng xóm mỉm cười và vẫy tay. Tôi thấy vui khi bắt đầu ngày như vậy.",
+          "questions": [
+            "What is the main idea of the lesson 'Morning Walk in the Neighbourhood'?",
+            "According to the lesson, what happens in this detail: \"Every morning I walk around my neighbourhood.\"?",
+            "Which activities or actions are described in 'Morning Walk in the Neighbourhood'?",
+            "What can we learn from the story in 'Morning Walk in the Neighbourhood'?",
+            "What does the lesson suggest about feel?"
+          ]
         },
         {
           "id": 3,
           "title": "Helping a Neighbour",
           "content": "Yesterday my neighbour needed help. Her bag was heavy so I carried it home for her. She thanked me and gave me some mangoes. We talked about school and weather. Neighbours help each other here. It feels good to be useful. I like living in this friendly place.",
-          "translation": "Hôm qua hàng xóm cần giúp. Túi bà nặng nên tôi xách về nhà giúp. Bà cảm ơn và cho tôi ít xoài. Chúng tôi nói về trường và thời tiết. Hàng xóm giúp nhau ở đây. Cảm giác tốt khi hữu ích. Tôi thích sống ở nơi thân thiện này."
+          "translation": "Hôm qua hàng xóm cần giúp. Túi bà nặng nên tôi xách về nhà giúp. Bà cảm ơn và cho tôi ít xoài. Chúng tôi nói về trường và thời tiết. Hàng xóm giúp nhau ở đây. Cảm giác tốt khi hữu ích. Tôi thích sống ở nơi thân thiện này.",
+          "questions": [
+            "What is the main idea of the lesson 'Helping a Neighbour'?",
+            "According to the lesson, what happens in this detail: \"Yesterday my neighbour needed help.\"?",
+            "Which activities or actions are described in 'Helping a Neighbour'?",
+            "What can we learn from the story in 'Helping a Neighbour'?",
+            "What does the lesson suggest about help?"
+          ]
         }
       ]
     },
@@ -111,19 +195,40 @@
           "id": 1,
           "title": "Ha Long Bay Trip",
           "content": "Last summer my family went to Ha Long Bay. We took a boat and saw many islands. The water was green and very beautiful. We stopped to swim and eat seafood. In the afternoon we visited a cave. It had colorful lights inside. The sunset was amazing. I took many photos. It was a great trip.",
-          "translation": "Mùa hè năm ngoái gia đình tôi đi Vịnh Hạ Long. Chúng tôi đi thuyền và thấy nhiều đảo. Nước màu xanh và rất đẹp. Chúng tôi dừng bơi và ăn hải sản. Buổi chiều thăm hang động. Bên trong có đèn màu. Hoàng hôn tuyệt đẹp. Tôi chụp nhiều ảnh. Đó là chuyến đi hay."
+          "translation": "Mùa hè năm ngoái gia đình tôi đi Vịnh Hạ Long. Chúng tôi đi thuyền và thấy nhiều đảo. Nước màu xanh và rất đẹp. Chúng tôi dừng bơi và ăn hải sản. Buổi chiều thăm hang động. Bên trong có đèn màu. Hoàng hôn tuyệt đẹp. Tôi chụp nhiều ảnh. Đó là chuyến đi hay.",
+          "questions": [
+            "What is the main idea of the lesson 'Ha Long Bay Trip'?",
+            "According to the lesson, what happens in this detail: \"Last summer my family went to Ha Long Bay.\"?",
+            "Which activities or actions are described in 'Ha Long Bay Trip'?",
+            "What can we learn from the story in 'Ha Long Bay Trip'?",
+            "What does the lesson suggest about took?"
+          ]
         },
         {
           "id": 2,
           "title": "Sapa in the Mountains",
           "content": "Sapa has beautiful mountains and rice fields. The air is cool and fresh. We walked on small paths and saw H'Mong people. They wear colorful clothes. In September the rice is golden. I tried local food like grilled meat. Sapa is peaceful and nice. I want to go back again.",
-          "translation": "Sapa có núi đẹp và ruộng bậc thang. Không khí mát và trong lành. Chúng tôi đi đường nhỏ và thấy người H'Mông. Họ mặc đồ màu sắc. Tháng 9 lúa vàng óng. Tôi thử đồ ăn địa phương như thịt nướng. Sapa yên bình và hay. Tôi muốn quay lại."
+          "translation": "Sapa có núi đẹp và ruộng bậc thang. Không khí mát và trong lành. Chúng tôi đi đường nhỏ và thấy người H'Mông. Họ mặc đồ màu sắc. Tháng 9 lúa vàng óng. Tôi thử đồ ăn địa phương như thịt nướng. Sapa yên bình và hay. Tôi muốn quay lại.",
+          "questions": [
+            "What is the main idea of the lesson 'Sapa in the Mountains'?",
+            "According to the lesson, what happens in this detail: \"Sapa has beautiful mountains and rice fields.\"?",
+            "Which activities or actions are described in 'Sapa in the Mountains'?",
+            "What can we learn from the story in 'Sapa in the Mountains'?",
+            "What does the lesson suggest about rice?"
+          ]
         },
         {
           "id": 3,
           "title": "Phong Nha Cave",
           "content": "Phong Nha Cave is very big and dark inside. We took a boat on the river. There were many rocks and lights. The cave is cool even in summer. My dad told stories about it. We walked and took photos. It felt like an adventure. I liked it very much.",
-          "translation": "Hang Phong Nha rất lớn và tối bên trong. Chúng tôi đi thuyền trên sông. Có nhiều đá và đèn. Hang mát dù mùa hè. Bố tôi kể chuyện về nó. Chúng tôi đi bộ và chụp ảnh. Cảm giác như phiêu lưu. Tôi thích lắm."
+          "translation": "Hang Phong Nha rất lớn và tối bên trong. Chúng tôi đi thuyền trên sông. Có nhiều đá và đèn. Hang mát dù mùa hè. Bố tôi kể chuyện về nó. Chúng tôi đi bộ và chụp ảnh. Cảm giác như phiêu lưu. Tôi thích lắm.",
+          "questions": [
+            "What is the main idea of the lesson 'Phong Nha Cave'?",
+            "According to the lesson, what happens in this detail: \"Phong Nha Cave is very big and dark inside.\"?",
+            "Which activities or actions are described in 'Phong Nha Cave'?",
+            "What can we learn from the story in 'Phong Nha Cave'?",
+            "What does the lesson suggest about cave?"
+          ]
         }
       ]
     },
@@ -136,19 +241,40 @@
           "id": 1,
           "title": "Preparing for Tet",
           "content": "Before Tet we clean the house together. Mom buys flowers and fruits. We decorate with peach blossoms. Dad makes banh chung with sticky rice. I help wrap the cakes. Children get new clothes. Everyone is busy and happy. Tet is coming soon. I can't wait to see fireworks.",
-          "translation": "Trước Tết chúng tôi dọn nhà cùng nhau. Mẹ mua hoa và trái cây. Chúng tôi trang trí bằng hoa đào. Bố làm bánh chưng với nếp. Tôi giúp gói bánh. Trẻ em được mua quần áo mới. Mọi người bận rộn và vui. Tết sắp đến rồi. Tôi mong xem pháo hoa."
+          "translation": "Trước Tết chúng tôi dọn nhà cùng nhau. Mẹ mua hoa và trái cây. Chúng tôi trang trí bằng hoa đào. Bố làm bánh chưng với nếp. Tôi giúp gói bánh. Trẻ em được mua quần áo mới. Mọi người bận rộn và vui. Tết sắp đến rồi. Tôi mong xem pháo hoa.",
+          "questions": [
+            "What is the main idea of the lesson 'Preparing for Tet'?",
+            "According to the lesson, what happens in this detail: \"Before Tet we clean the house together.\"?",
+            "Which activities or actions are described in 'Preparing for Tet'?",
+            "What can we learn from the story in 'Preparing for Tet'?",
+            "What does the lesson suggest about banh?"
+          ]
         },
         {
           "id": 2,
           "title": "Tet Morning",
           "content": "On Tet morning we wear new clothes. I say happy new year to grandparents. They give me lucky money in red envelopes. We eat banh chung and mut tet. The house smells nice with incense. Everyone smiles and talks. Tet makes us feel warm and lucky.",
-          "translation": "Sáng Tết chúng tôi mặc đồ mới. Tôi chúc Tết ông bà. Họ mừng tuổi bằng tiền trong bao lì xì đỏ. Chúng tôi ăn bánh chưng và mứt. Nhà thơm mùi nhang. Mọi người cười và nói chuyện. Tết làm chúng tôi ấm áp và may mắn."
+          "translation": "Sáng Tết chúng tôi mặc đồ mới. Tôi chúc Tết ông bà. Họ mừng tuổi bằng tiền trong bao lì xì đỏ. Chúng tôi ăn bánh chưng và mứt. Nhà thơm mùi nhang. Mọi người cười và nói chuyện. Tết làm chúng tôi ấm áp và may mắn.",
+          "questions": [
+            "What is the main idea of the lesson 'Tet Morning'?",
+            "According to the lesson, what happens in this detail: \"On Tet morning we wear new clothes.\"?",
+            "Which activities or actions are described in 'Tet Morning'?",
+            "What can we learn from the story in 'Tet Morning'?",
+            "What does the lesson suggest about lucky?"
+          ]
         },
         {
           "id": 3,
           "title": "Visiting Relatives on Tet",
           "content": "During Tet we visit grandparents and aunts. We bring fruits and cakes as gifts. They give us lucky money and sweets. We eat together and talk about old times. Children play outside with new toys. Tet is about family and good wishes. I love these visits very much.",
-          "translation": "Trong Tết chúng tôi thăm ông bà và cô dì. Mang trái cây và bánh làm quà. Họ mừng tuổi và cho kẹo. Chúng tôi ăn cùng và kể chuyện xưa. Trẻ em chơi ngoài với đồ chơi mới. Tết là về gia đình và lời chúc tốt. Tôi rất thích những chuyến thăm này."
+          "translation": "Trong Tết chúng tôi thăm ông bà và cô dì. Mang trái cây và bánh làm quà. Họ mừng tuổi và cho kẹo. Chúng tôi ăn cùng và kể chuyện xưa. Trẻ em chơi ngoài với đồ chơi mới. Tết là về gia đình và lời chúc tốt. Tôi rất thích những chuyến thăm này.",
+          "questions": [
+            "What is the main idea of the lesson 'Visiting Relatives on Tet'?",
+            "According to the lesson, what happens in this detail: \"During Tet we visit grandparents and aunts.\"?",
+            "Which activities or actions are described in 'Visiting Relatives on Tet'?",
+            "What can we learn from the story in 'Visiting Relatives on Tet'?",
+            "What does the lesson suggest about give?"
+          ]
         }
       ]
     },
@@ -161,19 +287,40 @@
           "id": 1,
           "title": "Watching TV After School",
           "content": "After school I watch cartoons on TV. My favorite show has funny animals. They go on adventures and solve problems. I laugh a lot when I watch it. Sometimes my sister joins me. We eat snacks together. TV helps me relax after studying. I don't watch too long though.",
-          "translation": "Sau giờ học tôi xem phim hoạt hình trên TV. Chương trình yêu thích có động vật hài hước. Chúng phiêu lưu và giải quyết vấn đề. Tôi cười nhiều khi xem. Đôi khi em gái tôi xem cùng. Chúng tôi ăn đồ vặt. TV giúp thư giãn sau khi học. Nhưng tôi không xem quá lâu."
+          "translation": "Sau giờ học tôi xem phim hoạt hình trên TV. Chương trình yêu thích có động vật hài hước. Chúng phiêu lưu và giải quyết vấn đề. Tôi cười nhiều khi xem. Đôi khi em gái tôi xem cùng. Chúng tôi ăn đồ vặt. TV giúp thư giãn sau khi học. Nhưng tôi không xem quá lâu.",
+          "questions": [
+            "What is the main idea of the lesson 'Watching TV After School'?",
+            "According to the lesson, what happens in this detail: \"After school I watch cartoons on TV.\"?",
+            "Which activities or actions are described in 'Watching TV After School'?",
+            "What can we learn from the story in 'Watching TV After School'?",
+            "What does the lesson suggest about watch?"
+          ]
         },
         {
           "id": 2,
           "title": "Family TV Time",
           "content": "In the evening my family watches TV together. Dad likes news about sports. Mom watches cooking shows. I choose comedy programs. We talk and laugh during the show. Sometimes we discuss what we see. Family TV time is fun and relaxing for us.",
-          "translation": "Buổi tối gia đình tôi xem TV cùng nhau. Bố thích tin tức thể thao. Mẹ xem chương trình nấu ăn. Tôi chọn show hài. Chúng tôi nói chuyện và cười trong lúc xem. Đôi khi thảo luận những gì thấy. Thời gian xem TV gia đình vui và thư giãn."
+          "translation": "Buổi tối gia đình tôi xem TV cùng nhau. Bố thích tin tức thể thao. Mẹ xem chương trình nấu ăn. Tôi chọn show hài. Chúng tôi nói chuyện và cười trong lúc xem. Đôi khi thảo luận những gì thấy. Thời gian xem TV gia đình vui và thư giãn.",
+          "questions": [
+            "What is the main idea of the lesson 'Family TV Time'?",
+            "According to the lesson, what happens in this detail: \"In the evening my family watches TV together.\"?",
+            "Which activities or actions are described in 'Family TV Time'?",
+            "What can we learn from the story in 'Family TV Time'?",
+            "What does the lesson suggest about family?"
+          ]
         },
         {
           "id": 3,
           "title": "A Funny TV Show",
           "content": "Last night we watched a funny TV show. The actors made silly mistakes. Everyone in my family laughed hard. My brother liked the jokes best. I enjoyed the music too. Good shows make us happy. We talked about it the next day at school.",
-          "translation": "Tối qua chúng tôi xem show hài trên TV. Diễn viên làm lỗi ngốc nghếch. Cả nhà cười lớn. Em trai tôi thích trò đùa nhất. Tôi thích nhạc nữa. Show hay làm chúng tôi vui. Chúng tôi nói về nó hôm sau ở trường."
+          "translation": "Tối qua chúng tôi xem show hài trên TV. Diễn viên làm lỗi ngốc nghếch. Cả nhà cười lớn. Em trai tôi thích trò đùa nhất. Tôi thích nhạc nữa. Show hay làm chúng tôi vui. Chúng tôi nói về nó hôm sau ở trường.",
+          "questions": [
+            "What is the main idea of the lesson 'A Funny TV Show'?",
+            "According to the lesson, what happens in this detail: \"Last night we watched a funny TV show.\"?",
+            "Which activities or actions are described in 'A Funny TV Show'?",
+            "What can we learn from the story in 'A Funny TV Show'?",
+            "What does the lesson suggest about best?"
+          ]
         }
       ]
     },
@@ -186,19 +333,40 @@
           "id": 1,
           "title": "Playing Soccer",
           "content": "I play soccer with friends every afternoon. We meet in the park after school. We divide into two teams. I like kicking the ball and running. Sometimes we win, sometimes we lose. After the game we drink water and talk. Soccer is fun and good for health.",
-          "translation": "Tôi chơi bóng đá với bạn mỗi chiều. Chúng tôi gặp ở công viên sau giờ học. Chia thành hai đội. Tôi thích sút bóng và chạy. Đôi khi thắng, đôi khi thua. Sau trận uống nước và nói chuyện. Bóng đá vui và tốt cho sức khỏe."
+          "translation": "Tôi chơi bóng đá với bạn mỗi chiều. Chúng tôi gặp ở công viên sau giờ học. Chia thành hai đội. Tôi thích sút bóng và chạy. Đôi khi thắng, đôi khi thua. Sau trận uống nước và nói chuyện. Bóng đá vui và tốt cho sức khỏe.",
+          "questions": [
+            "What is the main idea of the lesson 'Playing Soccer'?",
+            "According to the lesson, what happens in this detail: \"I play soccer with friends every afternoon.\"?",
+            "Which activities or actions are described in 'Playing Soccer'?",
+            "What can we learn from the story in 'Playing Soccer'?",
+            "What does the lesson suggest about soccer?"
+          ]
         },
         {
           "id": 2,
           "title": "Badminton with Sister",
           "content": "My sister and I play badminton at home. We use the yard when it's not raining. We hit the shuttlecock back and forth. Sometimes we count points. It's fast and makes us laugh. Playing together is more fun than alone. We do it almost every evening.",
-          "translation": "Em gái tôi và tôi chơi cầu lông ở nhà. Chúng tôi dùng sân khi không mưa. Đánh cầu qua lại. Đôi khi đếm điểm. Nhanh và làm chúng tôi cười. Chơi cùng vui hơn chơi một mình. Chúng tôi làm hầu như mỗi tối."
+          "translation": "Em gái tôi và tôi chơi cầu lông ở nhà. Chúng tôi dùng sân khi không mưa. Đánh cầu qua lại. Đôi khi đếm điểm. Nhanh và làm chúng tôi cười. Chơi cùng vui hơn chơi một mình. Chúng tôi làm hầu như mỗi tối.",
+          "questions": [
+            "What is the main idea of the lesson 'Badminton with Sister'?",
+            "According to the lesson, what happens in this detail: \"My sister and I play badminton at home.\"?",
+            "Which activities or actions are described in 'Badminton with Sister'?",
+            "What can we learn from the story in 'Badminton with Sister'?",
+            "What does the lesson suggest about it's?"
+          ]
         },
         {
           "id": 3,
           "title": "Why I Like Sports",
           "content": "I like sports because they make me strong. Playing with friends is always fun. We run, jump and laugh together. After playing I feel energetic. Sports help me forget worries. I want to try new games like volleyball next. Do you play sports too?",
-          "translation": "Tôi thích thể thao vì nó làm tôi khỏe. Chơi với bạn luôn vui. Chúng tôi chạy, nhảy và cười cùng. Sau khi chơi tôi tràn năng lượng. Thể thao giúp quên lo lắng. Tôi muốn thử trò mới như bóng chuyền. Bạn có chơi thể thao không?"
+          "translation": "Tôi thích thể thao vì nó làm tôi khỏe. Chơi với bạn luôn vui. Chúng tôi chạy, nhảy và cười cùng. Sau khi chơi tôi tràn năng lượng. Thể thao giúp quên lo lắng. Tôi muốn thử trò mới như bóng chuyền. Bạn có chơi thể thao không?",
+          "questions": [
+            "What is the main idea of the lesson 'Why I Like Sports'?",
+            "According to the lesson, what happens in this detail: \"I like sports because they make me strong.\"?",
+            "Which activities or actions are described in 'Why I Like Sports'?",
+            "What can we learn from the story in 'Why I Like Sports'?",
+            "What does the lesson suggest about sports?"
+          ]
         }
       ]
     },
@@ -211,19 +379,40 @@
           "id": 1,
           "title": "Life in Hanoi",
           "content": "Hanoi is my favorite city in Vietnam. It has old streets and lakes. People ride motorbikes everywhere. In the morning I see vendors selling pho. The Old Quarter has many shops. At night the streets are bright with lights. I like walking there with my family. Hanoi feels alive and friendly.",
-          "translation": "Hà Nội là thành phố yêu thích của tôi ở Việt Nam. Có phố cổ và hồ. Mọi người đi xe máy khắp nơi. Sáng tôi thấy người bán phở. Phố cổ có nhiều cửa hàng. Đêm phố sáng đèn. Tôi thích đi dạo với gia đình. Hà Nội sống động và thân thiện."
+          "translation": "Hà Nội là thành phố yêu thích của tôi ở Việt Nam. Có phố cổ và hồ. Mọi người đi xe máy khắp nơi. Sáng tôi thấy người bán phở. Phố cổ có nhiều cửa hàng. Đêm phố sáng đèn. Tôi thích đi dạo với gia đình. Hà Nội sống động và thân thiện.",
+          "questions": [
+            "What is the main idea of the lesson 'Life in Hanoi'?",
+            "According to the lesson, what happens in this detail: \"Hanoi is my favorite city in Vietnam.\"?",
+            "Which activities or actions are described in 'Life in Hanoi'?",
+            "What can we learn from the story in 'Life in Hanoi'?",
+            "What does the lesson suggest about hanoi?"
+          ]
         },
         {
           "id": 2,
           "title": "A Day in Ho Chi Minh City",
           "content": "Ho Chi Minh City is big and busy. There are tall buildings and many cars. I like Ben Thanh Market for shopping. People sell clothes and food. In the evening we eat street food. The city has nice parks too. I feel excited when I visit. It's different from my small town.",
-          "translation": "TP. Hồ Chí Minh lớn và bận rộn. Có tòa nhà cao và nhiều xe. Tôi thích chợ Bến Thành mua sắm. Mọi người bán quần áo và đồ ăn. Buổi tối ăn đồ đường phố. Thành phố có công viên đẹp. Tôi hào hứng khi thăm. Nó khác quê tôi nhỏ."
+          "translation": "TP. Hồ Chí Minh lớn và bận rộn. Có tòa nhà cao và nhiều xe. Tôi thích chợ Bến Thành mua sắm. Mọi người bán quần áo và đồ ăn. Buổi tối ăn đồ đường phố. Thành phố có công viên đẹp. Tôi hào hứng khi thăm. Nó khác quê tôi nhỏ.",
+          "questions": [
+            "What is the main idea of the lesson 'A Day in Ho Chi Minh City'?",
+            "According to the lesson, what happens in this detail: \"Ho Chi Minh City is big and busy.\"?",
+            "Which activities or actions are described in 'A Day in Ho Chi Minh City'?",
+            "What can we learn from the story in 'A Day in Ho Chi Minh City'?",
+            "What does the lesson suggest about city?"
+          ]
         },
         {
           "id": 3,
           "title": "Dream City to Visit",
           "content": "I want to visit Tokyo one day. It has fast trains and tall towers. People are polite and helpful. I like Japanese food like sushi. The city mixes old temples and new shops. At night it's bright with lights. It looks modern and interesting. I think it would be fun.",
-          "translation": "Tôi muốn thăm Tokyo một ngày nào đó. Có tàu nhanh và tòa tháp cao. Mọi người lịch sự và hay giúp. Tôi thích đồ Nhật như sushi. Thành phố kết hợp đền cổ và cửa hàng mới. Đêm sáng đèn. Nó hiện đại và thú vị. Tôi nghĩ sẽ vui."
+          "translation": "Tôi muốn thăm Tokyo một ngày nào đó. Có tàu nhanh và tòa tháp cao. Mọi người lịch sự và hay giúp. Tôi thích đồ Nhật như sushi. Thành phố kết hợp đền cổ và cửa hàng mới. Đêm sáng đèn. Nó hiện đại và thú vị. Tôi nghĩ sẽ vui.",
+          "questions": [
+            "What is the main idea of the lesson 'Dream City to Visit'?",
+            "According to the lesson, what happens in this detail: \"I want to visit Tokyo one day.\"?",
+            "Which activities or actions are described in 'Dream City to Visit'?",
+            "What can we learn from the story in 'Dream City to Visit'?",
+            "What does the lesson suggest about like?"
+          ]
         }
       ]
     },
@@ -236,19 +425,40 @@
           "id": 1,
           "title": "Smart House Ideas",
           "content": "In the future houses will be smart. Lights turn on by voice. The fridge tells us when food is old. Robots clean the floor every day. Solar panels make free electricity. Windows open automatically when it's hot. I want a house like that. It will make life easy and fun.",
-          "translation": "Tương lai nhà sẽ thông minh. Đèn bật bằng giọng nói. Tủ lạnh báo khi thức ăn cũ. Robot dọn sàn mỗi ngày. Pin mặt trời tạo điện miễn phí. Cửa sổ tự mở khi nóng. Tôi muốn nhà như vậy. Nó làm cuộc sống dễ và vui."
+          "translation": "Tương lai nhà sẽ thông minh. Đèn bật bằng giọng nói. Tủ lạnh báo khi thức ăn cũ. Robot dọn sàn mỗi ngày. Pin mặt trời tạo điện miễn phí. Cửa sổ tự mở khi nóng. Tôi muốn nhà như vậy. Nó làm cuộc sống dễ và vui.",
+          "questions": [
+            "What is the main idea of the lesson 'Smart House Ideas'?",
+            "According to the lesson, what happens in this detail: \"In the future houses will be smart.\"?",
+            "Which activities or actions are described in 'Smart House Ideas'?",
+            "What can we learn from the story in 'Smart House Ideas'?",
+            "What does the lesson suggest about make?"
+          ]
         },
         {
           "id": 2,
           "title": "Future Garden House",
           "content": "My dream house in the future has a big garden. Vegetables grow without soil. A machine waters them automatically. The house has glass walls for sunlight. We can see stars at night from bed. It will be green and quiet. Living there would be peaceful and healthy.",
-          "translation": "Nhà mơ ước tương lai của tôi có vườn lớn. Rau trồng không cần đất. Máy tưới tự động. Nhà có tường kính đón nắng. Chúng tôi thấy sao từ giường. Nó xanh và yên tĩnh. Sống ở đó sẽ bình yên và khỏe mạnh."
+          "translation": "Nhà mơ ước tương lai của tôi có vườn lớn. Rau trồng không cần đất. Máy tưới tự động. Nhà có tường kính đón nắng. Chúng tôi thấy sao từ giường. Nó xanh và yên tĩnh. Sống ở đó sẽ bình yên và khỏe mạnh.",
+          "questions": [
+            "What is the main idea of the lesson 'Future Garden House'?",
+            "According to the lesson, what happens in this detail: \"My dream house in the future has a big garden.\"?",
+            "Which activities or actions are described in 'Future Garden House'?",
+            "What can we learn from the story in 'Future Garden House'?",
+            "What does the lesson suggest about house?"
+          ]
         },
         {
           "id": 3,
           "title": "Flying to School",
           "content": "In the future I will go to school by flying car. No more traffic jams. The car is small and quiet. It flies above the city. I can see everything from up high. It takes only five minutes. School will be more fun with fast travel. I can't wait for that day.",
-          "translation": "Tương lai tôi đi học bằng xe bay. Không kẹt xe nữa. Xe nhỏ và yên tĩnh. Bay trên thành phố. Tôi thấy mọi thứ từ trên cao. Chỉ mất năm phút. Trường sẽ vui hơn với di chuyển nhanh. Tôi mong ngày đó đến."
+          "translation": "Tương lai tôi đi học bằng xe bay. Không kẹt xe nữa. Xe nhỏ và yên tĩnh. Bay trên thành phố. Tôi thấy mọi thứ từ trên cao. Chỉ mất năm phút. Trường sẽ vui hơn với di chuyển nhanh. Tôi mong ngày đó đến.",
+          "questions": [
+            "What is the main idea of the lesson 'Flying to School'?",
+            "According to the lesson, what happens in this detail: \"In the future I will go to school by flying car.\"?",
+            "Which activities or actions are described in 'Flying to School'?",
+            "What can we learn from the story in 'Flying to School'?",
+            "What does the lesson suggest about school?"
+          ]
         }
       ]
     },
@@ -261,19 +471,40 @@
           "id": 1,
           "title": "Fast Trains to Visit Family",
           "content": "In the future trains will be super fast. I can go from Hanoi to Ho Chi Minh in two hours. No more long bus rides. The seats are comfortable. We watch movies on the way. Travelling will be easy and quick. I can visit grandparents more often. It makes family closer.",
-          "translation": "Tương lai tàu sẽ siêu nhanh. Tôi đi từ Hà Nội đến TP.HCM chỉ hai giờ. Không ngồi xe buýt lâu nữa. Ghế thoải mái. Chúng tôi xem phim trên đường. Du lịch dễ và nhanh. Tôi thăm ông bà thường hơn. Nó làm gia đình gần hơn."
+          "translation": "Tương lai tàu sẽ siêu nhanh. Tôi đi từ Hà Nội đến TP.HCM chỉ hai giờ. Không ngồi xe buýt lâu nữa. Ghế thoải mái. Chúng tôi xem phim trên đường. Du lịch dễ và nhanh. Tôi thăm ông bà thường hơn. Nó làm gia đình gần hơn.",
+          "questions": [
+            "What is the main idea of the lesson 'Fast Trains to Visit Family'?",
+            "According to the lesson, what happens in this detail: \"In the future trains will be super fast.\"?",
+            "Which activities or actions are described in 'Fast Trains to Visit Family'?",
+            "What can we learn from the story in 'Fast Trains to Visit Family'?",
+            "What does the lesson suggest about easy?"
+          ]
         },
         {
           "id": 2,
           "title": "Flying to the Beach",
           "content": "Future flying cars can take me to the beach fast. No waiting for buses or trains. We fly over rivers and fields. The view is beautiful from above. At the beach we swim and play. Travelling like this is exciting. I want to try it soon.",
-          "translation": "Xe bay tương lai đưa tôi đến bãi biển nhanh. Không chờ xe buýt hay tàu. Chúng tôi bay qua sông và đồng. View đẹp từ trên cao. Ở bãi biển chúng tôi bơi và chơi. Du lịch kiểu này thú vị. Tôi muốn thử sớm."
+          "translation": "Xe bay tương lai đưa tôi đến bãi biển nhanh. Không chờ xe buýt hay tàu. Chúng tôi bay qua sông và đồng. View đẹp từ trên cao. Ở bãi biển chúng tôi bơi và chơi. Du lịch kiểu này thú vị. Tôi muốn thử sớm.",
+          "questions": [
+            "What is the main idea of the lesson 'Flying to the Beach'?",
+            "According to the lesson, what happens in this detail: \"Future flying cars can take me to the beach fast.\"?",
+            "Which activities or actions are described in 'Flying to the Beach'?",
+            "What can we learn from the story in 'Flying to the Beach'?",
+            "What does the lesson suggest about beach?"
+          ]
         },
         {
           "id": 3,
           "title": "Travel with Friends",
           "content": "In the future my friends and I will travel together. We can book a flying van for the group. We go to Da Lat or Nha Trang. On the way we sing songs and eat snacks. Travelling with friends is always fun. We make memories and laugh a lot.",
-          "translation": "Tương lai bạn tôi và tôi du lịch cùng. Chúng tôi đặt xe van bay cho nhóm. Đi Đà Lạt hoặc Nha Trang. Trên đường hát và ăn đồ vặt. Du lịch với bạn luôn vui. Chúng tôi tạo kỷ niệm và cười nhiều."
+          "translation": "Tương lai bạn tôi và tôi du lịch cùng. Chúng tôi đặt xe van bay cho nhóm. Đi Đà Lạt hoặc Nha Trang. Trên đường hát và ăn đồ vặt. Du lịch với bạn luôn vui. Chúng tôi tạo kỷ niệm và cười nhiều.",
+          "questions": [
+            "What is the main idea of the lesson 'Travel with Friends'?",
+            "According to the lesson, what happens in this detail: \"In the future my friends and I will travel together.\"?",
+            "Which activities or actions are described in 'Travel with Friends'?",
+            "What can we learn from the story in 'Travel with Friends'?",
+            "What does the lesson suggest about friends?"
+          ]
         }
       ]
     },
@@ -286,19 +517,40 @@
           "id": 1,
           "title": "Talking About My Year",
           "content": "This year I learned many new things in English. I can talk about my school and friends. I know how to describe my house. We did projects and shared ideas. My teacher says I speak better now. I feel proud of my progress. English is fun to learn.",
-          "translation": "Năm nay tôi học nhiều điều mới tiếng Anh. Tôi nói được về trường và bạn bè. Tôi biết mô tả nhà. Chúng tôi làm dự án và chia sẻ ý tưởng. Cô giáo nói tôi nói tốt hơn. Tôi tự hào về tiến bộ. Tiếng Anh vui khi học."
+          "translation": "Năm nay tôi học nhiều điều mới tiếng Anh. Tôi nói được về trường và bạn bè. Tôi biết mô tả nhà. Chúng tôi làm dự án và chia sẻ ý tưởng. Cô giáo nói tôi nói tốt hơn. Tôi tự hào về tiến bộ. Tiếng Anh vui khi học.",
+          "questions": [
+            "What is the main idea of the lesson 'Talking About My Year'?",
+            "According to the lesson, what happens in this detail: \"This year I learned many new things in English.\"?",
+            "Which activities or actions are described in 'Talking About My Year'?",
+            "What can we learn from the story in 'Talking About My Year'?",
+            "What does the lesson suggest about english?"
+          ]
         },
         {
           "id": 2,
           "title": "My Favorite Memory",
           "content": "My favorite memory this year is Tet holiday. We cleaned the house and made banh chung. I got lucky money from grandparents. We watched fireworks at night. Everyone was happy. I ate lots of good food. Tet with family is the best.",
-          "translation": "Kỷ niệm yêu thích năm nay là Tết. Chúng tôi dọn nhà và làm bánh chưng. Tôi nhận tiền mừng tuổi từ ông bà. Chúng tôi xem pháo hoa đêm. Mọi người vui. Tôi ăn nhiều đồ ngon. Tết với gia đình là tuyệt nhất."
+          "translation": "Kỷ niệm yêu thích năm nay là Tết. Chúng tôi dọn nhà và làm bánh chưng. Tôi nhận tiền mừng tuổi từ ông bà. Chúng tôi xem pháo hoa đêm. Mọi người vui. Tôi ăn nhiều đồ ngon. Tết với gia đình là tuyệt nhất.",
+          "questions": [
+            "What is the main idea of the lesson 'My Favorite Memory'?",
+            "According to the lesson, what happens in this detail: \"My favorite memory this year is Tet holiday.\"?",
+            "Which activities or actions are described in 'My Favorite Memory'?",
+            "What can we learn from the story in 'My Favorite Memory'?",
+            "What does the lesson suggest about banh?"
+          ]
         },
         {
           "id": 3,
           "title": "My Next Goal",
           "content": "Next year I want to speak English more. I will talk to friends in English sometimes. I will watch more cartoons and repeat sentences. My goal is to tell stories without stopping. I think I can do it with practice. English will help me in the future.",
-          "translation": "Năm sau tôi muốn nói tiếng Anh nhiều hơn. Tôi sẽ nói với bạn bằng tiếng Anh đôi khi. Tôi sẽ xem phim hoạt hình và lặp lại câu. Mục tiêu là kể chuyện không dừng. Tôi nghĩ có thể làm được nếu luyện. Tiếng Anh sẽ giúp tôi tương lai."
+          "translation": "Năm sau tôi muốn nói tiếng Anh nhiều hơn. Tôi sẽ nói với bạn bằng tiếng Anh đôi khi. Tôi sẽ xem phim hoạt hình và lặp lại câu. Mục tiêu là kể chuyện không dừng. Tôi nghĩ có thể làm được nếu luyện. Tiếng Anh sẽ giúp tôi tương lai.",
+          "questions": [
+            "What is the main idea of the lesson 'My Next Goal'?",
+            "According to the lesson, what happens in this detail: \"Next year I want to speak English more.\"?",
+            "Which activities or actions are described in 'My Next Goal'?",
+            "What can we learn from the story in 'My Next Goal'?",
+            "What does the lesson suggest about english?"
+          ]
         }
       ]
     }

@@ -518,6 +518,17 @@
 				<h3>Bản dịch (Translation)</h3>
 				<p class="translation">{lesson.translation}</p>
 			</div>
+
+			{#if lesson.questions?.length}
+				<div class="questions-section">
+					<h3>Questions</h3>
+					<ol class="questions-list">
+						{#each lesson.questions as question}
+							<li>{question}</li>
+						{/each}
+					</ol>
+				</div>
+			{/if}
 		</div>
 	{/if}
 	
@@ -968,6 +979,25 @@
 		line-height: 1.6;
 		margin: 0;
 		font-style: italic;
+	}
+
+	.questions-section h3 {
+		color: #667eea;
+		margin: 0 0 1rem 0;
+		font-size: 1.3rem;
+	}
+
+	.questions-list {
+		margin: 0;
+		padding-left: 1.5rem;
+		display: grid;
+		gap: 0.75rem;
+	}
+
+	.questions-list li {
+		color: #333;
+		font-size: 1.05rem;
+		line-height: 1.6;
 	}
 
 	/* TEMPORARILY DISABLED: Clickable word styles */
