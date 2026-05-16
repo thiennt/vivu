@@ -6,6 +6,40 @@
 	let { data } = $props();
 	let topic = $derived(data.topic);
 	let lesson = $derived(data.lesson);
+
+	function extractTagValues(text, tagName) {
+		if (!text) return [];
+		const regex = new RegExp(`<${tagName}>([\\s\\S]*?)<\\/${tagName}>`, 'gi');
+		const values = [];
+		let match;
+
+		while ((match = regex.exec(text)) !== null) {
+			const value = match[1]?.trim();
+			if (value) values.push(value);
+		}
+
+		return values;
+	}
+
+	function removeQaTags(text) {
+		if (!text) return '';
+		return text
+			.replace(/<q>[\s\S]*?<\/q>/gi, '')
+			.replace(/<a>[\s\S]*?<\/a>/gi, '')
+			.replace(/\n{3,}/g, '\n\n')
+			.trim();
+	}
+
+	let questions = $derived.by(() => extractTagValues(lesson.content, 'q'));
+	let answers = $derived.by(() => extractTagValues(lesson.content, 'a'));
+	let lessonStoryContent = $derived.by(() => removeQaTags(lesson.content));
+	let qaPairs = $derived.by(() => {
+		const maxLength = Math.max(questions.length, answers.length);
+		return Array.from({ length: maxLength }, (_, index) => ({
+			question: questions[index] || null,
+			answer: answers[index] || null
+		}));
+	});
 	
 	// State variables
 	let showLesson = $state(false);
@@ -509,9 +543,27 @@
 			<div class="story-section">
 				<h3>Story</h3>
 				<p class="story-text">
-					{lesson.content}
+					{lessonStoryContent}
 				</p>
 			</div>
+
+			{#if qaPairs.length > 0}
+				<div class="qa-section">
+					<h3>Questions & Answers</h3>
+					<div class="qa-list">
+						{#each qaPairs as qa, index}
+							<div class="qa-item">
+								{#if qa.question}
+									<p class="qa-question"><strong>Q{index + 1}:</strong> {qa.question}</p>
+								{/if}
+								{#if qa.answer}
+									<p class="qa-answer"><strong>A{index + 1}:</strong> {qa.answer}</p>
+								{/if}
+							</div>
+						{/each}
+					</div>
+				</div>
+			{/if}
 
 			<!-- Vietnamese translation -->
 			<div class="translation-section">
@@ -948,6 +1000,50 @@
 		line-height: 1.8;
 		margin: 0;
 		text-align: justify;
+		white-space: pre-line;
+	}
+
+	.qa-section {
+		margin-bottom: 2rem;
+		padding-bottom: 2rem;
+		border-bottom: 2px solid #f0f0f0;
+	}
+
+	.qa-section h3 {
+		color: #667eea;
+		margin: 0 0 1rem 0;
+		font-size: 1.3rem;
+	}
+
+	.qa-list {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.qa-item {
+		background: #f8f9ff;
+		border: 1px solid #e4e7ff;
+		border-radius: 10px;
+		padding: 1rem;
+	}
+
+	.qa-question,
+	.qa-answer {
+		margin: 0;
+		line-height: 1.6;
+	}
+
+	.qa-question + .qa-answer {
+		margin-top: 0.5rem;
+	}
+
+	.qa-question strong {
+		color: #667eea;
+	}
+
+	.qa-answer strong {
+		color: #764ba2;
 	}
 
 	.translation-section {
