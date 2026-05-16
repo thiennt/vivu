@@ -67,18 +67,16 @@
 	}
 
 	let qaData = $derived.by(() => parseQaContent(lesson.content));
-	let questions = $derived.by(() => qaData.questions);
-	let answers = $derived.by(() => qaData.answers);
-	let lessonStoryContent = $derived.by(() => qaData.story);
 	let qaPairs = $derived.by(() => {
-		const pairCount = Math.min(questions.length, answers.length);
+		const pairCount = Math.min(qaData.questions.length, qaData.answers.length);
 		return Array.from({ length: pairCount }, (_, index) => ({
-			question: questions[index],
-			answer: answers[index]
+			question: qaData.questions[index],
+			answer: qaData.answers[index]
 		}));
 	});
+	let hasQaCountMismatch = $derived.by(() => qaData.questions.length !== qaData.answers.length);
 	let hasQaMismatch = $derived.by(
-		() => questions.length !== answers.length || qaData.malformedTags
+		() => hasQaCountMismatch || qaData.malformedTags
 	);
 	
 	// State variables
@@ -583,7 +581,7 @@
 			<div class="story-section">
 				<h3>Story</h3>
 				<p class="story-text">
-					{lessonStoryContent}
+					{qaData.story}
 				</p>
 			</div>
 
@@ -600,7 +598,11 @@
 					</div>
 					{#if hasQaMismatch}
 						<p class="qa-warning">
-							Some Q&A tags are unmatched in this lesson, so only complete question-answer pairs are shown.
+							{#if qaData.malformedTags}
+								Some Q&A tags are malformed in this lesson, so only valid question-answer pairs are shown.
+							{:else if hasQaCountMismatch}
+								This lesson has different numbers of question and answer tags, so only complete pairs are shown.
+							{/if}
 						</p>
 					{/if}
 				</div>
