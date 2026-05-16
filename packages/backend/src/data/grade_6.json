@@ -486,12 +486,12 @@
           "translation": "Tôi muốn thăm Tokyo một ngày nào đó. Có tàu nhanh và tòa tháp cao. Mọi người lịch sự và hay giúp. Tôi thích đồ Nhật như sushi. Thành phố kết hợp đền cổ và cửa hàng mới. Đêm sáng đèn. Nó hiện đại và thú vị. Tôi nghĩ sẽ vui.",
           "questions": [
             {
-              "q": "What does the speaker miss about their hometown?",
-              "a": "The speaker misses the quiet life and friendly people of their hometown."
+              "q": "Which city does the speaker dream of visiting?",
+              "a": "The speaker wants to visit Tokyo one day."
             },
             {
-              "q": "How does the speaker feel when visiting their hometown?",
-              "a": "The speaker feels calm and comfortable."
+              "q": "What does the speaker like about Tokyo?",
+              "a": "The speaker likes the fast trains, tall towers, and Japanese food like sushi."
             }
           ]
         }
@@ -510,11 +510,11 @@
           "questions": [
             {
               "q": "What will smart houses be able to do in the future?",
-              "a": "Lights will turn on by voice and smart devices will control everything."
+              "a": "Lights will turn on by voice and robots will clean the floor every day."
             },
             {
               "q": "What will the fridge do in a smart house?",
-              "a": "The fridge will tell us when food runs out."
+              "a": "The fridge will tell us when food is old."
             }
           ]
         },
