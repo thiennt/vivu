@@ -7,32 +7,69 @@
 	let topic = $derived(data.topic);
 	let lesson = $derived(data.lesson);
 
-	function extractTagValues(text, tagName) {
-		if (!text) return [];
-		const regex = new RegExp(`<${tagName}>([\\s\\S]*?)<\\/${tagName}>`, 'gi');
-		const values = [];
-		let match;
-
-		while ((match = regex.exec(text)) !== null) {
-			const value = match[1]?.trim();
-			if (value) values.push(value);
+	function parseQaContent(text) {
+		if (!text) {
+			return { story: '', questions: [], answers: [], malformedTags: false };
 		}
 
-		return values;
+		const questions = [];
+		const answers = [];
+		const storyParts = [];
+		let malformedTags = false;
+		let cursor = 0;
+
+		while (cursor < text.length) {
+			const qStart = text.indexOf('<q>', cursor);
+			const aStart = text.indexOf('<a>', cursor);
+			const qValid = qStart !== -1;
+			const aValid = aStart !== -1;
+
+			if (!qValid && !aValid) {
+				storyParts.push(text.slice(cursor));
+				break;
+			}
+
+			let tag = 'q';
+			let startIndex = qStart;
+
+			if (!qValid || (aValid && aStart < qStart)) {
+				tag = 'a';
+				startIndex = aStart;
+			}
+
+			storyParts.push(text.slice(cursor, startIndex));
+
+			const closeTag = tag === 'q' ? '</q>' : '</a>';
+			const contentStart = startIndex + 3;
+			const endIndex = text.indexOf(closeTag, contentStart);
+
+			if (endIndex === -1) {
+				malformedTags = true;
+				storyParts.push(text.slice(startIndex));
+				break;
+			}
+
+			const value = text.slice(contentStart, endIndex).trim();
+			if (value) {
+				if (tag === 'q') questions.push(value);
+				else answers.push(value);
+			}
+
+			cursor = endIndex + closeTag.length;
+		}
+
+		return {
+			story: storyParts.join('').replace(/\n{3,}/g, '\n\n').trim(),
+			questions,
+			answers,
+			malformedTags
+		};
 	}
 
-	function removeQaTags(text) {
-		if (!text) return '';
-		return text
-			.replace(/<q>[\s\S]*?<\/q>/gi, '')
-			.replace(/<a>[\s\S]*?<\/a>/gi, '')
-			.replace(/\n{3,}/g, '\n\n')
-			.trim();
-	}
-
-	let questions = $derived.by(() => extractTagValues(lesson.content, 'q'));
-	let answers = $derived.by(() => extractTagValues(lesson.content, 'a'));
-	let lessonStoryContent = $derived.by(() => removeQaTags(lesson.content));
+	let qaData = $derived.by(() => parseQaContent(lesson.content));
+	let questions = $derived.by(() => qaData.questions);
+	let answers = $derived.by(() => qaData.answers);
+	let lessonStoryContent = $derived.by(() => qaData.story);
 	let qaPairs = $derived.by(() => {
 		const pairCount = Math.min(questions.length, answers.length);
 		return Array.from({ length: pairCount }, (_, index) => ({
@@ -40,7 +77,9 @@
 			answer: answers[index]
 		}));
 	});
-	let hasQaMismatch = $derived.by(() => questions.length !== answers.length);
+	let hasQaMismatch = $derived.by(
+		() => questions.length !== answers.length || qaData.malformedTags
+	);
 	
 	// State variables
 	let showLesson = $state(false);
