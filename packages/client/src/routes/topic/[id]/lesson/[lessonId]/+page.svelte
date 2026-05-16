@@ -100,6 +100,10 @@
 	function toggleLesson() {
 		showLesson = !showLesson;
 	}
+
+	function isQuestionAnswerItem(item) {
+		return item && typeof item === 'object' && typeof item.q === 'string';
+	}
 	
 	// Clear audio source to force regeneration
 	function clearAudioSource() {
@@ -524,7 +528,16 @@
 					<h3>Questions (Câu hỏi)</h3>
 					<ol class="questions-list">
 						{#each lesson.questions as question}
-							<li>{question}</li>
+							<li>
+								{#if isQuestionAnswerItem(question)}
+									<p class="question-text">{question.q}</p>
+									{#if question.a}
+										<p class="answer-text">Answer: {question.a}</p>
+									{/if}
+								{:else}
+									{question}
+								{/if}
+							</li>
 						{/each}
 					</ol>
 				</div>
@@ -998,6 +1011,16 @@
 		color: #333;
 		font-size: 1.05rem;
 		line-height: 1.6;
+	}
+
+	.question-text {
+		margin: 0;
+		font-weight: 600;
+	}
+
+	.answer-text {
+		margin: 0.35rem 0 0;
+		color: #555;
 	}
 
 	/* TEMPORARILY DISABLED: Clickable word styles */
