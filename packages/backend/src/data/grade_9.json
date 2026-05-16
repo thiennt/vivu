@@ -11,19 +11,40 @@
           "id": 1,
           "title": "My Local Park",
           "content": "There is a nice park near my house. People go there to exercise in the morning. There are trees and a small lake with fish. Kids play on the swings after school. Sometimes we see trash on the ground. My friends and I pick it up. The park is clean when everyone helps. I like going there to relax.",
-          "translation": "Có một công viên đẹp gần nhà tôi. Mọi người đến đó tập thể dục sáng. Có cây và hồ nhỏ có cá. Trẻ em chơi xích đu sau giờ học. Đôi khi thấy rác trên mặt đất. Bạn tôi và tôi nhặt lên. Công viên sạch khi mọi người giúp. Tôi thích đến đó thư giãn."
+          "translation": "Có một công viên đẹp gần nhà tôi. Mọi người đến đó tập thể dục sáng. Có cây và hồ nhỏ có cá. Trẻ em chơi xích đu sau giờ học. Đôi khi thấy rác trên mặt đất. Bạn tôi và tôi nhặt lên. Công viên sạch khi mọi người giúp. Tôi thích đến đó thư giãn.",
+          "questions": [
+            { "q": "What do local citizens do in the morning before kids play on the swings after school?", "a": "Local citizens go to the park to exercise in the morning before kids play on the swings after school." },
+            { "q": "What do the writer and their friends do when they see trash on the ground, and what happens to the park afterwards?", "a": "When the writer and their friends see trash on the ground, they pick it up, and then the park becomes clean because everyone helps." },
+            { "q": "Why does the writer enjoy visiting this local park when they have free time?", "a": "The writer enjoys visiting this park because it has a peaceful atmosphere with trees, a small fish lake, and it helps them completely relax." },
+            { "q": "How can the cooperation of local residents directly change the condition of the park environment?", "a": "The cooperation of local residents changes the park environment by ensuring that all trash is collected, keeping the area clean and beautiful." },
+            { "q": "How often do you go to a park near your house, and what is your favorite activity to do there?", "a": "I go to the park near my house twice a week to jog around the lake and clear my mind after coding for hours." }
+          ]
         },
         {
           "id": 2,
           "title": "Cleaning Our Street",
           "content": "Last month my class cleaned our street. We wore gloves and picked up plastic bags and bottles. Some neighbours joined us. After that the street looked much better. We talked about why we should not throw trash. Everyone promised to keep it clean. It felt good to help our area.",
-          "translation": "Tháng trước lớp tôi dọn đường phố. Chúng tôi đeo găng và nhặt túi nhựa, chai lọ. Một số hàng xóm tham gia. Sau đó đường phố đẹp hơn nhiều. Chúng tôi nói về việc không vứt rác. Mọi người hứa giữ sạch. Cảm giác tốt khi giúp khu vực mình."
+          "translation": "Tháng trước lớp tôi dọn đường phố. Chúng tôi đeo găng và nhặt túi nhựa, chai lọ. Một số hàng xóm tham gia. Sau đó đường phố đẹp hơn nhiều. Chúng tôi nói về việc không vứt rác. Mọi người hứa giữ sạch. Cảm giác tốt khi giúp khu vực mình.",
+          "questions": [
+            { "q": "What items did the students wear before they picked up plastic bags and bottles on the street?", "a": "The students wore protective gloves before they picked up plastic bags and bottles on the street." },
+            { "q": "Who joined the students during the activity, and what did the neighborhood look like after that?", "a": "Some local neighbours joined the students, and then the street looked much better and cleaner after that." },
+            { "q": "Why did the students decide to hold a deep conversation about trash after finishing the cleaning?", "a": "They held a conversation about trash because they wanted to raise awareness and explain why people should not throw waste carelessly." },
+            { "q": "How did the students feel about their environmental project, and what did the community promise to do?", "a": "The students felt really good about helping their area, while everyone in the community promised to keep the street clean in the future." },
+            { "q": "Have you ever participated in a community clean-up day or a green project at your school? Tell me about that experience.", "a": "Yes, last year my class collected used batteries and old plastic bottles around the neighborhood to send them to a professional recycling center." }
+          ]
         },
         {
           "id": 3,
           "title": "Protecting Our Environment",
           "content": "We can protect our environment in small ways. I use a cloth bag for shopping. At home we turn off lights when not needed. My family plants flowers in pots. I tell friends not to litter. If we all do a little, our local area stays nice and green.",
-          "translation": "Chúng ta bảo vệ môi trường bằng cách nhỏ. Tôi dùng túi vải đi mua sắm. Ở nhà tắt đèn khi không cần. Gia đình tôi trồng hoa trong chậu. Tôi bảo bạn không vứt rác. Nếu ai cũng làm chút ít, khu vực địa phương sẽ đẹp và xanh."
+          "translation": "Chúng ta bảo vệ môi trường bằng cách nhỏ. Tôi dùng túi vải đi mua sắm. Ở nhà tắt đèn khi không cần. Gia đình tôi trồng hoa trong chậu. Tôi bảo bạn không vứt rác. Nếu ai cũng làm chút ít, khu vực địa phương sẽ đẹp và xanh.",
+          "questions": [
+            { "q": "What ecofriendly item does the writer use for shopping, and what do they do at home to save energy?", "a": "The writer uses a sustainable cloth bag for shopping, and they turn off lights at home when they are not needed." },
+            { "q": "What gardening activity does the family do, and what message does the writer deliver to their friends?", "a": "The family plants colorful flowers in pots, and then the writer strictly tells their friends not to litter around." },
+            { "q": "Why does the writer believe that small individual actions can successfully protect the ecosystem?", "a": "The writer believes small actions can protect the ecosystem because when everyone contributes a little, the cumulative effect keeps the local area nice and green." },
+            { "q": "How does the writer's family practically practice an energy-saving and green lifestyle inside their house?", "a": "They practice a green lifestyle by turning off unnecessary electrical appliances and cultivating green plants in small pots." },
+            { "q": "What specific rule do you follow at home to reduce electricity bills or limit plastic waste usage?", "a": "At home, I always bring my personal canvas bag when buying groceries and ensure my workstation's power strip is turned off before sleeping." }
+          ]
         }
       ]
     },
@@ -36,19 +57,40 @@
           "id": 1,
           "title": "Living in the City",
           "content": "I live in a big city with tall buildings and busy streets. There are many shops and restaurants. I can go to the cinema or mall easily. Buses and motorbikes are everywhere. City life is exciting with lots of things to do. But sometimes it's noisy and crowded.",
-          "translation": "Tôi sống ở thành phố lớn với tòa nhà cao và phố đông. Có nhiều cửa hàng và nhà hàng. Tôi dễ đi rạp phim hoặc trung tâm. Xe buýt và xe máy khắp nơi. Cuộc sống thành phố thú vị với nhiều việc làm. Nhưng đôi khi ồn ào và đông đúc."
+          "translation": "Tôi sống ở thành phố lớn với tòa nhà cao và phố đông. Có nhiều cửa hàng và nhà hàng. Tôi dễ đi rạp phim hoặc trung tâm. Xe buýt và xe máy khắp nơi. Cuộc sống thành phố thú vị với nhiều việc làm. Nhưng đôi khi ồn ào và đông đúc.",
+          "questions": [
+            { "q": "What specific facilities can the writer access easily after describing the busy streets and tall buildings?", "a": "The writer lives among tall buildings and busy streets, so they can easily go to the cinema or modern shopping malls." },
+            { "q": "What vehicles can be seen everywhere, and how does the vibe change when it becomes crowded?", "a": "Buses and motorbikes can be seen everywhere, but city life sometimes changes and becomes uncomfortably noisy and crowded." },
+            { "q": "Why does the writer find city life highly exciting despite its noticeable environmental disadvantages?", "a": "The writer finds it exciting because the city provides massive modern entertainment facilities, abundant shops, and always offers lots of interesting things to do." },
+            { "q": "How does the heavy traffic and dense population affect the daily atmosphere of the city landscape?", "a": "The heavy traffic of motorbikes and buses directly fills the city air with constant noise and creates crowded, stressful streets during rush hours." },
+            { "q": "What is the most annoying thing about living in a crowded city like Ho Chi Minh City, and how do you handle it?", "a": "The most annoying thing is traffic jams, so I always use navigation apps to check routes and leave home 20 minutes early." }
+          ]
         },
         {
           "id": 2,
           "title": "A Busy Day in the City",
           "content": "Yesterday I went shopping in the city center. The streets were full of people and cars. I bought new shoes and ate street food. Later I met my friend at a cafe. We talked for hours. City days are fast but fun. I like the energy here.",
-          "translation": "Hôm qua tôi đi mua sắm ở trung tâm thành phố. Phố đầy người và xe. Tôi mua giày mới và ăn đồ đường phố. Sau đó gặp bạn ở quán cà phê. Chúng tôi nói chuyện hàng giờ. Ngày ở thành phố nhanh nhưng vui. Tôi thích năng lượng ở đây."
+          "translation": "Hôm qua tôi đi mua sắm ở trung tâm thành phố. Phố đầy người và xe. Tôi mua giày mới và ăn đồ đường phố. Sau đó gặp bạn ở quán cà phê. Chúng tôi nói chuyện hàng giờ. Ngày ở thành phố nhanh nhưng vui. Tôi thích năng lượng ở đây.",
+          "questions": [
+            { "q": "What did the writer purchase in the city center before they enjoyed eating tasty street food?", "a": "The writer purchased a new pair of shoes before they enjoyed eating tasty street food around the center." },
+            { "q": "Where did the writer meet their friend later, and what did they do together for hours?", "a": "The writer met their friend at a cozy cafe later, and then they sat and talked happily about life for hours." },
+            { "q": "Why does the writer describe their busy day in the metropolitan city as fast but highly enjoyable?", "a": "They describe it as fast but enjoyable because they were constantly surrounded by a dynamic atmosphere, completed shopping, and had quality time with a friend." },
+            { "q": "How does the overall urban crowd and energy physically impact the writer's personal feelings?", "a": "The dynamic urban crowd does not tire the writer; instead, it makes them feel positive because they genuinely like the high energy of city life." },
+            { "q": "What is your favorite street food dish to eat when you hang out around downtown areas, and why do you like it?", "a": "My favorite street food is Vietnamese rice paper salad (Bánh tráng trộn) because it perfectly combines sweet, sour, and spicy flavors." }
+          ]
         },
         {
           "id": 3,
           "title": "City vs Countryside",
           "content": "City life has more opportunities and fun places. But countryside is quieter with fresh air and nature. In the city I have friends and activities. In the countryside I can relax more. Both have good things. Maybe one day I will try living in both.",
-          "translation": "Cuộc sống thành phố có nhiều cơ hội và chỗ vui. Nhưng nông thôn yên tĩnh hơn với không khí trong lành và thiên nhiên. Ở thành phố tôi có bạn và hoạt động. Ở nông thôn tôi thư giãn hơn. Cả hai đều có điều tốt. Có lẽ một ngày tôi thử sống cả hai nơi."
+          "translation": "Cuộc sống thành phố có nhiều cơ hội và chỗ vui. Nhưng nông thôn yên tĩnh hơn với không khí trong lành và thiên nhiên. Ở thành phố tôi có bạn và hoạt động. Ở nông thôn tôi thư giãn hơn. Cả hai đều có điều tốt. Có lẽ một ngày tôi thử sống cả hai nơi.",
+          "questions": [
+            { "q": "What benefits does city life provide, and how does the countryside atmosphere differ from it?", "a": "City life provides abundant professional opportunities and fun places, whereas the countryside environment is significantly quieter with fresh air." },
+            { "q": "Where can the writer access various social activities with friends, and what can they do in the countryside instead?", "a": "The writer enjoys social activities with friends in the city, but they can experience deep mental relaxation instead when staying in the countryside." },
+            { "q": "Why does the writer find it difficult to permanently choose between living in the city or the countryside?", "a": "It is difficult to choose because both environments offer unique advantages: the city provides friends and entertainment, while the countryside offers pure nature." },
+            { "q": "How does the presence of rich green nature directly affect the writer's stress levels in rural areas?", "a": "The presence of rich green nature and clean air directly reduces stress levels, allowing the writer to relax much more than in the urban center." },
+            { "q": "If you could work remotely from anywhere, would you prefer a modern apartment in the city center or a house near a rural beach?", "a": "I would prefer a house near a rural beach because I can code in a quiet space while enjoying fresh sea breezes and natural view." }
+          ]
         }
       ]
     },
@@ -61,19 +103,40 @@
           "id": 1,
           "title": "Feeling Stressed About Exams",
           "content": "Sometimes I feel stressed about exams. There is too much homework and tests. I talk to my mom when I feel worried. She says to study step by step. I take breaks and listen to music. Talking helps me feel better. Exams are hard but I can do it.",
-          "translation": "Đôi khi tôi stress vì thi cử. Bài tập và kiểm tra nhiều quá. Tôi nói với mẹ khi lo. Bà bảo học từng bước. Tôi nghỉ giữa giờ và nghe nhạc. Nói chuyện giúp tôi thấy tốt hơn. Thi khó nhưng tôi làm được."
+          "translation": "Đôi khi tôi stress vì thi cử. Bài tập và kiểm tra nhiều quá. Tôi nói với mẹ khi lo. Bà bảo học từng bước. Tôi nghỉ giữa giờ và nghe nhạc. Nói chuyện giúp tôi thấy tốt hơn. Thi khó nhưng tôi làm được.",
+          "questions": [
+            { "q": "What specific school burdens cause the writer stress, and who do they approach when they feel worried?", "a": "An excessive amount of homework and tests causes heavy stress, so the writer approaches their mother whenever they feel worried." },
+            { "q": "What wise study strategy does the mother suggest, and what does the writer do during their study breaks?", "a": "The mother suggests studying systematically step by step, and then the writer takes regular breaks and listens to music to relax." },
+            { "q": "Why does the simple act of talking to a family member successfully reduce academic pressure for teenagers?", "a": "Talking to a family member helps because it allows teenagers to release their hidden worries, receive comfort, and gain practical advice." },
+            { "q": "How does the writer manage to maintain a strong, positive mindset despite facing very difficult exams?", "a": "They maintain a positive mindset by combining disciplined, step-by-step studying with regular musical breaks, reminding themselves that they can do it." },
+            { "q": "When you have a massive workload or face a tight deadline at work or school, how do you manage your time to avoid stress?", "a": "I list all tasks on a kanban board, break them down into small milestones, and use the Pomodoro technique to stay focused without burning out." }
+          ]
         },
         {
           "id": 2,
           "title": "Arguing with Parents",
           "content": "I argued with my dad about phone time yesterday. He said I use it too much. I felt angry at first. Later we talked calmly. He explained why it's not good for eyes. I understood and promised to use less. Talking solves problems better than arguing.",
-          "translation": "Hôm qua tôi cãi bố về thời gian dùng điện thoại. Ông nói tôi dùng nhiều quá. Ban đầu tôi giận. Sau đó chúng tôi nói bình tĩnh. Ông giải thích hại mắt. Tôi hiểu và hứa dùng ít hơn. Nói chuyện giải quyết tốt hơn cãi nhau."
+          "translation": "Hôm qua tôi cãi bố về thời gian dùng điện thoại. Ông nói tôi dùng nhiều quá. Ban đầu tôi giận. Sau đó chúng tôi nói bình tĩnh. Ông giải thích hại mắt. Tôi hiểu và hứa dùng ít hơn. Nói chuyện giải quyết tốt hơn cãi nhau.",
+          "questions": [
+            { "q": "What did the writer and their father argue about yesterday, and what was the father's primary complaint?", "a": "They argued intensely about daily smartphone usage yesterday because the father complained that the writer was using it way too much." },
+            { "q": "How did the writer feel immediately during the argument, and what happened after they calmed down later?", "a": "The writer felt very angry at first, but later they sat down together, talked calmly, and resolved the issue productively." },
+            { "q": "Why did the father strictly want to limit the total amount of time his child spends on the phone?", "a": "The father wanted to limit it because he was deeply concerned about health and wanted to protect his child's eyes from screen damage." },
+            { "q": "How did the final conversation successfully change the teenager's behavior and attitude toward phone habits?", "a": "The conversation made the teenager completely understand the logical reason behind the rule, leading them to promise to use the phone less." },
+            { "q": "In your opinion, what is the best way for parents and teenagers to discuss rules without hurting each other's feelings?", "a": "The best way is for both sides to listen actively without interrupting, avoid shouting, and focus on explaining the practical reasons behind their choices." }
+          ]
         },
         {
           "id": 3,
           "title": "Making New Friends",
           "content": "When I changed class I felt shy to make new friends. I smiled and said hi to a girl next to me. We started talking about lessons. Now we eat lunch together. Making friends takes time but it's worth it. Friends make school life better.",
-          "translation": "Khi đổi lớp tôi ngại làm bạn mới. Tôi mỉm cười và chào bạn gái ngồi cạnh. Chúng tôi bắt đầu nói về bài học. Giờ chúng tôi ăn trưa cùng. Làm bạn cần thời gian nhưng đáng giá. Bạn bè làm cuộc sống trường học tốt hơn."
+          "translation": "Khi đổi lớp tôi ngại làm bạn mới. Tôi mỉm cười và chào bạn gái ngồi cạnh. Chúng tôi bắt đầu nói về bài học. Giờ chúng tôi ăn trưa cùng. Làm bạn cần thời gian nhưng đáng giá. Bạn bè làm cuộc sống trường học tốt hơn.",
+          "questions": [
+            { "q": "How did the writer feel when they first changed classes, and what was their very first friendly action?", "a": "The writer felt extremely shy when they first changed classes, but they bravely smiled and said hi to the girl sitting next to them." },
+            { "q": "What initial topic did the two students discuss, and what friendly routine do they perform together now?", "a": "They initially started talking about school lessons, and now they regularly sit and eat their lunch together every day." },
+            { "q": "Why does the writer firmly believe that investing time into building close friendships is completely worth it?", "a": "They believe it is worth it because having good friends provides emotional support, eliminates loneliness, and makes school life significantly better." },
+            { "q": "How did the writer successfully overcome their personal shyness to establish a brand-new relationship?", "a": "They overcame shyness by taking a small, courageous step: displaying a warm smile and initiating a casual conversation about their shared class lessons." },
+            { "q": "Do you find it easy or difficult to start a conversation with a complete stranger at a networking event or a new office? Why?", "a": "I find it slightly difficult at first because I am more introverted, but asking open-ended questions about their projects helps break the ice." }
+          ]
         }
       ]
     },
@@ -86,19 +149,40 @@
           "id": 1,
           "title": "Ha Long Bay Beauty",
           "content": "Ha Long Bay is one of the wonders of Vietnam. There are thousands of islands in the water. We took a boat and saw caves. The water is green and clear. I took photos of the sunset. It was peaceful and beautiful. I want to go back with friends.",
-          "translation": "Vịnh Hạ Long là một kỳ quan của Việt Nam. Có hàng ngàn đảo trên mặt nước. Chúng tôi đi thuyền và thấy hang động. Nước xanh và trong. Tôi chụp ảnh hoàng hôn. Yên bình và đẹp. Tôi muốn quay lại với bạn bè."
+          "translation": "Vịnh Hạ Long là một kỳ quan của Việt Nam. Có hàng ngàn đảo trên mặt nước. Chúng tôi đi thuyền và thấy hang động. Nước xanh và trong. Tôi chụp ảnh hoàng hôn. Yên bình và đẹp. Tôi muốn quay lại với bạn bè.",
+          "questions": [
+            { "q": "What transportation did the family use to explore Ha Long Bay, and what natural structures did they see?", "a": "The family took a scenic boat ride to explore Ha Long Bay, where they saw thousands of majestic islands and mysterious caves." },
+            { "q": "What did the writer photograph during the trip, and who do they want to return to this destination with?", "a": "The writer captured beautiful photos of the scenic sunset, and they intensely want to return to this destination with their close friends." },
+            { "q": "Why is Ha Long Bay globally recognized as an exceptionally unique and breathtaking wonder of nature?", "a": "It is recognized because it features thousands of spectacular limestone islands rising from clear emerald green water, creating a stunning landscape." },
+            { "q": "How did the overall scenery and environment of the bay emotionally affect the writer during their boat tour?", "a": "The quiet water, beautiful caves, and sunset made the writer experience a deep sense of peace and appreciate natural beauty." },
+            { "q": "If you could plan a three-day weekend trip to any natural landscape in Vietnam, would you choose a beach or a mountain? Why?", "a": "I would choose a mountain area like Sapa because I love watching misty peaks and trekking through quiet, traditional minority villages." }
+          ]
         },
         {
           "id": 2,
           "title": "Phong Nha Caves",
           "content": "Phong Nha Caves are very big and amazing. We went inside by boat. There were strange rocks and a river. Lights made it look magical. My dad said it's one of the oldest caves. I felt excited walking there. It's a special place in Vietnam.",
-          "translation": "Hang Phong Nha rất lớn và tuyệt vời. Chúng tôi đi thuyền vào trong. Có đá lạ và sông. Đèn làm nó trông kỳ diệu. Bố tôi nói đây là một trong những hang cổ nhất. Tôi hào hứng khi đi bộ ở đó. Đó là nơi đặc biệt ở Việt Nam."
+          "translation": "Hang Phong Nha rất lớn và tuyệt vời. Chúng tôi đi thuyền vào trong. Có đá lạ và sông. Đèn làm nó trông kỳ diệu. Bố tôi nói đây là một trong những hang cổ nhất. Tôi hào hứng khi đi bộ ở đó. Đó là nơi đặc biệt ở Việt Nam.",
+          "questions": [
+            { "q": "How did the writer's family travel inside the Phong Nha Caves, and what two main features did they see there?", "a": "The family traveled inside the huge caves by boat, and they observed many uniquely strange rock formations and an underground river." },
+            { "q": "What information did the father share about the cave's history, and how did the writer feel while exploring?", "a": "The father shared that this is one of the absolute oldest caves in existence, which made the writer feel incredibly excited while walking inside." },
+            { "q": "Why did the interior of the Phong Nha Caves appear uniquely magical to the eyes of the tourists?", "a": "The interior appeared magical because the colorful artificial light systems perfectly illuminated the strange geological rocks and reflecting river." },
+            { "q": "How does the text highlight the massive historical and geological value of this specific Vietnamese wonder?", "a": "The text highlights its massive value through the father's statement, confirming that it is one of the oldest and largest cave systems." },
+            { "q": "Have you ever explored a cave or a wild national park? What safety equipment do you think is necessary for cave trekking?", "a": "I haven't trekked deep caves yet, but I think a strong headlamp, anti-slip boots, and a sturdy helmet are absolutely mandatory for safety." }
+          ]
         },
         {
           "id": 3,
           "title": "Why We Protect Wonders",
           "content": "We must protect wonders like Ha Long Bay. Tourists come and leave trash sometimes. We should not throw garbage. My school teaches us to keep places clean. If we take care, future people can enjoy them too. Wonders are part of our country.",
-          "translation": "Chúng ta phải bảo vệ kỳ quan như Vịnh Hạ Long. Du khách đến và vứt rác đôi khi. Không nên vứt rác bừa. Trường tôi dạy giữ nơi sạch. Nếu chăm sóc, người sau cũng thưởng thức được. Kỳ quan là phần của đất nước chúng ta."
+          "translation": "Chúng ta phải bảo vệ kỳ quan như Vịnh Hạ Long. Du khách đến và vứt rác đôi khi. Không nên vứt rác bừa. Trường tôi dạy giữ nơi sạch. Nếu chăm sóc, người sau cũng thưởng thức được. Kỳ quan là phần của đất nước chúng ta.",
+          "questions": [
+            { "q": "What negative action do tourists sometimes perform, and what rule must we strictly follow at tourist sites?", "a": "Tourists sometimes carelessly leave trash behind at wonders, so we must strictly follow the rule of not throwing garbage anywhere." },
+            { "q": "What does the writer's school regularly teach the students, and who will benefit if we maintain cleanliness?", "a": "The school regularly teaches students to keep all places clean, which ensures that future generations can successfully enjoy these wonders too." },
+            { "q": "Why is it absolutely critical for both citizens and governments to protect historical and natural wonders?", "a": "It is critical because wonders are irreplaceable parts of national heritage, pride, and identity, and destroying them means losing history forever." },
+            { "q": "How does the text suggest schools play a vital role in preventing the environmental destruction of tourism?", "a": "Schools play a vital role by actively educating young students about preservation habits and training them to always keep public landmarks clean." },
+            { "q": "What practical measure should local authorities take to stop tourists from littering at famous tourist destinations?", "a": "Authorities should install dense networks of security cameras, place more recycling bins, and enforce heavy financial fines for littering." }
+          ]
         }
       ]
     },
@@ -111,19 +195,40 @@
           "id": 1,
           "title": "Ao Dai on Special Days",
           "content": "Girls wear ao dai on special days like Tet or school events. It looks elegant and beautiful. My sister has a white ao dai for school. We wear it with pride. Ao dai shows Vietnamese culture. I like seeing people in ao dai on holidays.",
-          "translation": "Con gái mặc áo dài vào ngày đặc biệt như Tết hoặc sự kiện trường. Nó trông thanh lịch và đẹp. Em gái tôi có áo dài trắng cho trường. Chúng tôi mặc với niềm tự hào. Áo dài thể hiện văn hóa Việt. Tôi thích thấy mọi người mặc áo dài dịp lễ."
+          "translation": "Con gái mặc ao dài vào ngày đặc biệt như Tết hoặc sự kiện trường. Nó trông thanh lịch và đẹp. Em gái tôi có áo dài trắng cho trường. Chúng tôi mặc với niềm tự hào. Áo dài thể hiện văn hóa Việt. Tôi thích thấy mọi người mặc áo dài dịp lễ.",
+          "questions": [
+            { "q": "On what specific occasions do Vietnamese girls wear the Ao Dai, and how does the attire look?", "a": "Girls wear the traditional Ao Dai on special days like Tet or official school events, and it looks exceptionally elegant and beautiful." },
+            { "q": "What specific color is the sister's school dress, and with what inner feeling does the family wear this attire?", "a": "The sister owns a classic white Ao Dai for her school days, and the family always wears this traditional costume with deep national pride." },
+            { "q": "Why does the Ao Dai hold an incredibly sacred position in the hearts of Vietnamese citizens as a cultural symbol?", "a": "It holds a sacred position because it perfectly represents the graceful beauty of Vietnamese women and showcases the rich history of national culture." },
+            { "q": "How does the writer feel when they witness large crowds of people wearing the Ao Dai during national holidays?", "a": "The writer feels highly delighted and happy because seeing the traditional costume everywhere brings a unique cultural beauty to the holidays." },
+            { "q": "Does your current school or company require female members to wear the Ao Dai on Mondays or special events? What do you think about this custom?", "a": "My high school required girls to wear white Ao Dai on Mondays. I think it is a beautiful custom that honors our cultural values." }
+          ]
         },
         {
           "id": 2,
           "title": "Respecting Elders",
           "content": "In Vietnam we respect elders a lot. We greet grandparents first and offer tea. Children listen to advice from parents. On Tet we wish them good health. Respect makes families strong. My mom teaches me to be polite to older people.",
-          "translation": "Ở Việt Nam chúng tôi tôn trọng người lớn tuổi nhiều. Chào ông bà trước và mời trà. Trẻ em nghe lời khuyên từ bố mẹ. Tết chúc họ khỏe mạnh. Tôn trọng làm gia đình vững mạnh. Mẹ tôi dạy tôi lịch sự với người lớn."
+          "translation": "Ở Việt Nam chúng tôi tôn trọng người lớn tuổi nhiều. Chào ông bà trước và mời trà. Trẻ em nghe lời khuyên từ bố mẹ. Tết chúc họ khỏe mạnh. Tôn trọng làm gia đình vững mạnh. Mẹ tôi dạy tôi lịch sự với người lớn.",
+          "questions": [
+            { "q": "Who do children always greet first when entering a house, and what warm beverage do they offer?", "a": "Children always greet their grandparents first before anyone else, and then they respectfully offer them a warm cup of tea." },
+            { "q": "What do well-behaved children do regarding parental advice, and what special wishes do they deliver during Tet?", "a": "Well-behaved children listen carefully to advice from parents, and they wish them excellent health and long life during Tet." },
+            { "q": "Why is the core value of respecting older generations considered the absolute foundation of a happy family?", "a": "It is the foundation because respect eliminates internal conflicts, builds mutual trust, and creates a strong, connected family bond across generations." },
+            { "q": "How does the writer's mother actively shape her child's moral character regarding social interactions?", "a": "The mother shapes their character by constantly teaching them practical lessons on how to be genuinely polite and respectful to older people." },
+            { "q": "What is a traditional custom or gesture of politeness that you always perform when you visit your grandparents or senior relatives?", "a": "Whenever I visit my grandparents, I always bow slightly when greeting them and use both hands to hand over gifts or pour hot tea." }
+          ]
         },
         {
           "id": 3,
           "title": "Family Traditions",
           "content": "Our family has small traditions like eating together every evening. We talk about our day. On weekends we visit grandparents. Mom cooks special food for holidays. These traditions make us close. I like keeping them in our family.",
-          "translation": "Gia đình tôi có truyền thống nhỏ như ăn tối cùng nhau mỗi ngày. Chúng tôi nói về ngày hôm nay. Cuối tuần thăm ông bà. Mẹ nấu món đặc biệt dịp lễ. Những truyền thống làm chúng tôi gần gũi. Tôi thích giữ chúng trong gia đình."
+          "translation": "Gia đình tôi có truyền thống nhỏ như ăn tối cùng nhau mỗi ngày. Chúng tôi nói về ngày hôm nay. Cuối tuần thăm ông bà. Mẹ nấu món đặc biệt dịp lễ. Những truyền thống làm chúng tôi gần gũi. Tôi thích giữ chúng trong gia đình.",
+          "questions": [
+            { "q": "How often does the family practice the tradition of dining together, and what do they discuss around the table?", "a": "The family practices the tradition of dining together every single evening, and they comfortably talk about their daily experiences around the table." },
+            { "q": "Where does the family travel on weekends, and who prepares wonderful culinary dishes during festive holidays?", "a": "The family travels to visit their grandparents on weekends, while the mother always cooks special, delicious traditional food for holidays." },
+            { "q": "Why do these small, repeated household routines play a major role in strengthening internal family bonds?", "a": "They strengthen bonds because they create regular opportunities for members to share emotions, support each other, and maintain warm connections." },
+            { "q": "What is the writer's personal attitude toward preserving these old inherited family customs for the future?", "a": "The writer deeply values these customs and explicitly expresses that they really like keeping them alive inside their family forever." },
+            { "q": "Does your own family maintain any unique tradition or rule on weekends, such as watching movies or cleaning together?", "a": "Yes, my family has a strict rule where everyone must gather on Sunday mornings to clean the entire house and enjoy noodle soup together." }
+          ]
         }
       ]
     },
@@ -136,19 +241,40 @@
           "id": 1,
           "title": "Hotter Summers",
           "content": "Summers are getting hotter every year. The sun is stronger and it's hard to go outside. I use fan more and drink lots of water. My mom says it's because of global warming. Factories and cars make the air hot. We need to help stop it.",
-          "translation": "Mùa hè nóng hơn mỗi năm. Nắng mạnh và khó ra ngoài. Tôi dùng quạt nhiều và uống nhiều nước. Mẹ nói do nóng lên toàn cầu. Nhà máy và xe làm không khí nóng. Chúng ta cần giúp dừng lại."
+          "translation": "Mùa hè nóng hơn mỗi năm. Nắng mạnh và khó ra ngoài. Tôi dùng quạt nhiều và uống nhiều nước. Mẹ nói do nóng lên toàn cầu. Nhà máy và xe làm không khí nóng. Chúng ta cần giúp dừng lại.",
+          "questions": [
+            { "q": "What change happens to summers annually, and why has outdoor movement become extremely difficult?", "a": "Summers are getting hotter every single year because the sun's radiation is stronger, making outdoor movement extremely difficult." },
+            { "q": "What daily cooling habits does the writer adapt during heatwaves, and who explained the scientific cause to them?", "a": "The writer uses the electric fan much more and drinks plenty of water, after their mother explained that global warming is the cause." },
+            { "q": "Why do industrial factories and millions of modern gas vehicles directly accelerate the rise of global temperature?", "a": "They accelerate it because they continuously discharge massive amounts of greenhouse gases and hot smoke, trapping heat inside the atmosphere." },
+            { "q": "What urgent call to action does the writer express at the end of their narrative regarding climate change?", "a": "The writer expresses a powerful, urgent call stating that we as humans absolutely need to join hands to help stop global warming." },
+            { "q": "During peak summer days in your city, what specific beverage or routine do you use to keep your body cool and hydrated?", "a": "To stay cool on scorching summer days in Saigon, I love drinking sugar cane juice (Nước mía) and avoiding the hot roads between 12 PM and 3 PM." }
+          ]
         },
         {
           "id": 2,
           "title": "Talking About Trees",
           "content": "Trees help fight global warming. They take in bad air and give oxygen. My school planted trees last month. We watered them every week. More trees mean cooler weather. I tell friends to plant at home too. Small actions help the planet.",
-          "translation": "Cây giúp chống nóng lên toàn cầu. Chúng hấp thụ khí xấu và cho oxy. Trường tôi trồng cây tháng trước. Chúng tôi tưới mỗi tuần. Cây nhiều hơn nghĩa là thời tiết mát hơn. Tôi bảo bạn trồng ở nhà nữa. Hành động nhỏ giúp hành tinh."
+          "translation": "Cây giúp chống nóng lên toàn cầu. Chúng hấp thụ khí xấu và cho oxy. Trường tôi trồng cây tháng trước. Chúng tôi tưới mỗi tuần. Cây nhiều hơn nghĩa là thời tiết mát hơn. Tôi bảo bạn trồng ở nhà nữa. Hành động nhỏ giúp hành tinh.",
+          "questions": [
+            { "q": "How do green trees biologically combat climate change, and what vital gas do they release into the air?", "a": "Trees combat climate change by absorbing toxic bad air from the environment, and then they release vital oxygen for humans to breathe." },
+            { "q": "When did the school organize a green plantation campaign, and how often did students take care of the plants?", "a": "The school organized a plantation campaign last month, and the students responsibly watered the young trees every single week." },
+            { "q": "Why does planting a large number of trees around urban areas directly lead to much cooler weather conditions?", "a": "It leads to cooler weather because trees provide large shades, evaporate water into the air, and reduce the heat absorbed by concrete structures." },
+            { "q": "What eco-friendly advice does the writer share with their classmates, and what is their philosophy on planet preservation?", "a": "The writer advises friends to plant trees at home, believing firmly that small individual actions can ultimately help save the entire planet." },
+            { "q": "If you had a spacious balcony or a backyard right now, what kind of plant, flower, or vegetable would you grow first?", "a": "I would grow chili peppers and small cherry tomatoes because they are easy to tend, look bright, and can be used directly in my daily meals." }
+          ]
         },
         {
           "id": 3,
           "title": "What We Can Do",
           "content": "To stop global warming we use less electricity. Turn off lights and fans when not needed. Walk or ride bike instead of car. Eat less meat sometimes. My family recycles paper and plastic. If everyone does a little, Earth will be better.",
-          "translation": "Để dừng nóng lên toàn cầu chúng tôi dùng ít điện hơn. Tắt đèn và quạt khi không cần. Đi bộ hoặc đạp xe thay xe hơi. Ăn ít thịt đôi khi. Gia đình tôi tái chế giấy và nhựa. Nếu mọi người làm chút ít, Trái Đất sẽ tốt hơn."
+          "translation": "Để dừng nóng lên toàn cầu chúng tôi dùng ít điện hơn. Tắt đèn và quạt khi không cần. Đi bộ hoặc đạp xe thay xe hơi. Ăn ít thịt đôi khi. Gia đình tôi tái chế giấy và nhựa. Nếu mọi người làm chút ít, Trái Đất sẽ tốt hơn.",
+          "questions": [
+            { "q": "What resource must we conserve to help stop global warming, and what basic appliances should we switch off?", "a": "We must strictly conserve household electricity by turning off unnecessary lights and electric fans whenever they are not needed." },
+            { "q": "What transport alternative does the text suggest, and what materials does the writer's family process for recycling?", "a": "The text suggests walking or riding bicycles instead of driving cars, while the writer's family carefully recycles old paper and plastic waste." },
+            { "q": "Why does changing our daily dietary habits by eating less meat contribute to environmental protection?", "a": "Eating less meat helps because large-scale livestock farming consumes immense amounts of water, clears forests, and produces massive greenhouse gases." },
+            { "q": "What positive global transformation will occur if every individual citizen successfully modifies their daily lifestyle habits?", "a": "If every single citizen modifies their habits and does a little part, our shared planet Earth will definitely become a much better place." },
+            { "q": "Which environmental habit do you think is the hardest for modern citizens to build: recycling trash or giving up private cars?", "a": "Giving up private cars is the hardest because city public transport networks aren't always convenient enough for everyone's daily commute." }
+          ]
         }
       ]
     },
@@ -161,19 +287,40 @@
           "id": 1,
           "title": "My Dream Job",
           "content": "I want to be a teacher in the future. I like helping friends with homework. Teachers explain things clearly. I will teach English or Science. I think it's a good job because I can help kids learn. My mom says it's noble work.",
-          "translation": "Tôi muốn làm giáo viên tương lai. Tôi thích giúp bạn làm bài. Giáo viên giải thích rõ ràng. Tôi sẽ dạy Tiếng Anh hoặc Khoa học. Tôi nghĩ đó là công việc tốt vì giúp trẻ học. Mẹ tôi nói đó là công việc cao quý."
+          "translation": "Tôi muốn làm giáo viên tương lai. Tôi thích giúp bạn làm bài. Giáo viên giải thích rõ ràng. Tôi sẽ dạy Tiếng Anh hoặc Khoa học. Tôi nghĩ đó là công việc tốt vì giúp trẻ học. Mẹ tôi nói đó là công việc cao quý.",
+          "questions": [
+            { "q": "What professional career does the writer want to pursue, and what helpful childhood hobby inspired this dream?", "a": "The writer wants to pursue a teaching career because they have always loved helping their classmates with difficult homework tasks." },
+            { "q": "What specific academic subjects does the writer intend to teach, and what is the mother's opinion about this career?", "a": "The writer intends to teach English or Science, and their supportive mother firmly states that teaching is an exceptionally noble work." },
+            { "q": "Why does the writer evaluate the profession of a school teacher as an extraordinarily good and fulfilling job?", "a": "They evaluate it as a good job because it gives them the direct opportunity to explain knowledge clearly and help young kids learn and grow." },
+            { "q": "How does the text describe the core communication skill that a successful teacher must possess to guide students?", "a": "The text highlights that a successful teacher must possess the core skill of explaining complex educational things very clearly and easily." },
+            { "q": "If you were invited to deliver a guest lecture to high school students next week, what core topic would you teach them?", "a": "I would deliver a lecture on the fundamentals of web building using TypeScript, sharing my real developer experience to inspire them." }
+          ]
         },
         {
           "id": 2,
           "title": "Talking About Jobs with Friends",
           "content": "My friends and I talked about future jobs yesterday. One wants to be a doctor to help sick people. Another likes computers and wants to code. I told them my dream to teach. We encouraged each other. It's fun to think about the future.",
-          "translation": "Hôm qua bạn tôi và tôi nói về công việc tương lai. Một bạn muốn làm bác sĩ để giúp người ốm. Bạn khác thích máy tính và muốn lập trình. Tôi kể ước mơ dạy học. Chúng tôi động viên nhau. Vui khi nghĩ về tương lai."
+          "translation": "Hôm qua bạn tôi và tôi nói về công việc tương lai. Một bạn muốn làm bác sĩ để giúp người ốm. Bạn khác thích máy tính và muốn lập trình. Tôi kể ước mơ dạy học. Chúng tôi động viên nhau. Vui khi nghĩ về tương lai.",
+          "questions": [
+            { "q": "When did the group of friends hold a discussion about careers, and what is the goal of the aspiring doctor?", "a": "The friends held a career discussion yesterday, and one friend aims to become a doctor in order to heal and help sick people." },
+            { "q": "What tech passion does another friend have, and what mutual action did the group take after sharing dreams?", "a": "Another friend loves computers and wants to code software, and the entire group warmly encouraged each other after sharing dreams." },
+            { "q": "Why do teenagers find it highly entertaining and fun to sit together and discuss their future professional ambitions?", "a": "They find it fun because it allows them to freely imagine their lives, discover each other's talents, and build strong mutual motivation." },
+            { "q": "How does peer group encouragement psychologically impact the teenagers' confidence regarding their future dreams?", "a": "Peer encouragement boosts their confidence because knowing that their close friends support their dreams makes future challenges feel less intimidating." },
+            { "q": "Among your closest friends from school, has anyone successfully achieved their childhood dream career? What do they do now?", "a": "Yes, my best friend always wanted to draw comics, and now he is working as a professional UI designer for an indie game studio." }
+          ]
         },
         {
           "id": 3,
           "title": "Skills for Future Jobs",
           "content": "To get good jobs we need skills like English and computers. I practice speaking every day. Reading books helps too. Hard work and learning new things are important. My teacher says attitude matters a lot. I want to be ready for the future.",
-          "translation": "Để có công việc tốt cần kỹ năng như tiếng Anh và máy tính. Tôi luyện nói mỗi ngày. Đọc sách cũng giúp. Làm việc chăm chỉ và học điều mới quan trọng. Cô giáo nói thái độ rất quan trọng. Tôi muốn sẵn sàng cho tương lai."
+          "translation": "Để có công việc tốt cần kỹ năng như tiếng Anh và máy tính. Tôi luyện nói mỗi ngày. Đọc sách cũng giúp. Làm việc chăm chỉ và học điều mới quan trọng. Cô giáo nói thái độ rất quan trọng. Tôi muốn sẵn sàng cho tương lai.",
+          "questions": [
+            { "q": "What two essential core skills are highlighted to secure good jobs, and how often does the writer practice speaking?", "a": "English fluency and computer literacy are essential core skills, and the writer diligently practices their speaking skills every single day." },
+            { "q": "What educational habit supports the writer's learning, and what critical professional factor did the teacher emphasize?", "a": "Reading books supports their learning, and their teacher strongly emphasized that a person's mindset and attitude matter a lot in life." },
+            { "q": "Why is the constant willingness to learn completely new things considered an absolute requirement in the modern job market?", "a": "It is an absolute requirement because technology changes rapidly, and professionals must constantly upgrade their knowledge to avoid becoming obsolete." },
+            { "q": "How is the writer actively preparing themselves to face the professional demands of the upcoming future?", "a": "They are preparing by working hard, reading books, practicing English daily, and building a positive attitude as advised by their teacher." },
+            { "q": "What modern technical skill or foreign language are you planning to master next to expand your career opportunities?", "a": "I am planning to master advanced smart contract security audits and further improve my English speaking using AI conversational tools." }
+          ]
         }
       ]
     },
@@ -186,19 +333,40 @@
           "id": 1,
           "title": "My Progress This Year",
           "content": "This year I got better at speaking English. I can talk about environment and future jobs. I speak more with friends now. Projects helped me practice a lot. My teacher says my pronunciation improved. I feel happy and want to keep learning.",
-          "translation": "Năm nay tôi nói tiếng Anh tốt hơn. Tôi nói được về môi trường và công việc tương lai. Tôi nói nhiều với bạn hơn. Dự án giúp tôi luyện nhiều. Cô giáo nói phát âm tôi cải thiện. Tôi vui và muốn tiếp tục học."
+          "translation": "Năm nay tôi nói tiếng Anh tốt hơn. Tôi nói được về môi trường và công việc tương lai. Tôi nói nhiều với bạn hơn. Dự án giúp tôi luyện nhiều. Cô giáo nói phát âm tôi cải thiện. Tôi vui và muốn tiếp tục học.",
+          "questions": [
+            { "q": "What general linguistic skill did the writer improve this year, and what two major topics can they discuss?", "a": "The writer improved their English speaking skill, allowing them to comfortably discuss the environment and future job careers." },
+            { "q": "Who does the writer communicate with more frequently now, and what academic method provided them extensive practice?", "a": "The writer communicates much more with their friends now, after practical school projects provided them with extensive language practice." },
+            { "q": "Why does the writer experience a deep sense of happiness and accomplishment regarding their language progress?", "a": "They feel happy because their hard work paid off, and their school teacher explicitly confirmed that their English pronunciation has improved significantly." },
+            { "q": "What is the writer's immediate motivation and academic goal after reviewing their final performance this year?", "a": "Their immediate motivation is highly positive, leading them to feel extremely happy and explicitly want to keep learning and advancing further." },
+            { "q": "Looking back at your own self-study journey over the past year, what was your biggest technical breakthrough or success?", "a": "My biggest success was deploying a fully functional real-time mini-app framework on Farcaster that handled thousands of active user requests." }
+          ]
         },
         {
           "id": 2,
           "title": "My Favorite Topic",
           "content": "My favorite topic this year is future jobs. We talked about dreams and skills. I shared my idea to be a teacher. Friends had interesting dreams too. It made me think about what I want. Talking about future is exciting.",
-          "translation": "Chủ đề yêu thích năm nay là công việc tương lai. Chúng tôi nói về ước mơ và kỹ năng. Tôi chia sẻ ý muốn làm giáo viên. Bạn có ước mơ thú vị nữa. Nó làm tôi nghĩ về điều mình muốn. Nói về tương lai hào hứng."
+          "translation": "Chủ đề yêu thích năm nay là công việc tương lai. Chúng tôi nói về ước mơ và kỹ năng. Tôi chia sẻ ý muốn làm giáo viên. Bạn có ước mơ thú vị nữa. Nó làm tôi nghĩ về điều mình muốn. Nói về tương lai hào hứng.",
+          "questions": [
+            { "q": "What is explicitly selected as the writer's favorite topic, and what two elements did the class discuss?", "a": "Future jobs is explicitly selected as the favorite topic, and the class deeply discussed career dreams and necessary skills." },
+            { "q": "What career choice did the writer present to the classroom, and how are the classmates' ambitions described?", "a": "The writer shared their aspiration to be a school teacher, while their classmates also possessed many highly interesting dreams." },
+            { "q": "Why did the classroom lessons about future careers create a deep, lasting impact on the writer's mindset?", "a": "They created a deep impact because listening to various ambitions forced the writer to think seriously about what they truly want in life." },
+            { "q": "How does the writer emotionally evaluate the act of discussing long-term plans and career goals with peers?", "a": "The writer evaluates it as an incredibly exciting and inspiring experience that fills them with motivation for the upcoming days." },
+            { "q": "If you had the opportunity to completely switch your career track tomorrow without any financial risk, what job would you choose?", "a": "I wouldn't switch because I love software development, but I might spend more time building educational apps to teach programming to children." }
+          ]
         },
         {
           "id": 3,
           "title": "My Next Goal",
           "content": "Next year I want to speak English more fluently. I will talk to more people and watch videos. I want to read news in English too. My goal is to tell stories longer without stopping. I think practice will help me reach it.",
-          "translation": "Năm sau tôi muốn nói tiếng Anh lưu loát hơn. Tôi sẽ nói với nhiều người và xem video. Tôi muốn đọc tin tức tiếng Anh nữa. Mục tiêu là kể chuyện dài hơn không dừng. Tôi nghĩ luyện tập sẽ giúp tôi đạt được."
+          "translation": "Năm sau tôi muốn nói tiếng Anh lưu loát hơn. Tôi sẽ nói với nhiều người và xem video. Tôi muốn đọc tin tức tiếng Anh nữa. Mục tiêu là kể chuyện dài hơn không dừng. Tôi nghĩ luyện tập sẽ giúp tôi đạt được.",
+          "questions": [
+            { "q": "What standard of English proficiency does the writer aim to achieve next year, and what media will they watch?", "a": "The writer aims to speak English with much higher fluency next year, and they plan to regularly watch educational videos." },
+            { "q": "Who does the writer intend to hold conversations with, and what specific reading material do they want to add?", "a": "The writer intends to hold conversations with more people, and they want to start reading daily news entirely in English." },
+            { "q": "What precise language milestone represents the writer's primary target for their upcoming study plan?", "a": "The primary target milestone is to build the capability to tell significantly longer stories in English continuously without stopping." },
+            { "q": "How does the writer plan to practically bridge the gap between their current skills and their future fluency goal?", "a": "They plan to bridge the gap through sheer consistency, relying on relentless daily practice, media consumption, and real communication to reach it." },
+            { "q": "What is your own ultimate personal or technical goal for the next six months, and how do you track your daily progress?", "a": "My goal is to optimize backend database performance for my app. I track progress by writing code commits daily and checking performance logs." }
+          ]
         }
       ]
     }

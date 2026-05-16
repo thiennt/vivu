@@ -11,19 +11,40 @@
           "id": 1,
           "title": "My Favorite Hobby",
           "content": "My favorite hobby is playing guitar. I practice every evening after homework. I learned some easy songs from YouTube. When I play, my family listens and sings along. It makes me relax after a busy day. Sometimes I play with my cousin. We have fun together. I want to learn more songs this year.",
-          "translation": "Sở thích yêu thích của tôi là chơi guitar. Tôi luyện mỗi tối sau khi làm bài. Tôi học vài bài hát dễ từ YouTube. Khi chơi, gia đình nghe và hát theo. Nó giúp tôi thư giãn sau ngày bận rộn. Đôi khi chơi cùng anh em họ. Chúng tôi vui lắm. Tôi muốn học thêm bài hát năm nay."
+          "translation": "Sở thích yêu thích của tôi là chơi guitar. Tôi luyện mỗi tối sau khi làm bài. Tôi học vài bài hát dễ từ YouTube. Khi chơi, gia dịch nghe và hát theo. Nó giúp tôi thư giãn sau ngày bận rộn. Đôi khi chơi cùng anh em họ. Chúng tôi vui lắm. Tôi muốn học thêm bài hát năm nay.",
+          "questions": [
+            { "q": "When does the writer practice playing the guitar and how did they learn the first songs?", "a": "The writer practices the guitar every evening after finishing homework, and they learned some easy songs from YouTube." },
+            { "q": "What does the writer's family do when they play the guitar, and who else do they sometimes play with?", "a": "When the writer plays, their family listens and sings along, and sometimes they play with their cousin as well." },
+            { "q": "Why does playing the guitar help the writer after a busy day?", "a": "It helps the writer because making music allows them to relax and feel happy after a stressful day." },
+            { "q": "What is the writer's specific goal for this hobby this year?", "a": "The writer's specific goal is to learn how to play more songs on the guitar this year." },
+            { "q": "Do you prefer learning a musical instrument or playing sports in your free time, and why?", "a": "I prefer playing sports because running outside helps me stay healthy and gives me more energy than sitting down with an instrument." }
+          ]
         },
         {
           "id": 2,
           "title": "Sharing Hobbies with Friends",
           "content": "Last weekend I showed my friends how to draw. We sat in the park and used colored pencils. They liked my pictures of animals. One friend taught me to play chess. We talked and laughed a lot. Sharing hobbies makes friends closer. I enjoy time with them like this.",
-          "translation": "Cuối tuần trước tôi chỉ bạn cách vẽ. Chúng tôi ngồi ở công viên dùng bút chì màu. Họ thích tranh động vật của tôi. Một bạn dạy tôi chơi cờ vua. Chúng tôi nói chuyện và cười nhiều. Chia sẻ sở thích làm bạn thân hơn. Tôi thích thời gian như vậy với họ."
+          "translation": "Cuối tuần trước tôi chỉ bạn cách vẽ. Chúng tôi ngồi ở công viên dùng bút chì màu. Họ thích tranh động vật của tôi. Một bạn dạy tôi chơi cờ vua. Chúng tôi nói chuyện và cười nhiều. Chia sẻ sở thích làm bạn thân hơn. Tôi thích thời gian như vậy với họ.",
+          "questions": [
+            { "q": "Where did the writer and their friends sit last weekend, and what materials did they use to draw?", "a": "Last weekend, they sat in the park and used colored pencils to draw pictures together." },
+            { "q": "What kind of pictures did the friends like, and what did one friend teach the writer in return?", "a": "The friends liked the writer's pictures of animals, and then one friend taught the writer how to play chess." },
+            { "q": "How did the writer and their friends feel while they were sharing their hobbies?", "a": "They felt very happy and close because they talked and laughed a lot throughout the afternoon." },
+            { "q": "According to the text, what is the main benefit of sharing hobbies with other people?", "a": "According to the text, sharing hobbies is beneficial because it makes friends become much closer to each other." },
+            { "q": "Tell me about a time you taught a friend how to do something. What was it and how did it go?", "a": "Last month, I taught my friend how to solve a Rubik's cube. We sat in my bedroom for two hours, and he was finally able to finish it by himself." }
+          ]
         },
         {
           "id": 3,
           "title": "Why Hobbies Are Important",
           "content": "Hobbies help me feel happy and less stressed. When I play guitar or draw, I forget about homework for a while. They make my days more interesting. I also learn new skills from them. My friends have hobbies too, so we share and try together. I think everyone should have at least one hobby.",
-          "translation": "Sở thích giúp tôi vui và bớt stress. Khi chơi guitar hay vẽ, tôi quên bài vở một lúc. Chúng làm ngày của tôi thú vị hơn. Tôi cũng học kỹ năng mới từ đó. Bạn tôi cũng có sở thích, nên chúng tôi chia sẻ và thử cùng. Tôi nghĩ mọi người nên có ít nhất một sở thích."
+          "translation": "Sở thích giúp tôi vui và bớt stress. Khi chơi guitar hay vẽ, tôi quên bài vở một lúc. Chúng làm ngày của tôi thú vị hơn. Tôi cũng học kỹ năng mới từ đó. Bạn tôi cũng có sở thích, nên chúng tôi chia sẻ và thử cùng. Tôi nghĩ mọi người nên có ít nhất một sở thích.",
+          "questions": [
+            { "q": "What happens when the writer plays the guitar or draws, and how does it change their day?", "a": "When the writer plays guitar or draws, they forget about homework for a while, and it makes their days more interesting." },
+            { "q": "What do the writer and their friends do together, and what do they gain from their hobbies?", "a": "The writer and their friends share and try hobbies together, and they also learn new skills from them." },
+            { "q": "Why does the writer believe that hobbies are necessary for dealing with school pressure?", "a": "The writer believes hobbies are necessary because they help them feel happy and less stressed about homework." },
+            { "q": "What is the writer's final opinion about hobbies at the end of the text?", "a": "The writer thinks that everyone should have at least one hobby to enjoy in their life." },
+            { "q": "If you had to choose a completely new hobby to start next week, what would it be and why?", "a": "If I had to choose, I would start photography because I want to take beautiful pictures of nature and save memories when I travel." }
+          ]
         }
       ]
     },
@@ -36,19 +57,40 @@
           "id": 1,
           "title": "My Daily Healthy Routine",
           "content": "I start my day with a glass of water. Then I do some stretching exercises. For breakfast I eat fruits and bread. At school I drink water instead of soda. After classes I walk or ride my bike home. In the evening I eat vegetables and rice. I sleep early to feel good the next day.",
-          "translation": "Tôi bắt đầu ngày bằng một ly nước. Sau đó tập duỗi người. Bữa sáng ăn trái cây và bánh mì. Ở trường tôi uống nước thay soda. Sau giờ học đi bộ hoặc đạp xe về. Buổi tối ăn rau và cơm. Tôi ngủ sớm để ngày mai khỏe mạnh."
+          "translation": "Tôi bắt đầu ngày bằng một ly nước. Sau đó tập duỗi người. Bữa sáng ăn trái cây và bánh mì. Ở trường tôi uống nước thay soda. Sau giờ học đi bộ hoặc đạp xe về. Buổi tối ăn rau và cơm. Tôi ngủ sớm để ngày mai khỏe mạnh.",
+          "questions": [
+            { "q": "What are the first two things the writer does to start their day in the morning?", "a": "The writer starts their day with a glass of water and then does some stretching exercises right after." },
+            { "q": "What does the writer eat for breakfast, and what do they consume at school instead of soda?", "a": "The writer eats fruits and bread for breakfast, and they drink water instead of soda while at school." },
+            { "q": "How does the writer travel home after classes, and what do they eat for dinner?", "a": "The writer walks or rides their bike home after classes, and they eat vegetables and rice in the evening." },
+            { "q": "Why does the writer make sure to go to sleep early every single night?", "a": "The writer goes to sleep early so that they can feel good and energetic the next day." },
+            { "q": "Describe your own breakfast. Is it healthy or unhealthy, and how does it affect your energy at school?", "a": "I usually eat a bowl of hot Pho or sticky rice for breakfast. It is very healthy and keeps me full and focused until lunch time." }
+          ]
         },
         {
           "id": 2,
           "title": "Talking About Food with Friends",
           "content": "Yesterday my friend asked what I ate for lunch. I said I had rice with chicken and salad. She likes fast food but I told her it's not good every day. We talked about healthy snacks like apples and yogurt. She wants to try my way. It's nice to share healthy ideas.",
-          "translation": "Hôm qua bạn hỏi tôi ăn gì trưa. Tôi nói cơm với gà và salad. Cô ấy thích đồ ăn nhanh nhưng tôi bảo không tốt mỗi ngày. Chúng tôi nói về đồ ăn vặt lành mạnh như táo và sữa chua. Cô ấy muốn thử cách của tôi. Hay khi chia sẻ ý tưởng khỏe mạnh."
+          "translation": "Hôm qua bạn hỏi tôi ăn gì trưa. Tôi nói cơm với gà và salad. Cô ấy thích đồ ăn nhanh nhưng tôi bảo không tốt mỗi ngày. Chúng tôi nói về đồ ăn vặt lành mạnh như táo và sữa chua. Cô ấy muốn thử cách của của tôi. Hay khi chia sẻ ý tưởng khỏe mạnh.",
+          "questions": [
+            { "q": "What did the writer have for lunch yesterday, and what kind of food does their friend usually prefer?", "a": "The writer had rice with chicken and salad for lunch, whereas their friend prefers eating fast food." },
+            { "q": "What warning did the writer give the friend about fast food, and what healthy snacks did they discuss?", "a": "The writer warned that fast food is not good to eat every day, and then they discussed healthy alternatives like apples and yogurt." },
+            { "q": "How did the friend react after listening to the writer's advice about eating habits?", "a": "The friend reacted positively and decided that she wants to try the writer's healthy way of eating." },
+            { "q": "Why does the writer feel happy at the end of their conversation with the friend?", "a": "The writer feels happy because they believe it is really nice to share healthy lifestyle ideas with friends." },
+            { "q": "How often do you eat fast food, and what is your favorite healthy snack to replace it?", "a": "I only eat fast food once a month on weekends, and I usually replace it with fresh watermelon or mangoes which are much healthier." }
+          ]
         },
         {
           "id": 3,
           "title": "Why I Exercise Every Day",
           "content": "I exercise because it makes me feel strong and happy. Running or jumping rope helps me stay fit. When I feel tired after school, exercise gives me energy. My mom says it's good for my health. I invite my sister to join me sometimes. We laugh and have fun together.",
-          "translation": "Tôi tập thể dục vì nó làm tôi khỏe và vui. Chạy hoặc nhảy dây giúp tôi giữ dáng. Khi mệt sau giờ học, tập luyện cho tôi năng lượng. Mẹ nói tốt cho sức khỏe. Tôi rủ em gái tham gia đôi khi. Chúng tôi cười và vui cùng nhau."
+          "translation": "Tôi tập thể dục vì nó làm tôi khỏe và vui. Chạy hoặc nhảy dây giúp tôi giữ dáng. Khi mệt sau giờ học, tập luyện cho tôi năng lượng. Mẹ nói tốt cho sức khỏe. Tôi rủ em gái tham gia đôi khi. Chúng tôi cười và vui cùng nhau.",
+          "questions": [
+            { "q": "Why does the writer exercise every day, and what specific activities do they perform to stay fit?", "a": "The writer exercises because it makes them feel strong and happy, and they specifically practice running or jumping rope." },
+            { "q": "What happens when the writer exercises after school, and what is their mother's opinion about it?", "a": "When the writer exercises after school, it gives them fresh energy, and their mom says it is very good for their health." },
+            { "q": "Who does the writer invite to exercise with them, and what do they do together during the workout?", "a": "The writer sometimes invites their sister to join them, and they always laugh and have fun together while exercising." },
+            { "q": "How does exercise help the writer overcome physical fatigue after a long day of studying?", "a": "Exercise helps overcome fatigue by stimulating their body and providing them with a renewed sense of energy." },
+            { "q": "What is your favorite way to exercise, and how many times a week do you do it?", "a": "My favorite way to exercise is playing badminton with my father, and we usually do it three times a week in the evening." }
+          ]
         }
       ]
     },
@@ -61,19 +103,40 @@
           "id": 1,
           "title": "Cleaning the Park",
           "content": "Last Saturday my class cleaned the park near school. We picked up trash and swept the paths. Some people joined us to help. After that the park looked much cleaner. Kids could play safely again. I felt good because we helped the community. We want to do it more often.",
-          "translation": "Thứ Bảy trước lớp tôi dọn công viên gần trường. Chúng tôi nhặt rác và quét lối đi. Một số người tham gia giúp. Sau đó công viên sạch hơn nhiều. Trẻ em chơi an toàn lại. Tôi thấy tốt vì giúp cộng đồng. Chúng tôi muốn làm thường xuyên hơn."
+          "translation": "Thứ Bảy trước lớp tôi dọn công viên gần trường. Chúng tôi nhặt rác và quét lối đi. Một số người tham gia giúp. Sau đó công viên sạch hơn nhiều. Trẻ em chơi an toàn lại. Tôi thấy tốt vì giúp cộng đồng. Chúng tôi muốn làm thường xuyên hơn.",
+          "questions": [
+            { "q": "When did the class clean the park, and what specific actions did they take to tidy up the area?", "a": "The class cleaned the park near their school last Saturday, and they picked up trash and swept all the paths." },
+            { "q": "Who joined the students during the activity, and how did the park look after they finished?", "a": "Some local people joined the students to help, and after that, the park looked much cleaner than before." },
+            { "q": "Why was the cleanup important for the young children who visit the park?", "a": "The cleanup was important because removing the trash allowed the kids to play around safely again." },
+            { "q": "How did the writer feel after the activity, and what is the class planning for the future?", "a": "The writer felt very good because they helped the community, and the class now wants to do this activity more often." },
+            { "q": "If your neighborhood organized a cleanup day this weekend, would you volunteer? Why or why not?", "a": "Yes, I would definitely volunteer because cleaning the neighborhood protects our environment and makes our living space look beautiful." }
+          ]
         },
         {
           "id": 2,
           "title": "Helping at the Old People's Home",
           "content": "Our group visited the old people's home last month. We talked to the grandparents and listened to their stories. I sang a song for them. They smiled and clapped hands. We gave them fruits and books. It was nice to see them happy. Helping older people feels warm.",
-          "translation": "Nhóm chúng tôi thăm viện dưỡng lão tháng trước. Chúng tôi nói chuyện với ông bà và nghe chuyện xưa. Tôi hát một bài cho họ. Họ cười và vỗ tay. Chúng tôi tặng trái cây và sách. Thấy họ vui rất tốt. Giúp người lớn tuổi cảm thấy ấm áp."
+          "translation": "Nhóm chúng tôi thăm viện dưỡng lão tháng trước. Chúng tôi nói chuyện với ông bà và nghe chuyện xưa. Tôi hát một bài cho họ. Họ cười và vỗ tay. Chúng tôi tặng trái cây và sách. Thấy họ vui rất tốt. Giúp người lớn tuổi cảm thấy ấm áp.",
+          "questions": [
+            { "q": "When did the group visit the old people's home, and what did they do when they first arrived?", "a": "The group visited the old people's home last month, and they immediately talked to the grandparents and listened to their stories." },
+            { "q": "What performance did the writer give, and how did the elderly audience respond to it?", "a": "The writer sang a beautiful song for the grandparents, who responded by smiling and clapping their hands happily." },
+            { "q": "What gifts did the volunteer group prepare and hand out to the grandparents?", "a": "The volunteer group prepared and gave the grandparents fresh fruits and interesting books to read." },
+            { "q": "How does the writer describe their own feelings regarding helping older generations?", "a": "The writer describes that helping older people makes them feel very warm and fulfilled inside." },
+            { "q": "Have you ever helped an elderly person in your family or community? What did you do to support them?", "a": "Yes, I often help my grandmother by cleaning her reading glasses and walking with her in the garden every afternoon." }
+          ]
         },
         {
           "id": 3,
           "title": "Why We Do Community Service",
           "content": "We do community service because it helps people around us. When we clean streets or help others, the place becomes better. It also makes us feel useful and happy. My friends and I learn teamwork too. I think everyone should try it sometimes.",
-          "translation": "Chúng tôi làm tình nguyện vì giúp người xung quanh. Khi dọn phố hay giúp ai, nơi đó tốt hơn. Nó cũng làm chúng tôi thấy hữu ích và vui. Bạn tôi và tôi học làm việc nhóm nữa. Tôi nghĩ mọi người nên thử đôi khi."
+          "translation": "Chúng tôi làm tình nguyện vì giúp người xung quanh. Khi dọn phố hay giúp ai, nơi đó tốt hơn. Nó cũng làm chúng tôi thấy hữu ích và vui. Bạn tôi và tôi học làm việc nhóm nữa. Tôi nghĩ mọi người nên thử đôi khi.",
+          "questions": [
+            { "q": "What primary reason does the writer give for doing community service, and what changes happen to the neighborhood?", "a": "The primary reason is to help people around them, and as a result, the neighborhood becomes a much better place to live." },
+            { "q": "How does volunteering affect the personal feelings of the students, and what skill do they develop?", "a": "Volunteering makes the students feel useful and happy, and they also learn the essential skill of teamwork." },
+            { "q": "In what ways does cleaning streets directly benefit the people living in that specific area?", "a": "Cleaning streets directly benefits residents by creating a clean, healthy, and safe environment for everyone to walk around." },
+            { "q": "What is the writer's recommendation regarding community service at the end of the text?", "a": "The writer strongly recommends that everyone should try doing community service at least sometimes in their life." },
+            { "q": "What kind of volunteer work do you think is most urgently needed in your city right now?", "a": "I think planting more green trees and teaching English to poor children are the most urgently needed volunteer works in my city right now." }
+          ]
         }
       ]
     },
@@ -86,19 +149,40 @@
           "id": 1,
           "title": "Listening to Music",
           "content": "I listen to music every day after school. My favorite songs are pop and some Vietnamese folk. Music makes me feel relaxed or happy. Sometimes I dance to the rhythm in my room. My sister sings along with me. We share our favorite songs. Music is part of my daily life.",
-          "translation": "Tôi nghe nhạc mỗi ngày sau giờ học. Bài hát yêu thích là pop và dân ca Việt. Nhạc làm tôi thư giãn hoặc vui. Đôi khi tôi nhảy theo nhịp trong phòng. Em gái hát theo tôi. Chúng tôi chia sẻ bài hát yêu thích. Nhạc là phần trong cuộc sống hàng ngày của tôi."
+          "translation": "Tôi nghe nhạc mỗi ngày sau giờ học. Bài hát yêu thích là pop và dân ca Việt. Nhạc làm tôi thư giãn hoặc vui. Đôi khi tôi nhảy theo nhịp trong phòng. Em gái hát theo tôi. Chúng tôi chia sẻ bài hát yêu thích. Nhạc là phần trong cuộc sống hàng ngày của tôi.",
+          "questions": [
+            { "q": "When does the writer listen to music, and what specific genres of music do they like the most?", "a": "The writer listens to music every day after school, and their favorite genres are pop and Vietnamese folk music." },
+            { "q": "What does the writer sometimes do in their room, and how does their sister interact with them?", "a": "The writer sometimes dances to the rhythm in their room, and their sister joins in by singing along with them." },
+            { "q": "How does listening to music physically and mentally change the writer's mood?", "a": "Listening to music changes their mood by making them feel completely relaxed or incredibly happy after school." },
+            { "q": "How important is music to the writer based on the final sentence of the text?", "a": "Based on the final sentence, music is extremely important because it is an essential part of their daily life." },
+            { "q": "Who is your favorite singer or band, and when do you usually listen to their songs?", "a": "My favorite singer is Son Tung M-TP. I usually listen to his upbeat songs when I am doing chores around the house on weekends." }
+          ]
         },
         {
           "id": 2,
           "title": "Drawing with Friends",
           "content": "Last week I drew pictures with my friends. We used colored pencils and made animals. My friend drew a cute cat. I drew a dog running. We showed each other and laughed. Drawing is fun when we do it together. I want to draw more often.",
-          "translation": "Tuần trước tôi vẽ tranh với bạn. Chúng tôi dùng bút chì màu vẽ động vật. Bạn tôi vẽ con mèo dễ thương. Tôi vẽ con chó chạy. Chúng tôi khoe nhau và cười. Vẽ vui khi làm cùng. Tôi muốn vẽ thường hơn."
+          "translation": "Tuần trước tôi vẽ tranh với bạn. Chúng tôi dùng bút chì màu vẽ động vật. Bạn tôi vẽ con mèo dễ thương. Tôi vẽ con chó chạy. Chúng tôi khoe nhau và cười. Vẽ vui khi làm cùng. Tôi muốn vẽ thường hơn.",
+          "questions": [
+            { "q": "When did the writer draw pictures with friends, and what tools did they use to create their art?", "a": "The writer drew pictures with friends last week, and they used colored pencils to create their artwork." },
+            { "q": "What animal did the friend choose to draw, and what dynamic scene did the writer draw instead?", "a": "The friend chose to draw a cute cat, while the writer drew a dynamic scene of a dog running." },
+            { "q": "What action did the friends take after finishing their artwork, and how did they express their feelings?", "a": "After finishing, they showed the pictures to each other and expressed their happiness by laughing a lot." },
+            { "q": "Why does the writer state that drawing has become a highly enjoyable activity for them?", "a": "The writer states it is highly enjoyable because doing art projects together with close friends makes the experience much more fun." },
+            { "q": "Do you prefer looking at realistic paintings or colorful abstract art? Explain your preference.", "a": "I prefer looking at realistic paintings of landscapes because they make me feel like I am looking through a window at a real, beautiful forest." }
+          ]
         },
         {
           "id": 3,
           "title": "Why I Like Arts",
           "content": "I like arts because they help me express my feelings. When I draw or listen to music, I feel calm. Arts make boring days interesting. My family supports me too. They say my pictures are nice. I want to learn more about painting and music.",
-          "translation": "Tôi thích nghệ thuật vì nó giúp bày tỏ cảm xúc. Khi vẽ hoặc nghe nhạc, tôi thấy bình tĩnh. Nghệ thuật làm ngày buồn trở nên thú vị. Gia đình ủng hộ tôi. Họ nói tranh tôi đẹp. Tôi muốn học thêm về hội họa và âm nhạc."
+          "translation": "Tôi thích nghệ thuật vì nó giúp bày tỏ cảm xúc. Khi vẽ hoặc nghe nhạc, tôi thấy bình tĩnh. Nghệ thuật làm ngày buồn trở nên thú vị. Gia đình ủng hộ tôi. Họ nói tranh tôi đẹp. Tôi muốn học thêm về hội họa và âm nhạc.",
+          "questions": [
+            { "q": "Why does the writer enjoy arts in general, and how do they feel when drawing or listening to music?", "a": "The writer enjoys arts because it helps them express feelings, and they feel completely calm when drawing or listening to music." },
+            { "q": "How does art change a boring day for the writer, and what positive feedback does their family give?", "a": "Art makes boring days become highly interesting, and their family supports them by saying that their pictures are very nice." },
+            { "q": "What are the two specific fields of art that the writer wants to deeply study in the future?", "a": "The two specific fields that the writer wants to deeply study are painting and music." },
+            { "q": "How does family encouragement affect the writer's passion for arts?", "a": "Family encouragement strengthens their passion because knowing that their parents love their drawings makes them want to learn more." },
+            { "q": "In your school, what kinds of arts or music classes do you take, and what do you like most about them?", "a": "At school, we take music classes where we learn to sing traditional songs. I like it most because singing together with my classmates is very exciting." }
+          ]
         }
       ]
     },
@@ -111,19 +195,40 @@
           "id": 1,
           "title": "My Favorite Dish - Pho",
           "content": "Pho is my favorite Vietnamese food. I eat it for breakfast on weekends. The soup is hot and smells good with herbs. I add lime and chili to make it tasty. My mom makes pho at home sometimes. We eat together and talk. Pho makes me feel warm inside.",
-          "translation": "Phở là món Việt yêu thích của tôi. Tôi ăn sáng cuối tuần. Nước dùng nóng và thơm với rau thơm. Tôi thêm chanh và ớt cho ngon. Mẹ tôi nấu phở ở nhà đôi khi. Chúng tôi ăn cùng và nói chuyện. Phở làm tôi thấy ấm bụng."
+          "translation": "Phở là món Việt yêu thích của tôi. Tôi ăn sáng cuối tuần. Nước dùng nóng và thơm với rau thơm. Tôi thêm chanh và ớt cho ngon. Mẹ tôi nấu phở ở nhà đôi khi. Chúng tôi ăn cùng và nói chuyện. Phở làm tôi thấy ấm bụng.",
+          "questions": [
+            { "q": "How often does the writer eat Pho on weekends, and what makes the soup smell so good?", "a": "The writer eats Pho for breakfast every weekend, and the hot soup smells wonderful because of the fresh herbs added to it." },
+            { "q": "What specific ingredients does the writer add to the noodle soup, and who occasionally cooks it at home?", "a": "The writer adds lime and chili to make the soup tasty, and their mother occasionally cooks Pho at home for the family." },
+            { "q": "What social activity happens when the family gathers around a homemade bowl of Pho?", "a": "When the family gathers, they enjoy eating the delicious meal together while talking happily about their lives." },
+            { "q": "How does eating Pho affect the writer's physical sensation during the meal?", "a": "Eating Pho directly affects them by making them feel incredibly warm, cozy, and comfortable inside." },
+            { "q": "Pho is famous worldwide, but what is another traditional Vietnamese dish you love, and how is it made?", "a": "I really love Banh Mi. It is made by stuffing a crispy baguette with pate, fried eggs, cucumber, cilantro, and a bit of chili sauce." }
+          ]
         },
         {
           "id": 2,
           "title": "Street Food with Friends",
           "content": "After school my friends and I buy street food. We like banh mi with egg and pate. Sometimes we eat bun cha or com tam. We sit on small chairs and chat. Street food is cheap and delicious. We share one portion to try more kinds.",
-          "translation": "Sau giờ học bạn tôi và tôi mua đồ ăn đường phố. Chúng tôi thích bánh mì trứng và pate. Đôi khi ăn bún chả hoặc cơm tấm. Ngồi ghế nhỏ và trò chuyện. Đồ đường phố rẻ và ngon. Chúng tôi chia một phần để thử nhiều loại."
+          "translation": "Sau giờ học bạn tôi và tôi mua đồ ăn đường phố. Chúng tôi thích bánh mì trứng và pate. Đôi khi ăn bún chả hoặc cơm tấm. Ngồi ghế nhỏ và trò chuyện. Đồ đường phố rẻ và ngon. Chúng tôi chia một phần để thử nhiều loại.",
+          "questions": [
+            { "q": "When do the writer and their friends go to buy street food, and what specific type of Banh Mi do they like?", "a": "They buy street food right after school finishes, and they particularly like Banh Mi filled with fried egg and rich pate." },
+            { "q": "What other traditional dishes do they sometimes choose, and where do they sit to consume them?", "a": "Sometimes they eat Bun Cha or Com Tam, and they always sit on small plastic chairs on the sidewalk to chat." },
+            { "q": "Why do the students prefer buying street food instead of going to expensive restaurants?", "a": "They prefer street food because it is very cheap for students and tastes incredibly delicious." },
+            { "q": "What clever strategy do the friends use so they can taste many different types of dishes?", "a": "Their strategy is to share a single portion of food, which allows them to save money and try many different kinds of snacks." },
+            { "q": "Is eating street food popular among teenagers in your city? Name a popular spot you often visit.", "a": "Yes, it is extremely popular. My friends and I often visit the street food stalls near the Turtle Lake in District 3 to drink peach tea and eat rice paper salad." }
+          ]
         },
         {
           "id": 3,
           "title": "Family Cooking Time",
           "content": "On Sundays my family cooks together. Mom teaches me how to make spring rolls. We wrap rice paper with vegetables and meat. Dad fries them until golden. We eat with fish sauce. Cooking together is fun. The food tastes better when we make it ourselves.",
-          "translation": "Chủ Nhật gia đình tôi nấu ăn cùng. Mẹ dạy tôi làm nem cuốn. Chúng tôi cuốn bánh tráng với rau và thịt. Bố chiên đến vàng. Ăn với nước mắm. Nấu cùng vui lắm. Đồ ăn ngon hơn khi tự làm."
+          "translation": "Chủ Nhật gia đình tôi nấu ăn cùng. Mẹ dạy tôi làm nem cuốn. Chúng tôi cuốn bánh tráng với rau và thịt. Bố chiên đến vàng. Ăn với nước mắm. Nấu cùng vui lắm. Đồ ăn ngon hơn khi tự làm.",
+          "questions": [
+            { "q": "On what day does the family cook together, and what traditional dish is the mother teaching the writer?", "a": "The family cooks together on Sundays, and the mother is teaching the writer how to prepare traditional Vietnamese spring rolls." },
+            { "q": "What specific ingredients do they wrap inside the rice paper, and what role does the father play?", "a": "They wrap fresh vegetables and seasoned meat inside the rice paper, and then the father plays the role of frying them until they turn golden." },
+            { "q": "What classic Vietnamese condiment do they use to dip the spring rolls in during the meal?", "a": "They dip the crispy fried spring rolls into delicious traditional fish sauce during their family meal." },
+            { "q": "Why does homemade food taste significantly better to the writer according to the text?", "a": "The food tastes significantly better because the family put their own effort and love into cooking it themselves." },
+            { "q": "Do you enjoy cooking with your parents? What is the easiest dish you can prepare by yourself?", "a": "Yes, I love cooking with my mom. The easiest dish I can prepare by myself is a simple tomato omelet with green onions." }
+          ]
         }
       ]
     },
@@ -136,19 +241,40 @@
           "id": 1,
           "title": "Visiting Temple of Literature",
           "content": "I visited the Temple of Literature with my family. It is the first university in Vietnam. There are old trees and stone steles. We walked around and learned about history. Many students come here to pray for good exams. The place is quiet and beautiful. I felt proud of our history.",
-          "translation": "Tôi thăm Văn Miếu cùng gia đình. Đó là đại học đầu tiên ở Việt Nam. Có cây cổ thụ và bia đá. Chúng tôi đi dạo và học lịch sử. Nhiều học sinh đến cầu thi tốt. Nơi đây yên tĩnh và đẹp. Tôi tự hào về lịch sử của chúng ta."
+          "translation": "Tôi thăm Văn Miếu cùng gia đình. Đó là đại học đầu tiên ở Việt Nam. Có cây cổ thụ và bia đá. Chúng tôi đi dạo và học lịch sử. Nhiều học sinh đến cầu thi tốt. Nơi đây yên tĩnh và đẹp. Tôi tự hào về lịch sử của chúng ta.",
+          "questions": [
+            { "q": "Who did the writer visit the Temple of Literature with, and what historical status does this site hold?", "a": "The writer visited the Temple of Literature with their family, and this site holds the historical status of being the first university in Vietnam." },
+            { "q": "What ancient objects can be seen inside the grounds, and what did the family do while walking around?", "a": "Visitors can see majestic old trees and ancient stone steles, and the family learned a lot about national history while walking around." },
+            { "q": "Why do large numbers of Vietnamese students regularly visit this historical monument nowadays?", "a": "Many students regularly visit this monument to pray for good luck and high scores before their important school exams." },
+            { "q": "How does the writer describe the atmosphere of the place, and what emotion did they experience?", "a": "The writer describes the atmosphere as quiet and beautiful, which made them feel extremely proud of Vietnam's long history." },
+            { "q": "Have you ever visited a historical place in Vietnam? Describe what you saw and learned there.", "a": "Yes, I visited the Independence Palace in Ho Chi Minh City. I saw old war tanks, historical meeting rooms, and learned about how the country became unified." }
+          ]
         },
         {
           "id": 2,
           "title": "Talking About Old Schools",
           "content": "My grandpa told me about old schools in Vietnam. Students studied Chinese characters long ago. They wrote on paper with brushes. The Temple of Literature was the main place to learn. Now schools are different with English and computers. I think old ways were hard but interesting.",
-          "translation": "Ông tôi kể về trường xưa ở Việt Nam. Học sinh học chữ Hán ngày xưa. Họ viết bằng bút lông trên giấy. Văn Miếu là nơi học chính. Giờ trường khác với tiếng Anh và máy tính. Tôi nghĩ cách cũ khó nhưng thú vị."
+          "translation": "Ông tôi kể về trường xưa ở Việt Nam. Học sinh học chữ Hán ngày xưa. Họ viết bằng bút lông trên giấy. Văn Miếu là nơi học chính. Giờ trường khác với tiếng Anh và máy tính. Tôi nghĩ cách cũ khó nhưng thú vị.",
+          "questions": [
+            { "q": "Who shared stories about ancient education with the writer, and what language did students study long ago?", "a": "The writer's grandfather shared those stories, and he explained that students had to study difficult Chinese characters long ago." },
+            { "q": "What specific writing tools did ancient students use, and what was the central institution for learning?", "a": "Ancient students wrote on paper using traditional ink brushes, and the Temple of Literature was the main institution for high-level learning." },
+            { "q": "How have modern classrooms changed compared to schools in the past according to the grandfather?", "a": "Modern classrooms have completely changed because students now learn global English and use modern computers instead of brushes." },
+            { "q": "What is the writer's personal assessment of the ancient methods of education?", "a": "The writer assesses that the old ways of studying were incredibly hard for students but remained deeply interesting." },
+            { "q": "Would you prefer studying in an ancient school with brushes or a modern school with computers? Why?", "a": "I definitely prefer a modern school with computers because the internet helps me search for information instantly and learn skills much faster." }
+          ]
         },
         {
           "id": 3,
           "title": "Why Education Is Important",
           "content": "Education helps us learn new things and have better lives. In the past, only few people went to university. Now everyone can study. I want to learn well to help my family later. Good education opens many doors. I am happy to go to school every day.",
-          "translation": "Giáo dục giúp học điều mới và sống tốt hơn. Xưa chỉ ít người vào đại học. Giờ ai cũng học được. Tôi muốn học giỏi để giúp gia đình sau này. Giáo dục tốt mở nhiều cơ hội. Tôi vui khi đi học mỗi ngày."
+          "translation": "Giáo dục giúp học điều mới và sống tốt hơn. Xưa chỉ ít người vào đại học. Giờ ai cũng học được. Tôi muốn học giỏi để giúp gia đình sau này. Giáo dục tốt mở nhiều cơ hội. Tôi vui khi đi học mỗi ngày.",
+          "questions": [
+            { "q": "According to the writer, what are the primary benefits of education, and how has university access changed over time?", "a": "Education helps people learn new things and have better lives; in the past, only a few attended university, but now everyone has the chance to study." },
+            { "q": "What is the writer's main motivation for studying hard, and what metaphorical phrase describes a good education?", "a": "The writer's motivation is to help their family in the future, and they use the metaphorical phrase 'good education opens many doors'." },
+            { "q": "Why is the modern educational system considered fairer than the historical one?", "a": "It is considered fairer because it is open to everyone, meaning all children can go to school regardless of their background." },
+            { "q": "How does the writer feel about their daily school routine based on the text?", "a": "The writer feels very happy and grateful to attend school and receive knowledge every single day." },
+            { "q": "What is your favorite subject at school, and how do you think it will help you in your future career?", "a": "My favorite subject is English because it will allow me to travel internationally, work with global tech companies, and find a good job as a developer." }
+          ]
         }
       ]
     },
@@ -161,19 +287,40 @@
           "id": 1,
           "title": "Going to School by Bike",
           "content": "I go to school by bike every day. The road is not too busy in the morning. I wear a helmet and ride carefully. I follow traffic lights and stop at red. My mom tells me to watch for cars. It's faster than walking and good exercise too.",
-          "translation": "Tôi đi học bằng xe đạp mỗi ngày. Đường không quá đông buổi sáng. Tôi đội mũ bảo hiểm và đi cẩn thận. Tôi theo đèn tín hiệu và dừng đèn đỏ. Mẹ bảo chú ý xe. Nhanh hơn đi bộ và tốt cho sức khỏe."
+          "translation": "Tôi đi học bằng xe đạp mỗi ngày. Đường không quá đông buổi sáng. Tôi đội mũ bảo hiểm và đi cẩn thận. Tôi theo đèn tín hiệu và dừng đèn đỏ. Mẹ bảo chú ý xe. Nhanh hơn đi bộ và tốt cho sức khỏe.",
+          "questions": [
+            { "q": "How often does the writer cycle to school, and what is the condition of the road in the morning?", "a": "The writer cycles to school every single day, and luckily the road is not too busy early in the morning." },
+            { "q": "What safety gear does the writer wear, and what do they do when a traffic light turns red?", "a": "The writer wears a protective helmet, rides carefully, and always stops completely when a traffic light turns red." },
+            { "q": "What specific warning does the mother give the writer, and what are the two main benefits of cycling?", "a": "The mother warns them to watch out for large cars, and the two benefits are that cycling is faster than walking and provides good physical exercise." },
+            { "q": "Why is following traffic signals considered crucial for a student cyclist?", "a": "Following traffic signals is crucial because it keeps the student safe from accidents on busy city roads." },
+            { "q": "How do you travel to school every day? What safety rules must you follow during your journey?", "a": "My father takes me to school by motorbike every day. I must always wear a heavy helmet and hold on tight to my father during the journey." }
+          ]
         },
         {
           "id": 2,
           "title": "Talking About Traffic Rules",
           "content": "Yesterday my friend asked about traffic rules. I said we must wear helmets on motorbikes. We cross at zebra crossings only. No using phones when riding. My dad says rules keep us safe. We should always follow them. Do you know the rules too?",
-          "translation": "Hôm qua bạn hỏi về luật giao thông. Tôi bảo phải đội mũ bảo hiểm khi đi xe máy. Qua đường ở vạch kẻ thôi. Không dùng điện thoại khi lái. Bố nói luật giữ an toàn. Chúng ta nên luôn tuân thủ. Bạn biết luật không?"
+          "translation": "Hôm qua bạn hỏi về luật giao thông. Tôi bảo phải đội mũ bảo hiểm khi đi xe máy. Qua đường ở vạch kẻ thôi. Không dùng điện thoại khi lái. Bố nói luật giữ an toàn. Chúng ta nên luôn tuân thủ. Bạn biết luật không?",
+          "questions": [
+            { "q": "Who asked the writer about road safety yesterday, and what was the first rule mentioned regarding motorbikes?", "a": "The writer's friend asked about road safety yesterday, and the first rule mentioned was that everyone must wear helmets on motorbikes." },
+            { "q": "Where should pedestrians safely cross a street, and what dangerous action must riders avoid while moving?", "a": "Pedestrians must cross the street at marked zebra crossings only, and riders must completely avoid using mobile phones while moving." },
+            { "q": "What is the father's wise opinion about why traffic rules exist in society?", "a": "The father believes that traffic rules exist solely to protect people and keep everyone safe on the dangerous roads." },
+            { "q": "What obligation does the writer emphasize regarding these regulations at the end of the lesson?", "a": "The writer strongly emphasizes that citizens have an obligation to always follow traffic rules without exception." },
+            { "q": "In your opinion, why do some people still break traffic laws, and how can we encourage them to be safer?", "a": "Some people break laws because they are in a hurry, but we can encourage them by giving strict fines and teaching safety rules in schools." }
+          ]
         },
         {
           "id": 3,
           "title": "A Busy Street Near School",
           "content": "The street near my school is very busy after classes. Many students ride bikes and motorbikes. Cars honk sometimes. I wait for the green light before crossing. My friends and I walk together to be safe. Busy streets can be dangerous but careful people stay okay.",
-          "translation": "Phố gần trường tôi rất đông sau giờ tan học. Nhiều học sinh đi xe đạp và xe máy. Xe hơi bấm còi đôi khi. Tôi đợi đèn xanh mới qua. Bạn tôi và tôi đi cùng để an toàn. Phố đông có thể nguy hiểm nhưng người cẩn thận thì ổn."
+          "translation": "Phố gần trường tôi rất đông sau giờ tan học. Nhiều học sinh đi xe đạp và xe máy. Xe hơi bấm còi đôi khi. Tôi đợi đèn xanh mới qua. Bạn tôi và tôi đi cùng để an toàn. Phố đông có thể nguy hiểm nhưng người cẩn thận thì ổn.",
+          "questions": [
+            { "q": "When does the street near the school become crowded, and what vehicles do students use?", "a": "The street becomes extremely crowded right after classes finish, and students mostly ride their bicycles and motorbikes." },
+            { "q": "What noisy disturbance do cars make, and what color light does the writer wait for before crossing?", "a": "Cars loudly honk their horns sometimes, and the writer always waits patiently for the pedestrian light to turn green before crossing." },
+            { "q": "Who does the writer walk together with, and why do they choose to walk in a group?", "a": "The writer walks together with their close friends because walking in a group increases visibility and keeps them safe." },
+            { "q": "What is the writer's final reassuring thought about navigating dangerous traffic environments?", "a": "The writer's reassuring thought is that although busy streets are dangerous, careful people who follow rules will always stay okay." },
+            { "q": "Does your school have a traffic jam at closing time? Describe what the scene looks like.", "a": "Yes, my school always experiences terrible traffic jams at 4:30 PM. Parents crowd the gates with motorbikes, horns honk, and local police have to guide the vehicles." }
+          ]
         }
       ]
     },
@@ -186,19 +333,40 @@
           "id": 1,
           "title": "My Favorite Movie",
           "content": "My favorite movie is an animation about animals. They go on a big adventure to find home. The story is funny and touching. I watched it with my family last weekend. We laughed and cried together. Good movies make me feel happy. I want to watch it again.",
-          "translation": "Phim yêu thích của tôi là phim hoạt hình về động vật. Chúng phiêu lưu lớn để tìm nhà. Câu chuyện hài và cảm động. Tôi xem với gia đình cuối tuần trước. Chúng tôi cười và khóc cùng. Phim hay làm tôi vui. Tôi muốn xem lại."
+          "translation": "Phim yêu thích của tôi là phim hoạt hình về động vật. Chúng phiêu lưu lớn để tìm nhà. Câu chuyện hài và cảm động. Tôi xem với gia đình cuối tuần trước. Chúng tôi cười và khóc cùng. Phim hay làm tôi vui. Tôi muốn xem lại.",
+          "questions": [
+            { "q": "What genre is the writer's favorite movie, and what is the main plot of the story?", "a": "The movie belongs to the animation genre, and the main plot follows a group of animals going on a big adventure to find their way home." },
+            { "q": "Who did the writer watch this movie with, and when exactly did this activity take place?", "a": "The writer watched the animated film together with their family members last weekend." },
+            { "q": "What deep emotional reactions did the family experience while watching the film together?", "a": "The family experienced strong emotions because the story was both funny and touching, causing them to laugh and cry together." },
+            { "q": "What desire does the writer express at the very end of the text regarding this film?", "a": "The writer expresses a strong desire to watch this wonderful animated movie all over again." },
+            { "q": "Do you enjoy watching emotional movies that make you cry, or do you prefer action movies? Why?", "a": "I prefer action movies like Marvel films because the special visual effects are exciting and the fast pace keeps me thrilled throughout the show." }
+          ]
         },
         {
           "id": 2,
           "title": "Watching Movies with Friends",
           "content": "Last Friday my friends came over to watch a comedy. We ate popcorn and laughed a lot. The movie was about silly friends on a trip. One scene was so funny we paused to laugh more. Watching together is more fun than alone. We talked about it after.",
-          "translation": "Thứ Sáu trước bạn tôi đến xem phim hài. Chúng tôi ăn bắp rang và cười nhiều. Phim về nhóm bạn ngốc trên chuyến đi. Một cảnh buồn cười đến mức chúng tôi dừng để cười thêm. Xem cùng vui hơn xem một mình. Sau đó chúng tôi nói về phim."
+          "translation": "Thứ Sáu trước bạn tôi đến xem phim hài. Chúng tôi ăn bắp rang và cười nhiều. Phim về nhóm bạn ngốc trên chuyến đi. Một cảnh buồn cười đến mức chúng tôi dừng để cười thêm. Xem cùng vui hơn xem một mình. Sau đó chúng tôi nói về phim.",
+          "questions": [
+            { "q": "When did the friends visit the writer's house, and what specific movie genre did they choose to watch?", "a": "The friends visited the writer's house last Friday night, and they chose to watch a hilarious comedy movie." },
+            { "q": "What classic snack did they eat, and what funny plot was the chosen movie about?", "a": "They ate delicious popcorn while watching a movie that was about a group of silly friends going on a chaotic trip." },
+            { "q": "Why did the group have to temporarily pause the movie playback during the screening?", "a": "They had to pause the movie because one particular scene was so incredibly funny that they needed time to laugh out loud together." },
+            { "q": "What social activity did the friends do immediately after the film finished rolling its credits?", "a": "Immediately after the film finished, they sat together and talked extensively about their favorite scenes and characters." },
+            { "q": "If you hosted a movie night for your friends, what snacks would you prepare besides popcorn?", "a": "Besides popcorn, I would prepare crispy potato chips, sweet milk tea, and some grilled sausages for my friends to enjoy." }
+          ]
         },
         {
           "id": 3,
           "title": "Why I Like Watching Films",
           "content": "I like watching films because they take me to new worlds. Comedy makes me laugh when I'm sad. Adventure films excite me. I learn new words from English movies too. Watching with family or friends is the best. Good films stay in my mind for a long time.",
-          "translation": "Tôi thích xem phim vì chúng đưa tôi đến thế giới mới. Phim hài làm tôi cười khi buồn. Phim phiêu lưu làm tôi hào hứng. Tôi học từ mới từ phim tiếng Anh nữa. Xem với gia đình hoặc bạn là tốt nhất. Phim hay ở trong đầu tôi lâu."
+          "translation": "Tôi thích xem phim vì chúng đưa tôi đến thế giới mới. Phim hài làm tôi cười khi buồn. Phim phiêu lưu làm tôi hào hứng. Tôi học từ mới từ phim tiếng Anh nữa. Xem với gia đình hoặc bạn là tốt nhất. Phim hay ở trong đầu tôi lâu.",
+          "questions": [
+            { "q": "What general reason does the writer give for loving cinema, and how does comedy affect their mood?", "a": "The writer loves cinema because films take them to imaginary new worlds, and comedy successfully makes them laugh whenever they feel sad." },
+            { "q": "What feeling do adventure movies trigger, and what educational benefit do English films offer?", "a": "Adventure movies trigger intense excitement, and watching English films offers the educational benefit of learning new vocabulary words." },
+            { "q": "Who does the writer consider to be the ideal companions for watching an interesting movie?", "a": "The writer considers close family members or best friends to be the ideal companions for sharing a movie night." },
+            { "q": "How long do exceptional movies remain inside the writer's memory according to the text?", "a": "According to the text, exceptional and good movies remain inside the writer's mind for a very long time." },
+            { "q": "Has a movie ever completely changed your mind about something or taught you an unforgettable lesson? Explain.", "a": "Yes, the movie 'Wall-E' taught me an unforgettable lesson about protecting our planet from plastic pollution and taking care of nature before it's too late." }
+          ]
         }
       ]
     },
@@ -211,19 +379,40 @@
           "id": 1,
           "title": "Halloween Fun",
           "content": "Halloween is a fun festival in October. People wear costumes like ghosts or witches. Children go trick-or-treating for candies. Houses have pumpkins with faces. We watched videos about it in class. It looks exciting. In Vietnam we have Tet instead. Both festivals are happy times.",
-          "translation": "Halloween là lễ hội vui vào tháng Mười. Mọi người mặc trang phục như ma hoặc phù thủy. Trẻ em đi xin kẹo. Nhà có bí ngô mặt cười. Chúng tôi xem video về nó ở lớp. Trông thú vị. Ở Việt Nam có Tết. Cả hai lễ hội đều vui vẻ."
+          "translation": "Halloween là lễ hội vui vào tháng Mười. Mọi người mặc trang phục như ma hoặc phù thủy. Trẻ em đi xin kẹo. Nhà có bí ngô mặt cười. Chúng tôi xem video về nó ở lớp. Trông thú vị. Ở Việt Nam có Tết. Cả hai lễ hội đều vui vẻ.",
+          "questions": [
+            { "q": "In what month does Halloween take place, and what common costumes do people wear?", "a": "Halloween takes place in October, and people commonly wear spooky costumes like frightening ghosts or mysterious witches." },
+            { "q": "What traditional game do children play to get sweets, and what decoration is placed outside houses?", "a": "Children play trick-or-treating to collect candies, and houses are decorated with orange pumpkins carved with faces." },
+            { "q": "How did the writer's class learn about Halloween, and what was their initial impression of it?", "a": "The class learned about Halloween by watching educational videos in class, and their initial impression was that it looks highly exciting." },
+            { "q": "What major Vietnamese celebration is compared to Halloween, and what do they have in common?", "a": "The traditional Tet holiday is compared to Halloween, and both festivals have in common that they represent incredibly happy times for families." },
+            { "q": "If you participated in a modern Halloween costume party, what character would you dress up as and why?", "a": "I would dress up as Spider-Man because he is my favorite superhero and his red and blue costume looks super cool." }
+          ]
         },
         {
           "id": 2,
           "title": "Christmas in Other Countries",
           "content": "Christmas is big in many countries. People put up trees with lights and gifts. Families have big dinners on Christmas Eve. Children wait for Santa Claus. I saw pictures of snow and decorations. It looks magical. In Vietnam we celebrate Tet more, but Christmas is nice too.",
-          "translation": "Giáng sinh lớn ở nhiều nước. Mọi người dựng cây với đèn và quà. Gia đình ăn tối lớn đêm Giáng sinh. Trẻ em chờ ông già Noel. Tôi thấy ảnh tuyết và trang trí. Trông kỳ diệu. Ở Việt Nam Tết quan trọng hơn, nhưng Giáng sinh cũng hay."
+          "translation": "Giáng sinh lớn ở nhiều nước. Mọi người dựng cây với đèn và quà. Gia đình ăn tối lớn đêm Giáng sinh. Trẻ em chờ ông già Noel. Tôi thấy ảnh tuyết và trang trí. Trông kỳ diệu. Ở Việt Nam Tết quan trọng hơn, nhưng Giáng sinh cũng hay.",
+          "questions": [
+            { "q": "How do people decorate their homes for Christmas, and what special meal do they share?", "a": "People put up beautiful pine trees adorned with colorful lights and gifts, and families share a massive dinner on Christmas Eve." },
+            { "q": "Who do young children eagerly wait for on Christmas night, and what weather element did the writer see in pictures?", "a": "Children eagerly wait for Santa Claus to bring presents, and the writer saw beautiful white snow in global pictures." },
+            { "q": "What word does the writer use to describe the appearance of international Christmas celebrations?", "a": "The writer uses the word 'magical' to describe the stunning appearance of international Christmas celebrations." },
+            { "q": "How does the cultural importance of Christmas compare to Tet within Vietnam according to the text?", "a": "According to the text, Vietnamese people celebrate Tet much more because it is a national tradition, but they still find Christmas very nice." },
+            { "q": "What does your family usually do on Christmas night? Do you go out to the city center or stay at home?", "a": "On Christmas night, my family usually drives to the city center in District 1 to look at the beautiful lights on the streets and take photos in front of the Notre Dame Cathedral." }
+          ]
         },
         {
           "id": 3,
           "title": "My Favorite Festival",
           "content": "My favorite festival is Tet in Vietnam. We clean the house and decorate with flowers. Families come together to eat and talk. I get lucky money and play with cousins. Tet makes me feel warm and happy. Festivals bring joy to everyone. I love our traditions.",
-          "translation": "Lễ hội yêu thích của tôi là Tết ở Việt Nam. Chúng tôi dọn nhà và trang trí hoa. Gia đình quây quần ăn và nói chuyện. Tôi nhận tiền mừng tuổi và chơi với anh em họ. Tết làm tôi ấm áp và vui. Lễ hội mang niềm vui cho mọi người. Tôi yêu truyền thống của chúng ta."
+          "translation": "Lễ hội yêu thích của tôi là Tết ở Việt Nam. Chúng tôi dọn nhà và trang trí hoa. Gia đình quây quần ăn và nói chuyện. Tôi nhận tiền mừng tuổi và chơi với anh em họ. Tết làm tôi ấm áp và vui. Lễ hội mang niềm vui cho mọi người. Tôi yêu truyền thống của chúng ta.",
+          "questions": [
+            { "q": "What is the writer's favorite cultural festival, and what preparation do they do at home before it starts?", "a": "The writer's favorite festival is Tet in Vietnam, and before it starts, they clean the entire house and decorate it beautifully with flowers." },
+            { "q": "What social interactions happen among family members during Tet, and what gifts do children receive?", "a": "Family members come together to eat delicious food and talk about old times, while children receive lucky money in red envelopes." },
+            { "q": "Who does the writer play with during the holiday, and what deep emotion does Tet bring to them?", "a": "The writer plays with their friendly cousins, and the holiday brings them a deep emotion of being warm and happy." },
+            { "q": "What universal effect do festivals have on human beings according to the writer's observation?", "a": "According to the writer's observation, festivals have the universal effect of bringing pure joy and happiness to everyone." },
+            { "q": "Describe the most special dish your family eats during Tet. Who prepares it and how does it taste?", "a": "The most special dish is Banh Chung. My father and grandfather prepare it together using sticky rice, pork, and mung beans. It tastes incredibly rich and savory." }
+          ]
         }
       ]
     },
@@ -236,19 +425,40 @@
           "id": 1,
           "title": "Solar Energy at Home",
           "content": "My uncle has solar panels on his roof. They make electricity from the sun. It helps save money on bills. The house uses less power from the city. Solar energy is clean and good for the environment. I think more houses should use it. It's simple and useful.",
-          "translation": "Chú tôi có pin mặt trời trên mái. Chúng tạo điện từ nắng. Giúp tiết kiệm tiền điện. Nhà dùng ít điện lưới hơn. Năng lượng mặt trời sạch và tốt cho môi trường. Tôi nghĩ nhiều nhà nên dùng. Nó đơn giản và hữu ích."
+          "translation": "Chú tôi có pin mặt trời trên mái. Chúng tạo điện từ nắng. Giúp tiết kiệm tiền điện. Nhà dùng ít điện lưới hơn. Năng lượng mặt trời sạch và tốt cho môi trường. Tôi nghĩ nhiều nhà nên dùng. Nó đơn giản và hữu ích.",
+          "questions": [
+            { "q": "Where did the writer's uncle install solar panels, and how do these devices generate electricity?", "a": "The uncle installed solar panels directly on his roof, and these devices generate clean electricity by absorbing energy from the sun." },
+            { "q": "What economic benefit do the solar panels provide, and how does it change city power consumption?", "a": "The panels help save a lot of money on monthly electricity bills, meaning the house uses much less power from the city grid." },
+            { "q": "Why is solar power considered highly beneficial for our planet Earth?", "a": "It is considered beneficial because solar power is completely clean and does not emit harmful pollution into the environment." },
+            { "q": "What are the two adjectives the writer uses to recommend solar energy to other homeowners?", "a": "The writer uses the adjectives 'simple' and 'useful' to describe and recommend solar energy to other homeowners." },
+            { "q": "Does your current house or school use any solar energy devices? Would you support installing them? Why?", "a": "My house doesn't use solar devices yet, but I would strongly support installing them because it would reduce our electricity costs and save nature." }
+          ]
         },
         {
           "id": 2,
           "title": "Talking About Wind Power",
           "content": "In class we learned about wind power. Big windmills turn with the wind to make electricity. It's clean like solar energy. Some places in Vietnam have wind farms. My friend said it's good because no smoke. I like the idea of clean energy for the future.",
-          "translation": "Ở lớp chúng tôi học về năng lượng gió. Cối xay gió lớn quay theo gió tạo điện. Sạch như năng lượng mặt trời. Một số nơi ở Việt Nam có trang trại gió. Bạn tôi nói tốt vì không khói. Tôi thích ý tưởng năng lượng sạch cho tương lai."
+          "translation": "Ở lớp chúng tôi học về năng lượng gió. Cối xay gió lớn quay theo gió tạo điện. Sạch như năng lượng mặt trời. Một số nơi ở Việt Nam có trang trại gió. Bạn tôi nói tốt vì không khói. Tôi thích ý tưởng năng lượng sạch cho tương lai.",
+          "questions": [
+            { "q": "Where did the writer learn about wind power, and how do windmills physically generate energy?", "a": "The writer learned about wind power in class, and the big windmills physically turn with the strong wind to generate electricity." },
+            { "q": "What clean source is wind power compared to, and does Vietnam have any installations for it?", "a": "Wind power is compared to clean solar energy, and yes, some specific regions in Vietnam already have massive wind farms." },
+            { "q": "Why does the writer's friend believe that wind energy is exceptionally good for nature?", "a": "The friend believes it is exceptionally good because wind turbines generate electricity without creating any toxic smoke or air pollution." },
+            { "q": "What visionary concept does the writer express fondness for at the end of the text?", "a": "The writer expresses great fondness for the concept of using 100% clean and renewable energy sources for our future society." },
+            { "q": "If you traveled to a place with huge wind turbines, like Binh Thuan or Bac Lieu, what would you like to do there?", "a": "If I traveled there, I would definitely love to take scenic photographs under the massive white windmills and learn how engineers maintain them." }
+          ]
         },
         {
           "id": 3,
           "title": "Why We Need Clean Energy",
           "content": "We need clean energy because old ways make air dirty. Solar and wind power don't pollute. They help stop global warming. Everyone can use less electricity at home. My family turns off lights when not needed. Small changes make a big difference for the planet.",
-          "translation": "Chúng ta cần năng lượng sạch vì cách cũ làm không khí bẩn. Năng lượng mặt trời và gió không ô nhiễm. Chúng giúp ngừng nóng lên toàn cầu. Mọi người có thể dùng ít điện ở nhà. Gia đình tôi tắt đèn khi không cần. Thay đổi nhỏ tạo khác biệt lớn cho hành tinh."
+          "translation": "Chúng ta cần năng lượng sạch vì cách cũ làm không khí bẩn. Năng lượng mặt trời và gió không ô nhiễm. Chúng giúp ngừng nóng lên toàn cầu. Mọi người có thể dùng ít điện ở nhà. Gia đình tôi tắt đèn khi không cần. Thay đổi nhỏ tạo khác biệt lớn cho hành tinh.",
+          "questions": [
+            { "q": "Why must humanity move away from traditional old energy sources, and what benefit do solar and wind offer?", "a": "Humanity must move away because old ways make the air highly dirty, while modern solar and wind energy sources do not pollute at all." },
+            { "q": "What global climate crisis can renewable energy sources successfully help to stop?", "a": "Renewable energy sources can successfully help to stop the dangerous global warming crisis that threatens our planet." },
+            { "q": "What specific action does the writer's family perform daily to conserve energy inside their home?", "a": "The writer's family conserves energy by always turning off unnecessary lights when nobody is using the room." },
+            { "q": "What philosophical statement does the writer make about the impact of small individual habits on the planet?", "a": "The writer states that small individual green changes in daily habits can make a massive, positive difference for the entire planet." },
+            { "q": "Name three simple actions you can do every day at school to save electricity and water.", "a": "At school, I can turn off the classroom fans before going to lunch, shut off the bathroom taps completely, and use natural sunlight instead of electric lights." }
+          ]
         }
       ]
     },
@@ -261,19 +471,40 @@
           "id": 1,
           "title": "Fast Travel by Train",
           "content": "In the future trains will be very fast. I can go to my grandparents in one hour. The seats are soft and comfortable. We can watch movies on the way. No traffic jams or waiting. Travelling will be easy for everyone. I can't wait to try it.",
-          "translation": "Tương lai tàu sẽ rất nhanh. Tôi đến nhà ông bà chỉ một giờ. Ghế mềm và thoải mái. Chúng tôi xem phim trên đường. Không kẹt xe hay chờ đợi. Du lịch sẽ dễ cho mọi người. Tôi mong thử sớm."
+          "translation": "Tương lai tàu sẽ rất nhanh. Tôi đến nhà ông bà chỉ một giờ. Ghế mềm và thoải mái. Chúng tôi xem phim trên đường. Không kẹt xe hay chờ đợi. Du lịch sẽ dễ cho mọi người. Tôi mong thử sớm.",
+          "questions": [
+            { "q": "How fast will future trains be, and how long will it take the writer to reach their grandparents' house?", "a": "Future trains will be super fast, allowing the writer to reach their grandparents' house in just one single hour." },
+            { "q": "How are the interior seats described, and what entertainment activity can passengers enjoy during the journey?", "a": "The interior seats are described as soft and comfortable, and passengers can easily watch entertaining movies on the way." },
+            { "q": "What annoying traffic problems will be completely eliminated by using these high-tech trains?", "a": "Using these high-tech trains will completely eliminate terrible traffic jams and long, boring waiting times at stations." },
+            { "q": "What general observation does the writer make about the nature of future travel for the population?", "a": "The writer observes that travelling will become incredibly easy, rapid, and stress-free for everyone in society." },
+            { "q": "If you could take a super-fast train from Ho Chi Minh City to Hanoi in just two hours, who would you go with and what would you visit first?", "a": "I would go with my parents, and the first place we would visit is the historic Hoan Kiem Lake to eat traditional lemon ice cream." }
+          ]
         },
         {
           "id": 2,
           "title": "Flying Cars for Short Trips",
           "content": "Flying cars will be common soon. I can fly to the beach with my family. No roads, just sky. The car is quiet and safe. We see nice views from above. Short trips will be quick and fun. I think flying cars will change everything.",
-          "translation": "Xe bay sẽ phổ biến sớm. Tôi bay đến bãi biển với gia đình. Không đường, chỉ trời. Xe yên tĩnh và an toàn. Chúng tôi thấy view đẹp từ trên. Chuyến ngắn sẽ nhanh và vui. Tôi nghĩ xe bay thay đổi mọi thứ."
+          "translation": "Xe bay sẽ phổ biến sớm. Tôi bay đến bãi biển với gia đình. Không đường, chỉ trời. Xe yên tĩnh và an toàn. Chúng tôi thấy view đẹp từ trên. Chuyến ngắn sẽ nhanh và vui. Tôi nghĩ xe bay thay đổi mọi thứ.",
+          "questions": [
+            { "q": "How common will flying cars become, and where does the writer plan to travel with their family?", "a": "Flying cars will become very common soon, and the writer plans to fly directly to the beach with their family." },
+            { "q": "Where do these futuristic vehicles travel, and what two qualities make them reliable for passengers?", "a": "They travel freely in the wide open sky instead of roads, and they are described as exceptionally quiet and safe." },
+            { "q": "What visual advantage do passengers experience when flying high in the sky?", "a": "Passengers experience the unique visual advantage of seeing beautiful, breathtaking panoramic views from up high." },
+            { "q": "What is the writer's bold prediction about the impact of flying cars on human transportation?", "a": "The writer's bold prediction is that the invention of flying cars will completely change everything about human transportation." },
+            { "q": "Do you think flying cars will cause accidents in the sky? How should we control them safely?", "a": "Yes, they could cause accidents, so we must control them safely using automated AI pilots and strict invisible flight lanes in the sky." }
+          ]
         },
         {
           "id": 3,
           "title": "Travel with Technology",
           "content": "Future travel will use more technology. Phones show the best routes. Virtual reality lets us see places before going. Hotels book themselves. We can travel to far countries easily. Technology makes travel safe and exciting. I want to see the world like that.",
-          "translation": "Du lịch tương lai dùng công nghệ nhiều hơn. Điện thoại chỉ đường tốt nhất. Thực tế ảo cho xem nơi trước khi đi. Khách sạn tự đặt. Chúng tôi dễ đi nước xa. Công nghệ làm du lịch an toàn và thú vị. Tôi muốn khám phá thế giới như vậy."
+          "translation": "Du lịch tương lai dùng công nghệ nhiều hơn. Điện thoại chỉ đường tốt nhất. Thực tế ảo cho xem nơi trước khi đi. Khách sạn tự đặt. Chúng tôi dễ đi nước xa. Công nghệ làm du lịch an toàn và thú vị. Tôi muốn khám phá thế giới như vậy.",
+          "questions": [
+            { "q": "What will future travel heavily rely on, and what useful information do mobile phones provide to travelers?", "a": "Future travel will heavily rely on high technology, and mobile phones will instantly show the best and fastest travel routes." },
+            { "q": "What does virtual reality technology allow tourists to do, and how will hotel reservations be handled?", "a": "Virtual reality allows tourists to visually see destinations before going, and smart hotels will automatically book themselves." },
+            { "q": "How does advanced technology change the process of visiting distant foreign countries?", "a": "Advanced technology makes the complex process of visiting distant countries become incredibly easy, smooth, and accessible." },
+            { "q": "What two positive characteristics does technology add to the traveling experience according to the text?", "a": "According to the text, technology successfully makes the traveling experience highly safe and incredibly exciting." },
+            { "q": "If you used virtual reality right now, what famous world wonder would you want to explore virtually? Why?", "a": "I would want to explore the Eiffel Tower in Paris because I have always dreamed of seeing its magnificent architecture up close without flying." }
+          ]
         }
       ]
     },
@@ -286,19 +517,40 @@
           "id": 1,
           "title": "Talking About This Year",
           "content": "This year I learned a lot in English. I can talk about hobbies and healthy living. I know how to describe festivals and food. My speaking is better now. I did projects with friends and shared ideas. I feel happy with my progress.",
-          "translation": "Năm nay tôi học nhiều tiếng Anh. Tôi nói được về sở thích và sống khỏe. Tôi biết mô tả lễ hội và đồ ăn. Nói tốt hơn bây giờ. Tôi làm dự án với bạn và chia sẻ ý. Tôi vui với tiến bộ của mình."
+          "translation": "Năm nay tôi học nhiều tiếng Anh. Tôi nói được về sở thích và sống khỏe. Tôi biết mô tả lễ hội và đồ ăn. Nói tốt hơn bây giờ. Tôi làm dự án với bạn và chia sẻ ý. Tôi vui với tiến bộ của mình.",
+          "questions": [
+            { "q": "What general achievement did the writer attain in English this year, and what two initial topics can they discuss fluently?", "a": "The writer learned a lot in English this year, and they can now discuss personal hobbies and healthy living fluently." },
+            { "q": "What cultural and culinary elements can the writer describe, and how did they collaborate with friends?", "a": "The writer can describe international festivals and traditional food, and they collaborated with friends by doing school projects and sharing ideas." },
+            { "q": "Which specific language skill has significantly improved for the writer over the past year?", "a": "The writer's English speaking skill has significantly improved and become much better over the past year." },
+            { "q": "How does the writer emotionally feel when looking back at their own academic journey?", "a": "The writer feels incredibly happy, satisfied, and proud when looking back at their academic progress." },
+            { "q": "What was your own biggest achievement in studying English or any other subject this school year?", "a": "My biggest achievement this year was successfully building a mini-game framework using TypeScript and understanding basic backend APIs." }
+          ]
         },
         {
           "id": 2,
           "title": "My Best Memory",
           "content": "My best memory this year is the school trip to the park. We played games and ate together. Everyone laughed a lot. The weather was nice and sunny. We took photos and talked all day. It was simple but very fun. I will remember it forever.",
-          "translation": "Kỷ niệm tốt nhất năm nay là chuyến đi công viên trường. Chúng tôi chơi trò và ăn cùng. Mọi người cười nhiều. Thời tiết đẹp và nắng. Chúng tôi chụp ảnh và nói cả ngày. Đơn giản nhưng rất vui. Tôi sẽ nhớ mãi."
+          "translation": "Kỷ niệm tốt nhất năm nay là chuyến đi công viên trường. Chúng tôi chơi trò và ăn cùng. Mọi người cười nhiều. Thời tiết đẹp và nắng. Chúng tôi chụp ảnh và nói cả ngày. Đơn giản nhưng rất vui. Tôi sẽ nhớ mãi.",
+          "questions": [
+            { "q": "What specific event is identified as the writer's best memory of the year, and where did it take place?", "a": "The school trip is identified as the best memory of the year, and it happily took place at a local park." },
+            { "q": "What social activities did the students do together at the park, and how did the group express their happiness?", "a": "The students played fun games and ate delicious meals together, and they expressed happiness by laughing a lot all day." },
+            { "q": "How was the weather during that special day, and what did the students do to preserve their memories?", "a": "The weather was beautiful, nice, and sunny, and the students took many photos and talked all day to preserve their memories." },
+            { "q": "What summary does the writer give about the trip, and how long will they keep this memory?", "a": "The writer summarizes that the trip was simple but very fun, and they promise to remember it forever in their heart." },
+            { "q": "Share your own best memory with your classmates. Where did you go and what made it unforgettable?", "a": "My best memory was playing a soccer match during sports day. We were losing, but I scored a goal in the last minute and everyone cheered loudly." }
+          ]
         },
         {
           "id": 3,
           "title": "My Plan for Next Year",
           "content": "Next year I want to speak English more every day. I will talk to friends and watch more videos. I want to read simple books too. My goal is to tell long stories without stopping. I think practice will help me. English will be useful in the future.",
-          "translation": "Năm sau tôi muốn nói tiếng Anh nhiều mỗi ngày. Tôi sẽ nói với bạn và xem video nhiều hơn. Tôi muốn đọc sách đơn giản nữa. Mục tiêu là kể chuyện dài không dừng. Tôi nghĩ luyện tập sẽ giúp. Tiếng Anh sẽ hữu ích tương lai."
+          "translation": "Năm sau tôi muốn nói tiếng Anh nhiều mỗi ngày. Tôi sẽ nói với bạn và xem video nhiều hơn. Tôi muốn đọc sách đơn giản nữa. Mục tiêu là kể chuyện dài không dừng. Tôi nghĩ luyện tập sẽ giúp. Tiếng Anh sẽ hữu ích tương lai.",
+          "questions": [
+            { "q": "What is the writer's primary target for English next year, and who do they plan to talk to?", "a": "The writer's primary target is to speak English more every day, and they plan to practice talking directly to their friends." },
+            { "q": "What media content will the writer watch, and what literary material do they want to read?", "a": "The writer will watch more English videos online, and they also want to read simple English books to improve their reading skills." },
+            { "q": "What specific conversational milestone represents the ultimate goal for the writer next year?", "a": "The ultimate conversational milestone is to be able to tell long, complex stories fluently in English without stopping." },
+            { "q": "Why does the writer believe that putting daily effort into language practice is valuable for their life?", "a": "The writer believes practice is valuable because English will be extremely useful for their future career and global opportunities." },
+            { "q": "What is your personal plan to improve your tech or language skills during the upcoming summer break?", "a": "During summer break, I plan to code for two hours every morning to master NestJS and watch English programming tutorials on YouTube to upgrade my skills." }
+          ]
         }
       ]
     }

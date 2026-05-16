@@ -11,19 +11,40 @@
           "id": 1,
           "title": "A Typical School Day",
           "content": "Every morning I wake up at six thirty. I brush my teeth and eat breakfast with my mom. Then I ride my bike to school. Classes start at seven fifteen. We have English and Math first. During break time, I play with friends in the yard. After lunch, we have Science and Art. School finishes at four o'clock. I go home and tell my mom about my day. I like my new school a lot.",
-          "translation": "Mỗi sáng tôi dậy lúc sáu rưỡi. Tôi đánh răng và ăn sáng với mẹ. Sau đó tôi đạp xe đến trường. Tiết học bắt đầu lúc bảy giờ mười lăm. Chúng tôi học Tiếng Anh và Toán trước. Giờ ra chơi, tôi chơi với bạn ở sân. Sau bữa trưa, chúng tôi học Khoa học và Mỹ thuật. Tan học lúc bốn giờ. Tôi về nhà kể mẹ về ngày hôm nay. Tôi thích trường mới lắm."
+          "translation": "Mỗi sáng tôi dậy lúc sáu rưỡi. Tôi đánh răng và ăn sáng với mẹ. Sau đó tôi đạp xe đến trường. Tiết học bắt đầu lúc bảy giờ mười lăm. Chúng tôi học Tiếng Anh và Toán trước. Giờ ra chơi, tôi chơi với bạn ở sân. Sau bữa trưa, chúng tôi học Khoa học và Mỹ thuật. Tan học lúc bốn giờ. Tôi về nhà kể mẹ về ngày hôm nay. Tôi thích trường mới lắm.",
+          "questions": [
+            { "q": "Can you describe the writer's morning routine before classes start?", "a": "Every morning, the writer wakes up at six thirty, eats breakfast with their mom, and then rides a bike to school before classes start at seven fifteen." },
+            { "q": "What subjects does the writer study first and what do they do during break time?", "a": "The writer studies English and Math first, and when it is break time, they usually play with friends in the school yard." },
+            { "q": "What is the schedule of the writer's afternoon at school until they go home?", "a": "After lunch, they have Science and Art, and then school finishes at four o'clock so the writer can go home." },
+            { "q": "How does the writer show that they love their mom and their new school?", "a": "The writer shows this by going home to tell their mom about the day and explicitly stating that they like the new school a lot." },
+            { "q": "How about you? Describe your typical morning routine before you start your work or study.", "a": "Usually, I wake up at 7 AM. The first thing I do is check my phone, and then I make a cup of coffee. I have a quick breakfast before sitting down at my desk to work." }
+          ]
         },
         {
           "id": 2,
           "title": "Meeting New Classmates",
           "content": "On my first day, I felt a bit nervous. A girl named Lan smiled and said hi. We talked during break time. She likes drawing and music too. We sit together in class now. After school, we walk home together sometimes. Lan is friendly and funny. I'm happy to have a new friend. School feels better with friends around.",
-          "translation": "Ngày đầu tiên, tôi hơi lo lắng. Một bạn gái tên Lan mỉm cười và chào. Chúng tôi nói chuyện giờ ra chơi. Cô ấy cũng thích vẽ và âm nhạc. Bây giờ chúng tôi ngồi cùng nhau trong lớp. Sau giờ học, đôi khi đi bộ về nhà cùng. Lan thân thiện và hài hước. Tôi vui vì có bạn mới. Trường học vui hơn khi có bạn."
+          "translation": "Ngày đầu tiên, tôi hơi lo lắng. Một bạn gái tên Lan mỉm cười và chào. Chúng tôi nói chuyện giờ ra chơi. Cô ấy cũng thích vẽ và âm nhạc. Bây giờ chúng tôi ngồi cùng nhau trong lớp. Sau giờ học, đôi khi đi bộ về nhà cùng. Lan thân thiện và hài hước. Tôi vui vì có bạn mới. Trường học vui hơn khi có bạn.",
+          "questions": [
+            { "q": "How did the writer feel on the first day and who changed that feeling?", "a": "On the first day, the writer felt a bit nervous, but a friendly girl named Lan changed that by smiling and saying hi." },
+            { "q": "What common interests do the writer and Lan share, and what do they do after school?", "a": "They both like drawing and music, and sometimes they walk home together after school finishes." },
+            { "q": "Why does the writer feel happy and how is Lan described in the text?", "a": "The writer feels happy because they have a new friend, and Lan is described as a very friendly and funny person." },
+            { "q": "How does having friends change the writer's experience at the new school?", "a": "Having friends makes school feel much better and more comfortable for the writer instead of being nervous." },
+            { "q": "Tell me about your best friend or a close colleague at work. What are they like?", "a": "My close colleague is very talented and smart. We sit next to each other in the office. He is funny and always helps me solve difficult technical problems." }
+          ]
         },
         {
           "id": 3,
           "title": "My Favorite Part of School",
           "content": "My favorite part of school is break time. I play badminton with my friends every day. We laugh a lot and run around. Sometimes we share snacks like biscuits. Last week we won a small game. It was fun! School is not only studying but also playing. I feel happy when I'm with my classmates.",
-          "translation": "Phần yêu thích nhất của tôi ở trường là giờ ra chơi. Tôi chơi cầu lông với bạn mỗi ngày. Chúng tôi cười nhiều và chạy nhảy. Đôi khi chia đồ ăn vặt như bánh quy. Tuần trước chúng tôi thắng một ván nhỏ. Vui lắm! Trường không chỉ học mà còn chơi. Tôi thấy vui khi ở cùng bạn lớp."
+          "translation": "Phần yêu thích nhất của tôi ở trường là giờ ra chơi. Tôi chơi cầu lông với bạn mỗi ngày. Chúng tôi cười nhiều và chạy nhảy. Đôi khi chia đồ ăn vặt như bánh quy. Tuần trước chúng tôi thắng một ván nhỏ. Vui lắm! Trường không chỉ học mà còn chơi. Tôi thấy vui khi ở cùng bạn lớp.",
+          "questions": [
+            { "q": "What is the writer's favorite time at school and what sport do they play?", "a": "The writer's favorite part of school is break time, during which they play badminton with their friends every day." },
+            { "q": "What kind of activities do the classmates do together to have fun during break time?", "a": "They run around, laugh a lot, and sometimes they share delicious snacks like biscuits with each other." },
+            { "q": "What exciting event happened last week and how did the writer feel about it?", "a": "Last week, they won a small game of badminton, and the writer felt it was extremely fun and exciting." },
+            { "q": "What is the writer's opinion about the purpose of going to school?", "a": "In the writer's opinion, school is not only a place for studying but also a great place for playing and socializing." },
+            { "q": "What was your favorite subject or activity when you were at school? Why did you like it?", "a": "When I was at school, my favorite activity was playing football after class. It helped me stay healthy and connect with many good friends." }
+          ]
         }
       ]
     },
@@ -36,19 +57,40 @@
           "id": 1,
           "title": "My Home Sweet Home",
           "content": "I live in a small house with my family. We have two bedrooms and a living room. The kitchen is next to the dining area. My bedroom has a bed, a desk and a window. I like to read books there in the evening. Outside, we have a little garden with flowers. My mom grows vegetables too. Our house is cozy and quiet. I feel safe and happy at home.",
-          "translation": "Tôi sống trong ngôi nhà nhỏ cùng gia đình. Chúng tôi có hai phòng ngủ và phòng khách. Bếp nằm cạnh khu ăn uống. Phòng ngủ tôi có giường, bàn học và cửa sổ. Tôi thích đọc sách ở đó buổi tối. Bên ngoài có vườn nhỏ với hoa. Mẹ tôi trồng rau nữa. Nhà chúng tôi ấm cúng và yên tĩnh. Tôi cảm thấy an toàn và vui ở nhà."
+          "translation": "Tôi sống trong ngôi nhà nhỏ cùng gia đình. Chúng tôi có hai phòng ngủ và phòng khách. Bếp nằm cạnh khu ăn uống. Phòng ngủ tôi có giường, bàn học và cửa sổ. Tôi thích đọc sách ở đó buổi tối. Bên ngoài có vườn nhỏ với hoa. Mẹ tôi trồng rau nữa. Nhà chúng tôi ấm cúng và yên tĩnh. Tôi cảm thấy an toàn và vui ở nhà.",
+          "questions": [
+            { "q": "Can you describe the structure of the house and where the kitchen is located?", "a": "The house is small with two bedrooms and a living room, and the kitchen is located right next to the dining area." },
+            { "q": "What items are in the writer's bedroom and what do they do there at night?", "a": "The bedroom has a bed, a desk, and a window, and the writer likes to sit there to read books in the evening." },
+            { "q": "What is outside the house and what does the writer's mom do there?", "a": "Outside the house, there is a little garden with flowers, and the writer's mom uses it to grow fresh vegetables." },
+            { "q": "Why does the writer love their home so much according to the final sentences?", "a": "Because the house is very cozy and quiet, which makes the writer feel completely safe and happy at home." },
+            { "q": "Describe your current house or apartment. What is your favorite corner?", "a": "I live in a comfortable apartment in the city. My favorite corner is my workspace near the balcony, where I can code and look at the city view." }
+          ]
         },
         {
           "id": 2,
           "title": "Family Dinner at Home",
           "content": "We always have dinner together at seven o'clock. Mom cooks rice, fish and vegetables. Dad tells funny stories from work. My little brother likes to talk about school. We laugh and eat slowly. After dinner, I help wash the dishes. Family time is the best part of the day. It makes us feel close and happy.",
-          "translation": "Chúng tôi luôn ăn tối cùng nhau lúc bảy giờ. Mẹ nấu cơm, cá và rau. Bố kể chuyện vui từ chỗ làm. Em trai tôi thích kể về trường. Chúng tôi cười và ăn chậm rãi. Sau bữa ăn, tôi giúp rửa chén. Thời gian gia đình là phần tốt nhất trong ngày. Nó làm chúng tôi gần gũi và vui."
+          "translation": "Chúng tôi luôn ăn tối cùng nhau lúc bảy giờ. Mẹ nấu cơm, cá và rau. Bố kể chuyện vui từ chỗ làm. Em trai tôi thích kể về trường. Chúng tôi cười và ăn chậm rãi. Sau bữa ăn, tôi giúp rửa chén. Thời gian gia đình là phần tốt nhất trong ngày. Nó làm chúng tôi gần gũi và vui.",
+          "questions": [
+            { "q": "What time does the family gather for dinner and what does the mom usually prepare?", "a": "The family always gathers for dinner at seven o'clock, and the mom usually prepares rice, fish, and vegetables." },
+            { "q": "What do the dad and the little brother usually talk about during the meal?", "a": "The dad loves to tell funny stories from his work, while the little brother enjoys talking about his school day." },
+            { "q": "How does the family enjoy their dinner and what does the writer do after finishing?", "a": "They laugh and eat their food slowly together, and after dinner, the writer helps their mom wash the dishes." },
+            { "q": "Why does the writer believe that family time is the best part of the day?", "a": "Because spending time together makes all the family members feel very close to each other and happy." },
+            { "q": "Does your family usually have dinner together? What do you often talk about?", "a": "Yes, we try to have dinner together every night. We often talk about our day, interesting financial news, or plans for the upcoming weekend." }
+          ]
         },
         {
           "id": 3,
           "title": "My Favorite Room",
           "content": "My favorite room is the living room. We have a big sofa and a TV there. In the evening, we sit together and watch cartoons. Sometimes I play games on the floor with my brother. The room has nice pictures on the wall. It's comfortable and bright. I love relaxing there after a long day at school.",
-          "translation": "Phòng yêu thích của tôi là phòng khách. Chúng tôi có ghế sofa lớn và TV. Buổi tối, chúng tôi ngồi cùng xem phim hoạt hình. Đôi khi tôi chơi trò trên sàn với em trai. Phòng có tranh đẹp trên tường. Nó thoải mái và sáng sủa. Tôi thích thư giãn ở đó sau ngày dài ở trường."
+          "translation": "Phòng yêu thích của tôi là phòng khách. Chúng tôi có ghế sofa lớn và TV. Buổi tối, chúng tôi ngồi cùng xem phim hoạt hình. Đôi khi tôi chơi trò trên sàn với em trai. Phòng có tranh đẹp trên tường. Nó thoải mái và sáng sủa. Tôi thích thư giãn ở đó sau ngày dài ở trường.",
+          "questions": [
+            { "q": "Which room does the writer prefer the most and what major items are in it?", "a": "The writer prefers the living room the most because it has a big comfortable sofa and a television." },
+            { "q": "What activities do the family members do in this room when evening comes?", "a": "In the evening, they sit together on the sofa to watch cartoons, and sometimes the kids play games on the floor." },
+            { "q": "How is the atmosphere of the living room described and what is on the wall?", "a": "The living room is very comfortable and bright, and there are nice decorative pictures hanging on the wall." },
+            { "q": "When and why does the writer love to spend time in this specific room?", "a": "The writer loves to spend time there after a long day at school because it is the perfect place for relaxing." },
+            { "q": "If you could change one thing about your living room, what would it be?", "a": "I would love to add a larger smart TV and a high-quality sound system so my family can enjoy movies like in a cinema." }
+          ]
         }
       ]
     },
@@ -61,19 +103,40 @@
           "id": 1,
           "title": "My Best Friend",
           "content": "My best friend is called Minh. He is twelve years old and very funny. We go to the same class and sit next to each other. Minh likes soccer and video games. After school, we often play in the park. He always makes me laugh. I like spending time with him because he's kind too.",
-          "translation": "Bạn thân của tôi tên Minh. Cậu ấy mười hai tuổi và rất hài hước. Chúng tôi học cùng lớp và ngồi cạnh nhau. Minh thích bóng đá và game. Sau giờ học, chúng tôi thường chơi ở công viên. Cậu ấy luôn làm tôi cười. Tôi thích ở bên cậu ấy vì cậu ấy cũng tốt bụng."
+          "translation": "Bạn thân của tôi tên Minh. Cậu ấy mười hai tuổi và rất hài hước. Chúng tôi học cùng lớp và ngồi cạnh nhau. Minh thích bóng đá và game. Sau giờ học, chúng tôi thường chơi ở công viên. Cậu ấy luôn làm tôi cười. Tôi thích ở bên cậu ấy vì cậu ấy cũng tốt bụng.",
+          "questions": [
+            { "q": "Who is the writer's best friend and what is their relationship in class?", "a": "The writer's best friend is Minh; they go to the same class and sit right next to each other every day." },
+            { "q": "What are Minh's favorite hobbies and where do the two friends go after school?", "a": "Minh really likes playing soccer and video games, and after school, they often go to play in the park together." },
+            { "q": "What special personality traits does Minh have that make him a great friend?", "a": "Minh is very funny and kind, and he always knows how to make the writer laugh when they hang out." },
+            { "q": "Why exactly does the writer enjoy spending their free time with Minh?", "a": "Because Minh is not only hilarious but also a very kind-hearted person who is enjoyable to be around." },
+            { "q": "What qualities do you look for in a good friend or a business partner?", "a": "For a good friend or partner, I highly value honesty and a supportive attitude. It's also great if they have a good sense of humor." }
+          ]
         },
         {
           "id": 2,
           "title": "Playing with Friends",
           "content": "Yesterday after school, Minh and I played soccer. We kicked the ball and ran a lot. It was sunny so we enjoyed it. Later we sat under a tree and ate ice cream. Minh told a funny story about his dog. We laughed until our stomachs hurt. Playing with friends makes any day better.",
-          "translation": "Hôm qua sau giờ học, Minh và tôi chơi bóng đá. Chúng tôi sút bóng và chạy nhiều. Trời nắng nên vui lắm. Sau đó ngồi dưới cây ăn kem. Minh kể chuyện hài về con chó nhà cậu ấy. Chúng tôi cười đến đau bụng. Chơi với bạn làm ngày nào cũng tốt hơn."
+          "translation": "Hôm qua sau giờ học, Minh và tôi chơi bóng đá. Chúng tôi sút bóng và chạy nhiều. Trời nắng nên vui lắm. Sau đó ngồi dưới cây ăn kem. Minh kể chuyện hài về con chó nhà cậu ấy. Chúng tôi cười đến đau bụng. Chơi với bạn làm ngày nào cũng tốt hơn.",
+          "questions": [
+            { "q": "What sport did the writer and Minh play yesterday, and how was the weather?", "a": "They played soccer together after school yesterday, and the weather was beautiful and sunny." },
+            { "q": "What did they do to cool down after running around and kicking the ball?", "a": "They went to sit under a big tree to rest and enjoyed eating some delicious ice cream." },
+            { "q": "What did Minh share while they were resting and what was the reaction?", "a": "Minh told a very funny story about his dog, which made them laugh so hard until their stomachs hurt." },
+            { "q": "What lesson or conclusion does the writer draw about spending time with friends?", "a": "The writer concludes that playing with good friends has the power to make any regular day feel much better." },
+            { "q": "Do you prefer outdoor sports like football or indoor activities like gaming? Why?", "a": "I like both, but recently I prefer indoor activities like strategy games because they help me relax after a long day of coding." }
+          ]
         },
         {
           "id": 3,
           "title": "A Fun Day with Friends",
           "content": "Last weekend, my friends came to my house. We played board games and ate snacks. Then we watched a cartoon movie together. Everyone was happy and noisy. At the end, we took photos to remember the day. Friends make simple things special. I love days like this very much.",
-          "translation": "Cuối tuần trước, bạn tôi đến nhà. Chúng tôi chơi board game và ăn đồ vặt. Sau đó xem phim hoạt hình cùng nhau. Mọi người vui và ồn ào. Cuối cùng chụp ảnh để nhớ ngày hôm đó. Bạn bè làm những điều đơn giản trở nên đặc biệt. Tôi rất thích những ngày như vậy."
+          "translation": "Cuối tuần trước, bạn tôi đến nhà. Chúng tôi chơi board game và ăn đồ vặt. Sau đó xem phim hoạt hình cùng nhau. Mọi người vui và ồn ào. Cuối cùng chụp ảnh để nhớ ngày hôm đó. Bạn bè làm những điều đơn giản trở nên đặc biệt. I rất thích những ngày như vậy.",
+          "questions": [
+            { "q": "When did the friends visit the writer and what were the first activities they did?", "a": "They visited the writer's house last weekend, and they immediately started playing board games and eating snacks." },
+            { "q": "What did the group of friends do after playing games and how was the atmosphere?", "a": "After playing games, they watched a cartoon movie together, and the room became very happy and noisy." },
+            { "q": "What did they do before saying goodbye and why did they do it?", "a": "At the end of the day, they took photos together because they wanted to remember this fun day forever." },
+            { "q": "According to the writer, how do friends change simple, everyday things?", "a": "The writer believes that true friends have a special way of making even the simplest things feel wonderful and special." },
+            { "q": "If you invite friends to your house on the weekend, what food or drinks would you prepare?", "a": "I would probably order some pizza or make a hotpot, and prepare some cold beer or soft drinks for everyone to enjoy while talking." }
+          ]
         }
       ]
     },
@@ -86,19 +149,40 @@
           "id": 1,
           "title": "Around My House",
           "content": "I live in a nice neighbourhood near a park. There is a small market just five minutes away. People sell fresh fruits and bread every morning. My neighbours are friendly. Mr. Nam always says hello when I pass by. In the evening, kids play outside. I like walking in the street with my dog. It's safe and quiet here.",
-          "translation": "Tôi sống ở khu phố đẹp gần công viên. Có chợ nhỏ chỉ cách năm phút. Mọi người bán trái cây tươi và bánh mì mỗi sáng. Hàng xóm thân thiện. Ông Nam luôn chào khi tôi đi qua. Buổi tối, trẻ con chơi ngoài đường. Tôi thích dắt chó đi dạo phố. Nơi đây an toàn và yên tĩnh."
+          "translation": "Tôi sống ở khu phố đẹp gần công viên. Có chợ nhỏ chỉ cách năm phút. Mọi người bán trái cây tươi và bánh mì mỗi sáng. Hàng xóm thân thiện. Ông Nam luôn chào khi tôi đi qua. Buổi tối, trẻ con chơi ngoài đường. Tôi thích dắt chó đi dạo phố. Nơi đây an toàn và yên tĩnh.",
+          "questions": [
+            { "q": "Where is the writer's neighbourhood located and how close is the nearest market?", "a": "The neighbourhood is located right near a nice park, and there is a small market just a five-minute walk away." },
+            { "q": "What do local people sell at the market and how do the neighbours treat the writer?", "a": "People sell fresh fruits and bread every morning, and the neighbours are very friendly to the writer." },
+            { "q": "Who is Mr. Nam and what does he do whenever he sees the writer passing by?", "a": "Mr. Nam is one of the writer's neighbours, and he always smiles and says hello whenever the writer passes by his house." },
+            { "q": "What happens in the street during the evening and why does the writer like it?", "a": "In the evening, local kids gather to play outside, and the writer enjoys walking their dog because it is safe and quiet." },
+            { "q": "Is your neighbourhood noisy or quiet? What do you like most about your area?", "a": "My current neighbourhood in Tan Phu district is quite busy during the day but peaceful at night. What I like most is that there are many great coffee shops nearby." }
+          ]
         },
         {
           "id": 2,
           "title": "Morning Walk in the Neighbourhood",
           "content": "Every morning I walk around my neighbourhood. The air is fresh and birds sing. I see old ladies doing exercise in the park. A coffee shop opens early and smells good. Sometimes I buy milk tea on the way to school. Neighbours smile and wave at me. I feel happy starting my day like this.",
-          "translation": "Mỗi sáng tôi đi dạo quanh khu phố. Không khí trong lành và chim hót. Tôi thấy các bà cụ tập thể dục ở công viên. Quán cà phê mở sớm và thơm. Đôi khi tôi mua trà sữa trên đường đi học. Hàng xóm mỉm cười và vẫy tay. Tôi thấy vui khi bắt đầu ngày như vậy."
+          "translation": "Mỗi sáng tôi đi dạo quanh khu phố. Không khí trong lành và chim hót. Tôi thấy các bà cụ tập thể dục ở công viên. Quán cà phê mở sớm và thơm. Đôi khi tôi mua trà sữa trên đường đi học. Hàng xóm mỉm cười và vẫy tay. Tôi thấy vui khi bắt đầu ngày như vậy.",
+          "questions": [
+            { "q": "What is the environment like when the writer takes a walk in the morning?", "a": "The environment is beautiful because the morning air is completely fresh and local birds are singing sweetly." },
+            { "q": "Who does the writer see in the park and what are these people doing?", "a": "The writer sees many old ladies who gather in the local park to do their morning exercises together." },
+            { "q": "What shop opens early in the morning and what does the writer sometimes buy on their way?", "a": "A local coffee shop opens very early and smells delicious, and sometimes the writer buys a cup of milk tea on the way to school." },
+            { "q": "How do the local neighbours interact with the writer during their morning walk?", "a": "The neighbours are very warm; they always smile and wave at the writer as they walk past." },
+            { "q": "Do you have a habit of doing exercise or walking in the morning? Why or why not?", "a": "To be honest, I rarely exercise in the morning because I usually stay up late to code. I prefer working out or walking in the late afternoon instead." }
+          ]
         },
         {
           "id": 3,
           "title": "Helping a Neighbour",
           "content": "Yesterday my neighbour needed help. Her bag was heavy so I carried it home for her. She thanked me and gave me some mangoes. We talked about school and weather. Neighbours help each other here. It feels good to be useful. I like living in this friendly place.",
-          "translation": "Hôm qua hàng xóm cần giúp. Túi bà nặng nên tôi xách về nhà giúp. Bà cảm ơn và cho tôi ít xoài. Chúng tôi nói về trường và thời tiết. Hàng xóm giúp nhau ở đây. Cảm giác tốt khi hữu ích. Tôi thích sống ở nơi thân thiện này."
+          "translation": "Hôm qua hàng xóm cần giúp. Túi bà nặng nên tôi xách về nhà giúp. Bà cảm ơn và cho tôi ít xoài. Chúng tôi nói về trường và thời tiết. Hàng xóm giúp nhau ở đây. Cảm giác tốt khi hữu ích. Tôi thích sống ở nơi thân thiện này.",
+          "questions": [
+            { "q": "What problem did the neighbour have yesterday and how did the writer assist her?", "a": "The neighbour had a very heavy bag, so the writer assisted her by carrying it all the way to her home." },
+            { "q": "How did the kind neighbour express her gratitude to the writer after getting help?", "a": "She expressed her gratitude by thanking the writer warmly and giving them some fresh mangoes." },
+            { "q": "What topics did they discuss during their conversation and what did the writer learn?", "a": "They discussed school and the daily weather, and the writer learned that neighbours in this area always support each other." },
+            { "q": "How did the act of helping make the writer feel about themselves?", "a": "Helping the old lady made the writer feel wonderful inside because it feels great to be a useful person." },
+            { "q": "Have you ever helped your neighbours with anything? What happened?", "a": "Yes, last month my neighbor was away, so I helped her receive a heavy delivery package from the shipper and kept it safe at my house until she returned." }
+          ]
         }
       ]
     },
@@ -111,19 +195,40 @@
           "id": 1,
           "title": "Ha Long Bay Trip",
           "content": "Last summer my family went to Ha Long Bay. We took a boat and saw many islands. The water was green and very beautiful. We stopped to swim and eat seafood. In the afternoon we visited a cave. It had colorful lights inside. The sunset was amazing. I took many photos. It was a great trip.",
-          "translation": "Mùa hè năm ngoái gia đình tôi đi Vịnh Hạ Long. Chúng tôi đi thuyền và thấy nhiều đảo. Nước màu xanh và rất đẹp. Chúng tôi dừng bơi và ăn hải sản. Buổi chiều thăm hang động. Bên trong có đèn màu. Hoàng hôn tuyệt đẹp. Tôi chụp nhiều ảnh. Đó là chuyến đi hay."
+          "translation": "Mùa hè năm ngoái gia đình tôi đi Vịnh Hạ Long. Chúng tôi đi thuyền và thấy nhiều đảo. Nước màu xanh và rất đẹp. Chúng tôi dừng bơi và ăn hải sản. Buổi chiều thăm hang động. Bên trong có đèn màu. Hoàng hôn tuyệt đẹp. Tôi chụp nhiều ảnh. Đó là chuyến đi hay.",
+          "questions": [
+            { "q": "When did the writer visit Ha Long Bay and how did they explore the islands?", "a": "The writer visited Ha Long Bay last summer, and they explored the numerous islands by taking a boat trip." },
+            { "q": "How was the seawater described and what two activities did they do during the boat stop?", "a": "The seawater was green and incredibly beautiful; they stopped the boat to enjoy swimming and to eat fresh seafood." },
+            { "q": "Where did the family go in the afternoon and what made that place look special?", "a": "In the afternoon they visited a natural cave, which looked special because it was illuminated with many colorful lights." },
+            { "q": "What beautiful view did they witness at the end of the day and what did the writer do?", "a": "They witnessed an amazing sunset over the bay, and the writer took a lot of photos to preserve the memory." },
+            { "q": "Have you ever been to Ha Long Bay? If yes, what did you like most? If no, where do you want to travel?", "a": "Yes, I have been there before. What I liked most was cruising between the limestone islands and relaxing on the quiet deck in the evening." }
+          ]
         },
         {
           "id": 2,
           "title": "Sapa in the Mountains",
           "content": "Sapa has beautiful mountains and rice fields. The air is cool and fresh. We walked on small paths and saw H'Mong people. They wear colorful clothes. In September the rice is golden. I tried local food like grilled meat. Sapa is peaceful and nice. I want to go back again.",
-          "translation": "Sapa có núi đẹp và ruộng bậc thang. Không khí mát và trong lành. Chúng tôi đi đường nhỏ và thấy người H'Mông. Họ mặc đồ màu sắc. Tháng 9 lúa vàng óng. Tôi thử đồ ăn địa phương như thịt nướng. Sapa yên bình và hay. Tôi muốn quay lại."
+          "translation": "Sapa có núi đẹp và ruộng bậc thang. Không khí mát và trong lành. Chúng tôi đi đường nhỏ và thấy người H'Mông. Họ mặc đồ màu sắc. Tháng 9 lúa vàng óng. Tôi thử đồ ăn địa phương như thịt nướng. Sapa yên bình và hay. Tôi muốn quay lại.",
+          "questions": [
+            { "q": "What are the main natural features of Sapa and how is the weather there?", "a": "Sapa is famous for its breathtaking mountains and rice fields, and the air there is always cool and fresh." },
+            { "q": "Who did the writer meet while walking on small paths and what was special about them?", "a": "The writer met local H'Mong people, who were very unique because they wore beautiful, traditional, colorful clothes." },
+            { "q": "Why is September a special time to visit Sapa according to the text?", "a": "September is special because it is harvest season, meaning all the terraced rice fields turn into a beautiful golden color." },
+            { "q": "What kind of local culinary experience did the writer try and what is their final wish?", "a": "The writer tried local grilled meat, and they loved the peaceful atmosphere so much that they wish to visit Sapa again." },
+            { "q": "Imagine you are planning a 4-day trip to Sapa. What activities would you like to experience there?", "a": "If I go to Sapa, I would love to trek through the ethnic villages, enjoy the foggy weather, climb Fansipan mountain, and try local salmon hotpot." }
+          ]
         },
         {
           "id": 3,
           "title": "Phong Nha Cave",
           "content": "Phong Nha Cave is very big and dark inside. We took a boat on the river. There were many rocks and lights. The cave is cool even in summer. My dad told stories about it. We walked and took photos. It felt like an adventure. I liked it very much.",
-          "translation": "Hang Phong Nha rất lớn và tối bên trong. Chúng tôi đi thuyền trên sông. Có nhiều đá và đèn. Hang mát dù mùa hè. Bố tôi kể chuyện về nó. Chúng tôi đi bộ và chụp ảnh. Cảm giác như phiêu lưu. Tôi thích lắm."
+          "translation": "Hang Phong Nha rất lớn và tối bên trong. Chúng tôi đi thuyền trên sông. Có nhiều đá và đèn. Hang mát dù mùa hè. Bố tôi kể chuyện về nó. Chúng tôi đi bộ và chụp ảnh. Cảm giác như phiêu lưu. Tôi thích lắm.",
+          "questions": [
+            { "q": "How is the inside of Phong Nha Cave described and how did the family get there?", "a": "The inside of the cave is massive and very dark, and the family had to travel there by taking a boat on the river." },
+            { "q": "What objects did they see inside the cave and how was the temperature?", "a": "They saw many unique rock formations illuminated by lights, and the temperature inside was surprisingly cool even though it was summer." },
+            { "q": "What did the writer's dad do during the tour and what did the kids do?", "a": "The dad entertained everyone by telling interesting historical stories about the cave, while the kids walked around and took photos." },
+            { "q": "Why did the writer enjoy this trip so much according to the text?", "a": "Because exploring the huge, dark cave made the writer feel like they were participating in a real, exciting adventure." },
+            { "q": "Do you enjoy adventurous trips like exploring caves or climbing mountains? Why or why not?", "a": "Yes, I really love adventurous trips because exploring nature helps me clear my mind completely and escape from my daily busy routine." }
+          ]
         }
       ]
     },
@@ -136,19 +241,40 @@
           "id": 1,
           "title": "Preparing for Tet",
           "content": "Before Tet we clean the house together. Mom buys flowers and fruits. We decorate with peach blossoms. Dad makes banh chung with sticky rice. I help wrap the cakes. Children get new clothes. Everyone is busy and happy. Tet is coming soon. I can't wait to see fireworks.",
-          "translation": "Trước Tết chúng tôi dọn nhà cùng nhau. Mẹ mua hoa và trái cây. Chúng tôi trang trí bằng hoa đào. Bố làm bánh chưng với nếp. Tôi giúp gói bánh. Trẻ em được mua quần áo mới. Mọi người bận rộn và vui. Tết sắp đến rồi. Tôi mong xem pháo hoa."
+          "translation": "Trước Tết chúng tôi dọn nhà cùng nhau. Mẹ mua hoa và trái cây. Chúng tôi trang trí bằng hoa đào. Bố làm bánh chưng với nếp. Tôi giúp gói bánh. Trẻ em được mua quần áo mới. Mọi người bận rộn và vui. Tết sắp đến rồi. Tôi mong xem pháo hoa.",
+          "questions": [
+            { "q": "What major housework does the family do before Tet and what does the mom purchase?", "a": "Before Tet, the whole family cleans the house together, and the mom purchases beautiful flowers and fresh fruits." },
+            { "q": "How do they decorate the house and what traditional food does the dad prepare?", "a": "They decorate the house using beautiful pink peach blossoms, and the dad prepares traditional banh chung using sticky rice." },
+            { "q": "What specific job does the writer do to help their dad with the traditional cakes?", "a": "The writer directly helps their dad by wrapping the banh chung cakes carefully before they are cooked." },
+            { "q": "What special gift do children receive and what event is the writer looking forward to?", "a": "Children receive brand new clothes for the new year, and the writer is looking forward to watching the brilliant fireworks." },
+            { "q": "What is your favorite part when preparing for Tet holiday with your family?", "a": "My favorite part is driving around the flower markets to choose a nice apricot blossom tree, and then sitting with my family to watch the cake pot boil overnight." }
+          ]
         },
         {
           "id": 2,
           "title": "Tet Morning",
           "content": "On Tet morning we wear new clothes. I say happy new year to grandparents. They give me lucky money in red envelopes. We eat banh chung and mut tet. The house smells nice with incense. Everyone smiles and talks. Tet makes us feel warm and lucky.",
-          "translation": "Sáng Tết chúng tôi mặc đồ mới. Tôi chúc Tết ông bà. Họ mừng tuổi bằng tiền trong bao lì xì đỏ. Chúng tôi ăn bánh chưng và mứt. Nhà thơm mùi nhang. Mọi người cười và nói chuyện. Tết làm chúng tôi ấm áp và may mắn."
+          "translation": "Sáng Tết chúng tôi mặc đồ mới. Tôi chúc Tết ông bà. Họ mừng tuổi bằng tiền trong bao lì xì đỏ. Chúng tôi ăn bánh chưng và mứt. Nhà thơm mùi nhang. Mọi người cười và nói chuyện. Tết làm chúng tôi ấm áp và may mắn.",
+          "questions": [
+            { "q": "What is the first thing the family does on Tet morning and who do they greet?", "a": "On Tet morning, they dress up in their brand new clothes and the writer greets their grandparents to wish them a happy new year." },
+            { "q": "What do grandparents give to the children and how is it packaged?", "a": "The grandparents give lucky money to the children, which is packaged inside traditional small red envelopes." },
+            { "q": "What traditional foods does the family consume on this special morning?", "a": "They sit together to consume traditional foods such as banh chung and sweet mut tet (candied fruits)." },
+            { "q": "Why does the house have a nice smell and what is the mood of the family members?", "a": "The house smells wonderful because they burn traditional incense, and the mood is very joyful as everyone smiles and talks." },
+            { "q": "Do you still receive lucky money or do you give it to others now? How do you feel about it?", "a": "Since I am older and married, I don't receive lucky money anymore. Instead, I give lucky money to my parents, my child, and my young relatives. It makes me feel happy to share wishes." }
+          ]
         },
         {
           "id": 3,
           "title": "Visiting Relatives on Tet",
           "content": "During Tet we visit grandparents and aunts. We bring fruits and cakes as gifts. They give us lucky money and sweets. We eat together and talk about old times. Children play outside with new toys. Tet is about family and good wishes. I love these visits very much.",
-          "translation": "Trong Tết chúng tôi thăm ông bà và cô dì. Mang trái cây và bánh làm quà. Họ mừng tuổi và cho kẹo. Chúng tôi ăn cùng và kể chuyện xưa. Trẻ em chơi ngoài với đồ chơi mới. Tết là về gia đình và lời chúc tốt. Tôi rất thích những chuyến thăm này."
+          "translation": "Trong Tết chúng tôi thăm ông bà và cô dì. Mang trái cây và bánh làm quà. Họ mừng tuổi và cho kẹo. Chúng tôi ăn cùng và kể chuyện xưa. Trẻ em chơi ngoài với đồ chơi mới. Tết là về gia đình và lời chúc tốt. Tôi rất thích những chuyến thăm này.",
+          "questions": [
+            { "q": "Who does the family visit during the holiday and what gifts do they bring?", "a": "During Tet, they visit their close relatives like grandparents and aunts, bringing fresh fruits and delicious cakes as respectful gifts." },
+            { "q": "What do the relatives offer the children in return when they visit?", "a": "In return, the welcoming relatives offer the children lucky money and plenty of delicious sweets." },
+            { "q": "What do the adults do during the big meal and where do the children play?", "a": "The adults enjoy eating together and talking about fond memories from old times, while the children play outside with new toys." },
+            { "q": "According to the writer, what is the true meaning or essence of the Tet holiday?", "a": "According to the text, Tet is completely about celebrating family bonds and exchanging sincere, good wishes for the future." },
+            { "q": "Which relative's house do you usually visit first during the Tet holiday? Why?", "a": "We always visit my parents' house first on the very first day of Tet to show our respect, enjoy a big family meal, and wish them long life and good health." }
+          ]
         }
       ]
     },
@@ -161,19 +287,40 @@
           "id": 1,
           "title": "Watching TV After School",
           "content": "After school I watch cartoons on TV. My favorite show has funny animals. They go on adventures and solve problems. I laugh a lot when I watch it. Sometimes my sister joins me. We eat snacks together. TV helps me relax after studying. I don't watch too long though.",
-          "translation": "Sau giờ học tôi xem phim hoạt hình trên TV. Chương trình yêu thích có động vật hài hước. Chúng phiêu lưu và giải quyết vấn đề. Tôi cười nhiều khi xem. Đôi khi em gái tôi xem cùng. Chúng tôi ăn đồ vặt. TV giúp thư giãn sau khi học. Nhưng tôi không xem quá lâu."
+          "translation": "Sau giờ học tôi xem phim hoạt hình trên TV. Chương trình yêu thích có động vật hài hước. Chúng phiêu lưu và giải quyết vấn đề. Tôi cười nhiều khi xem. Đôi khi em gái tôi xem cùng. Chúng tôi ăn đồ vặt. TV giúp thư giãn sau khi học. Nhưng tôi không xem quá lâu.",
+          "questions": [
+            { "q": "What kind of programs does the writer watch after school and what are the characters?", "a": "The writer watches cartoons on TV after school, and the characters are funny animals." },
+            { "q": "What do the funny animals do in the writer's favorite television show?", "a": "They go on exciting adventures and work together to solve various interesting problems." },
+            { "q": "Who sometimes shares the TV time with the writer and what do they eat?", "a": "The writer's sister sometimes joins in to watch together, and they enjoy eating snacks at the same time." },
+            { "q": "How does watching television benefit the writer, but what rule do they follow?", "a": "Watching TV benefits the writer by helping them relax after hard studying, but they follow a strict rule of not watching for too long." },
+            { "q": "What was your favorite cartoon when you were a child? Do you still watch cartoons now?", "a": "When I was a kid, I loved watching Tom and Jerry. Now, I sometimes sit with my child to watch modern animated movies on Netflix during weekends." }
+          ]
         },
         {
           "id": 2,
           "title": "Family TV Time",
           "content": "In the evening my family watches TV together. Dad likes news about sports. Mom watches cooking shows. I choose comedy programs. We talk and laugh during the show. Sometimes we discuss what we see. Family TV time is fun and relaxing for us.",
-          "translation": "Buổi tối gia đình tôi xem TV cùng nhau. Bố thích tin tức thể thao. Mẹ xem chương trình nấu ăn. Tôi chọn show hài. Chúng tôi nói chuyện và cười trong lúc xem. Đôi khi thảo luận những gì thấy. Thời gian xem TV gia đình vui và thư giãn."
+          "translation": "Buổi tối gia đình tôi xem TV cùng nhau. Bố thích tin tức thể thao. Mẹ xem chương trình nấu ăn. Tôi chọn show hài. Chúng tôi nói chuyện và cười trong lúc xem. Đôi khi thảo luận những gì thấy. Thời gian xem TV gia đình vui và thư giãn.",
+          "questions": [
+            { "q": "When does the family watch TV together and what specific genre does the dad prefer?", "a": "The family watches TV together in the evening, and the dad strongly prefers watching news about sports." },
+            { "q": "What type of programs do the mom and the writer choose to watch respectively?", "a": "The mom loves to watch informative cooking shows, while the writer prefers choosing funny comedy programs." },
+            { "q": "How do family members interact with each other while the show is playing?", "a": "They talk actively, laugh out loud together, and sometimes they discuss the content of what they are seeing on the screen." },
+            { "q": "How does the writer feel about this shared family television experience?", "a": "The writer feels that family TV time is an incredibly fun and relaxing bonding experience for everyone." },
+            { "q": "In your opinion, does watching TV together help connect family members? Why or why not?", "a": "Yes, it definitely helps. It creates a shared topic for everyone to discuss, laugh together, and spend quality time after a busy workday." }
+          ]
         },
         {
           "id": 3,
           "title": "A Funny TV Show",
           "content": "Last night we watched a funny TV show. The actors made silly mistakes. Everyone in my family laughed hard. My brother liked the jokes best. I enjoyed the music too. Good shows make us happy. We talked about it the next day at school.",
-          "translation": "Tối qua chúng tôi xem show hài trên TV. Diễn viên làm lỗi ngốc nghếch. Cả nhà cười lớn. Em trai tôi thích trò đùa nhất. Tôi thích nhạc nữa. Show hay làm chúng tôi vui. Chúng tôi nói về nó hôm sau ở trường."
+          "translation": "Tối qua chúng tôi xem show hài trên TV. Diễn viên làm lỗi ngốc nghếch. Cả nhà cười lớn. Em trai tôi thích trò đùa nhất. Tôi thích nhạc nữa. Show hay làm chúng tôi vui. Chúng tôi nói về nó hôm sau ở trường.",
+          "questions": [
+            { "q": "When did the family watch the show and what did the actors do that was amusing?", "a": "They watched the show last night, and the actors were amusing because they made very silly mistakes on purpose." },
+            { "q": "How did the family react to the show and which part did the brother prefer?", "a": "The entire family reacted by laughing very hard, and the brother preferred the jokes best of all." },
+            { "q": "What specific element did the writer appreciate about the show besides the comedy?", "a": "Besides the hilarious acting, the writer really appreciated and enjoyed the background music of the show." },
+            { "q": "What happened the next day at school regarding the television show?", "a": "The show was so memorable that the writer and their friends spent time talking about it the next day at school." },
+            { "q": "If you could create a TV show or a video channel, what topic would it be about?", "a": "I would love to create an automation content channel about technology tutorials or building indie video games, because that's my biggest passion." }
+          ]
         }
       ]
     },
@@ -186,19 +333,40 @@
           "id": 1,
           "title": "Playing Soccer",
           "content": "I play soccer with friends every afternoon. We meet in the park after school. We divide into two teams. I like kicking the ball and running. Sometimes we win, sometimes we lose. After the game we drink water and talk. Soccer is fun and good for health.",
-          "translation": "Tôi chơi bóng đá với bạn mỗi chiều. Chúng tôi gặp ở công viên sau giờ học. Chia thành hai đội. Tôi thích sút bóng và chạy. Đôi khi thắng, đôi khi thua. Sau trận uống nước và nói chuyện. Bóng đá vui và tốt cho sức khỏe."
+          "translation": "Tôi chơi bóng đá với bạn mỗi chiều. Chúng tôi gặp ở công viên sau giờ học. Chia thành hai đội. Tôi thích sút bóng và chạy. Đôi khi thắng, đôi khi thua. Sau trận uống nước và nói chuyện. Bóng đá vui và tốt cho sức khỏe.",
+          "questions": [
+            { "q": "How often does the writer play soccer and where does the group usually assemble?", "a": "The writer plays soccer every single afternoon, and the group usually assembles in the local park after school finishes." },
+            { "q": "How do they organize themselves before playing and what physical actions does the writer enjoy?", "a": "Before playing, they organize themselves by dividing into two teams, and the writer enjoys kicking the ball and running around." },
+            { "q": "What are the possible outcomes of their matches and what do they do when it ends?", "a": "Sometimes they win and sometimes they lose the match; when it ends, they sit down together to drink refreshing water and talk." },
+            { "q": "According to the writer, what are the two main benefits of playing soccer regularly?", "a": "According to the writer, soccer is incredibly fun to play and it is also highly beneficial for a person's physical health." },
+            { "q": "What is your favorite football club in Europe? Why do you support them?", "a": "I follow European football and support Manchester United and Chelsea. I love Manchester United for their exciting history and spirit, and Chelsea for their classic tactics." }
+          ]
         },
         {
           "id": 2,
           "title": "Badminton with Sister",
           "content": "My sister and I play badminton at home. We use the yard when it's not raining. We hit the shuttlecock back and forth. Sometimes we count points. It's fast and makes us laugh. Playing together is more fun than alone. We do it almost every evening.",
-          "translation": "Em gái tôi và tôi chơi cầu lông ở nhà. Chúng tôi dùng sân khi không mưa. Đánh cầu qua lại. Đôi khi đếm điểm. Nhanh và làm chúng tôi cười. Chơi cùng vui hơn chơi một mình. Chúng tôi làm hầu như mỗi tối."
+          "translation": "Em gái tôi và tôi chơi cầu lông ở nhà. Chúng tôi dùng sân khi không mưa. Đánh cầu qua lại. Đôi khi đếm điểm. Nhanh và làm chúng tôi cười. Chơi cùng vui hơn chơi một mình. Chúng tôi làm hầu như mỗi tối.",
+          "questions": [
+            { "q": "Who does the writer play badminton with and where exactly do they play at home?", "a": "The writer plays badminton with their sister, and they play right in the yard of their house." },
+            { "q": "Under what weather condition do they utilize the yard and how do they track the match?", "a": "They utilize the yard only when it is not raining outside, and sometimes they track the match by counting the points." },
+            { "q": "Can you describe the pace of the game and how it affects the players' mood?", "a": "The pace of badminton is very fast, which excites them and makes both players laugh a lot throughout the game." },
+            { "q": "Why does the writer prefer playing badminton with their sister rather than practicing solo?", "a": "Because the writer strongly believes that playing together with a partner is much more fun and entertaining than practicing solo." },
+            { "q": "Have you ever tried playing badminton or tennis? Do you think it is difficult?", "a": "Yes, I have played badminton before. I don't think it's too difficult to start, but it requires great reflexes and runs your stamina down very quickly." }
+          ]
         },
         {
           "id": 3,
           "title": "Why I Like Sports",
           "content": "I like sports because they make me strong. Playing with friends is always fun. We run, jump and laugh together. After playing I feel energetic. Sports help me forget worries. I want to try new games like volleyball next. Do you play sports too?",
-          "translation": "Tôi thích thể thao vì nó làm tôi khỏe. Chơi với bạn luôn vui. Chúng tôi chạy, nhảy và cười cùng. Sau khi chơi tôi tràn năng lượng. Thể thao giúp quên lo lắng. Tôi muốn thử trò mới như bóng chuyền. Bạn có chơi thể thao không?"
+          "translation": "Tôi thích thể thao vì nó làm tôi khỏe. Chơi với bạn luôn vui. Chúng tôi chạy, nhảy và cười cùng. Sau khi chơi tôi tràn năng lượng. Thể thao giúp quên lo lắng. Tôi muốn thử trò mới như bóng chuyền. Bạn có chơi thể thao không?",
+          "questions": [
+            { "q": "What is the primary physical benefit of sports mentioned and who does the writer practice with?", "a": "The primary benefit is that sports make the writer strong, and they always enjoy practicing together with their friends." },
+            { "q": "What three dynamic actions do the group of friends perform together during sports?", "a": "During sports, the group of happy friends run around, jump high, and laugh out loud together." },
+            { "q": "How does the writer feel physically after a workout and what mental benefit do sports provide?", "a": "Physically, the writer feels full of energy, and mentally, sports provide a great way to help them completely forget daily worries." },
+            { "q": "What specific sport does the writer plan to learn in the near future?", "a": "The writer is very curious and plans to try learning a new sport, which is volleyball, in the near future." },
+            { "q": "When you feel stressed or worried about work, how do you relax your mind?", "a": "When I am stressed, I usually close my laptop, go out for a coffee, or play a quick casual game. It effectively helps me refresh my mind before coding again." }
+          ]
         }
       ]
     },
@@ -211,19 +379,40 @@
           "id": 1,
           "title": "Life in Hanoi",
           "content": "Hanoi is my favorite city in Vietnam. It has old streets and lakes. People ride motorbikes everywhere. In the morning I see vendors selling pho. The Old Quarter has many shops. At night the streets are bright with lights. I like walking there with my family. Hanoi feels alive and friendly.",
-          "translation": "Hà Nội là thành phố yêu thích của tôi ở Việt Nam. Có phố cổ và hồ. Mọi người đi xe máy khắp nơi. Sáng tôi thấy người bán phở. Phố cổ có nhiều cửa hàng. Đêm phố sáng đèn. Tôi thích đi dạo với gia đình. Hà Nội sống động và thân thiện."
+          "translation": "Hà Nội là thành phố yêu thích của tôi ở Việt Nam. Có phố cổ và hồ. Mọi người đi xe máy khắp nơi. Sáng tôi thấy người bán phở. Phố cổ có nhiều cửa hàng. Đêm phố sáng đèn. Tôi thích đi dạo với gia đình. Hà Nội sống động và thân thiện.",
+          "questions": [
+            { "q": "Why is Hanoi the writer's favorite city and what are its main physical characteristics?", "a": "Hanoi is the favorite city because it feels incredibly alive and friendly; its characteristics include beautiful old streets and quiet lakes." },
+            { "q": "What common vehicle do people operate on the streets and what food can you buy in the morning?", "a": "People operate motorbikes everywhere on the streets, and in the morning you can see local vendors selling traditional pho." },
+            { "q": "Which historical area contains a lot of commercial shops and how does it look at night?", "a": "The historical Old Quarter contains a lot of shops, and at night, the streets there become incredibly bright with colorful lights." },
+            { "q": "Who does the writer explore the illuminated night streets of Hanoi with?", "a": "The writer loves to explore the beautiful night streets of Hanoi by walking around with their family members." },
+            { "q": "Hanoi is famous for its autumn weather and traditional food. Have you ever visited Hanoi in autumn?", "a": "Yes, I have planned trips to Hanoi and Sapa before. Hanoi's weather is very pleasant, and enjoying a hot bowl of Pho on a chilly morning is an amazing experience." }
+          ]
         },
         {
           "id": 2,
           "title": "A Day in Ho Chi Minh City",
           "content": "Ho Chi Minh City is big and busy. There are tall buildings and many cars. I like Ben Thanh Market for shopping. People sell clothes and food. In the evening we eat street food. The city has nice parks too. I feel excited when I visit. It's different from my small town.",
-          "translation": "TP. Hồ Chí Minh lớn và bận rộn. Có tòa nhà cao và nhiều xe. Tôi thích chợ Bến Thành mua sắm. Mọi người bán quần áo và đồ ăn. Buổi tối ăn đồ đường phố. Thành phố có công viên đẹp. Tôi hào hứng khi thăm. Nó khác quê tôi nhỏ."
+          "translation": "TP. Hồ Chí Minh lớn và bận rộn. Có tòa nhà cao và nhiều xe. Tôi thích chợ Bến Thành mua sắm. Mọi người bán quần áo và đồ ăn. Buổi tối ăn đồ đường phố. Thành phố có công viên đẹp. Tôi hào hứng khi thăm. Nó khác quê tôi nhỏ.",
+          "questions": [
+            { "q": "How does the writer contrast Ho Chi Minh City with their own hometown?", "a": "The writer contrasts them by describing Ho Chi Minh City as a massive, busy metropolis filled with tall buildings, which is completely different from their quiet small town." },
+            { "q": "What specific famous landmark does the writer choose for shopping and what can you buy there?", "a": "The writer chooses the famous Ben Thanh Market for shopping, where you can buy a variety of clothes and traditional food." },
+            { "q": "What culinary activity does the writer enjoy when night falls and where can they find green spaces?", "a": "When night falls, the writer enjoys eating delicious local street food, and they can find green spaces in the city's nice parks." },
+            { "q": "What emotional reaction does the writer experience whenever they travel to this busy city?", "a": "Whenever the writer travels to Ho Chi Minh City, they experience a strong feeling of pure excitement because of its vibrant lifestyle." },
+            { "q": "Since you live in Ho Chi Minh City, what is your favorite place to visit or hang out on weekends?", "a": "I live in Tan Phu district, so on weekends, I often take my family to Aeon Mall Tan Phu for shopping and dining, or visit some quiet cafes to relax." }
+          ]
         },
         {
           "id": 3,
           "title": "Dream City to Visit",
           "content": "I want to visit Tokyo one day. It has fast trains and tall towers. People are polite and helpful. I like Japanese food like sushi. The city mixes old temples and new shops. At night it's bright with lights. It looks modern and interesting. I think it would be fun.",
-          "translation": "Tôi muốn thăm Tokyo một ngày nào đó. Có tàu nhanh và tòa tháp cao. Mọi người lịch sự và hay giúp. Tôi thích đồ Nhật như sushi. Thành phố kết hợp đền cổ và cửa hàng mới. Đêm sáng đèn. Nó hiện đại và thú vị. Tôi nghĩ sẽ vui."
+          "translation": "Tôi muốn thăm Tokyo một ngày nào đó. Có tàu nhanh và tòa tháp cao. Mọi người lịch sự và hay giúp. Tôi thích đồ Nhật như sushi. Thành phố kết hợp đền cổ và cửa hàng mới. Đêm sáng đèn. Nó hiện đại và thú vị. Tôi nghĩ sẽ vui.",
+          "questions": [
+            { "q": "Which global city does the writer dream of exploring and what infrastructure does it feature?", "a": "The writer dreams of exploring Tokyo, which features super-fast bullet trains and incredibly tall modern towers." },
+            { "q": "How does the text describe the character of Japanese citizens in Tokyo?", "a": "The text describes the citizens of Tokyo as exceptionally polite individuals who are always helpful to tourists." },
+            { "q": "What specific type of Japanese cuisine does the writer prefer and how does Tokyo mix architecture?", "a": "The writer really prefers eating sushi, and Tokyo uniquely mixes traditional architecture like old temples with modern commercial shops." },
+            { "q": "How does Tokyo look after dark and what is the writer's final judgment about the city?", "a": "After dark, Tokyo looks brilliantly bright with neon lights, and the writer judges that visiting it would be modern, interesting, and fun." },
+            { "q": "If you have a chance to travel abroad, which country or city would you visit first? Why?", "a": "I would love to visit Japan or Switzerland. Japan for its unique mix of technology and culture, and Switzerland for its amazing natural landscapes and fresh air." }
+          ]
         }
       ]
     },
@@ -236,19 +425,40 @@
           "id": 1,
           "title": "Smart House Ideas",
           "content": "In the future houses will be smart. Lights turn on by voice. The fridge tells us when food is old. Robots clean the floor every day. Solar panels make free electricity. Windows open automatically when it's hot. I want a house like that. It will make life easy and fun.",
-          "translation": "Tương lai nhà sẽ thông minh. Đèn bật bằng giọng nói. Tủ lạnh báo khi thức ăn cũ. Robot dọn sàn mỗi ngày. Pin mặt trời tạo điện miễn phí. Cửa sổ tự mở khi nóng. Tôi muốn nhà như vậy. Nó làm cuộc sống dễ và vui."
+          "translation": "Tương lai nhà sẽ thông minh. Đèn bật bằng giọng nói. Tủ lạnh báo khi thức ăn cũ. Robot dọn sàn mỗi ngày. Pin mặt trời tạo điện miễn phí. Cửa sổ tự mở khi nóng. Tôi muốn nhà như vậy. Nó làm cuộc sống dễ và vui.",
+          "questions": [
+            { "q": "How will future lighting systems operate and what smart function does the refrigerator have?", "a": "Future lighting systems will operate simply by voice commands, and the smart refrigerator will automatically inform users when food gets old." },
+            { "q": "What automated appliance handles daily cleaning duties and how is electricity generated?", "a": "Advanced household robots will handle the daily floor cleaning duties, and clean electricity will be generated for free using solar panels." },
+            { "q": "Under what specific weather condition do smart windows activate automatically?", "a": "The smart windows are programmed to open automatically whenever the temperature inside becomes too hot." },
+            { "q": "Why does the writer express a strong desire to own an advanced smart home like this?", "a": "Because the writer believes that all this advanced automation will make their future life extremely easy, convenient, and fun." },
+            { "q": "Are you using any smart home devices in your house now? What device do you want most?", "a": "Currently, I use some basic smart lights and a smart robot vacuum. In the future, I want to integrate a comprehensive AI assistant to control everything via voice." }
+          ]
         },
         {
           "id": 2,
           "title": "Future Garden House",
           "content": "My dream house in the future has a big garden. Vegetables grow without soil. A machine waters them automatically. The house has glass walls for sunlight. We can see stars at night from bed. It will be green and quiet. Living there would be peaceful and healthy.",
-          "translation": "Nhà mơ ước tương lai của tôi có vườn lớn. Rau trồng không cần đất. Máy tưới tự động. Nhà có tường kính đón nắng. Chúng tôi thấy sao từ giường. Nó xanh và yên tĩnh. Sống ở đó sẽ bình yên và khỏe mạnh."
+          "translation": "Nhà mơ ước tương lai của tôi có vườn lớn. Rau trồng không cần đất. Máy tưới tự động. Nhà có tường kính đón nắng. Chúng tôi thấy sao từ giường. Nó xanh và yên tĩnh. Sống ở đó sẽ bình yên và khỏe mạnh.",
+          "questions": [
+            { "q": "What is the main external feature of the dream house and how do plants grow inside it?", "a": "The main external feature is a huge garden, where fresh vegetables can uniquely grow without needing any natural soil." },
+            { "q": "What advanced system manages the plants and why does the house utilize glass walls?", "a": "An automated watering machine manages the plants, and the house utilizes glass walls to maximize natural sunlight during the day." },
+            { "q": "What beautiful night view can the owner enjoy directly from the comfort of their bed?", "a": "Thanks to the modern glass structure, the owner can enjoy looking at the beautiful bright stars at night directly from their bed." },
+            { "q": "How does the writer describe the overall living environment and lifestyle in this house?", "a": "The overall environment is described as green, quiet, and eco-friendly, offering a lifestyle that is peaceful and healthy." },
+            { "q": "If you had a big garden, would you prefer to grow beautiful flowers or organic vegetables? Why?", "a": "I would prefer to grow organic vegetables and some fruits. It's great to have fresh, clean food for family meals, and gardening is also a good way to reduce stress." }
+          ]
         },
         {
           "id": 3,
           "title": "Flying to School",
           "content": "In the future I will go to school by flying car. No more traffic jams. The car is small and quiet. It flies above the city. I can see everything from up high. It takes only five minutes. School will be more fun with fast travel. I can't wait for that day.",
-          "translation": "Tương lai tôi đi học bằng xe bay. Không kẹt xe nữa. Xe nhỏ và yên tĩnh. Bay trên thành phố. Tôi thấy mọi thứ từ trên cao. Chỉ mất năm phút. Trường sẽ vui hơn với di chuyển nhanh. Tôi mong ngày đó đến."
+          "translation": "Tương lai tôi đi học bằng xe bay. Không kẹt xe nữa. Xe nhỏ và yên tĩnh. Bay trên thành phố. Tôi thấy mọi thứ từ trên cao. Chỉ mất năm phút. Trường sẽ vui hơn với di chuyển nhanh. Tôi mong ngày đó đến.",
+          "questions": [
+            { "q": "What futuristic mode of transportation will the writer use and what problem does it solve?", "a": "The writer will use an advanced flying car for commuting, which completely solves the frustrating problem of urban traffic jams." },
+            { "q": "Can you describe the physical size and noise level of this futuristic vehicle?", "a": "The futuristic flying car is designed to be very small in size and operates completely quietly without causing noise pollution." },
+            { "q": "Where does the vehicle travel and what kind of view does it offer the passenger?", "a": "The vehicle travels high above the city skyline, offering the passenger a beautiful panoramic view of everything below." },
+            { "q": "How long does the aerial trip take and how does it change the writer's attitude toward school?", "a": "The aerial trip takes only five minutes, and this ultra-fast travel makes the writer feel that going to school will be much more fun." },
+            { "q": "Traffic congestion is a big problem in big cities like Saigon. What is your opinion on solving it?", "a": "In my opinion, to solve traffic jams in Ho Chi Minh City, we need to improve public transportation like the Metro system, optimize traffic lights using AI, and encourage remote working." }
+          ]
         }
       ]
     },
@@ -261,19 +471,40 @@
           "id": 1,
           "title": "Fast Trains to Visit Family",
           "content": "In the future trains will be super fast. I can go from Hanoi to Ho Chi Minh in two hours. No more long bus rides. The seats are comfortable. We watch movies on the way. Travelling will be easy and quick. I can visit grandparents more often. It makes family closer.",
-          "translation": "Tương lai tàu sẽ siêu nhanh. Tôi đi từ Hà Nội đến TP.HCM chỉ hai giờ. Không ngồi xe buýt lâu nữa. Ghế thoải mái. Chúng tôi xem phim trên đường. Du lịch dễ và nhanh. Tôi thăm ông bà thường hơn. Nó làm gia đình gần hơn."
+          "translation": "Tương lai tàu sẽ siêu nhanh. Tôi đi từ Hà Nội đến TP.HCM chỉ hai giờ. Không ngồi xe buýt lâu nữa. Ghế thoải mái. Chúng tôi xem phim trên đường. Du lịch dễ và nhanh. Tôi thăm ông bà thường hơn. Nó làm gia đình gần hơn.",
+          "questions": [
+            { "q": "How fast will future trains be when travelling between Hanoi and Ho Chi Minh City?", "a": "Future trains will be super-fast, reducing the travel time between Hanoi and Ho Chi Minh City to just two hours." },
+            { "q": "What uncomfortable old transportation method is replaced and how are the new train seats?", "a": "The long, exhausting bus rides are completely replaced, and the new train seats are designed to be extremely comfortable." },
+            { "q": "What entertainment option is available for passengers while the train is moving?", "a": "Passengers can enjoy watching high-quality movies right from their seats while the train is moving fast." },
+            { "q": "How does this advanced train network affect the writer's relationship with their grandparents?", "a": "It allows the writer to visit their grandparents much more often, which ultimately makes the whole family feel closer." },
+            { "q": "If you could travel from Saigon to Hanoi in just 2 hours by train, how often would you visit the capital?", "a": "If it only took 2 hours, I would visit Hanoi much more often, maybe once a month, to enjoy the food, change the environment, and visit friends there." }
+          ]
         },
         {
           "id": 2,
           "title": "Flying to the Beach",
           "content": "Future flying cars can take me to the beach fast. No waiting for buses or trains. We fly over rivers and fields. The view is beautiful from above. At the beach we swim and play. Travelling like this is exciting. I want to try it soon.",
-          "translation": "Xe bay tương lai đưa tôi đến bãi biển nhanh. Không chờ xe buýt hay tàu. Chúng tôi bay qua sông và đồng. View đẹp từ trên cao. Ở bãi biển chúng tôi bơi và chơi. Du lịch kiểu này thú vị. Tôi muốn thử sớm."
+          "translation": "Xe bay tương lai đưa tôi đến bãi biển nhanh. Không chờ xe buýt hay tàu. Chúng tôi bay qua sông và đồng. View đẹp từ trên cao. Ở bãi biển chúng tôi bơi và chơi. Du lịch kiểu này thú vị. Tôi muốn thử sớm.",
+          "questions": [
+            { "q": "Where can the flying car transport the writer quickly and what annoying waiting is eliminated?", "a": "The flying car can transport the writer to the beach quickly, eliminating the annoying waiting for public buses or traditional trains." },
+            { "q": "What geographic landscapes do passengers fly over and how is the visual experience?", "a": "Passengers fly directly over wide rivers and green fields, which provides a beautiful and spectacular visual experience from above." },
+            { "q": "What recreational activities does the family engage in once they land at the beach?", "a": "Once they land safely at the beach, they immediately engage in refreshing swimming and playing fun beach games." },
+            { "q": "What is the writer's emotional assessment of this new travel method and what is their immediate wish?", "a": "The writer assesses this travel method as highly exciting, and their immediate wish is to try it out as soon as possible." },
+            { "q": "Which beach in Vietnam do you like most for a summer vacation? Vung Tau, Nha Trang, or Phu Quoc?", "a": "I prefer Phu Quoc for a family vacation because the beaches are beautiful, clean, and quiet. Nha Trang is also great, but Phu Quoc feels more relaxing." }
+          ]
         },
         {
           "id": 3,
           "title": "Travel with Friends",
           "content": "In the future my friends and I will travel together. We can book a flying van for the group. We go to Da Lat or Nha Trang. On the way we sing songs and eat snacks. Travelling with friends is always fun. We make memories and laugh a lot.",
-          "translation": "Tương lai bạn tôi và tôi du lịch cùng. Chúng tôi đặt xe van bay cho nhóm. Đi Đà Lạt hoặc Nha Trang. Trên đường hát và ăn đồ vặt. Du lịch với bạn luôn vui. Chúng tôi tạo kỷ niệm và cười nhiều."
+          "translation": "Tương lai bạn tôi và tôi du lịch cùng. Chúng tôi đặt xe van bay cho nhóm. Đi Đà Lạt hoặc Nha Trang. Trên đường hát và ăn đồ vặt. Du lịch với bạn luôn vui. Chúng tôi tạo kỷ niệm và cười nhiều.",
+          "questions": [
+            { "q": "Who does the writer plan to explore the world with and what group vehicle can they rent?", "a": "The writer plans to explore the world together with their best friends, and they can rent a spacious flying van for the entire group." },
+            { "q": "What two famous Vietnamese tourist cities are mentioned as potential destinations?", "a": "The two famous tourist cities mentioned as potential destinations are Da Lat up in the mountains and Nha Trang by the sea." },
+            { "q": "How does the group of friends entertain themselves while commuting inside the flying van?", "a": "They entertain themselves during the commute by happily singing songs out loud and sharing delicious snacks." },
+            { "q": "Why does the writer believe that travelling with friends is superior to travelling alone?", "a": "Because travelling with friends is always full of fun, allowing them to laugh a lot and build beautiful lifelong memories together." },
+            { "q": "If you plan a group trip with your best friends, do you prefer a peaceful mountain place like Da Lat or a sunny beach?", "a": "I would choose a peaceful place like Da Lat. The cool weather is perfect for gathering around a BBQ fire, drinking hot tea, and chatting about life." }
+          ]
         }
       ]
     },
@@ -286,19 +517,40 @@
           "id": 1,
           "title": "Talking About My Year",
           "content": "This year I learned many new things in English. I can talk about my school and friends. I know how to describe my house. We did projects and shared ideas. My teacher says I speak better now. I feel proud of my progress. English is fun to learn.",
-          "translation": "Năm nay tôi học nhiều điều mới tiếng Anh. Tôi nói được về trường và bạn bè. Tôi biết mô tả nhà. Chúng tôi làm dự án và chia sẻ ý tưởng. Cô giáo nói tôi nói tốt hơn. Tôi tự hào về tiến bộ. Tiếng Anh vui khi học."
+          "translation": "Năm nay tôi học nhiều điều mới tiếng Anh. Tôi nói được về trường và bạn bè. Tôi biết mô tả nhà. Chúng tôi làm dự án và chia sẻ ý tưởng. Cô giáo nói tôi nói tốt hơn. Tôi tự hào về tiến bộ. Tiếng Anh vui khi học.",
+          "questions": [
+            { "q": "What specific conversational skills did the writer acquire in English class this year?", "a": "This year, the writer acquired the skills to confidently talk about their school, introduce their friends, and accurately describe their house." },
+            { "q": "What collaborative interactive learning activities did the students perform in class?", "a": "The students actively performed practical group projects and regularly shared creative ideas with one another." },
+            { "q": "What positive feedback did the English teacher give to the writer regarding their performance?", "a": "The teacher gave very positive feedback, explicitly stating that the writer's speaking skills have improved significantly now." },
+            { "q": "How does the writer feel emotionally about their language learning journey?", "a": "The writer feels immensely proud of their academic progress and concludes that learning English is highly fun and enjoyable." },
+            { "q": "What is your main goal for learning English this year? How do you practice it daily?", "a": "My main goal is to improve my listening and speaking fluency for professional work. I practice by listening to technical podcasts, doing shadowing exercises for 20 minutes daily, and talking to AI." }
+          ]
         },
         {
           "id": 2,
           "title": "My Favorite Memory",
           "content": "My favorite memory this year is Tet holiday. We cleaned the house and made banh chung. I got lucky money from grandparents. We watched fireworks at night. Everyone was happy. I ate lots of good food. Tet with family is the best.",
-          "translation": "Kỷ niệm yêu thích năm nay là Tết. Chúng tôi dọn nhà và làm bánh chưng. Tôi nhận tiền mừng tuổi từ ông bà. Chúng tôi xem pháo hoa đêm. Mọi người vui. Tôi ăn nhiều đồ ngon. Tết với gia đình là tuyệt nhất."
+          "translation": "Kỷ niệm yêu thích năm nay là Tết. Chúng tôi dọn nhà và làm bánh chưng. Tôi nhận tiền mừng tuổi từ ông bà. Chúng tôi xem pháo hoa đêm. Mọi người vui. Tôi ăn nhiều đồ ngon. Tết với gia đình là tuyệt nhất.",
+          "questions": [
+            { "q": "What stands out as the writer's absolute favorite memory of the entire year and why?", "a": "The absolute favorite memory is the Tet holiday because it was a special time when the family gathered and everyone felt completely happy." },
+            { "q": "What two traditional preparation activities did the family complete before the holiday arrived?", "a": "Before the holiday arrived, they successfully completed cleaning the entire house and cooking traditional banh chung together." },
+            { "q": "What financial gesture did the grandparents make and what event did they observe at night?", "a": "The grandparents made a kind gesture by giving lucky money to the writer, and at night, the family observed the spectacular fireworks." },
+            { "q": "How does the writer describe the culinary experience and their final opinion about the holiday?", "a": "The culinary experience was amazing as the writer ate lots of delicious traditional food, leading to their opinion that celebrating Tet with family is the best thing ever." },
+            { "q": "Share one of your favorite memories from last year. What made it so special?", "a": "My favorite memory from last year was launching a major feature for my game project. My team worked very hard, and seeing players enjoy it was an unforgettable feeling." }
+          ]
         },
         {
           "id": 3,
           "title": "My Next Goal",
           "content": "Next year I want to speak English more. I will talk to friends in English sometimes. I will watch more cartoons and repeat sentences. My goal is to tell stories without stopping. I think I can do it with practice. English will help me in the future.",
-          "translation": "Năm sau tôi muốn nói tiếng Anh nhiều hơn. Tôi sẽ nói với bạn bằng tiếng Anh đôi khi. Tôi sẽ xem phim hoạt hình và lặp lại câu. Mục tiêu là kể chuyện không dừng. Tôi nghĩ có thể làm được nếu luyện. Tiếng Anh sẽ giúp tôi tương lai."
+          "translation": "Năm sau tôi muốn nói tiếng Anh nhiều hơn. Tôi sẽ nói với bạn bằng tiếng Anh đôi khi. Tôi sẽ xem phim hoạt hình và lặp lại câu. Mục tiêu là kể chuyện không dừng. Tôi nghĩ có thể làm được nếu luyện. Tiếng Anh sẽ giúp tôi tương lai.",
+          "questions": [
+            { "q": "What is the writer's main linguistic resolution for the upcoming school year?", "a": "The writer's main linguistic resolution for next year is to drastically increase their daily practice and speak English much more." },
+            { "q": "What active method will the writer use with their peers to practice communication?", "a": "To practice communication, the writer intends to actively initiate conversations with their friends in English from time to time." },
+            { "q": "What media content will the writer consume and how will they practice pronunciation?", "a": "The writer will consume more animated cartoons, and they will practice pronunciation by repeating sentences out loud using the shadowing method." },
+            { "q": "What is the ultimate fluency milestone the writer hopes to achieve through hard practice?", "a": "The ultimate milestone the writer hopes to achieve is the ability to continuously tell long stories in English smoothly without stopping." },
+            { "q": "If you successfully master fluent English, how will it change or benefit your career and future?", "a": "Mastering fluent English will open up global opportunities for me. I can collaborate smoothly with international developers, read advanced technical documents faster, and expand my project globally." }
+          ]
         }
       ]
     }
