@@ -10,8 +10,8 @@
 	let qaPairs = $derived(
 		(lesson?.questions ?? [])
 			.map((qa) => ({
-				q: String(qa?.q ?? qa?.question ?? '').trim(),
-				a: String(qa?.a ?? qa?.answer ?? '').trim()
+				q: (qa?.q ?? qa?.question ?? '').trim(),
+				a: (qa?.a ?? qa?.answer ?? '').trim()
 			}))
 			.filter((qa) => qa.q && qa.a)
 	);
