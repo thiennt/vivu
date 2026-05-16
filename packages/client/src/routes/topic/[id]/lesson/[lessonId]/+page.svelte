@@ -600,7 +600,7 @@
 					</div>
 					{#if hasQaMismatch}
 						<p class="qa-warning">
-							Some q/a tags are unmatched in this lesson, so only complete question-answer pairs are shown.
+							Some Q&A tags are unmatched in this lesson, so only complete question-answer pairs are shown.
 						</p>
 					{/if}
 				</div>
