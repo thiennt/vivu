@@ -522,6 +522,12 @@
 				</p>
 			</div>
 
+			<!-- Vietnamese translation -->
+			<div class="translation-section">
+				<h3>Bản dịch (Translation)</h3>
+				<p class="translation">{lesson.translation}</p>
+			</div>
+
 			{#if qaPairs.length > 0}
 				<div class="qa-section">
 					<h3>Questions & Answers</h3>
@@ -535,12 +541,6 @@
 					</div>
 				</div>
 			{/if}
-
-			<!-- Vietnamese translation -->
-			<div class="translation-section">
-				<h3>Bản dịch (Translation)</h3>
-				<p class="translation">{lesson.translation}</p>
-			</div>
 		</div>
 	{/if}
 	
