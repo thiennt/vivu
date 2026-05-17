@@ -7,7 +7,14 @@
 	let topic = $derived(data.topic);
 	let lesson = $derived(data.lesson);
 
-	let qaPairs = $derived((lesson.questions ?? []).filter((qa) => qa.q && qa.a));
+	let qaPairs = $derived(
+		(lesson?.questions ?? [])
+			.map((qa) => ({
+				q: (qa?.q ?? qa?.question ?? '').trim(),
+				a: (qa?.a ?? qa?.answer ?? '').trim()
+			}))
+			.filter((qa) => qa.q && qa.a)
+	);
 	
 	// State variables
 	let showLesson = $state(false);
