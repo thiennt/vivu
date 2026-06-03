@@ -37,6 +37,15 @@ const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 // Audio storage directory
 const AUDIO_DIR = join(__dirname, '../../audio');
 const MAX_TTS_TEXT_LENGTH = 5000;
+const GEMINI_VOICE_ALIASES: Record<string, string> = {
+  male: 'Guy',
+  matthew: 'Guy',
+  guy: 'Guy',
+  female: 'Ava',
+  joanna: 'Ava',
+  ava: 'Ava',
+};
+const DEFAULT_GEMINI_VOICE = 'Ava';
 
 // Ensure audio directory exists
 async function ensureAudioDir() {
@@ -115,6 +124,64 @@ function generateAudioFilename(lessonTitle: string, voice: string = 'male'): str
 }
 
 /**
+ * Extract the leading alphabetic token from a voice value.
+ * Example: "Joanna (Neural)" becomes "joanna".
+ */
+function getVoiceToken(voice: string | undefined): string {
+  const trimmedVoice = voice?.trim() || '';
+  return trimmedVoice ? trimmedVoice.toLowerCase().match(/^[a-z]+/)?.[0] || '' : '';
+}
+
+function normalizeGeminiVoice(voice: string | undefined): string {
+  const normalized = GEMINI_VOICE_ALIASES[getVoiceToken(voice)];
+  return normalized || DEFAULT_GEMINI_VOICE;
+}
+
+/**
+ * Build cache lookup candidates for normalized and legacy voice-based filenames.
+ */
+function getAudioFilenameCandidates(lessonTitle: string, voice: string | undefined): string[] {
+  const normalizedVoice = normalizeGeminiVoice(voice);
+  const rawVoice = voice?.trim();
+  const tokenVoice = getVoiceToken(voice);
+  const candidates = [generateAudioFilename(lessonTitle, normalizedVoice)];
+
+  if (rawVoice) {
+    candidates.push(generateAudioFilename(lessonTitle, rawVoice));
+  }
+
+  if (tokenVoice && tokenVoice !== normalizedVoice.toLowerCase()) {
+    candidates.push(generateAudioFilename(lessonTitle, tokenVoice));
+  }
+
+  return [...new Set(candidates)];
+}
+
+/**
+ * Find the first existing audio file for the provided basename candidates.
+ */
+async function findExistingAudioFilename(baseNames: string[]): Promise<string | null> {
+  for (const baseName of baseNames) {
+    const mp3Filename = `${baseName}.mp3`;
+    const wavFilename = `${baseName}.wav`;
+
+    try {
+      await access(join(AUDIO_DIR, mp3Filename));
+      return mp3Filename;
+    } catch {
+      try {
+        await access(join(AUDIO_DIR, wavFilename));
+        return wavFilename;
+      } catch {
+        // Continue to next candidate
+      }
+    }
+  }
+
+  return null;
+}
+
+/**
  * Generate audio using Gemini API and save to .wav file
  * @param voice - Voice option: 'male' (Neural2-J/Guy) or 'female' (Neural2-C/Ava)
  */
@@ -128,7 +195,7 @@ async function generateAndSaveAudio(text: string, lessonTitle: string, voice: st
   // Map voice option to Gemini voice name
   // Option 1: American Male Young (Guy)
   // Option 2: American Female Young (Ava)
-  const voiceName = voice === 'female' ? 'Ava' : 'Guy';
+  const voiceName = normalizeGeminiVoice(voice);
 
   const response = await ai.models.generateContent({
     model: 'gemini-2.5-flash-preview-tts',
@@ -152,7 +219,7 @@ async function generateAndSaveAudio(text: string, lessonTitle: string, voice: st
   const audioBuffer = Buffer.from(data, 'base64');
 
   // Use lesson title and voice for filename to prevent cache conflicts
-  const baseName = generateAudioFilename(lessonTitle, voice);
+  const baseName = generateAudioFilename(lessonTitle, voiceName);
   const filename = `${baseName}.wav`;
   const filepath = join(AUDIO_DIR, filename);
   await saveWaveFile(filepath, audioBuffer);
@@ -314,26 +381,8 @@ router.post('/generate', async (c) => {
 
     // Generate audio for the entire lesson content
     const text = lesson.content;
-    const baseName = generateAudioFilename(lesson.title, voice || 'male');
-
-    const mp3Filename = `${baseName}.mp3`;
-    const wavFilename = `${baseName}.wav`;
-    const mp3Path = join(AUDIO_DIR, mp3Filename);
-    const wavPath = join(AUDIO_DIR, wavFilename);
-
-    // Check if file exists (try both extensions)
-    let existingFilename: string | null = null;
-    try {
-      await access(mp3Path);
-      existingFilename = mp3Filename;
-    } catch {
-      try {
-        await access(wavPath);
-        existingFilename = wavFilename;
-      } catch {
-        // File doesn't exist, continue to generate
-      }
-    }
+    const normalizedVoice = normalizeGeminiVoice(voice);
+    const existingFilename = await findExistingAudioFilename(getAudioFilenameCandidates(lesson.title, voice));
 
     if (existingFilename) {
       // Return existing audio URL
@@ -344,7 +393,7 @@ router.post('/generate', async (c) => {
     }
 
     // Generate new audio
-    const filename = await generateAndSaveAudio(text, lesson.title, voice || 'male');
+    const filename = await generateAndSaveAudio(text, lesson.title, normalizedVoice);
 
     return c.json({
       audioUrl: `/api/tts/audio/${filename}`,
@@ -377,29 +426,10 @@ router.post('/generate-text', async (c) => {
       return c.json({ error: `Text exceeds maximum length of ${MAX_TTS_TEXT_LENGTH} characters` }, 400);
     }
 
-    const normalizedVoice = voice === 'female' ? 'female' : 'male';
+    const normalizedVoice = normalizeGeminiVoice(voice);
     const audioIdentifier = typeof key === 'string' && key.trim() ? key : hashText(text).slice(0, 16);
     const titleForFilename = `${audioIdentifier}_${hashText(text).slice(0, 8)}`;
-    const baseName = generateAudioFilename(titleForFilename, normalizedVoice);
-
-    const mp3Filename = `${baseName}.mp3`;
-    const wavFilename = `${baseName}.wav`;
-    const mp3Path = join(AUDIO_DIR, mp3Filename);
-    const wavPath = join(AUDIO_DIR, wavFilename);
-
-    let existingFilename: string | null = null;
-
-    try {
-      await access(mp3Path);
-      existingFilename = mp3Filename;
-    } catch {
-      try {
-        await access(wavPath);
-        existingFilename = wavFilename;
-      } catch {
-        // File does not exist
-      }
-    }
+    const existingFilename = await findExistingAudioFilename(getAudioFilenameCandidates(titleForFilename, voice));
 
     if (existingFilename) {
       return c.json({

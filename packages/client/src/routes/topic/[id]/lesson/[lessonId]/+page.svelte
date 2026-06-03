@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { generateSpeech, getCurrentProvider, setProvider } from '$lib/tts-client.js';
-	import { getProviders } from '$lib/tts-providers.js';
+	import { getProviders, RECOMMENDED_ENGLISH_VOICE, VOICE_OPTIONS } from '$lib/tts-providers.js';
 	
 	let { data } = $props();
 	let topic = $derived(data.topic);
@@ -36,11 +36,8 @@
 	let volume = $state(1.0);
 	
 	// Voice selection state
-	let selectedVoice = $state('male');
-	let voiceOptions = [
-		{ value: 'male', label: 'Matthew (Neural)' },
-		{ value: 'female', label: 'Joanna (Neural)' }
-	];
+	let selectedVoice = $state(RECOMMENDED_ENGLISH_VOICE);
+	let voiceOptions = VOICE_OPTIONS;
 	
 	// State for error messages
 	let errorMessage = $state(null);

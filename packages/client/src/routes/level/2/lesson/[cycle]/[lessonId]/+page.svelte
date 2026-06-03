@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import { puterProvider } from '$lib/tts-providers.js';
+	import { puterProvider, RECOMMENDED_ENGLISH_VOICE, VOICE_OPTIONS } from '$lib/tts-providers.js';
 
 	let { data } = $props();
 
@@ -31,11 +31,8 @@
 	let vocabularyIsLoadingId = $state(null);
 	let vocabularyAudioCache = new Map();
 
-	let selectedVoice = $state('male');
-	let voiceOptions = [
-		{ value: 'male', label: 'Matthew (Neural)' },
-		{ value: 'female', label: 'Joanna (Neural)' }
-	];
+	let selectedVoice = $state(RECOMMENDED_ENGLISH_VOICE);
+	let voiceOptions = VOICE_OPTIONS;
 	let playbackSpeed = $state(1.0);
 	let speedOptions = [0.5, 0.75, 1.0, 1.25, 1.5, 2.0];
 	let showDialogueText = $state(false);
