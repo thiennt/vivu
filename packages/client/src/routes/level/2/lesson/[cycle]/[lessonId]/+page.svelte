@@ -29,7 +29,7 @@
 	let vocabularyAudio = $state(null);
 	let vocabularyIsPlayingId = $state(null);
 	let vocabularyIsLoadingId = $state(null);
-	let vocabularyObjectUrl = null;
+	let vocabularyAudioCache = new Map();
 
 	let selectedVoice = $state('male');
 	let voiceOptions = [
@@ -40,6 +40,7 @@
 	let speedOptions = [0.5, 0.75, 1.0, 1.25, 1.5, 2.0];
 	let showDialogueText = $state(false);
 	let showStoryText = $state(false);
+	const ERROR_DISPLAY_DURATION_MS = 3000;
 
 	let errorMessage = $state(null);
 
@@ -62,15 +63,19 @@
 			() => { storyDuration = storyAudio.duration; storyAudio.playbackRate = playbackSpeed; },
 			() => { storyIsPlaying = false; }
 		);
+		const skipVocabularyTimeUpdate = () => {};
 		vocabularyAudio = createAudioElement(
-			() => {},
+			skipVocabularyTimeUpdate,
 			() => { vocabularyAudio.playbackRate = playbackSpeed; },
 			() => { vocabularyIsPlayingId = null; }
 		);
 
 		return () => {
 			[dialogueAudio, storyAudio, vocabularyAudio].forEach((a) => { if (a) { a.pause(); a.src = ''; } });
-			[dialogueObjectUrl, storyObjectUrl, vocabularyObjectUrl].forEach((url) => { if (url?.startsWith('blob:')) URL.revokeObjectURL(url); });
+			[dialogueObjectUrl, storyObjectUrl].forEach((url) => { if (url?.startsWith('blob:')) URL.revokeObjectURL(url); });
+			for (const url of vocabularyAudioCache.values()) {
+				if (typeof url === 'string' && url.startsWith('blob:')) URL.revokeObjectURL(url);
+			}
 		};
 	});
 
@@ -78,7 +83,7 @@
 		const audio = getAudio();
 		if (!audio) return;
 		if (audio.src) {
-			try { await audio.play(); setPlaying(true); } catch { errorMessage = 'Failed to play audio. Please check your browser settings or try again.'; setTimeout(() => errorMessage = null, 3000); }
+			try { await audio.play(); setPlaying(true); } catch { errorMessage = 'Failed to play audio. Please check your browser settings or try again.'; setTimeout(() => errorMessage = null, ERROR_DISPLAY_DURATION_MS); }
 			return;
 		}
 		setLoading(true);
@@ -107,7 +112,7 @@
 			errorMessage = isNetwork
 				? 'Network error: could not reach the audio service. Please check your connection and try again.'
 				: 'Failed to generate audio. Please try again.';
-			setTimeout(() => errorMessage = null, 3000);
+			setTimeout(() => errorMessage = null, ERROR_DISPLAY_DURATION_MS);
 		} finally {
 			setLoading(false);
 		}
@@ -150,27 +155,32 @@
 
 		vocabularyIsLoadingId = item.id;
 		try {
-			const response = await puterProvider.generateAudioWithPuter(item.word, selectedVoice);
-			let url;
-			if (response instanceof Blob) {
-				url = URL.createObjectURL(response);
-			} else if (response?.src) {
-				url = response.src;
-			} else if (typeof response === 'string') {
-				url = response;
-			} else {
-				throw new Error('Unexpected audio response');
+			const cacheKey = `${item.id}-${selectedVoice}`;
+			let url = vocabularyAudioCache.get(cacheKey);
+
+			if (!url) {
+				const response = await puterProvider.generateAudioWithPuter(item.word, selectedVoice);
+				if (response instanceof Blob) {
+					url = URL.createObjectURL(response);
+				} else if (response?.src) {
+					url = response.src;
+				} else if (typeof response === 'string') {
+					url = response;
+				} else {
+					throw new Error('Unexpected audio response');
+				}
+				vocabularyAudioCache.set(cacheKey, url);
 			}
-			if (vocabularyObjectUrl?.startsWith('blob:')) URL.revokeObjectURL(vocabularyObjectUrl);
-			vocabularyObjectUrl = url;
+
 			vocabularyAudio.src = url;
 			vocabularyAudio.playbackRate = playbackSpeed;
-			vocabularyAudio.load();
-			await vocabularyAudio.play();
 			vocabularyIsPlayingId = item.id;
-		} catch {
+			await vocabularyAudio.play();
+		} catch (error) {
+			console.error('Failed to generate vocabulary audio:', error);
+			vocabularyIsPlayingId = null;
 			errorMessage = 'Failed to generate vocabulary audio. Please try again.';
-			setTimeout(() => errorMessage = null, 3000);
+			setTimeout(() => errorMessage = null, ERROR_DISPLAY_DURATION_MS);
 		} finally {
 			vocabularyIsLoadingId = null;
 		}
@@ -196,8 +206,12 @@
 		selectedVoice = event.target.value;
 		// Clear loaded audio so it regenerates with new voice
 		[dialogueAudio, storyAudio, vocabularyAudio].forEach((a) => { if (a) { a.pause(); a.src = ''; } });
-		[dialogueObjectUrl, storyObjectUrl, vocabularyObjectUrl].forEach((url) => { if (url?.startsWith('blob:')) URL.revokeObjectURL(url); });
-		dialogueObjectUrl = null; storyObjectUrl = null; vocabularyObjectUrl = null;
+		[dialogueObjectUrl, storyObjectUrl].forEach((url) => { if (url?.startsWith('blob:')) URL.revokeObjectURL(url); });
+		for (const url of vocabularyAudioCache.values()) {
+			if (typeof url === 'string' && url.startsWith('blob:')) URL.revokeObjectURL(url);
+		}
+		vocabularyAudioCache = new Map();
+		dialogueObjectUrl = null; storyObjectUrl = null;
 		dialogueIsPlaying = false; storyIsPlaying = false; vocabularyIsPlayingId = null;
 		dialogueCurrentTime = 0; storyCurrentTime = 0;
 		dialogueDuration = 0; storyDuration = 0;
@@ -270,11 +284,11 @@
 						aria-label={`Play pronunciation for ${item.word}`}
 					>
 						{#if vocabularyIsLoadingId === item.id}
-							⏳
+							<span aria-hidden="true">⏳</span>
 						{:else if vocabularyIsPlayingId === item.id}
-							⏸
+							<span aria-hidden="true">⏸</span>
 						{:else}
-							🔊
+							<span aria-hidden="true">🔊</span>
 						{/if}
 					</button>
 				</div>
