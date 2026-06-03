@@ -65,7 +65,7 @@
 		const audio = getAudio();
 		if (!audio) return;
 		if (audio.src) {
-			try { await audio.play(); setPlaying(true); } catch { errorMessage = 'Failed to play audio.'; setTimeout(() => errorMessage = null, 3000); }
+			try { await audio.play(); setPlaying(true); } catch { errorMessage = 'Failed to play audio. Please check your browser settings or try again.'; setTimeout(() => errorMessage = null, 3000); }
 			return;
 		}
 		setLoading(true);
@@ -89,8 +89,11 @@
 			audio.load();
 			await audio.play();
 			setPlaying(true);
-		} catch {
-			errorMessage = 'Failed to generate audio. Please try again.';
+		} catch (err) {
+			const isNetwork = err instanceof TypeError && err.message.includes('fetch');
+			errorMessage = isNetwork
+				? 'Network error: could not reach the audio service. Please check your connection and try again.'
+				: 'Failed to generate audio. Please try again.';
 			setTimeout(() => errorMessage = null, 3000);
 		} finally {
 			setLoading(false);
@@ -128,6 +131,15 @@
 		const rect = event.currentTarget.getBoundingClientRect();
 		const pct = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width));
 		audio.currentTime = pct * duration;
+	}
+
+	function handleProgressKeydown(audio, duration, event) {
+		if (!audio || !duration) return;
+		const step = duration * 0.05;
+		if (event.key === 'ArrowLeft') { event.preventDefault(); audio.currentTime = Math.max(0, audio.currentTime - step); }
+		else if (event.key === 'ArrowRight') { event.preventDefault(); audio.currentTime = Math.min(duration, audio.currentTime + step); }
+		else if (event.key === 'Home') { event.preventDefault(); audio.currentTime = 0; }
+		else if (event.key === 'End') { event.preventDefault(); audio.currentTime = duration; }
 	}
 
 	function handleVoiceChange(event) {
@@ -225,7 +237,7 @@
 			</button>
 			{#if dialogueDuration > 0}
 				<span class="time">{formatTime(dialogueCurrentTime)}</span>
-				<button class="progress-bar" onclick={(e) => seekAudio(dialogueAudio, dialogueDuration, e)} aria-label="Seek dialogue" role="slider" aria-valuemin="0" aria-valuemax={dialogueDuration} aria-valuenow={dialogueCurrentTime}>
+				<button class="progress-bar" onclick={(e) => seekAudio(dialogueAudio, dialogueDuration, e)} onkeydown={(e) => handleProgressKeydown(dialogueAudio, dialogueDuration, e)} tabindex="0" aria-label="Seek dialogue" role="slider" aria-valuemin="0" aria-valuemax={dialogueDuration} aria-valuenow={dialogueCurrentTime}>
 					<div class="progress-fill" style="width: {(dialogueCurrentTime / dialogueDuration) * 100}%"></div>
 				</button>
 				<span class="time">{formatTime(dialogueDuration)}</span>
@@ -258,7 +270,7 @@
 			</button>
 			{#if storyDuration > 0}
 				<span class="time">{formatTime(storyCurrentTime)}</span>
-				<button class="progress-bar" onclick={(e) => seekAudio(storyAudio, storyDuration, e)} aria-label="Seek story" role="slider" aria-valuemin="0" aria-valuemax={storyDuration} aria-valuenow={storyCurrentTime}>
+				<button class="progress-bar" onclick={(e) => seekAudio(storyAudio, storyDuration, e)} onkeydown={(e) => handleProgressKeydown(storyAudio, storyDuration, e)} tabindex="0" aria-label="Seek story" role="slider" aria-valuemin="0" aria-valuemax={storyDuration} aria-valuenow={storyCurrentTime}>
 					<div class="progress-fill" style="width: {(storyCurrentTime / storyDuration) * 100}%"></div>
 				</button>
 				<span class="time">{formatTime(storyDuration)}</span>
