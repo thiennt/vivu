@@ -36,6 +36,7 @@ const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 // Audio storage directory
 const AUDIO_DIR = join(__dirname, '../../audio');
+const MAX_TTS_TEXT_LENGTH = 5000;
 
 // Ensure audio directory exists
 async function ensureAudioDir() {
@@ -354,6 +355,69 @@ router.post('/generate', async (c) => {
     console.error('TTS generation error:', error);
     return c.json({
       error: error instanceof Error ? error.message : 'Failed to generate audio'
+    }, 500);
+  }
+});
+
+
+/**
+ * POST /api/tts/generate-text
+ * Generate TTS audio directly from provided text
+ */
+router.post('/generate-text', async (c) => {
+  try {
+    const body = await c.req.json();
+    const { text, key, voice } = body;
+
+    if (typeof text !== 'string' || !text.trim()) {
+      return c.json({ error: 'text is required' }, 400);
+    }
+
+    if (text.length > MAX_TTS_TEXT_LENGTH) {
+      return c.json({ error: `Text exceeds maximum length of ${MAX_TTS_TEXT_LENGTH} characters` }, 400);
+    }
+
+    const normalizedVoice = voice === 'female' ? 'female' : 'male';
+    const audioIdentifier = typeof key === 'string' && key.trim() ? key : hashText(text).slice(0, 16);
+    const titleForFilename = `${audioIdentifier}_${hashText(text).slice(0, 8)}`;
+    const baseName = generateAudioFilename(titleForFilename, normalizedVoice);
+
+    const mp3Filename = `${baseName}.mp3`;
+    const wavFilename = `${baseName}.wav`;
+    const mp3Path = join(AUDIO_DIR, mp3Filename);
+    const wavPath = join(AUDIO_DIR, wavFilename);
+
+    let existingFilename: string | null = null;
+
+    try {
+      await access(mp3Path);
+      existingFilename = mp3Filename;
+    } catch {
+      try {
+        await access(wavPath);
+        existingFilename = wavFilename;
+      } catch {
+        // File does not exist
+      }
+    }
+
+    if (existingFilename) {
+      return c.json({
+        audioUrl: `/api/tts/audio/${existingFilename}`,
+        cached: true
+      });
+    }
+
+    const filename = await generateAndSaveAudio(text, titleForFilename, normalizedVoice);
+
+    return c.json({
+      audioUrl: `/api/tts/audio/${filename}`,
+      cached: false
+    });
+  } catch (error) {
+    console.error('TTS text generation error:', error);
+    return c.json({
+      error: error instanceof Error ? error.message : 'Failed to generate text audio'
     }, 500);
   }
 });
