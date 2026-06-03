@@ -32,6 +32,8 @@
 	];
 	let playbackSpeed = $state(1.0);
 	let speedOptions = [0.5, 0.75, 1.0, 1.25, 1.5, 2.0];
+	let showDialogueText = $state(false);
+	let showStoryText = $state(false);
 
 	let errorMessage = $state(null);
 
@@ -220,6 +222,9 @@
 
 	<section class="section-card">
 		<h2>Dialogue</h2>
+		<button class="text-toggle-btn" onclick={() => { showDialogueText = !showDialogueText; }}>
+			{showDialogueText ? 'Hide text' : 'Show text'}
+		</button>
 		<div class="player-row">
 			<button class="play-btn" onclick={toggleDialogue} disabled={dialogueIsLoading} aria-label="Play dialogue">
 				{#if dialogueIsLoading}
@@ -244,15 +249,20 @@
 				<input type="range" class="volume-slider" min="0" max="1" step="0.01" value={dialogueVolume} oninput={(e) => { dialogueVolume = parseFloat(e.target.value); }} aria-label="Dialogue volume"/>
 			{/if}
 		</div>
-		<div class="dialogue-list">
-			{#each data.lesson.dialogue ?? [] as line}
-				<p><strong>{line.speaker}:</strong> {line.text}</p>
-			{/each}
-		</div>
+		{#if showDialogueText}
+			<div class="dialogue-list">
+				{#each data.lesson.dialogue ?? [] as line}
+					<p><strong>{line.speaker}:</strong> {line.text}</p>
+				{/each}
+			</div>
+		{/if}
 	</section>
 
 	<section class="section-card">
 		<h2>Story</h2>
+		<button class="text-toggle-btn" onclick={() => { showStoryText = !showStoryText; }}>
+			{showStoryText ? 'Hide text' : 'Show text'}
+		</button>
 		<div class="player-row">
 			<button class="play-btn" onclick={toggleStory} disabled={storyIsLoading} aria-label="Play story">
 				{#if storyIsLoading}
@@ -277,7 +287,9 @@
 				<input type="range" class="volume-slider" min="0" max="1" step="0.01" value={storyVolume} oninput={(e) => { storyVolume = parseFloat(e.target.value); }} aria-label="Story volume"/>
 			{/if}
 		</div>
-		<p class="story">{data.lesson.story?.text}</p>
+		{#if showStoryText}
+			<p class="story">{data.lesson.story?.text}</p>
+		{/if}
 	</section>
 
 	<section class="section-card">
@@ -378,6 +390,18 @@
 	.section-card h2 {
 		margin: 0 0 0.75rem;
 		color: #667eea;
+	}
+
+	.text-toggle-btn {
+		background: #f2f4ff;
+		color: #4f46e5;
+		border: 1px solid #d8ddff;
+		border-radius: 8px;
+		padding: 0.4rem 0.7rem;
+		font-size: 0.85rem;
+		font-weight: 600;
+		cursor: pointer;
+		margin-bottom: 0.75rem;
 	}
 
 	/* Vocabulary: one item per line */
