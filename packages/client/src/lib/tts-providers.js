@@ -20,7 +20,8 @@ function getVoiceToken(voice) {
 		return '';
 	}
 
-	return voice.trim().toLowerCase().match(/[a-z]+/)?.[0] || '';
+	const trimmedVoice = voice.trim();
+	return trimmedVoice ? trimmedVoice.toLowerCase().match(/[a-z]+/)?.[0] || '' : '';
 }
 
 export function normalizePuterVoice(voice = RECOMMENDED_ENGLISH_VOICE) {

@@ -124,12 +124,48 @@ function generateAudioFilename(lessonTitle: string, voice: string = 'male'): str
 }
 
 function getVoiceToken(voice: string | undefined): string {
-  return voice?.trim().toLowerCase().match(/[a-z]+/)?.[0] || '';
+  const trimmedVoice = voice?.trim() || '';
+  return trimmedVoice ? trimmedVoice.toLowerCase().match(/[a-z]+/)?.[0] || '' : '';
 }
 
 function normalizeGeminiVoice(voice: string | undefined): string {
   const normalized = GEMINI_VOICE_ALIASES[getVoiceToken(voice)];
   return normalized || DEFAULT_GEMINI_VOICE;
+}
+
+function getAudioFilenameCandidates(lessonTitle: string, voice: string | undefined): string[] {
+  const normalizedVoice = normalizeGeminiVoice(voice);
+  const rawVoice = voice?.trim();
+  const tokenVoice = getVoiceToken(voice);
+
+  return [...new Set([
+    generateAudioFilename(lessonTitle, normalizedVoice),
+    rawVoice ? generateAudioFilename(lessonTitle, rawVoice) : null,
+    tokenVoice && tokenVoice !== normalizedVoice.toLowerCase()
+      ? generateAudioFilename(lessonTitle, tokenVoice)
+      : null,
+  ].filter((value): value is string => Boolean(value)))];
+}
+
+async function findExistingAudioFilename(baseNames: string[]): Promise<string | null> {
+  for (const baseName of baseNames) {
+    const mp3Filename = `${baseName}.mp3`;
+    const wavFilename = `${baseName}.wav`;
+
+    try {
+      await access(join(AUDIO_DIR, mp3Filename));
+      return mp3Filename;
+    } catch {
+      try {
+        await access(join(AUDIO_DIR, wavFilename));
+        return wavFilename;
+      } catch {
+        // Continue to next candidate
+      }
+    }
+  }
+
+  return null;
 }
 
 /**
@@ -333,26 +369,7 @@ router.post('/generate', async (c) => {
     // Generate audio for the entire lesson content
     const text = lesson.content;
     const normalizedVoice = normalizeGeminiVoice(voice);
-    const baseName = generateAudioFilename(lesson.title, normalizedVoice);
-
-    const mp3Filename = `${baseName}.mp3`;
-    const wavFilename = `${baseName}.wav`;
-    const mp3Path = join(AUDIO_DIR, mp3Filename);
-    const wavPath = join(AUDIO_DIR, wavFilename);
-
-    // Check if file exists (try both extensions)
-    let existingFilename: string | null = null;
-    try {
-      await access(mp3Path);
-      existingFilename = mp3Filename;
-    } catch {
-      try {
-        await access(wavPath);
-        existingFilename = wavFilename;
-      } catch {
-        // File doesn't exist, continue to generate
-      }
-    }
+    const existingFilename = await findExistingAudioFilename(getAudioFilenameCandidates(lesson.title, voice));
 
     if (existingFilename) {
       // Return existing audio URL
@@ -399,26 +416,7 @@ router.post('/generate-text', async (c) => {
     const normalizedVoice = normalizeGeminiVoice(voice);
     const audioIdentifier = typeof key === 'string' && key.trim() ? key : hashText(text).slice(0, 16);
     const titleForFilename = `${audioIdentifier}_${hashText(text).slice(0, 8)}`;
-    const baseName = generateAudioFilename(titleForFilename, normalizedVoice);
-
-    const mp3Filename = `${baseName}.mp3`;
-    const wavFilename = `${baseName}.wav`;
-    const mp3Path = join(AUDIO_DIR, mp3Filename);
-    const wavPath = join(AUDIO_DIR, wavFilename);
-
-    let existingFilename: string | null = null;
-
-    try {
-      await access(mp3Path);
-      existingFilename = mp3Filename;
-    } catch {
-      try {
-        await access(wavPath);
-        existingFilename = wavFilename;
-      } catch {
-        // File does not exist
-      }
-    }
+    const existingFilename = await findExistingAudioFilename(getAudioFilenameCandidates(titleForFilename, voice));
 
     if (existingFilename) {
       return c.json({
