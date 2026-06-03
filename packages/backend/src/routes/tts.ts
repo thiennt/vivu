@@ -358,6 +358,69 @@ router.post('/generate', async (c) => {
   }
 });
 
+
+/**
+ * POST /api/tts/generate-text
+ * Generate TTS audio directly from provided text
+ */
+router.post('/generate-text', async (c) => {
+  try {
+    const body = await c.req.json();
+    const { text, key, voice } = body;
+
+    if (typeof text !== 'string' || !text.trim()) {
+      return c.json({ error: 'text is required' }, 400);
+    }
+
+    if (text.length > 5000) {
+      return c.json({ error: 'text is too long (max 5000 characters)' }, 400);
+    }
+
+    const normalizedVoice = voice === 'female' ? 'female' : 'male';
+    const identity = typeof key === 'string' && key.trim() ? key : hashText(text).slice(0, 16);
+    const titleForFilename = `${identity}_${hashText(text).slice(0, 8)}`;
+    const baseName = generateAudioFilename(titleForFilename, normalizedVoice);
+
+    const mp3Filename = `${baseName}.mp3`;
+    const wavFilename = `${baseName}.wav`;
+    const mp3Path = join(AUDIO_DIR, mp3Filename);
+    const wavPath = join(AUDIO_DIR, wavFilename);
+
+    let existingFilename: string | null = null;
+
+    try {
+      await access(mp3Path);
+      existingFilename = mp3Filename;
+    } catch {
+      try {
+        await access(wavPath);
+        existingFilename = wavFilename;
+      } catch {
+        // File does not exist
+      }
+    }
+
+    if (existingFilename) {
+      return c.json({
+        audioUrl: `/api/tts/audio/${existingFilename}`,
+        cached: true
+      });
+    }
+
+    const filename = await generateAndSaveAudio(text, titleForFilename, normalizedVoice);
+
+    return c.json({
+      audioUrl: `/api/tts/audio/${filename}`,
+      cached: false
+    });
+  } catch (error) {
+    console.error('TTS text generation error:', error);
+    return c.json({
+      error: error instanceof Error ? error.message : 'Failed to generate text audio'
+    }, 500);
+  }
+});
+
 /**
  * GET /api/tts/audio/:filename
  * Serve audio file

@@ -5,6 +5,7 @@ import { cors } from 'hono/cors';
 import topicsRouter from './routes/topics.js';
 import ttsRouter from './routes/tts.js';
 import dictionaryRouter from './routes/dictionary.js';
+import midLevelRouter from './routes/mid-level.js';
 
 const app = new Hono();
 
@@ -31,6 +32,7 @@ app.use('/audio/words/*', serveStatic({ root: './' }));
 app.route('/api/topics', topicsRouter);
 app.route('/api/tts', ttsRouter);
 app.route('/api/dictionary', dictionaryRouter);
+app.route('/api/mid-level', midLevelRouter);
 
 // Health check
 app.get('/health', (c) => c.json({ status: 'ok' }));
