@@ -1,33 +1,30 @@
 import puter from '@heyputer/puter.js';
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000';
+const PUTER_VOICE_ALIASES = {
+	female: 'Joanna',
+	joanna: 'Joanna',
+	male: 'Matthew',
+	matthew: 'Matthew'
+};
 
-export const RECOMMENDED_ENGLISH_VOICE = 'Joanna';
+export const RECOMMENDED_ENGLISH_VOICE = 'female';
 
 export const VOICE_OPTIONS = [
-	{ value: 'Joanna', label: 'Joanna (recommended for learning English)' },
-	{ value: 'Matthew', label: 'Matthew (deeper voice)' }
+	{ value: 'female', label: 'Joanna (recommended for learning English)' },
+	{ value: 'male', label: 'Matthew (deeper voice)' }
 ];
 
-export function normalizePuterVoice(voice = RECOMMENDED_ENGLISH_VOICE) {
+function getVoiceToken(voice) {
 	if (typeof voice !== 'string') {
-		return RECOMMENDED_ENGLISH_VOICE;
+		return '';
 	}
 
-	const trimmedVoice = voice.trim();
-	if (!trimmedVoice) {
-		return RECOMMENDED_ENGLISH_VOICE;
-	}
+	return voice.trim().toLowerCase().match(/[a-z]+/)?.[0] || '';
+}
 
-	const normalizedVoice = trimmedVoice.toLowerCase();
-	if (normalizedVoice.includes('joanna') || normalizedVoice.includes('female')) {
-		return 'Joanna';
-	}
-	if (normalizedVoice.includes('matthew') || normalizedVoice.includes('male')) {
-		return 'Matthew';
-	}
-
-	return RECOMMENDED_ENGLISH_VOICE;
+export function normalizePuterVoice(voice = RECOMMENDED_ENGLISH_VOICE) {
+	return PUTER_VOICE_ALIASES[getVoiceToken(voice)] || PUTER_VOICE_ALIASES[RECOMMENDED_ENGLISH_VOICE];
 }
 
 /**

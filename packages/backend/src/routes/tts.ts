@@ -123,25 +123,13 @@ function generateAudioFilename(lessonTitle: string, voice: string = 'male'): str
   return `${baseName}_${voice}`;
 }
 
-function normalizeGeminiVoice(voice: string | undefined): string {
-  if (!voice) {
-    return DEFAULT_GEMINI_VOICE;
-  }
-
-  const normalizedVoice = voice.trim().toLowerCase();
-  if (normalizedVoice.includes('joanna') || normalizedVoice.includes('ava') || normalizedVoice.includes('female')) {
-    return 'Ava';
-  }
-  if (normalizedVoice.includes('matthew') || normalizedVoice.includes('guy') || normalizedVoice.includes('male')) {
-    return 'Guy';
-  }
-
-  const normalized = GEMINI_VOICE_ALIASES[normalizedVoice];
-  return normalized || DEFAULT_GEMINI_VOICE;
+function getVoiceToken(voice: string | undefined): string {
+  return voice?.trim().toLowerCase().match(/[a-z]+/)?.[0] || '';
 }
 
-function getVoiceCacheKey(voice: string | undefined): 'male' | 'female' {
-  return normalizeGeminiVoice(voice) === 'Ava' ? 'female' : 'male';
+function normalizeGeminiVoice(voice: string | undefined): string {
+  const normalized = GEMINI_VOICE_ALIASES[getVoiceToken(voice)];
+  return normalized || DEFAULT_GEMINI_VOICE;
 }
 
 /**
@@ -182,7 +170,7 @@ async function generateAndSaveAudio(text: string, lessonTitle: string, voice: st
   const audioBuffer = Buffer.from(data, 'base64');
 
   // Use lesson title and voice for filename to prevent cache conflicts
-  const baseName = generateAudioFilename(lessonTitle, getVoiceCacheKey(voice));
+  const baseName = generateAudioFilename(lessonTitle, voiceName);
   const filename = `${baseName}.wav`;
   const filepath = join(AUDIO_DIR, filename);
   await saveWaveFile(filepath, audioBuffer);
@@ -344,7 +332,8 @@ router.post('/generate', async (c) => {
 
     // Generate audio for the entire lesson content
     const text = lesson.content;
-    const baseName = generateAudioFilename(lesson.title, getVoiceCacheKey(voice));
+    const normalizedVoice = normalizeGeminiVoice(voice);
+    const baseName = generateAudioFilename(lesson.title, normalizedVoice);
 
     const mp3Filename = `${baseName}.mp3`;
     const wavFilename = `${baseName}.wav`;
@@ -374,7 +363,7 @@ router.post('/generate', async (c) => {
     }
 
     // Generate new audio
-    const filename = await generateAndSaveAudio(text, lesson.title, voice);
+    const filename = await generateAndSaveAudio(text, lesson.title, normalizedVoice);
 
     return c.json({
       audioUrl: `/api/tts/audio/${filename}`,
@@ -407,7 +396,7 @@ router.post('/generate-text', async (c) => {
       return c.json({ error: `Text exceeds maximum length of ${MAX_TTS_TEXT_LENGTH} characters` }, 400);
     }
 
-    const normalizedVoice = getVoiceCacheKey(voice);
+    const normalizedVoice = normalizeGeminiVoice(voice);
     const audioIdentifier = typeof key === 'string' && key.trim() ? key : hashText(text).slice(0, 16);
     const titleForFilename = `${audioIdentifier}_${hashText(text).slice(0, 8)}`;
     const baseName = generateAudioFilename(titleForFilename, normalizedVoice);
