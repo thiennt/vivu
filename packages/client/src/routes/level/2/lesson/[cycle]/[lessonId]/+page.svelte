@@ -404,6 +404,15 @@
 		margin-bottom: 0.75rem;
 	}
 
+	.text-toggle-btn:hover {
+		background: #e9edff;
+	}
+
+	.text-toggle-btn:focus-visible {
+		outline: 2px solid #667eea;
+		outline-offset: 2px;
+	}
+
 	/* Vocabulary: one item per line */
 	.vocabulary-list {
 		display: flex;
