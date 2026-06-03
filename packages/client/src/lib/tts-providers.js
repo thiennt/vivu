@@ -15,6 +15,10 @@ export const VOICE_OPTIONS = [
 	{ value: 'male', label: 'Matthew (deeper voice)' }
 ];
 
+/**
+ * Extract the leading alphabetic token from a voice value.
+ * Example: "Joanna (Neural)" becomes "joanna".
+ */
 function getVoiceToken(voice) {
 	if (typeof voice !== 'string') {
 		return '';

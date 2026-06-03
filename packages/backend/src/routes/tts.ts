@@ -123,6 +123,10 @@ function generateAudioFilename(lessonTitle: string, voice: string = 'male'): str
   return `${baseName}_${voice}`;
 }
 
+/**
+ * Extract the leading alphabetic token from a voice value.
+ * Example: "Joanna (Neural)" becomes "joanna".
+ */
 function getVoiceToken(voice: string | undefined): string {
   const trimmedVoice = voice?.trim() || '';
   return trimmedVoice ? trimmedVoice.toLowerCase().match(/^[a-z]+/)?.[0] || '' : '';
@@ -133,6 +137,9 @@ function normalizeGeminiVoice(voice: string | undefined): string {
   return normalized || DEFAULT_GEMINI_VOICE;
 }
 
+/**
+ * Build cache lookup candidates for normalized and legacy voice-based filenames.
+ */
 function getAudioFilenameCandidates(lessonTitle: string, voice: string | undefined): string[] {
   const normalizedVoice = normalizeGeminiVoice(voice);
   const rawVoice = voice?.trim();
@@ -150,6 +157,9 @@ function getAudioFilenameCandidates(lessonTitle: string, voice: string | undefin
   return [...new Set(candidates)];
 }
 
+/**
+ * Find the first existing audio file for the provided basename candidates.
+ */
 async function findExistingAudioFilename(baseNames: string[]): Promise<string | null> {
   for (const baseName of baseNames) {
     const mp3Filename = `${baseName}.mp3`;
