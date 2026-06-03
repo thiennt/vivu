@@ -1,0 +1,291 @@
+{
+  "cycle": 6,
+  "total_lessons_in_cycle": 10,
+  "lessons": [
+    {
+      "lesson_id": 51,
+      "topic": "Daily Life",
+      "title": "Taking Out the Trash",
+      "vocabulary": [
+        { "id": 1, "word": "Garbage", "type": "n", "ipa": "/ˈɡɑːbɪdʒ/", "meaning": "Rác thải, rác nhà bếp" },
+        { "id": 2, "word": "Bin", "type": "n", "ipa": "/bɪn/", "meaning": "Thùng rác" },
+        { "id": 3, "word": "Curb", "type": "n", "ipa": "/kɜːb/", "meaning": "Lề đường, mép vỉa hè" },
+        { "id": 4, "word": "Stink", "type": "v", "ipa": "/stɪŋk/", "meaning": "Bốc mùi hôi thối" },
+        { "id": 5, "word": "Collection", "type": "n", "ipa": "/kəˈlekʃn/", "meaning": "Sự thu gom, thu thập" }
+      ],
+      "dialogue": [
+        { "speaker": "Wife", "text": "Honey, the kitchen garbage bin is full. Can you take it out?" },
+        { "speaker": "Husband", "text": "Sure, is tonight the trash collection day for our street?" },
+        { "speaker": "Wife", "text": "Yes, they come very early tomorrow morning. It already starts to stink." },
+        { "speaker": "Husband", "text": "Okay, I will tie up the bag and leave the bin out on the curb." },
+        { "speaker": "Wife", "text": "Don't forget to put a fresh liner in the kitchen bin afterward." }
+      ],
+      "story": {
+        "text": "A husband takes out the kitchen garbage because the bin is full and starts to stink. He ties the plastic bag carefully. He places the heavy bin on the curb because the trash collection truck arrives early the next morning."
+      },
+      "questions": [
+        { "id": 1, "question": "Which bin is full in the house?", "suggested_answer": "The kitchen garbage bin is full." },
+        { "id": 2, "question": "Why does the wife want to clear the trash immediately?", "suggested_answer": "Because it already starts to stink." },
+        { "id": 3, "question": "Where does the husband leave the bin?", "suggested_answer": "He leaves it out on the curb." },
+        { "id": 4, "question": "When does the collection truck arrive?", "suggested_answer": "It arrives very early tomorrow morning." }
+      ]
+    },
+    {
+      "lesson_id": 52,
+      "topic": "Social",
+      "title": "Asking for Directions",
+      "vocabulary": [
+        { "id": 1, "word": "Block", "type": "n", "ipa": "/blɒk/", "meaning": "Khối nhà, dãy phố" },
+        { "id": 2, "word": "Intersection", "type": "n", "ipa": "/ˌɪntəˈsekʃn/", "meaning": "Ngã tư, giao lộ" },
+        { "id": 3, "word": "Crosswalk", "type": "n", "ipa": "/ˈkrɒswɔːk/", "meaning": "Vạch kẻ đường cho người đi bộ" },
+        { "id": 4, "word": "Straight", "type": "adv/adj", "ipa": "/streɪt/", "meaning": "Thẳng, đi thẳng" },
+        { "id": 5, "word": "Landmark", "type": "n", "ipa": "/ˈlændmɑːk/", "meaning": "Địa điểm dễ nhận biết, cột mốc" }
+      ],
+      "dialogue": [
+        { "speaker": "Tourist", "text": "Excuse me, I am looking for the National Museum. Am I on the right track?" },
+        { "speaker": "Local", "text": "You are a bit far. Walk straight down this street for two blocks." },
+        { "speaker": "Tourist", "text": "Two blocks, okay. What do I do when I reach the main intersection?" },
+        { "speaker": "Local", "text": "Turn left, use the crosswalk to cross the road, and you will see a big stone landmark." },
+        { "speaker": "Tourist", "text": "Thank you so much for your clear help!" }
+      ],
+      "story": {
+        "text": "A lost tourist looks for the National Museum in the city. A kind local guides him to walk straight for two blocks. He instructs the tourist to turn left at the intersection, use the crosswalk, and look for a big stone landmark."
+      },
+      "questions": [
+        { "id": 1, "question": "What place is the tourist looking for?", "suggested_answer": "He is looking for the National Museum." },
+        { "id": 2, "question": "How many blocks does he need to walk straight?", "suggested_answer": "He needs to walk straight for two blocks." },
+        { "id": 3, "question": "Where should the tourist turn left?", "suggested_answer": "He should turn left when he reaches the main intersection." },
+        { "id": 4, "question": "What safety feature should he use to cross the road?", "suggested_answer": "He should use the crosswalk." }
+      ]
+    },
+    {
+      "lesson_id": 53,
+      "topic": "Shopping",
+      "title": "Checking the Warranty",
+      "vocabulary": [
+        { "id": 1, "word": "Warranty", "type": "n", "ipa": "/ˈwɒrənti/", "meaning": "Giấy bảo hành, hạn bảo hành" },
+        { "id": 2, "word": "Expire", "type": "v", "ipa": "/ɪkˈspaɪər/", "meaning": "Hết hạn, hết hiệu lực" },
+        { "id": 3, "word": "Coverage", "type": "n", "ipa": "/ˈkʌvərɪdʒ/", "meaning": "Phạm vi bảo hành, bảo hiểm" },
+        { "id": 4, "word": "Receipt", "type": "n", "ipa": "/rɪˈsiːt/", "meaning": "Hóa đơn" },
+        { "id": 5, "word": "Repair", "type": "v/n", "ipa": "/rɪˈpeər/", "meaning": "Sửa chữa / Sự sửa chữa" }
+      ],
+      "dialogue": [
+        { "speaker": "Customer", "text": "Hello, my laptop screen suddenly flickers. Does the warranty cover this?" },
+        { "speaker": "Technician", "text": "Let me check the purchase date on your receipt first, please." },
+        { "speaker": "Customer", "text": "I bought it exactly ten months ago. Here is the receipt." },
+        { "speaker": "Technician", "text": "Perfect. The standard warranty is one year, so it doesn't expire yet." },
+        { "speaker": "Customer", "text": "That is a relief! So the repair is completely free?" },
+        { "speaker": "Technician", "text": "Yes, this specific defect falls under our full coverage." }
+      ],
+      "story": {
+        "text": "A laptop owner experiences a flickering screen and asks about his warranty coverage. The technician checks the receipt and confirms the purchase is ten months ago. Since the warranty lasts one year, it does not expire, and the repair is free."
+      },
+      "questions": [
+        { "id": 1, "question": "What is wrong with the customer's laptop?", "suggested_answer": "The laptop screen suddenly flickers." },
+        { "id": 2, "question": "How long ago did the customer buy the laptop?", "suggested_answer": "He bought it exactly ten months ago." },
+        { "id": 3, "question": "Why is the repair free?", "suggested_answer": "Because the one-year warranty does not expire yet." },
+        { "id": 4, "question": "What document does the technician inspect?", "suggested_answer": "The technician inspects the purchase receipt." }
+      ]
+    },
+    {
+      "lesson_id": 54,
+      "topic": "Food & Drink",
+      "title": "Complaining about an Order",
+      "vocabulary": [
+        { "id": 1, "word": "Undercooked", "type": "adj", "ipa": "/ˌʌndəˈkʊkt/", "meaning": "Chưa chín, còn sống" },
+        { "id": 2, "word": "Apologize", "type": "v", "ipa": "/əˈpɒlədʒaɪz/", "meaning": "Xin lỗi" },
+        { "id": 3, "word": "Replace", "type": "v", "ipa": "/rɪˈpleɪs/", "meaning": "Thay thế, đổi lại cái khác" },
+        { "id": 4, "word": "On the house", "type": "phrase", "ipa": "/ɒn ðə haʊs/", "meaning": "Miễn phí (do nhà hàng đãi)" },
+        { "id": 5, "word": "Raw", "type": "adj", "ipa": "/rɔː/", "meaning": "Sống, chưa qua chế biến" }
+      ],
+      "dialogue": [
+        { "speaker": "Guest", "text": "Excuse me, waiter. I cut into my chicken steak and it is still pink inside." },
+        { "speaker": "Waiter", "text": "Oh, I am terribly sorry. It looks completely undercooked." },
+        { "speaker": "Guest", "text": "Yes, I cannot eat raw meat. It is dangerous for my health." },
+        { "speaker": "Waiter", "text": "I apologize for the mistake. Let me take it back to the kitchen and replace it immediately." },
+        { "speaker": "Guest", "text": "Thank you. Please make sure the chef cooks it well this time." },
+        { "speaker": "Waiter", "text": "Of course, and your dessert tonight will be on the house." }
+      ],
+      "story": {
+        "text": "A guest complains to the waiter because his chicken steak is undercooked and raw inside. The polite waiter apologizes for the serious mistake immediately. He takes the dish back to replace it and offers a free dessert on the house."
+      },
+      "questions": [
+        { "id": 1, "question": "What is the problem with the chicken steak?", "suggested_answer": "It is pink inside and completely undercooked." },
+        { "id": 2, "question": "Why does the guest refuse to eat it?", "suggested_answer": "Because he cannot eat raw meat, which is dangerous for his health." },
+        { "id": 3, "question": "What does the waiter do to fix the problem?", "suggested_answer": "He apologizes and takes it back to replace it immediately." },
+        { "id": 4, "question": "What does the restaurant offer for free?", "suggested_answer": "The restaurant offers a dessert on the house." }
+      ]
+    },
+    {
+      "lesson_id": 55,
+      "topic": "Work",
+      "title": "Calling in Sick",
+      "vocabulary": [
+        { "id": 1, "word": "Call in sick", "type": "phrase", "ipa": "/kɔːl ɪn sɪk/", "meaning": "Gọi điện xin nghỉ ốm" },
+        { "id": 2, "word": "Fever", "type": "n", "ipa": "/ˈfiːvər/", "meaning": "Sốt, sự sốt cao" },
+        { "id": 3, "word": "Medical certificate", "type": "n", "ipa": "/ˈmedɪkl səˈtɪfɪkət/", "meaning": "Giấy chứng nhận y tế, giấy khám bệnh" },
+        { "id": 4, "word": "Recover", "type": "v", "ipa": "/rɪˈkʌvər/", "meaning": "Hồi phục, bình phục" },
+        { "id": 5, "word": "Shift", "type": "n", "ipa": "/ʃɪft/", "meaning": "Ca làm việc" }
+      ],
+      "dialogue": [
+        { "speaker": "Employee", "text": "Good morning, Susan. I am calling in sick today. I have a severe fever." },
+        { "speaker": "Manager", "text": "Oh, I am sorry to hear that. You sound very weak. Don't worry about your shift today." },
+        { "speaker": "Employee", "text": "Thank you. I plan to visit the local clinic later this afternoon." },
+        { "speaker": "Manager", "text": "Good idea. Just rest well and bring a medical certificate when you return." },
+        { "speaker": "Employee", "text": "I will. Hopefully, I can recover before tomorrow morning." }
+      ],
+      "story": {
+        "text": "An office worker calls in sick because a severe fever makes him weak. His manager tells him to stay home and skip his daily shift. She advises him to rest well, visit a local clinic, and submit a medical certificate when he recovers."
+      },
+      "questions": [
+        { "id": 1, "question": "Why does the employee call his manager?", "suggested_answer": "He calls in sick because he has a severe fever." },
+        { "id": 2, "question": "Does the employee need to work his shift today?", "suggested_answer": "No, the manager tells him not to worry about his shift." },
+        { "id": 3, "question": "Where does the employee plan to go in the afternoon?", "suggested_answer": "He plans to visit the local clinic." },
+        { "id": 4, "question": "What document must he provide when he returns to work?", "suggested_answer": "He must provide a medical certificate." }
+      ]
+    },
+    {
+      "lesson_id": 56,
+      "topic": "Travel",
+      "title": "Hiring a Taxi",
+      "vocabulary": [
+        { "id": 1, "word": "Fare", "type": "n", "ipa": "/feər/", "meaning": "Tiền xe, giá vé di chuyển" },
+        { "id": 2, "word": "Meter", "type": "n", "ipa": "/ˈmiːtər/", "meaning": "Đồng hồ đo khoảng cách/tiền xe" },
+        { "id": 3, "word": "Destination", "type": "n", "ipa": "/ˌdestɪˈneɪʃn/", "meaning": "Điểm đến" },
+        { "id": 4, "word": "Trunk", "type": "n", "ipa": "/trʌŋk/", "meaning": "Cốp xe sau" },
+        { "id": 5, "word": "Receipt", "type": "n", "ipa": "/rɪˈsiːt/", "meaning": "Hóa đơn thanh toán" }
+      ],
+      "dialogue": [
+        { "speaker": "Passenger", "text": "Hello, are you available? I need a ride to the Grand Hotel." },
+        { "speaker": "Driver", "text": "Yes, hop in! Please put your heavy bags in the trunk first." },
+        { "speaker": "Passenger", "text": "Alright. Do you use the meter to calculate the fare?" },
+        { "speaker": "Driver", "text": "Yes, I always use the meter. It keeps the price fair for our destination." },
+        { "speaker": "Passenger", "text": "Perfect. Can I also get a printed receipt at the end of the trip?" },
+        { "speaker": "Driver", "text": "Certainly, no problem at all." }
+      ],
+      "story": {
+        "text": "A traveler hires a taxi to reach the Grand Hotel. The friendly driver opens the trunk for his heavy bags. The passenger checks if the driver runs the meter to calculate the final fare, and requests a printed receipt at their destination."
+      },
+      "questions": [
+        { "id": 1, "question": "What is the passenger's destination?", "suggested_answer": "His destination is the Grand Hotel." },
+        { "id": 2, "question": "Where does the passenger store his bags?", "suggested_answer": "He stores them in the trunk of the taxi." },
+        { "id": 3, "question": "How does the driver calculate the travel fare?", "suggested_answer": "He uses the meter." },
+        { "id": 4, "question": "What does the passenger request at the end of the journey?", "suggested_answer": "He requests a printed receipt." }
+      ]
+    },
+    {
+      "lesson_id": 57,
+      "topic": "Health",
+      "title": "Buying Medicine",
+      "vocabulary": [
+        { "id": 1, "word": "Prescription", "type": "/prɪˈskrɪpʃn/", "meaning": "Đơn thuốc của bác sĩ" },
+        { "id": 2, "word": "Pharmacist", "type": "n", "ipa": "/ˈfɑːməsɪst/", "meaning": "Dược sĩ" },
+        { "id": 3, "word": "Dosage", "type": "n", "ipa": "/ˈdəʊsɪdʒ/", "meaning": "Liều lượng, liều dùng" },
+        { "id": 4, "word": "Drowsy", "type": "adj", "ipa": "/ˈdraʊzi/", "meaning": "Buồn ngủ, lơ mơ" },
+        { "id": 5, "word": "Label", "type": "n/v", "ipa": "/ˈleɪbl/", "meaning": "Nhãn mác / Dán nhãn" }
+      ],
+      "dialogue": [
+        { "speaker": "Pharmacist", "text": "Hello, how can I help you today?" },
+        { "speaker": "Customer", "text": "Hi, I need to fill this prescription from my ear doctor." },
+        { "speaker": "Pharmacist", "text": "Let me see. Okay, I have these pills in stock. The dosage is one pill every eight hours." },
+        { "speaker": "Customer", "text": "Should I take it before or after meals?" },
+        { "speaker": "Pharmacist", "text": "Take it after meals. Be careful, it makes you feel drowsy, so do not drive." },
+        { "speaker": "Customer", "text": "Got it. I will read the warning label carefully." }
+      ],
+      "story": {
+        "text": "A customer hands a doctor's prescription to the pharmacist. The pharmacist finds the correct pills and explains the strict dosage. She warns that the medicine makes the patient feel drowsy and tells him to follow the label."
+      },
+      "questions": [
+        { "id": 1, "question": "What paper does the customer show to the pharmacist?", "suggested_answer": "He shows a doctor's prescription." },
+        { "id": 2, "question": "What is the specific dosage for the pills?", "suggested_answer": "The dosage is one pill every eight hours." },
+        { "id": 3, "question": "When should the customer consume the medicine?", "suggested_answer": "He should take it after meals." },
+        { "id": 4, "question": "Why shouldn't the customer drive after taking the pills?", "suggested_answer": "Because the medicine makes him feel drowsy." }
+      ]
+    },
+    {
+      "lesson_id": 58,
+      "topic": "Daily Life",
+      "title": "Locking the Front Door",
+      "vocabulary": [
+        { "id": 1, "word": "Lock", "type": "v/n", "ipa": "/lɒk/", "meaning": "Khóa lại / Ổ khóa" },
+        { "id": 2, "word": "Keyring", "type": "n", "ipa": "/ˈkiːrɪŋ/", "meaning": "Móc chìa khóa" },
+        { "id": 3, "word": "Double-check", "type": "v", "ipa": "/ˌdʌbl ˈtʃek/", "meaning": "Kiểm tra lại lần hai, soát lại" },
+        { "id": 4, "word": "Secure", "type": "adj/v", "ipa": "/sɪˈkjʊər/", "meaning": "An toàn, chắc chắn / Bảo đảm" },
+        { "id": 5, "word": "Bolt", "type": "n/v", "ipa": "/bəʊlt/", "meaning": "Chốt cửa / Chốt lại" }
+      ],
+      "dialogue": [
+        { "speaker": "A", "text": "Are we ready to leave for the cinema? The taxi is outside." },
+        { "speaker": "B", "text": "Yes, but let me check my keyring. Did you lock the back door?" },
+        { "speaker": "A", "text": "Yes, I lock it tightly and slide the safety bolt too." },
+        { "speaker": "B", "text": "Great. Let me double-check the front door to make sure the house is secure." },
+        { "speaker": "A", "text": "Good habit. It is better to be safe than sorry." }
+      ],
+      "story": {
+        "text": "Two roommates prepare to go out to the cinema. One roommate locks the back door and fastens the safety bolt. The second roommate looks at her keyring and decides to double-check the front door to ensure the whole house is secure."
+      },
+      "questions": [
+        { "id": 1, "question": "Where are the roommates going?", "suggested_answer": "They are going to the cinema." },
+        { "id": 2, "question": "What does the first roommate do to the back door?", "suggested_answer": "He locks it tightly and slides the safety bolt." },
+        { "id": 3, "question": "Why does the second roommate check the front door again?", "suggested_answer": "She wants to double-check to make sure the house is secure." },
+        { "id": 4, "question": "What object holds her keys?", "suggested_answer": "A keyring holds her keys." }
+      ]
+    },
+    {
+      "lesson_id": 59,
+      "topic": "Social",
+      "title": "Congratulating a Colleague",
+      "vocabulary": [
+        { "id": 1, "word": "Promotion", "type": "n", "ipa": "/prəˈməʊʃn/", "meaning": "Sự thăng chức, lên chức" },
+        { "id": 2, "word": "Deserve", "type": "v", "ipa": "/dɪˈzɜːv/", "meaning": "Xứng đáng" },
+        { "id": 3, "word": "Hard work", "type": "n", "ipa": "/hɑːd wɜːk/", "meaning": "Sự chăm chỉ, công sức lao động" },
+        { "id": 4, "word": "Proud", "type": "adj", "ipa": "/praʊd/", "meaning": "Tự hào, hãnh diện" },
+        { "id": 5, "word": "Role", "type": "n", "ipa": "/rəʊl/", "meaning": "Vai trò, vị trí mới" }
+      ],
+      "dialogue": [
+        { "speaker": "David", "text": "Hi Rachel! I just hear the big news from the manager. Congratulations on your promotion!" },
+        { "speaker": "Rachel", "text": "Thank you so much, David! I am still in shock, honestly." },
+        { "speaker": "David", "text": "You really deserve it. Your hard work on the global project is incredible." },
+        { "speaker": "Rachel", "text": "That is very kind of you. It is a big challenge to step into this manager role." },
+        { "speaker": "David", "text": "We are all proud of you. I know you will do great things." }
+      ],
+      "story": {
+        "text": "David congratulates his colleague Rachel on her recent big promotion. He expresses that she truly deserves the success because her hard work is incredible. Rachel feels a bit shocked but steps into her new manager role with pride."
+      },
+      "questions": [
+        { "id": 1, "question": "What good news does David discover?", "suggested_answer": "He discovers that Rachel gets a promotion." },
+        { "id": 2, "question": "Why does David believe Rachel deserves this?", "suggested_answer": "Because of her incredible hard work on the global project." },
+        { "id": 3, "question": "How does Rachel feel when she hears the news?", "suggested_answer": "She feels like she is still in shock." },
+        { "id": 4, "question": "What is Rachel's new role?", "suggested_answer": "Her new role is a manager." }
+      ]
+    },
+    {
+      "lesson_id": 60,
+      "topic": "Shopping",
+      "title": "Using a Gift Card",
+      "vocabulary": [
+        { "id": 1, "word": "Gift card", "type": "n", "ipa": "/ˈɡɪft kɑːd/", "meaning": "Thẻ quà tặng, thẻ mua sắm" },
+        { "id": 2, "word": "Balance", "type": "n", "ipa": "/ˈbæləns/", "meaning": "Số dư tài khoản, số tiền còn lại" },
+        { "id": 3, "word": "Redeem", "type": "v", "ipa": "/rɪˈdiːm/", "meaning": "Đổi mã, sử dụng (thẻ quà tặng/voucher)" },
+        { "id": 4, "word": "Exceed", "type": "v", "ipa": "/ɪkˈsiːd/", "meaning": "Vượt quá, quá số lượng" },
+        { "id": 5, "word": "Remaining", "type": "adj", "ipa": "/rɪˈmeɪnɪŋ/", "meaning": "Còn lại" }
+      ],
+      "dialogue": [
+        { "speaker": "Cashier", "text": "Your total today is thirty-five dollars. Will you pay with cash or card?" },
+        { "speaker": "Customer", "text": "I have a fifty-dollar bookstore gift card. Can I redeem it here?" },
+        { "speaker": "Cashier", "text": "Yes, absolutely. Let me scan the barcode. Okay, it works perfectly." },
+        { "speaker": "Customer", "text": "Excellent. Does my purchase exceed the total balance?" },
+        { "speaker": "Cashier", "text": "No, it doesn't. Your remaining balance is fifteen dollars, which you can use next time." },
+        { "speaker": "Customer", "text": "Awesome. Thank you for checking that for me." }
+      ],
+      "story": {
+        "text": "A customer redeems a bookstore gift card to pay for his books. The total price is thirty-five dollars, so it does not exceed the fifty-dollar card balance. The cashier scans the barcode and tells him his remaining balance is fifteen dollars."
+      },
+      "questions": [
+        { "id": 1, "question": "What is the total cost of the customer's purchase?", "suggested_answer": "The total cost is thirty-five dollars." },
+        { "id": 2, "question": "What payment item does the customer use?", "suggested_answer": "He uses a fifty-dollar bookstore gift card." },
+        { "id": 3, "question": "How does the cashier process the gift card?", "suggested_answer": "She scans the barcode on the card." },
+        { "id": 4, "question": "What is the remaining balance on the card after the purchase?", "suggested_answer": "The remaining balance is fifteen dollars." }
+      ]
+    }
+  ]
+}

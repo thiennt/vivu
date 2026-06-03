@@ -1,0 +1,289 @@
+{
+  "cycle": 1,
+  "total_lessons_in_cycle": 10,
+  "lessons": [
+    {
+      "lesson_id": 1,
+      "topic": "Personal",
+      "title": "Introducing Yourself",
+      "vocabulary": [
+        { "id": 1, "word": "Introduce", "type": "v", "ipa": "/ˌɪntrəˈdjuːs/", "meaning": "Giới thiệu" },
+        { "id": 2, "word": "Software engineer", "type": "n", "ipa": "/ˈsɒftweər ˌendʒɪˈnɪər/", "meaning": "Kỹ sư phần mềm" },
+        { "id": 3, "word": "Born and raised", "type": "phrase", "ipa": "/bɔːn ənd reɪzd/", "meaning": "Sinh ra và lớn lên" },
+        { "id": 4, "word": "In my free time", "type": "phrase", "ipa": "/ɪn maɪ friː taɪm/", "meaning": "Vào thời gian rảnh" },
+        { "id": 5, "word": "Tech", "type": "n", "ipa": "/tek/", "meaning": "Công nghệ" }
+      ],
+      "dialogue": [
+        { "speaker": "A", "text": "Hi there! Let me introduce myself. I'm Sam." },
+        { "speaker": "B", "text": "Nice to meet you, Sam! What do you do for a living?" },
+        { "speaker": "A", "text": "I work as a software engineer. I was born and raised in this city." },
+        { "speaker": "B", "text": "That's awesome! What do you like to do in your free time?" },
+        { "speaker": "A", "text": "I really love reading about new tech trends. It's my passion." }
+      ],
+      "story": {
+        "text": "So Sam wants to introduce himself to his new neighbor. He shares that he works as a software engineer and is born and raised in the city. In his free time, Sam really enjoys reading about new tech trends."
+      },
+      "questions": [
+        { "id": 1, "question": "What is the man's name?", "suggested_answer": "His name is Sam." },
+        { "id": 2, "question": "What does Sam do for a living?", "suggested_answer": "He works as a software engineer." },
+        { "id": 3, "question": "Where was Sam born and raised?", "suggested_answer": "He was born and raised in this city." },
+        { "id": 4, "question": "What does he love to do in his free time?", "suggested_answer": "He loves reading about new tech trends." }
+      ]
+    },
+    {
+      "lesson_id": 2,
+      "topic": "Shopping",
+      "title": "Buying a Jacket",
+      "vocabulary": [
+        { "id": 1, "word": "Jacket", "type": "n", "ipa": "/ˈdʒækɪt/", "meaning": "Áo khoác ngắn" },
+        { "id": 2, "word": "Look for", "type": "v", "ipa": "/lʊk fɔːr/", "meaning": "Tìm kiếm" },
+        { "id": 3, "word": "In stock", "type": "adj", "ipa": "/ɪn stɒk/", "meaning": "Còn hàng trong kho" },
+        { "id": 4, "word": "Pricey", "type": "adj", "ipa": "/ˈpraɪsi/", "meaning": "Đắt đỏ, tốn tiền" },
+        { "id": 5, "word": "Take", "type": "v", "ipa": "/teɪk/", "meaning": "Lấy, mua (món đồ)" }
+      ],
+      "dialogue": [
+        { "speaker": "Clerk", "text": "Hi there! Looking for anything special today?" },
+        { "speaker": "You", "text": "Yeah, I’m looking for a black jacket. Do you have this in a medium?" },
+        { "speaker": "Clerk", "text": "Let me check. Yes, we have one left in stock. You can try it on over there." },
+        { "speaker": "You", "text": "Oh, it fits perfectly! How much is it?" },
+        { "speaker": "Clerk", "text": "It’s fifty dollars." },
+        { "speaker": "You", "text": "Hmm, it’s a bit pricey, but I really like it. Alright, I’ll take it." }
+      ],
+      "story": {
+        "text": "Today, I walk into a clothing store to look for a new jacket. I find a black one and try it on. It fits me perfectly, but it is a bit pricey — fifty dollars! However, I really like it, so I decide to take it."
+      },
+      "questions": [
+        { "id": 1, "question": "What are you looking for in the store?", "suggested_answer": "I’m looking for a black jacket." },
+        { "id": 2, "question": "How many jackets do they have left in stock?", "suggested_answer": "They only have one left in stock." },
+        { "id": 3, "question": "Does the jacket fit you?", "suggested_answer": "Yes, it fits perfectly." },
+        { "id": 4, "question": "How much is it? Is it cheap?", "suggested_answer": "It’s fifty dollars. No, it's a bit pricey." }
+      ]
+    },
+    {
+      "lesson_id": 3,
+      "topic": "Food & Drink",
+      "title": "Ordering Coffee",
+      "vocabulary": [
+        { "id": 1, "word": "Order", "type": "v", "ipa": "/ˈɔːdər/", "meaning": "Gọi món, đặt hàng" },
+        { "id": 2, "word": "For here or to go", "type": "phrase", "ipa": "/fɔːr hɪər ɔːr tə ɡəʊ/", "meaning": "Uống tại đây hay mang đi" },
+        { "id": 3, "word": "Sweetener", "type": "n", "ipa": "/ˈswiːtnər/", "meaning": "Chất tạo ngọt" },
+        { "id": 4, "word": "Keep the change", "type": "phrase", "ipa": "/kiːp ðə tʃeɪndʒ/", "meaning": "Không cần trả lại tiền thừa" },
+        { "id": 5, "word": "Bakery", "type": "n", "ipa": "/ˈbeɪkəri/", "meaning": "Tiệm bánh ngọt" }
+      ],
+      "dialogue": [
+        { "speaker": "Barista", "text": "Hello! What can I get started for you today?" },
+        { "speaker": "You", "text": "Hi, I’d like to order an iced latte, please." },
+        { "speaker": "Barista", "text": "Sure. For here or to go?" },
+        { "speaker": "You", "text": "To go, please. And can I get some extra sweetener in it?" },
+        { "speaker": "Barista", "text": "You got it. That will be four dollars and fifty cents." },
+        { "speaker": "You", "text": "Here is five dollars. Keep the change!" }
+      ],
+      "story": {
+        "text": "This morning, I go to a local bakery to order my favorite coffee. The barista asks if it is for here or to go. I choose to go and ask for extra sweetener. It costs four dollars and fifty cents, so I give him five dollars and tell him to keep the change."
+      },
+      "questions": [
+        { "id": 1, "question": "What drink did you order?", "suggested_answer": "I ordered an iced latte." },
+        { "id": 2, "question": "Did you drink it at the shop?", "suggested_answer": "No, I ordered it to go." },
+        { "id": 3, "question": "What extra thing did you ask for?", "suggested_answer": "I asked for some extra sweetener." },
+        { "id": 4, "question": "How much change did the barista give back?", "suggested_answer": "None, because I told him to keep the change." }
+      ]
+    },
+    {
+      "lesson_id": 4,
+      "topic": "Social",
+      "title": "Making Plans",
+      "vocabulary": [
+        { "id": 1, "word": "Free", "type": "adj", "ipa": "/friː/", "meaning": "Rảnh rỗi" },
+        { "id": 2, "word": "Grab a bite", "type": "phrase", "ipa": "/ɡræb ə baɪt/", "meaning": "Đi ăn một chút gì đó nhanh gọn" },
+        { "id": 3, "word": "Sounds like a plan", "type": "phrase", "ipa": "/saʊndz laɪk ə plæn/", "meaning": "Nghe có vẻ ổn đấy, chốt thế đi" },
+        { "id": 4, "word": "Pick up", "type": "v", "ipa": "/pɪk ʌp/", "meaning": "Đón (ai đó)" },
+        { "id": 5, "word": "Around", "type": "adv", "ipa": "/əˈraʊnd/", "meaning": "Khoảng vào lúc" }
+      ],
+      "dialogue": [
+        { "speaker": "Tom", "text": "Hey Sarah, are you free this evening?" },
+        { "speaker": "Sarah", "text": "Yeah, I don't have any plans. What's up?" },
+        { "speaker": "Tom", "text": "Do you want to grab a bite to eat? I know a great pizza place." },
+        { "speaker": "Sarah", "text": "That sounds like a plan! What time?" },
+        { "speaker": "Tom", "text": "I can pick you up around 7 PM. Does that work?" },
+        { "speaker": "Sarah", "text": "Perfect. See you then!" }
+      ],
+      "story": {
+        "text": "Tom calls Sarah to see if she is free this evening. Since she has no plans, Tom invites her to grab a bite to eat at a pizza place. Sarah thinks it sounds like a plan. Tom offers to pick her up around 7 PM, and Sarah says that works perfectly."
+      },
+      "questions": [
+        { "id": 1, "question": "Is Sarah busy this evening?", "suggested_answer": "No, she is free." },
+        { "id": 2, "question": "What does Tom invite Sarah to do?", "suggested_answer": "He invites her to grab a bite to eat." },
+        { "id": 3, "question": "What kind of food place does Tom know?", "suggested_answer": "He knows a great pizza place." },
+        { "id": 4, "question": "What time does Tom offer to pick her up?", "suggested_answer": "He offers to pick her up around 7 PM." }
+      ]
+    },
+    {
+      "lesson_id": 5,
+      "topic": "Work",
+      "title": "A Busy Day at Work",
+      "vocabulary": [
+        { "id": 1, "word": "Deadline", "type": "n", "ipa": "/ˈdedlaɪn/", "meaning": "Hạn chót" },
+        { "id": 2, "word": "Project", "type": "n", "ipa": "/ˈprɒdʒekt/", "meaning": "Dự án" },
+        { "id": 3, "word": "Overtime", "type": "adv/n", "ipa": "/ˈəʊvətaɪm/", "meaning": "Tăng ca, làm thêm giờ" },
+        { "id": 4, "word": "Meeting", "type": "n", "ipa": "/ˈmiːtɪŋ/", "meaning": "Cuộc họp" },
+        { "id": 5, "word": "Finish", "type": "v", "ipa": "/ˈfɪnɪʃ/", "meaning": "Hoàn thành" }
+      ],
+      "dialogue": [
+        { "speaker": "Manager", "text": "Hi Alex, do you have a minute? We need to talk about the project." },
+        { "speaker": "Alex", "text": "Sure. Is there a problem?" },
+        { "speaker": "Manager", "text": "The deadline is tomorrow, and we still have a lot of work to do." },
+        { "speaker": "Alex", "text": "I see. I have a meeting now, but I can work overtime tonight to finish it." },
+        { "speaker": "Manager", "text": "Thank you, Alex. I really appreciate your hard work." }
+      ],
+      "story": {
+        "text": "Alex faces a tight deadline at work. His manager explains that the project is due tomorrow and requires a lot of work. Even though Alex has a meeting right now, he promises to work overtime tonight so he can finish everything."
+      },
+      "questions": [
+        { "id": 1, "question": "When is the deadline for the project?", "suggested_answer": "The deadline is tomorrow." },
+        { "id": 2, "question": "What does the manager say they need to do?", "suggested_answer": "They still have a lot of work to do." },
+        { "id": 3, "question": "Where does Alex have to go right now?", "suggested_answer": "He has to go to a meeting." },
+        { "id": 4, "question": "How does Alex plan to finish the project?", "suggested_answer": "He plans to work overtime tonight." }
+      ]
+    },
+    {
+      "lesson_id": 6,
+      "topic": "Travel",
+      "title": "Checking into a Hotel",
+      "vocabulary": [
+        { "id": 1, "word": "Reservation", "type": "n", "ipa": "/ˌrezəˈveɪʃn/", "meaning": "Sự đặt chỗ trước" },
+        { "id": 2, "word": "ID", "type": "/ˌaɪˈdiː/", "meaning": "Giấy tờ tùy thân (CCCD/Hộ chiếu)" },
+        { "id": 3, "word": "Room key", "type": "n", "ipa": "/ruːm kiː/", "meaning": "Chìa khóa phòng" },
+        { "id": 4, "word": "Elevator", "type": "n", "ipa": "/ˈelɪveɪtər/", "meaning": "Thang máy" },
+        { "id": 5, "word": "Check in", "type": "v", "ipa": "/tʃek ɪn/", "meaning": "Làm thủ tục nhận phòng" }
+      ],
+      "dialogue": [
+        { "speaker": "Receptionist", "text": "Welcome to the Grand Hotel. How can I help you today?" },
+        { "speaker": "Guest", "text": "Hi, I'd like to check in. I have a reservation under the name John Smith." },
+        { "speaker": "Receptionist", "text": "Great. Can I see your ID, please?" },
+        { "speaker": "Guest", "text": "Sure, here it is." },
+        { "speaker": "Receptionist", "text": "Thank you. Here is your room key. You are in room 405. The elevator is on the left." }
+      ],
+      "story": {
+        "text": "A guest arrives at the Grand Hotel to check in. He tells the receptionist that he has a reservation under the name John Smith. The receptionist asks to see his ID, checks the system, and hands him his room key. She adds that his room is 405 and points toward the elevator on the left."
+      },
+      "questions": [
+        { "id": 1, "question": "What is the name of the hotel?", "suggested_answer": "It is the Grand Hotel." },
+        { "id": 2, "question": "What is the guest's name?", "suggested_answer": "His name is John Smith." },
+        { "id": 3, "question": "What does the receptionist need to see?", "suggested_answer": "She needs to see his ID." },
+        { "id": 4, "question": "What is the guest's room number?", "suggested_answer": "His room number is 405." }
+      ]
+    },
+    {
+      "lesson_id": 7,
+      "topic": "Health",
+      "title": "Seeing a Doctor",
+      "vocabulary": [
+        { "id": 1, "word": "Symptom", "type": "n", "ipa": "/ˈsɪmptəm/", "meaning": "Triệu chứng" },
+        { "id": 2, "word": "Fever", "type": "n", "ipa": "/ˈfiːvər/", "meaning": "Cơn sốt" },
+        { "id": 3, "word": "Flu", "type": "n", "ipa": "/fluː/", "meaning": "Bệnh cúm" },
+        { "id": 4, "word": "Rest", "type": "v/n", "ipa": "/rest/", "meaning": "Nghỉ ngơi" },
+        { "id": 5, "word": "Prescription", "type": "n", "ipa": "/prɪˈskrɪpʃn/", "meaning": "Đơn thuốc" }
+      ],
+      "dialogue": [
+        { "speaker": "Doctor", "text": "Good morning. What symptoms do you have today?" },
+        { "speaker": "Patient", "text": "I have a terrible headache and a bad cough." },
+        { "speaker": "Doctor", "text": "Let me check your temperature. Yes, you have a slight fever." },
+        { "speaker": "Patient", "text": "Is it serious, doctor?" },
+        { "speaker": "Doctor", "text": "No, it just looks like the common flu. Get plenty of rest and take this prescription to the pharmacy." }
+      ],
+      "story": {
+        "text": "A patient visits the clinic because he feels sick. He tells the doctor that he has a terrible headache and a bad cough. After checking, the doctor finds a slight fever and diagnoses it as the common flu. He advises the patient to get plenty of rest and gives him a prescription."
+      },
+      "questions": [
+        { "id": 1, "question": "What symptoms does the patient have?", "suggested_answer": "He has a terrible headache and a bad cough." },
+        { "id": 2, "question": "Does the patient have a fever?", "suggested_answer": "Yes, he has a slight fever." },
+        { "id": 3, "question": "What illness does the doctor think it is?", "suggested_answer": "The doctor thinks it is the common flu." },
+        { "id": 4, "question": "What two things should the patient do?", "suggested_answer": "He should get plenty of rest and take the prescription to the pharmacy." }
+      ]
+    },
+    {
+      "lesson_id": 8,
+      "topic": "Daily Life",
+      "title": "Asking for Directions",
+      "vocabulary": [
+        { "id": 1, "word": "Lost", "type": "adj", "ipa": "/lɒst/", "meaning": "Bị lạc đường" },
+        { "id": 2, "word": "Block", "type": "n", "ipa": "/blɒk/", "meaning": "Khối nhà, dãy phố" },
+        { "id": 3, "word": "Turn right", "type": "phrase", "ipa": "/tɜːn raɪt/", "meaning": "Rẽ phải" },
+        { "id": 4, "word": "Miss", "type": "v", "ipa": "/mɪs/", "meaning": "Bỏ lỡ, đi qua mất" },
+        { "id": 5, "word": "Straight", "type": "adv", "ipa": "/streɪt/", "meaning": "Thẳng (hướng)" }
+      ],
+      "dialogue": [
+        { "speaker": "You", "text": "Excuse me, I'm a bit lost. Is there a supermarket near here?" },
+        { "speaker": "Stranger", "text": "Yes, there is one just two blocks away." },
+        { "speaker": "You", "text": "How do I get there?" },
+        { "speaker": "Stranger", "text": "Go straight down this street, then turn right at the corner. You can't miss it." },
+        { "speaker": "You", "text": "Thank you so much for your help!" }
+      ],
+      "story": {
+        "text": "A man gets lost and asks a stranger if there is a supermarket nearby. The stranger replies that one sits just two blocks away. She instructs him to go straight down the street and turn right at the corner, promising that he cannot miss it."
+      },
+      "questions": [
+        { "id": 1, "question": "What is the speaker looking for?", "suggested_answer": "The speaker is looking for a supermarket." },
+        { "id": 2, "question": "How far away is the supermarket?", "suggested_answer": "It is just two blocks away." },
+        { "id": 3, "question": "Which way should the speaker turn at the corner?", "suggested_answer": "The speaker should turn right." },
+        { "id": 4, "question": "Can the speaker easily find it?", "suggested_answer": "Yes, the stranger says 'you can't miss it'." }
+      ]
+    },
+    {
+      "lesson_id": 9,
+      "topic": "Social",
+      "title": "Talking About Hobbies",
+      "vocabulary": [
+        { "id": 1, "word": "Hobby", "type": "n", "ipa": "/ˈhɒbi/", "meaning": "Sở thích" },
+        { "id": 2, "word": "Gym", "type": "n", "ipa": "/dʒɪm/", "meaning": "Phòng tập thể hình" },
+        { "id": 3, "word": "Stay in shape", "type": "phrase", "ipa": "/steɪ ɪn ʃeɪp/", "meaning": "Giữ dáng, giữ cơ thể khỏe mạnh" },
+        { "id": 4, "word": "Guitar", "type": "n", "ipa": "/ɡɪˈtɑːr/", "meaning": "Đàn ghi-ta" },
+        { "id": 5, "word": "Week", "type": "n", "ipa": "/wiːk/", "meaning": "Tuần" }
+      ],
+      "dialogue": [
+        { "speaker": "Mary", "text": "What do you like to do for fun, David?" },
+        { "speaker": "David", "text": "I really like going to the gym. It helps me stay in shape." },
+        { "speaker": "Mary", "text": "That's great! How often do you go?" },
+        { "speaker": "David", "text": "I go three times a week. I also practice playing the guitar when I want to relax." },
+        { "speaker": "Mary", "text": "Wow, you have some cool hobbies!" }
+      ],
+      "story": {
+        "text": "Mary asks David about his favorite hobby. David explains that he likes going to the gym because it helps him stay in shape. He hits the gym three times a week. When he wants to relax, David also practices playing his guitar."
+      },
+      "questions": [
+        { "id": 1, "question": "Why does David like going to the gym?", "suggested_answer": "Because it helps him stay in shape." },
+        { "id": 2, "question": "How many times a week does he go to the gym?", "suggested_answer": "He goes three times a week." },
+        { "id": 3, "question": "What musical instrument does David play?", "suggested_answer": "He plays the guitar." },
+        { "id": 4, "question": "When does David practice playing the guitar?", "suggested_answer": "He practices it when he wants to relax." }
+      ]
+    },
+    {
+      "lesson_id": 10,
+      "topic": "Food & Drink",
+      "title": "Paying the Bill",
+      "vocabulary": [
+        { "id": 1, "word": "Bill", "type": "n", "ipa": "/bɪl/", "meaning": "Hóa đơn tính tiền" },
+        { "id": 2, "word": "Credit card", "type": "n", "ipa": "/ˈkredɪt kɑːd/", "meaning": "Thẻ tín dụng" },
+        { "id": 3, "word": "Cash", "type": "n", "ipa": "/kæʃ/", "meaning": "Tiền mặt" },
+        { "id": 4, "word": "Accept", "type": "v", "ipa": "/əkˈsept/", "meaning": "Chấp nhận" },
+        { "id": 5, "word": "Split", "type": "v", "ipa": "/splɪt/", "meaning": "Chia đôi, chia đều" }
+      ],
+      "dialogue": [
+        { "speaker": "Customer", "text": "Waiter, can we get the bill, please?" },
+        { "speaker": "Waiter", "text": "Certainly. Here you go. It comes to forty dollars." },
+        { "speaker": "Customer", "text": "Do you accept credit cards, or should we pay with cash?" },
+        { "speaker": "Waiter", "text": "We accept both cards and cash, sir." },
+        { "speaker": "Customer", "text": "Great. Let's split the bill, so we will pay twenty dollars each." }
+      ],
+      "story": {
+        "text": "After finishing their meal, the customers ask the waiter for the bill. The waiter brings it and tells them it totals forty dollars. They ask if the restaurant accepts credit cards or cash, and the waiter confirms they take both. In the end, the customers decide to split the bill and pay twenty dollars each."
+      },
+      "questions": [
+        { "id": 1, "question": "Who do the customers ask for the bill?", "suggested_answer": "They ask the waiter." },
+        { "id": 2, "question": "How much is the total bill?", "suggested_answer": "It is forty dollars." },
+        { "id": 3, "question": "Does the restaurant accept credit cards?", "suggested_answer": "Yes, they accept both credit cards and cash." },
+        { "id": 4, "question": "How much does each customer pay?", "suggested_answer": "They split the bill, so they pay twenty dollars each." }
+      ]
+    }
+  ]
+}

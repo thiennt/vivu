@@ -1,0 +1,286 @@
+{
+  "cycle": 2,
+  "total_lessons_in_cycle": 10,
+  "lessons": [
+    {
+      "lesson_id": 11,
+      "topic": "Daily Life",
+      "title": "Morning Routine",
+      "vocabulary": [
+        { "id": 1, "word": "Wake up", "type": "v", "ipa": "/weɪk ʌp/", "meaning": "Thức dậy" },
+        { "id": 2, "word": "Alarm clock", "type": "n", "ipa": "/əˈlɑːm klɒk/", "meaning": "Đồng hồ báo thức" },
+        { "id": 3, "word": "Snooze", "type": "v/n", "ipa": "/snuːz/", "meaning": "Nút hoãn báo thức / Giấc ngủ ngắn" },
+        { "id": 4, "word": "Skip", "type": "v", "ipa": "/skɪp/", "meaning": "Bỏ qua, bỏ (bữa ăn/bài học)" },
+        { "id": 5, "word": "Rush", "type": "v/n", "ipa": "/rʌʃ/", "meaning": "Vội vã, gấp rút" }
+      ],
+      "dialogue": [
+        { "speaker": "A", "text": "You look so tired this morning. Did you sleep well?" },
+        { "speaker": "B", "text": "Not really. My alarm clock goes off at 6 AM, but I always hit snooze." },
+        { "speaker": "A", "text": "Haha, I do that too! Do you have time for breakfast?" },
+        { "speaker": "B", "text": "No, I usually skip breakfast and rush to the office." },
+        { "speaker": "A", "text": "That's not good for your health. You should change that habit." }
+      ],
+      "story": {
+        "text": "Every morning, Ben struggles to wake up early. When his alarm clock goes off at 6 AM, he always hits the snooze button. Because of this, he usually skips breakfast and rushes straight to the office, which makes him look very tired."
+      },
+      "questions": [
+        { "id": 1, "question": "What time does the alarm clock go off?", "suggested_answer": "It goes off at 6 AM." },
+        { "id": 2, "question": "What does Ben do when the alarm rings?", "suggested_answer": "He always hits the snooze button." },
+        { "id": 3, "question": "Does Ben eat breakfast in the morning?", "suggested_answer": "No, he usually skips breakfast." },
+        { "id": 4, "question": "Why does Ben rush to the office?", "suggested_answer": "Because he wakes up late after hitting snooze." }
+      ]
+    },
+    {
+      "lesson_id": 12,
+      "topic": "Social",
+      "title": "Inviting a Friend to a Party",
+      "vocabulary": [
+        { "id": 1, "word": "Housewarming", "type": "n", "ipa": "/ˈhaʊswɔːmɪŋ/", "meaning": "Tiệc tân gia" },
+        { "id": 2, "word": "Celebrate", "type": "v", "ipa": "/ˈselɪbreɪt/", "meaning": "Ăn mừng, kỷ niệm" },
+        { "id": 3, "word": "Make it", "type": "phrase", "ipa": "/meɪk ɪt/", "meaning": "Đến được, tham dự được" },
+        { "id": 4, "word": "Bring", "type": "v", "ipa": "/brɪŋ/", "meaning": "Mang theo (cái gì/ai)" },
+        { "id": 5, "word": "Host", "type": "n/v", "ipa": "/həʊst/", "meaning": "Chủ nhà / Tổ chức tiệc" }
+      ],
+      "dialogue": [
+        { "speaker": "Lisa", "text": "Hey Mark, I'm hosting a housewarming party this Saturday." },
+        { "speaker": "Mark", "text": "Oh, dynamic! Are you celebrating your new apartment?" },
+        { "speaker": "Lisa", "text": "Yes! Can you make it? It starts around 6 PM." },
+        { "speaker": "Mark", "text": "I'd love to come! Should I bring anything?" },
+        { "speaker": "Lisa", "text": "Just bring yourself and some good mood!" }
+      ],
+      "story": {
+        "text": "Lisa hosts a housewarming party this Saturday to celebrate her new apartment. She invites her friend Mark to join. Mark says he loves to come and asks if he should bring anything. Lisa smiles and tells him to just bring himself."
+      },
+      "questions": [
+        { "id": 1, "question": "What kind of party is Lisa hosting?", "suggested_answer": "She is hosting a housewarming party." },
+        { "id": 2, "question": "When does the party take place?", "suggested_answer": "It takes place this Saturday around 6 PM." },
+        { "id": 3, "question": "What is Lisa celebrating?", "suggested_answer": "She is celebrating her new apartment." },
+        { "id": 4, "question": "What does Lisa ask Mark to bring?", "suggested_answer": "She tells him to just bring himself." }
+      ]
+    },
+    {
+      "lesson_id": 13,
+      "topic": "Shopping",
+      "title": "Asking for a Refund",
+      "vocabulary": [
+        { "id": 1, "word": "Refund", "type": "n/v", "ipa": "/ˈriːfʌnd/", "meaning": "Sự hoàn tiền / Hoàn lại tiền" },
+        { "id": 2, "word": "Receipt", "type": "n", "ipa": "/rɪˈsiːt/", "meaning": "Hóa đơn mua hàng, biên lai" },
+        { "id": 3, "word": "Damaged", "type": "adj", "ipa": "/ˈdæmɪdʒd/", "meaning": "Bị hư hỏng" },
+        { "id": 4, "word": "Policy", "type": "n", "ipa": "/ˈpɒləsi/", "meaning": "Chính sách" },
+        { "id": 5, "word": "Manager", "type": "n", "ipa": "/ˈmænɪdʒər/", "meaning": "Người quản lý" }
+      ],
+      "dialogue": [
+        { "speaker": "Customer", "text": "Excuse me, I bought this blender yesterday, but it is damaged." },
+        { "speaker": "Clerk", "text": "I am sorry to hear that. Do you have the receipt with you?" },
+        { "speaker": "Customer", "text": "Yes, here it is. I want to get a full refund, please." },
+        { "speaker": "Clerk", "text": "Our store policy allows refunds within 7 days, so that's no problem." },
+        { "speaker": "Customer", "text": "Thank you, I appreciate your quick help." }
+      ],
+      "story": {
+        "text": "A customer goes back to the shop because his new blender is damaged. He shows the receipt to the clerk and requests a full refund. The clerk explains that the store policy allows returns within 7 days, so he happily processes the request."
+      },
+      "questions": [
+        { "id": 1, "question": "What item did the customer buy yesterday?", "suggested_answer": "He bought a blender." },
+        { "id": 2, "question": "What is wrong with the blender?", "suggested_answer": "It is damaged." },
+        { "id": 3, "question": "Does the customer have the receipt?", "suggested_answer": "Yes, he has it with him." },
+        { "id": 4, "question": "What is the store's refund policy?", "suggested_answer": "It allows refunds within 7 days." }
+      ]
+    },
+    {
+      "lesson_id": 14,
+      "topic": "Food & Drink",
+      "title": "Cooking Dinner Together",
+      "vocabulary": [
+        { "id": 1, "word": "Ingredient", "type": "n", "ipa": "/ɪnˈɡriːdiənt/", "meaning": "Nguyên liệu nấu ăn" },
+        { "id": 2, "word": "Chop", "type": "v", "ipa": "/tʃɒp/", "meaning": "Băm, chặt, thái nhỏ" },
+        { "id": 3, "word": "Stir", "type": "v", "ipa": "/stɜːr/", "meaning": "Khuấy, đảo (thức ăn)" },
+        { "id": 4, "word": "Recipe", "type": "n", "ipa": "/ˈresəpi/", "meaning": "Công thức nấu ăn" },
+        { "id": 5, "word": "Smell", "type": "v/n", "ipa": "/smel/", "meaning": "Có mùi / Ngửi / Mùi hương" }
+      ],
+      "dialogue": [
+        { "speaker": "Husband", "text": "Honey, what are we making for dinner tonight?" },
+        { "speaker": "Wife", "text": "Let's try a new pasta recipe. Do we have all the ingredients?" },
+        { "speaker": "Husband", "text": "Yes, we have tomatoes, garlic, and beef. How can I help?" },
+        { "speaker": "Wife", "text": "Can you chop the vegetables while I stir the sauce?" },
+        { "speaker": "Husband", "text": "Sure! Wow, the sauce smells amazing already." }
+      ],
+      "story": {
+        "text": "A couple decides to try a new pasta recipe for dinner. They check and see that they have all the necessary ingredients like tomatoes and garlic. The husband chops the vegetables while the wife stirs the sauce, which smells amazing already."
+      },
+      "questions": [
+        { "id": 1, "question": "What dish are they making for dinner?", "suggested_answer": "They are making a new pasta recipe." },
+        { "id": 2, "question": "What ingredients do they have?", "suggested_answer": "They have tomatoes, garlic, and beef." },
+        { "id": 3, "question": "What job does the wife give to her husband?", "suggested_answer": "She asks him to chop the vegetables." },
+        { "id": 4, "question": "What is the wife doing while the husband chops vegetables?", "suggested_answer": "She is stirring the sauce." }
+      ]
+    },
+    {
+      "lesson_id": 15,
+      "topic": "Work",
+      "title": "An Interview",
+      "vocabulary": [
+        { "id": 1, "word": "Interview", "type": "n/v", "ipa": "/ˈɪntəvjuː/", "meaning": "Buổi phỏng vấn / Phỏng vấn" },
+        { "id": 2, "word": "Strength", "type": "n", "ipa": "/streŋθ/", "meaning": "Điểm mạnh" },
+        { "id": 3, "word": "Teamplayer", "type": "n", "ipa": "/ˈtiːmpleɪər/", "meaning": "Người làm việc nhóm tốt" },
+        { "id": 4, "word": "Experience", "type": "n/v", "ipa": "/ɪkˈspɪəriəns/", "meaning": "Kinh nghiệm / Trải nghiệm" },
+        { "id": 5, "word": "Position", "type": "n", "ipa": "/pəˈzɪʃn/", "meaning": "Vị trí công việc" }
+      ],
+      "dialogue": [
+        { "speaker": "Interviewer", "text": "Welcome, please take a seat. Why do you apply for this position?" },
+        { "speaker": "Applicant", "text": "I have three years of experience in marketing, and I love your company culture." },
+        { "speaker": "Interviewer", "text": "Great. What do you consider your biggest strength?" },
+        { "speaker": "Applicant", "text": "I am a strong teamplayer and I can work well under pressure." },
+        { "speaker": "Interviewer", "text": "Impressive. We will let you know our decision by Friday." }
+      ],
+      "story": {
+        "text": "An applicant goes to a marketing company for an interview. He applies for the position because he has three years of experience and loves the company culture. When asked about his strength, he claims that he is a teamplayer who works well under pressure."
+      },
+      "questions": [
+        { "id": 1, "question": "What position is the applicant interviewing for?", "suggested_answer": "He is interviewing for a marketing position." },
+        { "id": 2, "question": "How many years of experience does he have?", "suggested_answer": "He has three years of experience." },
+        { "id": 3, "question": "What is his biggest strength?", "suggested_answer": "He is a strong teamplayer and works well under pressure." },
+        { "id": 4, "question": "When will the company inform him of the decision?", "suggested_answer": "They will let him know by Friday." }
+      ]
+    },
+    {
+      "lesson_id": 16,
+      "topic": "Travel",
+      "title": "At the Airport Terminal",
+      "vocabulary": [
+        { "id": 1, "word": "Boarding pass", "type": "n", "ipa": "/ˈbɔːdɪŋ pɑːs/", "meaning": "Thẻ lên máy bay" },
+        { "id": 2, "word": "Luggage", "type": "n", "ipa": "/ˈlʌɡɪdʒ/", "meaning": "Hành lý" },
+        { "id": 3, "word": "Gate", "type": "n", "ipa": "/ɡeɪt/", "meaning": "Cổng lên máy bay" },
+        { "id": 4, "word": "Delayed", "type": "adj", "ipa": "/dɪˈleɪd/", "meaning": "Bị hoãn chuyến, trễ giờ" },
+        { "id": 5, "word": "Scale", "type": "n", "ipa": "/skeɪl/", "meaning": "Cái cân" }
+      ],
+      "dialogue": [
+        { "speaker": "Agent", "text": "Good morning, passport and ticket, please." },
+        { "speaker": "Traveler", "text": "Here you go. I also need to check this luggage." },
+        { "speaker": "Agent", "text": "Please place it on the scale. Good, it's not overweight. Here is your boarding pass." },
+        { "speaker": "Traveler", "text": "Thank you. What gate is it?" },
+        { "speaker": "Agent", "text": "Gate 12. But please note that the flight is delayed by thirty minutes." }
+      ],
+      "story": {
+        "text": "A traveler checks in his luggage at the airport counter. The agent weighs the bag on the scale and confirms it is fine. She hands him his boarding pass and points him to Gate 12, but warns him that the flight is delayed by thirty minutes."
+      },
+      "questions": [
+        { "id": 1, "question": "What does the traveler need to check in?", "suggested_answer": "He needs to check in his luggage." },
+        { "id": 2, "question": "Is the luggage overweight?", "suggested_answer": "No, it is not overweight." },
+        { "id": 3, "question": "What gate does the traveler need to go to?", "suggested_answer": "He needs to go to Gate 12." },
+        { "id": 4, "question": "Is the flight on time?", "suggested_answer": "No, it is delayed by thirty minutes." }
+      ]
+    },
+    {
+      "lesson_id": 17,
+      "topic": "Health",
+      "title": "Buying Medicine",
+      "vocabulary": [
+        { "id": 1, "word": "Pharmacist", "type": "n", "ipa": "/ˈfɑːməsɪst/", "meaning": "Dược sĩ" },
+        { "id": 2, "word": "Painkiller", "type": "n", "ipa": "/ˈpeɪnkɪlər/", "meaning": "Thuốc giảm đau" },
+        { "id": 3, "word": "Drowsy", "type": "adj", "ipa": "/ˈdraʊzi/", "meaning": "Buồn ngủ, lơ mơ" },
+        { "id": 4, "word": "Dosage", "type": "n", "ipa": "/ˈdəʊsɪdʒ/", "meaning": "Liều lượng sử dụng" },
+        { "id": 5, "word": "Meal", "type": "n", "ipa": "/miːl/", "meaning": "Bữa ăn" }
+      ],
+      "dialogue": [
+        { "speaker": "Pharmacist", "text": "Hello, how can I help you feel better today?" },
+        { "speaker": "Customer", "text": "Hi, I need some strong painkillers for my backache." },
+        { "speaker": "Pharmacist", "text": "Take one pill after each meal. Also, be careful because it makes you drowsy." },
+        { "speaker": "Customer", "text": "Oh, thanks for the warning. Can I drive after taking it?" },
+        { "speaker": "Pharmacist", "text": "No, you shouldn't drive. It's safer to rest at home." }
+      ],
+      "story": {
+        "text": "A customer goes to the pharmacy to get some painkillers for his backache. The pharmacist explains the dosage: one pill after each meal. She also warns him that the medicine makes him drowsy, so he must not drive a car after taking it."
+      },
+      "questions": [
+        { "id": 1, "question": "What kind of medicine does the customer need?", "suggested_answer": "He needs some strong painkillers." },
+        { "id": 2, "question": "What is the correct dosage?", "suggested_answer": "One pill after each meal." },
+        { "id": 3, "question": "What is the side effect of the medicine?", "suggested_answer": "It makes the customer feel drowsy." },
+        { "id": 4, "question": "Can the customer drive after taking the pill?", "suggested_answer": "No, he shouldn't drive." }
+      ]
+    },
+    {
+      "lesson_id": 18,
+      "topic": "Daily Life",
+      "title": "Doing Laundry",
+      "vocabulary": [
+        { "id": 1, "word": "Laundry", "type": "n", "ipa": "/ˈlɔːndri/", "meaning": "Quần áo giặt giũ" },
+        { "id": 2, "word": "Detergent", "type": "n", "ipa": "/dɪˈtɜːdʒənt/", "meaning": "Bột giặt, nước giặt" },
+        { "id": 3, "word": "Separate", "type": "v/adj", "ipa": "/ˈsepəreɪt/", "meaning": "Phân loại, tách rời" },
+        { "id": 4, "word": "Washing machine", "type": "n", "ipa": "/ˈwɒʃɪŋ məˈʃiːn/", "meaning": "Máy giặt" },
+        { "id": 5, "word": "Empty", "type": "adj/v", "ipa": "/ˈempti/", "meaning": "Trống rỗng / Làm rỗng" }
+      ],
+      "dialogue": [
+        { "speaker": "Sister", "text": "Hey, are you doing your laundry now? Can you wash my shirt too?" },
+        { "speaker": "Brother", "text": "Is it white? I always separate white clothes from colored ones." },
+        { "speaker": "Sister", "text": "No, it's bright red. Here is the detergent." },
+        { "speaker": "Brother", "text": "Okay, just put it into the washing machine. Wait, please empty the pockets first!" },
+        { "speaker": "Sister", "text": "Oops, thank you! I almost washed my keys." }
+      ],
+      "story": {
+        "text": "A brother prepares to do his laundry. His sister asks him to wash her red shirt too. Because he always separates white clothes from colored ones, he agrees but reminds her to empty the pockets first so she doesn't accidentally wash her keys."
+      },
+      "questions": [
+        { "id": 1, "question": "What chore is the brother doing?", "suggested_answer": "He is doing his laundry." },
+        { "id": 2, "question": "What color is the sister's shirt?", "suggested_answer": "It is bright red." },
+        { "id": 3, "question": "Why does the brother ask about the color?", "suggested_answer": "Because he always separates white clothes from colored ones." },
+        { "id": 4, "question": "What does the sister find inside her pockets?", "suggested_answer": "She finds her keys." }
+      ]
+    },
+    {
+      "lesson_id": 19,
+      "topic": "Social",
+      "title": "Weather and Small Talk",
+      "vocabulary": [
+        { "id": 1, "word": "Freezing", "type": "adj", "ipa": "/ˈfriːzɪŋ/", "meaning": "Lạnh giá, rét buốt" },
+        { "id": 2, "word": "Forecast", "type": "n/v", "ipa": "/ˈfɔːkɑːst/", "meaning": "Sự dự báo / Dự báo thời tiết" },
+        { "id": 3, "word": "Clear up", "type": "phrase", "ipa": "/klɪər ʌp/", "meaning": "(Trời) hửng nắng, quang đãng hơn" },
+        { "id": 4, "word": "Warm up", "type": "phrase", "ipa": "/wɔːm ʌp/", "meaning": "Ấm dần lên" },
+        { "id": 5, "word": "Degree", "type": "n", "ipa": "/dɪˈɡriː/", "meaning": "Độ (đơn vị nhiệt độ)" }
+      ],
+      "dialogue": [
+        { "speaker": "A", "text": "Brrr! It's absolutely freezing outside today." },
+        { "speaker": "B", "text": "Yeah, I think it's only five degrees. Did you check the weather forecast?" },
+        { "speaker": "A", "text": "Yes, it says the sky will clear up by afternoon." },
+        { "speaker": "B", "text": "That's good news. I hope it warms up a bit so we can go for a walk." },
+        { "speaker": "A", "text": "Me too, I hate staying indoors all day." }
+      ],
+      "story": {
+        "text": "Two friends chat about the freezing weather outside. The temperature sits at only five degrees, but the weather forecast says that the sky will clear up by afternoon. They hope the air warms up a bit because they both hate staying indoors all day."
+      },
+      "questions": [
+        { "id": 1, "question": "What is the weather like outside?", "suggested_answer": "It is absolutely freezing." },
+        { "id": 2, "question": "What is the current temperature?", "suggested_answer": "It is only five degrees." },
+        { "id": 3, "question": "What does the weather forecast say about the afternoon?", "suggested_answer": "It says the sky will clear up." },
+        { "id": 4, "question": "Why do they want the weather to warm up?", "suggested_answer": "Because they want to go for a walk and hate staying indoors." }
+      ]
+    },
+    {
+      "lesson_id": 20,
+      "topic": "Food & Drink",
+      "title": "Complaining About Food",
+      "vocabulary": [
+        { "id": 1, "word": "Undercooked", "type": "adj", "ipa": "/ˌʌndəˈkʊkt/", "meaning": "Chưa chín, còn tái sống" },
+        { "id": 2, "word": "Apologize", "type": "v", "ipa": "/əˈpɒlədʒaɪz/", "meaning": "Xin lỗi" },
+        { "id": 3, "word": "Replace", "type": "v", "ipa": "/rɪˈpleɪs/", "meaning": "Thay thế (món mới)" },
+        { "id": 4, "word": "On the house", "type": "phrase", "ipa": "/ɒn ðə haʊs/", "meaning": "Được miễn phí (do nhà hàng đãi)" },
+        { "id": 5, "word": "Steak", "type": "n", "ipa": "/steɪk/", "meaning": "Bít tết" }
+      ],
+      "dialogue": [
+        { "speaker": "Guest", "text": "Excuse me, waiter. I ordered this steak medium, but it's totally undercooked." },
+        { "speaker": "Waiter", "text": "Oh, I deeply apologize for that, sir. Let me take it back to the kitchen." },
+        { "speaker": "Guest", "text": "Thank you. My wife's food is great, but I can't eat this." },
+        { "speaker": "Waiter", "text": "We will replace it with a fresh one right away. And your drinks are on the house tonight." },
+        { "speaker": "Guest", "text": "Alright, that is very nice of you." }
+      ],
+      "story": {
+        "text": "A restaurant guest complains that his steak is completely undercooked. The waiter apologizes sincerely and takes it back to the kitchen immediately. He promises to replace it with a fresh dish and offers the table free drinks on the house."
+      },
+      "questions": [
+        { "id": 1, "question": "What is wrong with the guest's steak?", "suggested_answer": "It is totally undercooked." },
+        { "id": 2, "question": "How did the guest want his steak cooked?", "suggested_answer": "He ordered it medium." },
+        { "id": 3, "question": "How does the waiter fix the problem?", "suggested_answer": "He takes it back to replace it with a fresh one right away." },
+        { "id": 4, "question": "What does the restaurant offer for free?", "suggested_answer": "Their drinks are on the house tonight." }
+      ]
+    }
+  ]
+}

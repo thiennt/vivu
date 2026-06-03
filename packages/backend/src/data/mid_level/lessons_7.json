@@ -1,0 +1,289 @@
+{
+  "cycle": 7,
+  "total_lessons_in_cycle": 10,
+  "lessons": [
+    {
+      "lesson_id": 61,
+      "topic": "Food & Drink",
+      "title": "Ordering Coffee to Go",
+      "vocabulary": [
+        { "id": 1, "word": "To go", "type": "phrase", "ipa": "/tuː ɡəʊ/", "meaning": "Mang đi, mang về (đồ ăn/thức uống)" },
+        { "id": 2, "word": "Decaf", "type": "n/adj", "ipa": "/ˈdiːkæf/", "meaning": "Cà phê đã loại bỏ chất caffeine" },
+        { "id": 3, "word": "Sleeve", "type": "n", "ipa": "/sliːv/", "meaning": "Miếng bọc giấy quanh ly để chống nóng" },
+        { "id": 4, "word": "Spill", "type": "v", "ipa": "/spɪl/", "meaning": "Tràn ra, đổ ra ngoài" },
+        { "id": 5, "word": "Pastry", "type": "n", "ipa": "/ˈpeɪstri/", "meaning": "Bánh ngọt, bánh nướng" }
+      ],
+      "dialogue": [
+        { "speaker": "Barista", "text": "Good morning! What can I get started for you today?" },
+        { "speaker": "Customer", "text": "Hi, I need a large iced latte to go, please." },
+        { "speaker": "Barista", "text": "Sure, do you want regular espresso or decaf?" },
+        { "speaker": "Customer", "text": "Regular, please. And can I also get a cardboard sleeve for the hot tea?" },
+        { "speaker": "Barista", "text": "Of course, here is the sleeve so it doesn't burn your hand or spill." },
+        { "speaker": "Customer", "text": "Perfect, thank you. That is all for now." }
+      ],
+      "story": {
+        "text": "A busy customer orders a large iced latte to go at the coffee shop. She prefers regular espresso over decaf. The barista hands her the drink along with a cardboard sleeve to prevent a hot spill on her way to work."
+      },
+      "questions": [
+        { "id": 1, "question": "Does the customer want to drink her coffee at the shop?", "suggested_answer": "No, she orders it to go." },
+        { "id": 2, "question": "What type of espresso does she choose?", "suggested_answer": "She chooses regular espresso." },
+        { "id": 3, "question": "Why does she request a cardboard sleeve?", "suggested_answer": "She requests it so the drink does not burn her hand or spill." },
+        { "id": 4, "question": "What type of drink is the latte?", "suggested_answer": "It is a large iced latte." }
+      ]
+    },
+    {
+      "lesson_id": 62,
+      "topic": "Work",
+      "title": "Booking a Meeting Room",
+      "vocabulary": [
+        { "id": 1, "word": "Availability", "type": "n", "ipa": "/əˌveɪləˈbɪləti/", "meaning": "Tình trạng sẵn có, còn trống" },
+        { "id": 2, "word": "Reserve", "type": "v", "ipa": "/rɪˈzɜːv/", "meaning": "Đặt trước, giữ chỗ" },
+        { "id": 3, "word": "Projector", "type": "n", "ipa": "/prəˈdʒektər/", "meaning": "Máy chiếu" },
+        { "id": 4, "word": "Conflict", "type": "n/v", "ipa": "/ˈkɒnflɪkt/", "meaning": "Sự trùng lịch, xung đột lịch trình" },
+        { "id": 5, "word": "Slot", "type": "n", "ipa": "/slɒt/", "meaning": "Khoảng thời gian, vị trí trống" }
+      ],
+      "dialogue": [
+        { "speaker": "Staff A", "text": "Hi, I need to check the availability of Meeting Room B for 2 PM today." },
+        { "speaker": "Staff B", "text": "Let me look at the calendar. Oh, there is a schedule conflict with the sales team." },
+        { "speaker": "Staff A", "text": "Is Room C free at that same time slot?" },
+        { "speaker": "Staff B", "text": "Yes, Room C is completely open. Do you want me to reserve it for you?" },
+        { "speaker": "Staff A", "text": "Yes, please. We need a working projector for our presentation." },
+        { "speaker": "Staff B", "text": "Done! The room has a high-quality projector ready." }
+      ],
+      "story": {
+        "text": "An employee checks the availability of a meeting room for an afternoon presentation. Because Room B has a calendar conflict, he decides to reserve Room C instead. He chooses that specific slot because the team needs a working projector."
+      },
+      "questions": [
+        { "id": 1, "question": "What time slot does the employee want to book?", "suggested_answer": "He wants to book a room for 2 PM today." },
+        { "id": 2, "question": "Why can't he use Meeting Room B?", "suggested_answer": "Because there is a schedule conflict with the sales team." },
+        { "id": 3, "question": "Which room does he successfully reserve?", "suggested_answer": "He successfully reserves Room C." },
+        { "id": 4, "question": "What equipment does the team require inside the room?", "suggested_answer": "They require a working projector." }
+      ]
+    },
+    {
+      "lesson_id": 63,
+      "topic": "Travel",
+      "title": "Checking into a Hotel",
+      "vocabulary": [
+        { "id": 1, "word": "Reservation", "type": "n", "ipa": "/ˌrezəˈveɪʃn/", "meaning": "Sự đặt phòng trước" },
+        { "id": 2, "word": "Keycard", "type": "n", "ipa": "/ˈkiːkɑːd/", "meaning": "Thẻ từ mở phòng, khóa thẻ" },
+        { "id": 3, "word": "ID", "type": "n", "ipa": "/ˌaɪˈdiː/", "meaning": "Giấy tờ tùy thân (CCCD, hộ chiếu)" },
+        { "id": 4, "word": "Complimentary", "type": "adj", "ipa": "/ˌkɒmplɪˈmentri/", "meaning": "Miễn phí (quà tặng kèm)" },
+        { "id": 5, "word": "Lobby", "type": "n", "ipa": "/ˈlɒbi/", "meaning": "Sảnh chờ" }
+      ],
+      "dialogue": [
+        { "speaker": "Receptionist", "text": "Welcome to the Oasis Resort. May I have your name and ID, please?" },
+        { "speaker": "Guest", "text": "Hi, my name is John Smith. I have a reservation for a deluxe room." },
+        { "speaker": "Receptionist", "text": "Yes, Mr. Smith. Everything is set. Here is your electronic keycard for Room 405." },
+        { "speaker": "Guest", "text": "Thank you. Is breakfast included in my stay?" },
+        { "speaker": "Receptionist", "text": "Yes, we serve a complimentary breakfast buffet every morning near the lobby." }
+      ],
+      "story": {
+        "text": "John Smith arrives at the Oasis Resort and presents his ID at the front desk. The receptionist verifies his deluxe room reservation and hands him an electronic keycard. She also points out the lobby area where guests enjoy a complimentary breakfast."
+      },
+      "questions": [
+        { "id": 1, "question": "What is the guest's name?", "suggested_answer": "His name is John Smith." },
+        { "id": 2, "question": "What must the guest provide to verify his identity?", "suggested_answer": "He must provide his ID." },
+        { "id": 3, "question": "What room number does the keycard open?", "suggested_answer": "It opens Room 405." },
+        { "id": 4, "question": "Where does the hotel serve the complimentary breakfast?", "suggested_answer": "They serve it near the lobby." }
+      ]
+    },
+    {
+      "lesson_id": 64,
+      "topic": "Health",
+      "title": "An Eye Exam",
+      "vocabulary": [
+        { "id": 1, "word": "Vision", "type": "n", "ipa": "/ˈvɪʒn/", "meaning": "Thị lực, tầm nhìn" },
+        { "id": 2, "word": "Blurry", "type": "adj", "ipa": "/ˈblɜːri/", "meaning": "Mờ, không rõ nét" },
+        { "id": 3, "word": "Lens", "type": "n", "ipa": "/lenz/", "meaning": "Tròng kính, thấu kính" },
+        { "id": 4, "word": "Optometrist", "type": "n", "ipa": "/ɒpˈtɒmətrɪst/", "meaning": "Bác sĩ đo thị lực, chuyên viên khúc xạ" },
+        { "id": 5, "word": "Frame", "type": "n", "ipa": "/freɪm/", "meaning": "Gọng kính, khung" }
+      ],
+      "dialogue": [
+        { "speaker": "Optometrist", "text": "Please look at the chart on the wall. Is the bottom line blurry for you?" },
+        { "speaker": "Patient", "text": "Yes, it is very blurry. I cannot distinguish the letters clearly." },
+        { "speaker": "Optometrist", "text": "Let me adjust the lens on this testing device. Is that better?" },
+        { "speaker": "Patient", "text": "Wow, yes! My vision becomes perfectly sharp now." },
+        { "speaker": "Optometrist", "text": "Great, you need a new prescription. You can go outside and pick a stylish frame." }
+      ],
+      "story": {
+        "text": "A patient visits an optometrist because his vision feels blurry when reading. The doctor tests different types of lens options until the chart lines look sharp. Finally, the patient prepares to choose a brand new glasses frame."
+      },
+      "questions": [
+        { "id": 1, "question": "Who does the patient visit for his eyes?", "suggested_answer": "He visits an optometrist." },
+        { "id": 2, "question": "Why does he need an exam?", "suggested_answer": "Because his vision feels blurry." },
+        { "id": 3, "question": "How does the doctor fix the blurriness during the test?", "suggested_answer": "The doctor adjusts the testing lens." },
+        { "id": 4, "question": "What can the patient choose after the exam?", "suggested_answer": "He can choose a stylish frame." }
+      ]
+    },
+    {
+      "lesson_id": 65,
+      "topic": "Daily Life",
+      "title": "Watering the Plants",
+      "vocabulary": [
+        { "id": 1, "word": "Soil", "type": "n", "ipa": "/sɔɪl/", "meaning": "Đất trồng" },
+        { "id": 2, "word": "Wilt", "type": "v", "ipa": "/wɪlt/", "meaning": "Héo, rũ xuống" },
+        { "id": 3, "word": "Moisture", "type": "n", "ipa": "/ˈmɔɪstʃər/", "meaning": "Độ ẩm" },
+        { "id": 4, "word": "Sprout", "type": "v/n", "ipa": "/spraʊt/", "meaning": "Nảy mầm / Mầm cây" },
+        { "id": 5, "word": "Overwater", "type": "v", "ipa": "/ˌəʊvəˈwɔːtər/", "meaning": "Tưới quá nhiều nước" }
+      ],
+      "dialogue": [
+        { "speaker": "Mom", "text": "Look at the balcony, the green leaves on the rosebush start to wilt." },
+        { "speaker": "Son", "text": "Oh, the soil looks completely dry. Should I get the watering can?" },
+        { "speaker": "Mom", "text": "Yes, please. Give them enough water, but be careful not to overwater them." },
+        { "speaker": "Son", "text": "How do I know if the moisture level is right?" },
+        { "speaker": "Mom", "text": "Just touch the surface. Look, some tiny seeds finally sprout over here too!" }
+      ],
+      "story": {
+        "text": "A boy notices that his balcony leaves wilt because the soil lacks moisture. His mother tells him to use the watering can but warns him not to overwater the roots. Together, they smile when they see new seeds sprout in the corner."
+      },
+      "questions": [
+        { "id": 1, "question": "What happens to the rosebush leaves?", "suggested_answer": "They start to wilt." },
+        { "id": 2, "question": "What is the condition of the soil before watering?", "suggested_answer": "The soil looks completely dry." },
+        { "id": 3, "question": "What warning does the mother give?", "suggested_answer": "She warns her son not to overwater the plants." },
+        { "id": 4, "question": "What exciting change happens in the corner of the garden?", "suggested_answer": "Some tiny seeds finally sprout." }
+      ]
+    },
+    {
+      "lesson_id": 66,
+      "topic": "Social",
+      "title": "Accepting an Invitation",
+      "vocabulary": [
+        { "id": 1, "word": "Invitation", "type": "n", "ipa": "/ˌɪnvɪˈteɪʃn/", "meaning": "Lời mời" },
+        { "id": 2, "word": "Count me in", "type": "phrase", "ipa": "/kaʊnt miː ɪn/", "meaning": "Tính cả tôi vào nhé, tôi tham gia với" },
+        { "id": 3, "word": "Gathering", "type": "n", "ipa": "/ˈɡæðərɪŋ/", "meaning": "Buổi tụ họp, tụ tập" },
+        { "id": 4, "word": "Host", "type": "n/v", "ipa": "/həʊst/", "meaning": "Chủ nhà, chủ tiệc / Đứng ra tổ chức" },
+        { "id": 5, "word": "Potluck", "type": "n", "ipa": "/ˈpɒtlʌk/", "meaning": "Bữa tiệc góp vui (mỗi người tự mang một món)" }
+      ],
+      "dialogue": [
+        { "speaker": "Alice", "text": "Hey Tom, I am hosting a small weekend gathering at my apartment. Are you free?" },
+        { "speaker": "Tom", "text": "That sounds fun! What kind of gathering is it?" },
+        { "speaker": "Alice", "text": "It is a casual potluck. Everyone brings their favorite homemade dish." },
+        { "speaker": "Tom", "text": "Awesome, count me in! I will bring my famous pasta salad." },
+        { "speaker": "Alice", "text": "Wonderful! I will send you the formal digital invitation with the address details later." }
+      ],
+      "story": {
+        "text": "Alice acts as the host for a casual weekend gathering at her place. She extends an invitation to Tom for a friendly potluck. Tom immediately says 'count me in' and promises to cook his favorite pasta salad for everyone."
+      },
+      "questions": [
+        { "id": 1, "question": "Who is hosting the weekend gathering?", "suggested_answer": "Alice is hosting the weekend gathering." },
+        { "id": 2, "question": "What style of party is it?", "suggested_answer": "It is a casual potluck." },
+        { "id": 3, "question": "What phrase does Tom use to accept the invitation?", "suggested_answer": "He says 'count me in'." },
+        { "id": 4, "question": "What dish does Tom offer to bring?", "suggested_answer": "He offers to bring his famous pasta salad." }
+      ]
+    },
+    {
+      "lesson_id": 67,
+      "topic": "Shopping",
+      "title": "Asking for a Discount",
+      "vocabulary": [
+        { "id": 1, "word": "Discount", "type": "n/v", "ipa": "/ˈdɪskaʊnt/", "meaning": "Sự giảm giá / Giảm giá" },
+        { "id": 2, "word": "Flaw", "type": "n", "ipa": "/flɔː/", "meaning": "Vết xước, lỗi nhỏ, khuyết điểm" },
+        { "id": 3, "word": "Manager", "type": "n", "ipa": "/ˈmænɪdʒər/", "meaning": "Người quản lý" },
+        { "id": 4, "word": "Bargain", "type": "v/n", "ipa": "/ˈbɑːɡən/", "meaning": "Mặc cả / Món hời" },
+        { "id": 5, "word": "Reduction", "type": "n", "ipa": "/rɪˈdʌkʃn/", "meaning": "Sự sụt giảm, mức giảm" }
+      ],
+      "dialogue": [
+        { "speaker": "Shopper", "text": "Excuse me, I like this wooden coffee table, but I notice a small flaw on the leg." },
+        { "speaker": "Clerk", "text": "Oh, let me see. Yes, it has a tiny scratch. It is the last one in our display store." },
+        { "speaker": "Shopper", "text": "Can you offer a small discount because of this visual damage?" },
+        { "speaker": "Clerk", "text": "I need to consult my manager about a price reduction. Please wait a moment." },
+        { "speaker": "Clerk", "text": "Good news! My manager agrees to give you a ten percent reduction." },
+        { "speaker": "Shopper", "text": "Great, that is a fair bargain. I will take it." }
+      ],
+      "story": {
+        "text": "A shopper notices a minor flaw on a wooden coffee table leg. She asks the clerk if she can bargain for a discount since it is the last display model. The clerk talks to the manager and secures a ten percent price reduction."
+      },
+      "questions": [
+        { "id": 1, "question": "What product is the shopper examining?", "suggested_answer": "She is examining a wooden coffee table." },
+        { "id": 2, "question": "What is wrong with the furniture item?", "suggested_answer": "It has a small flaw (a scratch) on the leg." },
+        { "id": 3, "question": "Who must approve the price reduction?", "suggested_answer": "The store manager must approve it." },
+        { "id": 4, "question": "How much is the final approved discount?", "suggested_answer": "The approved discount is ten percent." }
+      ]
+    },
+    {
+      "lesson_id": 68,
+      "topic": "Food & Drink",
+      "title": "Splitting the Bill",
+      "vocabulary": [
+        { "id": 1, "word": "Split", "type": "v", "ipa": "/splɪt/", "meaning": "Chia đôi, chia đều (hóa đơn)" },
+        { "id": 2, "word": "Bill", "type": "n", "ipa": "/bɪl/", "meaning": "Hóa đơn tính tiền" },
+        { "id": 3, "word": "Treat", "type": "v/n", "ipa": "/triːt/", "meaning": "Mời ai đó, bao ăn / Chấu đãi" },
+        { "id": 4, "word": "Calculate", "type": "v", "ipa": "/ˈkælkjuleɪt/", "meaning": "Tính toán" },
+        { "id": 5, "word": "Share", "type": "n/v", "ipa": "/ʃeər/", "meaning": "Phần đóng góp / Chia sẻ" }
+      ],
+      "dialogue": [
+        { "speaker": "Friend A", "text": "That dinner is delicious! Let's ask the waiter for the final bill." },
+        { "speaker": "Friend B", "text": "Here it comes. The total amount is eighty dollars. Let's split it evenly." },
+        { "speaker": "Friend A", "text": "No, let me treat you tonight! It is your birthday week, after all." },
+        { "speaker": "Friend B", "text": "That is sweet, but we always share expenses. Let me calculate my exact part." },
+        { "speaker": "Friend A", "text": "Alright, if you insist, we can split the bill fifty-fifty." }
+      ],
+      "story": {
+        "text": "Two friends finish a delicious dinner and receive the total bill from the waiter. Friend A offers to treat because it is a birthday week, but Friend B prefers to calculate and share the cost. They eventually decide to split the amount fifty-fifty."
+      },
+      "questions": [
+        { "id": 1, "question": "What is the total cost on the bill?", "suggested_answer": "The total cost is eighty dollars." },
+        { "id": 2, "question": "Why does Friend A offer to treat?", "suggested_answer": "Because it is Friend B's birthday week." },
+        { "id": 3, "question": "What does Friend B prefer to do instead?", "suggested_answer": "Friend B prefers to calculate and share the expense." },
+        { "id": 4, "question": "What is their final agreement on paying?", "suggested_answer": "They agree to split the bill fifty-fifty." }
+      ]
+    },
+    {
+      "lesson_id": 69,
+      "topic": "Work",
+      "title": "An Urgent Deadline",
+      "vocabulary": [
+        { "id": 1, "word": "Deadline", "type": "n", "ipa": "/ˈdedlaɪn/", "meaning": "Hạn chót, hạn cuối" },
+        { "id": 2, "word": "Urgent", "type": "adj", "ipa": "/ˈɜːdʒənt/", "meaning": "Khẩn cấp, cấp bách" },
+        { "id": 3, "word": "Postpone", "type": "v", "ipa": "/pəʊˈspəʊn/", "meaning": "Trì hoãn, hoãn lại" },
+        { "id": 4, "word": "Submit", "type": "v", "ipa": "/səbˈmɪt/", "meaning": "Nộp, đệ trình (báo cáo, tài liệu)" },
+        { "id": 5, "word": "Overtime", "type": "n/adv", "ipa": "/ˈəʊvətaɪm/", "meaning": "Giờ làm thêm, tăng ca" }
+      ],
+      "dialogue": [
+        { "speaker": "Manager", "text": "Team, the client needs the project report by 5 PM today. It is highly urgent." },
+        { "speaker": "Developer", "text": "But we still have some minor bugs to fix. Can we postpone the delivery until tomorrow?" },
+        { "speaker": "Manager", "text": "Unfortunately, no. We cannot miss this deadline. Everyone needs to focus." },
+        { "speaker": "Developer", "text": "Okay, I see. I will work overtime during lunch to complete the coding." },
+        { "speaker": "Manager", "text": "Thank you. Let's finish strong and submit the file on time." }
+      ],
+      "story": {
+        "text": "A project manager announces an urgent deadline to her technical team. The client wants the final report today, so they cannot postpone the delivery. A developer agrees to work overtime to fix bugs and submit everything on schedule."
+      },
+      "questions": [
+        { "id": 1, "question": "When does the client require the final project report?", "suggested_answer": "The client requires it by 5 PM today." },
+        { "id": 2, "question": "Why is the task critical?", "suggested_answer": "Because it is an urgent deadline that they cannot miss." },
+        { "id": 3, "question": "Can the team postpone the submission until tomorrow?", "suggested_answer": "No, they cannot postpone it." },
+        { "id": 4, "question": "What sacrifice does the developer make?", "suggested_answer": "He agrees to work overtime during his lunch break." }
+      ]
+    },
+    {
+      "lesson_id": 70,
+      "topic": "Travel",
+      "title": "Going through Security",
+      "vocabulary": [
+        { "id": 1, "word": "Security", "type": "n", "ipa": "/sɪˈkrjʊərəti/", "meaning": "An ninh, bộ phận an ninh" },
+        { "id": 2, "word": "Bin", "type": "n", "ipa": "/bɪn/", "meaning": "Khay nhựa đựng đồ qua máy quét" },
+        { "id": 3, "word": "Liquid", "type": "n/adj", "ipa": "/ˈlɪkwɪd/", "meaning": "Chất lỏng" },
+        { "id": 4, "word": "Remove", "type": "v", "ipa": "/rɪˈmuːv/", "meaning": "Cởi bỏ, tháo ra, bỏ ra" },
+        { "id": 5, "word": "Belt", "type": "n", "ipa": "/belt/", "meaning": "Thắt lưng, dây nịt" }
+      ],
+      "dialogue": [
+        { "speaker": "Officer", "text": "Please prepare for the security check. Place your electronic items in a separate bin." },
+        { "speaker": "Traveler", "text": "Should I take out my laptop and my water bottle?" },
+        { "speaker": "Officer", "text": "Yes, remove your laptop. However, no large liquid containers are allowed through here." },
+        { "speaker": "Traveler", "text": "Oh, I understand, I will throw the water away. Do I need to take off my jacket?" },
+        { "speaker": "Officer", "text": "Yes, please remove your jacket, shoes, and leather belt as well." }
+      ],
+      "story": {
+        "text": "A traveler goes through the airport security checkpoint before his flight. An officer instructs him to put his laptop in a separate plastic bin. The traveler removes his heavy jacket and leather belt, and discards a restricted liquid bottle."
+      },
+      "questions": [
+        { "id": 1, "question": "Where does this check take place?", "suggested_answer": "It takes place at the airport security checkpoint." },
+        { "id": 2, "question": "Where should the laptop be placed?", "suggested_answer": "It should be placed in a separate bin." },
+        { "id": 3, "question": "Why must the traveler throw his water bottle away?", "suggested_answer": "Because large liquid containers are not allowed through security." },
+        { "id": 4, "question": "What personal items does the traveler need to take off?", "suggested_answer": "He needs to remove his jacket, shoes, and leather belt." }
+      ]
+    }
+  ]
+}

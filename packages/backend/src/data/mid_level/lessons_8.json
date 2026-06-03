@@ -1,0 +1,289 @@
+{
+  "cycle": 8,
+  "total_lessons_in_cycle": 10,
+  "lessons": [
+    {
+      "lesson_id": 71,
+      "topic": "Daily Life",
+      "title": "Doing the Laundry",
+      "vocabulary": [
+        { "id": 1, "word": "Detergent", "type": "n", "ipa": "/dɪˈtɜːdʒənt/", "meaning": "Bột giặt, nước giặt" },
+        { "id": 2, "word": "Load", "type": "n/v", "ipa": "/ləʊd/", "meaning": "Mẻ giặt, khối lượng quần áo / Tải đồ" },
+        { "id": 3, "word": "Separate", "type": "v/adj", "ipa": "/ˈsepəreɪt/", "meaning": "Phân loại, tách rời" },
+        { "id": 4, "word": "Cycle", "type": "n", "ipa": "/ˈsaɪkl/", "meaning": "Chu kỳ giặt, vòng quay" },
+        { "id": 5, "word": "Bleach", "type": "n/v", "ipa": "/bliːtʃ/", "meaning": "Thuốc tẩy / Tẩy trắng" }
+      ],
+      "dialogue": [
+        { "speaker": "Sister", "text": "Are you ready to do the laundry? The clothes basket is overflowing." },
+        { "speaker": "Brother", "text": "Yes, let's separate the white shirts from the dark jeans first." },
+        { "speaker": "Sister", "text": "Good idea. We don't want the colors to mix. How much detergent do we need?" },
+        { "speaker": "Brother", "text": "Just one cup of liquid detergent for this heavy load. Use the gentle cycle." },
+        { "speaker": "Sister", "text": "Okay. Do we need any bleach for the white socks?" },
+        { "speaker": "Brother", "text": "No, bleach is too harsh. Regular washing is fine." }
+      ],
+      "story": {
+        "text": "A brother and sister do the laundry together on the weekend. They separate the white clothes from the dark clothes carefully. They put one cup of liquid detergent into the machine and select a gentle washing cycle for the heavy load."
+      },
+      "questions": [
+        { "id": 1, "question": "What chore do the brother and sister perform?", "suggested_answer": "They do the laundry." },
+        { "id": 2, "question": "Why do they separate the clothes?", "suggested_answer": "They separate them to prevent the dark and white colors from mixing." },
+        { "id": 3, "question": "How much detergent do they use for the load?", "suggested_answer": "They use one cup of liquid detergent." },
+        { "id": 4, "question": "Which machine cycle do they choose?", "suggested_answer": "They choose the gentle cycle." }
+      ]
+    },
+    {
+      "lesson_id": 72,
+      "topic": "Social",
+      "title": "Borrowing a Book",
+      "vocabulary": [
+        { "id": 1, "word": "Borrow", "type": "v", "ipa": "/ˈbɒrəʊ/", "meaning": "Mượn" },
+        { "id": 2, "word": "Lend", "type": "v", "ipa": "/lend/", "meaning": "Cho mượn" },
+        { "id": 3, "word": "Due date", "type": "n", "ipa": "/djuː deɪt/", "meaning": "Hạn trả" },
+        { "id": 4, "word": "Novel", "type": "n", "ipa": "/ˈnɒvl/", "meaning": "Tiểu thuyết" },
+        { "id": 5, "word": "Return", "type": "v/n", "ipa": "/rɪˈtɜːn/", "meaning": "Trả lại / Sự trở lại" }
+      ],
+      "dialogue": [
+        { "speaker": "Mary", "text": "Wow, you have a massive sci-fi novel collection on your shelf!" },
+        { "speaker": "Peter", "text": "Yes, I read a lot. This specific novel is an absolute masterpiece." },
+        { "speaker": "Mary", "text": "Can I borrow it for a week? I promise to keep it clean." },
+        { "speaker": "Peter", "text": "Sure, I can lend it to you. But please remember the due date is next Friday." },
+        { "speaker": "Mary", "text": "Don't worry. I will return it to you on time, or even earlier." }
+      ],
+      "story": {
+        "text": "Mary admires Peter's book collection and asks to borrow an interesting sci-fi novel. Peter agrees to lend it to her generously. He reminds Mary about the due date next Friday, and she promises a safe and quick return."
+      },
+      "questions": [
+        { "id": 1, "question": "What kind of book does Mary want to borrow?", "suggested_answer": "She wants to borrow a sci-fi novel." },
+        { "id": 2, "question": "Who owns the book collection?", "suggested_answer": "Peter owns the book collection." },
+        { "id": 3, "question": "When is the specific due date for the book?", "suggested_answer": "The due date is next Friday." },
+        { "id": 4, "question": "What promise does Mary make?", "suggested_answer": "She promises to keep it clean and return it on time." }
+      ]
+    },
+    {
+      "lesson_id": 73,
+      "topic": "Shopping",
+      "title": "Buying Shoes",
+      "vocabulary": [
+        { "id": 1, "word": "Size", "type": "n", "ipa": "/saɪz/", "meaning": "Kích cỡ, kích thước" },
+        { "id": 2, "word": "Tight", "type": "adj", "ipa": "/taɪt/", "meaning": "Chật, bó sát" },
+        { "id": 3, "word": "Comfortable", "type": "adj", "ipa": "/ˈkʌmftəbl/", "meaning": "Thoải mái, dễ chịu" },
+        { "id": 4, "word": "Fit", "type": "v/adj", "ipa": "/fɪt/", "meaning": "Vừa vặn / Vừa" },
+        { "id": 5, "word": "Try on", "type": "phrase", "ipa": "/traɪ ɒn/", "meaning": "Thử (quần áo, giày dép)" }
+      ],
+      "dialogue": [
+        { "speaker": "Assistant", "text": "Hello, do you like these running shoes? They are on sale today." },
+        { "speaker": "Customer", "text": "Yes, they look great. Can I try on a pair in size nine, please?" },
+        { "speaker": "Assistant", "text": "Here you go. How do they feel on your feet?" },
+        { "speaker": "Customer", "text": "The toe area feels a bit tight. Do you have a larger size?" },
+        { "speaker": "Assistant", "text": "Let me get a size nine and a half. These should fit better and feel comfortable." }
+      ],
+      "story": {
+        "text": "A customer decides to try on a pair of running shoes at a store. The first size nine pair feels too tight around his toes. The sales assistant brings a larger option that fits perfectly and feels very comfortable."
+      },
+      "questions": [
+        { "id": 1, "question": "What item is the customer purchasing?", "suggested_answer": "He is purchasing running shoes." },
+        { "id": 2, "question": "What size does he initially try on?", "suggested_answer": "He initially tries on size nine." },
+        { "id": 3, "question": "Why does he ask for a different pair?", "suggested_answer": "Because the toe area feels a bit tight." },
+        { "id": 4, "question": "What is the final size that fits him comfortably?", "suggested_answer": "Size nine and a half fits him comfortably." }
+      ]
+    },
+    {
+      "lesson_id": 74,
+      "topic": "Food & Drink",
+      "title": "A Backyard Barbecue",
+      "vocabulary": [
+        { "id": 1, "word": "Grill", "type": "n/v", "ipa": "/ɡrɪl/", "meaning": "Vỉ nướng, bếp nướng / Nướng" },
+        { "id": 2, "word": "Charcoal", "type": "n", "ipa": "/ˈtʃɑːkəʊl/", "meaning": "Than củi, than đen" },
+        { "id": 3, "word": "Sizzle", "type": "v", "ipa": "/ˈsɪzl/", "meaning": "Kêu xèo xèo (khi nướng/chiên)" },
+        { "id": 4, "word": "Marinade", "type": "n", "ipa": "/ˈmærɪneɪd/", "meaning": "Nước sốt ướp thịt" },
+        { "id": 5, "word": "Tongs", "type": "n", "ipa": "/tɒŋz/", "meaning": "Cái kẹp gắp thức ăn" }
+      ],
+      "dialogue": [
+        { "speaker": "Dad", "text": "Can you help me light up the charcoal inside the grill, please?" },
+        { "speaker": "Son", "text": "Sure, Dad. The beef steaks smell amazing. What is in the marinade?" },
+        { "speaker": "Dad", "text": "It is a secret family recipe with garlic and honey. Listen to them sizzle!" },
+        { "speaker": "Son", "text": "Wow, they look juicy. Hand me the metal tongs so I can flip them." },
+        { "speaker": "Dad", "text": "Be careful, the smoke is quite thick. Don't burn yourself." }
+      ],
+      "story": {
+        "text": "A father lights up the charcoal inside his backyard grill for a family dinner. He applies a sweet garlic marinade to the beef steaks. The meat pieces sizzle loudly as his son uses metal tongs to flip them safely."
+      },
+      "questions": [
+        { "id": 1, "question": "What source of fuel do they use for the grill?", "suggested_answer": "They use charcoal to heat the grill." },
+        { "id": 2, "question": "What ingredients make up the secret marinade?", "suggested_answer": "Garlic and honey make up the secret marinade." },
+        { "id": 3, "question": "What sound does the meat make on the hot grill?", "suggested_answer": "The meat sizzles on the grill." },
+        { "id": 4, "word": "What tool does the son use to flip the steaks?", "suggested_answer": "He uses metal tongs." }
+      ]
+    },
+    {
+      "lesson_id": 75,
+      "topic": "Work",
+      "title": "Submitting an Expense Report",
+      "vocabulary": [
+        { "id": 1, "word": "Expense", "type": "n", "ipa": "/ɪkˈspens/", "meaning": "Chi phí, công tác phí" },
+        { "id": 2, "word": "Reimburse", "type": "v", "ipa": "/ˌriːɪmˈbɜːs/", "meaning": "Hoàn tiền, bồi hoàn lại tiền" },
+        { "id": 3, "word": "Attach", "type": "v", "ipa": "/əˈtætʃ/", "meaning": "Đính kèm, gắn vào" },
+        { "id": 4, "word": "Receipt", "type": "n", "ipa": "/rɪˈsiːt/", "meaning": "Hóa đơn" },
+        { "id": 5, "word": "Approval", "type": "n", "ipa": "/əˈpruːvl/", "meaning": "Sự phê duyệt, chấp thuận" }
+      ],
+      "dialogue": [
+        { "speaker": "Accountant", "text": "Hi Mark, did you finish your business trip expense report?" },
+        { "speaker": "Employee", "text": "Yes, I just filled out the digital form. Do I need to attach all taxi receipts?" },
+        { "speaker": "Accountant", "text": "Yes, absolutely. The finance system requires every original receipt for verification." },
+        { "speaker": "Employee", "text": "Okay, I will scan and attach them right now. How long does the approval take?" },
+        { "speaker": "Accountant", "text": "Once the manager gives approval, the company will reimburse you within three days." }
+      ],
+      "story": {
+        "text": "An employee prepares his business travel expense report for the finance department. He remembers to attach every single taxi receipt to the form. After his manager grants formal approval, the company reimburses his money quickly."
+      },
+      "questions": [
+        { "id": 1, "question": "What report does the employee complete?", "suggested_answer": "He completes a business trip expense report." },
+        { "id": 2, "question": "What items must he attach for verification?", "suggested_answer": "He must attach all original taxi receipts." },
+        { "id": 3, "question": "Whose approval is necessary before reimbursement?", "suggested_answer": "The manager's approval is necessary." },
+        { "id": 4, "question": "How long does it take to get the money back after approval?", "suggested_answer": "The company reimburses him within three days." }
+      ]
+    },
+    {
+      "lesson_id": 76,
+      "topic": "Travel",
+      "title": "Boarding the Plane",
+      "vocabulary": [
+        { "id": 1, "word": "Boarding pass", "type": "n", "ipa": "/ˈbɔːdɪŋ pɑːs/", "meaning": "Thẻ lên máy bay" },
+        { "id": 2, "word": "Gate", "type": "n", "ipa": "/ɡeɪt/", "meaning": "Cổng lên máy bay, cửa số" },
+        { "id": 3, "word": "Overhead bin", "type": "n", "ipa": "/ˌəʊvəhed ˈbɪn/", "meaning": "Hộc đựng hành lý phía trên đầu" },
+        { "id": 4, "word": "Aisle", "type": "n", "ipa": "/aɪl/", "meaning": "Lối đi giữa các dãy ghế" },
+        { "id": 5, "word": "Row", "type": "n", "ipa": "/rəʊ/", "meaning": "Hàng ghế" }
+      ],
+      "dialogue": [
+        { "speaker": "Agent", "text": "Flight VN123 to Hanoi is now boarding at Gate 4. Please show your boarding pass." },
+        { "speaker": "Passenger", "text": "Here is my pass and my passport. My seat number is 15B." },
+        { "speaker": "Agent", "text": "Thank you, proceed down the tunnel. Your seat is a middle seat in row fifteen." },
+        { "speaker": "Passenger", "text": "Excuse me, can I store my small backpack in the overhead bin?" },
+        { "speaker": "Flight Attendant", "text": "Yes, please place it inside the overhead bin, and keep the aisle completely clear." }
+      ],
+      "story": {
+        "text": "A passenger presents his boarding pass at Gate 4 before entering the plane. He finds his designated row and moves down the central aisle. A flight attendant helps him lift his small backpack into the overhead bin."
+      },
+      "questions": [
+        { "id": 1, "question": "Where does the passenger present his boarding pass?", "suggested_answer": "He presents it at Gate 4." },
+        { "id": 2, "question": "What is his flight destination?", "suggested_answer": "His destination is Hanoi." },
+        { "id": 3, "question": "What row number is his seat located in?", "suggested_answer": "His seat is located in row fifteen." },
+        { "id": 4, "question": "Where does he store his small backpack?", "suggested_answer": "He stores it in the overhead bin." }
+      ]
+    },
+    {
+      "lesson_id": 77,
+      "topic": "Health",
+      "title": "A Tooth Cavity",
+      "vocabulary": [
+        { "id": 1, "word": "Cavity", "type": "n", "ipa": "/ˈkævəti/", "meaning": "Sâu răng, lỗ sâu răng" },
+        { "id": 2, "word": "Dentist", "type": "n", "ipa": "/ˈdentɪst/", "meaning": "Nha sĩ" },
+        { "id": 3, "word": "Filling", "type": "n", "ipa": "/ˈfɪlɪŋ/", "meaning": "Vết trám răng, mối hàn răng" },
+        { "id": 4, "word": "Numb", "type": "adj/v", "ipa": "/nʌm/", "meaning": "Tê chỉ, làm tê" },
+        { "id": 5, "word": "Toothache", "type": "n", "ipa": "/ˈtuːθeɪk/", "meaning": "Cơn đau răng, nhức răng" }
+      ],
+      "dialogue": [
+        { "speaker": "Patient", "text": "Good afternoon, doctor. I have a sharp toothache on the left side of my mouth." },
+        { "speaker": "Dentist", "text": "Let me take a look with my mirror. Ah, you have a small cavity in your molar." },
+        { "speaker": "Patient", "text": "Oh no, does it require a dental filling? Will it hurt?" },
+        { "speaker": "Dentist", "text": "Yes, it needs a filling. I will apply a special gel to make the area numb first." },
+        { "speaker": "Patient", "text": "Thank goodness. I feel much less anxious now." }
+      ],
+      "story": {
+        "text": "A patient experiences a sharp toothache and visits a professional dentist. The dentist identifies a tiny cavity on a back molar tooth. She injects medicine to make the gum area numb before applying a clean dental filling."
+      },
+      "questions": [
+        { "id": 1, "question": "Why does the patient schedule a dentist visit?", "suggested_answer": "Because he has a sharp toothache on the left side." },
+        { "id": 2, "question": "What specific problem does the dentist find?", "suggested_answer": "The dentist finds a small cavity in his molar." },
+        { "id": 3, "question": "What treatment does the tooth require?", "suggested_answer": "It requires a dental filling." },
+        { "id": 4, "question": "How does the doctor prevent pain during the procedure?", "suggested_answer": "She applies a special medicine to make the area numb." }
+      ]
+    },
+    {
+      "lesson_id": 78,
+      "topic": "Daily Life",
+      "title": "Taking a Shower",
+      "vocabulary": [
+        { "id": 1, "word": "Towel", "type": "n", "ipa": "/ˈtaʊəl/", "meaning": "Khăn tắm, khăn lau" },
+        { "id": 2, "word": "Shampoo", "type": "n/v", "ipa": "/ʃæmˈpuː/", "meaning": "Dầu gội đầu / Gội đầu" },
+        { "id": 3, "word": "Faucet", "type": "n", "ipa": "/ˈfɔːsɪt/", "meaning": "Vòi nước" },
+        { "id": 4, "word": "Lather", "type": "/ˈlɑːðər/", "meaning": "Bọt xà phòng / Tạo bọt" },
+        { "id": 5, "word": "Rinse", "type": "v/n", "ipa": "/rɪns/", "meaning": "Xả sạch, gột rửa" }
+      ],
+      "dialogue": [
+        { "speaker": "A", "text": "Can you bring me a dry towel from the closet? I forgot to take one." },
+        { "speaker": "B", "text": "Sure, here it is. By the way, is the hot water faucet working fine?" },
+        { "speaker": "A", "text": "Yes, the temperature is perfect. I just need to lather my hair with shampoo." },
+        { "speaker": "B", "text": "Great, make sure to rinse all the soap away thoroughly." },
+        { "speaker": "A", "text": "I will, then I am ready to get out and dry off." }
+      ],
+      "story": {
+        "text": "A man takes a warm shower in the bathroom after a long workout session. He turns the shower faucet on and puts a handful of herbal shampoo into his hair. He creates a rich lather and uses clean water to rinse all the soap away before reaching for his dry towel."
+      },
+      "questions": [
+        { "id": 1, "question": "What bathroom item does the person forget to bring?", "suggested_answer": "He forgets to bring a dry towel." },
+        { "id": 2, "question": "What hair product does he apply?", "suggested_answer": "He applies shampoo." },
+        { "id": 3, "question": "What does he do after creating a rich soap lather?", "suggested_answer": "He uses clean water to rinse all the soap away." },
+        { "id": 4, "question": "What device controls the flow of water?", "suggested_answer": "A faucet controls the flow of water." }
+      ]
+    },
+    {
+      "lesson_id": 79,
+      "topic": "Social",
+      "title": "An Expressive Apology",
+      "vocabulary": [
+        { "id": 1, "word": "Forgive", "type": "v", "ipa": "/fəˈɡɪv/", "meaning": "Tha thứ, vị tha" },
+        { "id": 2, "word": "Intentional", "type": "adj", "ipa": "/ɪnˈtenʃənl/", "meaning": "Cố ý, chủ tâm" },
+        { "id": 3, "word": "Blame", "type": "v/n", "ipa": "/bleɪm/", "meaning": "Đổ lỗi, trách móc / Trách nhiệm" },
+        { "id": 4, "word": "Misunderstanding", "type": "n", "ipa": "/ˌmɪsʌndəˈstændɪŋ/", "meaning": "Sự hiểu lầm" },
+        { "id": 5, "word": "Make up for", "type": "phrase", "ipa": "/meɪk ʌp fɔːr/", "meaning": "Đền bù cho, bù đắp lại" }
+      ],
+      "dialogue": [
+        { "speaker": "John", "text": "Hey Sarah, I want to say sorry for missing your graduation party. I feel terrible." },
+        { "speaker": "Sarah", "text": "I am a bit hurt, honestly. Everyone was there except you." },
+        { "speaker": "John", "text": "It was a complete misunderstanding with my work calendar. It was not intentional." },
+        { "speaker": "Sarah", "text": "Okay, I understand. I don't want to blame you forever." },
+        { "speaker": "John", "text": "Please forgive me. Let me buy you lunch this weekend to make up for it." },
+        { "speaker": "Sarah", "text": "That sounds nice. Apology accepted!" }
+      ],
+      "story": {
+        "text": "John offers a sincere apology to Sarah because he misses her big graduation party. He explains that a calendar misunderstanding causes the issue and emphasizes it is not intentional. Sarah decides not to blame him, accepts his offer to buy lunch, and forgives him completely."
+      },
+      "questions": [
+        { "id": 1, "question": "What event does John miss?", "suggested_answer": "He misses Sarah's graduation party." },
+        { "id": 2, "question": "Was John's absence an intentional act?", "suggested_answer": "No, it was a complete misunderstanding and not intentional." },
+        { "id": 3, "question": "What does John offer to do to make up for his mistake?", "suggested_answer": "He offers to buy her lunch this weekend." },
+        { "id": 4, "question": "Does Sarah accept his apology?", "suggested_answer": "Yes, she accepts his apology and forgives him." }
+      ]
+    },
+    {
+      "lesson_id": 80,
+      "topic": "Shopping",
+      "title": "Tracking a Package",
+      "vocabulary": [
+        { "id": 1, "word": "Tracking number", "type": "n", "ipa": "/ˈtrækɪŋ ˌnʌmbər/", "meaning": "Mã định danh tra cứu đơn hàng, mã vận đơn" },
+        { "id": 2, "word": "In transit", "type": "phrase", "ipa": "/ɪn ˈtrænzɪt/", "meaning": "Đang trong quá trình vận chuyển" },
+        { "id": 3, "word": "Courier", "type": "n", "ipa": "/ˈkʊriər/", "meaning": "Nhân viên giao hàng, người đưa thư" },
+        { "id": 4, "word": "Estimated", "type": "adj", "ipa": "/ˈestɪmeɪtɪd/", "meaning": "Ước tính, dự kiến" },
+        { "id": 5, "word": "Status", "type": "n", "ipa": "/ˈsteɪtəs/", "meaning": "Trạng thái, tình trạng" }
+      ],
+      "dialogue": [
+        { "speaker": "Customer", "text": "Hello, my online order does not arrive yet. Can you check the delivery status?" },
+        { "speaker": "Support", "text": "Certainly. Can you please provide your unique package tracking number?" },
+        { "speaker": "Customer", "text": "Yes, it is tracking number 987654321." },
+        { "speaker": "Support", "text": "Thank you. The system shows that the parcel is currently in transit." },
+        { "speaker": "Customer", "text": "What is the estimated delivery time?" },
+        { "speaker": "Support", "text": "The courier will deliver it to your doorstep tomorrow morning before noon." }
+      ],
+      "story": {
+        "text": "A customer contacts customer support to check the current delivery status of his parcel. He provides the unique tracking number to the agent. The agent views that the package is in transit and confirms the courier will deliver it by the estimated time tomorrow."
+      },
+      "questions": [
+        { "id": 1, "question": "What information does the customer want to discover?", "suggested_answer": "He wants to check the delivery status of his package." },
+        { "id": 2, "question": "What code does the support agent request?", "suggested_answer": "The agent requests the package tracking number." },
+        { "id": 3, "question": "What is the current location status of the parcel?", "suggested_answer": "The parcel is currently in transit." },
+        { "id": 4, "question": "Who will deliver the package to the doorstep?", "suggested_answer": "The courier will deliver it." }
+      ]
+    }
+  ]
+}

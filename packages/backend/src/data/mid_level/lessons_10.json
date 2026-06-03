@@ -1,0 +1,286 @@
+{
+  "cycle": 10,
+  "total_lessons_in_cycle": 10,
+  "lessons": [
+    {
+      "lesson_id": 91,
+      "topic": "Health",
+      "title": "A Sprained Ankle",
+      "vocabulary": [
+        { "id": 1, "word": "Sprain", "type": "v/n", "ipa": "/spreɪn/", "meaning": "Bong gân, sự bong gân" },
+        { "id": 2, "word": "Swelling", "type": "n", "ipa": "/ˈswelɪŋ/", "meaning": "Sự sưng tấy, chỗ sưng" },
+        { "id": 3, "word": "Ice pack", "type": "n", "ipa": "/ˈaɪs pæk/", "meaning": "Túi chườm đá" },
+        { "id": 4, "word": "Elevate", "type": "v", "ipa": "/ˈelɪveɪt/", "meaning": "Gác cao lên, nâng cao" },
+        { "id": 5, "word": "Limp", "type": "v/n", "ipa": "/lɪmp/", "meaning": "Đi khập khiễng / Dáng đi tập tễnh" }
+      ],
+      "dialogue": [
+        { "speaker": "Coach", "text": "What happens? Why do you suddenly stop running on the basketball court?" },
+        { "speaker": "Player", "text": "I step on another player's shoe and sprain my right ankle." },
+        { "speaker": "Coach", "text": "Sit down immediately. Look, some visible swelling starts to appear." },
+        { "speaker": "Player", "text": "Yes, it hurts badly. I cannot walk without a heavy limp." },
+        { "speaker": "Coach", "text": "Put this cold ice pack on the ankle and elevate your leg on the bench." }
+      ],
+      "story": {
+        "text": "An athlete suffers a painful sprain during a basketball match. He notices immediate swelling around his ankle joint and starts to limp. His coach applies a cold ice pack to the tissue and reminds him to elevate the injured foot."
+      },
+      "questions": [
+        { "id": 1, "question": "What injury does the sports player experience?", "suggested_answer": "He experiences a painful ankle sprain." },
+        { "id": 2, "question": "What visual physical change happens to his ankle?", "suggested_answer": "Visible swelling starts to appear." },
+        { "id": 3, "question": "How does the athlete walk after the accident?", "suggested_answer": "He walks with a heavy limp." },
+        { "id": 4, "question": "What are the two recovery steps the coach commands?", "suggested_answer": "The coach tells him to apply a cold ice pack and elevate the leg." }
+      ]
+    },
+    {
+      "lesson_id": 92,
+      "topic": "Daily Life",
+      "title": "Assembling Furniture",
+      "vocabulary": [
+        { "id": 1, "word": "Assemble", "type": "v", "ipa": "/əˈsembl/", "meaning": "Lắp ráp, ráp thành bộ" },
+        { "id": 2, "word": "Manual", "type": "n", "ipa": "/ˈmænjuəl/", "meaning": "Sách hướng dẫn sử dụng, cẩm nang" },
+        { "id": 3, "word": "Screw", "type": "n/v", "ipa": "/skruː/", "meaning": "Ốc vít / Vặn vít" },
+        { "id": 4, "word": "Screwdriver", "type": "n", "ipa": "/ˈskruːdraɪvər/", "meaning": "Cái tua-vít" },
+        { "id": 5, "word": "Missing", "type": "adj", "ipa": "/ˈmɪsɪŋ/", "meaning": "Bị thiếu, thất lạc" }
+      ],
+      "dialogue": [
+        { "speaker": "Son", "text": "The new wooden bookshelf arrives in a flat box. Let's assemble it!" },
+        { "speaker": "Dad", "text": "Great, open the box and hand me the official instruction manual." },
+        { "speaker": "Son", "text": "Here is the diagram. We need a small metal screw for each corner piece." },
+        { "speaker": "Dad", "text": "I have my manual screwdriver ready. Wait, do we have enough parts?" },
+        { "speaker": "Son", "text": "Oh no, look at the bag. One critical metallic nut is missing." }
+      ],
+      "story": {
+        "text": "A father and son try to assemble a new wooden bookshelf in the living room. They follow the step-by-step illustrations inside the product manual. The father turns each screw with a basic screwdriver, but they soon discover that one crucial part is missing."
+      },
+      "questions": [
+        { "id": 1, "question": "What task do the father and son perform?", "suggested_answer": "They assemble a new wooden bookshelf." },
+        { "id": 2, "question": "Where do they look to find assembly instructions?", "suggested_answer": "They look inside the instruction manual." },
+        { "id": 3, "question": "What hand tool does the father operate?", "suggested_answer": "He operates a basic screwdriver." },
+        { "id": 4, "question": "What unexpected problem halts their progress?", "suggested_answer": "They discover that one crucial part is missing." }
+      ]
+    },
+    {
+      "lesson_id": 93,
+      "topic": "Social",
+      "title": "A Farewell Party",
+      "vocabulary": [
+        { "id": 1, "word": "Farewell", "type": "n/adj", "ipa": "/ˌfeəˈwel/", "meaning": "Lời chia tay, buổi tiệc chia tay" },
+        { "id": 2, "word": "Keep in touch", "type": "phrase", "ipa": "/kiːp ɪn tʌtʃ/", "meaning": "Giữ liên lạc" },
+        { "id": 3, "word": "Relocate", "type": "v", "ipa": "/ˌriːləʊˈkeɪt/", "meaning": "Chuyển nơi ở, chuyển công tác sang nơi khác" },
+        { "id": 4, "word": "Memory", "type": "n", "ipa": "/ˈmeməri/", "meaning": "Kỷ niệm, ký ức" },
+        { "id": 5, "word": "Gift", "type": "n", "ipa": "/ɡɪft/", "meaning": "Quà tặng" }
+      ],
+      "dialogue": [
+        { "speaker": "Colleague A", "text": "I cannot believe today is your last shift. This farewell gathering feels emotional." },
+        { "speaker": "Colleague B", "text": "I know. I will miss this office team deeply when I relocate to Canada next month." },
+        { "speaker": "Colleague A", "text": "We prepare a small group gift for you. It contains photos of our projects." },
+        { "speaker": "Colleague B", "text": "Thank you so much! This is a precious memory that I will cherish forever." },
+        { "speaker": "Colleague A", "text": "Please promise to keep in touch via email or social networks." }
+      ],
+      "story": {
+        "text": "An office team organizes a warm farewell dinner for a departing colleague. Because she plans to relocate to a new country, everyone feels emotional. They give her a beautiful photo book as a personal gift to celebrate every shared memory and promise to keep in touch."
+      },
+      "questions": [
+        { "id": 1, "question": "What kind of celebration does the office host?", "suggested_answer": "They host a warm farewell dinner." },
+        { "id": 2, "question": "Why is the employee leaving her current job?", "suggested_answer": "Because she plans to relocate to Canada." },
+        { "id": 3, "question": "What physical object do the colleagues offer as a gift?", "suggested_answer": "They offer a photo book." },
+        { "id": 4, "question": "What phrase represents their agreement to communicate in the future?", "suggested_answer": "The phrase is 'keep in touch'." }
+      ]
+    },
+    {
+      "lesson_id": 94,
+      "topic": "Shopping",
+      "title": "A Store Membership Card",
+      "vocabulary": [
+        { "id": 1, "word": "Membership", "type": "n", "ipa": "/ˈmembəʃɪp/", "meaning": "Tư cách thành viên, thẻ thành viên" },
+        { "id": 2, "word": "Accumulate", "type": "v", "ipa": "/əˈkjuːmjəleɪt/", "meaning": "Tích lũy (điểm thưởng, tiền bạc)" },
+        { "id": 3, "word": "Redeem", "type": "v", "ipa": "/rɪˈdiːm/", "meaning": "Đổi điểm lấy quà, quy đổi" },
+        { "id": 4, "word": "Perk", "type": "n", "ipa": "/pɜːk/", "meaning": "Đặc quyền, lợi ích thêm" },
+        { "id": 5, "word": "Sign up", "type": "phrase", "ipa": "/saɪn ʌp/", "meaning": "Đăng ký tham gia" }
+      ],
+      "dialogue": [
+        { "speaker": "Cashier", "text": "Good afternoon! Do you have a grocery store membership card to scan?" },
+        { "speaker": "Customer", "text": "No, I don't. What are the main benefits if I decide to sign up today?" },
+        { "speaker": "Cashier", "text": "You can accumulate points on every purchase and receive exclusive shopping perks." },
+        { "speaker": "Customer", "text": "Can I use those reward points to redeem free items or cash discounts?" },
+        { "speaker": "Cashier", "text": "Yes, absolutely! Registration takes only two minutes on this digital pad." }
+      ],
+      "story": {
+        "text": "A shopper decides to sign up for a supermarket loyalty program during checkout. The cashier explains that members accumulate reward points every single week. The customer loves using these points to redeem shopping items and enjoys exclusive member perks."
+      },
+      "questions": [
+        { "id": 1, "question": "What program does the customer join?", "suggested_answer": "He joins a store membership program." },
+        { "id": 2, "question": "What phrase means registering for the account?", "suggested_answer": "The phrase is 'sign up'." },
+        { "id": 3, "question": "What happens to the buyer's score points when he shops?", "suggested_answer": "The score points accumulate." },
+        { "id": 4, "question": "What can a member do with the accumulated points?", "suggested_answer": "A member can use them to redeem free items or discounts." }
+      ]
+    },
+    {
+      "lesson_id": 95,
+      "topic": "Food & Drink",
+      "title": "Baking Fresh Bread",
+      "vocabulary": [
+        { "id": 1, "word": "Yeast", "type": "n", "ipa": "/jiːst/", "meaning": "Men nở, men làm bánh" },
+        { "id": 2, "word": "Dough", "type": "n", "ipa": "/dəʊ/", "meaning": "Khối bột nhào, bột bánh" },
+        { "id": 3, "word": "Knead", "type": "v", "ipa": "/niːd/", "meaning": "Nhào bột, nặn bột" },
+        { "id": 4, "word": "Rise", "type": "v", "ipa": "/raɪz/", "meaning": "Nở ra, phồng lên" },
+        { "id": 5, "word": "Loaf", "type": "n", "ipa": "/ləʊf/", "meaning": "Ổ bánh mì" }
+      ],
+      "dialogue": [
+        { "speaker": "Baker A", "text": "Is the active dry yeast ready? We need to mix it with warm water." },
+        { "speaker": "Baker B", "text": "Yes, it is foaming nicely. Let's pour it into the flour to form the dough." },
+        { "speaker": "Baker A", "text": "Great. Now we must knead the dough on the counter for ten minutes." },
+        { "speaker": "Baker B", "text": "Okay, then we leave it in a warm bowl so it can rise to double its size." },
+        { "speaker": "Baker A", "text": "Perfect, then we shape it and bake a beautiful loaf of bread." }
+      ],
+      "story": {
+        "text": "A baker mixes organic yeast with flour and water to create a soft baking dough. He uses his hands to knead the mixture firmly on a clean wooden board. He waits for the bread mixture to rise before shaping it into a crispy loaf."
+      },
+      "questions": [
+        { "id": 1, "question": "What ingredient makes the bread fluffy?", "suggested_answer": "Yeast makes the bread fluffy." },
+        { "id": 2, "question": "What name is given to the flour and water mixture?", "suggested_answer": "It is called dough." },
+        { "id": 3, "question": "What physical action does the baker perform with his hands?", "suggested_answer": "He kneads the dough." },
+        { "id": 4, "question": "What final product comes out of the oven?", "suggested_answer": "A beautiful loaf of bread comes out of the oven." }
+      ]
+    },
+    {
+      "lesson_id": 96,
+      "topic": "Work",
+      "title": "A Performance Review",
+      "vocabulary": [
+        { "id": 1, "word": "Performance", "type": "n", "ipa": "/pəˈfɔːməns/", "meaning": "Hiệu suất công việc, kết quả làm việc" },
+        { "id": 2, "word": "Goal", "type": "n", "ipa": "/ɡəʊl/", "meaning": "Mục tiêu" },
+        { "id": 3, "word": "Strengths", "type": "n", "ipa": "/streŋθs/", "meaning": "Điểm mạnh, ưu điểm" },
+        { "id": 4, "word": "Improvement", "type": "n", "ipa": "/ɪmˈpruːvmənt/", "meaning": "Sự cải thiện, tiến bộ" },
+        { "id": 5, "word": "Achieve", "type": "v", "ipa": "/əˈtʃiːv/", "meaning": "Đạt được (thành tựu, mục tiêu)" }
+      ],
+      "dialogue": [
+        { "speaker": "Manager", "text": "Welcome to your annual performance review meeting, Jessica." },
+        { "speaker": "Employee", "text": "Thank you, Tom. I am eager to look at my professional growth numbers." },
+        { "speaker": "Manager", "text": "You demonstrate great technical strengths and always achieve your sales targets." },
+        { "speaker": "Employee", "text": "Thanks! I work hard. Is there any area where I need improvement?" },
+        { "speaker": "Manager", "text": "Yes, let's set a new goal to enhance your public presentation skills next quarter." }
+      ],
+      "story": {
+        "text": "Jessica attends her corporate performance review session with her supervisor. The manager praises her core engineering strengths and notes that she manages to achieve every company target. They talk about future career goals and discuss methods for skill improvement."
+      },
+      "questions": [
+        { "id": 1, "question": "What type of meeting does Jessica attend?", "suggested_answer": "She attends her annual performance review." },
+        { "id": 2, "question": "What positive traits does the manager point out?", "suggested_answer": "He points out her great technical strengths." },
+        { "id": 3, "question": "Does Jessica achieve her business targets?", "suggested_answer": "Yes, she manages to achieve every target." },
+        { "id": 4, "question": "What skill area is selected for future improvement?", "suggested_answer": "Public presentation skills are selected for improvement." }
+      ]
+    },
+    {
+      "lesson_id": 97,
+      "topic": "Travel",
+      "title": "Hiring a Local Guide",
+      "vocabulary": [
+        { "id": 1, "word": "Guide", "type": "n/v", "ipa": "/ɡaɪd/", "meaning": "Hướng dẫn viên / Hướng dẫn" },
+        { "id": 2, "word": "Knowledgeable", "type": "adj", "ipa": "/ˈnɒlɪdʒəbl/", "meaning": "Am hiểu, có kiến thức sâu rộng" },
+        { "id": 3, "word": "Customized", "type": "adj", "ipa": "/ˈkʌstəmaɪzd/", "meaning": "Được thiết kế riêng theo yêu cầu" },
+        { "id": 4, "word": "Hidden gem", "type": "n", "ipa": "/ˈhɪdn dʒem/", "meaning": "Địa điểm tuyệt đẹp ít người biết, viên ngọc ẩn giấu" },
+        { "id": 5, "word": "Language barrier", "type": "n", "ipa": "/ˈlæŋɡwɪdʒ ˈbæriər/", "meaning": "Rào cản ngôn ngữ" }
+      ],
+      "dialogue": [
+        { "speaker": "Traveler", "text": "Exploring this ancient temple complex alone feels a bit overwhelming." },
+        { "speaker": "Friend", "text": "Let's hire a professional local guide from the information booth." },
+        { "speaker": "Traveler", "text": "That is smart. A knowledgeable guide can explain the history and prevent a language barrier." },
+        { "speaker": "Friend", "text": "Exactly. They can offer a customized walking route and show us each hidden gem." },
+        { "speaker": "Traveler", "text": "Perfect, let's find an English-speaking expert right now." }
+      ],
+      "story": {
+        "text": "Two friends decide to hire a local guide while traveling in an unfamiliar country. They prefer an expert who is highly knowledgeable to help them overcome the tricky language barrier. The guide creates a customized tour that leads them directly to a spectacular hidden gem."
+      },
+      "questions": [
+        { "id": 1, "question": "Who do the friends hire to assist them at the landmark?", "suggested_answer": "They hire a professional local guide." },
+        { "id": 2, "question": "What major obstacle does a local guide help them overcome?", "suggested_answer": "The guide helps them overcome the language barrier." },
+        { "id": 3, "question": "What type of tour plan does the guide provide?", "suggested_answer": "The guide provides a customized walking route." },
+        { "id": 4, "question": "What phrase refers to a beautiful, secret spot?", "suggested_answer": "The phrase is 'hidden gem'." }
+      ]
+    },
+    {
+      "lesson_id": 98,
+      "topic": "Health",
+      "title": "Taking a Vitamin Supplement",
+      "vocabulary": [
+        { "id": 1, "word": "Supplement", "type": "n/v", "ipa": "/ˈsʌplɪmənt/", "meaning": "Thực phẩm bổ sung, phần bổ sung" },
+        { "id": 2, "word": "Deficiency", "type": "n", "ipa": "/dɪˈfɪʃnsi/", "meaning": "Sự thiếu hụt (chất dinh dưỡng)" },
+        { "id": 3, "word": "Immune system", "type": "n", "ipa": "/ɪˈmjuːn ˌsɪstəm/", "meaning": "Hệ miễn dịch" },
+        { "id": 4, "word": "Capsule", "type": "n", "ipa": "/ˈkæpsjuːl/", "meaning": "Viên nhộng, viên thuốc bao đường" },
+        { "id": 5, "word": "Dosage", "type": "n", "ipa": "/ˈdəʊsɪdʒ/", "meaning": "Liều lượng sử dụng" }
+      ],
+      "dialogue": [
+        { "speaker": "Patient", "text": "Doctor, I feel tired and low on energy during the winter season." },
+        { "speaker": "Doctor", "text": "Your blood test shows a mild Vitamin D deficiency." },
+        { "speaker": "Patient", "text": "Should I change my diet or take a daily dietary supplement?" },
+        { "speaker": "Doctor", "text": "Take one capsule of Vitamin D every morning. It strengthens your immune system." },
+        { "speaker": "Patient", "text": "Understood. What is the exact recommended dosage on the label?" }
+      ],
+      "story": {
+        "text": "A doctor discovers that his patient has a minor nutritional deficiency after checking a lab report. He advises the patient to take an organic vitamin supplement to protect her immune system. He hands her a small capsule and explains the daily dosage rules."
+      },
+      "questions": [
+        { "id": 1, "question": "What issue does the blood test reveal?", "suggested_answer": "It reveals a mild Vitamin D deficiency." },
+        { "id": 2, "question": "What product does the doctor recommend to fix the lack of vitamins?", "suggested_answer": "He recommends a daily dietary supplement." },
+        { "id": 3, "question": "What biological system benefits from Vitamin D?", "suggested_answer": "The immune system benefits from it." },
+        { "id": 4, "question": "What term defines the amount of medicine a person should take?", "suggested_answer": "The term is 'dosage'." }
+      ]
+    },
+    {
+      "lesson_id": 99,
+      "topic": "Daily Life",
+      "title": "Setting an Alarm",
+      "vocabulary": [
+        { "id": 1, "word": "Alarm", "type": "n/v", "ipa": "/əˈlɑːm/", "meaning": "Báo thức, chuông báo thức" },
+        { "id": 2, "word": "Snooze", "type": "v/n", "ipa": "/snuːz/", "meaning": "Nút tạm dừng báo thức để ngủ cố thêm vài phút" },
+        { "id": 3, "word": "Oversleep", "type": "v", "ipa": "/ˌəʊvəˈsliːp/", "meaning": "Ngủ muộn, ngủ quá giờ" },
+        { "id": 4, "word": "Heavy sleeper", "type": "n", "ipa": "/ˈhevi ˈsliːpər/", "meaning": "Người ngủ say, khó thức giấc" },
+        { "id": 5, "word": "Vibrate", "type": "v", "ipa": "/vaɪˈbreɪt/", "meaning": "Rung, rung lắc" }
+      ],
+      "dialogue": [
+        { "speaker": "Roommate A", "text": "Please make sure to set an alarm for 6 AM tomorrow. We have an early train." },
+        { "speaker": "Roommate B", "text": "Don't worry, I set two different alarms on my smartphone right now." },
+        { "speaker": "Roommate A", "text": "Good, because you are a notorious heavy sleeper. Please do not hit the snooze button." },
+        { "speaker": "Roommate B", "text": "I won't. I also configure the phone to vibrate loudly under my pillow." },
+        { "speaker": "Roommate A", "text": "Awesome. We absolutely cannot afford to oversleep tomorrow." }
+      ],
+      "story": {
+        "text": "A student configures a loud alarm on his smartphone before going to bed. Because he is a known heavy sleeper, he fears he might oversleep and miss his final exam. He turns off the snooze function and programs the device to vibrate intensely."
+      },
+      "questions": [
+        { "id": 1, "question": "Why does the student set a smartphone alarm?", "suggested_answer": "He sets it to wake up early and prevent oversleeping before his exam." },
+        { "id": 2, "question": "What type of sleeper is he?", "suggested_answer": "He is a heavy sleeper." },
+        { "id": 3, "question": "What button does he disable to ensure he gets up immediately?", "suggested_answer": "He disables the snooze button." },
+        { "id": 4, "question": "What physical action does the phone perform under his pillow?", "suggested_answer": "The phone vibrates intensely." }
+      ]
+    },
+    {
+      "lesson_id": 100,
+      "topic": "Social",
+      "title": "Celebrating a Big Success",
+      "vocabulary": [
+        { "id": 1, "word": "Celebrate", "type": "v", "ipa": "/ˈselɪbreɪt/", "meaning": "Ăn mừng, kỷ niệm" },
+        { "id": 2, "word": "Toast", "type": "n/v", "ipa": "/təʊst/", "meaning": "Sự nâng ly chúc mừng, nâng ly" },
+        { "id": 3, "word": "Achievement", "type": "n", "ipa": "/əˈtʃiːvmənt/", "meaning": "Thành tựu, thành tích" },
+        { "id": 4, "word": "Proud", "type": "adj", "ipa": "/praʊd/", "meaning": "Tự hào, hãnh diện" },
+        { "id": 5, "word": "Hard work", "type": "n", "ipa": "/hɑːd wɜːk/", "meaning": "Sự chăm chỉ, công sức lao động" }
+      ],
+      "dialogue": [
+        { "speaker": "Manager", "text": "Attention everyone! Our team just signed the biggest contract of the fiscal year!" },
+        { "speaker": "Employee A", "text": "Wow, that is phenomenal news! Let's go out and celebrate tonight!" },
+        { "speaker": "Manager", "text": "Absolutely. I am incredibly proud of everyone in this room." },
+        { "speaker": "Employee B", "text": "All our intense hard work over the past six months finally pays off." },
+        { "speaker": "Manager", "text": "Yes, let's raise a glass and make a toast to our collective achievement!" }
+      ],
+      "story": {
+        "text": "A corporate team gathers at a restaurant to celebrate an incredible commercial victory. The director expresses how proud he feels regarding their collective hard work. Everyone raises a sparkling glass to propose a warm toast to their milestone achievement."
+      },
+      "questions": [
+        { "id": 1, "question": "Why does the team gather at the restaurant?", "suggested_answer": "They gather to celebrate a big contract success." },
+        { "id": 2, "question": "How does the director feel about his staff members?", "suggested_answer": "He feels incredibly proud of them." },
+        { "id": 3, "question": "What factor contributes directly to their commercial victory?", "suggested_answer": "Their intense hard work pays off." },
+        { "id": 4, "question": "What social gesture do they perform with their glasses?", "suggested_answer": "They raise their glasses to propose a warm toast." }
+      ]
+    }
+  ]
+}

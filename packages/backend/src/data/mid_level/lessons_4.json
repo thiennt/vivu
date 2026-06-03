@@ -1,0 +1,286 @@
+{
+  "cycle": 4,
+  "total_lessons_in_cycle": 10,
+  "lessons": [
+    {
+      "lesson_id": 31,
+      "topic": "Daily Life",
+      "title": "Waking Up Late",
+      "vocabulary": [
+        { "id": 1, "word": "Oversleep", "type": "v", "ipa": "/ˌəʊvəˈsliːp/", "meaning": "Ngủ quên, ngủ muộn quá giờ" },
+        { "id": 2, "word": "Alarm clock", "type": "n", "ipa": "/əˈlɑːm klɒk/", "meaning": "Đồng hồ báo thức" },
+        { "id": 3, "word": "Go off", "type": "phrase", "ipa": "/ɡəʊ ɒf/", "meaning": "(Chuông) reo, nổ tung" },
+        { "id": 4, "word": "Rush", "type": "v/n", "ipa": "/rʌʃ/", "meaning": "Vội vã, lao nhanh" },
+        { "id": 5, "word": "Skip", "type": "v", "ipa": "/skɪp/", "meaning": "Bỏ qua, bỏ sót" }
+      ],
+      "dialogue": [
+        { "speaker": "A", "text": "Oh no! Look at the time! It's already 8:15 AM." },
+        { "speaker": "B", "text": "Did you oversleep again? Why didn't your alarm clock wake you up?" },
+        { "speaker": "A", "text": "It did go off, but I think I turned it off in my sleep." },
+        { "speaker": "B", "text": "You need to rush, or you will be late for the weekly meeting." },
+        { "speaker": "A", "text": "Yeah, I have to skip breakfast today and grab a taxi immediately." }
+      ],
+      "story": {
+        "text": "A man oversleeps because he turns off his alarm clock while he still sleeps. When he wakes up at 8:15 AM, he realizes he is in trouble. He decides to skip his breakfast and rushes out the door to grab a taxi for his weekly meeting."
+      },
+      "questions": [
+        { "id": 1, "question": "What time does the man wake up?", "suggested_answer": "He wakes up at 8:15 AM." },
+        { "id": 2, "question": "Why does he oversleep?", "suggested_answer": "Because he turns off his alarm clock while he is still asleep." },
+        { "id": 3, "question": "What event does he need to attend?", "suggested_answer": "He needs to attend a weekly meeting." },
+        { "id": 4, "question": "What does he decide to skip to save time?", "suggested_answer": "He decides to skip breakfast." }
+      ]
+    },
+    {
+      "lesson_id": 32,
+      "topic": "Social",
+      "title": "Inviting a Friend to a Party",
+      "vocabulary": [
+        { "id": 1, "word": "Throw a party", "type": "phrase", "ipa": "/θrəʊ ə ˈpɑːti/", "meaning": "Tổ chức một bữa tiệc" },
+        { "id": 2, "word": "Housewarming", "type": "n/adj", "ipa": "/ˈhaʊswɔːmɪŋ/", "meaning": "Tân gia (mừng nhà mới)" },
+        { "id": 3, "word": "Attend", "type": "v", "ipa": "/əˈtend/", "meaning": "Tham dự, có mặt" },
+        { "id": 4, "word": "Count me in", "type": "phrase", "ipa": "/kaʊnt mi ɪn/", "meaning": "Tính cả tôi vào nhé, tôi tham gia với" },
+        { "id": 5, "word": "Bring along", "type": "phrase", "ipa": "/brɪŋ əˈlɒŋ/", "meaning": "Mang theo (ai đó hoặc vật gì)" }
+      ],
+      "dialogue": [
+        { "speaker": "Tom", "text": "Hey Jessica, I'm throwing a party this Saturday evening. Can you come?" },
+        { "speaker": "Jessica", "text": "Oh, what's the occasion? Is it your birthday?" },
+        { "speaker": "Tom", "text": "No, it's a housewarming party for my new apartment downtown." },
+        { "speaker": "Jessica", "text": "That's awesome! Count me in. Can I bring along a friend?" },
+        { "speaker": "Tom", "text": "Of course! The more, the merrier. See you at seven!" }
+      ],
+      "story": {
+        "text": "Tom throws a housewarming party for his new apartment downtown this Saturday. He invites his friend Jessica to attend the celebration. Jessica happily asks him to count her in and requests to bring along a friend to the party."
+      },
+      "questions": [
+        { "id": 1, "question": "When does Tom throw the party?", "suggested_answer": "He throws it this Saturday evening." },
+        { "id": 2, "question": "What kind of party is it?", "suggested_answer": "It is a housewarming party for his new apartment." },
+        { "id": 3, "question": "What does Jessica say to accept the invitation?", "suggested_answer": "She says, 'Count me in.'" },
+        { "id": 4, "question": "Who does Jessica want to bring along?", "suggested_answer": "She wants to bring along a friend." }
+      ]
+    },
+    {
+      "lesson_id": 33,
+      "topic": "Shopping",
+      "title": "Returning a Defective Item",
+      "vocabulary": [
+        { "id": 1, "word": "Defective", "type": "adj", "ipa": "/dɪˈfektɪv/", "meaning": "Bị lỗi, có khiếm khuyết" },
+        { "id": 2, "word": "Receipt", "type": "n", "ipa": "/rɪˈsiːt/", "meaning": "Hóa đơn mua hàng" },
+        { "id": 3, "word": "Refund", "type": "n/v", "ipa": "/ˈriːfʌnd/", "meaning": "Tiền hoàn lại / Hoàn tiền" },
+        { "id": 4, "word": "Exchange", "type": "v/n", "ipa": "/ɪksˈtʃeɪndʒ/", "meaning": "Đổi, trao đổi" },
+        { "id": 5, "word": "Policy", "type": "n", "ipa": "/ˈpɒləsi/", "meaning": "Chính sách, quy định" }
+      ],
+      "dialogue": [
+        { "speaker": "Customer", "text": "Hi, I bought this electric kettle yesterday, but it seems defective. It doesn't heat up." },
+        { "speaker": "Staff", "text": "I'm sorry to hear that. Do you have the receipt with you?" },
+        { "speaker": "Customer", "text": "Yes, right here. Can I get a full refund for this?" },
+        { "speaker": "Staff", "text": "According to our policy, we can give you a refund or exchange it for a brand new one." },
+        { "speaker": "Customer", "text": "I would prefer an exchange, please. I still need a kettle." }
+      ],
+      "story": {
+        "text": "A customer returns an electric kettle because it is defective and does not heat water. He shows his receipt to the store staff. Based on the store policy, the staff offers a full refund or an exchange, and the customer chooses a new kettle."
+      },
+      "questions": [
+        { "id": 1, "question": "What is wrong with the electric kettle?", "suggested_answer": "It is defective and doesn't heat up." },
+        { "id": 2, "question": "What document does the staff ask for?", "suggested_answer": "The staff asks for the receipt." },
+        { "id": 3, "question": "What options does the store policy provide?", "suggested_answer": "The policy provides a full refund or an exchange." },
+        { "id": 4, "question": "What does the customer choose in the end?", "suggested_answer": "The customer chooses an exchange for a brand new kettle." }
+      ]
+    },
+    {
+      "lesson_id": 34,
+      "topic": "Food & Drink",
+      "title": "Ordering Coffee to Go",
+      "vocabulary": [
+        { "id": 1, "word": "To go", "type": "phrase", "ipa": "/tə ɡəʊ/", "meaning": "Mang đi, mang về (đồ ăn/uống)" },
+        { "id": 2, "word": "Decaf", "type": "n/adj", "ipa": "/ˈdiːkæf/", "meaning": "Cà phê loại bỏ chất caffeine" },
+        { "id": 3, "word": "Sweetener", "type": "n", "ipa": "/ˈswiːtnər/", "meaning": "Chất làm ngọt, đường ăn kiêng" },
+        { "id": 4, "word": "Pastry", "type": "n", "ipa": "/ˈpeɪstri/", "meaning": "Bánh ngọt, bánh nướng" },
+        { "id": 5, "word": "Barista", "type": "n", "ipa": "/bəˈrɪstə/", "meaning": "Nhân viên pha chế cà phê" }
+      ],
+      "dialogue": [
+        { "speaker": "Barista", "text": "Welcome to Bean & Co. What can I get started for you today?" },
+        { "speaker": "Customer", "text": "Hi, I'd like a large iced latte to go, please. Make it decaf." },
+        { "speaker": "Barista", "text": "Sure, a large iced decaf latte. Do you want any syrup or sweetener in it?" },
+        { "speaker": "Customer", "text": "No sugar, thanks. But I'll also take one of those fresh chocolate pastries." },
+        { "speaker": "Barista", "text": "Perfect. That will be seven dollars and fifty cents at the window." }
+      ],
+      "story": {
+        "text": "A busy customer orders a large iced latte to go at a coffee shop. He requests decaf coffee because he wants to avoid caffeine, and prefers it without sweetener. He adds a fresh chocolate pastry to his order before he pays the barista."
+      },
+      "questions": [
+        { "id": 1, "question": "Does the customer drink the coffee inside the shop?", "suggested_answer": "No, he orders it to go." },
+        { "id": 2, "question": "What specific type of coffee does he request?", "suggested_answer": "He requests a large iced decaf latte." },
+        { "id": 3, "question": "Does the customer want any sweetener in his drink?", "suggested_answer": "No, he prefers it with no sugar or sweetener." },
+        { "id": 4, "question": "What food item does he buy with his coffee?", "suggested_answer": "He buys a fresh chocolate pastry." }
+      ]
+    },
+    {
+      "lesson_id": 35,
+      "topic": "Work",
+      "title": "A Job Interview Intro",
+      "vocabulary": [
+        { "id": 1, "word": "Resume", "type": "n", "ipa": "/ˈrezjuːmeɪ/", "meaning": "Sơ yếu lý lịch, CV" },
+        { "id": 2, "word": "Background", "type": "n", "ipa": "/ˈbækɡraʊnd/", "meaning": "Nền tảng kiến thức, kinh nghiệm" },
+        { "id": 3, "word": "Position", "type": "n", "ipa": "/pəˈzɪʃn/", "meaning": "Vị trí công việc" },
+        { "id": 4, "word": "Strength", "type": "n", "ipa": "/streŋθ/", "meaning": "Điểm mạnh, ưu điểm" },
+        { "id": 5, "word": "Introduce", "type": "v", "ipa": "/ˌɪntrəˈdjuːs/", "meaning": "Giới thiệu" }
+      ],
+      "dialogue": [
+        { "speaker": "Interviewer", "text": "Good morning. Thank you for coming in today. I have your resume right here." },
+        { "speaker": "Applicant", "text": "Good morning. Thank you for giving me the opportunity to interview for this position." },
+        { "speaker": "Interviewer", "text": "To start, could you briefly introduce yourself and tell me about your background?" },
+        { "speaker": "Applicant", "text": "Certainly. I have three years of experience in customer support, and my biggest strength is problem-solving." },
+        { "speaker": "Interviewer", "text": "Excellent. That matches well with what we need." }
+      ],
+      "story": {
+        "text": "An applicant attends a job interview for an open position. The interviewer holds his resume and asks him to introduce himself. The applicant shares his professional background in customer support and highlights problem-solving as his main strength."
+      },
+      "questions": [
+        { "id": 1, "question": "What document does the interviewer look at?", "suggested_answer": "The interviewer looks at the applicant's resume." },
+        { "id": 2, "question": "What does the interviewer ask the applicant to do first?", "suggested_answer": "He asks the applicant to introduce himself and talk about his background." },
+        { "id": 3, "question": "How many years of experience does the applicant have?", "suggested_answer": "He has three years of experience." },
+        { "id": 4, "question": "What is the applicant's biggest strength?", "suggested_answer": "His biggest strength is problem-solving." }
+      ]
+    },
+    {
+      "lesson_id": 36,
+      "topic": "Travel",
+      "title": "Checking in at an Airport",
+      "vocabulary": [
+        { "id": 1, "word": "Passport", "type": "n", "ipa": "/ˈpɑːspɔːt/", "meaning": "Hộ chiếu" },
+        { "id": 2, "word": "Boarding pass", "type": "n", "ipa": "/ˈbɔːdɪŋ pɑːs/", "meaning": "Thẻ lên máy bay" },
+        { "id": 3, "word": "Luggage", "type": "n", "ipa": "/ˈlʌɡɪdʒ/", "meaning": "Hành lý" },
+        { "id": 4, "word": "Scale", "type": "n", "ipa": "/skeɪl/", "meaning": "Cái cân" },
+        { "id": 5, "word": "Gate", "type": "n", "ipa": "/ɡeɪt/", "meaning": "Cổng lên máy bay" }
+      ],
+      "dialogue": [
+        { "speaker": "Agent", "text": "Good morning, where are you flying to today?" },
+        { "speaker": "Passenger", "text": "Hi, I'm flying to Tokyo. Here is my passport." },
+        { "speaker": "Agent", "text": "Thank you. Are you checking any luggage today?" },
+        { "speaker": "Passenger", "text": "Yes, just this one suitcase. Do I need to place it on the scale?" },
+        { "speaker": "Agent", "text": "Yes, please. Everything looks good. Here is your boarding pass, your flight departs from Gate 12." }
+      ],
+      "story": {
+        "text": "A passenger checks in for his flight to Tokyo at the airport counter. He hands over his passport to the agent. He places his heavy suitcase on the scale to check his luggage, and receives his boarding pass for Gate 12."
+      },
+      "questions": [
+        { "id": 1, "question": "What is the passenger's destination?", "suggested_answer": "His destination is Tokyo." },
+        { "id": 2, "question": "What identification document does he give the agent?", "suggested_answer": "He gives his passport." },
+        { "id": 3, "question": "Where does he put his suitcase?", "suggested_answer": "He places it on the scale." },
+        { "id": 4, "question": "From which gate does his flight depart?", "suggested_answer": "It departs from Gate 12." }
+      ]
+    },
+    {
+      "lesson_id": 37,
+      "topic": "Health",
+      "title": "A Sprained Ankle",
+      "vocabulary": [
+        { "id": 1, "word": "Sprain", "type": "v/n", "ipa": "/spreɪn/", "meaning": "Bong gân / Sự bong gân" },
+        { "id": 2, "word": "Ankle", "type": "n", "ipa": "/ˈæŋkl/", "meaning": "Cổ chân, mắt cá chân" },
+        { "id": 3, "word": "Swollen", "type": "adj", "ipa": "/ˈswəʊlən/", "meaning": "Bị sưng lên" },
+        { "id": 4, "word": "Ice pack", "type": "n", "ipa": "/ˈaɪs pæk/", "meaning": "Túi chườm đá" },
+        { "id": 5, "word": "Bandage", "type": "n/v", "ipa": "/ˈbændɪdʒ/", "meaning": "Băng gạc / Băng bó" }
+      ],
+      "dialogue": [
+        { "speaker": "A", "text": "Ouch! I think I just sprained my ankle while running down the hill." },
+        { "speaker": "B", "text": "Oh dear, let me see. Wow, it is already getting swollen." },
+        { "speaker": "A", "text": "It hurts so much when I try to put any weight on it." },
+        { "speaker": "B", "text": "Sit down here. I will get an ice pack and a tight bandage for you." },
+        { "speaker": "A", "text": "Thank you, that helps reduce the pain a bit." }
+      ],
+      "story": {
+        "text": "A runner accidentally sprains his ankle on a hill. His friend checks the injury and notes that the ankle is already swollen. She helps him sit down, applies an ice pack to reduce the swelling, and wraps a tight bandage around it."
+      },
+      "questions": [
+        { "id": 1, "question": "How does the person injure his ankle?", "suggested_answer": "He sprains it while running down the hill." },
+        { "id": 2, "question": "What happens to the ankle after the injury?", "suggested_answer": "It is already getting swollen." },
+        { "id": 3, "question": "Why can't the runner walk easily?", "suggested_answer": "Because it hurts a lot when he puts weight on his foot." },
+        { "id": 4, "question": "What two items does his friend use to treat the ankle?", "suggested_answer": "She uses an ice pack and a bandage." }
+      ]
+    },
+    {
+      "lesson_id": 38,
+      "topic": "Daily Life",
+      "title": "Asking for the Wi-Fi Password",
+      "vocabulary": [
+        { "id": 1, "word": "Connection", "type": "n", "ipa": "/kəˈnekʃn/", "meaning": "Sự kết nối, đường truyền" },
+        { "id": 2, "word": "Password", "type": "n", "ipa": "/ˈpɑːswɜːd/", "meaning": "Mật khẩu" },
+        { "id": 3, "word": "Capital letter", "type": "n", "ipa": "/ˈkæpɪtl ˈletər/", "meaning": "Chữ cái viết hoa" },
+        { "id": 4, "word": "Signal", "type": "n", "ipa": "/ˈsɪɡnəl/", "meaning": "Tín hiệu, sóng (điện thoại/mạng)" },
+        { "id": 5, "word": "Case-sensitive", "type": "adj", "ipa": "/ˈkeɪs ˌsensətɪv/", "meaning": "Phân biệt chữ hoa chữ thường" }
+      ],
+      "dialogue": [
+        { "speaker": "Guest", "text": "Excuse me, my mobile data signal is very weak here. Can I connect to your Wi-Fi?" },
+        { "speaker": "Host", "text": "Of course! The network name is 'SweetHome'." },
+        { "speaker": "Guest", "text": "Great, I see it. What is the Wi-Fi password?" },
+        { "speaker": "Host", "text": "It's 'Coffee2026'. Note that the letter C is a capital letter." },
+        { "speaker": "Guest", "text": "Got it. Thanks, the connection is super fast now!" }
+      ],
+      "story": {
+        "text": "A guest suffers from a weak mobile data signal, so he requests access to the host's Wi-Fi connection. The host shares the network name and the password. She warns him that the password contains a capital letter because it is case-sensitive."
+      },
+      "questions": [
+        { "id": 1, "question": "Why does the guest want to use the Wi-Fi?", "suggested_answer": "Because his mobile data signal is very weak." },
+        { "id": 2, "question": "What is the name of the Wi-Fi network?", "suggested_answer": "The network name is 'SweetHome'." },
+        { "id": 3, "question": "What is the Wi-Fi password?", "suggested_answer": "The password is 'Coffee2026'." },
+        { "id": 4, "question": "What special rule does the password have?", "suggested_answer": "It has a capital letter C." }
+      ]
+    },
+    {
+      "lesson_id": 39,
+      "topic": "Social",
+      "title": "Borrowing a Book",
+      "vocabulary": [
+        { "id": 1, "word": "Borrow", "type": "v", "ipa": "/ˈbɒrəʊ/", "meaning": "Vay, mượn (từ ai đó)" },
+        { "id": 2, "word": "Lend", "type": "v", "ipa": "/lend/", "meaning": "Cho vay, cho mượn" },
+        { "id": 3, "word": "Finished", "type": "adj", "ipa": "/ˈfɪnɪʃt/", "meaning": "Đã hoàn thành, đọc xong" },
+        { "id": 4, "word": "Due date", "type": "n", "ipa": "/ˈdjuː deɪ/", "meaning": "Hạn chót, ngày phải trả" },
+        { "id": 5, "word": "Take care of", "type": "phrase", "ipa": "/teɪk keər ɒv/", "meaning": "Chăm sóc, giữ gìn" }
+      ],
+      "dialogue": [
+        { "speaker": "A", "text": "Is that the new sci-fi novel everyone is talking about?" },
+        { "speaker": "B", "text": "Yes, it is! I just finished the last chapter this morning." },
+        { "speaker": "A", "text": "Can I borrow it for a week? I promise to take care of it." },
+        { "speaker": "B", "text": "Sure, I can lend it to you. Just return it before next Friday." },
+        { "speaker": "A", "text": "Awesome! I will read it quickly and respect the due date." }
+      ],
+      "story": {
+        "text": "A reader finishes a popular sci-fi novel this morning. His close friend asks to borrow it for a week and promises to take care of the pages. The owner agrees to lend the book but sets next Friday as the strict due date."
+      },
+      "questions": [
+        { "id": 1, "question": "What genre is the book?", "suggested_answer": "It is a sci-fi (science fiction) novel." },
+        { "id": 2, "question": "When does the owner finish reading the book?", "suggested_answer": "He finishes it this morning." },
+        { "id": 3, "question": "How long does the friend want to keep the book?", "suggested_answer": "He wants to borrow it for a week." },
+        { "id": 4, "question": "What due date do they agree on?", "suggested_answer": "They agree that the book must return before next Friday." }
+      ]
+    },
+    {
+      "lesson_id": 40,
+      "topic": "Shopping",
+      "title": "Paying with a Credit Card",
+      "vocabulary": [
+        { "id": 1, "word": "Accept", "type": "v", "ipa": "/əkˈsept/", "meaning": "Chấp nhận, nhận (thanh toán)" },
+        { "id": 2, "word": "Credit card", "type": "n", "ipa": "/ˈkredɪt kɑːd/", "meaning": "Thẻ tín dụng" },
+        { "id": 3, "word": "Terminal", "type": "n", "ipa": "/ˈtɜːmɪnl/", "meaning": "Máy quẹt thẻ, thiết bị thanh toán" },
+        { "id": 4, "word": "Tap", "type": "v", "ipa": "/tæp/", "meaning": "Chạm nhẹ (thẻ để thanh toán)" },
+        { "id": 5, "word": "Declined", "type": "adj", "ipa": "/dɪˈklaɪnd/", "meaning": "Bị từ chối (giao dịch không thành công)" }
+      ],
+      "dialogue": [
+        { "speaker": "Cashier", "text": "Your total comes to forty-five dollars. How would you like to pay?" },
+        { "speaker": "Customer", "text": "Do you accept credit cards? I don't carry any cash today." },
+        { "speaker": "Cashier", "text": "Yes, we do. You can just tap your card on the terminal right here." },
+        { "speaker": "Customer", "text": "Oh wait, it says transaction declined. Let me try another card." },
+        { "speaker": "Cashier", "text": "No problem. Ah, this second one goes through perfectly. Here is your receipt!" }
+      ],
+      "story": {
+        "text": "A customer wants to use a credit card because he carries no cash. The cashier points to the payment terminal and tells him to tap it. The first card gets declined, but the second card goes through with no issue and completes the purchase."
+      },
+      "questions": [
+        { "id": 1, "question": "Why does the customer need to pay by card?", "suggested_answer": "Because he does not carry any cash today." },
+        { "id": 2, "question": "How does the cashier instruct him to use the card?", "suggested_answer": "She tells him to tap the card on the terminal." },
+        { "id": 3, "question": "What happens to the first credit card?", "suggested_answer": "The transaction is declined." },
+        { "id": 4, "question": "Does the second card work successfully?", "suggested_answer": "Yes, it goes through perfectly." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+{
+  "cycle": 9,
+  "total_lessons_in_cycle": 10,
+  "lessons": [
+    {
+      "lesson_id": 81,
+      "topic": "Food & Drink",
+      "title": "A Healthy Breakfast Bowl",
+      "vocabulary": [
+        { "id": 1, "word": "Oatmeal", "type": "n", "ipa": "/ˈəʊtmiːl/", "meaning": "Yến mạch, cháo yến mạch" },
+        { "id": 2, "word": "Topping", "type": "n", "ipa": "/ˈtɒpɪŋ/", "meaning": "Đồ ăn kèm rắc phía trên (hạt, trái cây...)" },
+        { "id": 3, "word": "Fiber", "type": "n", "ipa": "/ˈfaɪbər/", "meaning": "Chất xơ" },
+        { "id": 4, "word": "Sprinkle", "type": "v/n", "ipa": "/ˈsprɪŋkl/", "meaning": "Rắc, rải đều" },
+        { "id": 5, "word": "Nutritious", "type": "adj", "ipa": "/njuːˈtrɪʃəs/", "meaning": "Bổ dưỡng, giàu dinh dưỡng" }
+      ],
+      "dialogue": [
+        { "speaker": "Sister", "text": "What are you making for breakfast? It smells cozy." },
+        { "speaker": "Brother", "text": "I am preparing a warm bowl of oatmeal. It is very nutritious." },
+        { "speaker": "Sister", "text": "Nice! What kind of topping do you have?" },
+        { "speaker": "Brother", "text": "I slice some fresh bananas and sprinkle chia seeds on top." },
+        { "speaker": "Sister", "text": "That is perfect. It gives you plenty of fiber for the whole morning." }
+      ],
+      "story": {
+        "text": "A young man makes a nutritious breakfast bowl every morning. He cooks hot oatmeal and adds sliced banana as a sweet topping. He also likes to sprinkle chia seeds over the mixture to get extra fiber for his digestion."
+      },
+      "questions": [
+        { "id": 1, "question": "What is the main ingredient of the breakfast bowl?", "suggested_answer": "The main ingredient is oatmeal." },
+        { "id": 2, "question": "What fruit does he use as a topping?", "suggested_answer": "He uses sliced bananas." },
+        { "id": 3, "question": "What does he sprinkle on top of the food?", "suggested_answer": "He sprinkles chia seeds." },
+        { "id": 4, "question": "What nutrient does this meal provide in high amounts?", "suggested_answer": "It provides plenty of fiber." }
+      ]
+    },
+    {
+      "lesson_id": 82,
+      "topic": "Work",
+      "title": "Organizing the Desktop",
+      "vocabulary": [
+        { "id": 1, "word": "Folder", "type": "n", "ipa": "/ˈfəʊldər/", "meaning": "Thư mục lưu trữ tài liệu" },
+        { "id": 2, "word": "Clutter", "type": "n/v", "ipa": "/ˈklʌtər/", "meaning": "Sự bừa bộn, lộn xộn" },
+        { "id": 3, "word": "Sort", "type": "v", "ipa": "/sɔːt/", "meaning": "Sắp xếp, phân loại" },
+        { "id": 4, "word": "Backup", "type": "n/v", "ipa": "/ˈbækʌp/", "meaning": "Bản sao lưu dữ liệu dự phòng" },
+        { "id": 5, "word": "Archive", "type": "v/n", "ipa": "/ˈɑːkaɪv/", "meaning": "Lưu trữ (vào kho dữ liệu cũ)" }
+      ],
+      "dialogue": [
+        { "speaker": "Senior Dev", "text": "Your computer screen has too much clutter. It slows down your workflow." },
+        { "speaker": "Junior Dev", "text": "Yeah, I just save every download file directly to the desktop." },
+        { "speaker": "Senior Dev", "text": "You should create a separate folder for each active project." },
+        { "speaker": "Junior Dev", "text": "Good point. I will sort them by category and archive the old ones." },
+        { "speaker": "Senior Dev", "text": "Don't forget to run a cloud backup when you finish organizing." }
+      ],
+      "story": {
+        "text": "A developer cleans his computer workspace to remove digital clutter. He creates a specific folder for every new project and learns to sort his assets efficiently. Finally, he decides to archive expired contracts and performs a secure database backup."
+      },
+      "questions": [
+        { "id": 1, "question": "What problem does the computer screen have?", "suggested_answer": "It has too much digital clutter." },
+        { "id": 2, "question": "What tool does the developer create to organize files?", "suggested_answer": "He creates a specific folder for each project." },
+        { "id": 3, "question": "How does he manage old, completed files?", "suggested_answer": "He decides to archive them." },
+        { "id": 4, "question": "What safety action does he perform at the end?", "suggested_answer": "He performs a secure backup." }
+      ]
+    },
+    {
+      "lesson_id": 83,
+      "topic": "Travel",
+      "title": "Renting a Scooter",
+      "vocabulary": [
+        { "id": 1, "word": "Helmet", "type": "n", "ipa": "/ˈhelmɪt/", "meaning": "Mũ bảo hiểm" },
+        { "id": 2, "word": "Rental", "type": "n/adj", "ipa": "/ˈrentl/", "meaning": "Dịch vụ cho thuê, vật cho thuê" },
+        { "id": 3, "word": "Fuel", "type": "n/v", "ipa": "/ˈfjuːəl/", "meaning": "Nhiên liệu, xăng dầu" },
+        { "id": 4, "word": "Deposit", "type": "n/v", "ipa": "/dɪˈpɒzɪt/", "meaning": "Tiền đặt cọc, đặt tiền" },
+        { "id": 5, "word": "License", "type": "n", "ipa": "/ˈlaɪsns/", "meaning": "Bằng lái xe, giấy phép" }
+      ],
+      "dialogue": [
+        { "speaker": "Tourist", "text": "Hi, I would like to inquire about your scooter rental price per day." },
+        { "speaker": "Agent", "text": "Hello! It is fifteen dollars per day. Do you have a international driving license?" },
+        { "speaker": "Tourist", "text": "Yes, here is my license and my passport for the deposit." },
+        { "speaker": "Agent", "text": "Perfect. The vehicle has a full tank of fuel. Here is your safety helmet." },
+        { "speaker": "Tourist", "text": "Thank you. I am ready to explore the coastal roads." }
+      ],
+      "story": {
+        "text": "A tourist visits a local shop to arrange a vehicle rental for the weekend. He shows his driving license and leaves a small cash deposit at the desk. The shop owner gives him a clean helmet and reminds him that the scooter already contains fuel."
+      },
+      "questions": [
+        { "id": 1, "question": "What kind of vehicle does the tourist rent?", "suggested_answer": "He rents a scooter." },
+        { "id": 2, "question": "What document must he show to the agent?", "suggested_answer": "He must show his driving license." },
+        { "id": 3, "question": "What safety gear does the shop provide?", "suggested_answer": "The shop provides a safety helmet." },
+        { "id": 4, "question": "Is the scooter empty of fuel?", "suggested_answer": "No, it already contains a full tank of fuel." }
+      ]
+    },
+    {
+      "lesson_id": 84,
+      "topic": "Health",
+      "title": "A Minor Paper Cut",
+      "vocabulary": [
+        { "id": 1, "word": "Sting", "type": "/stɪŋ/", "meaning": "Đau rát, nhức nhối (vết thương nhỏ)" },
+        { "id": 2, "word": "Bandage", "type": "n/v", "ipa": "/ˈbændɪdʒ/", "meaning": "Băng gạc cá nhân, băng bó" },
+        { "id": 3, "word": "Bleed", "type": "v", "ipa": "/bliːd/", "meaning": "Chảy máu" },
+        { "id": 4, "word": "Antiseptic", "type": "n/adj", "ipa": "/ˌæntiˈseptɪk/", "meaning": "Thuốc sát trùng, có tính sát khuẩn" },
+        { "id": 5, "word": "Ointment", "type": "n", "ipa": "/ˈɔɪntmənt/", "meaning": "Thuốc mỡ bôi da" }
+      ],
+      "dialogue": [
+        { "speaker": "Colleague A", "text": "Ouch! I just got a nasty paper cut from these document folders." },
+        { "speaker": "Colleague B", "text": "Oh, does it bleed a lot? Let me look at your index finger." },
+        { "speaker": "Colleague A", "text": "Not too much, but it really starts to sting when I type." },
+        { "speaker": "Colleague B", "text": "Wash it first. I have some antiseptic ointment and a clean adhesive bandage in my desk." },
+        { "speaker": "Colleague A", "text": "Thanks, putting the bandage on helps protect it from dust." }
+      ],
+      "story": {
+        "text": "An office worker gets a minor paper cut on his finger while organizing files. The tiny scratch begins to bleed and sting during work. He applies an antiseptic ointment immediately and covers the area with a small adhesive bandage."
+      },
+      "questions": [
+        { "id": 1, "question": "How does the employee hurt his finger?", "suggested_answer": "He gets a minor paper cut from document folders." },
+        { "id": 2, "question": "What uncomfortable sensation does he feel?", "suggested_answer": "The cut begins to sting." },
+        { "id": 3, "question": "What type of cream does he apply to prevent infection?", "suggested_answer": "He applies an antiseptic ointment." },
+        { "id": 4, "question": "What does he wrap around his finger?", "suggested_answer": "He wraps a small adhesive bandage around it." }
+      ]
+    },
+    {
+      "lesson_id": 85,
+      "topic": "Daily Life",
+      "title": "Fixing a Leaky Faucet",
+      "vocabulary": [
+        { "id": 1, "word": "Drip", "type": "v/n", "ipa": "/drɪp/", "meaning": "Rò rỉ từng giọt, giọt nước rơi" },
+        { "id": 2, "word": "Wrench", "type": "n", "ipa": "/rentʃ/", "meaning": "Cờ-lê, mỏ lết" },
+        { "id": 3, "word": "Tighten", "type": "v", "ipa": "/ˈtaɪtn/", "meaning": "Vặn chặt lại, siết chặt" },
+        { "id": 4, "word": "Washer", "type": "n", "ipa": "/ˈwɒʃər/", "meaning": "Vòng đệm cao su (ngăn nước rò rỉ)" },
+        { "id": 5, "word": "Plumber", "type": "n", "ipa": "/ˈplʌmər/", "meaning": "Thợ sửa ống nước" }
+      ],
+      "dialogue": [
+        { "speaker": "Wife", "text": "The bathroom sink faucet continues to drip all night long. It keeps me awake." },
+        { "speaker": "Husband", "text": "I see it. The rubber washer inside is probably broken or worn out." },
+        { "speaker": "Wife", "text": "Do we need to call a professional plumber to handle it?" },
+        { "speaker": "Husband", "text": "No, I can do it myself. I just need a heavy wrench to loosen the metal pipe." },
+        { "speaker": "Wife", "text": "Okay, change the washer and make sure to tighten the nut firmly." }
+      ],
+      "story": {
+        "text": "A homeowner notices that his kitchen sink faucet starts to drip continuously. Instead of calling an expensive plumber, he uses his own metal wrench to open the pipe. He replaces the old rubber washer and uses force to tighten the joint."
+      },
+      "questions": [
+        { "id": 1, "question": "What annoying sound comes from the sink?", "suggested_answer": "The faucet drips continuously." },
+        { "id": 2, "question": "Who does the wife suggest calling?", "suggested_answer": "She suggests calling a professional plumber." },
+        { "id": 3, "question": "What tool does the husband use to open the pipe?", "suggested_answer": "He uses a metal wrench." },
+        { "id": 4, "question": "What small part needs replacement inside the faucet?", "suggested_answer": "The old rubber washer needs replacement." }
+      ]
+    },
+    {
+      "lesson_id": 86,
+      "topic": "Social",
+      "title": "Recommending a Movie",
+      "vocabulary": [
+        { "id": 1, "word": "Recommend", "type": "v", "ipa": "/ˌrekəˈmend/", "meaning": "Gợi ý, tiến cử, khuyên dùng" },
+        { "id": 2, "word": "Plot twist", "type": "n", "ipa": "/ˈplɒt twɪst/", "meaning": "Bước ngoặt cốt truyện, tình tiết bất ngờ" },
+        { "id": 3, "word": "Review", "type": "n/v", "ipa": "/rɪˈvjuː/", "meaning": "Đánh giá, nhận xét" },
+        { "id": 4, "word": "Acting", "type": "n", "ipa": "/ˈæktɪŋ/", "meaning": "Nét diễn xuất, tài diễn xuất" },
+        { "id": 5, "word": "Masterpiece", "type": "n", "ipa": "/ˈmɑːstəpiːs/", "meaning": "Kiệt tác, tác phẩm xuất sắc" }
+      ],
+      "dialogue": [
+        { "speaker": "Friend A", "text": "I have nothing to watch tonight. Can you recommend a good thriller?" },
+        { "speaker": "Friend B", "text": "You must check out 'The Hidden Room'. The final plot twist blows my mind!" },
+        { "speaker": "Friend A", "text": "Oh, really? Does it get a positive review from critics?" },
+        { "speaker": "Friend B", "text": "Yes, the critics love it. The lead actor's acting is powerful and intense." },
+        { "speaker": "Friend A", "text": "Awesome. I love cinema masterpieces. I will stream it right now." }
+      ],
+      "story": {
+        "text": "A film fan loves to recommend great cinema projects to his friends. He talks about a new thriller movie because the final plot twist is incredible. He explains that every online review praises the high-quality acting, making it a true masterpiece."
+      },
+      "questions": [
+        { "id": 1, "question": "What film genre does Friend A request?", "suggested_answer": "He requests a good thriller movie." },
+        { "id": 2, "question": "What specific feature makes the movie special according to Friend B?", "suggested_answer": "The final plot twist makes it special." },
+        { "id": 3, "question": "What is the general feedback in the public review?", "suggested_answer": "The reviews are highly positive and praise the film." },
+        { "id": 4, "question": "How is the performance of the actors described?", "suggested_answer": "The acting is described as powerful and intense." }
+      ]
+    },
+    {
+      "lesson_id": 87,
+      "topic": "Shopping",
+      "title": "Checking the Warranty",
+      "vocabulary": [
+        { "id": 1, "word": "Warranty", "type": "n", "ipa": "/ˈwɒrənti/", "meaning": "Chế độ bảo hành, giấy bảo hành" },
+        { "id": 2, "word": "Defect", "type": "n", "ipa": "/ˈdiːfekt/", "meaning": "Lỗi kỹ thuật, lỗi từ nhà sản xuất" },
+        { "id": 3, "word": "Repair", "type": "v/n", "ipa": "/rɪˈpeər/", "meaning": "Sửa chữa" },
+        { "id": 4, "word": "Coverage", "type": "n", "ipa": "/ˈkʌvərɪdʒ/", "meaning": "Phạm vi bảo hiểm, hạng mục bảo hành" },
+        { "id": 5, "word": "Expired", "type": "adj", "ipa": "/ɪkˈspaɪəd/", "meaning": "Hết hạn, hết hiệu lực" }
+      ],
+      "dialogue": [
+        { "speaker": "Customer", "text": "Excuse me, my laptop screen suddenly blinks. Is it covered under warranty?" },
+        { "speaker": "Technician", "text": "Let me check your purchase receipt. It has a two-year warranty coverage." },
+        { "speaker": "Customer", "text": "Great, I bought it last year, so the coverage is not expired yet." },
+        { "speaker": "Technician", "text": "Yes, if the blinking is a manufacturing defect, the store fixes it for free." },
+        { "speaker": "Customer", "text": "Perfect, how long does the screen repair process take?" }
+      ],
+      "story": {
+        "text": "A customer brings his blinking laptop to the service counter to check the warranty terms. The store agent confirms that the hardware coverage remains active and is not expired. Since the screen issue is a factory defect, the service center schedules a free repair."
+      },
+      "questions": [
+        { "id": 1, "question": "What device needs inspection?", "suggested_answer": "A laptop needs inspection." },
+        { "id": 2, "question": "Is the laptop's warranty period expired?", "suggested_answer": "No, the warranty coverage is not expired yet." },
+        { "id": 3, "question": "Under what condition is the repair completely free?", "suggested_answer": "It is free if the issue is a manufacturing defect." },
+        { "id": 4, "question": "What service action does the technician schedule?", "suggested_answer": "He schedules a technical repair." }
+      ]
+    },
+    {
+      "lesson_id": 88,
+      "topic": "Food & Drink",
+      "title": "A Restaurant Reservation",
+      "vocabulary": [
+        { "id": 1, "word": "Book", "type": "v", "ipa": "/bʊk/", "meaning": "Đặt bàn, đặt chỗ trước" },
+        { "id": 2, "word": "Fully booked", "type": "adj", "ipa": "/ˈfʊli bʊkt/", "meaning": "Đã kín chỗ, hết bàn trống" },
+        { "id": 3, "word": "Window seat", "type": "n", "ipa": "/ˈwɪndəʊ siːt/", "meaning": "Chỗ ngồi cạnh cửa sổ" },
+        { "id": 4, "word": "Confirm", "type": "v", "ipa": "/kənˈfɜːm/", "meaning": "Xác nhận" },
+        { "id": 5, "word": "Party", "type": "n", "ipa": "/ˈpɑːti/", "meaning": "Nhóm người, đoàn khách tham gia cùng" }
+      ],
+      "dialogue": [
+        { "speaker": "Receptionist", "text": "Good evening, Skyline Bistro. How can I help you?" },
+        { "speaker": "Customer", "text": "Hi, I want to book a table for a party of four people tonight around 7 PM." },
+        { "speaker": "Receptionist", "text": "Let me look at the map. The indoor section is fully booked, but we have outdoor tables." },
+        { "speaker": "Customer", "text": "Can we request an outdoor window seat with the city view?" },
+        { "speaker": "Receptionist", "text": "Yes, we have one available. Let me confirm your name and phone number." }
+      ],
+      "story": {
+        "text": "A customer calls a popular bistro to book a dining table for his family. The receptionist states that the indoor lounge is fully booked for the night. However, she manages to confirm a beautiful outdoor window seat for their specific party."
+      },
+      "questions": [
+        { "id": 1, "question": "How many people are in the dining party?", "suggested_answer": "There are four people in the party." },
+        { "id": 2, "question": "What is the situation with the indoor dining room?", "suggested_answer": "The indoor section is completely fully booked." },
+        { "id": 3, "question": "What specific seating request does the customer make?", "suggested_answer": "He requests a window seat with a view." },
+        { "id": 4, "question": "What does the receptionist do after taking the details?", "suggested_answer": "She confirms the final reservation." }
+      ]
+    },
+    {
+      "lesson_id": 89,
+      "topic": "Work",
+      "title": "A Brainstorming Session",
+      "vocabulary": [
+        { "id": 1, "word": "Brainstorm", "type": "v", "ipa": "/ˈbreɪnstɔːm/", "meaning": "Động não, thảo luận tìm ý tưởng sáng tạo" },
+        { "id": 2, "word": "Concept", "type": "n", "ipa": "/ˈkɒnsept/", "meaning": "Ý tưởng chủ đạo, khái niệm" },
+        { "id": 3, "word": "Whiteboard", "type": "n", "ipa": "/ˈwaɪtbɔːd/", "meaning": "Bảng viết mica trắng" },
+        { "id": 4, "word": "Feedback", "type": "n", "ipa": "/ˈfiːdbæk/", "meaning": "Ý kiến phản hồi, góp ý" },
+        { "id": 5, "word": "Innovative", "type": "adj", "ipa": "/ˈɪnəveɪtɪv/", "meaning": "Đột phá, có tính đổi mới sáng tạo" }
+      ],
+      "dialogue": [
+        { "speaker": "Team Lead", "text": "Let's gather around the whiteboard to brainstorm marketing ideas for the app." },
+        { "speaker": "Designer", "text": "I have a fresh concept involving retro pixel art illustrations." },
+        { "speaker": "Team Lead", "text": "That sounds highly innovative! Let me write that down on the board." },
+        { "speaker": "Developer", "text": "My feedback is positive, but we must ensure it looks good on small phone screens." },
+        { "speaker": "Team Lead", "text": "Agreed. Let's gather more detailed feedback from testing users later." }
+      ],
+      "story": {
+        "text": "The creative department meets in the office to brainstorm launch strategies. The team lead uses a large whiteboard to record every innovative design suggestion. A designer introduces a retro graphic concept, and colleagues share constructive feedback."
+      },
+      "questions": [
+        { "id": 1, "question": "Why does the team gather together?", "suggested_answer": "They gather to brainstorm marketing ideas." },
+        { "id": 2, "question": "What office object does the lead use to record notes?", "suggested_answer": "The lead uses a large whiteboard." },
+        { "id": 3, "question": "How does the lead describe the pixel art suggestion?", "suggested_answer": "The lead describes it as highly innovative." },
+        { "id": 4, "question": "What do the colleagues provide after a concept is shared?", "suggested_answer": "They provide useful feedback." }
+      ]
+    },
+    {
+      "lesson_id": 90,
+      "topic": "Travel",
+      "title": "An Overhead Flight Delay",
+      "vocabulary": [
+        { "id": 1, "word": "Delay", "type": "n/v", "ipa": "/dɪˈleɪ/", "meaning": "Sự trì hoãn, làm chậm trễ" },
+        { "id": 2, "word": "Annihilate", "type": "v", "ipa": "/əˈnaɪəleɪt/", "meaning": "Hủy bỏ, triệt tiêu (ở đây dùng với nghĩa làm tiêu tan lịch trình)" },
+        { "id": 3, "word": "Announcement", "type": "n", "ipa": "/əˈnaʊnsmənt/", "meaning": "Thông báo, lời tuyên bố công khai" },
+        { "id": 4, "word": "Lounge", "type": "n", "ipa": "/laʊndʒ/", "meaning": "Phòng chờ tiện nghi tại sân bay" },
+        { "id": 5, "word": "Connection", "type": "n", "ipa": "/kəˈnekʃn/", "meaning": "Chuyến bay chuyển tiếp, điểm nối chuyến" }
+      ],
+      "dialogue": [
+        { "speaker": "Passenger A", "text": "Listen! There is an official airport announcement playing over the speaker." },
+        { "speaker": "Passenger B", "text": "Oh no, bad weather causes a heavy three-hour delay for our flight." },
+        { "speaker": "Passenger A", "text": "This delay will completely annihilate our tight connection schedule in Tokyo." },
+        { "speaker": "Passenger B", "text": "Let's go to the airline customer service desk. Maybe they can give us a business lounge pass." },
+        { "speaker": "Passenger A", "text": "Good idea, waiting inside the lounge is much better than sitting at the gate." }
+      ],
+      "story": {
+        "text": "A sudden thunderstorm creates a massive schedule delay at the terminal. A loud voice announcement informs travelers about the heavy rain. The unexpected change threatens to annihilate a passenger's connection flight, so he goes to wait inside the quiet lounge."
+      },
+      "questions": [
+        { "id": 1, "question": "What causes the flight schedule disruption?", "suggested_answer": "A sudden thunderstorm and bad weather cause it." },
+        { "id": 2, "question": "How long is the official time delay?", "suggested_answer": "The delay lasts for three hours." },
+        { "id": 3, "question": "What critical plan does the delay threaten to annihilate?", "suggested_answer": "It threatens to annihilate the tight connection flight schedule." },
+        { "id": 4, "question": "Where do the passengers decide to rest during the wait?", "suggested_answer": "They decide to rest inside the airport lounge." }
+      ]
+    }
+  ]
+}

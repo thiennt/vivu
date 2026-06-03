@@ -1,0 +1,287 @@
+{
+  "cycle": 5,
+  "total_lessons_in_cycle": 10,
+  "lessons": [
+    {
+      "lesson_id": 41,
+      "topic": "Daily Life",
+      "title": "Doing the Laundry",
+      "vocabulary": [
+        { "id": 1, "word": "Laundry", "type": "n", "ipa": "/ˈlɔːndri/", "meaning": "Quần áo giặt ủi, việc giặt ủi" },
+        { "id": 2, "word": "Detergent", "type": "n", "ipa": "/dɪˈtɜːdʒənt/", "meaning": "Bột giặt, nước giặt" },
+        { "id": 3, "word": "Separate", "type": "v", "ipa": "/ˈsepəreɪt/", "meaning": "Phân loại, tách rời" },
+        { "id": 4, "word": "Load", "type": "n/v", "ipa": "/ləʊd/", "meaning": "Mẻ (đồ giặt), bỏ đồ vào máy" },
+        { "id": 5, "word": "Hang up", "type": "phrase", "ipa": "/hæŋ ʌp/", "meaning": "Treo lên, phơi lên" }
+      ],
+      "dialogue": [
+        { "speaker": "A", "text": "Are you busy? The laundry basket is overflowing." },
+        { "speaker": "B", "text": "I'm on it. Where do we keep the liquid detergent?" },
+        { "speaker": "A", "text": "It's on the shelf. Remember to separate the white clothes from the colored ones." },
+        { "speaker": "B", "text": "Got it. I will start with the white load first." },
+        { "speaker": "A", "text": "Great, thanks! I can help you hang up the clothes when the machine finishes." }
+      ],
+      "story": {
+        "text": "A man decides to do the laundry because the basket is completely full. He looks for the liquid detergent on the shelf. He separates the white clothes from the colored ones before he starts the first load, and his friend helps him hang them up later."
+      },
+      "questions": [
+        { "id": 1, "question": "Why does the man need to do the laundry?", "suggested_answer": "Because the laundry basket is overflowing." },
+        { "id": 2, "question": "Where is the liquid detergent?", "suggested_answer": "It is on the shelf." },
+        { "id": 3, "question": "What does he do before putting clothes into the machine?", "suggested_answer": "He separates the white clothes from the colored ones." },
+        { "id": 4, "question": "What does his friend offer to do later?", "suggested_answer": "His friend offers to help hang up the clothes." }
+      ]
+    },
+    {
+      "lesson_id": 42,
+      "topic": "Social",
+      "title": "Meeting a New Neighbor",
+      "vocabulary": [
+        { "id": 1, "word": "Move in", "type": "phrase", "ipa": "/muːv ɪn/", "meaning": "Chuyển đến (nhà mới)" },
+        { "id": 2, "word": "Neighbor", "type": "n", "ipa": "/ˈneɪbər/", "meaning": "Hàng xóm, người láng giềng" },
+        { "id": 3, "word": "Neighborhood", "type": "n", "ipa": "/ˈneɪbəhʊd/", "meaning": "Khu dân cư, khu vực lân cận" },
+        { "id": 4, "word": "Next door", "type": "phrase", "ipa": "/nekst dɔːr/", "meaning": "Ngay nhà bên cạnh" },
+        { "id": 5, "word": "Welcome", "type": "v/adj", "ipa": "/ˈwelkəm/", "meaning": "Chào đón / Được chào đón" }
+      ],
+      "dialogue": [
+        { "speaker": "Lisa", "text": "Hi there! I'm Lisa from next door. I see you just moved in yesterday." },
+        { "speaker": "Kevin", "text": "Oh, hello Lisa! Yes, I'm Kevin. I'm still unpacking my boxes." },
+        { "speaker": "Lisa", "text": "Welcome to the neighborhood, Kevin! If you need anything, just ask." },
+        { "speaker": "Kevin", "text": "Thank you so much. Everyone is very friendly here." },
+        { "speaker": "Lisa", "text": "It's a quiet area. Let's catch up later when you finish settling in." }
+      ],
+      "story": {
+        "text": "Lisa meets her new neighbor, Kevin, who lives next door. Kevin moves in yesterday and still unpacks his heavy boxes. Lisa welcomes him to the neighborhood and kindly offers her help if he needs anything in his new home."
+      },
+      "questions": [
+        { "id": 1, "question": "Who is Lisa?", "suggested_answer": "She is the neighbor from next door." },
+        { "id": 2, "question": "When does Kevin move into his new place?", "suggested_answer": "He moves in yesterday." },
+        { "id": 3, "question": "What is Kevin doing when Lisa visits?", "suggested_answer": "He is unpacking his boxes." },
+        { "id": 4, "question": "What kind of area is the neighborhood?", "suggested_answer": "It is a quiet and friendly area." }
+      ]
+    },
+    {
+      "lesson_id": 43,
+      "topic": "Shopping",
+      "title": "Asking for a Discount",
+      "vocabulary": [
+        { "id": 1, "word": "Discount", "type": "n/v", "ipa": "/ˈdɪskaʊnt/", "meaning": "Sự giảm giá / Giảm giá" },
+        { "id": 2, "word": "Promotion", "type": "n", "ipa": "/prəˈməʊʃn/", "meaning": "Chương trình khuyến mãi" },
+        { "id": 3, "word": "Afford", "type": "v", "ipa": "/əˈfɔːd/", "meaning": "Có đủ khả năng chi trả" },
+        { "id": 4, "word": "On sale", "type": "phrase", "ipa": "/ɒn seɪl/", "meaning": "Đang được bày bán / Đang giảm giá" },
+        { "id": 5, "word": "Tag", "type": "n", "ipa": "/tæɡ/", "meaning": "Nhãn giá, thẻ gắn trên hàng hóa" }
+      ],
+      "dialogue": [
+        { "speaker": "Customer", "text": "Excuse me, I love this leather jacket, but the price tag says two hundred dollars." },
+        { "speaker": "Seller", "text": "It is genuine leather, sir. It lasts for a very long time." },
+        { "speaker": "Customer", "text": "I see, but I can't afford that much. Do you offer any discount today?" },
+        { "speaker": "Seller", "text": "We have a special promotion this week. If you buy it today, you get fifteen percent off." },
+        { "speaker": "Customer", "text": "That sounds great! I will take it then." }
+      ],
+      "story": {
+        "text": "A customer looks at a leather jacket but finds the price tag too high for him. He admits he cannot afford it and asks the seller for a discount. Luckily, the store runs a promotion that cuts fifteen percent off the original price."
+      },
+      "questions": [
+        { "id": 1, "question": "What item does the customer want to buy?", "suggested_answer": "He wants to buy a leather jacket." },
+        { "id": 2, "question": "How much does the jacket cost originally?", "suggested_answer": "It costs two hundred dollars." },
+        { "id": 3, "question": "Why does the customer ask for a discount?", "suggested_answer": "Because he cannot afford the original price." },
+        { "id": 4, "question": "What is the discount rate for the promotion?", "suggested_answer": "The discount rate is fifteen percent off." }
+      ]
+    },
+    {
+      "lesson_id": 44,
+      "topic": "Food & Drink",
+      "title": "Booking a Restaurant Table",
+      "vocabulary": [
+        { "id": 1, "word": "Reservation", "type": "n", "ipa": "/ˌrezəˈveɪʃn/", "meaning": "Sự đặt chỗ trước" },
+        { "id": 2, "word": "Fully booked", "type": "phrase", "ipa": "/ˈfʊli bʊkt/", "meaning": "Đã kín lịch, hết chỗ trống" },
+        { "id": 3, "word": "Party of", "type": "phrase", "ipa": "/ˈpɑːti ɒv/", "meaning": "Nhóm gồm (bao nhiêu người)" },
+        { "id": 4, "word": "Available", "type": "adj", "ipa": "/əˈveɪləbl/", "meaning": "Còn trống, có sẵn" },
+        { "id": 5, "word": "Under the name", "type": "phrase", "ipa": "/ˈʌndər ðə neɪm/", "meaning": "Dưới tên của (ai đó)" }
+      ],
+      "dialogue": [
+        { "speaker": "Staff", "text": "Good afternoon, Bella Italia restaurant. How can I help you?" },
+        { "speaker": "Caller", "text": "Hi, I'd like to make a reservation for tonight at seven o'clock, please." },
+        { "speaker": "Staff", "text": "For how many people, sir?" },
+        { "speaker": "Caller", "text": "A party of four. We prefer a table near the window if possible." },
+        { "speaker": "Staff", "text": "Let me check. Yes, we have one table available. May I have your name, please?" },
+        { "speaker": "Caller", "text": "It's John Smith. Thank you." }
+      ],
+      "story": {
+        "text": "John calls a famous Italian restaurant to make a reservation for tonight. He requests a window table for a party of four. The staff checks the system and finds an available table because the place is not fully booked yet."
+      },
+      "questions": [
+        { "id": 1, "question": "What time does John want to visit the restaurant?", "suggested_answer": "He wants to visit tonight at seven o'clock." },
+        { "id": 2, "question": "How many people are in John's group?", "suggested_answer": "There are four people in his group (a party of four)." },
+        { "id": 3, "question": "Where does John prefer to sit?", "suggested_answer": "He prefers a table near the window." },
+        { "id": 4, "question": "What is the reservation name?", "suggested_answer": "The reservation is under the name John Smith." }
+      ]
+    },
+    {
+      "lesson_id": 45,
+      "topic": "Work",
+      "title": "Asking for Annual Leave",
+      "vocabulary": [
+        { "id": 1, "word": "Annual leave", "type": "n", "ipa": "/ˈænjuəl liːv/", "meaning": "Nghỉ phép thường niên (có lương)" },
+        { "id": 2, "word": "Approve", "type": "v", "ipa": "/əˈpruːv/", "meaning": "Phê duyệt, chấp thuận" },
+        { "id": 3, "word": "Handover", "type": "n/v", "ipa": "/ˈhændəʊvər/", "meaning": "Bàn giao công việc" },
+        { "id": 4, "word": "Urgent", "type": "adj", "ipa": "/ˈɜːdʒənt/", "meaning": "Khẩn cấp, cấp bách" },
+        { "id": 5, "word": "Cover", "type": "v", "ipa": "/ˈkʌvər/", "meaning": "Làm thay, gánh vác thay công việc" }
+      ],
+      "dialogue": [
+        { "speaker": "Employee", "text": "Hi Mark, do you have a minute? I want to request three days of annual leave next week." },
+        { "speaker": "Manager", "text": "Next week? We have a big project launch on Friday. Who will cover your tasks?" },
+        { "speaker": "Employee", "text": "I already prepare a full handover document, and Sarah agrees to handle any urgent issues." },
+        { "speaker": "Manager", "text": "Excellent preparation. In that case, I will approve your request in the system today." },
+        { "speaker": "Employee", "text": "Thank you, Mark! I appreciate it." }
+      ],
+      "story": {
+        "text": "An employee asks his manager for three days of annual leave next week. The manager worries about the upcoming project launch, but the employee already arranges a handover with Sarah. Sarah promises to cover his urgent tasks, so the manager approves the request."
+      },
+      "questions": [
+        { "id": 1, "question": "How many days off does the employee request?", "suggested_answer": "He requests three days of annual leave." },
+        { "id": 2, "question": "Why is the manager worried at first?", "suggested_answer": "Because they have a big project launch on Friday next week." },
+        { "id": 3, "question": "Who agrees to handle the urgent issues?", "suggested_answer": "Sarah agrees to handle them." },
+        { "id": 4, "question": "What document does the employee prepare?", "suggested_answer": "He prepares a full handover document." }
+      ]
+    },
+    {
+      "lesson_id": 46,
+      "topic": "Travel",
+      "title": "Taking a Wrong Turn",
+      "vocabulary": [
+        { "id": 1, "word": "Lost", "type": "adj", "ipa": "/lɒst/", "meaning": "Bị lạc đường" },
+        { "id": 2, "word": "GPS", "type": "n", "ipa": "/ˌdʒiː piː ˈes/", "meaning": "Hệ thống định vị toàn cầu" },
+        { "id": 3, "word": "Wrong turn", "type": "phrase", "ipa": "/rɒŋ tɜːn/", "meaning": "Rẽ sai hướng, nhầm đường" },
+        { "id": 4, "word": "U-turn", "type": "n", "ipa": "/ˈjuː tɜːn/", "meaning": "Quay đầu xe (180 độ)" },
+        { "id": 5, "word": "Route", "type": "n", "ipa": "/ruːt/", "meaning": "Tuyến đường, lộ trình" }
+      ],
+      "dialogue": [
+        { "speaker": "Driver", "text": "Hey, this street doesn't look familiar. Are we lost?" },
+        { "speaker": "Passenger", "text": "Let me check the GPS. Oh, I think you make a wrong turn at the last traffic light." },
+        { "speaker": "Driver", "text": "Oh no! Should I look for a place to make a U-turn?" },
+        { "speaker": "Passenger", "text": "Yes, do it when it is safe. The GPS is recalculating the fastest route now." },
+        { "speaker": "Driver", "text": "Okay, I see an opening ahead. I will turn around there." }
+      ],
+      "story": {
+        "text": "A driver feels unfamiliar with the street and worries that they are lost. The passenger checks the GPS and notices that the driver makes a wrong turn back at the traffic light. They find a safe spot to make a U-turn while the app recalculates the route."
+      },
+      "questions": [
+        { "id": 1, "question": "Why does the driver get worried?", "suggested_answer": "Because the street doesn't look familiar and he thinks they are lost." },
+        { "id": 2, "question": "Where does the driver make a mistake?", "suggested_answer": "He makes a wrong turn at the last traffic light." },
+        { "id": 3, "question": "What tool does the passenger use to check the location?", "suggested_answer": "The passenger uses the GPS." },
+        { "id": 4, "question": "What maneuver does the driver need to execute to go back?", "suggested_answer": "He needs to make a U-turn." }
+      ]
+    },
+    {
+      "lesson_id": 47,
+      "topic": "Health",
+      "title": "A Sudden Toothache",
+      "vocabulary": [
+        { "id": 1, "word": "Toothache", "type": "n", "ipa": "/ˈtuːθeɪk/", "meaning": "Đau răng, nhức răng" },
+        { "id": 2, "word": "Dentist", "type": "n", "ipa": "/ˈdentɪst/", "meaning": "Nha sĩ" },
+        { "id": 3, "word": "Appointment", "type": "n", "ipa": "/əˈpɔɪntmənt/", "meaning": "Cuộc hẹn (khám bệnh, công việc)" },
+        { "id": 4, "word": "Painkiller", "type": "n", "ipa": "/ˈpeɪnkɪlər/", "meaning": "Thuốc giảm đau" },
+        { "id": 5, "word": "Cavity", "type": "n", "ipa": "/ˈkævəti/", "meaning": "Lỗ sâu răng" }
+      ],
+      "dialogue": [
+        { "speaker": "A", "text": "What's wrong? You are holding your cheek." },
+        { "speaker": "B", "text": "I have a terrible toothache since this morning. I can't even chew my food." },
+        { "speaker": "A", "text": "You should call the dentist and make an urgent appointment." },
+        { "speaker": "B", "text": "I just did, but she is busy until tomorrow afternoon." },
+        { "speaker": "A", "text": "Take some of this painkiller for now. It might be a deep cavity." }
+      ],
+      "story": {
+        "text": "A man suffers from a sharp toothache and holds his sore cheek. He cannot chew any food easily. He tries to schedule an appointment with his dentist, but she is full. His friend gives him a painkiller and suspects a bad cavity."
+      },
+      "questions": [
+        { "id": 1, "question": "Why is the man holding his cheek?", "suggested_answer": "Because he has a terrible toothache." },
+        { "id": 2, "question": "What simple action can he not perform due to the pain?", "suggested_answer": "He cannot chew his food." },
+        { "id": 3, "question": "When can the dentist see him?", "suggested_answer": "She can see him tomorrow afternoon." },
+        { "id": 4, "question": "What medical solution does his friend offer for immediate relief?", "suggested_answer": "His friend offers a painkiller." }
+      ]
+    },
+    {
+      "lesson_id": 48,
+      "topic": "Daily Life",
+      "title": "Watering the Plants",
+      "vocabulary": [
+        { "id": 1, "word": "Water", "type": "v/n", "ipa": "/ˈwɔːtər/", "meaning": "Tưới nước / Nước" },
+        { "id": 2, "word": "Dry", "type": "adj/v", "ipa": "/draɪ/", "meaning": "Khô héo, khô cằn / Làm khô" },
+        { "id": 3, "word": "Balcony", "type": "n", "ipa": "/ˈbælkəni/", "meaning": "Ban công" },
+        { "id": 4, "word": "Wither", "type": "v", "ipa": "/ˈwɪðər/", "meaning": "Héo úa, tàn tạ" },
+        { "id": 5, "word": "Soil", "type": "n", "ipa": "/sɔɪl/", "meaning": "Đất trồng" }
+      ],
+      "dialogue": [
+        { "speaker": "Mom", "text": "Can you do me a favor? The potted plants on the balcony look very dry." },
+        { "speaker": "Son", "text": "Sure, Mom. Do I need to water them every day during summer?" },
+        { "speaker": "Mom", "text": "Yes, please. If you forget, the leaves wither quickly because the sun is very strong." },
+        { "speaker": "Son", "text": "Okay. Should I soak the soil completely?" },
+        { "speaker": "Mom", "text": "Just pour enough water until the soil feels damp, not muddy." }
+      ],
+      "story": {
+        "text": "A mother notices that the potted plants on the balcony are very dry. She asks her son to water them because the summer sun is intense. If he forgets, the green leaves wither. He fills a pot and pours water until the soil becomes damp."
+      },
+      "questions": [
+        { "id": 1, "question": "Where are the plants located?", "suggested_answer": "They are located on the balcony." },
+        { "id": 2, "question": "Why do the plants dry out fast?", "suggested_answer": "Because it is summer and the sun is very strong." },
+        { "id": 3, "question": "What happens to the leaves if they don't get water?", "suggested_answer": "The leaves wither quickly." },
+        { "id": 4, "question": "How much water should the son pour?", "suggested_answer": "He should pour enough water until the soil feels damp." }
+      ]
+    },
+    {
+      "lesson_id": 49,
+      "topic": "Social",
+      "title": "Splitting the Bill",
+      "vocabulary": [
+        { "id": 1, "word": "Split", "type": "v/n", "ipa": "/splɪt/", "meaning": "Chia đôi, chia đều (hóa đơn)" },
+        { "id": 2, "word": "Treat", "type": "v/n", "ipa": "/triːt/", "meaning": "Khao, đãi / Sự thiết đãi" },
+        { "id": 3, "word": "Calculate", "type": "v", "ipa": "/ˈkælkjuleɪt/", "meaning": "Tính toán, cộng trừ" },
+        { "id": 4, "word": "Share", "type": "n/v", "ipa": "/ʃeər/", "meaning": "Phần đóng góp / Chia sẻ" },
+        { "id": 5, "word": "Cash", "type": "n", "ipa": "/kæʃ/", "meaning": "Tiền mặt" }
+      ],
+      "dialogue": [
+        { "speaker": "Amy", "text": "That was a delicious dinner! Let's ask for the bill." },
+        { "speaker": "Ben", "text": "Put your wallet away, Amy. It's my treat today because it's your birthday." },
+        { "speaker": "Amy", "text": "Oh, thank you, but my birthday was last week! Let's split the bill evenly." },
+        { "speaker": "Ben", "text": "Are you sure? Okay, let's calculate each person's share then." },
+        { "speaker": "Amy", "text": "It comes to twenty dollars each. I have cash right here." }
+      ],
+      "story": {
+        "text": "Two close friends finish a delicious dinner together. Ben wants to treat Amy because he thinks it is her birthday. Amy clarifies that her birthday is over, so she insists to split the bill. They calculate the total and she pays her share in cash."
+      },
+      "questions": [
+        { "id": 1, "question": "Why does Ben want to treat Amy at first?", "suggested_answer": "Because he thinks it is her birthday." },
+        { "id": 2, "question": "When was Amy's actual birthday?", "suggested_answer": "Her birthday was last week." },
+        { "id": 3, "question": "What method of payment do they choose in the end?", "suggested_answer": "They choose to split the bill evenly." },
+        { "id": 4, "question": "How much is each person's share?", "suggested_answer": "Each person's share is twenty dollars." }
+      ]
+    },
+    {
+      "lesson_id": 50,
+      "topic": "Shopping",
+      "title": "Buying Groceries",
+      "vocabulary": [
+        { "id": 1, "word": "Aisle", "type": "n", "ipa": "/aɪl/", "meaning": "Lối đi giữa các gian hàng" },
+        { "id": 2, "word": "Grocery", "type": "n", "ipa": "/ˈɡrəʊsəri/", "meaning": "Thực phẩm và tạp hóa" },
+        { "id": 3, "word": "Shopping cart", "type": "n", "ipa": "/ˈʃɒpɪŋ kɑːt/", "meaning": "Xe đẩy mua sắm" },
+        { "id": 4, "word": "Produce", "type": "n", "ipa": "/ˈprɒdjuːs/", "meaning": "Nông sản tươi (rau, củ, quả)" },
+        { "id": 5, "word": "Stock up", "type": "phrase", "ipa": "/stɒk ʌp/", "meaning": "Mua tích trữ, mua trữ sẵn" }
+      ],
+      "dialogue": [
+        { "speaker": "Husband", "text": "Our fridge is totally empty. We really need to stock up on groceries for the week." },
+        { "speaker": "Wife", "text": "Yes, grab a shopping cart. Let's head to the fresh produce section first." },
+        { "speaker": "Husband", "text": "Do you need any tomatoes or lettuce for the salad?" },
+        { "speaker": "Wife", "text": "Yes, please. After that, we need to find the dairy aisle for milk and butter." },
+        { "speaker": "Husband", "text": "Alright, let's move quickly before the supermarket gets crowded." }
+      ],
+      "story": {
+        "text": "A married couple goes to the supermarket because their fridge is empty. They want to stock up on groceries for the week. The wife tells the husband to push the shopping cart to the fresh produce section before they look for the dairy aisle."
+      },
+      "questions": [
+        { "id": 1, "question": "Why do they need to buy groceries?", "suggested_answer": "Because their fridge is totally empty." },
+        { "id": 2, "question": "What item do they use to hold their groceries?", "suggested_answer": "They use a shopping cart." },
+        { "id": 3, "question": "Which section do they visit first?", "suggested_answer": "They visit the fresh produce section first." },
+        { "id": 4, "question": "What products do they want to find in the dairy aisle?", "suggested_answer": "They want to find milk and butter." }
+      ]
+    }
+  ]
+}

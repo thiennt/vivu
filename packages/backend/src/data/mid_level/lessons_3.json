@@ -1,0 +1,287 @@
+{
+  "cycle": 3,
+  "total_lessons_in_cycle": 10,
+  "lessons": [
+    {
+      "lesson_id": 21,
+      "topic": "Daily Life",
+      "title": "House Chores",
+      "vocabulary": [
+        { "id": 1, "word": "Messy", "type": "adj", "ipa": "/ˈmesi/", "meaning": "Bừa bộn, lộn xộn" },
+        { "id": 2, "word": "Vacuum", "type": "v/n", "ipa": "/ˈvækjuːm/", "meaning": "Hút bụi / Máy hút bụi" },
+        { "id": 3, "word": "Take out the trash", "type": "phrase", "ipa": "/teɪk aʊt ðə træʃ/", "meaning": "Đi đổ rác" },
+        { "id": 4, "word": "Dust", "type": "v/n", "ipa": "/dʌst/", "meaning": "Phủi bụi / Bụi bẩn" },
+        { "id": 5, "word": "Turn", "type": "n", "ipa": "/tɜːn/", "meaning": "Lượt, phiên (làm việc gì)" }
+      ],
+      "dialogue": [
+        { "speaker": "A", "text": "Wow, the living room is so messy! We need to clean it up." },
+        { "speaker": "B", "text": "Alright, I can vacuum the floor and dust the furniture." },
+        { "speaker": "A", "text": "Great, then I will wipe the windows and take out the trash." },
+        { "speaker": "B", "text": "Whose turn is it to wash the dishes tonight?" },
+        { "speaker": "A", "text": "It's your turn, buddy! I did it yesterday." }
+      ],
+      "story": {
+        "text": "The living room looks incredibly messy, so two roommates decide to clean it up together. One person vacuums the floor and dusts the furniture. The other person cleans the windows and takes out the trash, then reminds his friend that it is his turn to do the dishes."
+      },
+      "questions": [
+        { "id": 1, "question": "How does the living room look?", "suggested_answer": "It is very messy." },
+        { "id": 2, "question": "What does the first person offer to do?", "suggested_answer": "He offers to vacuum the floor and dust the furniture." },
+        { "id": 3, "question": "Who takes out the trash?", "suggested_answer": "The second person takes out the trash." },
+        { "id": 4, "question": "Whose turn is it to wash the dishes tonight?", "suggested_answer": "It is the first person's turn." }
+      ]
+    },
+    {
+      "lesson_id": 22,
+      "topic": "Social",
+      "title": "Running into an Old Friend",
+      "vocabulary": [
+        { "id": 1, "word": "Coincidence", "type": "n", "ipa": "/kəʊˈɪnsɪdəns/", "meaning": "Sự trùng hợp ngẫu nhiên" },
+        { "id": 2, "word": "Age", "type": "n", "ipa": "/eɪdʒ/", "meaning": "Thời gian dài, thế kỷ (for ages: đã lâu lắm rồi)" },
+        { "id": 3, "word": "Keep in touch", "type": "phrase", "ipa": "/kiːp ɪn tʌtʃ/", "meaning": "Giữ liên lạc" },
+        { "id": 4, "word": "Catch up", "type": "v", "ipa": "/kætʃ ʌp/", "meaning": "Hàn huyên, chia sẻ tin tức mới" },
+        { "id": 5, "word": "Contact info", "type": "n", "ipa": "/ˈkɒntækt ˈɪnfəʊ/", "meaning": "Thông tin liên hệ" }
+      ],
+      "dialogue": [
+        { "speaker": "John", "text": "Oh my god, Mary? Is that really you?" },
+        { "speaker": "Mary", "text": "John! Wow, what a coincidence! I haven't seen you for ages." },
+        { "speaker": "John", "text": "I know! You look exactly the same. We must catch up soon." },
+        { "speaker": "Mary", "text": "Definitely. Let's exchange our contact info so we can keep in touch." },
+        { "speaker": "John", "text": "Sounds perfect, here is my phone number." }
+      ],
+      "story": {
+        "text": "John runs into Mary at a public place by absolute coincidence. They realize they haven't seen each other for ages. John suggests that they catch up soon, and Mary happily agrees to exchange contact info so they can keep in touch."
+      },
+      "questions": [
+        { "id": 1, "question": "Who does John run into?", "suggested_answer": "He runs into an old friend named Mary." },
+        { "id": 2, "question": "Have they seen each other recently?", "suggested_answer": "No, they haven't seen each other for ages." },
+        { "id": 3, "question": "What does John want to do soon?", "suggested_answer": "He wants to catch up with Mary soon." },
+        { "id": 4, "question": "Why do they exchange their contact info?", "suggested_answer": "Because they want to keep in touch." }
+      ]
+    },
+    {
+      "lesson_id": 23,
+      "topic": "Shopping",
+      "title": "Asking for a Discount",
+      "vocabulary": [
+        { "id": 1, "word": "Discount", "type": "n/v", "ipa": "/ˈdɪskaʊnt/", "meaning": "Sự giảm giá / Chiết khấu" },
+        { "id": 2, "word": "Afford", "type": "v", "ipa": "/əˈfɔːd/", "meaning": "Có đủ khả năng chi trả" },
+        { "id": 3, "word": "On sale", "type": "phrase", "ipa": "/ɒn seɪl/", "meaning": "Đang được giảm giá" },
+        { "id": 4, "word": "Deal", "type": "n/v", "ipa": "/diːl/", "meaning": "Thỏa thuận mua bán, mức giá hời" },
+        { "id": 5, "word": "Budget", "type": "n", "ipa": "/ˈbʌdʒɪt/", "meaning": "Ngân sách, số tiền giới hạn" }
+      ],
+      "dialogue": [
+        { "speaker": "Customer", "text": "Excuse me, I really love this leather wallet, but it's a bit over my budget." },
+        { "speaker": "Seller", "text": "It's high quality, sir. But I can offer you a ten percent discount." },
+        { "speaker": "Customer", "text": "Can you make it twenty percent? Then I can afford it right away." },
+        { "speaker": "Seller", "text": "Alright, since you are our first customer today, we have a deal." },
+        { "speaker": "Customer", "text": "Awesome! Thank you for the great deal." }
+      ],
+      "story": {
+        "text": "A customer spots a high-quality leather wallet, but it goes over his budget. He asks the seller for a discount to afford it. The seller offers 10 percent, but the customer negotiates up to 20 percent. The seller finally accepts the deal."
+      },
+      "questions": [
+        { "id": 1, "question": "What item does the customer want to buy?", "suggested_answer": "He wants to buy a leather wallet." },
+        { "id": 2, "question": "Why does the customer ask for a discount?", "suggested_answer": "Because the item is over his budget and he cannot afford it." },
+        { "id": 3, "question": "What is the seller's first offer?", "suggested_answer": "The seller offers a ten percent discount." },
+        { "id": 4, "question": "What is the final discount percentage they agree on?", "suggested_answer": "They agree on a twenty percent discount." }
+      ]
+    },
+    {
+      "lesson_id": 24,
+      "topic": "Food & Drink",
+      "title": "Booking a Table",
+      "vocabulary": [
+        { "id": 1, "word": "Book", "type": "v", "ipa": "/bʊk/", "meaning": "Đặt trước (bàn, vé, phòng)" },
+        { "id": 2, "word": "Party", "type": "n", "ipa": "/ˈpɑːti/", "meaning": "Nhóm người, đoàn khách" },
+        { "id": 3, "word": "Window seat", "type": "n", "ipa": "/ˈwɪndəʊ siːt/", "meaning": "Chỗ ngồi cạnh cửa sổ" },
+        { "id": 4, "word": "Available", "type": "adj", "ipa": "/əˈveɪləbl/", "meaning": "Còn trống, sẵn có" },
+        { "id": 5, "word": "Fully booked", "type": "phrase", "ipa": "/ˈfʊli bʊkt/", "meaning": "Đã được đặt kín chỗ" }
+      ],
+      "dialogue": [
+        { "speaker": "Staff", "text": "Thank you for calling Sunrise Restaurant. How can I assist you?" },
+        { "speaker": "Customer", "text": "Hi, I'd like to book a table for a party of four this evening around 7:30 PM." },
+        { "speaker": "Staff", "text": "Let me check... Yes, we have a table available. Do you have any seating preference?" },
+        { "speaker": "Customer", "text": "Could we get a window seat with a nice view if possible?" },
+        { "speaker": "Staff", "text": "Certainly, sir. I have that reserved for you under the name David." }
+      ],
+      "story": {
+        "text": "David calls the Sunrise Restaurant because he wants to book a table for a party of four. The staff checks the schedule and finds an available spot at 7:30 PM. David requests a window seat for a better view, and the staff happily confirms his reservation."
+      },
+      "questions": [
+        { "id": 1, "question": "How many people are in the customer's party?", "suggested_answer": "There are four people in the party." },
+        { "id": 2, "question": "What time does the customer want to arrive?", "suggested_answer": "He wants to arrive around 7:30 PM this evening." },
+        { "id": 3, "question": "What kind of specific seat does the customer request?", "suggested_answer": "He requests a window seat with a nice view." },
+        { "id": 4, "question": "Under what name is the table reserved?", "suggested_answer": "It is reserved under the name David." }
+      ]
+    },
+    {
+      "lesson_id": 25,
+      "topic": "Work",
+      "title": "Calling in Sick",
+      "vocabulary": [
+        { "id": 1, "word": "Call in sick", "type": "phrase", "ipa": "/kɔːl ɪn sɪk/", "meaning": "Gọi điện xin nghỉ ốm" },
+        { "id": 2, "word": "Stomachache", "type": "n", "ipa": "/ˈstʌmək-eɪk/", "meaning": "Đau dạ dày, đau bụng" },
+        { "id": 3, "word": "Cover", "type": "v", "ipa": "/ˈkʌvər/", "meaning": "Làm thay việc, gánh vác hộ (cho ai)" },
+        { "id": 4, "word": "Shift", "type": "n", "ipa": "/ʃɪft/", "meaning": "Ca làm việc" },
+        { "id": 5, "word": "Recover", "type": "v", "ipa": "/rɪˈkʌvər/", "meaning": "Hồi phục sức khỏe" }
+      ],
+      "dialogue": [
+        { "speaker": "Supervisor", "text": "Hello, Peter speaking. How can I help you?" },
+        { "speaker": "Employee", "text": "Hi Peter, I'm calling in sick today. I have a terrible stomachache and can't get out of bed." },
+        { "speaker": "Supervisor", "text": "Oh, that sounds bad. Don't worry about work, just focus on resting." },
+        { "speaker": "Employee", "text": "Thank you. Do I need to find someone to cover my shift?" },
+        { "speaker": "Supervisor", "text": "No, I will handle it. Take some medicine and recover soon." }
+      ],
+      "story": {
+        "text": "An employee calls his supervisor to call in sick because a terrible stomachache keeps him in bed. The kind supervisor tells him not to worry about work. He offers to find another worker to cover the shift so the employee can recover soon."
+      },
+      "questions": [
+        { "id": 1, "question": "Why is the employee calling his supervisor?", "suggested_answer": "He is calling in sick today." },
+        { "id": 2, "question": "What health problem does the employee have?", "suggested_answer": "He has a terrible stomachache." },
+        { "id": 3, "question": "Does the employee need to find someone to cover his shift?", "suggested_answer": "No, the supervisor says he will handle it." },
+        { "id": 4, "question": "What advice does the supervisor give?", "suggested_answer": "He tells the employee to focus on resting, take medicine, and recover soon." }
+      ]
+    },
+    {
+      "lesson_id": 26,
+      "topic": "Travel",
+      "title": "Taking a Taxi",
+      "vocabulary": [
+        { "id": 1, "word": "Fare", "type": "n", "ipa": "/feər/", "meaning": "Tiền cước xe, tiền vé" },
+        { "id": 2, "word": "Keep the change", "type": "phrase", "ipa": "/kiːp ðə tʃeɪndʒ/", "meaning": "Giữ lại tiền thừa (tiền boa)" },
+        { "id": 3, "word": "Trunk", "type": "n", "ipa": "/trʌŋk/", "meaning": "Cốp xe ô tô" },
+        { "id": 4, "word": "Traffic jam", "type": "n", "ipa": "/ˈtræfɪk dʒæm/", "meaning": "Sự kẹt xe, tắc đường" },
+        { "id": 5, "word": "Drop off", "type": "phrase", "ipa": "/drɒp ɒf/", "meaning": "Thả (ai đó) xuống xe" }
+      ],
+      "dialogue": [
+        { "speaker": "Driver", "text": "Where to, sir?" },
+        { "speaker": "Passenger", "text": "Please take me to the central train station. Can we put my large bag in the trunk?" },
+        { "speaker": "Driver", "text": "Sure, let me help you with that. There's a bad traffic jam ahead, so it might take 20 minutes." },
+        { "speaker": "Passenger", "text": "That's fine, as long as I don't miss my train. Just drop me off at the main entrance." },
+        { "speaker": "Driver", "text": "Here we are. The fare is eighteen dollars." },
+        { "speaker": "Passenger", "text": "Here is twenty. Keep the change!" }
+      ],
+      "story": {
+        "text": "A passenger gets into a taxi and asks to go to the central train station. The driver helps him put his bag in the trunk and warns him about a traffic jam. Despite the traffic, they arrive safely. The passenger pays twenty dollars for an eighteen-dollar fare and tells the driver to keep the change."
+      },
+      "questions": [
+        { "id": 1, "question": "Where does the passenger want to go?", "suggested_answer": "He wants to go to the central train station." },
+        { "id": 2, "question": "Where do they store the large bag?", "suggested_answer": "They put it in the trunk of the car." },
+        { "id": 3, "question": "Why does the journey take twenty minutes?", "suggested_answer": "Because there is a bad traffic jam ahead." },
+        { "id": 4, "question": "How much tip does the driver receive?", "suggested_answer": "The driver receives two dollars as a tip because the passenger says 'keep the change'." }
+      ]
+    },
+    {
+      "lesson_id": 27,
+      "topic": "Health",
+      "title": "A Toothache at the Dentist",
+      "vocabulary": [
+        { "id": 1, "word": "Toothache", "type": "n", "ipa": "/ˈtuːθeɪk/", "meaning": "Cơn đau răng" },
+        { "id": 2, "word": "Cavity", "type": "n", "ipa": "/ˈkævəti/", "meaning": "Lỗ sâu răng" },
+        { "id": 3, "word": "Fill", "type": "v", "ipa": "/fɪl/", "meaning": "Trám răng, hàn răng" },
+        { "id": 4, "word": "Brushing", "type": "n", "ipa": "/ˈbrʌʃɪŋ/", "meaning": "Việc chải răng, đánh răng" },
+        { "id": 5, "word": "Floss", "type": "v/n", "ipa": "/flɒs/", "meaning": "Dùng chỉ nha khoa / Chỉ nha khoa" }
+      ],
+      "dialogue": [
+        { "speaker": "Dentist", "text": "Open wide, please. Which tooth is bothering you?" },
+        { "speaker": "Patient", "text": "This one on the lower left. The toothache keeps me awake all night." },
+        { "speaker": "Dentist", "text": "Ah, I see the problem. You have a small cavity here. I need to fill it." },
+        { "speaker": "Patient", "text": "Will it hurt, doctor?" },
+        { "speaker": "Dentist", "text": "Not at all, I will numb the area first. Remember to floss and practice better brushing habits." }
+      ],
+      "story": {
+        "text": "A patient visits the dentist because a severe toothache keeps him awake all night. The dentist examines his mouth and finds a small cavity on the lower left tooth. She tells him she needs to fill it, promises it won't hurt, and advises him to floss regularly."
+      },
+      "questions": [
+        { "id": 1, "question": "What problem brings the patient to the dentist?", "suggested_answer": "A severe toothache brings him there." },
+        { "id": 2, "question": "Where exactly is the pain located?", "suggested_answer": "It is on the lower left side of his mouth." },
+        { "id": 3, "question": "What is causing the toothache?", "suggested_answer": "A small cavity is causing the pain." },
+        { "id": 4, "question": "What dental care habits does the dentist recommend?", "suggested_answer": "She recommends better brushing habits and regular flossing." }
+      ]
+    },
+    {
+      "lesson_id": 28,
+      "topic": "Daily Life",
+      "title": "Withdrawing Cash from an ATM",
+      "vocabulary": [
+        { "id": 1, "word": "Insert", "type": "v", "ipa": "/ɪnˈsɜːt/", "meaning": "Đút vào, chèn vào" },
+        { "id": 2, "word": "PIN", "type": "n", "ipa": "/pɪn/", "meaning": "Mã số định danh cá nhân, mật khẩu thẻ" },
+        { "id": 3, "word": "Withdraw", "type": "v", "ipa": "/wɪðˈdrɔː/", "meaning": "Rút (tiền từ tài khoản)" },
+        { "id": 4, "word": "Fee", "type": "n", "ipa": "/fiː/", "meaning": "Phí dịch vụ" },
+        { "id": 5, "word": "Transaction", "type": "n", "ipa": "/trænˈzækʃn/", "meaning": "Giao dịch" }
+      ],
+      "dialogue": [
+        { "speaker": "Friend A", "text": "Hey, wait a second. I need to stop by this ATM to withdraw some cash." },
+        { "speaker": "Friend B", "text": "Sure, go ahead. Don't forget to hide the screen when you enter your PIN." },
+        { "speaker": "Friend A", "text": "Of course. Oh no, this machine charges a three-dollar transaction fee!" },
+        { "speaker": "Friend B", "text": "That's annoying. Do you want to find another bank's ATM nearby?" },
+        { "speaker": "Friend A", "text": "No, I don't have time. I'll just accept the fee and take out fifty dollars." }
+      ],
+      "story": {
+        "text": "A guy stops by an ATM to withdraw some quick cash. His close friend reminds him to cover his PIN for safety. The machine charges a three-dollar transaction fee, which annoys him, but since he lacks time to find another machine, he accepts the fee and takes out fifty dollars."
+      },
+      "questions": [
+        { "id": 1, "question": "Why does the guy stop at the ATM?", "suggested_answer": "He stops there to withdraw some cash." },
+        { "id": 2, "question": "What piece of safety advice does his friend give?", "suggested_answer": "He advises him to hide the screen when entering his PIN." },
+        { "id": 3, "question": "How much is the transaction fee for using this machine?", "suggested_answer": "The transaction fee is three dollars." },
+        { "id": 4, "question": "How much money does the guy withdraw in total?", "suggested_answer": "He withdraws fifty dollars." }
+      ]
+    },
+    {
+      "lesson_id": 29,
+      "topic": "Social",
+      "title": "Asking for Help with a Heavy Box",
+      "vocabulary": [
+        { "id": 1, "word": "Give a hand", "type": "phrase", "ipa": "/ɡɪv ə hænd/", "meaning": "Giúp một tay" },
+        { "id": 2, "word": "Heavy", "type": "adj", "ipa": "/ˈhevi/", "meaning": "Nặng nề" },
+        { "id": 3, "word": "Lift", "type": "v/n", "ipa": "/lɪft/", "meaning": "Nâng lên, nhấc lên" },
+        { "id": 4, "word": "Stairs", "type": "n", "ipa": "/steəz/", "meaning": "Bậc thang, cầu thang bộ" },
+        { "id": 5, "word": "Careful", "type": "adj", "ipa": "/ˈkeəfl/", "meaning": "Cẩn thận" }
+      ],
+      "dialogue": [
+        { "speaker": "A", "text": "Excuse me, could you give me a hand with this box? It's way too heavy." },
+        { "speaker": "B", "text": "Sure, I can help you lift it. Where does it go?" },
+        { "speaker": "A", "text": "Thank you so much. We need to carry it up to the third floor." },
+        { "speaker": "B", "text": "Oh, up the stairs? Alright, let's lift it together on three. One, two, three!" },
+        { "speaker": "A", "text": "Got it. Be careful, watch your step on the stairs." }
+      ],
+      "story": {
+        "text": "A person asks a friendly stranger to give him a hand because his box is way too heavy to lift alone. The stranger agrees to help him carry it up the stairs to the third floor. They coordinate their movements carefully and lift the heavy object together."
+      },
+      "questions": [
+        { "id": 1, "question": "Why does the person ask for assistance?", "suggested_answer": "Because the box is too heavy to lift alone." },
+        { "id": 2, "question": "What phrase does the person use to ask for help?", "suggested_answer": "He uses the phrase 'give me a hand'." },
+        { "id": 3, "question": "Where do they need to bring the heavy box?", "suggested_answer": "They need to carry it up to the third floor." },
+        { "id": 4, "question": "What warning does the owner of the box give while walking?", "suggested_answer": "He tells the helper to be careful and watch his step on the stairs." }
+      ]
+    },
+    {
+      "lesson_id": 30,
+      "topic": "Food & Drink",
+      "title": "A Friend Recommending a Restaurant",
+      "vocabulary": [
+        { "id": 1, "word": "Recommend", "type": "v", "ipa": "/ˌrekəˈmend/", "meaning": "Gợi ý, tiến cử, giới thiệu" },
+        { "id": 2, "word": "Seafood", "type": "n", "ipa": "/ˈsiːfuːd/", "meaning": "Hải sản" },
+        { "id": 3, "word": "Reasonable", "type": "adj", "ipa": "/ˈriːznəbl/", "meaning": "(Giá cả) hợp lý, phải chăng" },
+        { "id": 4, "word": "Service", "type": "n", "ipa": "/ˈsɜːvɪs/", "meaning": "Dịch vụ, sự phục vụ" },
+        { "id": 5, "word": "Atmosphere", "type": "n", "ipa": "/ˈætməsfɪər/", "meaning": "Bầu không khí" }
+      ],
+      "dialogue": [
+        { "speaker": "A", "text": "Do you know any good places to eat around here? I have a date tonight." },
+        { "speaker": "B", "text": "Oh, I highly recommend 'The Ocean Breeze'. Their seafood is incredibly fresh." },
+        { "speaker": "A", "text": "Is it very expensive? I don't want to blow my budget." },
+        { "speaker": "B", "text": "Not at all. The prices are very reasonable, and the atmosphere is cozy and romantic." },
+        { "speaker": "A", "text": "Perfect! That sounds exactly like what I'm looking for." }
+      ],
+      "story": {
+        "text": "A guy needs a great dining spot for his hot date tonight. His friend highly recommends a place called 'The Ocean Breeze' because they serve fresh seafood. She assures him that the prices stay reasonable and the cozy atmosphere makes it perfect for romance."
+      },
+      "questions": [
+        { "id": 1, "question": "Why is the guy looking for a restaurant recommendation?", "suggested_answer": "Because he has a date tonight." },
+        { "id": 2, "question": "What is the name of the recommended restaurant?", "suggested_answer": "The restaurant is named 'The Ocean Breeze'." },
+        { "id": 3, "question": "What kind of food is the restaurant famous for?", "suggested_answer": "It is famous for its fresh seafood." },
+        { "id": 4, "question": "How does the friend describe the restaurant's prices and atmosphere?", "suggested_answer": "She says the prices are reasonable and the atmosphere is cozy and romantic." }
+      ]
+    }
+  ]
+}
