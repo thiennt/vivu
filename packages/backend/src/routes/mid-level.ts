@@ -35,7 +35,12 @@ function setNoCacheHeaders(c: Context) {
 async function loadAllCycles() {
   const files = (await readdir(DATA_DIR))
     .filter((file) => /^lessons_\d+\.json$/.test(file))
-    .sort((a, b) => Number(a.match(/\d+/)?.[0] ?? 0) - Number(b.match(/\d+/)?.[0] ?? 0));
+    .map((file) => ({
+      file,
+      cycle: Number(file.match(/\d+/)?.[0] ?? 0)
+    }))
+    .sort((a, b) => a.cycle - b.cycle)
+    .map((item) => item.file);
 
   const cycles: MidLevelCycle[] = [];
 

@@ -373,12 +373,12 @@ router.post('/generate-text', async (c) => {
     }
 
     if (text.length > 5000) {
-      return c.json({ error: 'text is too long (max 5000 characters)' }, 400);
+      return c.json({ error: 'Text exceeds maximum length of 5000 characters' }, 400);
     }
 
     const normalizedVoice = voice === 'female' ? 'female' : 'male';
-    const identity = typeof key === 'string' && key.trim() ? key : hashText(text).slice(0, 16);
-    const titleForFilename = `${identity}_${hashText(text).slice(0, 8)}`;
+    const audioIdentifier = typeof key === 'string' && key.trim() ? key : hashText(text).slice(0, 16);
+    const titleForFilename = `${audioIdentifier}_${hashText(text).slice(0, 8)}`;
     const baseName = generateAudioFilename(titleForFilename, normalizedVoice);
 
     const mp3Filename = `${baseName}.mp3`;
