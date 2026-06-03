@@ -222,7 +222,12 @@
 
 	<section class="section-card">
 		<h2>Dialogue</h2>
-		<button class="text-toggle-btn" onclick={() => { showDialogueText = !showDialogueText; }}>
+		<button
+			class="text-toggle-btn"
+			onclick={() => { showDialogueText = !showDialogueText; }}
+			aria-expanded={showDialogueText}
+			aria-controls="dialogue-text"
+		>
 			{showDialogueText ? 'Hide text' : 'Show text'}
 		</button>
 		<div class="player-row">
@@ -250,7 +255,7 @@
 			{/if}
 		</div>
 		{#if showDialogueText}
-			<div class="dialogue-list">
+			<div class="dialogue-list" id="dialogue-text">
 				{#each data.lesson.dialogue ?? [] as line}
 					<p><strong>{line.speaker}:</strong> {line.text}</p>
 				{/each}
@@ -260,7 +265,12 @@
 
 	<section class="section-card">
 		<h2>Story</h2>
-		<button class="text-toggle-btn" onclick={() => { showStoryText = !showStoryText; }}>
+		<button
+			class="text-toggle-btn"
+			onclick={() => { showStoryText = !showStoryText; }}
+			aria-expanded={showStoryText}
+			aria-controls="story-text"
+		>
 			{showStoryText ? 'Hide text' : 'Show text'}
 		</button>
 		<div class="player-row">
@@ -288,7 +298,7 @@
 			{/if}
 		</div>
 		{#if showStoryText}
-			<p class="story">{data.lesson.story?.text}</p>
+			<p class="story" id="story-text">{data.lesson.story?.text}</p>
 		{/if}
 	</section>
 
