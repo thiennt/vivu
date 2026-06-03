@@ -2,6 +2,41 @@ import puter from '@heyputer/puter.js';
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000';
 
+const PUTER_VOICE_ALIASES = {
+	male: 'Matthew',
+	matthew: 'Matthew',
+	female: 'Joanna',
+	joanna: 'Joanna'
+};
+
+export const RECOMMENDED_ENGLISH_VOICE = 'Joanna';
+
+export const VOICE_OPTIONS = [
+	{ value: 'Joanna', label: 'Joanna (recommended for learning English)' },
+	{ value: 'Matthew', label: 'Matthew (deeper voice)' }
+];
+
+export function normalizePuterVoice(voice = RECOMMENDED_ENGLISH_VOICE) {
+	if (typeof voice !== 'string') {
+		return RECOMMENDED_ENGLISH_VOICE;
+	}
+
+	const trimmedVoice = voice.trim();
+	if (!trimmedVoice) {
+		return RECOMMENDED_ENGLISH_VOICE;
+	}
+
+	const normalizedVoice = trimmedVoice.toLowerCase();
+	if (normalizedVoice.includes('joanna') || normalizedVoice.includes('female')) {
+		return 'Joanna';
+	}
+	if (normalizedVoice.includes('matthew') || normalizedVoice.includes('male')) {
+		return 'Matthew';
+	}
+
+	return PUTER_VOICE_ALIASES[normalizedVoice] || trimmedVoice;
+}
+
 /**
  * Gemini TTS Provider (Server-Side)
  * Traditional backend generation flow
@@ -13,7 +48,7 @@ export const geminiProvider = {
 	/**
 	 * Generate audio using Gemini via backend API
 	 */
-	async generateSpeech(topicId, lessonId, text, voice = 'male') {
+	async generateSpeech(topicId, lessonId, text, voice = RECOMMENDED_ENGLISH_VOICE) {
 		try {
 			const response = await fetch(`${BACKEND_URL}/api/tts/generate`, {
 				method: 'POST',
@@ -48,7 +83,7 @@ export const puterProvider = {
 	 * Generate audio using Puter.js AI with voice selection
 	 * @returns {Promise<Blob|Object|string>} Audio response (typically Blob, but may be object with src or string URL)
 	 */
-	async generateAudioWithPuter(text, voice = 'male') {
+	async generateAudioWithPuter(text, voice = RECOMMENDED_ENGLISH_VOICE) {
 		try {
 			// Initialize Puter if needed
 			if (!puter.auth?.user) {
@@ -62,7 +97,7 @@ export const puterProvider = {
 			// Use US English as the language code
 			const languageCode = 'en-US';
 			// Map our voice selection to Puter.js voice names (AWS Polly voices)
-			const voiceName = voice === 'female' ? 'Joanna' : 'Matthew';
+			const voiceName = normalizePuterVoice(voice);
 			// Use neural engine for better quality
 			const engine = 'neural';
 
@@ -80,7 +115,7 @@ export const puterProvider = {
 	 * Flow: Generate → Play directly (no backend caching needed)
 	 * Voice selection is fully supported via Puter.js options
 	 */
-	async generateSpeech(topicId, lessonId, text = '', voice = 'male') {
+	async generateSpeech(topicId, lessonId, text = '', voice = RECOMMENDED_ENGLISH_VOICE) {
 		try {
 			// Generate audio directly with Puter.js using selected voice
 			console.log(`Generating audio with Puter.js using ${voice} voice...`);

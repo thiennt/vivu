@@ -37,6 +37,14 @@ const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 // Audio storage directory
 const AUDIO_DIR = join(__dirname, '../../audio');
 const MAX_TTS_TEXT_LENGTH = 5000;
+const GEMINI_VOICE_ALIASES: Record<string, string> = {
+  male: 'Guy',
+  matthew: 'Guy',
+  guy: 'Guy',
+  female: 'Ava',
+  joanna: 'Ava',
+  ava: 'Ava',
+};
 
 // Ensure audio directory exists
 async function ensureAudioDir() {
@@ -114,6 +122,27 @@ function generateAudioFilename(lessonTitle: string, voice: string = 'male'): str
   return `${baseName}_${voice}`;
 }
 
+function normalizeGeminiVoice(voice: string | undefined): string {
+  if (!voice) {
+    return 'Guy';
+  }
+
+  const normalizedVoice = voice.trim().toLowerCase();
+  if (normalizedVoice.includes('joanna') || normalizedVoice.includes('ava') || normalizedVoice.includes('female')) {
+    return 'Ava';
+  }
+  if (normalizedVoice.includes('matthew') || normalizedVoice.includes('guy') || normalizedVoice.includes('male')) {
+    return 'Guy';
+  }
+
+  const normalized = GEMINI_VOICE_ALIASES[normalizedVoice];
+  return normalized || 'Guy';
+}
+
+function getVoiceCacheKey(voice: string | undefined): 'male' | 'female' {
+  return normalizeGeminiVoice(voice) === 'Ava' ? 'female' : 'male';
+}
+
 /**
  * Generate audio using Gemini API and save to .wav file
  * @param voice - Voice option: 'male' (Neural2-J/Guy) or 'female' (Neural2-C/Ava)
@@ -128,7 +157,7 @@ async function generateAndSaveAudio(text: string, lessonTitle: string, voice: st
   // Map voice option to Gemini voice name
   // Option 1: American Male Young (Guy)
   // Option 2: American Female Young (Ava)
-  const voiceName = voice === 'female' ? 'Ava' : 'Guy';
+  const voiceName = normalizeGeminiVoice(voice);
 
   const response = await ai.models.generateContent({
     model: 'gemini-2.5-flash-preview-tts',
@@ -152,7 +181,7 @@ async function generateAndSaveAudio(text: string, lessonTitle: string, voice: st
   const audioBuffer = Buffer.from(data, 'base64');
 
   // Use lesson title and voice for filename to prevent cache conflicts
-  const baseName = generateAudioFilename(lessonTitle, voice);
+  const baseName = generateAudioFilename(lessonTitle, getVoiceCacheKey(voice));
   const filename = `${baseName}.wav`;
   const filepath = join(AUDIO_DIR, filename);
   await saveWaveFile(filepath, audioBuffer);
@@ -314,7 +343,7 @@ router.post('/generate', async (c) => {
 
     // Generate audio for the entire lesson content
     const text = lesson.content;
-    const baseName = generateAudioFilename(lesson.title, voice || 'male');
+    const baseName = generateAudioFilename(lesson.title, getVoiceCacheKey(voice));
 
     const mp3Filename = `${baseName}.mp3`;
     const wavFilename = `${baseName}.wav`;
@@ -344,7 +373,7 @@ router.post('/generate', async (c) => {
     }
 
     // Generate new audio
-    const filename = await generateAndSaveAudio(text, lesson.title, voice || 'male');
+    const filename = await generateAndSaveAudio(text, lesson.title, voice);
 
     return c.json({
       audioUrl: `/api/tts/audio/${filename}`,
@@ -377,7 +406,7 @@ router.post('/generate-text', async (c) => {
       return c.json({ error: `Text exceeds maximum length of ${MAX_TTS_TEXT_LENGTH} characters` }, 400);
     }
 
-    const normalizedVoice = voice === 'female' ? 'female' : 'male';
+    const normalizedVoice = getVoiceCacheKey(voice);
     const audioIdentifier = typeof key === 'string' && key.trim() ? key : hashText(text).slice(0, 16);
     const titleForFilename = `${audioIdentifier}_${hashText(text).slice(0, 8)}`;
     const baseName = generateAudioFilename(titleForFilename, normalizedVoice);
