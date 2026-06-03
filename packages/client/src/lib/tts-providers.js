@@ -2,13 +2,6 @@ import puter from '@heyputer/puter.js';
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000';
 
-const PUTER_VOICE_ALIASES = {
-	male: 'Matthew',
-	matthew: 'Matthew',
-	female: 'Joanna',
-	joanna: 'Joanna'
-};
-
 export const RECOMMENDED_ENGLISH_VOICE = 'Joanna';
 
 export const VOICE_OPTIONS = [
@@ -34,7 +27,7 @@ export function normalizePuterVoice(voice = RECOMMENDED_ENGLISH_VOICE) {
 		return 'Matthew';
 	}
 
-	return PUTER_VOICE_ALIASES[normalizedVoice] || trimmedVoice;
+	return RECOMMENDED_ENGLISH_VOICE;
 }
 
 /**

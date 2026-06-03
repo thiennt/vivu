@@ -45,6 +45,7 @@ const GEMINI_VOICE_ALIASES: Record<string, string> = {
   joanna: 'Ava',
   ava: 'Ava',
 };
+const DEFAULT_GEMINI_VOICE = 'Ava';
 
 // Ensure audio directory exists
 async function ensureAudioDir() {
@@ -124,7 +125,7 @@ function generateAudioFilename(lessonTitle: string, voice: string = 'male'): str
 
 function normalizeGeminiVoice(voice: string | undefined): string {
   if (!voice) {
-    return 'Guy';
+    return DEFAULT_GEMINI_VOICE;
   }
 
   const normalizedVoice = voice.trim().toLowerCase();
@@ -136,7 +137,7 @@ function normalizeGeminiVoice(voice: string | undefined): string {
   }
 
   const normalized = GEMINI_VOICE_ALIASES[normalizedVoice];
-  return normalized || 'Guy';
+  return normalized || DEFAULT_GEMINI_VOICE;
 }
 
 function getVoiceCacheKey(voice: string | undefined): 'male' | 'female' {
