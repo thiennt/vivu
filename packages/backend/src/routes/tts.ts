@@ -125,7 +125,7 @@ function generateAudioFilename(lessonTitle: string, voice: string = 'male'): str
 
 function getVoiceToken(voice: string | undefined): string {
   const trimmedVoice = voice?.trim() || '';
-  return trimmedVoice ? trimmedVoice.toLowerCase().match(/[a-z]+/)?.[0] || '' : '';
+  return trimmedVoice ? trimmedVoice.toLowerCase().match(/^[a-z]+/)?.[0] || '' : '';
 }
 
 function normalizeGeminiVoice(voice: string | undefined): string {
@@ -137,14 +137,17 @@ function getAudioFilenameCandidates(lessonTitle: string, voice: string | undefin
   const normalizedVoice = normalizeGeminiVoice(voice);
   const rawVoice = voice?.trim();
   const tokenVoice = getVoiceToken(voice);
+  const candidates = [generateAudioFilename(lessonTitle, normalizedVoice)];
 
-  return [...new Set([
-    generateAudioFilename(lessonTitle, normalizedVoice),
-    rawVoice ? generateAudioFilename(lessonTitle, rawVoice) : null,
-    tokenVoice && tokenVoice !== normalizedVoice.toLowerCase()
-      ? generateAudioFilename(lessonTitle, tokenVoice)
-      : null,
-  ].filter((value): value is string => Boolean(value)))];
+  if (rawVoice) {
+    candidates.push(generateAudioFilename(lessonTitle, rawVoice));
+  }
+
+  if (tokenVoice && tokenVoice !== normalizedVoice.toLowerCase()) {
+    candidates.push(generateAudioFilename(lessonTitle, tokenVoice));
+  }
+
+  return [...new Set(candidates)];
 }
 
 async function findExistingAudioFilename(baseNames: string[]): Promise<string | null> {
