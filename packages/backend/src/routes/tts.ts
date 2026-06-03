@@ -36,6 +36,7 @@ const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 // Audio storage directory
 const AUDIO_DIR = join(__dirname, '../../audio');
+const MAX_TTS_TEXT_LENGTH = 5000;
 
 // Ensure audio directory exists
 async function ensureAudioDir() {
@@ -372,8 +373,8 @@ router.post('/generate-text', async (c) => {
       return c.json({ error: 'text is required' }, 400);
     }
 
-    if (text.length > 5000) {
-      return c.json({ error: 'Text exceeds maximum length of 5000 characters' }, 400);
+    if (text.length > MAX_TTS_TEXT_LENGTH) {
+      return c.json({ error: `Text exceeds maximum length of ${MAX_TTS_TEXT_LENGTH} characters` }, 400);
     }
 
     const normalizedVoice = voice === 'female' ? 'female' : 'male';
