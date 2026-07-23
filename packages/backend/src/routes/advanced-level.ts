@@ -36,12 +36,7 @@ function setNoCacheHeaders(c: Context) {
 async function loadAllLessons(): Promise<AdvancedLesson[]> {
   const files = (await readdir(DATA_DIR))
     .filter((file) => /^lessons_part\d+\.json$/.test(file))
-    .map((file) => {
-      const match = file.match(/\d+/);
-      if (!match) return null;
-      return { file, part: Number(match[0]) };
-    })
-    .filter((item): item is { file: string; part: number } => item !== null)
+    .map((file) => ({ file, part: Number(file.match(/\d+/)![0]) }))
     .sort((a, b) => a.part - b.part)
     .map((item) => item.file);
 
