@@ -1,0 +1,1002 @@
+[
+  {
+    "lesson_id": 11,
+    "title": "Handling System Outages (Xử lý sự cố hệ thống)",
+    "category": "Workplace",
+    "topic": "IT Operations & Escalation",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 135,
+      "duration_seconds": 38,
+      "speakers": ["David (DevOps)", "Sarah (Tech Lead)"]
+    },
+    "script": [
+      {
+        "speaker_id": "David",
+        "text": "Sarah, we've just run into a glitch with the authentication server.",
+        "vietnamese": "Sarah, chúng ta vừa gặp sự cố nhỏ với máy chủ xác thực."
+      },
+      {
+        "speaker_id": "Sarah",
+        "text": "Is it affecting live users? We need to know if everything is still on track for today's release.",
+        "vietnamese": "Nó có đang ảnh hưởng tới người dùng thật không? Chúng ta cần biết liệu mọi thứ có còn đúng tiến độ cho bản phát hành hôm nay không."
+      },
+      {
+        "speaker_id": "David",
+        "text": "It's isolated for now, but I might need to push the deadline back by a couple of hours.",
+        "vietnamese": "Hiện tại nó đang được cô lập, nhưng tôi có thể cần lùi thời hạn lại một vài tiếng."
+      },
+      {
+        "speaker_id": "Sarah",
+        "text": "Understood. Keep me posted so I can touch base with the product manager.",
+        "vietnamese": "Đã hiểu. Hãy cập nhật cho tôi để tôi có thể trao đổi ngắn với quản lý sản phẩm."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "run into a glitch",
+        "ipa_connected": "/rʌnˈɪn.tu.ə.ɡlɪtʃ/",
+        "technique": "Linking consonant to vowel (run -> into -> a)",
+        "note": "Nối liền âm 'n' cuối từ run sang 'in' và 'oo' sang 'a'."
+      },
+      {
+        "phrase": "push the deadline back",
+        "ipa_connected": "/pʊʃ ðə ˈded.laɪn bæk/",
+        "technique": "Stop consonant /d/ soften",
+        "note": "Giảm bớt lực bật âm /d/ ở từ deadline trước khi sang /b/."
+      },
+      {
+        "phrase": "touch base",
+        "ipa_connected": "/tʌtʃ beɪs/",
+        "technique": "Affricate transition",
+        "note": "Phát âm dứt khoát âm /tʃ/ trước khi chuyển sang âm /b/."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "run into a glitch",
+        "type": "Phrase",
+        "meaning": "Gặp sự cố kỹ thuật nhỏ",
+        "example": "We ran into a glitch during the server migration."
+      },
+      {
+        "phrase": "on track",
+        "type": "Idiom",
+        "meaning": "Đúng tiến độ",
+        "example": "Despite the delay, the project is still on track."
+      },
+      {
+        "phrase": "push the deadline back",
+        "type": "Phrase",
+        "meaning": "Lùi thời hạn",
+        "example": "They had to push the deadline back due to pending approvals."
+      },
+      {
+        "phrase": "touch base",
+        "type": "Idiom",
+        "meaning": "Trao đổi nhanh / Cập nhật tình hình",
+        "example": "Let's touch base tomorrow morning before the sprint planning."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Nối âm nhanh ở cụm 'run into a glitch' và giữ nhịp điệu tự nhiên khi trình bày sự cố.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What went wrong with the authentication server?",
+        "Why does Sarah need to touch base with the product manager?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Gửi tin nhắn Slack báo cáo sự cố server cho Tech Lead.",
+        "text": "Hi Sarah, we ran into a glitch with the auth server. Might need to push the deadline back by 2 hours. I'll touch base once resolved.",
+        "vietnamese": "Chào Sarah, chúng tôi vừa gặp sự cố với server xác thực. Có thể cần lùi thời hạn lại 2 tiếng. Tôi sẽ cập nhật lại sau khi khắc phục xong."
+      },
+      "email_template": {
+        "context": "Email thông báo hoãn thời hạn do sự cố hệ thống.",
+        "text": "Dear Sarah,\n\nWe have encountered a minor system glitch during today's deployment. To ensure system stability, we will push the deadline back to 5 PM today. Everything else remains on track.\n\nBest regards,\nDavid",
+        "vietnamese": "Kính gửi Sarah,\n\nChúng tôi gặp sự cố hệ thống nhỏ trong đợt triển khai hôm nay. Để đảm bảo tính ổn định, chúng tôi sẽ lùi thời hạn sang 5 giờ chiều nay. Mọi việc khác vẫn đúng tiến độ.\n\nTrân trọng,\nDavid"
+      }
+    }
+  },
+  {
+    "lesson_id": 12,
+    "title": "Budget Revision Meeting (Họp điều chỉnh ngân sách)",
+    "category": "Workplace",
+    "topic": "Finance & Planning",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 138,
+      "duration_seconds": 40,
+      "speakers": ["Alex (Finance Manager)", "Elena (Marketing Lead)"]
+    },
+    "script": [
+      {
+        "speaker_id": "Alex",
+        "text": "Elena, I know you're tied up with the campaign launch, but we need to talk about Q3 budget.",
+        "vietnamese": "Elena, tôi biết cô đang bận bù đầu với việc ra mắt chiến dịch, nhưng chúng ta cần bàn về ngân sách quý 3."
+      },
+      {
+        "speaker_id": "Elena",
+        "text": "Sure. Are we still on track with the allocation for social ads?",
+        "vietnamese": "Được chứ. Chúng ta vẫn đi đúng tiến độ phân bổ cho quảng cáo mạng xã hội chứ?"
+      },
+      {
+        "speaker_id": "Alex",
+        "text": "Not quite. Higher operational costs forced us to push some spending back to Q4.",
+        "vietnamese": "Không hẳn. Chi phí vận hành cao hơn buộc chúng ta phải dời một khoản chi sang quý 4."
+      },
+      {
+        "speaker_id": "Elena",
+        "text": "I see. Let's touch base later today to reallocate the remaining funds.",
+        "vietnamese": "Tôi hiểu rồi. Chiều nay hãy trao đổi nhanh lại để phân bổ lại số tiền còn lại."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "tied up with",
+        "ipa_connected": "/taɪd ʌp wɪð/",
+        "technique": "Flap T / Linking",
+        "note": "Nối âm /d/ trong 'tied' sang 'up' thành /taɪ.dʌp/."
+      },
+      {
+        "phrase": "on track with",
+        "ipa_connected": "/ɒn træk wɪð/",
+        "technique": "Consonant cluster blur",
+        "note": "Chuyển từ âm /k/ sang âm /w/ mượt mà mà không dừng quá lâu."
+      },
+      {
+        "phrase": "push some spending back",
+        "ipa_connected": "/pʊʃ sʌm ˈspend.ɪŋ bæk/",
+        "technique": "Rhythm and stress",
+        "note": "Nhấn mạnh vào từ 'spending' và 'back'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "tied up with",
+        "type": "Idiom",
+        "meaning": "Bận rộn với công việc gì",
+        "example": "I was tied up with client meetings all morning."
+      },
+      {
+        "phrase": "on track",
+        "type": "Idiom",
+        "meaning": "Đúng kế hoạch/tiến độ",
+        "example": "The marketing expenses are on track."
+      },
+      {
+        "phrase": "push spending back",
+        "type": "Phrase",
+        "meaning": "Hoãn khoản chi tiêu",
+        "example": "Management decided to push spending back until revenue improves."
+      },
+      {
+        "phrase": "touch base",
+        "type": "Idiom",
+        "meaning": "Liên lạc / Trao đổi ngắn",
+        "example": "I'll touch base with the accounting team tomorrow."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện ngữ điệu chuyên nghiệp, tự tin khi thảo luận các con số tài chính.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "Why did Alex need to meet Elena despite her busy schedule?",
+        "What decision was made regarding Q3 advertising spending?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Gửi tin nhắn hẹn họp ngắn bàn về ngân sách.",
+        "text": "Hi Elena, know you're tied up with the campaign, but can we touch base at 3 PM to review Q3 budget adjustments?",
+        "vietnamese": "Chào Elena, biết cô đang bận bù đầu với chiến dịch, nhưng chiều nay 3h chúng ta có thể trao đổi nhanh để xem xét điều chỉnh ngân sách quý 3 không?"
+      },
+      "email_template": {
+        "context": "Email chính thức đề xuất điều chỉnh kế hoạch ngân sách quý.",
+        "text": "Hi Elena,\n\nDue to unexpected operational expenses, we need to push back part of the Q3 marketing budget to Q4. Let us touch base this afternoon to ensure our overall targets remain on track.\n\nBest,\nAlex",
+        "vietnamese": "Chào Elena,\n\nDo chi phí vận hành ngoài dự kiến, chúng ta cần lùi một phần ngân sách marketing quý 3 sang quý 4. Hãy trao đổi ngắn vào chiều nay để đảm bảo các mục tiêu chung vẫn đúng tiến độ.\n\nThân mến,\nAlex"
+      }
+    }
+  },
+  {
+    "lesson_id": 13,
+    "title": "Vendor Negotiation (Thương lượng với nhà cung cấp)",
+    "category": "Workplace",
+    "topic": "Procurement & Contracts",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 140,
+      "duration_seconds": 42,
+      "speakers": ["Mark (Procurement Leader)", "Sophia (Vendor Rep)"]
+    },
+    "script": [
+      {
+        "speaker_id": "Mark",
+        "text": "Sophia, we ran into a glitch during the last hardware delivery.",
+        "vietnamese": "Sophia, chúng tôi gặp sự cố với đợt giao hàng thiết bị vừa rồi."
+      },
+      {
+        "speaker_id": "Sophia",
+        "text": "I apologize for that. Our logistics team was completely tied up with annual audits.",
+        "vietnamese": "Tôi rất xin lỗi về điều đó. Đội ngũ logistics của chúng tôi hoàn toàn bận rộn với các đợt kiểm toán hàng năm."
+      },
+      {
+        "speaker_id": "Mark",
+        "text": "I understand, but if this continues, we'll have to push the contract renewal back.",
+        "vietnamese": "Tôi hiểu, nhưng nếu việc này tiếp diễn, chúng tôi sẽ phải hoãn việc gia hạn hợp đồng."
+      },
+      {
+        "speaker_id": "Sophia",
+        "text": "Rest assured, we will take steps to ensure all future deliveries stay on track.",
+        "vietnamese": "Xin hãy yên tâm, chúng tôi sẽ có các biện pháp đảm bảo mọi đợt giao hàng tương lai luôn đúng tiến độ."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "ran into a glitch",
+        "ipa_connected": "/ræn ˈɪn.tu.ə ɡlɪtʃ/",
+        "technique": "Vowel linking",
+        "note": "Nối mượt âm /n/ từ 'ran' sang 'into'."
+      },
+      {
+        "phrase": "completely tied up with",
+        "ipa_connected": "/kəmˈpliːt.li taɪd ʌp wɪð/",
+        "technique": "Consonant-to-vowel connection",
+        "note": "Âm /d/ nối sang 'up' nghe tự nhiên."
+      },
+      {
+        "phrase": "stay on track",
+        "ipa_connected": "/steɪ ɒn træk/",
+        "technique": "Continuance flow",
+        "note": "Âm /eɪ/ nối nhẹ sang /ɒ/ của từ 'on'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "run into a glitch",
+        "type": "Phrase",
+        "meaning": "Gặp trục trặc",
+        "example": "Our shipment ran into a glitch at customs."
+      },
+      {
+        "phrase": "tied up with",
+        "type": "Idiom",
+        "meaning": "Bận bịu với",
+        "example": "The supply manager was tied up with inventory checks."
+      },
+      {
+        "phrase": "push back",
+        "type": "Phrasal Verb",
+        "meaning": "Hoãn / Lùi lại",
+        "example": "We had to push back the sign-off date."
+      },
+      {
+        "phrase": "stay on track",
+        "type": "Idiom",
+        "meaning": "Duy trì đúng tiến độ",
+        "example": "We need daily standups to ensure the rollout stays on track."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện ngữ điệu đàm phán kiên quyết nhưng vẫn lịch sự.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What caused the delay in the hardware delivery?",
+        "What consequence did Mark mention if future shipments are delayed?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Cập nhật tình hình đàm phán hợp đồng cho cấp trên qua Slack.",
+        "text": "Hi team, met with Sophia regarding the delivery glitch. She promised future orders will stay on track, so we don't need to push the renewal back yet.",
+        "vietnamese": "Chào team, vừa họp với Sophia về sự cố giao hàng. Cô ấy hứa các đơn hàng sau sẽ đúng tiến độ, nên chúng ta chưa cần hoãn gia hạn hợp đồng."
+      },
+      "email_template": {
+        "context": "Email gửi nhà cung cấp cảnh báo về vấn đề tiến độ.",
+        "text": "Dear Sophia,\n\nFollowing our discussion today regarding the hardware delivery glitch, please ensure your fulfillment team keeps future orders on track. Otherwise, we will be forced to push back our contract negotiations.\n\nRegards,\nMark",
+        "vietnamese": "Thân gửi Sophia,\n\nTiếp nối trao đổi hôm nay về sự cố giao hàng thiết bị, vui lòng đảm bảo đội xử lý đơn hàng của bạn giữ đúng tiến độ cho các đơn tiếp theo. Nếu không, chúng tôi buộc phải lùi thời gian thương lượng hợp đồng.\n\nTrân trọng,\nMark"
+      }
+    }
+  },
+  {
+    "lesson_id": 14,
+    "title": "Weekend Apartment Moving (Chuyển nhà cuối tuần)",
+    "category": "Daily Life",
+    "topic": "Housing & Personal Logistics",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 130,
+      "duration_seconds": 36,
+      "speakers": ["Ben", "Chloe"]
+    },
+    "script": [
+      {
+        "speaker_id": "Ben",
+        "text": "Hey Chloe, are we still on track to finish packing by Saturday?",
+        "vietnamese": "Này Chloe, chúng ta vẫn đúng tiến độ đóng gói xong trước thứ Bảy chứ?"
+      },
+      {
+        "speaker_id": "Chloe",
+        "text": "I was tied up with work yesterday, so I am a bit behind schedule.",
+        "vietnamese": "Hôm qua tớ bận bù đầu với công việc, nên giờ hơi bị trễ tiến độ một chút."
+      },
+      {
+        "speaker_id": "Ben",
+        "text": "No worries! Should we push the moving truck rental back to Sunday?",
+        "vietnamese": "Đừng lo! Hay là chúng ta lùi lịch thuê xe tải chuyển nhà sang Chủ Nhật nhé?"
+      },
+      {
+        "speaker_id": "Chloe",
+        "text": "That sounds great. Let's touch base tomorrow morning to finalize everything.",
+        "vietnamese": "Nghe hay đấy. Sáng mai trao đổi lại để chốt mọi thứ nhé."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "on track to",
+        "ipa_connected": "/ɒn træk tu/",
+        "technique": "Unreleased K",
+        "note": "Âm /k/ ở 'track' không bật hơi mạnh mà khép nhanh lưỡi."
+      },
+      {
+        "phrase": "tied up with",
+        "ipa_connected": "/taɪd ʌp wɪð/",
+        "technique": "Smooth linking",
+        "note": "Nối liền 'tied' và 'up' thành /taɪ.dʌp/."
+      },
+      {
+        "phrase": "push the moving truck back",
+        "ipa_connected": "/pʊʃ ðə ˈmuː.vɪŋ trʌk bæk/",
+        "technique": "Rhythm and emphasis",
+        "note": "Nhấn giọng vào 'truck' và 'back'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "on track",
+        "type": "Idiom",
+        "meaning": "Đúng kế hoạch dự kiến",
+        "example": "We are on track to arrive by noon."
+      },
+      {
+        "phrase": "tied up with",
+        "type": "Idiom",
+        "meaning": "Bận bịu công việc",
+        "example": "I'm sorry I missed your call; I was tied up with chores."
+      },
+      {
+        "phrase": "push back",
+        "type": "Phrasal Verb",
+        "meaning": "Dời lịch, hoãn lại",
+        "example": "Can we push our lunch back by 30 minutes?"
+      },
+      {
+        "phrase": "touch base",
+        "type": "Idiom",
+        "meaning": "Trò chuyện / Liên lạc nhanh",
+        "example": "I'll touch base with you after my doctor's appointment."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Ngữ điệu giao tiếp đời thường nhẹ nhàng, tự nhiên giữa bạn bè.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "Why is Chloe behind schedule with packing?",
+        "What solution does Ben offer?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Nhắn tin qua ứng dụng chat cá nhân hoãn giờ hẹn với bạn.",
+        "text": "Hey, tied up with packing today. Can we push our coffee back to Sunday? Let's touch base tomorrow!",
+        "vietnamese": "Này, hôm nay tớ bận dọn đồ quá. Lùi hẹn cà phê sang Chủ Nhật được không? Sáng mai trao đổi nhé!"
+      },
+      "email_template": {
+        "context": "Email gửi dịch vụ chuyển nhà xin lùi ngày đặt xe.",
+        "text": "Dear Moving Team,\n\nDue to unexpected work commitments, I need to push my moving reservation back from Saturday to Sunday. Please let me know if your truck remains available.\n\nBest regards,\nChloe",
+        "vietnamese": "Kính gửi Đội dịch vụ chuyển nhà,\n\nDo có công việc đột xuất, tôi cần lùi lịch đặt xe chuyển nhà từ thứ Bảy sang Chủ Nhật. Vui lòng cho tôi biết nếu xe vẫn còn trống.\n\nTrân trọng,\nChloe"
+      }
+    }
+  },
+  {
+    "lesson_id": 15,
+    "title": "Planning a Dinner Party (Lên kế hoạch tiệc tối)",
+    "category": "Daily Life",
+    "topic": "Social Events & Hosting",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 132,
+      "duration_seconds": 37,
+      "speakers": ["Liam", "Emma"]
+    },
+    "script": [
+      {
+        "speaker_id": "Liam",
+        "text": "Emma, we ran into a glitch with the oven, so baking the roast might take longer.",
+        "vietnamese": "Emma, cái lò nướng lại bị lỗi rồi, nên nướng thịt có thể mất nhiều thời gian hơn đấy."
+      },
+      {
+        "speaker_id": "Emma",
+        "text": "Oh no! Should we push the dinner invitation back by an hour?",
+        "vietnamese": "Ôi không! Chúng ta có nên lùi giờ mời khách ăn tối lại một tiếng không?"
+      },
+      {
+        "speaker_id": "Liam",
+        "text": "I think so. I am tied up with preparing the starters anyway.",
+        "vietnamese": "Anh nghĩ nên vậy. Dù sao thì anh cũng đang bận bù đầu với việc làm món khai vị."
+      },
+      {
+        "speaker_id": "Emma",
+        "text": "Okay, I will touch base with the guests now so everyone stays on track.",
+        "vietnamese": "Được rồi, em sẽ nhắn nhanh cho các khách mời ngay bây giờ để mọi người nắm đúng lịch."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "ran into a glitch",
+        "ipa_connected": "/ræn ˈɪn.tu.ə ɡlɪtʃ/",
+        "technique": "Vowel linking",
+        "note": "Âm /n/ nối mượt sang 'into'."
+      },
+      {
+        "phrase": "push the dinner invitation back",
+        "ipa_connected": "/pʊʃ ðə ˈdɪn.ər ˌɪn.vɪˈteɪ.ʃən bæk/",
+        "technique": "Stress emphasis",
+        "note": "Giữ nhịp nhấn ở 'invitation' và 'back'."
+      },
+      {
+        "phrase": "touch base with",
+        "ipa_connected": "/tʌtʃ beɪs wɪð/",
+        "technique": "Consonant transition",
+        "note": "Kết thúc /tʃ/ rõ rồi chuyển sang /b/."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "run into a glitch",
+        "type": "Phrase",
+        "meaning": "Gặp trục trặc kĩ thuật nhỏ",
+        "example": "The recipe ran into a glitch when the power went out."
+      },
+      {
+        "phrase": "push back",
+        "type": "Phrasal Verb",
+        "meaning": "Lùi thời gian",
+        "example": "Let's push back the movie time."
+      },
+      {
+        "phrase": "tied up with",
+        "type": "Idiom",
+        "meaning": "Bận rộn làm việc gì",
+        "example": "She was tied up with decorating the living room."
+      },
+      {
+        "phrase": "touch base",
+        "type": "Idiom",
+        "meaning": "Báo tin / Trao đổi thông tin",
+        "example": "Let me touch base with you before ordering food."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Chú ý âm điệu giao tiếp ấm áp, sinh động khi tổ chức tiệc.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What happened to the oven during dinner prep?",
+        "How will Emma inform the guests about the delay?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn nhóm chat bạn bè thông báo lùi giờ ăn tối.",
+        "text": "Hey guys, ran into a glitch with the oven! Let's push dinner back to 7:30 PM. See you all soon!",
+        "vietnamese": "Mọi người ơi, cái lò nướng bị lỗi chút! Lùi giờ ăn tối sang 7 rưỡi nhé. Hẹn gặp lại mọi người sớm!"
+      },
+      "email_template": {
+        "context": "Email mời ăn tối gia đình điều chỉnh lại thời gian.",
+        "text": "Hi Everyone,\n\nWe ran into a minor glitch with our kitchen appliances tonight. To ensure everything is ready, we are pushing the dinner start time back by one hour. Everything else is on track!\n\nBest,\nEmma",
+        "vietnamese": "Chào cả nhà,\n\nTối nay nhà mình gặp chút trục trặc với thiết bị bếp. Để đảm bảo mọi thứ chuẩn bị chu đáo, chúng mình sẽ lùi giờ ăn tối lại 1 tiếng. Mọi thứ khác vẫn đúng kế hoạch!\n\nThân mến,\nEmma"
+      }
+    }
+  },
+  {
+    "lesson_id": 16,
+    "title": "Software Bug Triage (Phân loại lỗi phần mềm)",
+    "category": "Workplace",
+    "topic": "Software Engineering & QA",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 142,
+      "duration_seconds": 41,
+      "speakers": ["Jason (QA Lead)", "Rachel (Senior Dev)"]
+    },
+    "script": [
+      {
+        "speaker_id": "Jason",
+        "text": "Rachel, our team ran into a glitch in the payment gateway during testing.",
+        "vietnamese": "Rachel, đội của tôi vừa gặp lỗi ở cổng thanh toán trong quá trình kiểm thử."
+      },
+      {
+        "speaker_id": "Rachel",
+        "text": "That's critical. I'm currently tied up with the database optimization, but I'll prioritize this.",
+        "vietnamese": "Vấn đề đó rất nghiêm trọng. Hiện tôi đang bận tối mắt với tối ưu hóa cơ sở dữ liệu, nhưng tôi sẽ ưu tiên việc này."
+      },
+      {
+        "speaker_id": "Jason",
+        "text": "Do we need to push the deployment deadline back?",
+        "vietnamese": "Chúng ta có cần lùi thời hạn triển khai lại không?"
+      },
+      {
+        "speaker_id": "Rachel",
+        "text": "If I can patch it by noon, we will still be on track. I'll touch base with you after testing the fix.",
+        "vietnamese": "Nếu tôi sửa xong trước giữa trưa, chúng ta vẫn đúng tiến độ. Tôi sẽ trao đổi lại với ông sau khi kiểm thử bản sửa lỗi."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "ran into a glitch",
+        "ipa_connected": "/ræn ˈɪn.tu.ə ɡlɪtʃ/",
+        "technique": "Linking consonants",
+        "note": "Nối liền 'ran' sang 'into'."
+      },
+      {
+        "phrase": "tied up with",
+        "ipa_connected": "/taɪd ʌp wɪð/",
+        "technique": "Consonant to vowel",
+        "note": "Phát âm liền mạch giữa 'tied' và 'up'."
+      },
+      {
+        "phrase": "touch base with you",
+        "ipa_connected": "/tʌtʃ beɪs wɪð juː/",
+        "technique": "Elision / Assimilation",
+        "note": "Nối mượt 'with' sang 'you' (/wɪðju/). "
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "run into a glitch",
+        "type": "Phrase",
+        "meaning": "Gặp sự cố phần mềm",
+        "example": "Users ran into a glitch during checkout."
+      },
+      {
+        "phrase": "tied up with",
+        "type": "Idiom",
+        "meaning": "Bận rộn với tác vụ khác",
+        "example": "The lead dev is tied up with security patches."
+      },
+      {
+        "phrase": "push back",
+        "type": "Phrasal Verb",
+        "meaning": "Hoãn / Dời lịch phát hành",
+        "example": "We can't push back the release date again."
+      },
+      {
+        "phrase": "on track",
+        "type": "Idiom",
+        "meaning": "Đúng tiến độ kỹ thuật",
+        "example": "The sprint goals remain on track."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Rèn luyện âm điệu chuyên nghiệp, tốc độ nói nhanh vừa phải của môi trường công nghệ.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "Where was the glitch detected by the QA team?",
+        "When will Rachel touch base with Jason again?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Gửi tin nhắn trên channel Jira/Dev thông báo khẩn.",
+        "text": "Ran into a glitch in payment gateway. Rachel is looking into it. Hope to stay on track without pushing the deployment back.",
+        "vietnamese": "Gặp sự cố ở cổng thanh toán. Rachel đang kiểm tra. Hy vọng vẫn giữ đúng tiến độ mà không cần lùi lịch triển khai."
+      },
+      "email_template": {
+        "context": "Email báo cáo tình hình xử lý bug cho Project Manager.",
+        "text": "Hi Jason,\n\nRegarding the payment gateway glitch, I am currently addressing it. If the fix succeeds by noon, our deployment schedule remains on track. I will touch base as soon as testing finishes.\n\nBest regards,\nRachel",
+        "vietnamese": "Chào Jason,\n\nLiên quan đến lỗi cổng thanh toán, tôi hiện đang xử lý. Nếu khắc phục xong trước 12h trưa, lịch triển khai của chúng ta vẫn đúng tiến độ. Tôi sẽ cập nhật lại ngay khi việc kiểm thử hoàn tất.\n\nTrân trọng,\nRachel"
+      }
+    }
+  },
+  {
+    "lesson_id": 17,
+    "title": "Quarterly Performance Review (Đánh giá hiệu suất quý)",
+    "category": "Workplace",
+    "topic": "Human Resources & Management",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 136,
+      "duration_seconds": 39,
+      "speakers": ["Karen (HR Director)", "Tom (Team Lead)"]
+    },
+    "script": [
+      {
+        "speaker_id": "Karen",
+        "text": "Tom, are all your team's self-evaluations on track for submission today?",
+        "vietnamese": "Tom, tất cả các bản tự đánh giá của team ông đã đúng tiến độ để nộp hôm nay chưa?"
+      },
+      {
+        "speaker_id": "Tom",
+        "text": "Most are done, but two engineers were tied up with an emergency server migration.",
+        "vietnamese": "Hầu hết đã xong, nhưng hai kỹ sư bị bận bù đầu với việc chuyển đổi máy chủ khẩn cấp."
+      },
+      {
+        "speaker_id": "Karen",
+        "text": "I see. Can we push their review meetings back to Friday?",
+        "vietnamese": "Tôi hiểu. Chúng ta có thể lùi lịch họp đánh giá của họ sang thứ Sáu không?"
+      },
+      {
+        "speaker_id": "Tom",
+        "text": "That works. I will touch base with them today to ensure they submit everything by tomorrow.",
+        "vietnamese": "Thế thì tốt quá. Tôi sẽ trao đổi với họ hôm nay để đảm bảo họ nộp mọi thứ trước ngày mai."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "on track for",
+        "ipa_connected": "/ɒn træk fər/",
+        "technique": "Weak form of 'for'",
+        "note": "Phát âm nhẹ từ 'for' thành /fər/."
+      },
+      {
+        "phrase": "tied up with an",
+        "ipa_connected": "/taɪd ʌp wɪð ən/",
+        "technique": "Continuous linking",
+        "note": "Nối liền 'tied' -> 'up' -> 'with' -> 'an'."
+      },
+      {
+        "phrase": "push their review meetings back",
+        "ipa_connected": "/pʊʃ ðɛər rɪˈvjuː ˈmiː.tɪŋz bæk/",
+        "technique": "Rhythm focus",
+        "note": "Nhấn rõ vào 'review', 'meetings' và 'back'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "on track",
+        "type": "Idiom",
+        "meaning": "Đúng tiến độ quy định",
+        "example": "All performance reports are on track."
+      },
+      {
+        "phrase": "tied up with",
+        "type": "Idiom",
+        "meaning": "Bận rộn với dự án khác",
+        "example": "The manager was tied up with interviews all afternoon."
+      },
+      {
+        "phrase": "push back",
+        "type": "Phrasal Verb",
+        "meaning": "Dời lịch hẹn/cuộc họp",
+        "example": "We should push back the meeting until everyone arrives."
+      },
+      {
+        "phrase": "touch base",
+        "type": "Idiom",
+        "meaning": "Liên lạc để cập nhật",
+        "example": "I'll touch base with HR regarding the new policy."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Giữ ngữ điệu trang trọng, chuyên nghiệp đúng tác phong nhân sự.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "Why were two engineers unable to submit their evaluations on time?",
+        "When will Tom touch base with his team members?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Nhắc nhở thành viên trong team nộp báo cáo đánh giá.",
+        "text": "Hi team, know you've been tied up, but please submit evaluations by tomorrow so we stay on track. Let me know if we need to push your 1-on-1 back.",
+        "vietnamese": "Chào team, biết mọi người đang bận bù đầu, nhưng vui lòng nộp đánh giá trước ngày mai để giữ đúng tiến độ nhé. Báo anh biết nếu cần lùi lịch họp 1-1."
+      },
+      "email_template": {
+        "context": "Email gửi HR đề xuất lùi lịch họp đánh giá hiệu suất.",
+        "text": "Dear Karen,\n\nDue to the ongoing migration, a few team members are currently tied up. May we push their performance review sessions back to Friday? I will touch base with you tomorrow with their completed forms.\n\nBest regards,\nTom",
+        "vietnamese": "Kính gửi Karen,\n\nDo đợt chuyển đổi hệ thống đang diễn ra, một số thành viên hiện đang rất bận. Chúng tôi có thể lùi các buổi đánh giá hiệu suất của họ sang thứ Sáu được không? Tôi sẽ liên lạc lại với cô vào ngày mai kèm các biểu mẫu đã hoàn thành.\n\nTrân trọng,\nTom"
+      }
+    }
+  },
+  {
+    "lesson_id": 18,
+    "title": "Client Onboarding Presentation (Thuyết trình đón tiếp khách hàng)",
+    "category": "Workplace",
+    "topic": "Account Management & Sales",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 135,
+      "duration_seconds": 38,
+      "speakers": ["Jessica (Account Exec)", "Brian (Client Lead)"]
+    },
+    "script": [
+      {
+        "speaker_id": "Jessica",
+        "text": "Brian, we ran into a glitch with the slide deck format for the client presentation.",
+        "vietnamese": "Brian, chúng ta gặp lỗi định dạng với slide thuyết trình cho khách hàng."
+      },
+      {
+        "speaker_id": "Brian",
+        "text": "Can we fix it quickly? We need to stay on track for the 2 PM call.",
+        "vietnamese": "Chúng ta có sửa nhanh được không? Chúng ta cần giữ đúng tiến độ cho cuộc gọi lúc 2 giờ chiều."
+      },
+      {
+        "speaker_id": "Jessica",
+        "text": "I'm tied up with another client right now, so I might need to push the call back by 15 minutes.",
+        "vietnamese": "Bây giờ tôi đang bận bù đầu với một khách hàng khác, nên có thể tôi cần lùi cuộc gọi lại 15 phút."
+      },
+      {
+        "speaker_id": "Brian",
+        "text": "Alright, touch base with the client's assistant immediately to inform them.",
+        "vietnamese": "Được rồi, hãy trao đổi ngay với trợ lý của khách hàng để thông báo cho họ nhé."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "ran into a glitch",
+        "ipa_connected": "/ræn ˈɪn.tu.ə ɡlɪtʃ/",
+        "technique": "Vowel linking",
+        "note": "Nối âm /n/ từ 'ran' sang 'into'."
+      },
+      {
+        "phrase": "tied up with",
+        "ipa_connected": "/taɪd ʌp wɪð/",
+        "technique": "Flap sound linking",
+        "note": "Nối âm liền giữa 'tied' và 'up'."
+      },
+      {
+        "phrase": "touch base with",
+        "ipa_connected": "/tʌtʃ beɪs wɪð/",
+        "technique": "Smooth consonant flow",
+        "note": "Nối liền các từ không bị khựng."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "run into a glitch",
+        "type": "Phrase",
+        "meaning": "Gặp lỗi kỹ thuật nhỏ",
+        "example": "The webinar ran into a glitch during screen sharing."
+      },
+      {
+        "phrase": "on track",
+        "type": "Idiom",
+        "meaning": "Đúng kế hoạch đặt ra",
+        "example": "Everything is on track for the product demo."
+      },
+      {
+        "phrase": "tied up with",
+        "type": "Idiom",
+        "meaning": "Đang bận làm việc với",
+        "example": "The manager is tied up with VIP clients."
+      },
+      {
+        "phrase": "push back",
+        "type": "Phrasal Verb",
+        "meaning": "Dời giờ hẹn",
+        "example": "We requested to push back the meeting time."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Rèn luyện khả năng ứng biến linh hoạt và giữ bình tĩnh khi gặp sự cố trước buổi thuyết trình.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What was wrong with the presentation slide deck?",
+        "Why does Jessica need to push the call back?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn Slack gửi đồng nghiệp báo hoãn nhẹ lịch họp với khách.",
+        "text": "Ran into a glitch with the deck and tied up with a call. Let's push the client meeting back to 2:15 PM. Will touch base soon.",
+        "vietnamese": "Gặp sự cố với slide và đang bận nghe cuộc gọi khác. Hãy lùi cuộc họp với khách sang 2h15. Tôi sẽ cập nhật sớm."
+      },
+      "email_template": {
+        "context": "Email gửi khách hàng xin dời lịch họp thuyết trình lại 15 phút.",
+        "text": "Dear Brian,\n\nWe experienced a minor glitch with our presentation file. To ensure a smooth onboarding session, we would like to push our meeting back by 15 minutes to 2:15 PM. We appreciate your understanding.\n\nBest regards,\nJessica",
+        "vietnamese": "Kính gửi Brian,\n\nChúng tôi gặp sự cố nhỏ với tệp thuyết trình. Để đảm bảo buổi hướng dẫn diễn ra suôn sẻ, chúng tôi muốn lùi cuộc họp lại 15 phút sang 2:15 chiều. Rất mong nhận được sự thông cảm từ ông.\n\nTrân trọng,\nJessica"
+      }
+    }
+  },
+  {
+    "lesson_id": 19,
+    "title": "Organizing a Weekend Road Trip (Đi phượt cuối tuần)",
+    "category": "Daily Life",
+    "topic": "Travel & Leisure",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 130,
+      "duration_seconds": 36,
+      "speakers": ["Sam", "Noah"]
+    },
+    "script": [
+      {
+        "speaker_id": "Sam",
+        "text": "Noah, is our road trip itinerary still on track for early Saturday morning?",
+        "vietnamese": "Noah, hành trình đi phượt của chúng ta vẫn đúng kế hoạch khởi hành sáng sớm thứ Bảy chứ?"
+      },
+      {
+        "speaker_id": "Noah",
+        "text": "My car ran into a glitch with the battery, so I am taking it to the mechanic today.",
+        "vietnamese": "Xe của tớ bị lỗi bình ắc quy, nên hôm nay tớ phải mang nó đi thợ sửa."
+      },
+      {
+        "speaker_id": "Sam",
+        "text": "Oh no! Should we push our departure time back to noon?",
+        "vietnamese": "Ôi không! Chúng ta có nên lùi thời gian xuất phát sang giữa trưa không?"
+      },
+      {
+        "speaker_id": "Noah",
+        "text": "I think so. I'm tied up until 10 AM anyway. I'll touch base as soon as the car is ready.",
+        "vietnamese": "Tớ nghĩ vậy đấy. Dù sao thì tớ cũng bận đến tận 10 giờ sáng. Xe xong một cái là tớ báo ngay."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "on track for",
+        "ipa_connected": "/ɒn træk fər/",
+        "technique": "Unreleased K",
+        "note": "Âm /k/ trong 'track' phát âm nhẹ trước 'for'."
+      },
+      {
+        "phrase": "ran into a glitch",
+        "ipa_connected": "/ræn ˈɪn.tu.ə ɡlɪtʃ/",
+        "technique": "Vowel linking",
+        "note": "Nối liền âm giữa các từ."
+      },
+      {
+        "phrase": "touch base as soon as",
+        "ipa_connected": "/tʌtʃ beɪs æz suːn æz/",
+        "technique": "S-Z linking",
+        "note": "Nối 'base' sang 'as' (/beɪsæz/)."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "on track",
+        "type": "Idiom",
+        "meaning": "Đúng kế hoạch chuyến đi",
+        "example": "Our packing is on track."
+      },
+      {
+        "phrase": "run into a glitch",
+        "type": "Phrase",
+        "meaning": "Gặp sự cố trục trặc phương tiện/kỹ thuật",
+        "example": "The GPS ran into a glitch while navigating."
+      },
+      {
+        "phrase": "push back",
+        "type": "Phrasal Verb",
+        "meaning": "Lùi thời gian khởi hành",
+        "example": "We had to push back our flight booking."
+      },
+      {
+        "phrase": "touch base",
+        "type": "Idiom",
+        "meaning": "Báo lại tình hình",
+        "example": "Touch base with me when you reach the gas station."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Rèn luyện giọng điệu hào hứng nhưng linh hoạt khi giải quyết kế hoạch đi chơi.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What happened to Noah's car?",
+        "What time do they plan to push their departure back to?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn nhóm bạn đi phượt dời giờ khởi hành.",
+        "text": "Hey guys, Noah's car ran into a glitch. We need to push departure back to noon. Will touch base once repairs are done!",
+        "vietnamese": "Mọi người ơi, xe của Noah gặp chút trục trặc. Chúng ta cần lùi giờ xuất phát sang giữa trưa. Sửa xe xong sẽ báo lại cả nhóm!"
+      },
+      "email_template": {
+        "context": "Email gửi nơi thuê homestay xin đổi giờ check-in.",
+        "text": "Dear Resort Manager,\n\nOur travel plans ran into a minor glitch due to car maintenance. We would like to push our estimated arrival time back to 2 PM today. Everything else remains on track.\n\nBest regards,\nSam",
+        "vietnamese": "Kính gửi Quản lý Resort,\n\nKế hoạch di chuyển của chúng tôi gặp sự cố nhỏ do bảo dưỡng xe. Chúng tôi muốn lùi thời gian dự kiến đến nơi sang 2 giờ chiều nay. Mọi thứ khác vẫn đúng kế hoạch.\n\nTrân trọng,\nSam"
+      }
+    }
+  },
+  {
+    "lesson_id": 20,
+    "title": "Home Renovation Delay (Hoãn sửa chữa nhà cửa)",
+    "category": "Daily Life",
+    "topic": "Home Improvement & Maintenance",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 134,
+      "duration_seconds": 38,
+      "speakers": ["Oliver (Homeowner)", "Grace (Contractor)"]
+    },
+    "script": [
+      {
+        "speaker_id": "Oliver",
+        "text": "Grace, is the kitchen painting still on track to finish by Friday?",
+        "vietnamese": "Grace, việc sơn bếp vẫn đúng tiến độ hoàn thành trước thứ Sáu chứ?"
+      },
+      {
+        "speaker_id": "Grace",
+        "text": "We ran into a glitch with water leakage behind the drywall.",
+        "vietnamese": "Chúng tôi gặp sự cố bị rò rỉ nước phía sau mảng tường khô."
+      },
+      {
+        "speaker_id": "Oliver",
+        "text": "Oh dear! Does that mean we have to push the flooring installation back?",
+        "vietnamese": "Ôi trời! Điều đó có nghĩa là chúng ta phải lùi lịch lát sàn lại sao?"
+      },
+      {
+        "speaker_id": "Grace",
+        "text": "Yes. My team is tied up fixing the pipe now. I'll touch base with you tomorrow with an updated timeline.",
+        "vietnamese": "Đúng vậy. Đội của tôi đang bận bù đầu sửa đường ống nước. Sáng mai tôi sẽ trao đổi lại với ông kèm tiến độ cập nhật."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "on track to",
+        "ipa_connected": "/ɒn træk tu/",
+        "technique": "Unreleased K",
+        "note": "Phát âm /k/ nhẹ."
+      },
+      {
+        "phrase": "ran into a glitch",
+        "ipa_connected": "/ræn ˈɪn.tu.ə ɡlɪtʃ/",
+        "technique": "Vowel linking",
+        "note": "Nối liền 'ran' và 'into'."
+      },
+      {
+        "phrase": "tied up fixing",
+        "ipa_connected": "/taɪd ʌp ˈfɪks.ɪŋ/",
+        "technique": "Continuous consonant flow",
+        "note": "Nối liền 'tied' -> 'up' -> 'fixing'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "on track",
+        "type": "Idiom",
+        "meaning": "Đúng tiến độ thi công",
+        "example": "The renovation project is completely on track."
+      },
+      {
+        "phrase": "run into a glitch",
+        "type": "Phrase",
+        "meaning": "Gặp sự cố phát sinh",
+        "example": "The plumbers ran into a glitch with old pipes."
+      },
+      {
+        "phrase": "push back",
+        "type": "Phrasal Verb",
+        "meaning": "Lùi thời hạn thi công",
+        "example": "They pushed back the tile installation."
+      },
+      {
+        "phrase": "tied up with",
+        "type": "Idiom",
+        "meaning": "Bận rộn xử lý việc gì",
+        "example": "The contractor is tied up at another job site."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Rèn luyện giọng điệu đối thoại thực tế giữa chủ nhà và thợ thầu.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What unexpected problem was discovered behind the drywall?",
+        "When will Grace touch base with Oliver again?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Nhắn tin thông báo cho người thân về tiến độ sửa nhà.",
+        "text": "Ran into a glitch with water leak at home. Contractors are tied up fixing it, so we must push flooring back. Will touch base later!",
+        "vietnamese": "Nhà bị gặp sự cố rò rỉ nước rồi. Thợ đang bận bù đầu sửa, nên phải lùi lịch lát sàn lại. Tối báo lại sau nhé!"
+      },
+      "email_template": {
+        "context": "Email thợ thầu gửi chủ nhà báo cáo tiến độ và đề xuất lùi thời gian.",
+        "text": "Dear Mr. Oliver,\n\nDuring painting, we ran into a glitch regarding a pipe leak. Because our workers are currently tied up repairing the plumbing, we must push the flooring start date back to next Monday. I will touch base tomorrow morning with a revised schedule.\n\nBest regards,\nGrace",
+        "vietnamese": "Kính gửi ông Oliver,\n\nTrong lúc sơn, chúng tôi gặp sự cố rò rỉ đường ống nước. Vì công nhân hiện đang bận tập trung sửa chữa đường ống, chúng tôi phải lùi ngày bắt đầu lát sàn sang thứ Hai tuần tới. Sáng mai tôi sẽ liên lạc lại để gửi bảng tiến độ đã điều chỉnh.\n\nTrân trọng,\nGrace"
+      }
+    }
+  }
+]

@@ -1,0 +1,1082 @@
+[
+  {
+    "lesson_id": 71,
+    "title": "Cross-Border Logistics & Freight Forwarding (Lô-giết-tích xuyên biên giới & Vận chuyển hàng hóa)",
+    "category": "Workplace",
+    "topic": "Supply Chain & International Freight",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 138,
+      "duration_seconds": 40,
+      "speakers": [
+        "Derek (Supply Chain Manager)",
+        "Claire (Freight Logistics Specialist)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Derek (Supply Chain Manager)",
+        "text": "Claire, I am following up on the customs clearance status for our overseas container shipment.",
+        "vietnamese": "Claire, tôi đang theo dõi tình trạng thông quan cho lô hàng công-ten-nơ ở nước ngoài của chúng ta."
+      },
+      {
+        "speaker_id": "Claire (Freight Logistics Specialist)",
+        "text": "Hello Derek. Our compliance team was tied up with tariff documentation audits earlier today, but all manifest forms are approved.",
+        "vietnamese": "Xin chào Derek. Đội tuân thủ của chúng tôi đã bận rộn với việc kiểm toán hồ sơ thuế quan sáng nay, nhưng tất cả tờ khai hàng hóa đã được duyệt."
+      },
+      {
+        "speaker_id": "Derek (Supply Chain Manager)",
+        "text": "That is great news. As long as the seaport automated scanner doesn't run into a glitch, our transit timeline stays on track.",
+        "vietnamese": "Đó là tin tuyệt vời. Miễn là máy quét tự động ở cảng biển không gặp trục trặc, mốc thời gian vận chuyển của chúng ta vẫn đúng tiến độ."
+      },
+      {
+        "speaker_id": "Claire (Freight Logistics Specialist)",
+        "text": "Exactly. Unless port congestion worsens significantly, we will not need to push the delivery deadline back.",
+        "vietnamese": "Chính xác. Trừ khi tình trạng ùn tắc tại cảng trở nên tồi tệ hơn đáng kể, chúng ta sẽ không cần lùi thời hạn giao hàng."
+      },
+      {
+        "speaker_id": "Derek (Supply Chain Manager)",
+        "text": "Understood. Please monitor the bill of lading and touch base with me once the cargo is dispatched.",
+        "vietnamese": "Tôi đã hiểu. Vui lòng giám sát vận đơn và trao đổi lại với tôi ngay khi hàng hóa được điều đi."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "customs clearance",
+        "ipa_connected": "/ˈkʌs.təmz ˈklɪr.əns/",
+        "technique": "Continuous Flow",
+        "note": "Phát âm mượt mà âm /z/ cuối 'customs' chuyển tiếp sang phụ âm /k/ của 'clearance'."
+      },
+      {
+        "phrase": "container shipment",
+        "ipa_connected": "/kənˈteɪ.nɚ ˈʃɪp.mənt/",
+        "technique": "Clear Articulation",
+        "note": "Nhấn rõ trọng âm thứ hai ở 'container' và trọng âm thứ nhất ở 'shipment'."
+      },
+      {
+        "phrase": "stay on track",
+        "ipa_connected": "/steɪ ɑːn træk/",
+        "technique": "Linking Consonant to Vowel",
+        "note": "Nối âm /n/ từ 'on' mượt sang phụ âm /tr/ của 'track'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "customs clearance",
+        "type": "Noun Phrase",
+        "meaning": "Thủ tục thông quan hàng hóa",
+        "example": "Expedited customs clearance prevents costly delays at international ports."
+      },
+      {
+        "phrase": "container shipment",
+        "type": "Noun Phrase",
+        "meaning": "Lô hàng vận chuyển bằng công-ten-nơ",
+        "example": "Tracking container shipments in real time improves supply chain visibility."
+      },
+      {
+        "phrase": "transit timeline",
+        "type": "Noun Phrase",
+        "meaning": "Lịch trình/mốc thời gian quá cảnh",
+        "example": "An optimized transit timeline guarantees prompt delivery to fulfillment centers."
+      },
+      {
+        "phrase": "bill of lading",
+        "type": "Noun Phrase",
+        "meaning": "Vận đơn đường biển/vận tải",
+        "example": "The bill of lading serves as official proof of cargo ownership."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện giọng quản lý chuỗi cung ứng chuẩn xác, điềm tĩnh và chủ động điều phối.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What task delayed Claire's compliance team earlier in the day?",
+        "What potential port issue could affect the delivery deadline?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn cập nhật cho nhóm Vận tải về tiến độ thông quan lô hàng.",
+        "text": "Logistics Update: Overseas container shipment approved. Team was tied up with tariff audits, but customs cleared. Transit stays on track, no need to push deadlines back. Claire will touch base post-dispatch.",
+        "vietnamese": "Cập nhật Logistics: Lô hàng công-ten-nơ nước ngoài đã được duyệt. Team bận kiểm toán thuế quan trước đó, nhưng hải quan đã thông quan. Vận chuyển giữ đúng tiến độ, không cần lùi thời hạn. Claire sẽ trao đổi sau khi điều hàng."
+      },
+      "email_template": {
+        "context": "Email báo cáo tình hình vận chuyển lô hàng quốc tế gửi Quản lý Chuỗi Cung ứng.",
+        "text": "Dear Derek,\n\nI am writing to update you on our overseas container shipment status. Although our compliance team was tied up with tariff documentation audits earlier today, all manifest submissions have cleared customs. Provided automated port scanners do not run into a glitch, our overall transit timeline stays on track without needing to push the delivery deadline back. I will monitor the bill of lading closely and touch base as soon as dispatch begins.\n\nBest regards,\nClaire",
+        "vietnamese": "Kính gửi Derek,\n\nTôi viết thư này để cập nhật tình trạng lô hàng công-ten-nơ nước ngoài của chúng ta. Mặc dù đội tuân thủ của chúng tôi đã bận rộn với việc kiểm toán hồ sơ thuế quan sáng nay, tất cả bản khai nộp đã được hải quan thông quan. Với điều kiện các máy quét tự động tại cảng không gặp trục trặc, mốc thời gian vận chuyển tổng thể của chúng ta vẫn đúng tiến độ mà không cần lùi thời hạn giao hàng. Tôi sẽ giám sát chặt chẽ vận đơn và trao đổi lại ngay khi việc điều hàng bắt đầu.\n\nTrân trọng,\nClaire"
+      }
+    }
+  },
+  {
+    "lesson_id": 72,
+    "title": "Hospitality Service & Hotel Grand Reopening (Dịch vụ khách sạn & Khai trương lại)",
+    "category": "Daily Life",
+    "topic": "Hotel Management & Luxury Guest Relations",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 136,
+      "duration_seconds": 38,
+      "speakers": [
+        "Sebastian (General Manager)",
+        "Miranda (Guest Relations Director)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Sebastian (General Manager)",
+        "text": "Miranda, let us confirm the final preparations for our boutique hotel grand reopening gala.",
+        "vietnamese": "Miranda, chúng ta hãy xác nhận các bước chuẩn bị cuối cùng cho lễ khai trương lại của khách sạn boutique."
+      },
+      {
+        "speaker_id": "Miranda (Guest Relations Director)",
+        "text": "Certainly Sebastian. Our hospitality staff was tied up with VIP suite inspections earlier, but guest amenities are fully stocked.",
+        "vietnamese": "Tất nhiên rồi Sebastian. Nhân viên khách sạn của chúng tôi đã bận rộn với việc kiểm tra phòng VIP trước đó, nhưng các tiện nghi cho khách đã được chuẩn bị đầy đủ."
+      },
+      {
+        "speaker_id": "Sebastian (General Manager)",
+        "text": "Excellent. Does our automated keyless entry system show any issues before check-in?",
+        "vietnamese": "Tuyệt vời. Hệ thống khóa tự động không dùng chìa của chúng ta có xuất hiện sự cố nào trước giờ nhận phòng không?"
+      },
+      {
+        "speaker_id": "Miranda (Guest Relations Director)",
+        "text": "None at all. Unless keycard encoder software runs into a glitch, our reception schedule stays on track.",
+        "vietnamese": "Không có gì cả. Trừ khi phần mềm mã hóa thẻ phòng gặp trục trặc, lịch trình đón tiếp của chúng ta vẫn đúng tiến độ."
+      },
+      {
+        "speaker_id": "Sebastian (General Manager)",
+        "text": "Wonderful. We will not need to push the red-carpet ceremony back. Please touch base with me before guests arrive.",
+        "vietnamese": "Tuyệt vời. Chúng ta sẽ không cần lùi lễ đón tiếp thảm đỏ. Vui lòng liên hệ với tôi trước khi khách đến."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "boutique hotel",
+        "ipa_connected": "/buːˈtiːk hoʊˈtel/",
+        "technique": "Stress Precision",
+        "note": "Nhấn rõ trọng âm ở âm tiết thứ hai cho cả 'boutique' và 'hotel'."
+      },
+      {
+        "phrase": "keyless entry",
+        "ipa_connected": "/ˈkiː.ləs ˈen.tri/",
+        "technique": "Continuous Flow",
+        "note": "Nối mượt âm /s/ cuối 'keyless' sang nguyên âm /e/ của 'entry'."
+      },
+      {
+        "phrase": "touch base with",
+        "ipa_connected": "/tʌtʃ beɪs wɪð/",
+        "technique": "Soft Transition",
+        "note": "Phát âm mượt mà âm /s/ cuối 'base' sang phụ âm /w/ của 'with'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "boutique hotel",
+        "type": "Noun Phrase",
+        "meaning": "Khách sạn phong cách độc đáo/nhỏ và sang trọng",
+        "example": "The boutique hotel offers personalized concierge services to guests."
+      },
+      {
+        "phrase": "guest amenities",
+        "type": "Noun Phrase",
+        "meaning": "Tiện nghi dành cho khách lưu trú",
+        "example": "Upgraded guest amenities enhance overall satisfaction ratings."
+      },
+      {
+        "phrase": "keyless entry",
+        "type": "Noun Phrase",
+        "meaning": "Hệ thống ra vào không dùng chìa (dùng ứng dụng/thẻ từ)",
+        "example": "Keyless entry streamlines the check-in experience for international travelers."
+      },
+      {
+        "phrase": "red-carpet ceremony",
+        "type": "Noun Phrase",
+        "meaning": "Lễ đón tiếp thảm đỏ trang trọng",
+        "example": "A red-carpet ceremony marked the hotel's anniversary celebration."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện giọng quản lý dịch vụ khách sạn lịch thiệp, chu đáo và sang trọng.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What task occupied the hospitality staff earlier in the day?",
+        "What software failure could affect the reception timeline?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn cập nhật cho đội Ngữ cảnh về lễ khai trương khách sạn.",
+        "text": "Hotel Reopening Update: VIP suites inspected and amenities set. Staff was tied up earlier, but reception stays on track. No plan to push the red-carpet ceremony back. Miranda will touch base prior to arrival.",
+        "vietnamese": "Cập nhật Khai trương Khách sạn: Phòng VIP đã kiểm tra và tiện nghi sẵn sàng. Nhân viên bận rộn trước đó, nhưng việc đón tiếp vẫn đúng tiến độ. Không kế hoạch lùi lễ thảm đỏ. Miranda sẽ liên hệ trước khi khách đến."
+      },
+      "email_template": {
+        "context": "Email báo cáo công tác chuẩn bị sự kiện từ Giám đốc Dịch vụ gửi Tổng Giám đốc.",
+        "text": "Dear Sebastian,\n\nI am glad to report that all preparations for our boutique hotel grand reopening gala are progressing smoothly. Although our hospitality staff was tied up with thorough VIP suite inspections earlier, all guest amenities are fully stocked. Provided keycard encoder software does not run into a glitch, our reception schedule remains on track with no need to push the red-carpet ceremony back. I will touch base with you shortly before guest arrivals begin.\n\nBest regards,\nMiranda",
+        "vietnamese": "Kính gửi Sebastian,\n\nTôi rất vui được báo cáo rằng mọi công tác chuẩn bị cho lễ khai trương lại của khách sạn boutique đang diễn ra trơn tru. Mặc dù nhân viên dịch vụ của chúng tôi bận rộn với việc kiểm tra kỹ lưỡng phòng VIP trước đó, tất cả tiện nghi cho khách đã được chuẩn bị đầy đủ. Với điều kiện phần mềm mã hóa thẻ phòng không gặp trục trặc, lịch trình đón tiếp của chúng ta vẫn giữ đúng tiến độ mà không cần lùi lễ thảm đỏ. Tôi sẽ liên hệ với ông ngay trước khi khách bắt đầu đến.\n\nTrân trọng,\nMiranda"
+      }
+    }
+  },
+  {
+    "lesson_id": 73,
+    "title": "Clinical Trials & Pharmaceutical Compliance (Thử nghiệm lâm sàng & Tuân thủ dược phẩm)",
+    "category": "Workplace",
+    "topic": "Healthcare, Clinical Research & Regulatory Audit",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 139,
+      "duration_seconds": 41,
+      "speakers": [
+        "Dr. Aris (Clinical Research Director)",
+        "Dr. Evelyn (Lead Pharmacovigilance Officer)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Dr. Aris (Clinical Research Director)",
+        "text": "Dr. Evelyn, we must confirm data integrity for our Phase III clinical trial regulatory filing.",
+        "vietnamese": "Bác sĩ Evelyn, chúng ta phải xác nhận tính toàn vẹn dữ liệu cho việc nộp hồ sơ quản lý thử nghiệm lâm sàng Giai đoạn III."
+      },
+      {
+        "speaker_id": "Dr. Evelyn (Lead Pharmacovigilance Officer)",
+        "text": "Understood, Dr. Aris. Our research associates were tied up with patient adverse event logs yesterday, but dataset verification is complete.",
+        "vietnamese": "Tôi hiểu rồi, Bác sĩ Aris. Các cộng sự nghiên cứu của chúng tôi đã bận rộn với nhật ký sự cố bất lợi của bệnh nhân vào hôm qua, nhưng việc xác minh bộ dữ liệu đã hoàn tất."
+      },
+      {
+        "speaker_id": "Dr. Aris (Clinical Research Director)",
+        "text": "That is reassuring. Provided biostatistical modeling software doesn't run into a glitch, our filing timeline stays on track.",
+        "vietnamese": "Điều đó thật yên tâm. Với điều kiện phần mềm mô hình hóa sinh thống kê không gặp trục trặc, mốc thời gian nộp hồ sơ của chúng ta vẫn đúng tiến độ."
+      },
+      {
+        "speaker_id": "Dr. Evelyn (Lead Pharmacovigilance Officer)",
+        "text": "Agreed. Unless health authorities request supplemental trials, we will not need to push the deadline back.",
+        "vietnamese": "Đồng ý. Trừ khi các cơ quan y tế yêu cầu thử nghiệm bổ sung, chúng ta sẽ không cần lùi thời hạn."
+      },
+      {
+        "speaker_id": "Dr. Aris (Clinical Research Director)",
+        "text": "Excellent. Compile the efficacy summary and touch base with me before the medical ethics board convenes.",
+        "vietnamese": "Tuyệt vời. Hãy tổng hợp tóm tắt hiệu quả và trao đổi lại với tôi trước khi hội đồng đạo đức y khoa nhóm họp."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "clinical trial",
+        "ipa_connected": "/ˈklɪn.ɪ.kəl traɪəl/",
+        "technique": "Clear Articulation",
+        "note": "Nhấn rõ trọng âm thứ nhất ở cả 'clinical' và 'trial'."
+      },
+      {
+        "phrase": "adverse event",
+        "ipa_connected": "/ædˈvɝːs ɪˈvent/",
+        "technique": "Linking Consonant to Vowel",
+        "note": "Nối âm /s/ cuối 'adverse' mượt sang nguyên âm /ɪ/ của 'event'."
+      },
+      {
+        "phrase": "run into a",
+        "ipa_connected": "/ræn ˈɪn.tuː ə/",
+        "technique": "Soft Linking",
+        "note": "Âm /n/ từ 'run' nối nhẹ sang nguyên âm /ɪ/ của 'into'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "clinical trial",
+        "type": "Noun Phrase",
+        "meaning": "Thử nghiệm lâm sàng y khoa",
+        "example": "Phase III clinical trials evaluate drug efficacy across large patient demographics."
+      },
+      {
+        "phrase": "data integrity",
+        "type": "Noun Phrase",
+        "meaning": "Tính toàn vẹn và chính xác của dữ liệu",
+        "example": "Maintaining strict data integrity is essential for regulatory approval."
+      },
+      {
+        "phrase": "adverse event",
+        "type": "Noun Phrase",
+        "meaning": "Sự cố/phản ứng bất lợi ngoài ý muốn",
+        "example": "Prompt reporting of any adverse event protects clinical trial participants."
+      },
+      {
+        "phrase": "medical ethics board",
+        "type": "Noun Phrase",
+        "meaning": "Hội đồng đạo đức y khoa",
+        "example": "The medical ethics board reviews trial protocols to ensure patient safety."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện giọng bác sĩ/giám đốc nghiên cứu y khoa chính xác, khoa học và coi trọng tính tuân thủ.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What patient documentation occupied research associates yesterday?",
+        "What request from health authorities could force a deadline delay?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn ngắn cho nhóm Nghiên cứu Lâm sàng về tiến độ nộp hồ sơ thử nghiệm.",
+        "text": "Trial Update: Phase III regulatory data cleared. Associates were tied up with adverse event logs, but verification is done. Filing stays on track, no need to push deadlines back. Aris will touch base post-ethics review.",
+        "vietnamese": "Cập nhật Thử nghiệm: Dữ liệu quản lý Giai đoạn III đã hoàn tất. Các cộng sự bận rộn với nhật ký sự cố, nhưng việc xác minh đã xong. Nộp hồ sơ vẫn đúng tiến độ, không cần lùi thời hạn. Aris sẽ trao đổi sau đánh giá đạo đức."
+      },
+      "email_template": {
+        "context": "Email báo cáo tình hình thử nghiệm lâm sàng gửi Giám đốc Nghiên cứu Lâm sàng.",
+        "text": "Dear Dr. Aris,\n\nI am writing to confirm that dataset verification for our Phase III clinical trial regulatory filing is complete. Although our research associates were tied up with patient adverse event logs yesterday, all metrics are validated. Provided biostatistical modeling tools do not run into a glitch, our submission timeline stays on track without needing to push the deadline back. I will finalize the efficacy summary and touch base prior to the ethics board meeting.\n\nBest regards,\nDr. Evelyn",
+        "vietnamese": "Kính gửi Bác sĩ Aris,\n\nTôi viết thư này để xác nhận rằng việc xác minh bộ dữ liệu cho hồ sơ nộp quản lý thử nghiệm lâm sàng Giai đoạn III đã hoàn tất. Mặc dù các cộng sự nghiên cứu của chúng tôi bận rộn với nhật ký sự cố bất lợi của bệnh nhân vào hôm qua, tất cả chỉ số đã được phê duyệt. Với điều kiện công cụ mô hình hóa sinh thống kê không gặp trục trặc, mốc thời gian nộp hồ sơ của chúng ta vẫn đúng tiến độ mà không cần lùi thời hạn. Tôi sẽ hoàn tất tóm tắt hiệu quả và trao đổi lại trước cuộc họp hội đồng đạo đức.\n\nTrân trọng,\nDr. Evelyn"
+      }
+    }
+  },
+  {
+    "lesson_id": 74,
+    "title": "Aviation Passenger Services & Flight Dispatch (Dịch vụ hành khách hàng không & Điều hành bay)",
+    "category": "Workplace",
+    "topic": "Airline Operations & Passenger Operations",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 140,
+      "duration_seconds": 40,
+      "speakers": [
+        "Captain Douglas (Chief Pilot)",
+        "Vanessa (Airport Operations Manager)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Captain Douglas (Chief Pilot)",
+        "text": "Vanessa, what is our flight dispatch readiness for the international long-haul departure to Tokyo?",
+        "vietnamese": "Vanessa, sự sẵn sàng điều hành chuyến bay cho chuyến đi quốc tế đường dài đến Tokyo của chúng ta thế nào rồi?"
+      },
+      {
+        "speaker_id": "Vanessa (Airport Operations Manager)",
+        "text": "Captain, ground handling crews were tied up with baggage reconciliation protocols earlier, but passenger boarding has started.",
+        "vietnamese": "Thưa Cơ trưởng, đội phục vụ mặt đất đã bận rộn với các quy trình đối chiếu hành lý trước đó, nhưng việc cho hành khách lên máy bay đã bắt đầu."
+      },
+      {
+        "speaker_id": "Captain Douglas (Chief Pilot)",
+        "text": "Good to hear. Provided automated runway slot assignment doesn't run into a glitch, our departure time stays on track.",
+        "vietnamese": "Tốt khi nghe vậy. Với điều kiện phân bổ lượt cất cánh tự động trên đường băng không gặp trục trặc, giờ cất cánh của chúng ta vẫn đúng tiến độ."
+      },
+      {
+        "speaker_id": "Vanessa (Airport Operations Manager)",
+        "text": "Confirmed. Unless air traffic control issues unexpected holds, we won't need to push the slot back.",
+        "vietnamese": "Đã xác nhận. Trừ khi kiểm soát không lưu đưa ra lệnh giữ chờ bất ngờ, chúng ta sẽ không cần lùi khung giờ cất cánh."
+      },
+      {
+        "speaker_id": "Captain Douglas (Chief Pilot)",
+        "text": "Excellent. Finalize the passenger manifest and touch base with me when cabin doors close.",
+        "vietnamese": "Tuyệt vời. Hãy hoàn tất danh sách hành khách và trao đổi lại với tôi khi cửa khoang hành khách đóng lại."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "flight dispatch",
+        "ipa_connected": "/flaɪt dɪˈspætʃ/",
+        "technique": "Stop Consonant & Transition",
+        "note": "Âm /t/ ở cuối 'flight' giữ nhẹ trước khi phát âm /d/ của 'dispatch'."
+      },
+      {
+        "phrase": "ground handling",
+        "ipa_connected": "/ɡraʊnd ˈhæn.dlɪŋ/",
+        "technique": "Stop Consonant & Transition",
+        "note": "Âm /d/ cuối 'ground' bật nhẹ trước khi sang phụ âm /h/ của 'handling'."
+      },
+      {
+        "phrase": "push the slot back",
+        "ipa_connected": "/pʊʃ ðə slɑːt bæk/",
+        "technique": "Continuous Flow",
+        "note": "Phát âm mượt giữa /t/ cuối 'slot' và /b/ đầu của 'back'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "flight dispatch",
+        "type": "Noun Phrase",
+        "meaning": "Công tác điều hành/phát lệnh chuyến bay",
+        "example": "Flight dispatch coordinates fuel limits, flight paths, and weather reports."
+      },
+      {
+        "phrase": "ground handling",
+        "type": "Noun Phrase",
+        "meaning": "Dịch vụ phục vụ mặt đất tại sân bay",
+        "example": "Efficient ground handling minimizes turnaround times between flights."
+      },
+      {
+        "phrase": "runway slot assignment",
+        "type": "Noun Phrase",
+        "meaning": "Việc phân bổ khung giờ cất/hạ cánh trên đường băng",
+        "example": "Strict runway slot assignment prevents mid-air hold queues."
+      },
+      {
+        "phrase": "passenger manifest",
+        "type": "Noun Phrase",
+        "meaning": "Danh sách khai báo hành khách trên chuyến bay",
+        "example": "The complete passenger manifest must be submitted prior to door departure."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện giọng quản lý điều hành hàng không chuẩn xác, dứt khoát và nguyên tắc.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What ground operational procedure delayed crews earlier?",
+        "What air traffic control factor could delay the flight departure?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn cập nhật cho Đội bay về chuyến bay Tokyo sắp cất cánh.",
+        "text": "Flight Dispatch Update: Tokyo flight boarding underway. Ground crew was tied up with baggage checks earlier, but departure stays on track. No need to push runway slot back. Vanessa will touch base when cabin doors seal.",
+        "vietnamese": "Cập nhật Điều hành bay: Chuyến bay Tokyo đang đón khách. Đội mặt đất bận rộn với kiểm tra hành lý trước đó, nhưng cất cánh vẫn đúng tiến độ. Không cần lùi khung giờ đường băng. Vanessa sẽ trao đổi khi cửa cabin đóng."
+      },
+      "email_template": {
+        "context": "Email báo cáo tình hình chuẩn bị chuyến bay gửi Cơ trưởng.",
+        "text": "Dear Captain Douglas,\n\nI am pleased to report that dispatch preparations for our international flight to Tokyo are progressing smoothly. Although ground handling crews were tied up with baggage reconciliation protocols earlier, boarding is fully underway. Provided automated runway slot allocation does not run into a glitch, our departure time remains on track without needing to push the slot back. I will verify the passenger manifest and touch base immediately once cabin doors seal.\n\nBest regards,\nVanessa",
+        "vietnamese": "Kính gửi Cơ trưởng Douglas,\n\nTôi rất vui được báo cáo rằng công tác chuẩn bị điều hành cho chuyến bay quốc tế đến Tokyo đang diễn ra trơn tru. Mặc dù đội phục vụ mặt đất bận rộn với quy trình đối chiếu hành lý trước đó, việc đón khách đang tiến hành hoàn toàn. Với điều kiện việc phân bổ khung giờ đường băng tự động không gặp trục trặc, thời gian cất cánh của chúng ta vẫn đúng tiến độ mà không cần lùi khung giờ. Tôi sẽ xác minh danh sách hành khách và trao đổi lại ngay khi cửa cabin đóng lại.\n\nTrân trọng,\nVanessa"
+      }
+    }
+  },
+  {
+    "lesson_id": 75,
+    "title": "Home Renovation & Interior Architecture (Cải tạo nhà cửa & Kiến trúc nội thất)",
+    "category": "Daily Life",
+    "topic": "Home Improvement & Residential Remodeling",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 135,
+      "duration_seconds": 38,
+      "speakers": [
+        "Gavin (Homeowner)",
+        "Nora (Interior Design Contractor)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Gavin (Homeowner)",
+        "text": "Nora, I'm checking on the progress of our kitchen renovation and custom cabinetry installation.",
+        "vietnamese": "Nora, tôi đang kiểm tra tiến độ cải tạo căn bếp và lắp đặt hệ tủ kệ tùy chỉnh của chúng tôi."
+      },
+      {
+        "speaker_id": "Nora (Interior Design Contractor)",
+        "text": "Hello Gavin! Our carpentry team was tied up with custom countertop fitting this morning, but structural framing is finished.",
+        "vietnamese": "Xin chào Gavin! Đội thợ mộc của chúng tôi đã bận rộn với việc lắp đặt mặt bếp tùy chỉnh sáng nay, nhưng khung phần thô đã xong."
+      },
+      {
+        "speaker_id": "Gavin (Homeowner)",
+        "text": "Good to know. Will this work require us to push the fixture installation back?",
+        "vietnamese": "Tốt khi biết vậy. Liệu công việc này có yêu cầu chúng ta phải lùi thời gian lắp đặt thiết bị lại không?"
+      },
+      {
+        "speaker_id": "Nora (Interior Design Contractor)",
+        "text": "Not at all. As long as electrical wiring alignment doesn't run into a glitch, our project schedule stays on track.",
+        "vietnamese": "Không đâu. Miễn là việc căn chỉnh đường dây điện không gặp trục trặc, lịch trình dự án của chúng tôi vẫn đúng tiến độ."
+      },
+      {
+        "speaker_id": "Gavin (Homeowner)",
+        "text": "Wonderful. Please finalize the paint finish and touch base with me before the appliances are delivered.",
+        "vietnamese": "Tuyệt vời. Vui lòng hoàn tất lớp sơn hoàn thiện và liên hệ với tôi trước khi thiết bị gia dụng được giao đến."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "kitchen renovation",
+        "ipa_connected": "/ˈkɪtʃ.ən ˌren.əˈveɪ.ʃən/",
+        "technique": "Clear Articulation",
+        "note": "Nhấn rõ trọng âm thứ nhất ở 'kitchen' và trọng âm thứ ba ở 'renovation'."
+      },
+      {
+        "phrase": "custom cabinetry",
+        "ipa_connected": "/ˈkʌs.təm ˈkæb.ən.ə.tri/",
+        "technique": "Continuous Flow",
+        "note": "Nối mượt âm /m/ cuối 'custom' sang phụ âm /k/ của 'cabinetry'."
+      },
+      {
+        "phrase": "stay on track",
+        "ipa_connected": "/steɪ ɑːn træk/",
+        "technique": "Linking Consonant to Vowel",
+        "note": "Nối âm /n/ từ 'on' mượt sang phụ âm /tr/ của 'track'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "kitchen renovation",
+        "type": "Noun Phrase",
+        "meaning": "Việc cải tạo/sửa chữa căn bếp",
+        "example": "A complete kitchen renovation increases property appraisal value."
+      },
+      {
+        "phrase": "custom cabinetry",
+        "type": "Noun Phrase",
+        "meaning": "Hệ tủ kệ thiết kế theo yêu cầu riêng",
+        "example": "Custom cabinetry optimizes storage capacity in compact kitchens."
+      },
+      {
+        "phrase": "fixture installation",
+        "type": "Noun Phrase",
+        "meaning": "Lắp đặt các thiết bị cố định (vòi nước, đèn)",
+        "example": "Fixture installation occurs following wall painting and tiling."
+      },
+      {
+        "phrase": "paint finish",
+        "type": "Noun Phrase",
+        "meaning": "Lớp sơn hoàn thiện bề mặt",
+        "example": "Choosing a satin paint finish provides durability against moisture."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện giọng nhà thầu thi công nội thất chuyên nghiệp, tự tin và chú trọng từng chi tiết hoàn thiện.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What specific carpentry task delayed Nora's team this morning?",
+        "What trade issue could potentially affect the project timeline?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn cập nhật cho gia đình về tiến độ sửa nhà bếp.",
+        "text": "Renovation Update: Kitchen cabinetry framing complete. Carpentry crew was tied up with countertops earlier, but project stays on track. No need to push fixture installs back. Nora will touch base pre-appliance delivery.",
+        "vietnamese": "Cập nhật Cải tạo: Khung tủ bếp đã xong. Đội thợ mộc bận rộn với mặt bếp trước đó, nhưng dự án vẫn đúng tiến độ. Không cần lùi lắp đặt thiết bị. Nora sẽ liên hệ trước khi giao thiết bị gia dụng."
+      },
+      "email_template": {
+        "context": "Email xác nhận tiến độ thi công từ Nhà thầu Nội thất gửi Chủ nhà.",
+        "text": "Dear Gavin,\n\nI am writing to provide an update regarding your kitchen renovation project. Although our carpentry team was tied up with custom countertop fitting earlier today, structural framing and cabinet alignment are complete. Provided electrical wiring checks do not run into a glitch, our overall timeline stays on track without needing to push fixture installation back. I will oversee the final paint finish and touch base before your new appliances arrive.\n\nBest regards,\nNora",
+        "vietnamese": "Kính gửi Gavin,\n\nTôi viết thư này để cập nhật về dự án cải tạo căn bếp của ông. Mặc dù đội thợ mộc của chúng tôi bận rộn với việc lắp đặt mặt bếp tùy chỉnh sáng nay, phần khung và việc căn chỉnh tủ đã hoàn tất. Với điều kiện kiểm tra đường dây điện không gặp trục trặc, mốc thời gian tổng thể của chúng tôi vẫn đúng tiến độ mà không cần lùi việc lắp đặt thiết bị cố định. Tôi sẽ giám sát lớp sơn hoàn thiện cuối cùng và liên hệ trước khi các thiết bị mới của ông đến.\n\nTrân trọng,\nNora"
+      }
+    }
+  },
+  {
+    "lesson_id": 76,
+    "title": "Corporate Mergers & Brand Rebranding (Sáp nhập doanh nghiệp & Tái định vị thương hiệu)",
+    "category": "Workplace",
+    "topic": "Corporate Identity & Rebranding Strategy",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 139,
+      "duration_seconds": 40,
+      "speakers": [
+        "Harrison (Chief Marketing Officer)",
+        "Sophia (Brand Strategy Director)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Harrison (Chief Marketing Officer)",
+        "text": "Sophia, we are reviewing the rollout strategy for our post-merger corporate rebranding campaign.",
+        "vietnamese": "Sophia, chúng ta đang xem xét chiến lược triển khai cho chiến dịch tái định vị thương hiệu doanh nghiệp sau sáp nhập."
+      },
+      {
+        "speaker_id": "Sophia (Brand Strategy Director)",
+        "text": "Right, Harrison. Our creative department was tied up with trademark clearance checks last week, but brand guidelines are approved.",
+        "vietnamese": "Đúng vậy Harrison. Bộ phận sáng tạo của chúng tôi đã bận rộn với việc kiểm tra đăng ký nhãn hiệu tuần trước, nhưng quy chuẩn thương hiệu đã được duyệt."
+      },
+      {
+        "speaker_id": "Harrison (Chief Marketing Officer)",
+        "text": "That is a major milestone. If digital media asset distribution goes smoothly, our launch schedule stays on track.",
+        "vietnamese": "Đó là một cột mốc quan trọng. Nếu việc phân phối tài nguyên truyền thông kỹ thuật số diễn ra thuận lợi, lịch trình ra mắt của chúng ta vẫn đúng tiến độ."
+      },
+      {
+        "speaker_id": "Sophia (Brand Strategy Director)",
+        "text": "Agreed. Unless press release distribution servers run into a glitch, we won't need to push the deadline back.",
+        "vietnamese": "Đồng ý. Trừ khi các máy chủ phân phối thông cáo báo chí gặp trục trặc, chúng ta sẽ không cần lùi thời hạn."
+      },
+      {
+        "speaker_id": "Harrison (Chief Marketing Officer)",
+        "text": "Excellent. Finalize the public relations kit and touch base with me after executive sign-off.",
+        "vietnamese": "Tuyệt vời. Hãy hoàn tất bộ tài liệu quan hệ công chúng và trao đổi lại với tôi sau khi có sự phê duyệt từ ban lãnh đạo."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "corporate rebranding",
+        "ipa_connected": "/ˈkɔːr.pɚ.ət riːˈbræn.dɪŋ/",
+        "technique": "Continuous Flow",
+        "note": "Nối mượt phụ âm /t/ ở cuối 'corporate' sang phụ âm /r/ của 'rebranding'."
+      },
+      {
+        "phrase": "trademark clearance",
+        "ipa_connected": "/ˈtreɪd.mɑːrk ˈklɪr.əns/",
+        "technique": "Stop Consonant & Transition",
+        "note": "Âm /k/ cuối 'trademark' bật nhẹ trước khi chuyển sang /k/ đầu của 'clearance'."
+      },
+      {
+        "phrase": "touch base with",
+        "ipa_connected": "/tʌtʃ beɪs wɪð/",
+        "technique": "Soft Transition",
+        "note": "Phát âm mượt mà âm /s/ cuối 'base' sang phụ âm /w/ của 'with'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "corporate rebranding",
+        "type": "Noun Phrase",
+        "meaning": "Chiến dịch tái định vị thương hiệu doanh nghiệp",
+        "example": "A corporate rebranding reflects evolving market positioning post-acquisition."
+      },
+      {
+        "phrase": "trademark clearance",
+        "type": "Noun Phrase",
+        "meaning": "Việc kiểm tra/xác minh đăng ký nhãn hiệu độc quyền",
+        "example": "Securing trademark clearance avoids intellectual property infringement."
+      },
+      {
+        "phrase": "media asset",
+        "type": "Noun Phrase",
+        "meaning": "Tài nguyên truyền thông (hình ảnh, logo, video)",
+        "example": "Centralizing media assets streamlines public relations campaigns."
+      },
+      {
+        "phrase": "public relations kit",
+        "type": "Noun Phrase",
+        "meaning": "Bộ tài liệu quan hệ công chúng (Press kit)",
+        "example": "Distributing a comprehensive public relations kit generates media coverage."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện giọng Giám đốc Marketing hiện đại, nhạy bén và tập trung vào sức mạnh thương hiệu.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What legal verification delayed the creative team last week?",
+        "What server issue could potentially push back the campaign launch?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn báo cáo tiến độ tái định vị thương hiệu cho Ban Giám đốc.",
+        "text": "Branding Update: Post-merger campaign guidelines finalized. Team was tied up with trademark checks, but assets are cleared. Rebrand stays on track, no plan to push deadlines back. Touch base post-executive sign-off.",
+        "vietnamese": "Cập nhật Thương hiệu: Quy chuẩn chiến dịch sau sáp nhập đã hoàn tất. Team bận rộn kiểm tra nhãn hiệu, nhưng tài nguyên đã thông qua. Tái định vị thương hiệu vẫn đúng tiến độ, không kế hoạch lùi thời hạn. Trao đổi lại sau duyệt lãnh đạo."
+      },
+      "email_template": {
+        "context": "Email báo cáo tình hình triển khai chiến dịch tái định vị thương hiệu gửi CMO.",
+        "text": "Dear Harrison,\n\nI am writing to confirm that our rollout strategy for the post-merger corporate rebranding campaign is fully aligned. Although our creative team was tied up with trademark clearance checks last week, all brand guidelines are approved. Provided press release distribution servers do not run into a glitch, our launch timeline stays on track without needing to push the deadline back. I will finalize the public relations kit and touch base following executive sign-off.\n\nBest regards,\nSophia",
+        "vietnamese": "Kính gửi Harrison,\n\nTôi viết thư này để xác nhận rằng chiến lược triển khai cho chiến dịch tái định vị thương hiệu doanh nghiệp sau sáp nhập đã hoàn toàn đồng bộ. Mặc dù đội ngũ sáng tạo của chúng tôi bận rộn với việc kiểm tra nhãn hiệu vào tuần trước, tất cả quy chuẩn thương hiệu đã được phê duyệt. Với điều kiện các máy chủ phân phối thông cáo báo chí không gặp trục trặc, mốc thời gian ra mắt của chúng ta vẫn giữ đúng tiến độ mà không cần lùi thời hạn. Tôi sẽ hoàn tất bộ tài liệu quan hệ công chúng và trao đổi lại sau khi có sự phê duyệt từ ban lãnh đạo.\n\nTrân trọng,\nSophia"
+      }
+    }
+  },
+  {
+    "lesson_id": 77,
+    "title": "Cloud Migration & Data Center Virtualization (Chuyển đổi đám mây & Ảo hóa trung tâm dữ liệu)",
+    "category": "Workplace",
+    "topic": "Cloud Infrastructure & Database Migration",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 140,
+      "duration_seconds": 41,
+      "speakers": [
+        "Oliver (VP of Infrastructure)",
+        "Teresa (Lead Cloud Architect)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Oliver (VP of Infrastructure)",
+        "text": "Teresa, what is the status of our enterprise cloud migration and server virtualization process?",
+        "vietnamese": "Teresa, tình trạng chuyển đổi đám mây doanh nghiệp và quy trình ảo hóa máy chủ của chúng ta thế nào rồi?"
+      },
+      {
+        "speaker_id": "Teresa (Lead Cloud Architect)",
+        "text": "Oliver, our DevOps team was tied up with database latency optimization yesterday, but cloud environment provisioning is finished.",
+        "vietnamese": "Oliver, đội DevOps của chúng tôi đã bận rộn với việc tối ưu hóa độ trễ cơ sở dữ liệu vào hôm qua, nhưng việc cung cấp môi trường đám mây đã hoàn tất."
+      },
+      {
+        "speaker_id": "Oliver (VP of Infrastructure)",
+        "text": "Good work. Provided data synchronization routines don't run into a glitch, our cutover plan stays on track.",
+        "vietnamese": "Tốt lắm. Với điều kiện các quy trình đồng bộ hóa dữ liệu không gặp trục trặc, kế hoạch chuyển đổi hệ thống của chúng ta vẫn đúng tiến độ."
+      },
+      {
+        "speaker_id": "Teresa (Lead Cloud Architect)",
+        "text": "Agreed. Unless hybrid network routing experiences unexpected packet loss, we will not need to push the deadline back.",
+        "vietnamese": "Đồng ý. Trừ khi việc định tuyến mạng lai gặp phải rò rỉ gói dữ liệu bất ngờ, chúng ta sẽ không cần lùi thời hạn."
+      },
+      {
+        "speaker_id": "Oliver (VP of Infrastructure)",
+        "text": "Excellent. Conduct the final stress tests and touch base with me before the weekend maintenance window.",
+        "vietnamese": "Tuyệt vời. Hãy tiến hành các bài kiểm tra chịu tải cuối cùng và trao đổi lại với tôi trước khung thời gian bảo trì cuối tuần."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "cloud migration",
+        "ipa_connected": "/klaʊd maɪˈɡreɪ.ʃən/",
+        "technique": "Continuous Flow",
+        "note": "Âm /d/ ở cuối 'cloud' chuyển mượt sang phụ âm /m/ của 'migration'."
+      },
+      {
+        "phrase": "server virtualization",
+        "ipa_connected": "/ˈsɝː.vɚ ˌvɝː.tʃu.əl.əˈzeɪ.ʃən/",
+        "technique": "Clear Articulation",
+        "note": "Nhấn rõ trọng âm ở 'server' và trọng âm thứ năm ở 'virtualization'."
+      },
+      {
+        "phrase": "run into a",
+        "ipa_connected": "/ræn ˈɪn.tuː ə/",
+        "technique": "Soft Linking",
+        "note": "Âm /n/ từ 'run' nối nhẹ sang nguyên âm /ɪ/ của 'into'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "cloud migration",
+        "type": "Noun Phrase",
+        "meaning": "Chuyển đổi/di chuyển dữ liệu lên đám mây",
+        "example": "Executing cloud migration enhances scalability and reduces hardware costs."
+      },
+      {
+        "phrase": "server virtualization",
+        "type": "Noun Phrase",
+        "meaning": "Ảo hóa máy chủ",
+        "example": "Server virtualization optimizes resource distribution across physical hardware."
+      },
+      {
+        "phrase": "cutover plan",
+        "type": "Noun Phrase",
+        "meaning": "Kế hoạch chuyển đổi chính thức sang hệ thống mới",
+        "example": "A detailed cutover plan minimizes operational downtime during switchover."
+      },
+      {
+        "phrase": "maintenance window",
+        "type": "Noun Phrase",
+        "meaning": "Khung thời gian bảo trì hệ thống",
+        "example": "System upgrades are scheduled during the low-traffic maintenance window."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện giọng kiến trúc sư hạ tầng CNTT tự tin, nhạy bén và kiểm soát chặt chẽ quy trình công nghệ.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What specific issue delayed the DevOps team yesterday?",
+        "What network anomaly could force a delay in the migration deadline?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn cập nhật cho nhóm Hạ tầng CNTT về tiến độ chuyển đổi đám mây.",
+        "text": "Infrastructure Update: Enterprise cloud environment provisioned. Team was tied up with latency fixes, but cutover stays on track. No need to push maintenance deadline back. Teresa will touch base pre-weekend window.",
+        "vietnamese": "Cập nhật Hạ tầng: Môi trường đám mây doanh nghiệp đã được cấp phát. Team bận sửa độ trễ trước đó, nhưng chuyển đổi vẫn đúng tiến độ. Không cần lùi thời hạn bảo trì. Teresa sẽ trao đổi trước khung thời gian cuối tuần."
+      },
+      "email_template": {
+        "context": "Email báo cáo tình hình ảo hóa và di chuyển hạ tầng lên đám mây gửi Phó Chủ tịch Hạ tầng.",
+        "text": "Dear Oliver,\n\nI am writing to provide an update regarding our enterprise cloud migration and server virtualization process. Although our DevOps team was tied up with database latency optimization yesterday, cloud environment provisioning is complete. Provided data synchronization routines do not run into a glitch, our cutover schedule stays on track without needing to push the deadline back. I will conduct final stress testing and touch base with you prior to the weekend maintenance window.\n\nBest regards,\nTeresa",
+        "vietnamese": "Kính gửi Oliver,\n\nTôi viết thư này để cập nhật về quá trình chuyển đổi đám mây doanh nghiệp và ảo hóa máy chủ của chúng ta. Mặc dù đội DevOps của chúng tôi bận rộn với việc tối ưu hóa độ trễ cơ sở dữ liệu vào hôm qua, việc cấp phát môi trường đám mây đã hoàn tất. Với điều kiện các quy trình đồng bộ hóa dữ liệu không gặp trục trặc, lịch trình chuyển đổi của chúng ta vẫn đúng tiến độ mà không cần lùi thời hạn. Tôi sẽ tiến hành kiểm thử chịu tải cuối cùng và trao đổi lại với ông trước khung thời gian bảo trì cuối tuần.\n\nTrân trọng,\nTeresa"
+      }
+    }
+  },
+  {
+    "lesson_id": 78,
+    "title": "Renewable Energy Procurement & Sustainability (Thu mua năng lượng tái tạo & Phát triển bền vững)",
+    "category": "Workplace",
+    "topic": "Corporate Sustainability & ESG Compliance",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 137,
+      "duration_seconds": 39,
+      "speakers": [
+        "Lars (Chief Sustainability Officer)",
+        "Fiona (Energy Procurement Manager)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Lars (Chief Sustainability Officer)",
+        "text": "Fiona, we are reviewing our corporate power purchase agreements to achieve net-zero carbon targets.",
+        "vietnamese": "Fiona, chúng ta đang xem xét các hợp đồng mua bán điện của doanh nghiệp để đạt được mục tiêu phát thải ròng bằng không."
+      },
+      {
+        "speaker_id": "Fiona (Energy Procurement Manager)",
+        "text": "Understood Lars. Our team was tied up with solar farm grid connection audits last week, but supplier proposals are in.",
+        "vietnamese": "Tôi hiểu rồi Lars. Đội ngũ của chúng tôi đã bận rộn với việc kiểm toán kết nối lưới điện trang trại điện mặt trời tuần trước, nhưng các đề xuất từ nhà cung cấp đã có."
+      },
+      {
+        "speaker_id": "Lars (Chief Sustainability Officer)",
+        "text": "That is encouraging. Provided green energy tariff negotiations remain favorable, our compliance schedule stays on track.",
+        "vietnamese": "Điều đó thật khích lệ. Với điều kiện các cuộc đàm phán biểu giá năng lượng xanh tiếp tục thuận lợi, lịch trình tuân thủ của chúng ta vẫn đúng tiến độ."
+      },
+      {
+        "speaker_id": "Fiona (Energy Procurement Manager)",
+        "text": "Precisely. Unless regional utility regulators run into a glitch, we won't need to push the deadline back.",
+        "vietnamese": "Chính xác. Trừ khi các cơ quan quản lý điện lực khu vực gặp trục trặc, chúng ta sẽ không cần lùi thời hạn."
+      },
+      {
+        "speaker_id": "Lars (Chief Sustainability Officer)",
+        "text": "Excellent. Finalize the carbon offset metrics and touch base with me before the ESG committee convenes.",
+        "vietnamese": "Tuyệt vời. Hãy hoàn tất các chỉ số bù đắp carbon và trao đổi lại với tôi trước khi ủy ban ESG nhóm họp."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "renewable energy",
+        "ipa_connected": "/rɪˈnuː.ə.bəl ˈen.ɚ.dʒi/",
+        "technique": "Continuous Flow",
+        "note": "Nối mượt nguyên âm cuối của 'renewable' sang nguyên âm /e/ của 'energy'."
+      },
+      {
+        "phrase": "power purchase",
+        "ipa_connected": "/ˈpaʊ.ɚ ˈpɝː.tʃəs/",
+        "technique": "Clear Stress Flow",
+        "note": "Nhấn rõ trọng âm thứ nhất ở cả 'power' và 'purchase'."
+      },
+      {
+        "phrase": "stay on track",
+        "ipa_connected": "/steɪ ɑːn træk/",
+        "technique": "Linking Consonant to Vowel",
+        "note": "Nối âm /n/ từ 'on' mượt sang phụ âm /tr/ của 'track'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "renewable energy",
+        "type": "Noun Phrase",
+        "meaning": "Năng lượng tái tạo (mặt trời, gió)",
+        "example": "Transitioning to renewable energy reduces corporate carbon footprints."
+      },
+      {
+        "phrase": "power purchase agreement",
+        "type": "Noun Phrase",
+        "meaning": "Hợp đồng mua bán điện năng (PPA)",
+        "example": "Long-term power purchase agreements lock in favorable electricity rates."
+      },
+      {
+        "phrase": "net-zero carbon",
+        "type": "Noun Phrase",
+        "meaning": "Phát thải ròng bằng không (trung hòa carbon)",
+        "example": "Achieving net-zero carbon requires combining emission cuts with carbon credits."
+      },
+      {
+        "phrase": "carbon offset metrics",
+        "type": "Noun Phrase",
+        "meaning": "Các chỉ số đo lường việc bù đắp carbon",
+        "example": "Verifying carbon offset metrics ensures compliance with international ESG standards."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện giọng Giám đốc Phát triển Bền vững điềm tĩnh, tầm nhìn xa và coi trọng trách nhiệm môi trường.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What operational task occupied Fiona's procurement team last week?",
+        "What regulatory body could cause a delay in the sustainability submission?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn cập nhật cho Ủy ban ESG về hợp đồng mua năng lượng tái tạo.",
+        "text": "ESG Update: Solar power purchase agreements ready. Team was tied up with grid audits earlier, but sustainability goals stay on track. No plan to push deadlines back. Fiona will touch base post-metrics review.",
+        "vietnamese": "Cập nhật ESG: Hợp đồng mua điện mặt trời đã sẵn sàng. Team bận kiểm toán lưới điện trước đó, nhưng mục tiêu bền vững vẫn đúng tiến độ. Không kế hoạch lùi thời hạn. Fiona sẽ trao đổi sau khi xem xét chỉ số."
+      },
+      "email_template": {
+        "context": "Email báo cáo tiến độ mua năng lượng xanh gửi Giám đốc Phát triển Bền vững.",
+        "text": "Dear Lars,\n\nI am writing to update you on our corporate power purchase agreement negotiations to support our net-zero carbon targets. Although our team was tied up with solar farm grid connection audits last week, all supplier bids are compiled. Provided green energy tariff terms remain favorable, our compliance schedule stays on track without needing to push the deadline back. I will finalize the carbon offset metrics and touch base before the ESG committee convenes.\n\nBest regards,\nFiona",
+        "vietnamese": "Kính gửi Lars,\n\nTôi viết thư này để cập nhật về các cuộc đàm phán hợp đồng mua bán điện của doanh nghiệp nhằm hỗ trợ các mục tiêu phát thải ròng bằng không. Mặc dù đội ngũ của chúng tôi bận rộn với việc kiểm toán kết nối lưới điện trang trại điện mặt trời tuần trước, tất cả hồ sơ thầu nhà cung cấp đã được tổng hợp. Với điều kiện các điều khoản biểu giá năng lượng xanh tiếp tục thuận lợi, lịch trình tuân thủ của chúng ta vẫn giữ đúng tiến độ mà không cần lùi thời hạn. Tôi sẽ hoàn tất các chỉ số bù đắp carbon và trao đổi lại trước khi ủy ban ESG nhóm họp.\n\nTrân trọng,\nFiona"
+      }
+    }
+  },
+  {
+    "lesson_id": 79,
+    "title": "Private Aviation & Charter Flight Booking (Hàng không tư nhân & Đặt chuyến bay thuê chuyến)",
+    "category": "Daily Life",
+    "topic": "Luxury Travel & Executive Aviation Services",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 136,
+      "duration_seconds": 38,
+      "speakers": [
+        "Sterling (Executive Client)",
+        "Giselle (Private Jet Charter Manager)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Sterling (Executive Client)",
+        "text": "Hello Giselle, I am confirming the itinerary and ground transport for our private jet charter to Geneva.",
+        "vietnamese": "Xin chào Giselle, tôi đang xác nhận hành trình và xe đưa đón mặt đất cho chuyến bay tư nhân thuê riêng đến Geneva của chúng tôi."
+      },
+      {
+        "speaker_id": "Giselle (Private Jet Charter Manager)",
+        "text": "Hello Mr. Sterling! Our flight operations team was tied up with international airspace permits earlier, but clearance is granted.",
+        "vietnamese": "Xin chào ông Sterling! Đội vận hành bay của chúng tôi đã bận rộn với phép xin sử dụng vùng trời quốc tế trước đó, nhưng phép đã được cấp."
+      },
+      {
+        "speaker_id": "Sterling (Executive Client)",
+        "text": "Splendid news. Will this delay force us to push our departure time back?",
+        "vietnamese": "Tin tuyệt vời. Liệu sự chậm trễ này có buộc chúng tôi phải lùi giờ cất cánh lại không?"
+      },
+      {
+        "speaker_id": "Giselle (Private Jet Charter Manager)",
+        "text": "Not at all. As long as private terminal fueling doesn't run into a glitch, your flight schedule stays on track.",
+        "vietnamese": "Không đâu. Miễn là việc nạp nhiên liệu tại nhà ga tư nhân không gặp trục trặc, lịch trình chuyến bay của ông vẫn đúng tiến độ."
+      },
+      {
+        "speaker_id": "Sterling (Executive Client)",
+        "text": "Excellent. Please coordinate luxury catering and touch base with me when boarding is ready.",
+        "vietnamese": "Tuyệt vời. Vui lòng điều phối dịch vụ ẩm thực cao cấp và liên hệ với tôi khi việc lên máy bay sẵn sàng."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "private jet",
+        "ipa_connected": "/ˈpraɪ.vət dʒet/",
+        "technique": "Stop Consonant & Transition",
+        "note": "Âm /t/ cuối 'private' giữ nhẹ trước khi sang âm /dʒ/ của 'jet'."
+      },
+      {
+        "phrase": "airspace permit",
+        "ipa_connected": "/ˈer.speɪs pɚˈmɪt/",
+        "technique": "Clear Stress Flow",
+        "note": "Nhấn rõ trọng âm thứ nhất ở 'airspace' và trọng âm thứ hai ở 'permit'."
+      },
+      {
+        "phrase": "touch base with",
+        "ipa_connected": "/tʌtʃ beɪs wɪð/",
+        "technique": "Soft Transition",
+        "note": "Phát âm mượt mà âm /s/ cuối 'base' sang phụ âm /w/ của 'with'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "private jet charter",
+        "type": "Noun Phrase",
+        "meaning": "Dịch vụ thuê chuyến chuyên cơ tư nhân",
+        "example": "Booking a private jet charter offers flexibility and complete privacy."
+      },
+      {
+        "phrase": "airspace permit",
+        "type": "Noun Phrase",
+        "meaning": "Giấy phép sử dụng vùng trời",
+        "example": "Securing an airspace permit is required for cross-border private flights."
+      },
+      {
+        "phrase": "private terminal",
+        "type": "Noun Phrase",
+        "meaning": "Nhà ga VIP/nhà ga riêng dành cho chuyên cơ (FBO)",
+        "example": "The private terminal provides expedited security and lounge amenities."
+      },
+      {
+        "phrase": "luxury catering",
+        "type": "Noun Phrase",
+        "meaning": "Dịch vụ ẩm thực cao cấp trên máy bay",
+        "example": "Custom luxury catering satisfies specific dietary preferences inflight."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện giọng quản lý dịch vụ hàng không tư nhân lịch sự, tinh tế và chuẩn mực cao cấp.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What administrative clearance occupied Giselle's flight operations team earlier?",
+        "What ground refueling condition ensures the departure remains on schedule?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn cập nhật cho khách hàng VIP về chuyến bay tư nhân.",
+        "text": "Private Jet Update: Flight permits for Geneva approved. Team was tied up with airspace clearance, but schedule stays on track. No need to push departure back. Giselle will touch base when boarding opens.",
+        "vietnamese": "Cập nhật Chuyên cơ: Giấy phép bay đi Geneva đã được duyệt. Team bận xin phép vùng trời trước đó, nhưng lịch trình vẫn đúng tiến độ. Không cần lùi giờ cất cánh. Giselle sẽ liên hệ khi mở cửa lên máy bay."
+      },
+      "email_template": {
+        "context": "Email xác nhận lịch trình chuyến bay từ Quản lý Chuyên cơ gửi Khách hàng VIP.",
+        "text": "Dear Mr. Sterling,\n\nI am delighted to confirm that international airspace permits for your private jet charter to Geneva are fully granted. Although our flight operations team was tied up with permit verification earlier today, all flight arrangements are complete. Provided private terminal refueling does not run into a glitch, your departure schedule stays on track without needing to push your flight time back. I will finalize your luxury catering arrangements and touch base as soon as boarding commences.\n\nBest regards,\nGiselle",
+        "vietnamese": "Kính gửi Ông Sterling,\n\nTôi rất vui được xác nhận rằng giấy phép vùng trời quốc tế cho chuyến bay thuê riêng đi Geneva của ông đã được cấp hoàn toàn. Mặc dù đội vận hành bay của chúng tôi bận rộn với việc xác minh giấy phép sáng nay, tất cả việc sắp xếp chuyến bay đã hoàn tất. Với điều kiện việc nạp nhiên liệu tại nhà ga tư nhân không gặp trục trặc, lịch trình cất cánh của ông vẫn đúng tiến độ mà không cần lùi thời gian bay. Tôi sẽ hoàn tất việc sắp xếp ẩm thực cao cấp và liên hệ ngay khi việc lên máy bay bắt đầu.\n\nTrân trọng,\nGiselle"
+      }
+    }
+  },
+  {
+    "lesson_id": 80,
+    "title": "Culinary Masterclass & Fine Dining Event (Lớp học nấu ăn cao cấp & Sự kiện ẩm thực)",
+    "category": "Daily Life",
+    "topic": "Culinary Arts & Fine Dining Logistics",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 135,
+      "duration_seconds": 38,
+      "speakers": [
+        "Chef Marco (Master Chef)",
+        "Vivian (Culinary Event Manager)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Chef Marco (Master Chef)",
+        "text": "Vivian, let us review the ingredient preparation and wine pairing for tonight's culinary masterclass.",
+        "vietnamese": "Vivian, chúng ta hãy xem lại việc chuẩn bị nguyên liệu và kết hợp rượu vang cho lớp học nấu ăn cao cấp tối nay."
+      },
+      {
+        "speaker_id": "Vivian (Culinary Event Manager)",
+        "text": "Hello Chef Marco! Our kitchen prep team was tied up with artisanal ingredient sourcing this morning, but all cooking stations are ready.",
+        "vietnamese": "Xin chào Bếp trưởng Marco! Đội chuẩn bị của chúng tôi đã bận rộn với việc tìm kiếm nguyên liệu thủ công sáng nay, nhưng tất cả các trạm nấu ăn đã sẵn sàng."
+      },
+      {
+        "speaker_id": "Chef Marco (Master Chef)",
+        "text": "That is wonderful. Will this require us to push the tasting session back?",
+        "vietnamese": "Thật tuyệt vời. Liệu điều này có yêu cầu chúng ta phải lùi buổi thưởng thức món ăn lại không?"
+      },
+      {
+        "speaker_id": "Vivian (Culinary Event Manager)",
+        "text": "Not at all. Provided induction cooktop temperature controls don't run into a glitch, our event schedule stays on track.",
+        "vietnamese": "Không đâu. Miễn là bộ kiểm soát nhiệt độ bếp từ không gặp trục trặc, lịch trình sự kiện của chúng ta vẫn đúng tiến độ."
+      },
+      {
+        "speaker_id": "Chef Marco (Master Chef)",
+        "text": "Excellent. Please organize the sommelier presentation and touch base with me when guests complete check-in.",
+        "vietnamese": "Tuyệt vời. Vui lòng tổ chức phần trình bày của chuyên gia nếm thử rượu vang và liên hệ với tôi khi khách hoàn tất thủ tục check-in."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "culinary masterclass",
+        "ipa_connected": "/ˈkʌl.ə.ner.i ˈmæs.tɚ.klæs/",
+        "technique": "Continuous Flow",
+        "note": "Nối mượt nguyên âm cuối của 'culinary' sang phụ âm /m/ của 'masterclass'."
+      },
+      {
+        "phrase": "wine pairing",
+        "ipa_connected": "/waɪn ˈper.ɪŋ/",
+        "technique": "Linking Consonant to Vowel",
+        "note": "Nối âm /n/ từ 'wine' mượt sang nguyên âm /p/ của 'pairing'."
+      },
+      {
+        "phrase": "stay on track",
+        "ipa_connected": "/steɪ ɑːn træk/",
+        "technique": "Linking Consonant to Vowel",
+        "note": "Nối âm /n/ từ 'on' mượt sang phụ âm /tr/ của 'track'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "culinary masterclass",
+        "type": "Noun Phrase",
+        "meaning": "Lớp học nấu ăn cao cấp do chuyên gia giảng dạy",
+        "example": "Attending a culinary masterclass sharpens gourmet cooking techniques."
+      },
+      {
+        "phrase": "wine pairing",
+        "type": "Noun Phrase",
+        "meaning": "Việc kết hợp rượu vang phù hợp với món ăn",
+        "example": "Expert wine pairing elevates the flavors of a multi-course dinner."
+      },
+      {
+        "phrase": "cooking station",
+        "type": "Noun Phrase",
+        "meaning": "Trạm/vị trí thực hành nấu ăn",
+        "example": "Each cooking station is equipped with professional-grade utensils."
+      },
+      {
+        "phrase": "sommelier presentation",
+        "type": "Noun Phrase",
+        "meaning": "Phần trình bày của chuyên gia nếm thử và tư vấn rượu vang",
+        "example": "The sommelier presentation introduced rare vintage selections to guests."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện giọng quản lý sự kiện ẩm thực nhiệt huyết, tinh tế và tập trung vào trải nghiệm thực khách.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What task delayed Vivian's kitchen prep team earlier this morning?",
+        "What kitchen equipment control must operate smoothly for the event to stay on track?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn cập nhật cho Ban Tổ chức về sự kiện trải nghiệm ẩm thực.",
+        "text": "Culinary Event Update: Masterclass prep finished. Team was tied up with ingredient sourcing, but tasting schedule stays on track. No need to push session back. Vivian will touch base post guest check-in.",
+        "vietnamese": "Cập nhật Sự kiện Ẩm thực: Chuẩn bị lớp học nâng cao đã xong. Team bận rộn tìm nguyên liệu, nhưng lịch nếm thử vẫn đúng tiến độ. Không cần lùi buổi trải nghiệm. Vivian sẽ liên hệ sau khi khách check-in."
+      },
+      "email_template": {
+        "context": "Email xác nhận tiến độ sự kiện từ Quản lý Sự kiện Ẩm thực gửi Bếp trưởng.",
+        "text": "Dear Chef Marco,\n\nI am pleased to confirm that all preparations for tonight's culinary masterclass and fine dining event are proceeding seamlessly. Although our kitchen prep team was tied up with sourcing rare artisanal ingredients this morning, all cooking stations are fully set. Provided induction cooktop temperature controls do not run into a glitch, our tasting session stays on track without needing to push the timeline back. I will oversee the sommelier presentation setup and touch base with you once guest check-in concludes.\n\nBest regards,\nVivian",
+        "vietnamese": "Kính gửi Bếp trưởng Marco,\n\nTôi rất vui được xác nhận rằng mọi công tác chuẩn bị cho lớp học nấu ăn cao cấp và sự kiện ẩm thực tối nay đang diễn ra trơn tru. Mặc dù đội chuẩn bị bếp của chúng tôi bận rộn với việc tìm kiếm các nguyên liệu thủ công hiếm sáng nay, tất cả các trạm nấu ăn đã được chuẩn bị đầy đủ. Với điều kiện các bộ kiểm soát nhiệt độ bếp từ không gặp trục trặc, buổi thưởng thức của chúng ta vẫn đúng tiến độ mà không cần lùi mốc thời gian. Tôi sẽ giám sát việc chuẩn bị phần trình bày của chuyên gia rượu vang và trao đổi lại với bếp trưởng ngay khi thủ tục check-in của khách kết thúc.\n\nTrân trọng,\nVivian"
+      }
+    }
+  }
+]

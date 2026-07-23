@@ -1,0 +1,1082 @@
+[
+  {
+    "lesson_id": 21,
+    "title": "Incident Retrospective (Họp rút kinh nghiệm sự cố)",
+    "category": "Workplace",
+    "topic": "System Incident Analysis & Prevention",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 138,
+      "duration_seconds": 38,
+      "speakers": [
+        "David (DevOps Lead)",
+        "Sarah (Senior Developer)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "David (DevOps Lead)",
+        "text": "Thanks for joining. Now that the servers are back up, we need to make sure we stay on track for the security patch.",
+        "vietnamese": "Cảm ơn vì đã tham gia. Hiện tại hệ thống đã hoạt động trở lại, chúng ta cần đảm bảo duy trì đúng tiến độ cho bản vá bảo mật."
+      },
+      {
+        "speaker_id": "Sarah (Senior Developer)",
+        "text": "Agreed. We ran into a glitch during migration because the staging environment didn't match production.",
+        "vietnamese": "Đồng ý. Chúng ta đã gặp chút trục trặc trong quá trình chuyển đổi vì môi trường staging không khớp với môi trường production."
+      },
+      {
+        "speaker_id": "David (DevOps Lead)",
+        "text": "That explains the root cause. Do we need to push the deadline back for the next release cycle?",
+        "vietnamese": "Điều đó giải thích được nguyên nhân gốc rễ. Chúng ta có cần lùi thời hạn cho chu kỳ phát hành tiếp theo không?"
+      },
+      {
+        "speaker_id": "Sarah (Senior Developer)",
+        "text": "No, if we automate the deployment scripts today, we can address the bottleneck without delaying the schedule.",
+        "vietnamese": "Không cần, nếu chúng ta tự động hóa các kịch bản triển khai trong hôm nay, chúng ta có thể giải quyết điểm nghẽn mà không làm chậm lịch trình."
+      },
+      {
+        "speaker_id": "David (DevOps Lead)",
+        "text": "Great. Let's touch base tomorrow morning to verify the updated deployment pipeline.",
+        "vietnamese": "Tuyệt vời. Hãy trao đổi nhanh vào sáng mai để kiểm tra lại đường ống triển khai đã cập nhật."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "back up",
+        "ipa_connected": "/bæk ʌp/",
+        "technique": "Linking Consonant to Vowel",
+        "note": "Âm /k/ ở cuối 'back' nối liền sang âm /ʌ/ của 'up' tạo thành /bæ.kʌp/."
+      },
+      {
+        "phrase": "ran into a",
+        "ipa_connected": "/ræn ˈɪn.tuː ə/",
+        "technique": "Flap T & Soft Linking",
+        "note": "Nối nhanh âm /n/ từ 'ran' sang 'into' và lướt mượt qua nguyên âm /ə/."
+      },
+      {
+        "phrase": "root cause",
+        "ipa_connected": "/ruːt kɔːz/",
+        "technique": "Stop Consonant",
+        "note": "Âm /t/ ở cuối 'root' được giữ nhẹ (stop t) trước khi bật sang /k/ của 'cause'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "root cause",
+        "type": "Noun Phrase",
+        "meaning": "Nguyên nhân gốc rễ của một sự cố",
+        "example": "Identifying the root cause prevents recurring system outages."
+      },
+      {
+        "phrase": "address the bottleneck",
+        "type": "Verb Phrase",
+        "meaning": "Giải quyết điểm nghẽn/vấn đề gây đình trệ",
+        "example": "We added more cloud servers to address the bottleneck in processing requests."
+      },
+      {
+        "phrase": "deployment pipeline",
+        "type": "Noun Phrase",
+        "meaning": "Đường ống/quy trình triển khai tự động",
+        "example": "The code passed all tests before moving down the deployment pipeline."
+      },
+      {
+        "phrase": "staging environment",
+        "type": "Noun Phrase",
+        "meaning": "Môi trường kiểm thử độc lập trước khi đẩy lên hệ thống thật",
+        "example": "Always verify new features in the staging environment first."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Chú ý ngắt nghỉ sau các cụm từ chỉ nguyên nhân như 'because the staging environment' và hạ giọng ở cuối câu khẳng định.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What was the main reason for the glitch during migration?",
+        "How does automating deployment scripts help maintain the project deadline?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Gửi cập nhật ngắn cho đội ngũ sau buổi họp rút kinh nghiệm sự cố.",
+        "text": "Hi team, we identified the root cause of today's incident regarding environment mismatch. We won't need to push the deadline back. Let's touch base tomorrow morning to review the fix.",
+        "vietnamese": "Chào mọi người, chúng tôi đã xác định được nguyên nhân gốc rễ của sự cố hôm nay do sự bất đồng bộ môi trường. Chúng ta không cần lùi thời hạn. Hãy trao đổi lại vào sáng mai để xem lại bản sửa lỗi."
+      },
+      "email_template": {
+        "context": "Báo cáo tóm tắt Incident Retrospective gửi Ban Quản lý Dự án.",
+        "text": "Dear Stakeholders,\n\nFollowing our incident retrospective meeting, we have determined that the system downtime was caused by configuration discrepancies between staging and production environments. Steps have been taken to address the bottleneck, ensuring all release tasks remain on track. We will continuously monitor performance over the next 24 hours.\n\nBest regards,\nDavid",
+        "vietnamese": "Kính gửi các bên liên quan,\n\nSau buổi họp rút kinh nghiệm sự cố, chúng tôi đã xác định rằng việc gián đoạn hệ thống là do sự chênh lệch cấu hình giữa môi trường staging và production. Các biện pháp đã được triển khai để giải quyết điểm nghẽn, đảm bảo tất cả các hạng mục phát hành vẫn đúng tiến độ. Chúng tôi sẽ liên tục theo dõi hiệu năng trong 24 giờ tới.\n\nTrân trọng,\nDavid"
+      }
+    }
+  },
+  {
+    "lesson_id": 22,
+    "title": "Vendor Negotiation (Đàm phán dịch vụ đối tác)",
+    "category": "Workplace",
+    "topic": "Contract Renewal & SLA Negotiation",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 135,
+      "duration_seconds": 40,
+      "speakers": [
+        "Alex (Procurement Manager)",
+        "Elena (Account Executive)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Alex (Procurement Manager)",
+        "text": "Thanks for taking the time, Elena. As our contract renewal approaches, we want to discuss pricing for additional software licenses.",
+        "vietnamese": "Cảm ơn Elena đã dành thời gian. Khi thời hạn tái ký hợp đồng đang đến gần, chúng tôi muốn thảo luận về giá cho các bản quyền phần mềm bổ sung."
+      },
+      {
+        "speaker_id": "Elena (Account Executive)",
+        "text": "Of course, Alex. I know your team is currently tied up with scaling infrastructure, so we prepared a tiered pricing model.",
+        "vietnamese": "Tất nhiên rồi, Alex. Tôi biết đội ngũ của anh hiện đang bận rộn với việc mở rộng hạ tầng, nên chúng tôi đã chuẩn bị một mô hình giá theo bậc."
+      },
+      {
+        "speaker_id": "Alex (Procurement Manager)",
+        "text": "That sounds promising, but we need higher SLA guarantees to prevent operational bottlenecks.",
+        "vietnamese": "Nghe có vẻ triển vọng, nhưng chúng tôi cần cam kết SLA cao hơn để tránh các điểm nghẽn trong vận hành."
+      },
+      {
+        "speaker_id": "Elena (Account Executive)",
+        "text": "We can offer a 99.9% uptime guarantee if we finalize the agreement by the end of this quarter.",
+        "vietnamese": "Chúng tôi có thể cung cấp cam kết thời gian hoạt động 99.9% nếu chúng ta chốt thỏa thuận vào cuối quý này."
+      },
+      {
+        "speaker_id": "Alex (Procurement Manager)",
+        "text": "Fair enough. Send over the revised proposal, and I'll touch base with our finance team.",
+        "vietnamese": "Cũng hợp lý. Hãy gửi bản đề xuất đã sửa đổi, và tôi sẽ trao đổi với bộ phận tài chính."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "tied up with",
+        "ipa_connected": "/taɪd ʌp wɪð/",
+        "technique": "Linking Consonant to Vowel",
+        "note": "Âm /d/ ở 'tied' nối sang nguyên âm /ʌ/ ở 'up' tạo thành /taɪ.dʌp/."
+      },
+      {
+        "phrase": "send over",
+        "ipa_connected": "/send ˈoʊ.vɚ/",
+        "technique": "Linking Consonant to Vowel",
+        "note": "Âm /d/ cuối từ 'send' nối liền sang nguyên âm /oʊ/ ở 'over'."
+      },
+      {
+        "phrase": "end of this",
+        "ipa_connected": "/end əv ðɪs/",
+        "technique": "Elision & Linking",
+        "note": "Âm /d/ ở cuối 'end' được nối nhẹ sang /əv/ của 'of'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "contract renewal",
+        "type": "Noun Phrase",
+        "meaning": "Sự gia hạn/tái ký hợp đồng",
+        "example": "We negotiated a discount ahead of our annual contract renewal."
+      },
+      {
+        "phrase": "tiered pricing model",
+        "type": "Noun Phrase",
+        "meaning": "Mô hình định giá phân cấp/theo bậc",
+        "example": "The software vendor uses a tiered pricing model based on monthly active users."
+      },
+      {
+        "phrase": "uptime guarantee",
+        "type": "Noun Phrase",
+        "meaning": "Cam kết thời gian hệ thống hoạt động liên tục",
+        "example": "Their service agreement includes a 99.9% uptime guarantee."
+      },
+      {
+        "phrase": "revised proposal",
+        "type": "Noun Phrase",
+        "meaning": "Đề xuất đã qua chỉnh sửa",
+        "example": "Please review the revised proposal before the board meeting."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện nhịp điệu chuyên nghiệp, nhấn mạnh vào các từ chìa khóa đàm phán như 'tiered pricing', 'uptime guarantee', 'revised proposal'.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What key condition did Alex request before agreeing to renew the contract?",
+        "What incentive did Elena provide for finalizing the deal early?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Cập nhật cho Trưởng phòng Tài chính về tiến độ đàm phán hợp đồng.",
+        "text": "Hi team, I just spoke with Elena regarding the contract renewal. They offered a tiered pricing model with a 99.9% uptime guarantee. I'll share the revised proposal once received so we can stay on track.",
+        "vietnamese": "Chào team, tôi vừa trao đổi với Elena về việc gia hạn hợp đồng. Họ đưa ra mô hình giá theo bậc cùng cam kết uptime 99.9%. Tôi sẽ chia sẻ đề xuất đã chỉnh sửa ngay khi nhận được để đảm bảo đúng tiến độ."
+      },
+      "email_template": {
+        "context": "Gửi email xác nhận các điểm đã thảo luận cho đại diện đối tác.",
+        "text": "Dear Elena,\n\nThank you for taking the time to discuss our contract renewal options today. We are interested in the tiered pricing model and appreciate the inclusion of the 99.9% uptime guarantee. Please send over the revised proposal at your earliest convenience so I can review it with our finance team.\n\nBest regards,\nAlex",
+        "vietnamese": "Kính gửi Elena,\n\nCảm ơn cô đã dành thời gian thảo luận về các lựa chọn tái ký hợp đồng hôm nay. Chúng tôi rất quan tâm đến mô hình giá theo bậc và đánh giá cao việc bổ sung cam kết uptime 99.9%. Vui lòng gửi bản đề xuất đã điều chỉnh sớm nhất có thể để tôi trao đổi thêm với bộ phận tài chính.\n\nTrân trọng,\nAlex"
+      }
+    }
+  },
+  {
+    "lesson_id": 23,
+    "title": "Cross-Department Alignment (Đồng bộ mục tiêu giữa các phòng ban)",
+    "category": "Workplace",
+    "topic": "Product & Marketing Feature Rollout",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 140,
+      "duration_seconds": 41,
+      "speakers": [
+        "Rachel (Product Manager)",
+        "Mark (Marketing Lead)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Rachel (Product Manager)",
+        "text": "Hi Mark, I wanted to touch base regarding the marketing assets for the upcoming product launch.",
+        "vietnamese": "Chào Mark, tôi muốn trao đổi nhanh liên quan đến các tài liệu tiếp thị cho đợt ra mắt sản phẩm sắp tới."
+      },
+      {
+        "speaker_id": "Mark (Marketing Lead)",
+        "text": "Thanks Rachel. My team is a bit tied up with the email campaign, but we're aligning our materials with your timeline.",
+        "vietnamese": "Cảm ơn Rachel. Đội của tôi hơi bận rộn với chiến dịch email, nhưng chúng tôi đang điều chỉnh tài liệu khớp với mốc thời gian của bạn."
+      },
+      {
+        "speaker_id": "Rachel (Product Manager)",
+        "text": "Glad to hear that. Are all design deliverables still on track for Friday's review?",
+        "vietnamese": "Rất vui khi nghe điều đó. Tất cả các sản phẩm thiết kế bàn giao vẫn đúng tiến độ cho buổi duyệt thứ Sáu chứ?"
+      },
+      {
+        "speaker_id": "Mark (Marketing Lead)",
+        "text": "Yes, unless we run into a glitch with the video rendering, we should be fully prepared.",
+        "vietnamese": "Đúng vậy, trừ khi chúng tôi gặp sự cố trục trặc khi xuất video, còn lại chúng tôi sẽ hoàn toàn sẵn sàng."
+      },
+      {
+        "speaker_id": "Rachel (Product Manager)",
+        "text": "Awesome. Let's touch base again once the final drafts are uploaded to the shared folder.",
+        "vietnamese": "Tuyệt vời. Hãy cập nhật lại lần nữa ngay khi các bản thảo cuối cùng được tải lên thư mục dùng chung."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "wanted to",
+        "ipa_connected": "/ˈwɑːn.tɪd tuː/",
+        "technique": "Flap T / Soft T",
+        "note": "Âm /t/ giữa từ 'wanted' thường được phát âm lướt nhẹ thành âm /d/ mềm trong giao tiếp tự nhiên."
+      },
+      {
+        "phrase": "glad to hear",
+        "ipa_connected": "/ɡlæd tə hɪr/",
+        "technique": "Reduction",
+        "note": "Từ 'to' được đọc lướt thành âm schwa /tə/."
+      },
+      {
+        "phrase": "on track for",
+        "ipa_connected": "/ɑːn træk fɚ/",
+        "technique": "Stop Consonant & Reduction",
+        "note": "Âm /k/ ở 'track' bật nhẹ và 'for' đọc giảm âm thành /fɚ/."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "marketing assets",
+        "type": "Noun Phrase",
+        "meaning": "Các tài liệu/ấn phẩm tiếp thị (banner, video, email design...)",
+        "example": "All marketing assets must follow the brand design guide."
+      },
+      {
+        "phrase": "design deliverables",
+        "type": "Noun Phrase",
+        "meaning": "Các sản phẩm thiết kế cần bàn giao",
+        "example": "The agency delivered all design deliverables on time."
+      },
+      {
+        "phrase": "align materials",
+        "type": "Verb Phrase",
+        "meaning": "Đồng bộ hóa các tài liệu/nội dung",
+        "example": "We need to align materials across sales and product channels."
+      },
+      {
+        "phrase": "shared folder",
+        "type": "Noun Phrase",
+        "meaning": "Thư mục dùng chung trên đám mây",
+        "example": "Please place the updated presentations into the shared folder."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện ngữ điệu kết nối tự nhiên giữa các câu, chú ý ngắt nghỉ chính xác trước các từ nối 'unless', 'once'.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "Why is Mark's team currently busy?",
+        "What condition could delay the marketing deliverables on Friday?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn gửi kênh chung giữa Product và Marketing để chốt lịch hẹn.",
+        "text": "Hey everyone, just following up on our alignment call. Marketing assets are on track for Friday. If you run into a glitch with video uploads, let me know immediately so we don't push the deadline back.",
+        "vietnamese": "Chào mọi người, tôi chỉ theo sát lại cuộc gọi đồng bộ hôm nay. Các tài liệu tiếp thị vẫn đúng tiến độ cho thứ Sáu. Nếu gặp bất kỳ trục trặc nào về việc upload video, hãy báo tôi ngay để không bị đẩy lùi thời hạn."
+      },
+      "email_template": {
+        "context": "Email xác nhận sự phối hợp công việc gửi cho Trưởng phòng Marketing.",
+        "text": "Hi Mark,\n\nThank you for verifying that your team is on track with the design deliverables for Friday's launch review. I understand your team is tied up, so please let me know if any bottlenecks arise with video rendering. Looking forward to reviewing the final files in the shared folder.\n\nBest regards,\nRachel",
+        "vietnamese": "Chào Mark,\n\nCảm ơn anh đã xác nhận rằng đội ngũ của mình đang đúng tiến độ với các sản phẩm thiết kế cho buổi duyệt ra mắt vào thứ Sáu. Tôi hiểu đội ngũ của anh đang bận rộn, vì vậy vui lòng thông báo nếu có bất kỳ điểm nghẽn nào phát sinh trong quá trình xuất video. Rất mong chờ được xem các tệp cuối cùng trong thư mục chung.\n\nTrân trọng,\nRachel"
+      }
+    }
+  },
+  {
+    "lesson_id": 24,
+    "title": "Apartment Maintenance Request (Yêu cầu bảo trì căn hộ)",
+    "category": "Daily Life",
+    "topic": "Home Repairs & Property Management",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 132,
+      "duration_seconds": 37,
+      "speakers": [
+        "Chris (Tenant)",
+        "Martha (Property Manager)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Chris (Tenant)",
+        "text": "Hi Martha, I'm calling because I ran into a glitch with the water heater in my apartment.",
+        "vietnamese": "Chào Martha, tôi gọi vì tôi gặp chút sự cố trục trặc với máy nước nóng trong căn hộ của mình."
+      },
+      {
+        "speaker_id": "Martha (Property Manager)",
+        "text": "Oh dear, sorry to hear that Chris. Is it leaking, or is it simply not heating up?",
+        "vietnamese": "Ôi trời, rất tiếc khi nghe điều đó Chris. Nó bị rò rỉ nước hay chỉ đơn giản là không làm nóng?"
+      },
+      {
+        "speaker_id": "Chris (Tenant)",
+        "text": "It isn't heating up at all. I was hoping someone could swing by today to take a look.",
+        "vietnamese": "Nó không làm nóng một chút nào cả. Tôi hy vọng có ai đó có thể ghé qua hôm nay để kiểm tra."
+      },
+      {
+        "speaker_id": "Martha (Property Manager)",
+        "text": "Our maintenance technician is tied up with an emergency plumbing issue right now, but he can come by tomorrow morning.",
+        "vietnamese": "Kỹ thuật viên bảo trì của chúng tôi hiện đang bận rộn với sự cố đường ống khẩn cấp, nhưng anh ấy có thể ghé qua vào sáng mai."
+      },
+      {
+        "speaker_id": "Chris (Tenant)",
+        "text": "Tomorrow morning works for me. Let's touch base early to confirm the exact arrival time.",
+        "vietnamese": "Sáng mai thì phù hợp với tôi. Hãy trao đổi lại sớm để xác nhận thời gian đến chính xác nhé."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "heating up",
+        "ipa_connected": "/ˈhiː.t̬ɪŋ ʌp/",
+        "technique": "Flap T & Linking",
+        "note": "Âm /t/ ở giữa 'heating' đọc nhẹ thành /d/ mềm, và âm /ŋ/ nối nhẹ sang 'up'."
+      },
+      {
+        "phrase": "swing by",
+        "ipa_connected": "/swɪŋ baɪ/",
+        "technique": "Smooth Transition",
+        "note": "Phát âm mượt mà âm /ŋ/ ở cuối 'swing' sang phụ âm /b/ của 'by'."
+      },
+      {
+        "phrase": "come by",
+        "ipa_connected": "/kʌm baɪ/",
+        "technique": "Consonant Flow",
+        "note": "Nối liền âm khép môi /m/ sang âm bật /b/."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "swing by",
+        "type": "Phrasal Verb",
+        "meaning": "Ghé qua ngắn hạn (địa điểm nào đó)",
+        "example": "Can you swing by the grocery store on your way home?"
+      },
+      {
+        "phrase": "maintenance technician",
+        "type": "Noun Phrase",
+        "meaning": "Kỹ thuật viên bảo trì",
+        "example": "The maintenance technician replaced the broken window lock."
+      },
+      {
+        "phrase": "emergency plumbing",
+        "type": "Noun Phrase",
+        "meaning": "Sự cố hệ thống cấp thoát nước khẩn cấp",
+        "example": "Call the emergency plumbing service if a pipe bursts."
+      },
+      {
+        "phrase": "arrival time",
+        "type": "Noun Phrase",
+        "meaning": "Thời gian có mặt/thời gian đến",
+        "example": "Please notify us of your estimated arrival time."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện ngữ điệu thân mật nhưng lịch sự trong các tình huống sinh hoạt hàng ngày, chú ý nhấn giọng ở các cụm từ thể hiện sự khẩn thiết.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What specific issue is Chris experiencing in his apartment?",
+        "Why can't the maintenance technician repair the issue immediately today?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Gửi tin nhắn cho quản lý tòa nhà xác nhận lại thời gian hẹn sửa chữa.",
+        "text": "Hi Martha, just confirming that tomorrow morning works for the water heater repair. Please have the technician swing by around 9 AM if possible. Thanks!",
+        "vietnamese": "Chào Martha, tôi chỉ xác nhận lại là sáng mai thời gian rất phù hợp để sửa máy nước nóng. Vui lòng nhắn kỹ thuật viên ghé qua khoảng 9 giờ sáng nếu được nhé. Cảm ơn cô!"
+      },
+      "email_template": {
+        "context": "Email chính thức gửi Ban Quản lý Tòa nhà về sự cố thiết bị sinh hoạt.",
+        "text": "Dear Martha,\n\nFollowing up on our phone conversation, I am writing to formally request a repair for the water heater in Apartment 4B. As discussed, the unit has stopped heating water entirely. Since the technician is currently tied up, I look forward to his visit tomorrow morning. Please touch base with me when he is on his way.\n\nBest regards,\nChris",
+        "vietnamese": "Kính gửi Martha,\n\nTheo sau cuộc trò chuyện qua điện thoại của chúng ta, tôi viết email này để chính thức yêu cầu sửa chữa máy nước nóng tại Căn hộ 4B. Như đã thảo luận, thiết bị đã ngừng hoạt động hoàn toàn. Vì kỹ thuật viên hiện đang bận, tôi rất mong chờ chuyến ghé thăm của anh ấy vào sáng mai. Vui lòng liên hệ với tôi khi anh ấy đang trên đường tới.\n\nTrân trọng,\nChris"
+      }
+    }
+  },
+  {
+    "lesson_id": 25,
+    "title": "Weekend Trip Planning (Lập kế hoạch dã ngoại cuối tuần)",
+    "category": "Daily Life",
+    "topic": "Leisure Travel & Activity Scheduling",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 136,
+      "duration_seconds": 36,
+      "speakers": [
+        "Jessica",
+        "Tom"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Jessica",
+        "text": "Hey Tom, are we still on track for our weekend camping trip to the national park?",
+        "vietnamese": "Này Tom, chuyến đi cắm trại cuối tuần của chúng ta đến công viên quốc gia vẫn đúng kế hoạch chứ?"
+      },
+      {
+        "speaker_id": "Tom",
+        "text": "Mostly, yes! But I had to push the departure time back by two hours because of my Saturday morning errand.",
+        "vietnamese": "Hầu như là vậy! Nhưng tớ phải lùi giờ xuất phát lại hai tiếng vì có việc vặt vào sáng thứ Bảy."
+      },
+      {
+        "speaker_id": "Jessica",
+        "text": "No problem. Did you manage to book the campsite, or did you run into a glitch online?",
+        "vietnamese": "Không sao cả. Cậu đã đặt được địa điểm cắm trại chưa, hay lại gặp sự cố trực tuyến rồi?"
+      },
+      {
+        "speaker_id": "Tom",
+        "text": "The portal was down briefly, but I secured a spot near the lake. Everything is settled!",
+        "vietnamese": "Cổng thông tin bị sập một chút, nhưng tớ đã giữ được một vị trí gần hồ rồi. Mọi thứ đã xong xuôi!"
+      },
+      {
+        "speaker_id": "Jessica",
+        "text": "Awesome! I'll buy the food supplies tonight, and we can touch base tomorrow on group gear.",
+        "vietnamese": "Tuyệt vời! Tối nay tớ sẽ đi mua đồ ăn, và chúng ta có thể trao đổi lại vào ngày mai về dụng cụ chung."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "push the departure time back",
+        "ipa_connected": "/pʊʃ ðə dɪˈpɑːr.tʃɚ taɪm bæk/",
+        "technique": "Rhythmic Grouping",
+        "note": "Cụm động từ tách rời được phát âm trôi chảy, nhấn mạnh vào từ chỉ hành động 'push' và 'back'."
+      },
+      {
+        "phrase": "ran into a",
+        "ipa_connected": "/ræn ˈɪn.tuː ə/",
+        "technique": "Continuous Linking",
+        "note": "Nối phụ âm /n/ từ 'ran' sang nguyên âm của 'into'."
+      },
+      {
+        "phrase": "touch base",
+        "ipa_connected": "/tʌtʃ beɪs/",
+        "technique": "Affricate to Stop Consonant",
+        "note": "Âm /tʃ/ ở cuối 'touch' chuyển tiếp gọn gàng sang âm bật /b/ của 'base'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "campsite reservation",
+        "type": "Noun Phrase",
+        "meaning": "Sự đặt chỗ trước tại khu cắm trại",
+        "example": "We need to confirm our campsite reservation before heading out."
+      },
+      {
+        "phrase": "departure time",
+        "type": "Noun Phrase",
+        "meaning": "Thời gian khởi hành",
+        "example": "Our revised departure time is set for 10:00 AM."
+      },
+      {
+        "phrase": "food supplies",
+        "type": "Noun Phrase",
+        "meaning": "Nhu yếu phẩm/lương thực thực phẩm",
+        "example": "Make sure to pack enough food supplies for three days."
+      },
+      {
+        "phrase": "group gear",
+        "type": "Noun Phrase",
+        "meaning": "Dụng cụ/trang thiết bị dùng chung",
+        "example": "Who is responsible for bringing the group gear like tents and stoves?"
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Chú ý thể hiện cảm xúc hào hứng, thoải mái đặc trưng của hội thoại đời sống. Nhấn mạnh từ chỉ thời gian và địa điểm.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "Why did Tom have to push the departure time back?",
+        "Where is the reserved campsite located?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn trong nhóm bạn thân cập nhật tình hình chuẩn bị đi cắm trại.",
+        "text": "Hey guys, quick update! We had to push the departure time back to 10 AM, but the campsite reservation is secured. I'll touch base with everyone tomorrow night regarding group gear list.",
+        "vietnamese": "Này mọi người, cập nhật nhanh! Chúng ta phải lùi thời gian khởi hành lại lúc 10 giờ sáng, nhưng việc đặt chỗ cắm trại đã hoàn tất. Tối mai tớ sẽ chốt lại với mọi người về danh sách dụng cụ dùng chung."
+      },
+      "email_template": {
+        "context": "Email gửi xác nhận với bộ phận quản lý khu du lịch cắm trại.",
+        "text": "Dear Park Management,\n\nI am writing to confirm our campsite reservation near the lake for this coming Saturday. We experienced a slight delay and needed to push our estimated departure time back, so we expect to arrive around 1:00 PM. Please let us know if there are any specific guidelines for late check-in.\n\nBest regards,\nTom",
+        "vietnamese": "Kính gửi Ban Quản lý Công viên,\n\nTôi viết thư này để xác nhận lại việc đặt chỗ cắm trại gần hồ cho thứ Sáu tuần này. Chúng tôi có chút chậm trễ và phải lùi thời gian xuất phát dự kiến, do đó chúng tôi dự kiến sẽ đến vào khoảng 1 giờ chiều. Vui lòng cho chúng tôi biết nếu có hướng dẫn cụ thể nào cho việc nhận chỗ muộn.\n\nTrân trọng,\nTom"
+      }
+    }
+  },
+  {
+    "lesson_id": 26,
+    "title": "Quarterly Budget Review (Đánh giá ngân sách theo quý)",
+    "category": "Workplace",
+    "topic": "Financial Planning & Cost Optimization",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 137,
+      "duration_seconds": 39,
+      "speakers": [
+        "Karen (Finance Director)",
+        "Michael (Operations Manager)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Karen (Finance Director)",
+        "text": "Michael, thanks for preparing the quarterly report. Overall, operational expenses are on track with our initial forecasts.",
+        "vietnamese": "Michael, cảm ơn anh đã chuẩn bị báo cáo quý. Nhìn chung, chi phí vận hành vẫn đang đúng tiến độ so với dự báo ban đầu của chúng ta."
+      },
+      {
+        "speaker_id": "Michael (Operations Manager)",
+        "text": "That's encouraging. However, we ran into a glitch with cloud storage fees due to unexpected data volume growth.",
+        "vietnamese": "Thật đáng mừng. Tuy nhiên, chúng ta đã gặp chút sự cố ngoài dự kiến với chi phí lưu trữ đám mây do dung lượng dữ liệu tăng đột biến."
+      },
+      {
+        "speaker_id": "Karen (Finance Director)",
+        "text": "I noticed that overspend. Can we address the bottleneck by reallocating funds from marketing?",
+        "vietnamese": "Tôi đã chú ý đến khoản chi vượt mức đó. Chúng ta có thể giải quyết điểm nghẽn bằng cách phân bổ lại ngân sách từ bộ phận tiếp thị không?"
+      },
+      {
+        "speaker_id": "Michael (Operations Manager)",
+        "text": "Yes, marketing was slightly under budget. That adjustment will keep our overall margin protected.",
+        "vietnamese": "Được chứ, bộ phận tiếp thị đang chi tiêu dưới mức ngân sách một chút. Sự điều chỉnh đó sẽ giữ cho biên lợi nhuận tổng thể được bảo vệ."
+      },
+      {
+        "speaker_id": "Karen (Finance Director)",
+        "text": "Perfect. Send over the adjusted budget sheet, and I'll approve it by end of day.",
+        "vietnamese": "Hoàn hảo. Hãy gửi bảng ngân sách đã điều chỉnh, và tôi sẽ phê duyệt nó vào cuối ngày."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "operational expenses",
+        "ipa_connected": "/ˌɑː.pəˈreɪ.ʃən.əl ɪkˈspen.sɪz/",
+        "technique": "Clear Syllable Stress",
+        "note": "Nhấn trọng âm chính vào âm tiết thứ ba của 'operational' và thứ hai của 'expenses'."
+      },
+      {
+        "phrase": "under budget",
+        "ipa_connected": "/ˈʌn.dɚ ˈbʌdʒ.ɪt/",
+        "technique": "Linking R to B",
+        "note": "Phát âm mượt mà phụ âm /r/ chuyển tiếp sang phụ âm /b/."
+      },
+      {
+        "phrase": "end of day",
+        "ipa_connected": "/end əv deɪ/",
+        "technique": "Linking Consonant to Vowel",
+        "note": "Âm /d/ ở cuối 'end' được nối nhẹ sang nguyên âm /ə/ của 'of'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "operational expenses",
+        "type": "Noun Phrase",
+        "meaning": "Chi phí vận hành doanh nghiệp",
+        "example": "We reduced operational expenses by optimizing software subscriptions."
+      },
+      {
+        "phrase": "reallocate funds",
+        "type": "Verb Phrase",
+        "meaning": "Phân bổ lại ngân sách/nguồn vốn",
+        "example": "The CFO decided to reallocate funds toward research and development."
+      },
+      {
+        "phrase": "under budget",
+        "type": "Prepositional Phrase",
+        "meaning": "Chi tiêu thấp hơn mức ngân sách cho phép",
+        "example": "The project was completed two weeks early and under budget."
+      },
+      {
+        "phrase": "overall margin",
+        "type": "Noun Phrase",
+        "meaning": "Biên lợi nhuận tổng thể",
+        "example": "Maintaining a strong overall margin is essential for long-term growth."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện âm điệu trang trọng, đĩnh đạc của môi trường quản lý tài chính. Nhấn mạnh vào các con số và thuật ngữ ngân sách.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What specific expense category exceeded the original budget?",
+        "How do Michael and Karen plan to offset the unexpected cloud storage costs?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Cập nhật cho ban quản lý về việc điều chỉnh ngân sách quý.",
+        "text": "Hi team, quarterly operational expenses remain on track overall. We resolved the cloud storage overspend by reallocating unused marketing funds, keeping us under budget for Q2.",
+        "vietnamese": "Chào mọi người, nhìn chung chi phí vận hành quý vẫn đúng tiến độ. Chúng ta đã giải quyết khoản chi vượt mức lưu trữ đám mây bằng cách phân bổ lại quỹ tiếp thị chưa dùng, giúp duy trì chi tiêu dưới ngân sách cho Q2."
+      },
+      "email_template": {
+        "context": "Email chính thức gửi Giám đốc Tài chính kèm bảng ngân sách sửa đổi.",
+        "text": "Dear Karen,\n\nThank you for reviewing the quarterly financial summary today. As discussed, I have updated the budget sheet to reallocate unused marketing funds to offset the cloud storage overspend. This strategy successfully addresses the bottleneck without compromising our overall margin. Please find the revised proposal attached for your final sign-off.\n\nBest regards,\nMichael",
+        "vietnamese": "Kính gửi Karen,\n\nCảm ơn cô đã xem qua bản tóm tắt tài chính quý hôm nay. Như đã thảo luận, tôi đã cập nhật bảng ngân sách để phân bổ lại nguồn quỹ tiếp thị chưa sử dụng nhằm bù đắp cho chi phí lưu trữ đám mây vượt mức. Chiến lược này đã giải quyết thành công điểm nghẽn mà không làm ảnh hưởng đến biên lợi nhuận tổng thể. Vui lòng xem bản đề xuất đã điều chỉnh được đính kèm để chờ phê duyệt cuối cùng.\n\nTrân trọng,\nMichael"
+      }
+    }
+  },
+  {
+    "lesson_id": 27,
+    "title": "Client Feedback & Scope Change (Phản hồi từ khách hàng & Thay đổi phạm vi)",
+    "category": "Workplace",
+    "topic": "Project Scope & Stakeholder Management",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 141,
+      "duration_seconds": 42,
+      "speakers": [
+        "Laura (Project Coordinator)",
+        "Jason (Account Director)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Laura (Project Coordinator)",
+        "text": "Jason, the client just submitted new feature requests that go beyond our original statement of work.",
+        "vietnamese": "Jason, khách hàng vừa gửi thêm các yêu cầu tính năng mới vượt quá phạm vi công việc ban đầu của chúng ta."
+      },
+      {
+        "speaker_id": "Jason (Account Director)",
+        "text": "I see. If we accommodate all of them right away, we'll have to push the deadline back significantly.",
+        "vietnamese": "Tôi hiểu rồi. Nếu chúng ta đáp ứng tất cả ngay lập tức, chúng ta sẽ phải lùi thời hạn bàn giao lại đáng kể."
+      },
+      {
+        "speaker_id": "Laura (Project Coordinator)",
+        "text": "Exactly. My engineering team is already tied up with testing the core modules for next week.",
+        "vietnamese": "Chính xác. Đội ngũ kỹ thuật của tôi hiện đã bận rộn với việc kiểm thử các mô-đun cốt lõi cho tuần tới."
+      },
+      {
+        "speaker_id": "Jason (Account Director)",
+        "text": "Let's propose a phased rollout instead. We deliver Phase 1 as planned to stay on track.",
+        "vietnamese": "Chúng ta hãy đề xuất phương án triển khai theo từng giai đoạn. Chúng ta sẽ bàn giao Giai đoạn 1 theo kế hoạch để giữ đúng tiến độ."
+      },
+      {
+        "speaker_id": "Laura (Project Coordinator)",
+        "text": "Good strategy. I'll draft a revised proposal so you can touch base with the client tomorrow.",
+        "vietnamese": "Chiến lược hay đấy. Tôi sẽ soạn một đề xuất điều chỉnh để anh có thể trao đổi với khách hàng vào sáng mai."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "statement of work",
+        "ipa_connected": "/ˈsteɪt.mənt əv wɝːk/",
+        "technique": "Reduction & Linking",
+        "note": "Âm /t/ cuối 'statement' đọc gọn, 'of' đọc giảm âm thành /əv/."
+      },
+      {
+        "phrase": "phased rollout",
+        "ipa_connected": "/feɪzd ˈroʊl.aʊt/",
+        "technique": "Consonant to Consonant Transition",
+        "note": "Âm /zd/ ở 'phased' được nối tự nhiên sang phụ âm /r/ của 'rollout'."
+      },
+      {
+        "phrase": "core modules",
+        "ipa_connected": "/kɔːr ˈmɑː.dʒuːlz/",
+        "technique": "R-controlled Vowel",
+        "note": "Phát âm rõ ràng âm /ɔːr/ kết hợp tròn môi trước khi chuyển sang 'modules'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "statement of work",
+        "type": "Noun Phrase",
+        "meaning": "Bản mô tả phạm vi công việc (SoW)",
+        "example": "Adding new pages requires a change order to the original statement of work."
+      },
+      {
+        "phrase": "phased rollout",
+        "type": "Noun Phrase",
+        "meaning": "Triển khai/phát hành theo từng giai đoạn",
+        "example": "A phased rollout allows us to gather user feedback safely."
+      },
+      {
+        "phrase": "accommodate requests",
+        "type": "Verb Phrase",
+        "meaning": "Đáp ứng/thỏa mãn các yêu cầu",
+        "example": "We will try our best to accommodate client requests within budget."
+      },
+      {
+        "phrase": "core modules",
+        "type": "Noun Phrase",
+        "meaning": "Các mô-đun/phần tử cốt lõi của hệ thống",
+        "example": "Developers are focusing on stabilizing the core modules this sprint."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện giọng đàm phán tự tin, chuyên nghiệp khi giải quyết xung đột về phạm vi công việc (scope creep).",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "Why can't Laura's engineering team absorb the client's new requests immediately?",
+        "What alternative solution did Jason suggest to avoid pushing the deadline back?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Thông báo cho nhóm phát triển dự án về định hướng làm việc với khách hàng.",
+        "text": "Team update: The client asked for new features outside our statement of work. Rather than pushing the deadline back, we are proposing a phased rollout to keep Phase 1 on track.",
+        "vietnamese": "Cập nhật team: Khách hàng vừa yêu cầu các tính năng mới nằm ngoài phạm vi công việc. Thay vì lùi thời hạn, chúng ta sẽ đề xuất triển khai theo từng giai đoạn để giữ Giai đoạn 1 đúng tiến độ."
+      },
+      "email_template": {
+        "context": "Email đề xuất phương án làm việc điều chỉnh gửi cho phía Đối tác/Khách hàng.",
+        "text": "Dear Client,\n\nThank you for sharing your updated feedback. To accommodate your additional feature requests without compromising our target release date, we recommend adopting a phased rollout. This approach ensures our core modules stay on track for Phase 1 delivery. I will send over the revised proposal shorty so we can touch base on the details.\n\nBest regards,\nJason",
+        "vietnamese": "Kính gửi Quý khách hàng,\n\nCảm ơn quý khách đã chia sẻ những phản hồi cập nhật. Để đáp ứng thêm các yêu cầu tính năng mới mà không làm ảnh hưởng đến ngày ra mắt mục tiêu, chúng tôi đề xuất áp dụng phương án triển khai theo từng giai đoạn. Cách tiếp cận này đảm bảo các mô-đun cốt lõi vẫn đúng tiến độ cho Giai đoạn 1. Tôi sẽ gửi đề xuất đã điều chỉnh sớm để chúng ta trao đổi thêm chi tiết.\n\nTrân trọng,\nJason"
+      }
+    }
+  },
+  {
+    "lesson_id": 28,
+    "title": "On-boarding New Team Member (Đón nhận nhân sự mới)",
+    "category": "Workplace",
+    "topic": "Human Resources & Team Integration",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 139,
+      "duration_seconds": 38,
+      "speakers": [
+        "Hannah (HR Specialist)",
+        "Kevin (Engineering Manager)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Hannah (HR Specialist)",
+        "text": "Hi Kevin, our new frontend developer starts next Monday. Is his onboarding workflow fully set up?",
+        "vietnamese": "Chào Kevin, lập trình viên frontend mới của chúng ta sẽ bắt đầu vào thứ Hai tới. Quy trình nhập nhập việc của cậu ấy đã được chuẩn bị xong chưa?"
+      },
+      {
+        "speaker_id": "Kevin (Engineering Manager)",
+        "text": "Almost! We ran into a glitch with granting repository permissions, but IT is fixing it today.",
+        "vietnamese": "Gần xong rồi! Chúng tôi đã gặp chút trục trặc khi cấp quyền tiếp cận kho mã nguồn, nhưng bộ phận IT đang sửa hôm nay."
+      },
+      {
+        "speaker_id": "Hannah (HR Specialist)",
+        "text": "Great. I know your leads are tied up with sprint planning, so I assigned a senior buddy for his first week.",
+        "vietnamese": "Tuyệt vời. Tôi biết các trưởng nhóm của anh đang bận rộn với việc lập kế hoạch sprint, nên tôi đã phân công một đồng nghiệp lâu năm hỗ trợ cậu ấy trong tuần đầu tiên."
+      },
+      {
+        "speaker_id": "Kevin (Engineering Manager)",
+        "text": "That's a huge help. That will keep our team integration smooth and ensure project milestones stay on track.",
+        "vietnamese": "Điều đó giúp ích rất nhiều. Việc này sẽ giữ cho quá trình hòa nhập đội ngũ diễn ra suôn sẻ và đảm bảo các cột mốc dự án vẫn đúng tiến độ."
+      },
+      {
+        "speaker_id": "Hannah (HR Specialist)",
+        "text": "Excellent. I'll touch base with you on Wednesday to see how he's settling in.",
+        "vietnamese": "Rất tốt. Tôi sẽ trao đổi lại với anh vào thứ Tư để xem cậu ấy hòa nhập thế nào."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "starts next Monday",
+        "ipa_connected": "/stɑːrts nekst ˈmʌn.deɪ/",
+        "technique": "Elision of Final T",
+        "note": "Âm /t/ ở cuối từ 'next' có thể bỏ qua khi đứng trước phụ âm /m/ của 'Monday'."
+      },
+      {
+        "phrase": "granting repository permissions",
+        "ipa_connected": "/ˈɡræn.tɪŋ rɪˈpɑː.zə.tɔːr.i pɚˈmɪʃ.ənz/",
+        "technique": "Multi-Syllable Flow",
+        "note": "Nhấn rõ ràng trọng âm chính ở từng từ dài để duy trì độ chuẩn xác khi nói nhanh."
+      },
+      {
+        "phrase": "settling in",
+        "ipa_connected": "/ˈset.əl.ɪŋ ɪn/",
+        "technique": "Linking Consonant to Vowel",
+        "note": "Nối phụ âm /ŋ/ từ 'settling' sang nguyên âm /ɪ/ của 'in'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "onboarding workflow",
+        "type": "Noun Phrase",
+        "meaning": "Quy trình/luồng công việc đón nhận nhân sự mới",
+        "example": "A clear onboarding workflow helps new hires become productive quickly."
+      },
+      {
+        "phrase": "repository permissions",
+        "type": "Noun Phrase",
+        "meaning": "Quyền truy cập vào kho chứa mã nguồn (Git source code)",
+        "example": "New developers must request repository permissions on their first day."
+      },
+      {
+        "phrase": "assigned a buddy",
+        "type": "Verb Phrase",
+        "meaning": "Phân công người đồng hành/hướng dẫn kèm cặp",
+        "example": "We assigned a buddy to guide the intern through company tools."
+      },
+      {
+        "phrase": "settle in",
+        "type": "Phrasal Verb",
+        "meaning": "Hòa nhập, làm quen và ổn định môi trường mới",
+        "example": "It usually takes a couple of weeks for new employees to settle in."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện âm điệu thân thiện, chu đáo và rõ ràng trong giao tiếp quản trị nhân sự.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What temporary glitch occurred with setting up the new developer's account?",
+        "How did Hannah help support the team despite the senior leads being tied up?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn chào mừng nhân sự mới gửi vào kênh chung của phòng kỹ thuật.",
+        "text": "Welcome to the team, Alex! Repository permissions are ready. Since everyone is tied up with release tasks today, John will be your assigned buddy to help you settle in.",
+        "vietnamese": "Chào mừng Alex gia nhập team! Quyền truy cập kho mã nguồn đã sẵn sàng. Vì hôm nay mọi người đang bận với các nhiệm vụ phát hành, John sẽ là người đồng hành hỗ trợ bạn hòa nhập."
+      },
+      "email_template": {
+        "context": "Email của HR xác nhận quy trình đón nhân sự gửi Trưởng phòng Kỹ thuật.",
+        "text": "Hi Kevin,\n\nThanks for confirming the IT progress. I have finalized the onboarding workflow for our new developer joining next Monday. I assigned a senior buddy for his first week to ensure everything stays on track while your team is tied up with sprint planning. I will touch base with you mid-week for an update.\n\nBest regards,\nHannah",
+        "vietnamese": "Chào Kevin,\n\nCảm ơn anh đã xác nhận tiến độ từ IT. Tôi đã hoàn tất quy trình nhập việc cho lập trình viên mới sẽ gia nhập vào thứ Hai tới. Tôi đã phân công một đồng nghiệp kinh nghiệm kèm cặp trong tuần đầu tiên để đảm bảo mọi thứ diễn ra đúng tiến độ trong lúc đội của anh đang bận rộn với kế hoạch sprint. Tôi sẽ liên hệ lại vào giữa tuần để cập nhật tình hình.\n\nTrân trọng,\nHannah"
+      }
+    }
+  },
+  {
+    "lesson_id": 29,
+    "title": "Car Service & Repair (Bảo dưỡng và sửa chữa xe hơi)",
+    "category": "Daily Life",
+    "topic": "Automotive Maintenance & Service Advisory",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 133,
+      "duration_seconds": 38,
+      "speakers": [
+        "Daniel (Car Owner)",
+        "Steve (Service Advisor)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Daniel (Car Owner)",
+        "text": "Hi Steve, I brought my car in because the engine light turned on and the brakes feel a bit soft.",
+        "vietnamese": "Chào Steve, tôi mang xe đến vì đèn báo lỗi động cơ sáng lên và phanh cảm giác hơi yếu."
+      },
+      {
+        "speaker_id": "Steve (Service Advisor)",
+        "text": "Got it Daniel. We'll run a full diagnostic to ensure your vehicle maintenance stays on track.",
+        "vietnamese": "Tôi hiểu rồi Daniel. Chúng tôi sẽ chạy chẩn đoán toàn bộ để đảm bảo việc bảo dưỡng xe của anh vẫn đúng tiêu chuẩn."
+      },
+      {
+        "speaker_id": "Daniel (Car Owner)",
+        "text": "Great. Can I pick it up by 4 PM today, or will you need to push the completion time back?",
+        "vietnamese": "Tuyệt vời. Tôi có thể nhận xe trước 4 giờ chiều hôm nay không, hay các anh sẽ phải lùi thời gian hoàn thành lại?"
+      },
+      {
+        "speaker_id": "Steve (Service Advisor)",
+        "text": "If we run into a glitch ordering replacement brake pads, it might take until tomorrow morning.",
+        "vietnamese": "Nếu chúng tôi gặp sự cố khi đặt mua má phanh thay thế, có thể sẽ mất thời gian đến sáng mai."
+      },
+      {
+        "speaker_id": "Daniel (Car Owner)",
+        "text": "Fair enough. Please touch base with me as soon as the inspection report is ready.",
+        "vietnamese": "Cũng hợp lý. Vui lòng liên hệ với tôi ngay khi có báo cáo kiểm tra nhé."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "brought my car in",
+        "ipa_connected": "/brɔːt maɪ kɑːr ɪn/",
+        "technique": "Linking Consonant to Vowel",
+        "note": "Âm /r/ ở 'car' nối liền trôi chảy sang nguyên âm /ɪ/ của 'in'."
+      },
+      {
+        "phrase": "engine light",
+        "ipa_connected": "/ˈen.dʒɪn laɪt/",
+        "technique": "Nasal to Liquid Flow",
+        "note": "Nối phụ âm mũi /n/ từ 'engine' sang âm /l/ của 'light'."
+      },
+      {
+        "phrase": "pick it up",
+        "ipa_connected": "/pɪk ɪt ʌp/",
+        "technique": "Flap T & Double Linking",
+        "note": "Nối liền 3 từ: âm /k/ từ 'pick' sang 'it', âm /t/ của 'it' biến thành flap t nối sang 'up' (/pɪ.kɪ.t̬ʌp/)."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "full diagnostic",
+        "type": "Noun Phrase",
+        "meaning": "Chẩn đoán lỗi tổng thể (xe hơi/máy móc)",
+        "example": "The mechanic recommended a full diagnostic to check electronic systems."
+      },
+      {
+        "phrase": "replacement brake pads",
+        "type": "Noun Phrase",
+        "meaning": "Má phanh thay thế",
+        "example": "We need to order replacement brake pads for the rear wheels."
+      },
+      {
+        "phrase": "vehicle maintenance",
+        "type": "Noun Phrase",
+        "meaning": "Bảo dưỡng phương tiện/xe cộ",
+        "example": "Regular vehicle maintenance prevents sudden breakdowns on long trips."
+      },
+      {
+        "phrase": "inspection report",
+        "type": "Noun Phrase",
+        "meaning": "Báo cáo kiểm tra kỹ thuật",
+        "example": "The inspection report detailed all necessary repairs and estimated costs."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện ngữ điệu giao tiếp đời sống thực tế khi trao đổi dịch vụ sửa chữa. Chú ý cách phát âm nối ba từ 'pick it up'.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What primary issues caused Daniel to bring his car to the service center?",
+        "Under what circumstance would the service completion time be pushed back?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn nhắn đồng nghiệp thông báo đi nhận xe sửa muộn.",
+        "text": "Hey team, my car is undergoing a full diagnostic. If they run into a glitch sourcing parts, completion might be pushed back to tomorrow. I'll touch base if I need to work remotely.",
+        "vietnamese": "Chào cả nhà, xe của tớ đang được kiểm tra chẩn đoán toàn bộ. Nếu họ gặp sự cố khi tìm linh kiện, thời gian xong có thể bị đẩy lùi sang sáng mai. Tớ sẽ báo lại nếu cần làm việc từ xa."
+      },
+      "email_template": {
+        "context": "Email phản hồi từ Cố vấn Dịch vụ xe hơi gửi cho Khách hàng.",
+        "text": "Dear Daniel,\n\nYour vehicle is currently undergoing a full diagnostic inspection. As discussed, if we run into a glitch obtaining the replacement brake pads today, we may need to push the completion time back to tomorrow morning. We will keep your vehicle maintenance schedule on track as much as possible and touch base shortly with the complete inspection report.\n\nBest regards,\nSteve",
+        "vietnamese": "Kính gửi Daniel,\n\nXe của anh hiện đang được tiến hành kiểm tra chẩn đoán toàn bộ. Như đã thảo luận, nếu chúng tôi gặp sự cố trong việc nhập má phanh thay thế trong hôm nay, chúng tôi có thể cần lùi thời gian hoàn thành sang sáng mai. Chúng tôi sẽ cố gắng giữ lịch trình bảo dưỡng xe của anh đúng tiến độ nhất có thể và sẽ liên hệ lại sớm kèm báo cáo kiểm tra chi tiết.\n\nTrân trọng,\nSteve"
+      }
+    }
+  },
+  {
+    "lesson_id": 30,
+    "title": "Gym Membership & Personal Training (Đăng ký tập Gym & HLV cá nhân)",
+    "category": "Daily Life",
+    "topic": "Health, Fitness & Subscription Services",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 135,
+      "duration_seconds": 37,
+      "speakers": [
+        "Emma (Gym Member)",
+        "Ryan (Personal Trainer)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Emma (Gym Member)",
+        "text": "Hi Ryan, I want to upgrade my gym membership and start personal training sessions to stay on track with my health goals.",
+        "vietnamese": "Chào Ryan, tôi muốn nâng cấp thẻ hội viên phòng tập và bắt đầu các buổi tập với HLV cá nhân để giữ đúng tiến độ mục tiêu sức khỏe."
+      },
+      {
+        "speaker_id": "Ryan (Personal Trainer)",
+        "text": "That's fantastic Emma! I know you were tied up with work last month, so setting a routine now is ideal.",
+        "vietnamese": "Thật tuyệt vời Emma! Tôi biết tháng trước cô đã rất bận rộn với công việc, nên việc thiết lập lộ trình lúc này là rất lý tưởng."
+      },
+      {
+        "speaker_id": "Emma (Gym Member)",
+        "text": "Exactly. Can we schedule our first session for Thursday, or do you need to push it back?",
+        "vietnamese": "Chính xác. Chúng ta có thể xếp lịch buổi tập đầu tiên vào thứ Năm không, hay anh cần lùi lại?"
+      },
+      {
+        "speaker_id": "Ryan (Personal Trainer)",
+        "text": "Thursday works! Unless we run into a glitch with room booking, we'll meet at 7 AM.",
+        "vietnamese": "Thứ Năm ổn đấy! Trừ khi chúng ta gặp sự cố đặt phòng tập, chúng ta sẽ gặp nhau lúc 7 giờ sáng."
+      },
+      {
+        "speaker_id": "Emma (Gym Member)",
+        "text": "Perfect. Send over the fitness assessment form, and I'll fill it out tonight.",
+        "vietnamese": "Hoàn hảo. Hãy gửi mẫu đánh giá thể trạng, và tôi sẽ điền vào tối nay."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "upgrade my",
+        "ipa_connected": "/ʌpˈɡreɪd maɪ/",
+        "technique": "Stop Consonant",
+        "note": "Âm /d/ ở cuối từ 'upgrade' giữ nhẹ trước khi chuyển sang âm /m/ của 'my'."
+      },
+      {
+        "phrase": "fill it out",
+        "ipa_connected": "/fɪl ɪt aʊt/",
+        "technique": "Linking Consonant to Vowel",
+        "note": "Nối liền 3 từ: /l/ từ 'fill' sang 'it', và âm /t/ từ 'it' nối sang 'out' (/fɪ.lɪ.taʊt/)."
+      },
+      {
+        "phrase": "tied up with",
+        "ipa_connected": "/taɪd ʌp wɪð/",
+        "technique": "Linking Consonant to Vowel",
+        "note": "Âm /d/ từ 'tied' nối liền sang nguyên âm /ʌ/ ở 'up'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "gym membership",
+        "type": "Noun Phrase",
+        "meaning": "Thẻ/gói hội viên phòng tập gym",
+        "example": "She renewed her annual gym membership to access premium classes."
+      },
+      {
+        "phrase": "personal training sessions",
+        "type": "Noun Phrase",
+        "meaning": "Các buổi tập luyện cùng huấn luyện viên cá nhân",
+        "example": "Investing in personal training sessions helps improve technique and prevent injury."
+      },
+      {
+        "phrase": "fitness assessment",
+        "type": "Noun Phrase",
+        "meaning": "Đánh giá chỉ số/thể trạng thể chất",
+        "example": "Complete the fitness assessment before starting heavy weight training."
+      },
+      {
+        "phrase": "fill out",
+        "type": "Phrasal Verb",
+        "meaning": "Điền vào (mẫu đơn, tờ khai)",
+        "example": "Please fill out this health questionnaire before your first session."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện ngữ điệu tích cực, tràn đầy năng lượng trong chủ đề thể thao và rèn luyện sức khỏe.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "Why is Emma deciding to start personal training sessions now?",
+        "What form does Ryan need to send over before their first training session?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Gửi tin nhắn cho HLV cá nhân xác nhận lại lịch hẹn tập.",
+        "text": "Hi Ryan, excited for our first personal training session on Thursday at 7 AM! I filled out the fitness assessment form so we can stay on track with my goals. See you then!",
+        "vietnamese": "Chào Ryan, rất hào hứng cho buổi tập cá nhân đầu tiên vào thứ Năm lúc 7 giờ sáng! Tớ đã điền xong mẫu đánh giá thể trạng để chúng ta giữ đúng tiến độ mục tiêu. Hẹn gặp lại cậu lúc đó!"
+      },
+      "email_template": {
+        "context": "Email từ Huấn luyện viên cá nhân gửi khách hàng xác nhận đăng ký.",
+        "text": "Dear Emma,\n\nWelcome to our personal training program! I am thrilled to help you stay on track with your fitness journey. I have attached the fitness assessment form for you to fill out prior to our session. Unless we run into a glitch with facility schedule, I look forward to seeing you Thursday at 7:00 AM.\n\nBest regards,\nRyan",
+        "vietnamese": "Kính gửi Emma,\n\nChào mừng cô đến với chương trình huấn luyện cá nhân! Tôi rất vui mừng được hỗ trợ cô giữ đúng tiến độ trên hành trình rèn luyện sức khỏe. Tôi đã đính kèm mẫu đánh giá thể trạng để cô điền vào trước buổi tập. Trừ khi chúng ta gặp sự cố về lịch phòng tập, tôi rất mong chờ được gặp cô vào 7:00 sáng thứ Năm.\n\nTrân trọng,\nRyan"
+      }
+    }
+  }
+]

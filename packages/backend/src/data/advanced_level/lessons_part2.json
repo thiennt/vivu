@@ -1,0 +1,367 @@
+{
+  "total_lessons": 120,
+  "part": 2,
+  "range": "Bài 41 - Bài 80",
+  "lessons": [
+    {
+      "id": 41,
+      "category": "Workplace",
+      "topic": "Quản lý & Xin hoãn Deadline",
+      "title": "Báo cáo chậm trễ giai đoạn Testing",
+      "script": "A: Hi team, we're running slightly behind schedule on the QA phase for Sprint 12.\nB: What caused the bottleneck? Were there unexpected bugs found?\nA: Exactly, a series of edge-case bugs in the payment flow required deeper investigation.\nB: Let's extend the QA window by 24 hours to ensure rock-solid stability.",
+      "slack_email": "Hi all, QA phase for Sprint 12 is delayed by 24 hours due to edge-case bugs in the payment flow. Target release is now updated.",
+      "reflection": "A: We're running slightly behind schedule on the review phase.\nB: Let's extend the timeline by 24 hours to ensure quality."
+    },
+    {
+      "id": 42,
+      "category": "Workplace",
+      "topic": "Báo cáo & Xử lý sự cố",
+      "title": "Khắc phục lỗi Cache Stale",
+      "script": "A: Users are complaining that they still see the old dashboard layout after updating.\nB: It sounds like a stale cache issue on the CDN level.\nA: Right. The browser is caching the legacy bundle files.\nB: Let's invalidate the CDN cache immediately and force a hard refresh.",
+      "slack_email": "Update: Invalidated CDN cache to resolve stale browser bundle issues. Users should now see the latest layout.",
+      "reflection": "A: It sounds like a cache issue on the server level.\nB: Let's invalidate the cache and deploy a patch."
+    },
+    {
+      "id": 43,
+      "category": "Workplace",
+      "topic": "Họp hành & Thảo luận",
+      "title": "Đề xuất tối ưu hóa quy trình Code Review",
+      "script": "A: Pull requests are sitting in the review queue for way too long lately.\nB: I agree. Developers are context-switching too much between coding and reviewing.\nA: How about assigning two specific reviewers per day to handle the queue?\nB: That sounds efficient. Let's pilot this workflow starting next week.",
+      "slack_email": "Hi team, starting next week we are piloting a daily rotating PR reviewer schedule to reduce merge turnaround times.",
+      "reflection": "A: Pull requests are sitting in the queue for too long.\nB: Let's pilot a new review schedule starting next week."
+    },
+    {
+      "id": 44,
+      "category": "Workplace",
+      "topic": "Tương tác Slack/Email",
+      "title": "Nhắc nhở nộp báo cáo tuần",
+      "script": "A: Friendly reminder that weekly status reports are due by 5 PM today.\nB: Oh, thanks for the heads-up! I'll wrap mine up right after this meeting.\nA: Perfect. Make sure to highlight any blockers for next week's sprint.\nB: Will do. I'll submit it via Notion before the deadline.",
+      "slack_email": "Reminder: Weekly status reports are due by 5 PM today. Please include any major blockers.",
+      "reflection": "A: Friendly reminder that reports are due by end of day.\nB: I'll wrap mine up right after this call."
+    },
+    {
+      "id": 45,
+      "category": "Workplace",
+      "topic": "Phỏng vấn & Giao việc",
+      "title": "Đánh giá ứng viên vòng thực hành",
+      "script": "A: How did you find the candidate's live coding session just now?\nB: Technically they were very strong, but communication during debugging was weak.\nA: Did they explain their thought process while solving the problem?\nB: Not really, they went silent for most of the session.",
+      "slack_email": "N/A (Nội dung đánh giá nội bộ)",
+      "reflection": "A: How did you find the candidate's technical performance?\nB: Technically strong, but communication could be improved."
+    },
+    {
+      "id": 46,
+      "category": "Workplace",
+      "topic": "Quản lý & Xin hoãn Deadline",
+      "title": "Xin lùi lịch họp Sprint Retrospective",
+      "script": "A: Can we push back today's retro meeting by an hour? We're right in the middle of a hotfix.\nB: Sure thing. Is the production hotfix critical?\nA: Yes, authentication tokens got invalidated unexpectedly for some users.\nB: Understood. Let's reschedule the retro for 4 PM then.",
+      "slack_email": "Hi team, moving today's retro meeting to 4 PM due to an ongoing production hotfix.",
+      "reflection": "A: Can we push back today's meeting by an hour?\nB: Sure thing, let's reschedule for 4 PM."
+    },
+    {
+      "id": 47,
+      "category": "Workplace",
+      "topic": "Báo cáo & Xử lý sự cố",
+      "title": "Cảnh báo bảo mật phụ thuộc npm packages",
+      "script": "A: Automated vulnerability scanner flagged several high-risk alerts in our npm packages.\nB: Are they in production dependencies or dev dependencies?\nA: Mostly in indirect production dependencies related to parsing libraries.\nB: Let's run an audit fix and patch them immediately.",
+      "slack_email": "Security Notice: Detected high-risk vulnerabilities in npm packages. Patching dependencies today.",
+      "reflection": "A: Automated scanner flagged several high-risk alerts.\nB: Let's run an audit and patch them immediately."
+    },
+    {
+      "id": 48,
+      "category": "Workplace",
+      "topic": "Họp hành & Thảo luận",
+      "title": "Thống nhất quy ước đặt tên (Naming Convention)",
+      "script": "A: We keep running into inconsistencies with database table naming conventions.\nB: Some use camelCase while others use snake_case across models.\nA: We should enforce a strict linter rule to prevent this going forward.\nB: Good idea. Let's update our style guide doc today.",
+      "slack_email": "Hi team, updated our style guide to enforce strict snake_case for database tables via linter rules.",
+      "reflection": "A: We keep running into inconsistencies with naming conventions.\nB: Let's enforce strict rules via linters."
+    },
+    {
+      "id": 49,
+      "category": "Workplace",
+      "topic": "Tương tác Slack/Email",
+      "title": "Thông báo bảo trì hệ thống định kỳ",
+      "script": "A: Just drafting the scheduled maintenance notice for this Saturday.\nB: Make sure to specify the exact downtime window clearly.\nA: I've set it from 2 AM to 4 AM UTC to minimize user impact.\nB: Looks good. Broadcast it in the announcement channel.",
+      "slack_email": "Maintenance Notice: Scheduled server maintenance this Saturday from 2 AM to 4 AM UTC. Brief downtime expected.",
+      "reflection": "A: Make sure to specify the exact downtime window clearly.\nB: Looks good, broadcast it in the announcement channel."
+    },
+    {
+      "id": 50,
+      "category": "Workplace",
+      "topic": "Phỏng vấn & Giao việc",
+      "title": "Giao bài tập tối ưu hóa query database",
+      "script": "A: For your technical task this week, we'd like you to optimize our slow reporting queries.\nB: Are there existing execution plans I can inspect?\nA: Yes, check out the slow query log on Kibana for patterns.\nB: Perfect, I'll start by indexing the foreign keys and measuring performance.",
+      "slack_email": "Task assigned: Optimizing slow reporting queries using execution plans and proper indexing.",
+      "reflection": "A: For your technical task, optimize our slow reporting queries.\nB: Perfect, I'll inspect the execution plans first."
+    },
+    {
+      "id": 51,
+      "category": "Daily Life",
+      "topic": "Trò chuyện xã giao (Small talk)",
+      "title": "Gặp lại đồng nghiệp cũ ở sự kiện",
+      "script": "A: Long time no see! What are you up to these days?\nB: Hey! I switched companies last year and now work as a tech lead.\nA: That's awesome, congratulations on the promotion!\nB: Thanks a lot! How have things been on your end?",
+      "slack_email": "N/A (Giao tiếp trực tiếp)",
+      "reflection": "A: Long time no see! What are you up to these days?\nB: I switched companies last year and work as a lead."
+    },
+    {
+      "id": 52,
+      "category": "Daily Life",
+      "topic": "Ăn uống & Mua sắm",
+      "title": "Thanh toán chia tiền ăn (Split bill)",
+      "script": "A: Let me grab the bill for everyone this time.\nB: No way, let's split it evenly using a calculator app.\nA: Seriously, it's on me today as a belated birthday treat.\nB: Are you sure? Well, thank you so much, I really appreciate it!",
+      "slack_email": "N/A (Giao tiếp trực tiếp)",
+      "reflection": "A: Let me grab the bill for everyone this time.\nB: No way, let's split it evenly."
+    },
+    {
+      "id": 53,
+      "category": "Daily Life",
+      "topic": "Du lịch & Sân bay/Khách sạn",
+      "title": "Khai báo hành lý thất lạc tại sân bay",
+      "script": "A: Excuse me, my checked luggage didn't come out on the carousel.\nB: I'm sorry to hear that. May I see your passport and baggage claim stub?\nA: Here you go. It's a black suitcase with a red ribbon.\nB: Let me file a missing baggage report right away in the system.",
+      "slack_email": "N/A (Giao tiếp trực tiếp)",
+      "reflection": "A: My checked luggage didn't come out on the carousel.\nB: Let me file a missing baggage report right away."
+    },
+    {
+      "id": 54,
+      "category": "Daily Life",
+      "topic": "Sự cố đời sống",
+      "title": "Gọi thợ sửa điều hòa hỏng",
+      "script": "A: Hi, my AC unit is blowing warm air and making a strange rattling sound.\nB: When did you first notice this issue happening?\nA: Just this morning when I turned it on. Can someone come take a look?\nB: We can send a technician over between 2 and 4 PM today.",
+      "slack_email": "N/A (Giao tiếp trực tiếp)",
+      "reflection": "A: My device is making a strange rattling sound.\nB: We can send a technician over this afternoon."
+    },
+    {
+      "id": 55,
+      "category": "Daily Life",
+      "topic": "Bày tỏ quan điểm & Cảm xúc",
+      "title": "Bày tỏ sự thất vọng về thời tiết",
+      "script": "A: I was planning to go hiking today, but it started pouring rain.\nB: That's unfortunate. The weather forecast said it would be sunny all day.\nA: Tell me about it. So much for my weekend outdoor plans.\nB: Don't worry, we can always catch a movie indoors instead.",
+      "slack_email": "N/A (Giao tiếp trực tiếp)",
+      "reflection": "A: So much for my weekend outdoor plans.\nB: Don't worry, we can always find an indoor activity instead."
+    },
+    {
+      "id": 56,
+      "category": "Workplace",
+      "topic": "Quản lý & Xin hoãn Deadline",
+      "title": "Xin gia hạn bàn giao báo cáo tài chính",
+      "script": "A: Can we get a 24-hour extension on the Q3 financial report submission?\nB: What's causing the hold-up? Are there discrepancies in the ledger?\nA: Yes, reconciling the cross-border transactions took longer than anticipated.\nB: Alright, submission deadline extended to tomorrow noon.",
+      "slack_email": "Hi finance team, Q3 report submission is extended to tomorrow noon due to cross-border ledger reconciliation.",
+      "reflection": "A: Can we get a 24-hour extension on the report submission?\nB: Alright, submission deadline extended to tomorrow noon."
+    },
+    {
+      "id": 57,
+      "category": "Workplace",
+      "topic": "Báo cáo & Xử lý sự cố",
+      "title": "Báo cáo lỗi Certificate SSL hết hạn",
+      "script": "A: Alert! Our staging domain is throwing SSL certificate warning errors.\nB: Did the auto-renewal script fail on the server?\nA: Apparently cron job stopped running after the last OS update.\nB: Let's manually renew the cert and fix the cron job configuration.",
+      "slack_email": "DevOps Alert: Staging SSL certificate expired due to a stopped cron job. Renewed manually and fixed cron.",
+      "reflection": "A: The staging domain is throwing SSL warning errors.\nB: Let's renew the certificate manually."
+    },
+    {
+      "id": 58,
+      "category": "Workplace",
+      "topic": "Họp hành & Thảo luận",
+      "title": "Đóng góp ý kiến cải tiến UI Dashboard",
+      "script": "A: What do you think about moving the key metrics to the top banner?\nB: That would make data visibility much better for executive users.\nA: Exactly. Right now they have to scroll down to see daily active users.\nB: Let's mock up this layout change for user testing.",
+      "slack_email": "Design proposal: Moving key metrics to the top banner to improve executive visibility. Mockups attached.",
+      "reflection": "A: What do you think about moving key metrics to the top banner?\nB: That would improve data visibility significantly."
+    },
+    {
+      "id": 59,
+      "category": "Workplace",
+      "topic": "Tương tác Slack/Email",
+      "title": "Xác nhận lịch họp với đối tác nước ngoài",
+      "script": "A: Can we lock in the meeting time with the Singapore partner for Thursday 10 AM?\nB: Let me check their timezone offset... Yes, that works for them.\nA: Great. I'll send out the calendar invite with the Zoom link attached.\nB: Perfect, thanks for coordinating.",
+      "slack_email": "Hi all, confirmed partner meeting for Thursday 10 AM SGT. Calendar invites sent.",
+      "reflection": "A: Can we lock in the meeting time for Thursday 10 AM?\nB: Yes, that works. I'll send out the calendar invite."
+    },
+    {
+      "id": 60,
+      "category": "Workplace",
+      "topic": "Phỏng vấn & Giao việc",
+      "title": "Giao nhiệm vụ viết Unit Test",
+      "script": "A: We need to boost our test coverage before releasing the billing module.\nB: Should I write tests for both happy path and error cases?\nA: Definitely cover edge cases like payment timeouts and insufficient funds.\nB: Got it. I'll aim for 90% coverage by Friday.",
+      "slack_email": "Task: Writing unit tests for the billing module covering timeouts and error cases. Goal: 90% coverage.",
+      "reflection": "A: We need to boost our test coverage before release.\nB: Got it, I'll aim for 90% coverage by Friday."
+    },
+    {
+      "id": 61,
+      "category": "Daily Life",
+      "topic": "Trò chuyện xã giao (Small talk)",
+      "title": "Chia sẻ sở thích pha cà phê sáng",
+      "script": "A: Do you usually grab coffee or brew it yourself at home?\nB: I prefer brewing pour-over coffee myself every morning.\nA: Nice! What beans are you currently using these days?\nB: Ethiopian single-origin beans. The fruity notes are amazing.",
+      "slack_email": "N/A (Giao tiếp trực tiếp)",
+      "reflection": "A: Do you usually grab coffee or brew it yourself?\nB: I prefer brewing it myself every morning."
+    },
+    {
+      "id": 62,
+      "category": "Daily Life",
+      "topic": "Ăn uống & Mua sắm",
+      "title": "Hỏi mua trái cây tươi theo mùa",
+      "script": "A: Excuse me, are these mangoes sweet and ripe right now?\nB: Yes, they just came in from the Mekong Delta yesterday.\nA: Great, I'll take four of them. Can you weigh and tag them for me?\nB: Sure thing. That'll be 80 thousand dong total.",
+      "slack_email": "N/A (Giao tiếp trực tiếp)",
+      "reflection": "A: Are these items fresh and in season right now?\nB: Yes, they just arrived yesterday."
+    },
+    {
+      "id": 63,
+      "category": "Daily Life",
+      "topic": "Du lịch & Sân bay/Khách sạn",
+      "title": "Hỏi dịch vụ đưa đón sân bay (Airport Shuttle)",
+      "script": "A: Does the hotel offer an airport shuttle service for guests?\nB: Yes, we do. It runs every hour on the hour.\nA: Do I need to book my seat in advance at the front desk?\nB: Yes, please let us know at least two hours prior.",
+      "slack_email": "N/A (Giao tiếp trực tiếp)",
+      "reflection": "A: Does the hotel offer a shuttle service?\nB: Yes, please book your seat in advance."
+    },
+    {
+      "id": 64,
+      "category": "Daily Life",
+      "topic": "Sự cố đời sống",
+      "title": "Báo thẻ xe máy bị mất",
+      "script": "A: Hi, I seem to have lost my parking ticket while shopping here.\nB: No problem. May I see your vehicle registration papers and ID?\nA: Here are my papers. How much is the lost ticket fee?\nB: It's 50 thousand dong plus the standard parking fee.",
+      "slack_email": "N/A (Giao tiếp trực tiếp)",
+      "reflection": "A: I seem to have lost my card.\nB: May I see your registration papers and ID?"
+    },
+    {
+      "id": 65,
+      "category": "Daily Life",
+      "topic": "Bày tỏ quan điểm & Cảm xúc",
+      "title": "Đánh giá sự cần thiết của việc tập thể dục",
+      "script": "A: I feel so much more energetic ever since I started working out daily.\nB: I really need to start exercising too, but I'm always too tired after work.\nA: I used to feel the same, but morning workouts actually give you more stamina.\nB: Maybe I should try waking up 30 minutes earlier then.",
+      "slack_email": "N/A (Giao tiếp trực tiếp)",
+      "reflection": "A: I feel so much more energetic ever since I started.\nB: Maybe I should try it out too."
+    },
+    {
+      "id": 66,
+      "category": "Workplace",
+      "topic": "Quản lý & Xin hoãn Deadline",
+      "title": "Hoãn lịch Demo sản phẩm với khách hàng",
+      "script": "A: The client requested to postpone today's product demo to next week.\nB: Did they give any specific reason for the postponement?\nA: Their key stakeholders are travelling and couldn't attend today.\nB: That actually gives us more time to polish the UI animations.",
+      "slack_email": "Hi team, client demo postponed to next week due to stakeholder travel. We have extra time for UI polish.",
+      "reflection": "A: The client requested to postpone the demo to next week.\nB: That gives us more time to polish things."
+    },
+    {
+      "id": 67,
+      "category": "Workplace",
+      "topic": "Báo cáo & Xử lý sự cố",
+      "title": "Xử lý xung đột phiên bản Node.js",
+      "script": "A: My local build is failing with an error about Node version mismatch.\nB: Are you running Node 18 or the older version 16?\nA: I was on Node 20, which broke the legacy node-gyp packages.\nB: Switch to Node 18 using nvm and it should build fine.",
+      "slack_email": "Dev tip: Use nvm to switch to Node 18 if local builds fail due to version mismatch.",
+      "reflection": "A: My local build is failing with a version mismatch error.\nB: Switch versions using nvm and it should build fine."
+    },
+    {
+      "id": 68,
+      "category": "Workplace",
+      "topic": "Họp hành & Thảo luận",
+      "title": "Phân chia công việc trong Sprint Planning",
+      "script": "A: Let's review the remaining tickets in our backlog for Sprint 13.\nB: We have about 30 story points left to allocate.\nA: Let's assign the authentication stories to David and the reporting items to Sarah.\nB: Sounds balanced. Let's lock in the sprint goal.",
+      "slack_email": "Sprint 13 Planning: Assigned auth tasks to David and reporting items to Sarah. Sprint locked.",
+      "reflection": "A: Let's review the remaining tickets in our backlog.\nB: Let's assign the tasks and lock in the goal."
+    },
+    {
+      "id": 69,
+      "category": "Workplace",
+      "topic": "Tương tác Slack/Email",
+      "title": "Xin feedback thiết kế từ Product Manager",
+      "script": "A: Hey PM, I've just dropped the wireframes for the user profile page in Figma.\nB: Awesome, let me take a look this afternoon.\nA: Pay special attention to the mobile responsive view on section two.\nB: Got it. I'll leave comments directly on the frames.",
+      "slack_email": "Hi PM, wireframes for the profile page are ready in Figma. Please review mobile views.",
+      "reflection": "A: I've just dropped the wireframes in Figma.\nB: Awesome, I'll take a look this afternoon."
+    },
+    {
+      "id": 70,
+      "category": "Workplace",
+      "topic": "Phỏng vấn & Giao việc",
+      "title": "Giao nhiệm vụ viết tài liệu API (Swagger/OpenAPI)",
+      "script": "A: We need proper OpenAPI documentation for our new microservices.\nB: Should I document all endpoints including error response schemas?\nA: Yes, make sure every error code and parameter is clearly described.\nB: Understood. I'll update the Swagger specs by Thursday.",
+      "slack_email": "Task: Writing complete OpenAPI/Swagger documentation including error schemas by Thursday.",
+      "reflection": "A: We need proper documentation for our new services.\nB: I'll update the specs by Thursday."
+    },
+    {
+      "id": 71,
+      "category": "Daily Life",
+      "topic": "Trò chuyện xã giao (Small talk)",
+      "title": "Bàn về sở thích đọc sách kỹ năng",
+      "script": "A: Are you reading any good books at the moment?\nB: Yeah, I'm currently reading 'Atomic Habits' by James Clear.\nA: Oh, that's a classic! Did you find it helpful for daily routines?\nB: Totally, the 1% improvement rule really changed my perspective.",
+      "slack_email": "N/A (Giao tiếp trực tiếp)",
+      "reflection": "A: Are you reading any good books at the moment?\nB: I'm currently reading a book on productivity."
+    },
+    {
+      "id": 72,
+      "category": "Daily Life",
+      "topic": "Ăn uống & Mua sắm",
+      "title": "Hỏi mua thiết bị điện tử có bảo hành",
+      "script": "A: Does this wireless mouse come with an official manufacturer warranty?\nB: Yes, it includes a 12-month replacement warranty nationwide.\nA: That's great. Is the receipt required for warranty claims?\nB: Yes, please keep your receipt or invoice safe.",
+      "slack_email": "N/A (Giao tiếp trực tiếp)",
+      "reflection": "A: Does this item come with an official warranty?\nB: Yes, it includes a 12-month replacement warranty."
+    },
+    {
+      "id": 73,
+      "category": "Daily Life",
+      "topic": "Du lịch & Sân bay/Khách sạn",
+      "title": "Đổi tiền ngoại tệ tại quầy",
+      "script": "A: Hi, I'd like to exchange US dollars into Vietnamese dong, please.\nB: Sure thing. What amount would you like to exchange today?\nA: 500 dollars. What is the current exchange rate?\nB: Today's rate is listed on the electronic board right behind me.",
+      "slack_email": "N/A (Giao tiếp trực tiếp)",
+      "reflection": "A: What is the current exchange rate today?\nB: The rate is listed on the electronic board right behind me."
+    },
+    {
+      "id": 74,
+      "category": "Daily Life",
+      "topic": "Sự cố đời sống",
+      "title": "Báo thẻ ngân hàng bị nuốt tại ATM",
+      "script": "A: Help! My debit card got swallowed by the ATM machine outside.\nB: Did the machine display any error code before keeping the card?\nA: It said transaction timed out due to slow connection.\nB: Please call our hotline immediately to block your card for safety.",
+      "slack_email": "N/A (Giao tiếp trực tiếp)",
+      "reflection": "A: My card got swallowed by the machine.\nB: Please call our hotline to block your card for safety."
+    },
+    {
+      "id": 75,
+      "category": "Daily Life",
+      "topic": "Bày tỏ quan điểm & Cảm xúc",
+      "title": "Thảo luận về việc học ngoại ngữ qua phim",
+      "script": "A: Watching movies with English subtitles is such a great way to learn idioms.\nB: I agree, but sometimes they speak way too fast to catch words.\nA: That's why shadowing short clips repeatedly helps train your ear.\nB: Makes sense, I should give that micro-learning method a try.",
+      "slack_email": "N/A (Giao tiếp trực tiếp)",
+      "reflection": "A: Watching content with subtitles is a great way to learn.\nB: Makes sense, I should give that method a try."
+    },
+    {
+      "id": 76,
+      "category": "Workplace",
+      "topic": "Quản lý & Xin hoãn Deadline",
+      "title": "Báo cáo chậm tiến độ do thiếu tài nguyên",
+      "script": "A: We won't finish the staging migration this week due to server resource limits.\nB: Can we provision extra cloud credits immediately?\nA: I already submitted a request, but finance approval takes 24 hours.\nB: I'll talk to the finance director to expedite the approval today.",
+      "slack_email": "Hi team, migration delayed by a day pending cloud resource approval. Escalating to finance now.",
+      "reflection": "A: We won't finish the migration due to resource limits.\nB: I'll talk to management to expedite the approval."
+    },
+    {
+      "id": 77,
+      "category": "Workplace",
+      "topic": "Báo cáo & Xử lý sự cố",
+      "title": "Phát hiện lỗi Memory Leak trên App",
+      "script": "A: The mobile app crashes after running continuously for a few hours.\nB: Profiling tools show a memory leak in the image cache listener.\nA: Ah, event listeners are not being detached on component unmount.\nB: Exactly. Let's push a fix right away.",
+      "slack_email": "Bug report: Identified memory leak in mobile image cache listeners. Fix in progress.",
+      "reflection": "A: Profiling tools show a memory leak in the listener.\nB: Let's push a fix right away."
+    },
+    {
+      "id": 78,
+      "category": "Workplace",
+      "topic": "Họp hành & Thảo luận",
+      "title": "Thảo luận chọn công nghệ Frontend Framework",
+      "script": "A: Should we build the new portal using React or Vue.js?\nB: React has a much larger ecosystem and component library support.\nA: True, but Vue is faster to set up for smaller internal dashboards.\nB: Let's build a quick proof-of-concept in both to compare developer experience.",
+      "slack_email": "Tech discussion: Building POCs in both React and Vue to evaluate DX for the new portal.",
+      "reflection": "A: Should we use React or Vue for this project?\nB: Let's build a quick proof-of-concept to compare."
+    },
+    {
+      "id": 79,
+      "category": "Workplace",
+      "topic": "Tương tác Slack/Email",
+      "title": "Cảm ơn sự trợ giúp của đồng nghiệp",
+      "script": "A: Thanks for covering my standup update this morning while I was away.\nB: No problem at all! Hope everything is alright on your end?\nA: All good now, just had a quick family errand to run.\nB: Glad to hear. Let me know if you need any more help today.",
+      "slack_email": "N/A (Giao tiếp trực tiếp)",
+      "reflection": "A: Thanks for covering my update this morning.\nB: No problem at all, hope everything is alright."
+    },
+    {
+      "id": 80,
+      "category": "Workplace",
+      "topic": "Phỏng vấn & Giao việc",
+      "title": "Giao nhiệm vụ Refactor code cũ",
+      "script": "A: We need to refactor the legacy user authentication service this sprint.\nB: Are there existing integration tests to ensure we don't break anything?\nA: Yes, the test suite covers 85% of core user flows.\nB: Perfect. I'll refactor the codebase module by module safely.",
+      "slack_email": "Task: Refactoring legacy auth service module by module backed by existing integration tests.",
+      "reflection": "A: Are there existing tests to ensure we don't break anything?\nB: Perfect, I'll refactor the codebase safely."
+    }
+  ]
+}

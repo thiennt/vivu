@@ -1,0 +1,999 @@
+[
+  {
+    "lesson_id": 1,
+    "title": "Xin hoãn Deadline ngắn (Short Deadline Extension)",
+    "category": "Workplace",
+    "topic": "Deadlines & Time Management",
+    "level": "TOEIC 800+ / Business Communication",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 140,
+      "duration_seconds": 38,
+      "speakers": [
+        { "id": "spk_1", "name": "Mark", "role": "Colleague / Lead" },
+        { "id": "spk_2", "name": "Linh", "role": "Developer / Team Member" }
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "spk_1",
+        "text": "Hi Linh, do you have a sec? I was wondering if the quarterly financial report is ready for review.",
+        "vietnamese": "Chào Linh, cậu có rảnh chút không? Tớ đang thắc mắc không biết báo cáo tài chính quý đã xong để duyệt chưa."
+      },
+      {
+        "speaker_id": "spk_2",
+        "text": "To be honest, Mark, we ran into some discrepancies in the data late yesterday. I'm still working on fixing them.",
+        "vietnamese": "Thành thật mà nói thì Mark ơi, bên tớ gặp chút sai lệch số liệu vào cuối ngày hôm qua. Tớ vẫn đang xử lý cho xong."
+      },
+      {
+        "speaker_id": "spk_1",
+        "text": "I see. The management team needs those numbers for tomorrow's strategy meeting.",
+        "vietnamese": "Tớ hiểu rồi. Ban quản lý đang cần mấy con số đó cho cuộc họp chiến lược ngày mai đấy."
+      },
+      {
+        "speaker_id": "spk_2",
+        "text": "I completely understand. Can I push the deadline back to 3 PM today? That'll give me enough time to double-check everything.",
+        "vietnamese": "Tớ hoàn toàn hiểu. Tớ dời deadline sang 3 giờ chiều nay được không? Nhờ thế tớ mới đủ thời gian rà soát lại mọi thứ."
+      },
+      {
+        "speaker_id": "spk_1",
+        "text": "That works. Just send it over as soon as it's finalized.",
+        "vietnamese": "Được đấy. Cứ gửi qua cho tớ ngay khi hoàn thiện nhé."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "wondering if the",
+        "ipa_connected": "/ˈwʌn dər ɪ ŋɪf ðə/",
+        "technique": "Linking consonant /ŋ/ to vowel /ɪ/",
+        "note": "Nối âm /ŋ/ từ 'wondering' sang 'if'."
+      },
+      {
+        "phrase": "ran into some",
+        "ipa_connected": "/ræ nɪn tə səm/",
+        "technique": "Linking consonant /n/ to vowel /ɪ/",
+        "note": "Nối âm /n/ từ 'ran' sang 'into'."
+      },
+      {
+        "phrase": "as soon as it's",
+        "ipa_connected": "/æz suː nə zɪts/",
+        "technique": "Continuous linking",
+        "note": "Nối chuỗi liên hoàn âm cuối sang nguyên âm tiếp theo."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "run into discrepancies",
+        "type": "Collocation",
+        "meaning": "Gặp phải sự bất hợp lý/sai lệch số liệu",
+        "example": "We ran into discrepancies during the audit."
+      },
+      {
+        "phrase": "push the deadline back",
+        "type": "Phrasal Verb",
+        "meaning": "Lùi/dời hạn chót công việc",
+        "example": "Can we push the deadline back to Friday?"
+      },
+      {
+        "phrase": "double-check",
+        "type": "Verb",
+        "meaning": "Kiểm tra, rà soát lại kỹ lần hai",
+        "example": "Please double-check the figures before sending."
+      },
+      {
+        "phrase": "send it over",
+        "type": "Phrasal Verb",
+        "meaning": "Gửi file/thông tin qua (email/chat)",
+        "example": "I'll send it over as soon as possible."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Can I push the deadline back to 3 PM today? That'll give me enough time to double-check everything.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "Can I push the deadline back to tomorrow morning?",
+        "I need a bit more time to double-check the figures."
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn ngắn gửi qua Slack/Teams",
+        "text": "Hi Mark, regarding the quarterly report, I found a minor data discrepancy. May I push the deadline back to 3 PM today to double-check the numbers? Will send it over as soon as it's ready!",
+        "vietnamese": "Chào Mark, về báo cáo quý, tớ thấy có chút sai lệch dữ liệu nhỏ. Tớ xin dời deadline sang 3h chiều nay để check kỹ lại số liệu nhé? Xong xuôi tớ gửi qua ngay!"
+      },
+      "email_template": {
+        "context": "Email trang trọng gửi Sếp/Đối tác",
+        "text": "Dear Mark,\n\nI am writing to request a brief extension for the quarterly financial report due to some data discrepancies identified late yesterday.\n\nCould we push the deadline back to 3:00 PM today? This will allow me to double-check the figures and ensure full accuracy for tomorrow's meeting.\n\nBest regards,\nLinh",
+        "vietnamese": "Chào Mark,\n\nTớ viết email này để xin hoãn nhẹ deadline cho báo cáo tài chính quý do có một số sai lệch dữ liệu được phát hiện vào cuối ngày hôm qua.\n\nLiệu chúng ta có thể dời deadline sang 3:00 chiều nay được không? Điều này sẽ giúp tớ rà soát lại các con số và đảm bảo tính chính xác tuyệt đối cho cuộc họp ngày mai.\n\nTrân trọng,\nLinh"
+      }
+    }
+  },
+  {
+    "lesson_id": 2,
+    "title": "Báo lỗi kỹ thuật & Nhờ hỗ trợ khẩn cấp (Reporting System Glitch)",
+    "category": "Workplace",
+    "topic": "Troubleshooting & Incident Management",
+    "level": "TOEIC 800+ / Business Communication",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 145,
+      "duration_seconds": 35,
+      "speakers": [
+        { "id": "spk_1", "name": "Alex", "role": "Product Manager" },
+        { "id": "spk_2", "name": "Linh", "role": "Software Engineer" }
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "spk_1",
+        "text": "Hey Linh, do you have a sec? The client just reported a glitch in the payment module.",
+        "vietnamese": "Này Linh, rảnh 1 giây không? Khách hàng vừa báo một lỗi kỹ thuật ở module thanh toán."
+      },
+      {
+        "speaker_id": "spk_2",
+        "text": "Oh no. I'm in the middle of testing the new release, but let me look into it right away.",
+        "vietnamese": "Ôi không. Tớ đang dở tay kiểm thử bản phát hành mới, nhưng để tớ kiểm tra việc này ngay lập tức."
+      },
+      {
+        "speaker_id": "spk_1",
+        "text": "Thanks! Upper management is asking for an update, so please drop me a ping on Slack as soon as you find anything.",
+        "vietnamese": "Cảm ơn nhé! Ban lãnh đạo đang xin cập nhật, nên hãy nhắn tớ 1 tin trên Slack ngay khi cậu tìm ra nguyên nhân nhé."
+      },
+      {
+        "speaker_id": "spk_2",
+        "text": "Will do. I'll check the system logs and keep you posted.",
+        "vietnamese": "Rõ rồi. Tớ sẽ check log hệ thống và cập nhật cho cậu liên tục."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "have a sec",
+        "ipa_connected": "/hæ və sek/",
+        "technique": "Linking consonant /v/ to vowel /ə/",
+        "note": "Nối âm /v/ từ 'have' sang 'a'."
+      },
+      {
+        "phrase": "in the middle of testing",
+        "ipa_connected": "/ɪn ðə mɪ də ləv testɪŋ/",
+        "technique": "Continuous linking",
+        "note": "Nối /l/ sang /ə/ rồi sang /v/."
+      },
+      {
+        "phrase": "look into it",
+        "ipa_connected": "/lʊ kɪn tuː wɪt/",
+        "technique": "Linking consonant /k/ and /n/",
+        "note": "Nối /k/ sang 'into' và /n/ sang 'it'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "report a glitch",
+        "type": "Collocation",
+        "meaning": "Báo cáo lỗi kỹ thuật nhỏ",
+        "example": "Users reported a glitch after the system update."
+      },
+      {
+        "phrase": "in the middle of",
+        "type": "Idiom",
+        "meaning": "Đang bận dở tay làm việc gì",
+        "example": "I'm in the middle of a phone call."
+      },
+      {
+        "phrase": "look into",
+        "type": "Phrasal Verb",
+        "meaning": "Điều tra, kiểm tra nguyên nhân",
+        "example": "Our team is looking into the server issue."
+      },
+      {
+        "phrase": "drop a ping",
+        "type": "Idiom (Tech/Office)",
+        "meaning": "Gửi tin nhắn ngắn qua Slack/Teams",
+        "example": "Drop me a ping when you finish the task."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "I'm in the middle of testing the new release, but let me look into it right away.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "I'm in the middle of writing a report, but I'll check it soon.",
+        "Let me look into the system logs right away."
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Gửi Slack báo tiến độ xử lý lỗi",
+        "text": "Hi Alex, I'm currently looking into the payment glitch reported by the client. Will drop you a ping here as soon as I check the system logs!",
+        "vietnamese": "Chào Alex, tớ đang kiểm tra lỗi thanh toán khách báo rồi. Sẽ bắn tin nhắn cho cậu ở đây ngay khi tớ check xong log hệ thống!"
+      },
+      "email_template": {
+        "context": "Email báo cáo tình hình sự cố",
+        "text": "Hi Alex,\n\nRegarding the payment module glitch, I am currently investigating the issue. I will keep you updated as soon as we identify the root cause.\n\nBest regards,\nLinh",
+        "vietnamese": "Chào Alex,\n\nVề lỗi ở module thanh toán, tớ đang tiến hành điều tra sự cố. Tớ sẽ cập nhật cho cậu ngay khi xác định được nguyên nhân cốt lõi.\n\nTrân trọng,\nLinh"
+      }
+    }
+  },
+  {
+    "lesson_id": 3,
+    "title": "Trò chuyện xã giao đầu tuần (Monday Small Talk)",
+    "category": "Daily Life",
+    "topic": "Socializing & Networking",
+    "level": "TOEIC 800+ / General Communication",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 135,
+      "duration_seconds": 32,
+      "speakers": [
+        { "id": "spk_1", "name": "Tom", "role": "Expat Colleague" },
+        { "id": "spk_2", "name": "Linh", "role": "Local Colleague" }
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "spk_1",
+        "text": "Morning Linh! How was your weekend? Did you do anything fun?",
+        "vietnamese": "Chào buổi sáng Linh! Cuối tuần của cậu thế nào? Có đi đâu chơi vui không?"
+      },
+      {
+        "speaker_id": "spk_2",
+        "text": "It was pretty relaxing. I was mostly tied up with some house chores on Saturday, but I managed to catch up on my reading yesterday.",
+        "vietnamese": "Cũng khá thư giãn. Thứ Bảy tớ chủ yếu bị kẹt với việc nhà, nhưng Chủ nhật cũng tranh thủ đọc nốt mấy cuốn sách."
+      },
+      {
+        "speaker_id": "spk_1",
+        "text": "Sounds nice! I was planning to go hiking, but the rain ruined my plans.",
+        "vietnamese": "Nghe hay đấy! Tớ định đi leo núi mà mưa làm hỏng hết kế hoạch."
+      },
+      {
+        "speaker_id": "spk_2",
+        "text": "Oh, that’s too bad. Hopefully, the weather will be better this coming weekend.",
+        "vietnamese": "Ôi tiếc thế. Hy vọng thời tiết cuối tuần tới sẽ tốt hơn."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "how was your",
+        "ipa_connected": "/haʊ wəʒ jər/",
+        "technique": "Assimilated sound",
+        "note": "Âm /z/ của 'was' biến thành /ʒ/ khi đi với 'your'."
+      },
+      {
+        "phrase": "tied up with",
+        "ipa_connected": "/taɪ dʌ p wɪð/",
+        "technique": "Linking consonant /d/ to /ʌ/",
+        "note": "Nối /d/ trong 'tied' sang 'up'."
+      },
+      {
+        "phrase": "catch up on",
+        "ipa_connected": "/kætʃ ʌ pɒn/",
+        "technique": "Continuous linking",
+        "note": "Nối /tʃ/ sang 'up' và /p/ sang 'on'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "tied up with",
+        "type": "Phrasal Verb / Idiom",
+        "meaning": "Bận rộn/bị kẹt với việc gì",
+        "example": "I was tied up with meetings all morning."
+      },
+      {
+        "phrase": "catch up on",
+        "type": "Phrasal Verb",
+        "meaning": "Tranh thủ làm bù/xem bù/đọc bù thứ chưa làm",
+        "example": "I need to catch up on sleep this weekend."
+      },
+      {
+        "phrase": "ruin someone's plans",
+        "type": "Collocation",
+        "meaning": "Làm hỏng kế hoạch của ai",
+        "example": "Bad weather ruined our outdoor event."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "I was mostly tied up with some house chores on Saturday, but I managed to catch up on my reading yesterday.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "I was tied up with work all day yesterday.",
+        "I managed to catch up on my favorite TV show."
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn hỏi thăm đồng nghiệp sáng T2",
+        "text": "Morning Tom! Hope you had a great weekend. I was mostly tied up with chores, but feeling recharged now. Ready for our sprint call!",
+        "vietnamese": "Chào buổi sáng Tom! Hy vọng cậu có cuối tuần vui. Tớ chủ yếu bận dọn dẹp nhà cửa, nhưng giờ thấy hồi sức rồi. Sẵn sàng cho buổi họp sprint nhé!"
+      },
+      "email_template": {
+        "context": "Dòng mở đầu email hỏi thăm đối tác nhẹ nhàng",
+        "text": "Hi Tom,\n\nI hope you had a pleasant weekend. Following up on our discussion last Friday, I would like to share the updated document with you.\n\nBest regards,\nLinh",
+        "vietnamese": "Chào Tom,\n\nHy vọng cậu đã có một cuối tuần dễ chịu. Tiếp nối thảo luận của chúng ta vào thứ Sáu tuần trước, tớ xin gửi bản tài liệu đã cập nhật.\n\nTrân trọng,\nLinh"
+      }
+    }
+  },
+  {
+    "lesson_id": 4,
+    "title": "Xin ý kiến & Rà soát tài liệu (Asking for Document Review)",
+    "category": "Workplace",
+    "topic": "Meetings & Collaboration",
+    "level": "TOEIC 800+ / Business Communication",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 140,
+      "duration_seconds": 36,
+      "speakers": [
+        { "id": "spk_1", "name": "Linh", "role": "Developer" },
+        { "id": "spk_2", "name": "David", "role": "Senior Architect" }
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "spk_1",
+        "text": "Hi David, when you have a free moment, could you go over the technical proposal I drafted?",
+        "vietnamese": "Chào David, khi nào rảnh chút, anh xem qua bản đề xuất kỹ thuật em mới soạn được không?"
+      },
+      {
+        "speaker_id": "spk_2",
+        "text": "Sure thing, Linh. Is there anything specific you want me to pay attention to?",
+        "vietnamese": "Chắc chắn rồi Linh. Có phần nào cụ thể em muốn anh chú ý kỹ không?"
+      },
+      {
+        "speaker_id": "spk_1",
+        "text": "Mainly the system architecture diagram. I want to make sure the database design is scalable.",
+        "vietnamese": "Chủ yếu là sơ đồ kiến trúc hệ thống ạ. Em muốn đảm bảo thiết kế cơ sở dữ liệu có khả năng mở rộng tốt."
+      },
+      {
+        "speaker_id": "spk_2",
+        "text": "Got it. I'll take a look before lunch and drop my comments in the file.",
+        "vietnamese": "Anh hiểu rồi. Anh sẽ xem qua trước giờ ăn trưa và để lại góp ý trực tiếp trong file nhé."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "when you have a",
+        "ipa_connected": "/wen juː hæ və/",
+        "technique": "Linking consonant /v/ to /ə/",
+        "note": "Nối âm /v/ trong 'have' sang 'a'."
+      },
+      {
+        "phrase": "go over the",
+        "ipa_connected": "/ɡəʊ wəʊ və ðə/",
+        "technique": "Intrusive /w/ sound",
+        "note": "Thêm âm /w/ nhẹ giữa 'go' và 'over'."
+      },
+      {
+        "phrase": "take a look",
+        "ipa_connected": "/teɪ kə lʊk/",
+        "technique": "Linking consonant /k/ to /ə/",
+        "note": "Nối âm /k/ từ 'take' sang 'a'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "go over",
+        "type": "Phrasal Verb",
+        "meaning": "Xem xét, rà soát lại kỹ lưỡng",
+        "example": "Let's go over the contract together."
+      },
+      {
+        "phrase": "pay attention to",
+        "type": "Collocation",
+        "meaning": "Chú ý, tập trung vào điều gì",
+        "example": "Pay attention to the security guidelines."
+      },
+      {
+        "phrase": "take a look",
+        "type": "Idiom",
+        "meaning": "Xem qua, nhìn qua",
+        "example": "Can you take a look at this error?"
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "When you have a free moment, could you go over the technical proposal I drafted?",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "Could you go over my code when you get a chance?",
+        "I'll take a look at your file before 2 PM."
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Nhờ sếp/đồng nghiệp review file qua Slack",
+        "text": "Hi David, when you have a sec, could you please go over the proposal draft? I specifically need your feedback on the DB architecture. Thanks!",
+        "vietnamese": "Chào anh David, khi nào rảnh chút anh xem qua giúp em bản phác thảo đề xuất nhé? Em rất cần góp ý của anh về kiến trúc DB. Em cảm ơn!"
+      },
+      "email_template": {
+        "context": "Email gửi bản thảo nhờ đối tác/sếp duyệt",
+        "text": "Dear David,\n\nI have completed the initial draft of the technical proposal. Could you please review it when you have time?\n\nPlease pay special attention to Section 3 regarding database scalability.\n\nBest regards,\nLinh",
+        "vietnamese": "Chào anh David,\n\nEm đã hoàn thành bản phác thảo đầu tiên của đề xuất kỹ thuật. Anh vui lòng xem qua khi có thời gian nhé?\n\nAnh chú ý giúp em Mục 3 liên quan đến khả năng mở rộng của cơ sở dữ liệu ạ.\n\nTrân trọng,\nLinh"
+      }
+    }
+  },
+  {
+    "lesson_id": 5,
+    "title": "Gọi món & Xử lý nhầm đơn tại nhà hàng (Dining Out & Order Mix-up)",
+    "category": "Daily Life",
+    "topic": "Dining Out & Services",
+    "level": "TOEIC 800+ / General Communication",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 130,
+      "duration_seconds": 34,
+      "speakers": [
+        { "id": "spk_1", "name": "Customer (Linh)", "role": "Diner" },
+        { "id": "spk_2", "name": "Waiter", "role": "Restaurant Staff" }
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "spk_1",
+        "text": "Excuse me, I think there’s a mix-up with our order. We ordered the grilled chicken, but we got fish instead.",
+        "vietnamese": "Xin lỗi em, chị nghĩ có chút nhầm lẫn với món của bàn chị. Bên chị gọi gà nướng nhưng lại nhận được cá."
+      },
+      {
+        "speaker_id": "spk_2",
+        "text": "I’m so sorry about that! Let me take this back to the kitchen and get your chicken right away.",
+        "vietnamese": "Em rất xin lỗi về sự cố này ạ! Để em mang món này lại bếp và mang gà ra cho chị ngay lập tức."
+      },
+      {
+        "speaker_id": "spk_1",
+        "text": "Thanks! Could you also bring us some extra napkins when you come back?",
+        "vietnamese": "Cảm ơn em! Lúc quay lại em mang thêm giúp chị ít khăn giấy nhé?"
+      },
+      {
+        "speaker_id": "spk_2",
+        "text": "Certainly, ma’am. I’ll be right back with those.",
+        "vietnamese": "Dạ chắc chắn rồi ạ. Em sẽ quay lại ngay."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "mix-up with",
+        "ipa_connected": "/ˈmɪk sʌ pwɪð/",
+        "technique": "Linking consonant /k/ to /ʌ/",
+        "note": "Nối /k/ từ 'mix' sang 'up'."
+      },
+      {
+        "phrase": "take this back",
+        "ipa_connected": "/teɪ kðɪs bæk/",
+        "technique": "Linking consonant /k/ to /ð/",
+        "note": "Nối /k/ từ 'take' sang 'this'."
+      },
+      {
+        "phrase": "right away",
+        "ipa_connected": "/raɪ tə weɪ/",
+        "technique": "Flap T / Linking",
+        "note": "Âm /t/ đọc nhẹ thành /d/ hoặc nối thẳng sang 'away'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "there's a mix-up with",
+        "type": "Idiom / Pattern",
+        "meaning": "Có sự nhầm lẫn với (đơn hàng/vé...)",
+        "example": "There's a mix-up with my hotel reservation."
+      },
+      {
+        "phrase": "take back",
+        "type": "Phrasal Verb",
+        "meaning": "Mang/trả lại thứ gì về chỗ cũ",
+        "example": "Please take this back to the store."
+      },
+      {
+        "phrase": "right away",
+        "type": "Adverbial Phrase",
+        "meaning": "Ngay lập tức",
+        "example": "I will handle this issue right away."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Excuse me, I think there’s a mix-up with our order. We ordered the grilled chicken, but we got fish instead.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "Excuse me, there’s a mix-up with my bill.",
+        "Could you get me the correct item right away?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Nhắn bạn bè về trải nghiệm ở quán ăn",
+        "text": "The food at the bistro was good, but there was a minor mix-up with our order. Fortunately, the waiter fixed it right away!",
+        "vietnamese": "Đồ ăn ở quán bistro khá ngon, nhưng có chút nhầm lẫn nhỏ với món của bọn tớ. May mà bạn phục vụ sửa lỗi ngay lập tức!"
+      },
+      "email_template": {
+        "context": "Viết Feedback ngắn gửi dịch vụ khách hàng",
+        "text": "Dear Manager,\n\nI visited your restaurant last night. While the food was great, there was a mix-up with our order. I appreciate the staff for resolving it right away.\n\nBest regards,\nLinh",
+        "vietnamese": "Kính gửi Quản lý,\n\nTôi có ghé nhà hàng vào tối qua. Dù đồ ăn rất tuyệt nhưng đơn hàng bị nhầm chút. Tôi rất ghi nhận nhân viên vì đã xử lý sự cố ngay lập tức.\n\nTrân trọng,\nLinh"
+      }
+    }
+  },
+  {
+    "lesson_id": 6,
+    "title": "Thương lượng lại Deadline (Deadline Negotiation - Advanced)",
+    "category": "Workplace",
+    "topic": "Deadlines & Negotiation",
+    "level": "TOEIC 800+ / Business Communication",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 142,
+      "duration_seconds": 40,
+      "speakers": [
+        { "id": "spk_1", "name": "Sarah", "role": "Project Manager" },
+        { "id": "spk_2", "name": "Linh", "role": "Senior Developer" }
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "spk_1",
+        "text": "Hi Linh, can we touch base regarding the API integration? The client is asking for it by tomorrow morning.",
+        "vietnamese": "Chào Linh, tụi mình trao đổi nhanh về phần tích hợp API được không? Khách hàng đang đòi xong trước sáng mai."
+      },
+      {
+        "speaker_id": "spk_2",
+        "text": "To be frank, Sarah, that’s a tight timeline. We ran into a minor glitch with third-party authentication this morning.",
+        "vietnamese": "Nói thật thì Sarah ơi, tiến độ đó hơi gấp. Sáng nay bên tớ lại gặp chút sự cố nhỏ với bên xác thực thứ ba."
+      },
+      {
+        "speaker_id": "spk_1",
+        "text": "Is it completely blocked, or can we release a partial version?",
+        "vietnamese": "Liệu có bị tắc hoàn toàn không, hay mình phát hành bản một phần trước được không?"
+      },
+      {
+        "speaker_id": "spk_2",
+        "text": "I suggest we push the deadline back to tomorrow afternoon. That'll allow us to double-check security and avoid deployment risks.",
+        "vietnamese": "Tớ đề xuất lùi deadline sang chiều mai. Như thế mới đủ thời gian rà soát lại bảo mật và tránh rủi ro khi deploy."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "touch base regarding",
+        "ipa_connected": "/tʌ tʃbeɪ srɪ ɡɑː dɪŋ/",
+        "technique": "Linking final consonant /s/ to /r/",
+        "note": "Nối âm /s/ từ 'base' sang 'regarding'."
+      },
+      {
+        "phrase": "ran into a",
+        "ipa_connected": "/ræ nɪn tuː wə/",
+        "technique": "Continuous linking",
+        "note": "Nối /n/ sang 'into' và chèn /w/ sang 'a'."
+      },
+      {
+        "phrase": "push the deadline back",
+        "ipa_connected": "/pʊ ʃðə ded laɪ nbæk/",
+        "technique": "Assimilation",
+        "note": "Giữ âm /n/ trong 'deadline' trước khi bật /b/ trong 'back'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "touch base",
+        "type": "Idiom (Business)",
+        "meaning": "Trao đổi ngắn, cập nhật tình hình",
+        "example": "Let's touch base tomorrow on this project."
+      },
+      {
+        "phrase": "tight timeline",
+        "type": "Collocation",
+        "meaning": "Khung thời gian quá hẹp / tiến độ gấp",
+        "example": "We are working under a very tight timeline."
+      },
+      {
+        "phrase": "deployment risks",
+        "type": "Tech Collocation",
+        "meaning": "Các rủi ro khi triển khai/deploy phần mềm",
+        "example": "Testing helps us reduce deployment risks."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "I suggest we push the deadline back to tomorrow afternoon. That'll allow us to double-check security.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "Can we touch base later this afternoon?",
+        "We are facing a very tight timeline for this feature."
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Nhắn Slack xin hoãn deadline và nêu lý do kỹ thuật",
+        "text": "Hi Sarah, regarding the API integration, we ran into a tight timeline due to an auth glitch. Can we push the deadline back to tomorrow 2 PM to ensure zero deployment risks?",
+        "vietnamese": "Chào Sarah, về phần tích hợp API, bên tớ bị gấp tiến độ do lỗi xác thực. Tớ lùi deadline sang 2h chiều mai để đảm bảo không rủi ro khi deploy được không?"
+      },
+      "email_template": {
+        "context": "Email chính thức đề xuất dời thời hạn bàn giao",
+        "text": "Dear Sarah,\n\nI am writing to propose an adjusted timeline for the API integration task.\n\nDue to a third-party authentication issue, we need additional time to double-check system stability. I recommend pushing the deadline back to tomorrow at 2:00 PM to minimize deployment risks.\n\nBest regards,\nLinh",
+        "vietnamese": "Chào Sarah,\n\nTớ viết email này để đề xuất điều chỉnh lại tiến độ cho nhiệm vụ tích hợp API.\n\nDo sự cố xác thực phía bên thứ ba, chúng tớ cần thêm thời gian để rà soát độ ổn định. Tớ đề xuất lùi deadline sang 2:00 chiều mai để giảm thiểu rủi ro triển khai.\n\nTrân trọng,\nLinh"
+      }
+    }
+  },
+  {
+    "lesson_id": 7,
+    "title": "Cập nhật tiến độ dự án (Project Status Update)",
+    "category": "Workplace",
+    "topic": "Status Updates & Reporting",
+    "level": "TOEIC 800+ / Business Communication",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 138,
+      "duration_seconds": 38,
+      "speakers": [
+        { "id": "spk_1", "name": "Mark", "role": "Team Lead" },
+        { "id": "spk_2", "name": "Linh", "role": "Developer" }
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "spk_1",
+        "text": "Hi Linh, give me a quick update on the user dashboard. Are we still on track for Friday's release?",
+        "vietnamese": "Chào Linh, cập nhật nhanh cho tớ về cái dashboard người dùng nhé. Tụi mình vẫn đúng tiến độ cho bản ra mắt thứ Sáu chứ?"
+      },
+      {
+        "speaker_id": "spk_2",
+        "text": "Yes, Mark! Frontend UI is 90% completed. We're just fine-tuning the analytics charts right now.",
+        "vietnamese": "Vâng anh Mark! Giao diện Frontend xong 90% rồi. Bên em hiện chỉ đang tinh chỉnh nốt mấy cái biểu đồ phân tích."
+      },
+      {
+        "speaker_id": "spk_1",
+        "text": "Great! Have you noticed any performance bottlenecks during testing?",
+        "vietnamese": "Tuyệt! Trong quá trình test em có phát hiện nghẽn hiệu năng nào không?"
+      },
+      {
+        "speaker_id": "spk_2",
+        "text": "Everything is running smoothly so far. I'll drop a ping on Slack as soon as staging is ready for QA.",
+        "vietnamese": "Mọi thứ đến giờ vẫn chạy rất mượt ạ. Em sẽ nhắn 1 tin trên Slack ngay khi bản staging sẵn sàng cho bên QA."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "give me a quick",
+        "ipa_connected": "/ɡɪv miː jə kwɪk/",
+        "technique": "Linking consonant /v/ and vowel",
+        "note": "Đọc lướt 'give me a' thành /ɡɪv mi jə/."
+      },
+      {
+        "phrase": "on track for",
+        "ipa_connected": "/ɒ ntræk fər/",
+        "technique": "Linking consonant /n/ to /tr/",
+        "note": "Nối âm /n/ từ 'on' sang 'track'."
+      },
+      {
+        "phrase": "so far",
+        "ipa_connected": "/səʊ fɑːr/",
+        "technique": "Linking R",
+        "note": "Bật nhẹ âm /r/ cuối từ 'far'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "on track",
+        "type": "Idiom (Business)",
+        "meaning": "Đúng tiến độ, đúng kế hoạch",
+        "example": "The project is completely on track."
+      },
+      {
+        "phrase": "fine-tune",
+        "type": "Verb",
+        "meaning": "Tinh chỉnh nhỏ cho hoàn hảo hơn",
+        "example": "We need to fine-tune the search algorithm."
+      },
+      {
+        "phrase": "performance bottlenecks",
+        "type": "Tech Collocation",
+        "meaning": "Điểm nghẽn hiệu năng (làm chậm hệ thống)",
+        "example": "Database queries caused performance bottlenecks."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Everything is running smoothly so far. I'll drop a ping on Slack as soon as staging is ready for QA.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "We are currently on track for Friday's release.",
+        "Everything is running smoothly so far."
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Cập nhật tiến độ ngắn trong channel Slack team",
+        "text": "Quick status update: User dashboard is on track for Friday. Currently fine-tuning charts. Will drop a ping once staging is ready for QA!",
+        "vietnamese": "Cập nhật tiến độ nhanh: Dashboard người dùng vẫn đúng tiến độ cho thứ 6. Hiện đang tinh chỉnh biểu đồ. Tớ sẽ bắn tin nhắn khi staging sẵn sàng cho QA!"
+      },
+      "email_template": {
+        "context": "Email gửi sếp báo cáo tình hình dự án cuối tuần",
+        "text": "Hi Mark,\n\nI would like to provide a quick status update regarding the user dashboard.\n\nDevelopment is currently on track for Friday's release. We are fine-tuning the analytics components and haven't observed any major performance bottlenecks.\n\nBest regards,\nLinh",
+        "vietnamese": "Chào anh Mark,\n\nEm xin gửi cập nhật tiến độ nhanh liên quan đến dashboard người dùng.\n\nViệc phát triển hiện vẫn đúng kế hoạch cho buổi ra mắt thứ Sáu. Bên em đang tinh chỉnh các thành phần phân tích và chưa thấy điểm nghẽn hiệu năng lớn nào.\n\nTrân trọng,\nLinh"
+      }
+    }
+  },
+  {
+    "lesson_id": 8,
+    "title": "Đặt phòng khách sạn & Thay đổi giờ (Hotel Booking & Time Change)",
+    "category": "Daily Life",
+    "topic": "Travel & Hospitality",
+    "level": "TOEIC 800+ / General Communication",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 132,
+      "duration_seconds": 36,
+      "speakers": [
+        { "id": "spk_1", "name": "Guest (Linh)", "role": "Traveler" },
+        { "id": "spk_2", "name": "Receptionist", "role": "Hotel Staff" }
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "spk_1",
+        "text": "Hello, I have a reservation under Linh Nguyen for tonight. But my flight was delayed, so I'll be arriving late.",
+        "vietnamese": "Xin chào, tôi có đặt phòng tên Nguyễn Linh cho tối nay. Nhưng chuyến bay bị trễ nên tôi sẽ đến muộn."
+      },
+      {
+        "speaker_id": "spk_2",
+        "text": "Thank you for informing us, Ms. Nguyen. I’ll make a note in our system so your room won't be released.",
+        "vietnamese": "Cảm ơn cô đã báo, cô Nguyễn. Tôi sẽ ghi chú vào hệ thống để phòng của cô không bị hủy."
+      },
+      {
+        "speaker_id": "spk_1",
+        "text": "Appreciate it! Is late check-in available after midnight?",
+        "vietnamese": "Cảm ơn nhé! Bên mình có hỗ trợ nhận phòng muộn sau nửa đêm không?"
+      },
+      {
+        "speaker_id": "spk_2",
+        "text": "Yes, our front desk is open 24/7. Just show your ID upon arrival.",
+        "vietnamese": "Dạ có, quầy lễ tân bên em mở cửa 24/7. Cô chỉ cần trình giấy tờ tùy thân khi đến nơi là được."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "flight was delayed",
+        "ipa_connected": "/flaɪ twəz dɪˈleɪd/",
+        "technique": "Linking consonant /t/ to /w/",
+        "note": "Nối âm /t/ từ 'flight' sang 'was'."
+      },
+      {
+        "phrase": "make a note in",
+        "ipa_connected": "/meɪ kə nəʊ tɪn/",
+        "technique": "Continuous linking",
+        "note": "Nối /k/ sang 'a' và /t/ sang 'in'."
+      },
+      {
+        "phrase": "upon arrival",
+        "ipa_connected": "/əˈpɒ nəˈraɪ vəl/",
+        "technique": "Linking consonant /n/ to vowel /ə/",
+        "note": "Nối âm /n/ từ 'upon' sang 'arrival'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "reservation under [Name]",
+        "type": "Collocation",
+        "meaning": "Đơn đặt phòng/bàn dưới tên ai đó",
+        "example": "I have a reservation under John Smith."
+      },
+      {
+        "phrase": "make a note",
+        "type": "Collocation",
+        "meaning": "Ghi chú lại thông tin",
+        "example": "I will make a note of your request."
+      },
+      {
+        "phrase": "upon arrival",
+        "type": "Formal Phrase",
+        "meaning": "Khung thời gian ngay khi vừa tới nơi",
+        "example": "Please pay the fee upon arrival."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Hello, I have a reservation under Linh Nguyen for tonight. But my flight was delayed, so I'll be arriving late.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "I have a reservation under my company's name.",
+        "My flight was delayed by two hours."
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Nhắn tin báo đồng nghiệp đi tác chiến/du lịch muộn",
+        "text": "Flight got delayed so I'll be arriving late at the hotel. Already called front desk to keep my reservation. See you guys tomorrow morning!",
+        "vietnamese": "Chuyến bay bị trễ nên tớ sẽ đến khách sạn muộn. Tớ đã gọi lễ tân giữ phòng rồi. Hẹn gặp mọi người sáng mai nhé!"
+      },
+      "email_template": {
+        "context": "Email báo khách sạn giữ phòng do chuyến bay trễ",
+        "text": "Dear Hotel Team,\n\nI hold a reservation under the name Linh Nguyen for tonight (Booking ID: #8821).\n\nDue to a flight delay, I will arrive late, around 1:00 AM. Kindly make a note in the system so my room is held for late check-in.\n\nBest regards,\nLinh Nguyen",
+        "vietnamese": "Gửi Đội ngũ Khách sạn,\n\nTôi có đặt phòng dưới tên Nguyễn Linh cho tối nay (Mã đặt: #8821).\n\nDo chuyến bay bị trễ, tôi sẽ đến muộn vào khoảng 1 giờ sáng. Nhờ bên mình ghi chú vào hệ thống giữ phòng giúp tôi để nhận phòng muộn nhé.\n\nTrân trọng,\nNguyễn Linh"
+      }
+    }
+  },
+  {
+    "lesson_id": 9,
+    "title": "Nhờ đồng nghiệp hỗ trợ rà soát công việc (Asking for Peer Review)",
+    "category": "Workplace",
+    "topic": "Collaboration & Peer Review",
+    "level": "TOEIC 800+ / Business Communication",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 140,
+      "duration_seconds": 35,
+      "speakers": [
+        { "id": "spk_1", "name": "Linh", "role": "Developer" },
+        { "id": "spk_2", "name": "Chris", "role": "Peer Developer" }
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "spk_1",
+        "text": "Hey Chris, do you have a sec? I just created a pull request for the authentication fix.",
+        "vietnamese": "Này Chris, rảnh chút không? Tớ vừa tạo một pull request cho phần sửa lỗi xác thực."
+      },
+      {
+        "speaker_id": "spk_2",
+        "text": "Sure thing! I’m tied up with a bug right now, but I can go over your code in about twenty minutes.",
+        "vietnamese": "Chắc chắn rồi! Giờ tớ đang dở tay với một con bug, nhưng tầm 20 phút nữa tớ xem qua code cho cậu được."
+      },
+      {
+        "speaker_id": "spk_1",
+        "text": "That’s awesome! Please pay attention to the token refresh logic. I want to make sure there are no edge cases.",
+        "vietnamese": "Tuyệt quá! Cậu chú ý giúp tớ chỗ logic làm mới token nhé. Tớ muốn đảm bảo không sót trường hợp ngoại lệ nào."
+      },
+      {
+        "speaker_id": "spk_2",
+        "text": "Will do! I’ll leave my feedback directly on GitHub.",
+        "vietnamese": "Rõ rồi! Tớ sẽ để lại góp ý trực tiếp trên GitHub nhé."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "created a pull",
+        "ipa_connected": "/kriːˈeɪ tɪ də pʊl/",
+        "technique": "Flap T sound",
+        "note": "Âm /t/ trong 'created' đọc nhẹ giống âm /d/."
+      },
+      {
+        "phrase": "tied up with a",
+        "ipa_connected": "/taɪ dʌ pwɪ ðə/",
+        "technique": "Continuous linking",
+        "note": "Nối /d/ sang 'up' và /p/ sang 'with'."
+      },
+      {
+        "phrase": "edge cases",
+        "ipa_connected": "/edʒ keɪ sɪz/",
+        "technique": "Consonant transition",
+        "note": "Bật rõ âm /dʒ/ trước khi chuyển sang /k/."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "pull request (PR)",
+        "type": "Tech Term",
+        "meaning": "Yêu cầu hợp nhất code trong lập trình",
+        "example": "Please review my pull request on GitHub."
+      },
+      {
+        "phrase": "edge cases",
+        "type": "Tech Collocation",
+        "meaning": "Các trường hợp góc/ngoại lệ hiếm gặp",
+        "example": "Make sure your tests cover all edge cases."
+      },
+      {
+        "phrase": "leave feedback",
+        "type": "Collocation",
+        "meaning": "Để lại nhận xét, góp ý",
+        "example": "Feel free to leave feedback on my draft."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "I’m tied up with a bug right now, but I can go over your code in about twenty minutes.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "I'm tied up right now, but I'll check it soon.",
+        "Make sure to test all the edge cases."
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Gửi link PR nhờ đồng nghiệp review trên Slack",
+        "text": "Hi Chris, when you get a chance, could you go over my PR for the auth fix? Pay attention to the token refresh logic. Appreciate your help!",
+        "vietnamese": "Chào Chris, khi nào rảnh nhờ cậu xem qua PR sửa lỗi auth giúp tớ nhé? Chú ý logic refresh token giùm tớ. Cảm ơn sự hỗ trợ của cậu!"
+      },
+      "email_template": {
+        "context": "Mẫu tin nhắn/Email trang trọng nhờ đánh giá chéo công việc",
+        "text": "Hi Chris,\n\nI have submitted the pull request for the authentication module. \n\nWhen you have a free moment, please review the code, especially focusing on edge cases in token management. Your feedback is highly appreciated.\n\nBest regards,\nLinh",
+        "vietnamese": "Chào Chris,\n\nTớ đã gửi pull request cho module xác thực.\n\nKhi nào rảnh, cậu xem giúp tớ phần code nhé, đặc biệt tập trung vào các trường hợp ngoại lệ trong quản lý token. Rất trân trọng góp ý của cậu.\n\nTrân trọng,\nLinh"
+      }
+    }
+  },
+  {
+    "lesson_id": 10,
+    "title": "Hỏi đường & Báo hoãn xe/bay (Transportation & Delay)",
+    "category": "Daily Life",
+    "topic": "Travel & Transportation",
+    "level": "TOEIC 800+ / General Communication",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 135,
+      "duration_seconds": 38,
+      "speakers": [
+        { "id": "spk_1", "name": "Passenger (Linh)", "role": "Traveler" },
+        { "id": "spk_2", "name": "Station Staff", "role": "Airport/Bus Staff" }
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "spk_1",
+        "text": "Excuse me, do you know if the shuttle bus bound for the airport is still running on schedule?",
+        "vietnamese": "Xin lỗi, anh/chị cho hỏi xe buýt trung chuyển đi ra sân bay có còn chạy đúng lịch trình không ạ?"
+      },
+      {
+        "speaker_id": "spk_2",
+        "text": "Actually, it was delayed by about fifteen minutes due to heavy traffic downtown.",
+        "vietnamese": "Thực ra xe bị trễ khoảng 15 phút do kẹt xe nghiêm trọng ở trung tâm."
+      },
+      {
+        "speaker_id": "spk_1",
+        "text": "Oh I see. Do I need to catch an express taxi instead, or will the bus arrive soon?",
+        "vietnamese": "Ồ tôi hiểu rồi. Tôi có cần bắt taxi nhanh thay thế không, hay xe buýt sắp tới nơi rồi?"
+      },
+      {
+        "speaker_id": "spk_2",
+        "text": "It should be here in five minutes. You’ll still have plenty of time to catch your flight.",
+        "vietnamese": "Xe sẽ tới đây trong 5 phút nữa thôi. Bạn vẫn sẽ dư dả thời gian để kịp chuyến bay mà."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "bound for the",
+        "ipa_connected": "/baʊn də fər ðə/",
+        "technique": "Assimilation",
+        "note": "Âm /d/ trong 'bound' nối nhẹ sang 'for'."
+      },
+      {
+        "phrase": "delayed by about",
+        "ipa_connected": "/dɪˈleɪ dbaɪ jəˈbaʊt/",
+        "technique": "Continuous linking",
+        "note": "Nối /d/ sang 'by' và chèn /j/ sang 'about'."
+      },
+      {
+        "phrase": "catch an express",
+        "ipa_connected": "/kætʃ ən ɪkˈspres/",
+        "technique": "Linking consonant to vowel",
+        "note": "Nối /tʃ/ sang 'an' và /n/ sang 'express'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "bound for",
+        "type": "Adjective Phrase",
+        "meaning": "Đang hướng về / Đi về phía (sân bay/thành phố)",
+        "example": "This train is bound for Central Station."
+      },
+      {
+        "phrase": "delayed by [Time]",
+        "type": "Pattern",
+        "meaning": "Bị trễ bao nhiêu thời gian",
+        "example": "Our flight was delayed by two hours."
+      },
+      {
+        "phrase": "plenty of time",
+        "type": "Collocation",
+        "meaning": "Dư dả thời gian",
+        "example": "Don't worry, we have plenty of time."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "It was delayed by about fifteen minutes due to heavy traffic downtown.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "The bus bound for downtown was delayed.",
+        "We have plenty of time to reach the gate."
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Báo nhóm đồng nghiệp/bạn bè việc di chuyển bị trễ",
+        "text": "Airport shuttle was delayed by 15 mins due to traffic. Still have plenty of time before boarding, so no worries!",
+        "vietnamese": "Xe buýt sân bay bị trễ 15 phút do tắc đường. Vẫn dư dả thời gian trước giờ lên máy bay nên không sao đâu!"
+      },
+      "email_template": {
+        "context": "Email thông báo đối tác việc đến điểm hẹn trễ vì giao thông",
+        "text": "Dear Team,\n\nMy airport shuttle was delayed by fifteen minutes due to heavy traffic. However, I still expect to arrive at the venue on schedule.\n\nBest regards,\nLinh",
+        "vietnamese": "Chào cả team,\n\nXe buýt ra sân bay của tôi bị trễ 15 phút do giao thông đông đúc. Tuy nhiên, tôi vẫn dự kiến sẽ đến địa điểm họp đúng giờ.\n\nTrân trọng,\nLinh"
+      }
+    }
+  }
+]

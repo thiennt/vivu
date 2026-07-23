@@ -1,0 +1,1082 @@
+[
+  {
+    "lesson_id": 31,
+    "title": "API Integration Technical Sync (Họp đồng bộ kỹ thuật tích hợp API)",
+    "category": "Workplace",
+    "topic": "Software Integration & API Standards",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 138,
+      "duration_seconds": 39,
+      "speakers": [
+        "Eric (Backend Lead)",
+        "Sophia (Frontend Lead)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Eric (Backend Lead)",
+        "text": "Thanks for joining the sync, Sophia. We've deployed the payment gateway APIs to the staging environment.",
+        "vietnamese": "Cảm ơn vì đã tham gia buổi họp đồng bộ, Sophia. Chúng tôi đã triển khai các API cổng thanh toán lên môi trường staging."
+      },
+      {
+        "speaker_id": "Sophia (Frontend Lead)",
+        "text": "That's great news. We ran into a glitch yesterday with token authentication, but our developers resolved it this morning.",
+        "vietnamese": "Tin tuyệt vời đấy. Hôm qua chúng tôi đã gặp chút sự cố trục trặc với việc xác thực token, nhưng các lập trình viên đã xử lý xong vào sáng nay."
+      },
+      {
+        "speaker_id": "Eric (Backend Lead)",
+        "text": "Awesome. Are we still on track to finish end-to-end testing before Friday's demo?",
+        "vietnamese": "Tuyệt vời. Chúng ta vẫn đúng tiến độ để hoàn thành kiểm thử toàn trình trước buổi demo thứ Sáu chứ?"
+      },
+      {
+        "speaker_id": "Sophia (Frontend Lead)",
+        "text": "Yes, unless we discover breaking changes in response payloads, we won't need to push the deadline back.",
+        "vietnamese": "Đúng vậy, trừ khi chúng tôi phát hiện các thay đổi gây lỗi trong cấu trúc dữ liệu phản hồi, còn lại không cần lùi thời hạn."
+      },
+      {
+        "speaker_id": "Eric (Backend Lead)",
+        "text": "Perfect. Let's touch base after lunch to review the test coverage reports.",
+        "vietnamese": "Hoàn hảo. Hãy trao đổi lại sau giờ ăn trưa để xem qua các báo cáo độ phủ kiểm thử."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "deployed the",
+        "ipa_connected": "/dɪˈplɔɪd ðə/",
+        "technique": "Consonant Transition",
+        "note": "Âm /d/ ở 'deployed' chuyển tiếp nhẹ nhàng sang phụ âm /ð/ của 'the'."
+      },
+      {
+        "phrase": "ran into a",
+        "ipa_connected": "/ræn ˈɪn.tuː ə/",
+        "technique": "Linking Consonant to Vowel",
+        "note": "Âm /n/ từ 'ran' nối mượt mà sang nguyên âm /ɪ/ của 'into'."
+      },
+      {
+        "phrase": "end-to-end",
+        "ipa_connected": "/ˌend.tuːˈend/",
+        "technique": "Continuous Linking",
+        "note": "Âm /d/ ở từ 'end' thứ nhất đọc gọn, nối liền qua 'to' sang 'end' thứ hai."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "end-to-end testing",
+        "type": "Noun Phrase",
+        "meaning": "Kiểm thử toàn trình (từ đầu đến cuối hệ thống)",
+        "example": "End-to-end testing ensures seamless data flow between mobile app and backend."
+      },
+      {
+        "phrase": "token authentication",
+        "type": "Noun Phrase",
+        "meaning": "Xác thực truy cập bằng chuỗi mã (token)",
+        "example": "Token authentication secures user sessions without storing passwords."
+      },
+      {
+        "phrase": "breaking changes",
+        "type": "Noun Phrase",
+        "meaning": "Các thay đổi làm đứt gãy/gây lỗi hệ thống cũ",
+        "example": "Always document breaking changes when updating public API versions."
+      },
+      {
+        "phrase": "response payload",
+        "type": "Noun Phrase",
+        "meaning": "Gói dữ liệu phản hồi từ máy chủ",
+        "example": "The response payload contains the user profile details in JSON format."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện đọc chính xác các thuật ngữ công nghệ thông tin, chú ý nối âm tự nhiên giữa các cụm từ đắt giá.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What feature did Eric's team deploy to the staging environment?",
+        "Under what condition would Sophia's team need to push the deadline back?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Gửi cập nhật tiến độ đồng bộ API vào kênh trao đổi kỹ thuật.",
+        "text": "Hi team, payment gateway APIs are live on staging. Frontend resolved the token authentication issue, so end-to-end testing stays on track. We'll touch base after lunch to check coverage.",
+        "vietnamese": "Chào team, các API cổng thanh toán đã hoạt động trên staging. Frontend đã giải quyết xong sự cố xác thực token, vì vậy việc kiểm thử toàn trình vẫn đúng tiến độ. Chúng ta sẽ trao đổi lại sau giờ ăn trưa để kiểm tra độ phủ."
+      },
+      "email_template": {
+        "context": "Email báo cáo tình hình tích hợp API gửi Trưởng ban Công nghệ (CTO).",
+        "text": "Dear CTO,\n\nI am writing to confirm that the backend team has successfully deployed the payment gateway APIs to the staging environment. Despite a minor glitch with token authentication earlier, frontend integration is now on track. We do not anticipate needing to push the deadline back for our upcoming release. We will touch base with quality assurance later today.\n\nBest regards,\nEric",
+        "vietnamese": "Kính gửi CTO,\n\nTôi viết thư này để xác nhận rằng đội ngũ backend đã triển khai thành công các API cổng thanh toán lên môi trường staging. Mặc dù có một sự cố nhỏ về xác thực token trước đó, việc tích hợp frontend hiện đã đúng tiến độ. Chúng tôi dự kiến không cần lùi thời hạn cho bản phát hành sắp tới. Chúng tôi sẽ làm việc lại với bộ phận đảm bảo chất lượng vào cuối ngày hôm nay.\n\nTrân trọng,\nEric"
+      }
+    }
+  },
+  {
+    "lesson_id": 32,
+    "title": "Performance Review Discussion (Đánh giá hiệu suất công việc)",
+    "category": "Workplace",
+    "topic": "Employee Assessment & Goal Setting",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 136,
+      "duration_seconds": 40,
+      "speakers": [
+        "Brandon (Engineering Manager)",
+        "Lisa (Senior Software Engineer)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Brandon (Engineering Manager)",
+        "text": "Thanks for meeting today, Lisa. Looking over your performance metrics, your technical deliverables have been consistently on track.",
+        "vietnamese": "Cảm ơn Lisa đã đến buổi họp hôm nay. Tóm tắt các chỉ số hiệu suất của cô, các sản phẩm kỹ thuật bàn giao luôn đúng tiến độ."
+      },
+      {
+        "speaker_id": "Lisa (Senior Software Engineer)",
+        "text": "Thank you, Brandon. I know our team was tied up with legacy system migration, but I focused heavily on system architecture.",
+        "vietnamese": "Cảm ơn Brandon. Tôi biết đội ngũ của chúng ta đã rất bận rộn với việc chuyển đổi hệ thống cũ, nhưng tôi đã tập trung mạnh vào kiến trúc hệ thống."
+      },
+      {
+        "speaker_id": "Brandon (Engineering Manager)",
+        "text": "It definitely showed. Your mentorship also helped resolve several operational bottlenecks during the last quarter.",
+        "vietnamese": "Điều đó thể hiện rất rõ ràng. Sự hướng dẫn của cô cũng giúp giải quyết nhiều điểm nghẽn vận hành trong quý vừa qua."
+      },
+      {
+        "speaker_id": "Lisa (Senior Software Engineer)",
+        "text": "I appreciate that feedback. For next quarter, I want to lead our infrastructure scaling initiatives.",
+        "vietnamese": "Tôi rất trân trọng phản hồi đó. Trong quý tới, tôi muốn dẫn dắt các sáng kiến mở rộng hạ tầng của chúng ta."
+      },
+      {
+        "speaker_id": "Brandon (Engineering Manager)",
+        "text": "Sounds great. Let's touch base next week to outline key key performance indicators for that role.",
+        "vietnamese": "Nghe tuyệt đấy. Hãy trao đổi lại vào tuần tới để phác thảo các chỉ số hiệu suất chính cho vai trò đó."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "performance metrics",
+        "ipa_connected": "/pɚˈfɔːr.məns ˈmet.rɪks/",
+        "technique": "Clear Stress Patterns",
+        "note": "Nhấn rõ trọng âm chính ở âm tiết thứ hai của 'performance' và âm tiết đầu của 'metrics'."
+      },
+      {
+        "phrase": "tied up with",
+        "ipa_connected": "/taɪd ʌp wɪð/",
+        "technique": "Linking Consonant to Vowel",
+        "note": "Âm /d/ ở cuối 'tied' nối mượt sang nguyên âm /ʌ/ của 'up'."
+      },
+      {
+        "phrase": "key performance indicators",
+        "ipa_connected": "/kiː pɚˈfɔːr.məns ˈɪn.də.keɪ.t̬ɚz/",
+        "technique": "Rhythmic Flow",
+        "note": "Đọc trôi chảy cụm từ viết tắt KPI đầy đủ với ngữ điệu trang trọng."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "performance metrics",
+        "type": "Noun Phrase",
+        "meaning": "Các chỉ số đo lường hiệu suất công việc",
+        "example": "Our quarter-end performance metrics exceeded all expectations."
+      },
+      {
+        "phrase": "technical deliverables",
+        "type": "Noun Phrase",
+        "meaning": "Các sản phẩm bàn giao về mặt kỹ thuật",
+        "example": "All technical deliverables must pass rigorous code review."
+      },
+      {
+        "phrase": "legacy system migration",
+        "type": "Noun Phrase",
+        "meaning": "Sự chuyển đổi khỏi hệ thống công nghệ cũ",
+        "example": "Legacy system migration requires careful planning to prevent data loss."
+      },
+      {
+        "phrase": "scaling initiatives",
+        "type": "Noun Phrase",
+        "meaning": "Các sáng kiến/chiến dịch mở rộng quy mô",
+        "example": "Our scaling initiatives aim to support ten times more concurrent users."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện giọng đánh giá công việc chuyên nghiệp, nhấn mạnh vào các thành tựu và mục tiêu định hướng tương lai.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What area did Lisa focus on while the team was tied up with migration?",
+        "What new responsibility does Lisa want to take on next quarter?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn của Quản lý gửi cho kỹ sư sau buổi họp đánh giá hiệu suất.",
+        "text": "Hi Lisa, thanks for the great 1-on-1 session today! Your technical deliverables remain on track, and your help resolving operational bottlenecks was vital. Let's touch base next week to discuss goals.",
+        "vietnamese": "Chào Lisa, cảm ơn buổi làm việc 1-1 rất tốt hôm nay! Các sản phẩm kỹ thuật bàn giao của cô vẫn giữ đúng tiến độ, và sự trợ giúp giải quyết điểm nghẽn vận hành của cô rất quan trọng. Hãy trao đổi lại vào tuần tới để thảo luận về mục tiêu."
+      },
+      "email_template": {
+        "context": "Email tổng kết nội dung đánh giá hiệu suất công việc gửi nhân sự.",
+        "text": "Dear Lisa,\n\nThank you for participating in today's performance review. Your technical deliverables have consistently remained on track throughout the quarter. Despite being tied up with legacy system migration, your contributions significantly relieved operational bottlenecks. We will touch base next week to formalize your key performance indicators for leading our new scaling initiatives.\n\nBest regards,\nBrandon",
+        "vietnamese": "Kính gửi Lisa,\n\nCảm ơn cô đã tham gia buổi đánh giá hiệu suất công việc hôm nay. Các sản phẩm kỹ thuật bàn giao của cô luôn giữ đúng tiến độ trong suốt quý vừa qua. Dù bận rộn với việc chuyển đổi hệ thống cũ, những đóng góp của cô đã giúp giảm đáng kể các điểm nghẽn vận hành. Chúng ta sẽ trao đổi lại vào tuần tới để chính thức hóa các chỉ số hiệu suất chính cho việc cô dẫn dắt các sáng kiến mở rộng mới.\n\nTrân trọng,\nBrandon"
+      }
+    }
+  },
+  {
+    "lesson_id": 33,
+    "title": "Software Licensing Agreement (Thỏa thuận bản quyền phần mềm)",
+    "category": "Workplace",
+    "topic": "Enterprise Software Procurement & Legal Compliance",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 137,
+      "duration_seconds": 41,
+      "speakers": [
+        "Victoria (Legal Counsel)",
+        "Marcus (IT Director)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Victoria (Legal Counsel)",
+        "text": "Marcus, I reviewed the enterprise software agreement. We need to clarify several compliance clauses before signing.",
+        "vietnamese": "Marcus, tôi đã xem qua thỏa thuận phần mềm doanh nghiệp. Chúng ta cần làm rõ một số điều khoản tuân thủ trước khi ký."
+      },
+      {
+        "speaker_id": "Marcus (IT Director)",
+        "text": "Understood. Our team is tied up with security audits, but we want this tool deployed smoothly.",
+        "vietnamese": "Đã hiểu. Đội ngũ của chúng tôi hiện đang bận rộn với công tác kiểm toán bảo mật, nhưng chúng tôi muốn công cụ này được triển khai suôn sẻ."
+      },
+      {
+        "speaker_id": "Victoria (Legal Counsel)",
+        "text": "If the vendor agrees to our liability limits, can we keep the launch timeline on track?",
+        "vietnamese": "Nếu nhà cung cấp đồng ý với các giới hạn trách nhiệm pháp lý của chúng ta, chúng ta có thể giữ lịch ra mắt đúng tiến độ không?"
+      },
+      {
+        "speaker_id": "Marcus (IT Director)",
+        "text": "Yes, provided we don't run into a glitch with user license provisioning.",
+        "vietnamese": "Được chứ, với điều kiện chúng ta không gặp trục trặc gì với việc cấp phát bản quyền người dùng."
+      },
+      {
+        "speaker_id": "Victoria (Legal Counsel)",
+        "text": "Great. I'll send over the revised proposal to their legal team and touch base with you on Thursday.",
+        "vietnamese": "Tuyệt vời. Tôi sẽ gửi bản đề xuất điều chỉnh cho đội ngũ pháp lý của họ và trao đổi lại với anh vào thứ Năm."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "software agreement",
+        "ipa_connected": "/ˈsɑːft.wer əˈɡriː.mənt/",
+        "technique": "Continuous Flow",
+        "note": "Phát âm mượt mà phụ âm /r/ cuối 'software' sang nguyên âm /ə/ của 'agreement'."
+      },
+      {
+        "phrase": "send over the",
+        "ipa_connected": "/send ˈoʊ.vɚ ðə/",
+        "technique": "Linking Consonant to Vowel",
+        "note": "Âm /d/ ở cuối 'send' nối liền sang nguyên âm /oʊ/ của 'over'."
+      },
+      {
+        "phrase": "liability limits",
+        "ipa_connected": "/ˌlaɪ.əˈbɪl.ə.t̬i ˈlɪm.ɪts/",
+        "technique": "Flap T",
+        "note": "Âm /t/ trong 'liability' phát âm lướt nhẹ thành flap t mềm."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "compliance clauses",
+        "type": "Noun Phrase",
+        "meaning": "Các điều khoản tuân thủ pháp lý/quy định",
+        "example": "The contract includes strict compliance clauses regarding data privacy."
+      },
+      {
+        "phrase": "liability limits",
+        "type": "Noun Phrase",
+        "meaning": "Giới hạn trách nhiệm pháp lý",
+        "example": "Negotiating higher liability limits protects our firm against system breaches."
+      },
+      {
+        "phrase": "license provisioning",
+        "type": "Noun Phrase",
+        "meaning": "Quá trình cấp phát/phân bổ bản quyền sử dụng",
+        "example": "Automated license provisioning speeds up employee onboarding."
+      },
+      {
+        "phrase": "security audits",
+        "type": "Noun Phrase",
+        "meaning": "Đợt kiểm toán/đánh giá an ninh mạng",
+        "example": "Regular security audits help discover network vulnerabilities early."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện giọng đàm phán pháp lý đĩnh đạc, rõ ràng. Nhấn mạnh vào các thuật ngữ hợp đồng và thời gian.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What specific clauses does Victoria need to clarify with the vendor?",
+        "Why is Marcus's team currently delayed in processing the software deployment?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Cập nhật cho kênh dự án về tiến độ xem xét hợp đồng phần mềm.",
+        "text": "Hi team, Legal is finalizing compliance clauses with the vendor. IT is tied up with security audits, but launch timing remains on track. Victoria will send over the revised proposal today.",
+        "vietnamese": "Chào team, bên Pháp lý đang hoàn tất các điều khoản tuân thủ với nhà cung cấp. IT đang bận rộn kiểm toán bảo mật, nhưng mốc ra mắt vẫn đúng tiến độ. Victoria sẽ gửi bản đề xuất đã điều chỉnh trong hôm nay."
+      },
+      "email_template": {
+        "context": "Email chính thức gửi đại diện pháp lý của đối tác phần mềm.",
+        "text": "Dear Vendor Legal Team,\n\nWe have reviewed the enterprise software agreement and updated several compliance clauses regarding data security and liability limits. Provided these terms are acceptable, our IT department is prepared to complete user license provisioning so our implementation stays on track. We will send over the revised proposal shortly.\n\nBest regards,\nVictoria",
+        "vietnamese": "Kính gửi Bộ phận Pháp lý Nhà cung cấp,\n\nChúng tôi đã xem xét thỏa thuận phần mềm doanh nghiệp và cập nhật một số điều khoản tuân thủ liên quan đến bảo mật dữ liệu và giới hạn trách nhiệm pháp lý. Với điều kiện các điều khoản này được chấp thuận, bộ phận IT của chúng tôi đã sẵn sàng hoàn tất việc cấp phát bản quyền để việc triển khai giữ đúng tiến độ. Chúng tôi sẽ gửi bản đề xuất điều chỉnh sớm.\n\nTrân trọng,\nVictoria"
+      }
+    }
+  },
+  {
+    "lesson_id": 34,
+    "title": "Home Internet Upgrade (Nâng cấp Internet gia đình)",
+    "category": "Daily Life",
+    "topic": "Telecommunications & Home Utilities",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 134,
+      "duration_seconds": 38,
+      "speakers": [
+        "Kevin (Homeowner)",
+        "Amy (Customer Service Rep)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Kevin (Homeowner)",
+        "text": "Hi Amy, I'm calling because I constantly run into a glitch with my Wi-Fi speed when working from home.",
+        "vietnamese": "Chào Amy, tôi gọi vì liên tục gặp sự cố trục trặc với tốc độ Wi-Fi khi làm việc tại nhà."
+      },
+      {
+        "speaker_id": "Amy (Customer Service Rep)",
+        "text": "I can help with that, Kevin! We can upgrade your line to fiber optic internet for much higher bandwidth.",
+        "vietnamese": "Tôi có thể giúp anh việc đó, Kevin! Chúng tôi có thể nâng cấp đường truyền của anh lên internet cáp quang để có băng thông cao hơn nhiều."
+      },
+      {
+        "speaker_id": "Kevin (Homeowner)",
+        "text": "That sounds great. Can a technician swing by tomorrow to install the new router?",
+        "vietnamese": "Nghe tuyệt đấy. Một kỹ thuật viên có thể ghé qua vào ngày mai để lắp đặt bộ định tuyến mới không?"
+      },
+      {
+        "speaker_id": "Amy (Customer Service Rep)",
+        "text": "Our field team is tied up tomorrow morning, but we can schedule an afternoon arrival time.",
+        "vietnamese": "Đội ngũ kỹ thuật trường của chúng tôi bận vào sáng mai, nhưng chúng tôi có thể xếp thời gian đến vào buổi chiều."
+      },
+      {
+        "speaker_id": "Kevin (Homeowner)",
+        "text": "Afternoon works. Please touch base with me an hour before the technician arrives.",
+        "vietnamese": "Buổi chiều thì phù hợp. Vui lòng liên hệ với tôi một giờ trước khi kỹ thuật viên đến nhé."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "fiber optic",
+        "ipa_connected": "/ˈfaɪ.bɚ ˈɑːp.tɪk/",
+        "technique": "Linking Consonant to Vowel",
+        "note": "Âm /r/ ở 'fiber' nối mượt sang nguyên âm /ɑː/ của 'optic'."
+      },
+      {
+        "phrase": "swing by",
+        "ipa_connected": "/swɪŋ baɪ/",
+        "technique": "Consonant Transition",
+        "note": "Nối phụ âm mũi /ŋ/ ở 'swing' sang phụ âm bật /b/ của 'by'."
+      },
+      {
+        "phrase": "run into a",
+        "ipa_connected": "/ræn ˈɪn.tuː ə/",
+        "technique": "Flap T & Soft Linking",
+        "note": "Nối âm /n/ từ 'run' sang 'into' và lướt nhẹ qua 'a'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "fiber optic internet",
+        "type": "Noun Phrase",
+        "meaning": "Internet cáp quang tốc độ cao",
+        "example": "Upgrading to fiber optic internet solved all video streaming issues."
+      },
+      {
+        "phrase": "higher bandwidth",
+        "type": "Noun Phrase",
+        "meaning": "Băng thông cao hơn",
+        "example": "Higher bandwidth allows multiple devices to connect simultaneously."
+      },
+      {
+        "phrase": "swing by",
+        "type": "Phrasal Verb",
+        "meaning": "Ghé qua nhanh (để làm việc gì đó)",
+        "example": "The technician will swing by between 2 PM and 4 PM."
+      },
+      {
+        "phrase": "arrival time",
+        "type": "Noun Phrase",
+        "meaning": "Thời điểm đến/thời gian có mặt",
+        "example": "The service representative confirmed an afternoon arrival time."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện âm điệu tự nhiên, lịch sự khi trao đổi dịch vụ khách hàng qua điện thoại.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What primary technical problem was Kevin experiencing with his home connection?",
+        "When is the technician scheduled to install the new equipment?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn gửi đồng nghiệp báo lịch gián đoạn mạng do kỹ thuật viên tới làm việc.",
+        "text": "Hi team, a technician will swing by tomorrow afternoon to upgrade my home connection to fiber optic internet. I'll touch base on mobile if I'm briefly offline.",
+        "vietnamese": "Chào team, một kỹ thuật viên sẽ ghé qua vào chiều mai để nâng cấp mạng gia đình tôi lên cáp quang. Tôi sẽ liên lạc qua điện thoại nếu có ngoại tuyến ngắn hạn."
+      },
+      "email_template": {
+        "context": "Email xác nhận lịch hẹn dịch vụ nâng cấp từ Tổng đài CSKH.",
+        "text": "Dear Kevin,\n\nThank you for choosing to upgrade your service to fiber optic internet for higher bandwidth. As agreed, our technician will swing by tomorrow afternoon. Since our morning schedule is tied up, we have fixed your arrival time window between 2:00 PM and 4:00 PM. We will touch base prior to arrival.\n\nBest regards,\nAmy",
+        "vietnamese": "Kính gửi Kevin,\n\nCảm ơn anh đã chọn nâng cấp dịch vụ lên internet cáp quang để có băng thông cao hơn. Như đã thỏa thuận, kỹ thuật viên của chúng tôi sẽ ghé qua vào chiều mai. Vì lịch trình buổi sáng của chúng tôi đã bận, chúng tôi đã cố định khung thời gian đến từ 2:00 chiều đến 4:00 chiều. Chúng tôi sẽ liên hệ trước khi đến.\n\nTrân trọng,\nAmy"
+      }
+    }
+  },
+  {
+    "lesson_id": 35,
+    "title": "Dental Checkup Appointment (Lịch hẹn khám răng định kỳ)",
+    "category": "Daily Life",
+    "topic": "Healthcare & Appointment Scheduling",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 132,
+      "duration_seconds": 36,
+      "speakers": [
+        "Rachel (Patient)",
+        "Dr. Evans (Dentist)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Rachel (Patient)",
+        "text": "Hi Dr. Evans, I'm calling to reschedule my dental checkup because my work schedule changed unexpectedly.",
+        "vietnamese": "Chào bác sĩ Evans, tôi gọi để đổi lịch khám răng vì lịch làm việc của tôi thay đổi đột xuất."
+      },
+      {
+        "speaker_id": "Dr. Evans (Dentist)",
+        "text": "No problem Rachel. Keeping up with routine cleanings is essential to keep your dental health on track.",
+        "vietnamese": "Không sao Rachel. Duy trì việc lấy cao răng định kỳ là rất cần thiết để giữ sức khỏe răng miệng đúng tiến độ/ổn định."
+      },
+      {
+        "speaker_id": "Rachel (Patient)",
+        "text": "Can we push the appointment back to next Tuesday afternoon?",
+        "vietnamese": "Chúng ta có thể lùi lịch hẹn sang chiều thứ Ba tuần sau được không?"
+      },
+      {
+        "speaker_id": "Dr. Evans (Dentist)",
+        "text": "Tuesday afternoon is open. Unless I run into an emergency surgery, we'll see you at 3 PM.",
+        "vietnamese": "Chiều thứ Ba còn trống đấy. Trừ khi tôi gặp ca phẫu thuật khẩn cấp, chúng tôi sẽ gặp cô lúc 3 giờ chiều."
+      },
+      {
+        "speaker_id": "Rachel (Patient)",
+        "text": "Sounds perfect. I'll touch base with your receptionist on Monday to reconfirm.",
+        "vietnamese": "Nghe thật hoàn hảo. Tôi sẽ liên hệ với lễ tân của bác sĩ vào thứ Hai để xác nhận lại."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "push the appointment back",
+        "ipa_connected": "/pʊʃ ðə əˈpɔɪnt.mənt bæk/",
+        "technique": "Glottal Stop & Flow",
+        "note": "Âm /t/ ở cuối 'appointment' nuốt nhẹ trước khi bật sang 'back'."
+      },
+      {
+        "phrase": "routine cleanings",
+        "ipa_connected": "/ruːˈtiːn ˈkliː.nɪŋz/",
+        "technique": "Nasal Linking",
+        "note": "Nối phụ âm mũi /n/ ở 'routine' mượt mà sang phụ âm /k/ của 'cleanings'."
+      },
+      {
+        "phrase": "emergency surgery",
+        "ipa_connected": "/ɪˈmɝː.dʒən.si ˈsɝː.dʒər.i/",
+        "technique": "Syllable Stress",
+        "note": "Nhấn rõ trọng âm chính ở âm tiết thứ hai của 'emergency' và âm tiết đầu của 'surgery'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "dental checkup",
+        "type": "Noun Phrase",
+        "meaning": "Buổi kiểm tra răng miệng định kỳ",
+        "example": "Schedule a dental checkup every six months to prevent cavities."
+      },
+      {
+        "phrase": "routine cleanings",
+        "type": "Noun Phrase",
+        "meaning": "Việc lấy cao răng/vệ sinh răng định kỳ",
+        "example": "Routine cleanings help maintain healthy gums."
+      },
+      {
+        "phrase": "reconfirm",
+        "type": "Verb",
+        "meaning": "Xác nhận lại một lần nữa",
+        "example": "Please call the clinic on Monday to reconfirm your booking."
+      },
+      {
+        "phrase": "emergency surgery",
+        "type": "Noun Phrase",
+        "meaning": "Ca phẫu thuật khẩn cấp",
+        "example": "The doctor was called away due to an emergency surgery."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện điệu bộ nói chuyện lịch sự, nhẹ nhàng trong bối cảnh y tế và đặt lịch dịch vụ cá nhân.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "Why did Rachel need to push her dental checkup back?",
+        "When is her rescheduled appointment set for?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn xin phép vắng mặt ngắn vào chiều thứ Ba để đi khám răng.",
+        "text": "Hi team, I need to push my afternoon break back on Tuesday for a dental checkup at 3 PM. I'll touch base with everyone before leaving.",
+        "vietnamese": "Chào team, tớ cần lùi giờ nghỉ chiều thứ Ba để đi khám răng lúc 3 giờ chiều. Tớ sẽ trao đổi với mọi người trước khi rời đi."
+      },
+      "email_template": {
+        "context": "Email gửi phòng khám xác nhận thay đổi lịch hẹn khám.",
+        "text": "Dear Dr. Evans,\n\nThank you for adjusting my schedule today. I am confirming that we have pushed my dental checkup back to next Tuesday at 3:00 PM. I understand you may occasionally run into emergency surgery, so I will touch base with your receptionist on Monday morning to reconfirm.\n\nBest regards,\nRachel",
+        "vietnamese": "Kính gửi Bác sĩ Evans,\n\nCảm ơn bác sĩ đã điều chỉnh lịch trình cho tôi hôm nay. Tôi xác nhận rằng chúng ta đã lùi buổi khám răng của tôi sang chiều thứ Ba tuần sau lúc 3:00 chiều. Tôi hiểu đôi khi bác sĩ có thể gặp các ca phẫu thuật khẩn cấp, do đó tôi sẽ liên hệ với lễ tân vào sáng thứ Hai để xác nhận lại.\n\nTrân trọng,\nRachel"
+      }
+    }
+  },
+  {
+    "lesson_id": 36,
+    "title": "Cloud Migration Strategy (Chiến lược chuyển đổi dữ liệu đám mây)",
+    "category": "Workplace",
+    "topic": "Cloud Infrastructure & Data Migration",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 139,
+      "duration_seconds": 40,
+      "speakers": [
+        "Nathan (Cloud Architect)",
+        "Clara (VP of Technology)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Nathan (Cloud Architect)",
+        "text": "Clara, our infrastructure team has finalized the roadmap for shifting databases to high-performance cloud clusters.",
+        "vietnamese": "Clara, đội ngũ hạ tầng của chúng tôi đã hoàn tất lộ trình chuyển đổi các cơ sở dữ liệu sang các cụm đám mây hiệu năng cao."
+      },
+      {
+        "speaker_id": "Clara (VP of Technology)",
+        "text": "Excellent. Is our data integrity plan fully verified so we can stay on track during cutover?",
+        "vietnamese": "Tuyệt vời. Kế hoạch toàn vẹn dữ liệu của chúng ta đã được xác minh đầy đủ để giữ đúng tiến độ trong quá trình chuyển giao chưa?"
+      },
+      {
+        "speaker_id": "Nathan (Cloud Architect)",
+        "text": "Yes. We ran into a glitch during preliminary testing, but optimized query indexing solved the latency.",
+        "vietnamese": "Rồi ạ. Chúng tôi đã gặp trục trặc trong quá trình kiểm thử sơ bộ, nhưng việc tối ưu hóa chỉ mục truy vấn đã xử lý xong độ trễ."
+      },
+      {
+        "speaker_id": "Clara (VP of Technology)",
+        "text": "Glad you addressed that bottleneck early. Do we need to push the deadline back for final sign-off?",
+        "vietnamese": "Rất vui vì anh đã giải quyết điểm nghẽn đó sớm. Chúng ta có cần lùi thời hạn cho phê duyệt cuối cùng không?"
+      },
+      {
+        "speaker_id": "Nathan (Cloud Architect)",
+        "text": "Not at all. I'll send over the performance metrics today and touch base with you tomorrow.",
+        "vietnamese": "Không cần đâu ạ. Tôi sẽ gửi các chỉ số hiệu suất trong hôm nay và trao đổi lại với cô vào ngày mai."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "data integrity",
+        "ipa_connected": "/ˈdeɪ.t̬ə ɪnˈteɡ.rə.t̬i/",
+        "technique": "Flap T & Soft Linking",
+        "note": "Âm /t/ trong 'data' và 'integrity' đều đọc nhẹ thành flap t mềm trong tiếng Anh-Mỹ."
+      },
+      {
+        "phrase": "addressed that bottleneck",
+        "ipa_connected": "/əˈdrest ðæt ˈbɑː.t̬əl.nek/",
+        "technique": "Stop Consonant & Transition",
+        "note": "Âm /st/ ở 'addressed' chuyển mượt sang /ð/ của 'that', âm /t/ trong 'bottleneck' đọc giữ nhẹ."
+      },
+      {
+        "phrase": "send over the",
+        "ipa_connected": "/send ˈoʊ.vɚ ðə/",
+        "technique": "Linking Consonant to Vowel",
+        "note": "Nối âm /d/ từ 'send' sang nguyên âm /oʊ/ của 'over'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "data integrity",
+        "type": "Noun Phrase",
+        "meaning": "Tính toàn vẹn của dữ liệu",
+        "example": "Ensuring data integrity is crucial when migrating financial databases."
+      },
+      {
+        "phrase": "cloud cluster",
+        "type": "Noun Phrase",
+        "meaning": "Cụm máy chủ đám mây",
+        "example": "We deployed the app across a multi-region cloud cluster."
+      },
+      {
+        "phrase": "query indexing",
+        "type": "Noun Phrase",
+        "meaning": "Tạo chỉ mục truy vấn (để tối ưu hóa tốc độ tìm kiếm)",
+        "example": "Proper query indexing drastically reduced database load times."
+      },
+      {
+        "phrase": "cutover phase",
+        "type": "Noun Phrase",
+        "meaning": "Giai đoạn chuyển giao/chuyển đổi hệ thống chính thức",
+        "example": "The cutover phase will take place over the weekend to minimize downtime."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện giọng lãnh đạo công nghệ tự tin, nhấn mạnh các từ chỉ kết quả và các mốc giải quyết vấn đề.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What solved the latency issue Nathan's team encountered during testing?",
+        "Is it necessary to push the final sign-off deadline back?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Cập nhật cho kênh dự án kỹ thuật về tiến độ chuyển đổi đám mây.",
+        "text": "Team update: Database migration to cloud clusters is on track. We resolved the testing glitch with query indexing and addressed the latency bottleneck. Nathan will send over performance metrics today.",
+        "vietnamese": "Cập nhật team: Việc chuyển đổi cơ sở dữ liệu sang các cụm đám mây vẫn đúng tiến độ. Chúng tôi đã xử lý xong trục trặc kiểm thử bằng cách tạo chỉ mục truy vấn và giải quyết điểm nghẽn độ trễ. Nathan sẽ gửi các chỉ số hiệu suất trong hôm nay."
+      },
+      "email_template": {
+        "context": "Email báo cáo chiến lược gửi Ban Quản lý Công nghệ cấp cao.",
+        "text": "Dear Clara,\n\nI am pleased to report that our cloud migration roadmap remains on track. During preliminary cutover testing, we ran into a glitch regarding query response times, but we successfully addressed the bottleneck via optimized indexing. We do not need to push the deadline back. I will send over the detailed performance metrics later today and touch base tomorrow morning.\n\nBest regards,\nNathan",
+        "vietnamese": "Kính gửi Clara,\n\nTôi rất vui mừng được báo cáo rằng lộ trình chuyển đổi đám mây của chúng ta vẫn đúng tiến độ. Trong quá trình kiểm thử chuyển giao sơ bộ, chúng tôi có gặp trục trặc về thời gian phản hồi truy vấn, nhưng đã giải quyết thành công điểm nghẽn thông qua việc tối ưu chỉ mục. Chúng ta không cần lùi thời hạn. Tôi sẽ gửi các chỉ số hiệu suất chi tiết vào cuối ngày hôm nay và làm việc lại vào sáng mai.\n\nTrân trọng,\nNathan"
+      }
+    }
+  },
+  {
+    "lesson_id": 37,
+    "title": "Supply Chain Delays (Trục trặc chuỗi cung ứng vật tư)",
+    "category": "Workplace",
+    "topic": "Logistics & Procurement Bottlenecks",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 136,
+      "duration_seconds": 41,
+      "speakers": [
+        "Harrison (Logistics Manager)",
+        "Claire (Supply Chain Director)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Harrison (Logistics Manager)",
+        "text": "Claire, I'm calling to report that customs clearance delays are creating operational bottlenecks for our hardware shipments.",
+        "vietnamese": "Claire, tôi gọi để báo cáo rằng việc chậm trễ thông quan đang tạo ra các điểm nghẽn vận hành cho các lô hàng thiết bị phần cứng của chúng ta."
+      },
+      {
+        "speaker_id": "Claire (Supply Chain Director)",
+        "text": "That's concerning. Will this force us to push the deadline back for regional distribution?",
+        "vietnamese": "Thật đáng lo ngại. Điều này có buộc chúng ta phải lùi thời hạn phân phối theo khu vực không?"
+      },
+      {
+        "speaker_id": "Harrison (Logistics Manager)",
+        "text": "If we reroute freight through an alternative port, we can keep the core delivery schedule on track.",
+        "vietnamese": "Nếu chúng ta chuyển hướng vận tải qua một cảng thay thế, chúng ta có thể giữ lịch giao hàng cốt lõi đúng tiến độ."
+      },
+      {
+        "speaker_id": "Claire (Supply Chain Director)",
+        "text": "Good thinking. Make sure our warehouse team isn't tied up with backlogged inventory in the meantime.",
+        "vietnamese": "Tư duy tốt đấy. Hãy đảm bảo đội ngũ kho của chúng ta không bị bận rộn dồn ứ hàng tồn trong thời gian này."
+      },
+      {
+        "speaker_id": "Harrison (Logistics Manager)",
+        "text": "Understood. I'll finalize the rerouting logistics and touch base with you before 5 PM.",
+        "vietnamese": "Đã hiểu. Tôi sẽ hoàn tất hậu cần chuyển hướng và trao đổi lại với cô trước 5 giờ chiều."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "customs clearance",
+        "ipa_connected": "/ˈkʌs.təmz ˈklɪr.əns/",
+        "technique": "Continuous Consonant Flow",
+        "note": "Nối âm /z/ ở 'customs' mượt sang cụm phụ âm /kl/ của 'clearance'."
+      },
+      {
+        "phrase": "operational bottlenecks",
+        "ipa_connected": "/ˌɑː.pəˈreɪ.ʃən.əl ˈbɑː.t̬əl.neks/",
+        "technique": "Clear Stress & Flap T",
+        "note": "Nhấn rõ trọng âm chính của 'operational' và phát âm flap t mềm ở 'bottlenecks'."
+      },
+      {
+        "phrase": "touch base with",
+        "ipa_connected": "/tʌtʃ beɪs wɪð/",
+        "technique": "Smooth Transitions",
+        "note": "Chuyển tiếp tự nhiên từ âm /tʃ/ sang âm /b/ và nối sang /wɪð/."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "customs clearance",
+        "type": "Noun Phrase",
+        "meaning": "Thủ tục thông quan hải quan",
+        "example": "Customs clearance took longer than expected due to paperwork audits."
+      },
+      {
+        "phrase": "regional distribution",
+        "type": "Noun Phrase",
+        "meaning": "Phân phối hàng hóa theo khu vực",
+        "example": "Our regional distribution network covers five major provinces."
+      },
+      {
+        "phrase": "reroute freight",
+        "type": "Verb Phrase",
+        "meaning": "Chuyển hướng tuyến đường vận tải hàng hóa",
+        "example": "We decided to reroute freight to avoid severe port congestion."
+      },
+      {
+        "phrase": "backlogged inventory",
+        "type": "Noun Phrase",
+        "meaning": "Hàng tồn kho bị dồn ứ/tồn đọng",
+        "example": "Clearing backlogged inventory is our top priority this week."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện giọng quản lý chuỗi cung ứng điềm tĩnh, tập trung vào phương án giải quyết bài toán vận tải.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What issue is currently causing operational bottlenecks for hardware shipments?",
+        "How does Harrison plan to avoid pushing the regional distribution deadline back?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Cập nhật khẩn cho nhóm vận hành về phương án xử lý lô hàng.",
+        "text": "Hi team, customs clearance delays created a bottleneck at the main port. We are rerouting freight through an alternative port so distribution stays on track. Harrison will touch base before 5 PM.",
+        "vietnamese": "Chào team, việc chậm thông quan đã tạo ra điểm nghẽn tại cảng chính. Chúng ta đang chuyển hướng vận tải qua cảng thay thế để việc phân phối vẫn đúng tiến độ. Harrison sẽ trao đổi lại trước 5 giờ chiều."
+      },
+      "email_template": {
+        "context": "Email báo cáo sự cố hậu cần và giải pháp gửi Giám đốc Chuỗi cung ứng.",
+        "text": "Dear Claire,\n\nCustoms clearance delays at the central hub have introduced operational bottlenecks for our upcoming hardware shipments. However, by deciding to reroute freight through an secondary port, we can avoid needing to push the deadline back for regional distribution. Our warehouse staff will not be tied up with backlogged inventory. I will touch base before end of day with final confirmation.\n\nBest regards,\nHarrison",
+        "vietnamese": "Kính gửi Claire,\n\nSự chậm trễ thông quan tại trung tâm chính đã gây ra các điểm nghẽn vận hành cho các lô hàng phần cứng sắp tới. Tuy nhiên, bằng việc quyết định chuyển hướng vận tải qua một cảng phụ, chúng ta có thể tránh việc phải lùi thời hạn phân phối khu vực. Nhân viên kho sẽ không bị bận rộn dồn ứ hàng tồn. Tôi sẽ trao đổi lại trước khi kết thúc ngày cùng xác nhận cuối cùng.\n\nTrân trọng,\nHarrison"
+      }
+    }
+  },
+  {
+    "lesson_id": 38,
+    "title": "API Security & Compliance Audit (Kiểm toán bảo mật API và tuân thủ)",
+    "category": "Workplace",
+    "topic": "Cybersecurity Standards & Regulatory Compliance",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 140,
+      "duration_seconds": 42,
+      "speakers": [
+        "Samantha (Security Lead)",
+        "David (Engineering Manager)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Samantha (Security Lead)",
+        "text": "David, our annual compliance audit flagged several endpoints that require encrypted data handling.",
+        "vietnamese": "David, đợt kiểm toán tuân thủ hàng năm của chúng ta đã gắn cờ cảnh báo một số điểm đầu cuối yêu cầu xử lý dữ liệu mã hóa."
+      },
+      {
+        "speaker_id": "David (Engineering Manager)",
+        "text": "Thanks for flagging. My developers are currently tied up with fixing critical security patches, but we can prioritize this.",
+        "vietnamese": "Cảm ơn cô đã cảnh báo. Các lập trình viên của tôi hiện đang bận rộn với việc sửa các bản vá bảo mật quan trọng, nhưng chúng tôi có thể ưu tiên việc này."
+      },
+      {
+        "speaker_id": "Samantha (Security Lead)",
+        "text": "Good. We need these fixes verified to ensure our certification schedule stays on track.",
+        "vietnamese": "Rất tốt. Chúng ta cần các bản sửa lỗi này được xác minh để đảm bảo tiến độ cấp chứng nhận của chúng ta vẫn đúng kế hoạch."
+      },
+      {
+        "speaker_id": "David (Engineering Manager)",
+        "text": "Unless we run into a glitch during penetration testing, we should complete remediation by Friday.",
+        "vietnamese": "Trừ khi chúng tôi gặp trục trặc trong quá trình kiểm thử xâm nhập, chúng tôi sẽ hoàn thành việc khắc phục trước thứ Sáu."
+      },
+      {
+        "speaker_id": "Samantha (Security Lead)",
+        "text": "Perfect. Let's touch base on Friday afternoon to review the final compliance report.",
+        "vietnamese": "Hoàn hảo. Hãy trao đổi lại vào chiều thứ Sáu để xem qua báo cáo tuân thủ cuối cùng."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "compliance audit",
+        "ipa_connected": "/kəmˈplaɪ.əns ˈɑː.dɪt/",
+        "technique": "Continuous Vowel Link",
+        "note": "Nối phụ âm /s/ từ 'compliance' mượt sang nguyên âm /ɑː/ của 'audit'."
+      },
+      {
+        "phrase": "penetration testing",
+        "ipa_connected": "/ˌpen.əˈtreɪ.ʃən ˈtes.tɪŋ/",
+        "technique": "Multi-Syllable Stress",
+        "note": "Nhấn rõ trọng âm ở âm tiết thứ ba của 'penetration' và âm tiết đầu của 'testing'."
+      },
+      {
+        "phrase": "run into a",
+        "ipa_connected": "/ræn ˈɪn.tuː ə/",
+        "technique": "Linking Consonant to Vowel",
+        "note": "Nối âm /n/ ở 'run' sang 'into' và lướt mượt qua nguyên âm /ə/."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "compliance audit",
+        "type": "Noun Phrase",
+        "meaning": "Đợt kiểm toán sự tuân thủ quy định/tiêu chuẩn",
+        "example": "Passing the annual compliance audit is required for industry certification."
+      },
+      {
+        "phrase": "encrypted data handling",
+        "type": "Noun Phrase",
+        "meaning": "Xử lý dữ liệu đã mã hóa",
+        "example": "All financial transactions require strict encrypted data handling."
+      },
+      {
+        "phrase": "penetration testing",
+        "type": "Noun Phrase",
+        "meaning": "Kiểm thử xâm nhập (đánh giá lỗ hổng bảo mật)",
+        "example": "Penetration testing revealed minor vulnerabilities in our public login page."
+      },
+      {
+        "phrase": "remediation work",
+        "type": "Noun Phrase",
+        "meaning": "Công tác khắc phục lỗi/lỗ hổng",
+        "example": "The team completed remediation work ahead of the auditor's deadline."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện âm điệu nghiêm túc, chuẩn xác của chuyên gia an ninh mạng khi thảo luận về các lỗ hổng hệ thống.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What issue was flagged during the annual compliance audit?",
+        "When does David expect remediation work to be completed?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn trong nhóm kỹ thuật thông báo nhiệm vụ khắc phục lỗi bảo mật.",
+        "text": "Hi engineering team, the compliance audit flagged endpoints needing encrypted data handling. While we're tied up with security patches, this remediation is top priority to keep certification on track. Touch base on Friday.",
+        "vietnamese": "Chào team kỹ thuật, đợt kiểm toán tuân thủ đã gắn cờ cảnh báo các điểm đầu cuối cần xử lý dữ liệu mã hóa. Dù đang bận rộn với các bản vá bảo mật, việc khắc phục này là ưu tiên hàng đầu để giữ chứng nhận đúng tiến độ. Trao đổi lại vào thứ Sáu."
+      },
+      "email_template": {
+        "context": "Email chính thức gửi Ban Quản lý An ninh mạng về kết quả kiểm toán.",
+        "text": "Dear Security Committee,\n\nFollowing our annual compliance audit, we have identified specific endpoints requiring encrypted data handling. Engineering is currently tied up with scheduled security patches, but remediation work has been prioritized to keep our certification schedule on track. Provided we do not run into a glitch during penetration testing, all fixes will be verified by Friday. We will touch base with the final report shortly.\n\nBest regards,\nSamantha",
+        "vietnamese": "Kính gửi Ủy ban An ninh mạng,\n\nSau đợt kiểm toán tuân thủ hàng năm, chúng tôi đã xác định các điểm đầu cuối cụ thể yêu cầu xử lý dữ liệu mã hóa. Bộ phận Kỹ thuật hiện đang bận rộn với các bản vá bảo mật theo lịch trình, nhưng công tác khắc phục đã được ưu tiên để giữ tiến độ cấp chứng nhận đúng kế hoạch. Với điều kiện không gặp trục trặc trong quá trình kiểm thử xâm nhập, mọi bản sửa lỗi sẽ được xác minh vào thứ Sáu. Chúng tôi sẽ làm việc lại cùng báo cáo cuối cùng sớm.\n\nTrân trọng,\nSamantha"
+      }
+    }
+  },
+  {
+    "lesson_id": 39,
+    "title": "Home Renovation Consultation (Tư vấn cải tạo nhà ở)",
+    "category": "Daily Life",
+    "topic": "Home Improvement & Architecture Contracting",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 133,
+      "duration_seconds": 37,
+      "speakers": [
+        "Hannah (Homeowner)",
+        "Oliver (Interior Contractor)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Hannah (Homeowner)",
+        "text": "Hi Oliver, I'm checking in on the kitchen remodeling plans. Are we still on track for starting next month?",
+        "vietnamese": "Chào Oliver, tôi đang kiểm tra tiến độ kế hoạch cải tạo căn bếp. Chúng ta vẫn đúng tiến độ để bắt đầu vào tháng sau chứ?"
+      },
+      {
+        "speaker_id": "Oliver (Interior Contractor)",
+        "text": "Hi Hannah! Yes, but we ran into a glitch sourcing the custom granite countertops.",
+        "vietnamese": "Chào Hannah! Đúng vậy, nhưng chúng tôi đã gặp chút sự cố trục trặc khi tìm nguồn cung cấp mặt đá hoa cương theo yêu cầu."
+      },
+      {
+        "speaker_id": "Hannah (Homeowner)",
+        "text": "Oh no. Does that mean we will need to push the completion deadline back?",
+        "vietnamese": "Ôi không. Điều đó có nghĩa là chúng ta sẽ cần lùi thời hạn hoàn thành lại phải không?"
+      },
+      {
+        "speaker_id": "Oliver (Interior Contractor)",
+        "text": "Not necessarily. If you approve an alternative stone finish, my crew can swing by on Monday as scheduled.",
+        "vietnamese": "Không hẳn vậy. Nếu cô phê duyệt một chất liệu đá thay thế, đội của tôi có thể ghé qua vào thứ Hai theo đúng kế hoạch."
+      },
+      {
+        "speaker_id": "Hannah (Homeowner)",
+        "text": "That works for me. Send over the material samples, and I'll touch base with you tonight.",
+        "vietnamese": "Thế thì hợp lý với tôi. Hãy gửi các mẫu vật liệu, và tôi sẽ trao đổi lại với anh vào tối nay."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "granite countertops",
+        "ipa_connected": "/ˈɡræn.ɪt ˈkaʊn.t̬ɚ.tɑːps/",
+        "technique": "Flap T & Stress",
+        "note": "Âm /t/ giữa 'countertops' đọc lướt thành flap t mềm trong giao tiếp tự nhiên."
+      },
+      {
+        "phrase": "push the completion deadline back",
+        "ipa_connected": "/pʊʃ ðə kəmˈpliː.ʃən ˈded.laɪn bæk/",
+        "technique": "Rhythmic Grouping",
+        "note": "Phát âm cụm từ dài trôi chảy, nhấn rõ từ chỉ hành động 'push' và 'back'."
+      },
+      {
+        "phrase": "swing by on",
+        "ipa_connected": "/swɪŋ baɪ ɑːn/",
+        "technique": "Linking Consonant to Vowel",
+        "note": "Nối âm nguyên âm /aɪ/ ở 'by' mượt sang nguyên âm /ɑːn/ của 'on'."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "kitchen remodeling",
+        "type": "Noun Phrase",
+        "meaning": "Việc cải tạo/sửa sang lại căn bếp",
+        "example": "Kitchen remodeling usually increases the total property value."
+      },
+      {
+        "phrase": "granite countertops",
+        "type": "Noun Phrase",
+        "meaning": "Mặt bếp bằng đá hoa cương",
+        "example": "Granite countertops are both durable and easy to clean."
+      },
+      {
+        "phrase": "material samples",
+        "type": "Noun Phrase",
+        "meaning": "Các mẫu vật liệu (để xem thử)",
+        "example": "The contractor brought material samples for wood flooring."
+      },
+      {
+        "phrase": "alternative stone finish",
+        "type": "Noun Phrase",
+        "meaning": "Lớp bề mặt đá hoàn thiện thay thế",
+        "example": "Choosing an alternative stone finish saved us two weeks of shipping time."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện điệu bộ nói chuyện tự nhiên khi trao đổi với nhà thầu xây dựng/nội thất.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What specific material sourcing issue caused a glitch in the renovation plan?",
+        "How can Hannah prevent pushing the completion deadline back?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn gửi thành viên gia đình cập nhật tiến độ sửa nhà.",
+        "text": "Hey everyone, kitchen remodeling is mostly on track. We ran into a glitch with granite countertops, but if we choose an alternative stone finish, the crew will swing by on Monday as planned.",
+        "vietnamese": "Chào cả nhà, việc cải tạo bếp hầu như vẫn đúng tiến độ. Chúng ta gặp chút trục trặc với mặt đá hoa cương, nhưng nếu chọn lớp đá thay thế, đội thợ sẽ ghé qua vào thứ Hai theo đúng kế hoạch."
+      },
+      "email_template": {
+        "context": "Email trao đổi từ Chủ nhà gửi Nhà thầu thi công nội thất.",
+        "text": "Dear Oliver,\n\nThank you for updating me on the kitchen remodeling schedule. While I understand you ran into a glitch sourcing the original granite countertops, I am glad we do not need to push the completion deadline back. Please send over the alternative stone finish samples so I can review them and touch base tonight.\n\nBest regards,\nHannah",
+        "vietnamese": "Kính gửi Oliver,\n\nCảm ơn anh đã cập nhật cho tôi về lịch trình cải tạo căn bếp. Dù tôi hiểu anh gặp sự cố trục trặc khi tìm nguồn cung cấp mặt đá hoa cương ban đầu, tôi rất vui vì chúng ta không cần lùi thời hạn hoàn thành. Vui lòng gửi các mẫu vật liệu đá thay thế để tôi xem qua và làm việc lại vào tối nay.\n\nTrân trọng,\nHannah"
+      }
+    }
+  },
+  {
+    "lesson_id": 40,
+    "title": "Dining Reservation & Dietary Preferences (Đặt bàn nhà hàng & Yêu cầu ăn uống)",
+    "category": "Daily Life",
+    "topic": "Dining Out & Special Event Catering",
+    "duration_minutes": 20,
+    "audio_meta": {
+      "target_wpm": 135,
+      "duration_seconds": 38,
+      "speakers": [
+        "Liam (Guest)",
+        "Sophia (Restaurant Hostess)"
+      ]
+    },
+    "script": [
+      {
+        "speaker_id": "Liam (Guest)",
+        "text": "Hi Sophia, I'd like to adjust my dinner reservation for this Friday to accommodate vegetarian options.",
+        "vietnamese": "Chào Sophia, tôi muốn điều chỉnh lịch đặt bàn tối thứ Sáu tuần này để đáp ứng các lựa chọn ăn chay."
+      },
+      {
+        "speaker_id": "Sophia (Restaurant Hostess)",
+        "text": "Certainly, Liam! Our chef can easily prepare a custom tasting menu so your dining experience stays on track.",
+        "vietnamese": "Chắc chắn rồi Liam! Đầu bếp của chúng tôi có thể dễ dàng chuẩn bị một thực đơn nếm thử riêng để trải nghiệm ẩm thực của anh vẫn trọn vẹn."
+      },
+      {
+        "speaker_id": "Liam (Guest)",
+        "text": "Wonderful. Can we also push our arrival time back by thirty minutes?",
+        "vietnamese": "Tuyệt vời. Chúng tôi cũng có thể lùi thời gian đến lại 30 phút được không?"
+      },
+      {
+        "speaker_id": "Sophia (Restaurant Hostess)",
+        "text": "That works fine! Unless our kitchen runs into a glitch with peak hour orders, your table will be ready.",
+        "vietnamese": "Thế thì ổn thôi! Trừ khi bếp của chúng tôi gặp trục trặc vào giờ cao điểm, bàn của anh sẽ luôn sẵn sàng."
+      },
+      {
+        "speaker_id": "Liam (Guest)",
+        "text": "Great service as always. I'll touch base on Friday afternoon if our party size changes.",
+        "vietnamese": "Dịch vụ tuyệt vời như mọi khi. Tôi sẽ liên hệ lại vào chiều thứ Sáu nếu số lượng người trong nhóm thay đổi."
+      }
+    ],
+    "pronunciation_highlights": [
+      {
+        "phrase": "dinner reservation",
+        "ipa_connected": "/ˈdɪn.ɚ ˌrez.ɚˈveɪ.ʃən/",
+        "technique": "Linking Consonant to Vowel",
+        "note": "Âm /r/ ở 'dinner' nối mượt sang nguyên âm /r/ của 'reservation'."
+      },
+      {
+        "phrase": "tasting menu",
+        "ipa_connected": "/ˈteɪ.stɪŋ ˈmen.juː/",
+        "technique": "Nasal Transition",
+        "note": "Nối âm /ŋ/ ở 'tasting' sang phụ âm /m/ của 'menu'."
+      },
+      {
+        "phrase": "party size",
+        "ipa_connected": "/ˈpɑːr.t̬i saɪz/",
+        "technique": "Flap T",
+        "note": "Âm /t/ trong 'party' đọc lướt thành flap t mềm trong giọng Anh-Mỹ."
+      }
+    ],
+    "key_vocabulary": [
+      {
+        "phrase": "dinner reservation",
+        "type": "Noun Phrase",
+        "meaning": "Lịch đặt bàn ăn tối",
+        "example": "I made a dinner reservation for four people at 7 PM."
+      },
+      {
+        "phrase": "vegetarian options",
+        "type": "Noun Phrase",
+        "meaning": "Các món ăn/lựa chọn chay",
+        "example": "The restaurant offers plenty of gluten-free and vegetarian options."
+      },
+      {
+        "phrase": "tasting menu",
+        "type": "Noun Phrase",
+        "meaning": "Thực đơn nếm thử (gồm nhiều món nhỏ đặc sắc của bếp trưởng)",
+        "example": "The chef recommended the five-course tasting menu."
+      },
+      {
+        "phrase": "party size",
+        "type": "Noun Phrase",
+        "meaning": "Số lượng người trong nhóm/đoàn",
+        "example": "Please notify us in advance if your party size changes."
+      }
+    ],
+    "speaking_practice": {
+      "shadowing_focus": "Luyện âm điệu lịch sự, vui vẻ khi đặt dịch vụ nhà hàng, chú ý phát âm các cụm từ về thời gian và số lượng.",
+      "target_repetitions": 5,
+      "reflection_prompts": [
+        "What two adjustments did Liam request for his dinner reservation?",
+        "When will Liam touch base with the hostess if his party size changes?"
+      ]
+    },
+    "writing_practice": {
+      "slack_template": {
+        "context": "Tin nhắn trong nhóm bạn thông báo đã điều chỉnh giờ hẹn ăn tối.",
+        "text": "Hey guys, I updated our dinner reservation for Friday! Pushed arrival time back by 30 mins, and the chef is adding vegetarian options to the tasting menu. Touch base Friday!",
+        "vietnamese": "Chào mọi người, tớ đã cập nhật lịch đặt bàn tối thứ Sáu! Đã lùi thời gian đến lại 30 phút, và đầu bếp đang thêm các lựa chọn ăn chay vào thực đơn nếm thử. Trao đổi lại vào thứ Sáu nhé!"
+      },
+      "email_template": {
+        "context": "Email xác nhận điều chỉnh dịch vụ từ Nhà hàng gửi cho Khách hàng.",
+        "text": "Dear Liam,\n\nThank you for contacting us regarding your upcoming dinner reservation for this Friday. We have updated your arrival time to thirty minutes later and made notes to provide custom vegetarian options on your tasting menu. Should your party size change, please touch base with us on Friday afternoon.\n\nBest regards,\nSophia",
+        "vietnamese": "Kính gửi Liam,\n\nCảm ơn anh đã liên hệ với chúng tôi liên quan đến lịch đặt bàn tối thứ Sáu tới. Chúng tôi đã cập nhật thời gian đến của anh muộn hơn 30 phút và ghi chú để cung cấp các lựa chọn ăn chay riêng trong thực đơn nếm thử. Nếu số lượng người trong nhóm thay đổi, vui lòng liên hệ với chúng tôi vào chiều thứ Sáu.\n\nTrân trọng,\nSophia"
+      }
+    }
+  }
+]
