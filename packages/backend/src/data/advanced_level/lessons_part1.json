@@ -1,13 +1,13 @@
 {
   "total_lessons": 120,
   "part": 1,
-  "range": "Bài 01 - Bài 40",
+  "range": "Lesson 01 - Lesson 40",
   "lessons": [
     {
       "id": 1,
       "category": "Workplace",
-      "topic": "Quản lý & Xin hoãn Deadline",
-      "title": "Xin lùi hạn bàn giao API",
+      "topic": "Management & Requesting Deadline Extension",
+      "title": "Requesting API Delivery Delay",
       "script": "A: Hey Alex, do you have a quick sec? Regarding the API integration roadmap, we might run into a slight delay.\nB: Oh, really? I thought we were on track for Friday's deployment.\nA: Well, the third-party doc was outdated, so it took us longer than expected to debug. Long story short, we need two extra days to run proper end-to-end tests.\nB: I see. Can you drop a quick update on Slack so the product team stays in the loop?",
       "slack_email": "Hi team, quick heads-up: due to some outdated API docs, we need to push the deployment back by 2 days for testing. Revised ETA is next Tuesday. Thanks for understanding!",
       "reflection": "A: Hey Sarah, regarding the UI design concept, we might run into a slight delay.\nB: Drop a quick update on Slack so the marketing team stays in the loop."
@@ -15,8 +15,8 @@
     {
       "id": 2,
       "category": "Workplace",
-      "topic": "Báo cáo & Xử lý sự cố",
-      "title": "Báo cáo sự cố Downtime hệ thống",
+      "topic": "Reporting & Incident Management",
+      "title": "Reporting System Downtime Incident",
       "script": "A: Heads up, team! We've noticed a spike in latency on the authentication service.\nB: Are users experiencing complete downtime or just slow response times?\nA: It's mostly slow load times, but error rates are starting to creep up. Long story short, the database connection pool is maxed out.\nB: Got it. Let's spin up additional read replicas immediately to lighten the load.",
       "slack_email": "Urgent update: Auth service is experiencing high latency due to DB pool exhaustion. We are currently spinning up extra read replicas. Next update in 15 mins.",
       "reflection": "A: Heads up, team! We've noticed a memory leak in the payment gateway service.\nB: Let me know if you need an extra hands on deck."
@@ -24,8 +24,8 @@
     {
       "id": 3,
       "category": "Workplace",
-      "topic": "Họp hành & Thảo luận",
-      "title": "Đề xuất cắt giảm tính năng trong Sprint",
+      "topic": "Meeting & Discussion",
+      "title": "Proposing Feature Scope Reduction in Sprint",
       "script": "A: Looking at our current velocity, we won't be able to deliver all scope items this sprint.\nB: That's concerning. What do you propose we push to the backlog?\nA: I suggest we descope the dark mode feature and focus purely on core checkout optimization. That way, we guarantee on-time delivery.\nB: Makes sense. Let's align with the PM before finalizing the sprint goal.",
       "slack_email": "Hi all, after evaluating sprint velocity, we propose moving dark mode to the backlog to secure core checkout features for release. Please review and approve.",
       "reflection": "A: Looking at our roadmap, we won't be able to finish the export feature this quarter.\nB: Let's align with stakeholders before making a final decision."
@@ -33,8 +33,8 @@
     {
       "id": 4,
       "category": "Workplace",
-      "topic": "Tương tác Slack/Email",
-      "title": "Nhờ Review PR (Pull Request) gấp",
+      "topic": "Slack/Email Interaction",
+      "title": "Requesting Urgent PR Review",
       "script": "A: Sorry to bother you, David. Could you take a look at PR #204 when you get a chance?\nB: Sure thing. Is there any blocker holding up the deployment?\nA: Yeah, the QA team needs this hotfix in staging before they can run regression tests.\nB: Say no more. I'll review and approve it within the hour.",
       "slack_email": "Hey David, PR #204 with the hotfix is ready for review. Need your stamp on it so QA can start regression testing. Thanks!",
       "reflection": "A: Could you take a look at the contract draft when you get a chance?\nB: I'll review and approve it by EOD."
@@ -42,8 +42,8 @@
     {
       "id": 5,
       "category": "Workplace",
-      "topic": "Phỏng vấn & Giao việc",
-      "title": "Giao công việc Onboarding cho Dev mới",
+      "topic": "Interview & Task Assignment",
+      "title": "Assigning Onboarding Tasks to New Developer",
       "script": "A: Welcome aboard, Kevin! For your first week, we'd like you to get familiar with our codebase.\nB: Thanks! Should I start with the setup documentation on Confluence?\nA: Exactly. Go through the setup guide, build the project locally, and let me know if you hit any roadblocks.\nB: Sounds like a plan. I'll give you a ping if I get stuck.",
       "slack_email": "Welcome Kevin! Please follow the setup guide on Confluence to get your local environment running. Ping me on Slack if you hit any roadblocks.",
       "reflection": "A: Go through the architecture doc and let me know if you hit any roadblocks.\nB: Sounds like a plan. I'll ping you if I need clarification."
@@ -51,8 +51,8 @@
     {
       "id": 6,
       "category": "Workplace",
-      "topic": "Quản lý & Xin hoãn Deadline",
-      "title": "Báo hết tải công việc (Bandwidth)",
+      "topic": "Management & Requesting Deadline Extension",
+      "title": "Reporting Full Workload (Bandwidth)",
       "script": "A: Hey, can you take on the user permissions refactoring task for this iteration?\nB: To be frank, my bandwidth is completely stretched thin with the security audit.\nA: Ah, I see. If I reassign the audit report, could you manage it?\nB: In that case, yes. That would clear up enough headroom for me to take it over.",
       "slack_email": "Hi team, my current bandwidth is fully allocated to the security audit. If we can adjust priorities, I can take over the refactoring task.",
       "reflection": "A: To be frank, my bandwidth is completely stretched thin with the Q3 planning.\nB: Let's adjust priorities so we don't burn out the team."
@@ -60,8 +60,8 @@
     {
       "id": 7,
       "category": "Workplace",
-      "topic": "Báo cáo & Xử lý sự cố",
-      "title": "Xử lý xung đột code merge",
+      "topic": "Reporting & Incident Management",
+      "title": "Handling Code Merge Conflicts",
       "script": "A: We're running into major merge conflicts after pulling the latest main branch.\nB: Did the breaking changes come from the payment refactoring module?\nA: Exactly. The function signatures were completely changed without notice.\nB: Let's set up a quick huddle with the backend lead to resolve this together.",
       "slack_email": "Team, we hit merge conflicts on main due to updated payment module signatures. Jumping into a quick huddle now to resolve it.",
       "reflection": "A: We're running into major merge conflicts on the staging server.\nB: Let's set up a quick huddle to sort it out."
@@ -69,8 +69,8 @@
     {
       "id": 8,
       "category": "Workplace",
-      "topic": "Họp hành & Thảo luận",
-      "title": "Báo cáo tiến độ Daily Standup",
+      "topic": "Meeting & Discussion",
+      "title": "Daily Standup Progress Report",
       "script": "A: What did you work on yesterday, and do you have any blockers today?\nB: Yesterday I finished setting up the CI/CD pipeline for the staging environment.\nA: Great! Anything standing in your way for today's task?\nB: No blockers on my end. Today I'm diving into unit testing for the auth module.",
       "slack_email": "Standup update: Yesterday completed staging CI/CD pipeline. Today working on auth unit tests. No blockers currently.",
       "reflection": "A: Yesterday I finished optimizing the database queries.\nB: No blockers on my end, proceeding with API testing today."
@@ -78,8 +78,8 @@
     {
       "id": 9,
       "category": "Workplace",
-      "topic": "Tương tác Slack/Email",
-      "title": "Xác nhận yêu cầu thay đổi từ Client",
+      "topic": "Slack/Email Interaction",
+      "title": "Confirming Change Requests from Client",
       "script": "A: Did you see the client's email regarding the new dashboard layout?\nB: Yes, but some of their requests contradict our original specification.\nA: Good catch. Should we schedule a clarification call with their manager?\nB: Definitely. I'll draft an email highlighting the discrepancies first.",
       "slack_email": "Hi Client, we received your feedback. To ensure alignment with technical specs, we drafted a brief comparison and would like a 10-min call.",
       "reflection": "A: Good catch, some points contradict our agreed scope.\nB: I'll draft an email highlighting the main discrepancies."
@@ -87,8 +87,8 @@
     {
       "id": 10,
       "category": "Workplace",
-      "topic": "Phỏng vấn & Giao việc",
-      "title": "Ủy quyền công việc khi đi nghỉ",
+      "topic": "Interview & Task Assignment",
+      "title": "Delegating Tasks While on Leave",
       "script": "A: Just a reminder that I'll be out of office starting this Thursday for vacation.\nB: Got it. Who should we reach out to if an emergency pops up?\nA: Mark will be covering my responsibilities. He's fully briefed on the infrastructure.\nB: Perfect. Enjoy your time off! We'll ping Mark if anything urgent comes up.",
       "slack_email": "OOO Notice: I will be away starting Thursday. Mark will cover urgent infrastructure issues in my absence. Thanks!",
       "reflection": "A: Mark will be covering my responsibilities while I'm on leave.\nB: Perfect. We'll ping him if anything urgent comes up."
@@ -96,8 +96,8 @@
     {
       "id": 11,
       "category": "Daily Life",
-      "topic": "Trò chuyện xã giao (Small talk)",
-      "title": "Hỏi thăm cuối tuần công sở",
+      "topic": "Small Talk",
+      "title": "Office Casual Weekend Inquiry",
       "script": "A: Morning John! How was your weekend? Did you do anything fun?\nB: It was pretty low-key, honestly. I mostly just caught up on sleep and watched movies.\nA: Sounds relaxing! Sometimes a quiet weekend is exactly what we need.\nB: Couldn't agree more. How about you? How did yours go?",
       "slack_email": "N/A (Giao tiếp trực tiếp)",
       "reflection": "A: How was your weekend? Did you do anything fun?\nB: It was pretty low-key, just relaxed with my family."
@@ -105,8 +105,8 @@
     {
       "id": 12,
       "category": "Daily Life",
-      "topic": "Ăn uống & Mua sắm",
-      "title": "Gọi món tại nhà hàng",
+      "topic": "Dining & Shopping",
+      "title": "Ordering at Restaurant",
       "script": "A: Are you ready to order, or do you need a few more minutes with the menu?\nB: I think we're ready. Could I get the grilled salmon with a side salad?\nA: Excellent choice. And for your drink?\nB: Just sparkling water with a slice of lemon, please.",
       "slack_email": "N/A (Giao tiếp trực tiếp)",
       "reflection": "A: Could I get the iced Americano with extra oat milk?\nB: Excellent choice, that'll be $5."
@@ -114,8 +114,8 @@
     {
       "id": 13,
       "category": "Daily Life",
-      "topic": "Du lịch & Sân bay/Khách sạn",
-      "title": "Check-in khách sạn",
+      "topic": "Travel & Airport/Hotel",
+      "title": "Hotel Check-in",
       "script": "A: Hi there! I have a reservation under the name Alex Nguyen for three nights.\nB: Welcome! Let me pull up your booking. May I have your ID and credit card?\nA: Here you go. By the way, is breakfast included in the booking?\nB: Yes, it is! Served daily on the second floor from 6 to 10 AM.",
       "slack_email": "N/A (Giao tiếp trực tiếp)",
       "reflection": "A: I have a reservation under the name GoodPine.\nB: Let me pull up your booking details in the system."
@@ -123,8 +123,8 @@
     {
       "id": 14,
       "category": "Daily Life",
-      "topic": "Sự cố đời sống",
-      "title": "Báo sự cố hỏng wifi căn hộ",
+      "topic": "Life Issues",
+      "title": "Reporting Apartment WiFi Outage",
       "script": "A: Hi, I'm calling from apartment 4B. My internet connection went down an hour ago.\nB: Sorry about that! Have you tried restarting your router?\nA: Yes, I unplugged it for 30 seconds, but the broadband light is still red.\nB: Alright, I'll send a technician over to check the main line this afternoon.",
       "slack_email": "N/A (Giao tiếp trực tiếp)",
       "reflection": "A: I unplugged the device, but the indicator light is still red.\nB: I'll send a technician over to inspect it."
@@ -132,8 +132,8 @@
     {
       "id": 15,
       "category": "Daily Life",
-      "topic": "Bày tỏ quan điểm & Cảm xúc",
-      "title": "Đánh giá một bộ phim mới",
+      "topic": "Expressing Opinion & Emotion",
+      "title": "Reviewing a New Movie",
       "script": "A: Did you catch the new sci-fi movie that came out last Friday?\nB: Yeah, I watched it yesterday. To be honest, I found the plot a bit predictable.\nA: Really? I thought the visual effects totally made up for the storyline.\nB: Fair point, but I guess I expected more depth from that director.",
       "slack_email": "N/A (Giao tiếp trực tiếp)",
       "reflection": "A: To be honest, I found the new UI design a bit confusing.\nB: Fair point, but the performance gains make up for it."
@@ -141,8 +141,8 @@
     {
       "id": 16,
       "category": "Workplace",
-      "topic": "Quản lý & Xin hoãn Deadline",
-      "title": "Đàm phán cắt bớt Scope sản phẩm",
+      "topic": "Management & Requesting Deadline Extension",
+      "title": "Negotiating Product Scope Reduction",
       "script": "A: If we keep all these requirements, we're definitely going to miss the hard launch date.\nB: What are our options if moving the launch date is off the table?\nA: We can launch with MVP features first, then roll out Phase 2 in the following release.\nB: That works for me. Let's get buy-in from the product director.",
       "slack_email": "Hi all, to meet the hard launch date, we recommend releasing MVP features first. Phase 2 features will follow in the next release cycle.",
       "reflection": "A: If moving the deadline is off the table, we should reduce the scope.\nB: Let's get buy-in from stakeholders before proceeding."
@@ -150,8 +150,8 @@
     {
       "id": 17,
       "category": "Workplace",
-      "topic": "Báo cáo & Xử lý sự cố",
-      "title": "Rò rỉ dữ liệu / Lỗi bảo mật",
+      "topic": "Reporting & Incident Management",
+      "title": "Data Breach / Security Issue",
       "script": "A: Our monitoring system flagged an unusual number of unauthorized API requests.\nB: Is there any indication that user data was compromised?\nA: Not at first glance, but we revoked the leaked API keys immediately to be safe.\nB: Good call. Let's draft an incident report for internal review.",
       "slack_email": "Security Alert: Revoked compromised API keys after detecting abnormal traffic. No data compromise detected. Incident report to follow.",
       "reflection": "A: We revoked the access tokens immediately to play it safe.\nB: Good call, let's draft an incident summary."
@@ -159,8 +159,8 @@
     {
       "id": 18,
       "category": "Workplace",
-      "topic": "Họp hành & Thảo luận",
-      "title": "Bất đồng ý kiến trong thiết kế System",
+      "topic": "Meeting & Discussion",
+      "title": "Disagreement in System Design",
       "script": "A: I'm not entirely convinced that switching to microservices is necessary at this stage.\nB: Why so? A monolith won't scale with our projected user growth next year.\nA: True, but microservices introduce huge operational overhead for our small team.\nB: You bring up a valid point. Let's weigh the pros and cons in a RFC doc.",
       "slack_email": "Hi team, created an RFC doc to evaluate Monolith vs Microservices architecture for our next phase. Please add your inputs.",
       "reflection": "A: You bring up a valid point regarding maintenance overhead.\nB: Let's weigh the pros and cons before making a decision."
@@ -168,8 +168,8 @@
     {
       "id": 19,
       "category": "Workplace",
-      "topic": "Tương tác Slack/Email",
-      "title": "Cảm ơn & Feedback đồng nghiệp",
+      "topic": "Slack/Email Interaction",
+      "title": "Thanking & Praising Colleagues",
       "script": "A: Just wanted to give a huge shoutout to Sarah for resolving that production bug yesterday!\nB: Absolutely, her quick response saved us from a massive outage.\nA: It really showed great initiative. We should highlight this in the team demo.\nB: Agreed! Kudo cards sent her way.",
       "slack_email": "Huge shoutout to Sarah for fixing the prod issue quickly! Exceptional work keeping our downtime to a minimum.",
       "reflection": "A: Huge shoutout to the frontend team for delivering on time!\nB: It really showed great initiative across the board."
@@ -177,8 +177,8 @@
     {
       "id": 20,
       "category": "Workplace",
-      "topic": "Phỏng vấn & Giao việc",
-      "title": "Phỏng vấn Đánh giá năng lực Tech",
+      "topic": "Interview & Task Assignment",
+      "title": "Technical Competency Interview",
       "script": "A: Can you walk me through a challenging technical problem you solved recently?\nB: Sure. In my last project, we faced heavy database locking during flash sales.\nA: How did you approach debugging and fixing that issue?\nB: We implemented Redis caching and optimized our SQL indexes, reducing DB load by 60%.",
       "slack_email": "N/A (Nội dung phỏng vấn)",
       "reflection": "A: Can you walk me through how you handled the traffic spike?\nB: We implemented caching which reduced overall load by 50%."
@@ -186,8 +186,8 @@
     {
       "id": 21,
       "category": "Daily Life",
-      "topic": "Trò chuyện xã giao (Small talk)",
-      "title": "Hỏi thăm đồng nghiệp mới chuyển nhà",
+      "topic": "Small Talk",
+      "title": "Inquiring About Colleague's Recent Move",
       "script": "A: Hey, I heard you recently moved to a new neighborhood. How are you settling in?\nB: Pretty good! The commute is much shorter, though unpacking is taking forever.\nA: Haha, unpacking is always the worst part. Is there a good coffee shop nearby?\nB: Yeah, found a great spot just around the corner from my place!",
       "slack_email": "N/A (Giao tiếp trực tiếp)",
       "reflection": "A: How are you settling into your new role?\nB: Pretty good, though getting used to the codebase is taking time."
@@ -195,8 +195,8 @@
     {
       "id": 22,
       "category": "Daily Life",
-      "topic": "Ăn uống & Mua sắm",
-      "title": "Hỏi đổi trả hàng tại siêu thị/cửa hàng",
+      "topic": "Dining & Shopping",
+      "title": "Asking for Store Exchange",
       "script": "A: Hi, I bought this shirt yesterday, but the size turns out to be a bit too small.\nB: No problem. Do you have the original receipt and tags attached?\nA: Yes, here is the receipt. Can I exchange it for a medium?\nB: Let me check our stock... Yes, we have one medium left in back.",
       "slack_email": "N/A (Giao tiếp trực tiếp)",
       "reflection": "A: Can I exchange this item for a larger size?\nB: Let me check our stock room to see if we have one left."
@@ -204,8 +204,8 @@
     {
       "id": 23,
       "category": "Daily Life",
-      "topic": "Du lịch & Sân bay/Khách sạn",
-      "title": "Hỏi đường tại sân bay",
+      "topic": "Travel & Airport/Hotel",
+      "title": "Asking for Directions at Airport",
       "script": "A: Excuse me, could you tell me how to get to Gate B12 for flight VN230?\nB: Sure! Walk straight down this hall, take the escalator up, and it's on your left.\nA: Thanks! Do I need to go through security screening again?\nB: No, you're already in the secure departure area.",
       "slack_email": "N/A (Giao tiếp trực tiếp)",
       "reflection": "A: Could you tell me how to get to the main conference hall?\nB: Walk straight down this hall and take the elevator up."
@@ -213,8 +213,8 @@
     {
       "id": 24,
       "category": "Daily Life",
-      "topic": "Sự cố đời sống",
-      "title": "Hủy đặt bàn nhà hàng phút chót",
+      "topic": "Life Issues",
+      "title": "Last-minute Restaurant Reservation Cancellation",
       "script": "A: Hello, I have a reservation for 4 people at 7 PM under Tom.\nB: Ah yes, Mr. Tom. Are you on your way?\nA: Unfortunately, something urgent came up at work, so I need to cancel or postpone it.\nB: No worries. Would you like me to reschedule for tomorrow evening instead?",
       "slack_email": "N/A (Giao tiếp trực tiếp)",
       "reflection": "A: Something urgent came up, so I need to postpone our meeting.\nB: No worries, we can reschedule for tomorrow afternoon."
@@ -222,8 +222,8 @@
     {
       "id": 25,
       "category": "Daily Life",
-      "topic": "Bày tỏ quan điểm & Cảm xúc",
-      "title": "Thảo luận về làm việc Remote vs Office",
+      "topic": "Expressing Opinion & Emotion",
+      "title": "Discussing Remote vs Office Work",
       "script": "A: Honestly, working from home has saved me so much commuting stress.\nB: I get that, but don't you feel isolated from the team sometimes?\nA: A little bit, but the flexibility completely outweighs the lack of face-to-face interaction.\nB: I guess a hybrid model is the sweet spot for most people.",
       "slack_email": "N/A (Giao tiếp trực tiếp)",
       "reflection": "A: The flexibility completely outweighs the downsides.\nB: I guess finding a balanced model is the sweet spot."
@@ -231,8 +231,8 @@
     {
       "id": 26,
       "category": "Workplace",
-      "topic": "Quản lý & Xin hoãn Deadline",
-      "title": "Thiếu nhân sự do bệnh đột xuất",
+      "topic": "Management & Requesting Deadline Extension",
+      "title": "Unexpected Staff Absence Due to Illness",
       "script": "A: Bad news, two of our senior frontend devs called in sick today.\nB: Oh no! That puts our sprint delivery at high risk.\nA: I'll reprioritize tasks so we cover critical bugs first while non-essentials wait.\nB: Sounds like a solid contingency plan. Thanks for stepping up.",
       "slack_email": "Team update: Due to sick leaves, we are reprioritizing today's sprint tasks to focus solely on critical bug fixes.",
       "reflection": "A: I'll reprioritize tasks so we cover critical items first.\nB: Sounds like a solid contingency plan."
@@ -240,8 +240,8 @@
     {
       "id": 27,
       "category": "Workplace",
-      "topic": "Báo cáo & Xử lý sự cố",
-      "title": "Lỗi tương thích trình duyệt/thiết bị",
+      "topic": "Reporting & Incident Management",
+      "title": "Browser/Device Compatibility Error",
       "script": "A: Users on Safari are reporting that the payment button is completely unresponsive.\nB: Is it affecting desktop or mobile browsers?\nA: Mostly Safari Mobile on iOS 17. It seems like a JavaScript compatibility issue.\nB: Let's isolate the code snippet and push a hotfix directly to production.",
       "slack_email": "Hotfix alert: Identified JS incompatibility on iOS 17 Safari. Pushing fix to prod shortly.",
       "reflection": "A: It seems like a browser compatibility issue on older versions.\nB: Let's isolate the issue and deploy a hotfix."
@@ -249,8 +249,8 @@
     {
       "id": 28,
       "category": "Workplace",
-      "topic": "Họp hành & Thảo luận",
-      "title": "Chốt ý tưởng trong Session Brainstorming",
+      "topic": "Meeting & Discussion",
+      "title": "Finalizing Ideas in Brainstorming Session",
       "script": "A: We have a lot of great ideas on the board. How should we narrow them down?\nB: Let's vote on feasibility versus impact using an Effort-Matrix.\nA: Great idea. That will quickly highlight the low-hanging fruit.\nB: Exactly. Let's spend 5 minutes dot-voting on the top 3 items.",
       "slack_email": "Brainstorming summary: Selected top 3 high-impact features based on effort matrix. Detailed doc attached.",
       "reflection": "A: That will quickly highlight the low-hanging fruit for this quarter.\nB: Exactly, let's focus on high-impact items first."
@@ -258,8 +258,8 @@
     {
       "id": 29,
       "category": "Workplace",
-      "topic": "Tương tác Slack/Email",
-      "title": "Nhờ hỗ trợ cấp quyền Access System",
+      "topic": "Slack/Email Interaction",
+      "title": "Requesting System Access Permission Support",
       "script": "A: Hey admin team, I need access to the AWS staging cluster for debugging.\nB: Did you submit an access request ticket via Jira?\nA: Yes, ticket #SEC-102 was approved by my manager earlier this morning.\nB: Got it. I'll grant your IAM permissions right now.",
       "slack_email": "Hi Admin, access request Jira #SEC-102 has been approved. Kindly grant permissions to the staging cluster. Thanks!",
       "reflection": "A: Ticket #SEC-102 was approved by my manager earlier today.\nB: Got it. I'll grant your permissions right away."
@@ -267,8 +267,8 @@
     {
       "id": 30,
       "category": "Workplace",
-      "topic": "Phỏng vấn & Giao việc",
-      "title": "Giao nhiệm vụ Lead một Feature mới",
+      "topic": "Interview & Task Assignment",
+      "title": "Assigning Leadership of New Feature",
       "script": "A: We'd like you to take the lead on the new notification system integration.\nB: I'd be happy to! What's the target timeline for the initial prototype?\nA: We're aiming for a working demo by the end of next sprint.\nB: Understood. I'll draft the technical spec document by Wednesday.",
       "slack_email": "Hi team, I will be leading the notification integration. Technical spec doc will be shared by Wednesday for feedback.",
       "reflection": "A: What's the target timeline for the initial prototype?\nB: We're aiming for a working demo by next week."
@@ -276,8 +276,8 @@
     {
       "id": 31,
       "category": "Daily Life",
-      "topic": "Trò chuyện xã giao (Small talk)",
-      "title": "Kế hoạch kỳ nghỉ sắp tới",
+      "topic": "Small Talk",
+      "title": "Upcoming Holiday Plans",
       "script": "A: Got any big plans for the upcoming long weekend?\nB: Yeah! My family and I are taking a quick road trip to Sapa.\nA: Wow, awesome! Hope the weather turns out great for you guys.\nB: Thanks! Fingers crossed it doesn't rain too much.",
       "slack_email": "N/A (Giao tiếp trực tiếp)",
       "reflection": "A: Got any big plans for the long holiday?\nB: Fingers crossed the weather turns out great."
@@ -285,8 +285,8 @@
     {
       "id": 32,
       "category": "Daily Life",
-      "topic": "Ăn uống & Mua sắm",
-      "title": "Hỏi thông tin dị ứng món ăn",
+      "topic": "Dining & Shopping",
+      "title": "Asking About Food Allergies",
       "script": "A: Does this seafood pasta contain any peanut or nut traces?\nB: Let me double-check with the chef. Are you severely allergic?\nA: Yes, I have a mild nut allergy, so I need to be careful.\nB: Thanks for telling me. The chef confirmed it's 100% nut-free.",
       "slack_email": "N/A (Giao tiếp trực tiếp)",
       "reflection": "A: Does this sauce contain any dairy products?\nB: Let me double-check with the kitchen staff."
@@ -294,8 +294,8 @@
     {
       "id": 33,
       "category": "Daily Life",
-      "topic": "Du lịch & Sân bay/Khách sạn",
-      "title": "Yêu cầu trả phòng muộn (Late Check-out)",
+      "topic": "Travel & Airport/Hotel",
+      "title": "Requesting Late Check-out",
       "script": "A: Hello, front desk? Is it possible to request a late check-out today?\nB: What room number are you in, sir?\nA: Room 502. My flight isn't until 6 PM this evening.\nB: We can extend your check-out to 1:00 PM free of charge.",
       "slack_email": "N/A (Giao tiếp trực tiếp)",
       "reflection": "A: Is it possible to request a late check-out for room 301?\nB: We can extend it by two hours free of charge."
@@ -303,8 +303,8 @@
     {
       "id": 34,
       "category": "Daily Life",
-      "topic": "Sự cố đời sống",
-      "title": "Quên đồ trên xe dịch vụ/Grab",
+      "topic": "Life Issues",
+      "title": "Left Item in Service/Ride-share Vehicle",
       "script": "A: Hi Grab support, I think I left my umbrella in the driver's car 10 minutes ago.\nB: Don't worry. I can help contact the driver directly for you.\nA: Thank you! The booking ID is #GRAB-8821.\nB: Stay on the line while I reach out to the driver.",
       "slack_email": "N/A (Giao tiếp trực tiếp)",
       "reflection": "A: I think I left my backpack in the vehicle.\nB: Stay on the line while I contact the driver."
@@ -312,8 +312,8 @@
     {
       "id": 35,
       "category": "Daily Life",
-      "topic": "Bày tỏ quan điểm & Cảm xúc",
-      "title": "Thảo luận thói quen đọc sách vs xem video",
+      "topic": "Expressing Opinion & Emotion",
+      "title": "Discussing Book Reading vs Video Watching Habits",
       "script": "A: I find it much easier to learn from YouTube video tutorials than reading documentation.\nB: Really? I feel documentation gives much deeper detail without fluff.\nA: True, but video visuals help me grasp complex concepts way faster.\nB: Fair enough, different strokes for different folks!",
       "slack_email": "N/A (Giao tiếp trực tiếp)",
       "reflection": "A: Visual diagrams help me grasp complex systems way faster.\nB: Fair enough, everyone has a different learning style."
@@ -321,8 +321,8 @@
     {
       "id": 36,
       "category": "Workplace",
-      "topic": "Quản lý & Xin hoãn Deadline",
-      "title": "Chờ phía bên thứ 3 (Third-party Dependency)",
+      "topic": "Management & Requesting Deadline Extension",
+      "title": "Waiting for Third-party Dependency",
       "script": "A: Is the payment gateway integration ready for code review?\nB: Not yet. We're still blocked waiting for the vendor to provide API credentials.\nA: Have you followed up with their support team today?\nB: Sent an email this morning, but no response so far. Deadline might slip.",
       "slack_email": "Blocker update: Payment integration is on hold pending API keys from vendor. Followed up today, awaiting response.",
       "reflection": "A: We're still blocked waiting for the third-party response.\nB: Sent a follow-up email, hopefully we get a reply soon."
@@ -330,8 +330,8 @@
     {
       "id": 37,
       "category": "Workplace",
-      "topic": "Báo cáo & Xử lý sự cố",
-      "title": "Lỗi hết bộ nhớ Server (Out of Memory)",
+      "topic": "Reporting & Incident Management",
+      "title": "Server Out of Memory Error",
       "script": "A: Production alert: Server 02 just crashed due to an Out of Memory error.\nB: What caused the memory usage to spike so abruptly?\nA: A massive batch export script running concurrently with user traffic.\nB: Let's kill the batch process and restart the node immediately.",
       "slack_email": "Prod Alert: Server 02 restarted following an OOM crash caused by a heavy batch export. Batch job paused temporarily.",
       "reflection": "A: What caused the memory usage to spike so abruptly?\nB: A background process was leaking memory over time."
@@ -339,8 +339,8 @@
     {
       "id": 38,
       "category": "Workplace",
-      "topic": "Họp hành & Thảo luận",
-      "title": "Mời thành viên phát biểu trong cuộc họp",
+      "topic": "Meeting & Discussion",
+      "title": "Inviting Member to Speak in Meeting",
       "script": "A: We've covered the frontend architecture. Alex, do you have any input from the backend side?\nB: Thanks Tom. From a DB perspective, this schema change looks quite risky.\nA: What specific risks are you seeing?\nB: It could cause locking on large tables during high-traffic hours.",
       "slack_email": "Meeting Notes: Backend team flagged potential DB locking risks with proposed schema. Re-evaluating migration plan.",
       "reflection": "A: Do you have any input from the design perspective?\nB: From a UX perspective, this workflow feels a bit clunky."
@@ -348,8 +348,8 @@
     {
       "id": 39,
       "category": "Workplace",
-      "topic": "Tương tác Slack/Email",
-      "title": "Gửi tài liệu tham khảo cho Team",
+      "topic": "Slack/Email Interaction",
+      "title": "Sending Reference Documents to Team",
       "script": "A: Where can I find the latest API design guidelines for our services?\nB: I just pinned the link in the #dev-general Slack channel.\nA: Awesome, thanks! Does it cover authorization standards too?\nB: Yes, Section 3 details JWT authentication protocols.",
       "slack_email": "Hi team, pinned the updated API guidelines in #dev-general. Section 3 covers the new JWT auth standards.",
       "reflection": "A: I just pinned the reference doc in the main channel.\nB: Awesome, thanks! Does it cover deployment steps?"
@@ -357,8 +357,8 @@
     {
       "id": 40,
       "category": "Workplace",
-      "topic": "Phỏng vấn & Giao việc",
-      "title": "Phản hồi kết quả làm bài Code Challenge",
+      "topic": "Interview & Task Assignment",
+      "title": "Providing Feedback on Code Challenge Results",
       "script": "A: Thanks for submitting your coding assignment! The team reviewed your submission.\nB: Great! I'd love to hear any feedback you have.\nA: Your code structure was very clean, though test coverage could be improved.\nB: That's fair. I focused heavily on edge cases rather than unit test coverage.",
       "slack_email": "N/A (Nội dung phỏng vấn)",
       "reflection": "A: Your code structure was very clean and well documented.\nB: That's fair, I appreciate the constructive feedback."
