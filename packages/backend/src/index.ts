@@ -6,6 +6,7 @@ import topicsRouter from './routes/topics.js';
 import ttsRouter from './routes/tts.js';
 import dictionaryRouter from './routes/dictionary.js';
 import midLevelRouter from './routes/mid-level.js';
+import advancedLevelRouter from './routes/advanced-level.js';
 
 const app = new Hono();
 
@@ -33,6 +34,7 @@ app.route('/api/topics', topicsRouter);
 app.route('/api/tts', ttsRouter);
 app.route('/api/dictionary', dictionaryRouter);
 app.route('/api/mid-level', midLevelRouter);
+app.route('/api/advanced-level', advancedLevelRouter);
 
 // Health check
 app.get('/health', (c) => c.json({ status: 'ok' }));
