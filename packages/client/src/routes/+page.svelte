@@ -11,6 +11,7 @@ let { data } = $props();
 <div class="level-menu">
 <span class="level-item current">Level 1 (Current)</span>
 <a href="/level/2" class="level-item">Level 2</a>
+<a href="/level/3" class="level-item">Level 3</a>
 </div>
 
 <div class="topics-grid">
